@@ -1,0 +1,2 @@
+#!/bin/awk -f
+/^AGREED/,/^[ \t]*$/ {print; next}

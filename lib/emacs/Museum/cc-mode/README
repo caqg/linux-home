@@ -1,0 +1,22 @@
+README for cc-mode
+Barry A. Warsaw <cc-mode-help@python.org>
+
+Please see to comments at the top of the cc-mode.el file, or read the
+cc-mode.texinfo manual, for details on using cc-mode.
+
+Preformatted versions of the manual in DVI, PostScript, and Info, are
+all available at <http://www.python.org/ftp/emacs/>.
+
+To build the manual yourself, you will need the latest Texinfo release
+(currently Texinfo 3.9).  Specifically, you must make sure that your
+are using at least version 2.185 of the texinfo.tex file.  To build
+the Info manual, simply type:
+
+    % makeinfo cc-mode.texi
+
+To make the DVI version, simply type:
+
+    % texi2dvi cc-mode.texi
+
+The MANIFEST file contains a description of all the files you should
+have gotten with this distribution.

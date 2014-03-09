@@ -1,0 +1,8 @@
+# -*- Shell-Script -*-
+
+export EDITOR=$HOME/cmd/e
+export VISUAL=$HOME/cmd/e
+unset PAGER
+export GIT_PAGER=/bin/cat
+
+##end .bash_under_emacs

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# $Id: rot13,v 1.4 90/04/24 21:28:44 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/cmd/rot13/rot13,v $
+
+PATH=/usr/bin:/bin
+
+if [ $# -ne 0 ]; then
+    echo 1>&2 `basename $0` is a filter, it takes no arguments
+    exit 1
+fi
+
+exec /usr/ucb/tr '[a-zA-Z]' '[n-za-mN-ZA-M]'
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+# To be invoked from the .uwmrc menu only.
+x=${XBIN-/usr/new}
+
+exec $x/xcalc $*
+

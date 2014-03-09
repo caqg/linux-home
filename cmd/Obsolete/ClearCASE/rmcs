@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# ReMove Configuration Specifications
+
+HOMECS=${HOMECS-$HOME/cs}
+
+cd ${HOMECS}
+rm "$@"
+
+# end rmcs
+

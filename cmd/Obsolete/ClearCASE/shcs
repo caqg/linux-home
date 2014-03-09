@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# SHow Configuration Specification
+
+HOMECS=${HOMECS-$HOME/cs}
+
+case $# in
+1)	name=$HOMECS/$1
+	;;
+*)	echo "usage: "`/bin/basename $0`" config-spec-name"
+	echo "	see ldcs for setting the current view to a spec"
+	echo "	see svcs for how to save a spec"
+	exit 1
+	;;
+esac
+
+if [ -f $name ]
+then	/bin/cat $name
+else	echo "`/bin/basename $0`: can't find $name"
+	exit 1
+fi

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# newversion <filename>
+# if <filename> exists, the name <filename>.~N~
+# (with N greater than whatever exists already) is printed to stdout.
+# else nothing is printed and we exit with 1.
+
+PATH=/usr/bin:/usr/ucb:/bin
+
+if [ $# -ne 1 ]; then
+        echo 1>&2 $0: needs exactly one argument, a filename
+        exit 1
+fi
+
+if [ ! -f $1 ]; then
+        exit 1
+fi
+
+highest=`
+        ls $1* |
+        sed -n -e '/.*\.~\([0-9][0-9]*\)~$/s//\1/p' |
+        sort -n -r |
+        sed 1q
+`
+if [ "$highest" ]; then
+    next=`expr $highest + 1`
+else
+    next=1
+fi
+
+echo $1.~${next}~

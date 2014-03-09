@@ -1,0 +1,118 @@
+#! /bin/sh
+## Copyright (C) 2006 by Cesar A Quiroz, Ph.D.
+## 3500 Granada Ave Apt 348 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+PATH=/bin:/usr/bin:/usr/local/bin
+progname="$0"
+
+usage( ) {
+    printf "usage: %s app\n" `basename $progname`
+    printf "\tCreates a skeleton main program for an application named <app>.\n"
+    printf "\tNamely: <app>.cpp  tm_<app>.cpp.\n"
+    printf "\tRefuse to create any of these if any of the others exists.\n"
+}
+
+is_unqualified_identifier( ) {
+    id="$1"
+    test `expr length "$id"` = `expr match "$id" '[_a-zA-Z][_a-zA-Z0-9]*'`
+}
+
+validate( ) {
+    is_unqualified_identifier "$appname" || {
+	printf \
+	    "%s: This name is not a valid C++ unqualified identifier: \"%s\"\n"\
+	    "$progname"						"$appname"
+	exit 1;
+    }
+
+    src="$appname".cpp
+    tst=t_"$appname".cpp
+
+    [ -f $src ] && {
+	printf "%s: Source file \"%s\" already exists.\n" \
+	    "$progname"			"$src";
+	ls -l "$src";
+	exit 1;
+    }
+    [ -f $tst ] && {
+	printf "%s: Unit-tests file \"%s\" already exists.\n" \
+	    "$progname"			"$tst";
+	ls -l "$tst";	    
+	exit 1;
+    }
+}
+
+make_guard_symbol() {
+    # Assumes "$appname" is already known to be a good C++ unqualified id.
+    echo INCLUDED_"$appname"_HPP | tr '[a-z]' '[A-Z]'
+}
+
+generate_src( ) {
+    cp $HOME/etc/copyright.cpp $src
+    cat >> $src <<EOF
+//! \file 
+//! \brief 
+
+static const char* progname;
+
+int 
+main( int argc , char** argv )
+{
+  progname = argv[0];
+}
+
+void
+usage( )
+{
+}
+
+
+//end $src
+EOF
+}
+
+generate_tst( ) {
+    cp $HOME/etc/copyright.cpp $tst
+    cat >> $tst <<EOF
+//! \file 
+//! \brief 
+
+#include <cassert>
+#include <iostream>
+using namespace std;
+
+static const char* progname;
+
+int
+main( int, char** argv )
+{
+    progname = argv[0];
+
+
+}
+
+//end $tst
+EOF
+}
+
+case $# in 
+0)	usage; exit 1;;
+1)	case "$1" in
+	-h*|--h*|-\?)
+		usage; exit 0;;
+	esac
+	appname=$1;;
+*)	usage; exit 1;;
+esac
+
+validate 	"$appname";
+trap "rm -f \"$hdr\" \"$src\" \"$tst\"" 0
+generate_src	"$src"
+generate_tst	"$tst"
+trap "" 0
+
+ls -l $hdr $src $tst
+
+##end new-cpp-module

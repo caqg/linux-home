@@ -1,0 +1,7 @@
+#!/bin/csh -f
+# A shell to run under Emacs.
+# My .cshrc tests for the variable $under_emacs
+
+setenv under_emacs t
+setenv SHELL /bin/csh
+exec /bin/csh $*

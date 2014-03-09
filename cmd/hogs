@@ -1,0 +1,13 @@
+#!/bin/sh 
+#
+#   usage:  hogs [nn]
+#
+#           prints in stdout the nn top users in /u for this machine.
+#           unless specified, nn defaults to 20
+#
+#   Cesar Quiroz @ UofR DofCSc -- Jul. 1985
+
+egrep=egrep
+
+sux nice du ${1-/u} | $egrep '	/u/[^/]*$' | sort -n -r | head -${2-20} | cat -n
+

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+CHANGE_ICON_AND_WINDOW_TITLE_Ps=0
+CHANGE_ICON_TITLE_ONLY_Ps=1
+CHANGE_WINDOW_TITLE_ONLY_Ps=2
+
+case $# in
+0)	echo "usage: `basename $0` [-w|-i|-b] Text"
+	echo "  Commands the controlling terminal to change the"
+	echo "  textual banner(s) indicated by the options."
+	echo
+	echo "  -b (default) change both icon and window titles."
+	echo "  -i change only the icon title."
+	echo "  -w change only the window title."
+	echo
+	echo "Conditions: "
+	echo "  /dev/tty should be driving an XTerm, or similar."
+	exit 1;
+	;;
+esac
+
+case $1 in 
+-b)	Ps=${CHANGE_ICON_AND_WINDOW_TITLE_Ps}; shift
+	;;
+-i)	Ps=${CHANGE_ICON_TITLE_ONLY_Ps}; shift
+	;;
+-w)	Ps=${CHANGE_WINDOW_TITLE_ONLY_Ps}; shift
+	;;
+esac
+
+echo -n ']'${Ps}';'"$@"'' > /dev/tty
+##end xtitle

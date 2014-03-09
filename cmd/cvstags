@@ -1,0 +1,38 @@
+#!/bin/sh
+
+usage () {
+	echo usage: "$0 [-h|--help] [hostname [directory]"
+	echo "	Looks into <directory>/CVSROOT/val-tags for the tag names"
+	echo "	available at <hostname>.  You must be able to run code in"
+	echo "	that server.  Output is a sorted list of tag names."
+	echo "	"
+	echo "	<hostname> defaults to the current workstation."
+	echo "	<directory> defaults to /sceng/cvsroot (good in SJ)."
+}
+
+default_directory=/sceng/cvsroot
+
+case $# in
+0)	;;
+*)	case $1 in
+	-h|--help|-?) usage; exit 0;;
+	esac
+esac
+
+case $# in
+0)	host='';
+	directory=$default_directory;
+	;;
+1)	host="rsh $1";
+	directory=$default_directory;
+	;;
+2)	host="rsh $1";
+	directory=$2
+	;;
+esac
+
+$host cat $directory/CVSROOT/val-tags |
+cut -f1 -d' ' |
+sort
+
+# end cvstags

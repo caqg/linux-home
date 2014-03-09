@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+if [ $# -gt 0 ]; then
+    echo 1>&2 `basename $0`: no arguments, stdin should be a makefile
+    echo 1>&2 '	prints list of explicit targets'
+    exit 1
+fi
+
+sed -n \
+    -e 's/#.*//' \
+    -e '/^\.[^.]*\.[^.]*:/d' \
+    -e /.PRECIOUS/d \
+    -e /.SILENT/d \
+    -e /.IGNORE/d \
+    -e /.SUFFIXES/d \
+    -e '/^[ 	]/d' \
+    -e '/^$/d' \
+    -e 's/^\([^ \t].*\):.*/\1/p'
+

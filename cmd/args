@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# echo your arguments, one to a line
+
+for a
+do
+	echo $a
+done

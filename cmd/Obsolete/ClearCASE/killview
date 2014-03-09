@@ -1,0 +1,32 @@
+#! /bin/sh
+# usage: killview view_tag
+
+ATRIA=${ATRIA:-/usr/atria/bin}
+CTBIN=${CTBIN:-$HOME/cmd}
+PATH=${CTBIN}:${ATRIA}:/bin
+export PATH
+
+case $# in 
+1)	tag=$1
+	;;
+*)	echo "usage: killview view_tag"
+	exit 1
+	;;
+esac
+
+if cleartool 2>/dev/null 1>/dev/null lsview $tag;
+then	# The tag was found.  It is cheaper to ask for it again,
+	# rather than having to figure out the correct exit status
+	# of a pipe.
+	dir=`cleartool 2>/dev/null lsview $tag |
+		sed -e 's/.* \(.*\)/\1/' -e 1q`
+else	# The tag was not found
+	echo $0: $tag is not a valid view tag.
+	exit 2
+fi
+
+cleartool rmtag -view -all $tag &&
+cleartool unregister -view $dir &&
+rm -fr $dir
+
+#end killview

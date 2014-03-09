@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# inspired by /usr/share/xemacs*/etc/editclient.sh
+
+gnuclient ${1+"$@"} >/dev/null 2>&1 || {
+    # printf 'gnuclient: Starting server...'
+    xemacs -f gnuserv-start -eval '(set-xtitle "SERVER " 1)'&
+    server=$!
+    until gnuclient -batch -eval t >/dev/null 2>&1; do
+	sleep 1
+    done
+    # printf ' done, pid %d has a server.\n' $server
+    
+    exec gnuclient ${1+"$@"}
+}

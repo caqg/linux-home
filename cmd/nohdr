@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# $Id: nohdr,v 1.1 90/07/26 17:37:44 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/cmd/nohdr/nohdr,v $
+
+PATH=/usr/bin:/usr/ucb:/bin
+
+if [ $# -ne 0 ]; then
+    program=`basename $0`
+    echo 1>&2 "$program:	no arguments needed."
+    echo 1>&2 "	$program removes the leading block of non-empty lines from its stdin."
+    exit 1
+fi
+
+sed -n \
+    -e '1,$ {
+        s/^[ 	]*$/&/
+        t rest
+        d
+    :rest
+        n
+    :loop
+        p; n; b loop
+}'
+

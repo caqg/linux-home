@@ -1,0 +1,5 @@
+#!/bin/sh
+# Inspired by K+P's vis program
+# usage: vis [files ...]
+
+exec /bin/cat -v -t -e $*

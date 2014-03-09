@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+# Set up X files for which some optional versions exist.
+
+PATH=/usr/bin:/usr/ucb:/bin
+show=".twmrc .Xsite-resources .Xresources .xinitrc"
+polarity=".twmrc .Xsite-resources"
+
+cd $HOME
+
+for arg do
+    case $arg in
+    bow|wob)
+        rm $polarity
+        for p in $polarity; do
+            ln -s $p.$arg $p
+        done
+        ;;
+    *)
+        program=`basename $0`
+        echo 1>&2 "${program}: can't grok this: $arg"
+        echo 1>&2 "usage: $program [bow|wob]"
+        exit 1
+        ;;
+    esac
+done
+
+ls -l $show
+

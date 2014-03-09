@@ -1,0 +1,8 @@
+#!/bin/sh
+x=${XBIN-/usr/new}
+
+title="xterm at ${HOST-`hostname`}"
+GOHOME=t; export GOHOME;        #hack for the csh...
+
+exec $x/xterm -n "$title" -T "$title" $*
+

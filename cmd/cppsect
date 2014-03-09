@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Display the sectioning of C++ files.  There are three classes of cue lines:
+# /^//@ /    major section   (one or few per file)
+# /^//- /    minor section   (one per function or data structure)
+# /^//\. /   subsection      (almost never used)
+# See also csect
+
+case $# in
+0)
+    echo "Standard Input:";
+    sed -n \
+        -e '/^\/\/@[ 	]/{
+                i\
+
+                p
+            }' \
+        -e '/^\/\/-[ 	]/s/^/  /p' \
+        -e '/^\/\/\.[ 	]/s/^/    /p' |
+    sed -e 's/^\([ ]*\)\/\/[-@.][ ]*/\1/'
+    echo "";;
+*)
+    for i
+    do
+        echo "$i":;
+	sed -n \
+	    -e '/^\/\/@[ 	]/{
+		    i\
+
+		    p
+		}' \
+	    -e '/^\/\/-[ 	]/s/^/  /p' \
+	    -e '/^\/\/\.[ 	]/s/^/    /p' $i |
+	sed -e 's/^\([ ]*\)\/\/[-@.][ ]*/\1/'
+        echo "";
+    done;;
+esac

@@ -1,0 +1,122 @@
+Patch to Lucid Emacs 19.10
+Handling of C++ comments
+Barry Warsaw 30-May-1994
+
+A while ago someone reported a bug in c++-mode where certain `//'
+comment constructs would hose indentation.  I've boiled it down to a
+bug in src/syntax.c's Fforward_comment (forward-comment) routine
+(well, really find_start_of_comment in Lucid Emacs).  I'll show you
+how to reproduce the bad behavior and I'll give you a proposed fix,
+however I've only done the patch for Lucid 19.10, which will
+presumably work on 19.9, but definitely *won't* work for FSF 19.  FSF
+19.22 exhibits the same problems but I haven't engineered a patch for
+it because I think a better solution is for FSF Emacs to adopt Lucid
+Emacs' syntax.c.  That's not my call unfortunately.
+
+Anyway the bug is caused by improper parsing backwards over comments
+which start with two of the same character, and where an odd number of
+them appear in a row.  Hence, in a c++-mode buffer, you can see this
+by editing this file:
+
+-------------------- snip snip --------------------bug.cc
+int i;
+	///
+X
+-------------------- snip snip --------------------
+
+Put point on the X and hit: ESC ESC (forward-comment -999) RET
+
+Watch point end up on the middle of the 3 slashes on line 2, instead
+of just after the semi-colon on line 1.
+
+Just so you know its not a bug in c++-mode, edit the following
+emacs-lisp-mode file:
+
+-------------------- snip snip --------------------bug.el
+(setq aaa nil)
+;
+(setq aaa nil)
+;;
+(setq aaa nil)
+;;;
+(setq aaa nil)
+;;;;
+(modify-syntax-entry ?\; ". 12")
+-------------------- snip snip --------------------
+
+Try calling forward-comment while point is on each of the open parens
+at the beginning of the lines.  Everything works great.  Now modify
+e-l-m's syntax table so that only a double-semi is a comment starter
+(i.e. `;;' but not `;').  Do this by evaluating the last lisp expr in
+the file.  Repeat the forward-comment test.
+
+With point on the 4th (setq... line you should see point end up on the
+middle of the 3 preceding semis -- bad!  Note that on the second
+(setq... line point will also end up just after the first preceding
+semi, but that is correct given the hacked syntax table.
+
+The patch below fixes the problem, I believe.  I've done some moderate
+testing in c++-mode, c-mode, and emacs-lisp-mode and it seems to do
+the trick without busting anything.
+
+I've been running with this patch in Lucid Emacs for a while now.  If
+anybody has any problems with it, either inside or outside c++-mode,
+let me know.  If anybody ports this patch to FSF Emacs, let me know.
+
+-Barry
+
+-------------------- snip snip --------------------
+*** src/syntax.c.orig	Thu Mar 24 03:57:29 1994
+--- src/syntax.c	Wed May 11 17:34:57 1994
+***************
+*** 382,396 ****
+  	}
+  
+!       /* otherwise, is this a 2-char comment end sequence?
+! 	 if so, back up, and see if style matches previously
+! 	 extracted mask */
+!       else if (from > stop
+! 	       && SYNTAX_END_P (table, FETCH_CHAR (from-1), c))
+  	{
+  	  code = Sendcomment;
+! 	  styles_match_p = SYNTAX_STYLES_MATCH_END_P (table,
+! 						      FETCH_CHAR (from-1),
+! 						      c, mask);
+! 	  from--;
+  	}
+  			
+--- 382,393 ----
+  	}
+  
+!       /* otherwise, is this a 2-char comment end sequence? */
+!       else if (from >= stop
+! 	       && SYNTAX_END_P (table, c, FETCH_CHAR (from+1)))
+  	{
+  	  code = Sendcomment;
+! 	  styles_match_p = SYNTAX_STYLES_MATCH_END_P (table, c,
+! 						      FETCH_CHAR (from+1),
+! 						      mask);
+  	}
+  			
+***************
+*** 404,413 ****
+  		    
+        /* or possibly, a 2-char comment start sequence */
+!       else if (from > stop
+! 	       && SYNTAX_STYLES_MATCH_START_P (table, FETCH_CHAR (from-1),
+! 					       c, mask))
+  	{
+  	  code = Scomment;
+- 	  from--;
+  	  styles_match_p = 1;
+  	}
+--- 401,409 ----
+  		    
+        /* or possibly, a 2-char comment start sequence */
+!       else if (from >= stop
+! 	       && SYNTAX_STYLES_MATCH_START_P (table, c, FETCH_CHAR (from+1),
+! 					       mask))
+  	{
+  	  code = Scomment;
+  	  styles_match_p = 1;
+  	}

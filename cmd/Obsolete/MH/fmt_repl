@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# $Id: fmt_repl,v 1.1 89/12/30 23:40:56 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/cmd/fmt_repl/fmt_repl,v $
+
+# usage: fmt_repl [args to fmt(1)]
+
+# formats the text of the message one is replying to, which conventionally
+# is file @ (usually a symlink)
+
+case $# in
+0)
+    width=-62
+    filename=@
+    ;;
+*)
+    width=
+    filename=
+    ;;
+esac
+
+fmt $width $filename $* | 
+sed -e '1,/^[ 	]*$/d' -e 's/^/| /'
+

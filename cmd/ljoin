@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# ljoin [lines = an integer, default 2]
+#
+# $Source: /home/gemini/u1/quiroz/src/cmd/ljoin/ljoin,v $
+# $Id: ljoin,v 1.4 89/08/08 17:37:23 quiroz Exp Locker: quiroz $
+#
+# Takes its standard input and joins every `lines' lines into one,
+# to be sent to stdout.  If the final bunch is incomplete, it is not
+# sent to the output file.
+
+PATH=/bin:/usr/bin
+
+name=`basename $0`
+
+case $# in
+    0|1)
+        ;;
+    *)
+        echo 2>&1 $name: can take at most one '(positive integer)' argument.
+        exit 1
+        ;;
+esac
+
+lines=${1-2}
+
+case $lines in
+    [0-9]*)
+        if [ $lines -le 0 ]
+        then
+            echo 2>&1 $name: argument to $name must be a positive integer
+            exit 1
+        fi
+        ;;
+    *)
+        echo 2>&1 $name: argument to $name must be a positive integer.
+        exit 1
+        ;;
+esac
+
+if [ $lines -eq 1 ]
+then
+    cat                         # trivial case
+else
+    awk '
+        NR==1               {buffer=$0; next}
+        (NR%'$lines')==1    {print buffer; buffer=$0; next}
+                            {buffer=buffer $0}
+        END                 {if ((NR%'$lines')==0) print buffer}
+    '
+fi
+

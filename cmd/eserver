@@ -1,0 +1,3 @@
+#!/bin/sh
+emacs --quick --batch --funcall server-force-delete
+exec emacs -f server-start -f set-color-theme-solarized-light ${1+"$@"} &

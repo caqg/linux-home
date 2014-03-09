@@ -1,0 +1,39 @@
+#!/bin/sh
+# $Header: csect,v 1.2 89/01/18 21:51:21 quiroz Locked $
+# $Source: /u1/quiroz/src/cmd/csect/csect,v $
+
+# Display the sectioning of C files.  There are three classes of cue lines,
+# all of which are expected to be inside box comments:
+# /^ @ /    major section   (one or few per file)
+# /^ - /    minor section   (one per function or data structure)
+# /^ \. /   subsection      (almost never used)
+
+case $# in
+0)
+    echo "Standard Input:";
+    sed -n \
+        -e '/^ @[ 	]/{
+                i\
+
+                p
+            }' \
+        -e '/^ -[ 	]/s/^/  /p' \
+        -e '/^ \.[ 	]/s/^/    /p' |
+    sed -e 's/^\([ ]*[-@.] \)[ ]*/\1/'
+    echo "";;
+*)
+    for i
+    do
+        echo "$i":;
+        sed -n \
+            -e '/^ @[ 	]/{
+                    i\
+
+                    p
+                }' \
+            -e '/^ -[ 	]/s/^/  /p' \
+            -e '/^ \.[ 	]/s/^/    /p' $i |
+        sed -e 's/^\([ ]*[-@.] \)[ ]*/\1/'
+        echo "";
+    done;;
+esac

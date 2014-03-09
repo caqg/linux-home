@@ -1,0 +1,65 @@
+#!/bin/sh
+
+ATRIA=${ATRIA:-/usr/atria/bin}
+CTBIN=${CTBIN:-$HOME/cmd}
+
+
+case ${1:---help} in
+--help)
+	echo "A synonym for cleartool, with additional commands:"
+	/bin/sed -n -e '/^##COMMANDS/,/^##END/p' $0 |
+	/bin/sed -n -e '/^[ 	#]/d' -e 's/\([^)]*\).*/	\1/p'
+	exit 0;;
+##COMMANDS
+clean)
+	# If there is no argument, we try to clean the current view,
+	# assuming we are inside a view.  Else we default to whatever
+	# cleanview does on no arguments (currently, complain).
+	# Otherwise, the arguments are passed along to cleanview
+	shift
+	case $# in
+	0)	view="`${ATRIA}/cleartool pwv -s`"
+		case $view in
+		"** NONE **")	exec ${CTBIN}/cleanview
+				;;
+		*)		exec ${CTBIN}/cleanview $view
+				;;
+		esac
+		;;
+	*)	exec ${CTBIN}/cleanview "$@"
+		;;
+	esac
+	;;
+delta)
+	shift
+	exec ${ATRIA}/cleartool diff -diff -pred "$@"
+	;;
+killview)
+	shift
+	exec ${CTBIN}/killview "$@"
+	;;
+license|lic)
+	shift
+	exec ${ATRIA}/clearlicense "$@"
+	;;
+new)
+	shift
+	exec ${CTBIN}/newelem "$@"
+	;;
+view)
+	shift
+	exec ${ATRIA}/cleartool pwv -s "$@"
+	;;
+views)
+	shift
+	exec ${CTBIN}/view+cs "$@"
+	;;
+vob)
+	shift
+	exec ${CTBIN}/whichvob "$@"
+	;;
+##END
+*)
+	exec ${ATRIA}/cleartool "$@"
+	;;
+esac

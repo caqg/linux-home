@@ -1,0 +1,11 @@
+#!/bin/sh
+vi=/usr/ucb/vi
+xterm=xterm
+
+cannot='|map  :"Cannot suspend under X
+|map!  :"Cannot suspend input mode
+a'
+EXINIT='source $HOME/.exrc'$cannot
+export EXINIT
+
+exec vi $*

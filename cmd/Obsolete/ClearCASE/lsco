@@ -1,0 +1,2 @@
+#!/bin/sh
+ct lsco -s -cvi -me

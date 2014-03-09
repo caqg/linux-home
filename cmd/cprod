@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# cartesian product of two relations presented as files
+
+usage="usage: `basename $0` [-d <delimiter>] file1 file2"
+
+set -- `getopt d: $*` || {
+	echo >&2 "$usage"
+	exit 1
+}
+
+delimiter='	'			#tab is default
+for arg
+do	case $arg in
+	-d)	delimiter="$2"; shift 2	;;
+	--)	shift; break		;;
+	esac
+done
+
+case $# in
+2)	;;
+*)	echo >&2 "$usage"
+	exit 1
+esac
+
+## Now do the product "by hand" with the obvious quadratic algorithm
+##	Potential for optimization: The first file is opened only once,
+##	while the second is opened repeatedly.  Is there a point in 
+##	choosing among the two possible orders?
+
+while read r1
+do	while read r2
+	do	echo "$r1$delimiter$r2"
+	done < $2
+done < $1

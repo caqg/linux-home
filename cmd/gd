@@ -1,0 +1,48 @@
+#!/bin/sh
+
+DIFFEXEC=${DIFFEXEC:-/bin/sh}
+DIFFPROG=${DIFFPROG:-diff}
+DIFFOPTS=${DIFFOPTS--dwU10}
+
+usage () {
+    printf "usage: %s\n" `basename $0`
+    printf "\tReads stdin looking for a pair of absolute pathnames, then runs\n"
+    printf "\tdiff on them in the correct order (old then new).\n"
+}
+
+case $# in
+0) ;;
+*) usage;
+   exit 1;;
+esac
+
+awk '# Find pathnames, print out pairs
+{
+	for (i=1; i<=NF; ++i) {
+		if ( $i ~ /^\// ) {
+			if ( ++n % 2 )
+				printf "%s ", $i;
+			else
+				printf "%s\n", $i;
+		}
+	}
+}
+END {
+	if (NR==0) {
+		print "No Input!" > "/dev/stderr";
+		close("/dev/stdout");
+		exit( 1 );
+	}
+	if (!n) printf "/dev/null\n";  # Make the last pair complete
+}
+' |
+while read a b; do
+    if newer $a $b; then
+    	older=$b
+	newer=$a
+    else
+    	older=$a
+	newer=$b
+    fi
+    echo ${DIFFPROG} ${DIFFOPTS} $older $newer | ${DIFFEXEC}
+done

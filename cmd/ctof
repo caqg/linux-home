@@ -1,0 +1,42 @@
+#!/bin/sh  
+#
+#  'ctof' converts centigrade to fahrenheit
+#  'ftoc' converts fahrenheit to centigrade
+#
+#  To Do: check numericity of the arguments 
+#  Cesar Quiroz @ UofR DofCSc -- Oct. 1985
+#
+#  2005-08-10 02:22:02UT (cesar@cesar-xp) 
+#  Changed the logic to avoid non-integral argument to sh(1)'s test
+#  operator.  Now the sign normalization occurs before the numbers are
+#  fed into dc(1).  Not bad, considering that I hadn't touched this
+#  logic in nearly twenty years...
+
+
+case $# in
+ 0) echo "usage is ctof|ftoc followed by a list of integers"
+    exit 1
+    ;;
+ *)
+    # All OK so far
+esac
+name=`basename $0`
+case $name in
+    ctof)
+        for C in "$@"
+        do
+	    N=`echo $C | sed 's/-/_/'` # sign normalized
+	    F=`echo 2 k $N 9 '*' 5 / 32 + p q | dc`
+            echo $C"C is "$F"F"
+        done    ;;
+    ftoc)
+        for F in "$@"
+        do
+	    N=`echo $F | sed 's/-/_/'` # sign normalized
+	    C=`echo 2 k $N 32 - 5 '*' 9 / p q | dc`
+            echo $F"F is "$C"C"
+        done    ;;
+    *)
+        echo $name "is a bad name, use ctof or ftoc instead"
+        exit 1  ;;
+esac

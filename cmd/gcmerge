@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $# in
+4) A=$1 B=$2 C=$3 M=$4;;
+*) echo "usage: "`basename $0`" BASE-in THEIRS-in YOURS-in MERGED-out";
+   echo "  MERGED = YOURS + (THEIRS - BASE)"
+   exit 2 ;;
+esac
+
+gc -n --eval \
+'(ediff-merge-files-with-ancestor "'"$C"'" "'"$B"'" "'"$A"'" () "'"$M"'")'

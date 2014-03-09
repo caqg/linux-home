@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+# Script used to automate firing under X.
+
+PATH=/usr/bin:/bin
+
+if [ -f $HOME/cmd/emacs ]; then
+    emacs=$HOME/cmd/emacs
+else
+    emacs=${THE_EMACS-emacs}
+fi
+
+exec ${emacs} -geometry 80x50-2+2 \
+        -f display-time \
+	-f server-start \
+        -f cq-inbox \
+        -f first-window \
+        -f identify-in-minibuffer \
+        $*
+
+# had -f calendar too

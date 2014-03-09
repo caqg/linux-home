@@ -1,0 +1,35 @@
+#!/bin/sh
+
+PATH=/bin:/usr/bin
+
+case $# in
+  0|1) logfile=${1-"LOG"} ;;
+  *) echo "usage: "`basename $0`" [logfile]"; exit 1 ;;
+esac
+
+[ -f $logfile ] || touch $logfile
+
+ed - $logfile <<End
+0a
+`date -u +'%Y-%m-%d %H:%M:%SUT'` (`whoami`@`uname -n`)
+
+	* 
+
+.
+w
+q
+End
+
+# The checks to protect EXINIT could be avoided easily.
+if   [ -n "$EXINIT" ]; then
+    EXINIT=$EXINIT'|se ai aw wm=8'
+elif [ -f $HOME/.exrc ]; then
+    EXINIT='so $HOME/.exrc|se ai aw wm=8'
+else
+    EXINIT='se ai aw wm=8'
+fi
+export EXINIT;
+
+exec ${VISUAL:-"vi"} +'/	\* ' +'startinsert!' $logfile
+
+#end vlog

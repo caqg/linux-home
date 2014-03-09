@@ -1,0 +1,48 @@
+#!/bin/sh
+# New Manual Program
+# The idea of this is to run the 4.3 man without disasters
+# The environment variable PAGER_OPTS can be used to set options to less
+
+# updated at last for Less v 97 - CQ, Mon Jun 26 22:41:11 EDT 1989
+# At MRI: Use MANPATH instead of MPATH 		94-07-07 00:49:16 UT
+
+newman=${NEWMAN-/usr/bin/man}
+pager=${PAGER-more}
+LESS=-CQis; export LESS
+MPATH=${MANPATH-${MPATH-/usr/ucb/man}}
+
+case $# in
+0) echo "Usage is '`basename $0` [section] title ...'"
+   exit 1 ;;
+*) ;;
+esac
+
+# This method is just too expensive: too many extra processes!
+# It is good that less V97 can do all this by itself (-u pointed by R. Potter)
+# case $TERM in
+# t106*) cleaner='| cat -s | col -b ' ;;
+# *)     cleaner='| cat -s | col    ' ;;
+# esac
+case $TERM in
+t106*)                          #the telerays are rather broken
+    PAGER_OPTS='-u';;
+*)                              #nothing for the time being
+    ;;
+esac
+
+# If ROWS exist, add it to PAGER_OPTS
+#if [ $ROWS -a $ROWS -gt 0 ]
+#then
+#   PAGER_OPTS=-z${ROWS}" ${PAGER_OPTS}"
+#fi
+
+if [ -t ]
+then
+   command="$newman 2>&1 - -M $MPATH $* $cleaner | $pager ${PAGER_OPTS}"
+else
+   command="$newman 2>&1 - -M $MPATH $*"
+fi
+
+eval $command
+
+#end man

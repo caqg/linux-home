@@ -1,0 +1,105 @@
+#!/bin/sh
+
+# set -x
+
+# sort the .newsrc in directory $1, where the file .newsrc.order,
+# if present, gives a preferred partial order.
+
+boundary="@@@ data follows @@@"
+timestamp="/bin/date -u +%y%m%d%H%M%S"
+
+case $# in
+1)	d=$1
+	newsrc=$d/.newsrc
+	backup=${newsrc}.`$timestamp`~
+	order=$d/.newsrc.order
+	temp=${TMPDIR-/tmp}/newsrc.$$
+	;;
+*)	echo "usage:	$0 directory"
+	echo "	where the directory contains .newsrc, and perhaps"
+	echo "	.newsrc.order, which is a list of newsgroup name prefixes,"
+	echo "	one to a line, which sort ahead of the rest."
+	exit 1
+	;;
+esac
+
+# sanity checks
+[ -d $d ] || {
+	echo $0: $d is not a directory, aborting
+	exit 1
+}
+[ -r $newsrc ] || {
+	echo $0: cannot read $newsrc, aborting
+	exit 1
+}
+[ -w $newsrc ] || {
+	echo $0: cannot write $newsrc, left untouched
+	exit 1
+}
+[ -f $order -a -r $order ] || {
+	order=/dev/null
+}
+
+# echo newsrc=$newsrc
+# echo order=$order
+# echo backup=$backup
+
+# protect original
+if [ -w $backup ]; then
+	echo $0: cannot write to $backup, ignoring
+else
+	/bin/cp -p $newsrc $backup
+fi
+
+/bin/cp -p $newsrc $temp
+/bin/cat >$temp </dev/null
+trap '/bin/rm $temp' 1 2 15
+
+(	/bin/cat $order;
+	echo $boundary;
+	/bin/sed <$newsrc -e 's/[:!]/ & /'
+) |
+/bin/nawk '
+BEGIN			{
+				boundary="'"$boundary"'";
+			
+				#state names
+				reading_order	= 0
+				reading_data	= 1
+
+				state		= reading_order
+				hi_index	= 0
+			}
+state == reading_order	{
+				if ($0 ~ boundary) {
+					state = reading_data
+				} else {
+					prefix[hi_index++] = "^"$0
+				}
+				next
+			}
+state == reading_data	{
+				tag=hi_index
+				for (p=0; p<hi_index; p++)
+					if (match($1, prefix[p])) {
+						tag=p
+						break
+					}
+				print tag, $0
+			}
+END			{
+#				print boundary
+#				print hi_index
+#				for (p in prefix)
+#					print p, prefix[ p ]
+			}
+' |
+/bin/sort +0n -1 +1 -2 |
+/bin/sed -e 's/^[0-9][0-9]* \([^ :!]*\) \([:!]\) \(.*\)/\1\2\3/' > $temp
+
+case $? in
+0)	/bin/cp -p $temp $newsrc && /bin/rm $temp
+	;;
+*)	echo $0: failure, $newsrc left untouched
+	;;
+esac

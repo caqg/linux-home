@@ -1,0 +1,54 @@
+#!/bin/sh
+
+#build a new element in the "current" branch
+
+usage() {
+	echo usage: `basename $0` 'element-name [element-type [branch-name]]'
+	echo "	Check out the directory before using this."
+}
+
+case $# in 
+3)	name=$1;
+	type=$2;
+	branch=$3;
+	;;
+2)
+	name=$1;
+	type=$2;
+	branch="";
+	;;
+1)	name=$1;
+	type="";
+	branch="";
+	case $name in
+	--help)
+		usage;
+		exit 0 ;;
+	esac
+	;;
+*)	usage;
+	exit 1
+	;;
+esac
+
+case X${branch}X in
+XX)	branch=`ct catcs | \
+	grep -e -mkbranch | \
+	sed -e 2q -e 's/.*-mkbranch \(.*\)/\1/'`
+	;;
+*)	;;
+esac ||
+exit 1
+
+#echo n=$name t=$type b=$branch
+
+case X${type}X in
+XX)
+	ct mkelem -nc -nco $name
+	;;
+*)
+	ct mkelem -nc -nco -elt $type $name
+	;;
+esac &&
+ct mkbranch -nc $branch ${name}@@/main/0 &&
+ct ls -l $name

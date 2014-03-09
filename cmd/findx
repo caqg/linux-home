@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# check $PATH to find an executable
+# This is more reliable (and much faster) than find.bin
+
+$HOME/cmd/path |
+while read d;
+do
+	for name
+	do
+		[ -x "$d/$name" ] && echo "$d/$name"
+	done
+done

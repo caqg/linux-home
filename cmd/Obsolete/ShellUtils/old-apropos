@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# $Header: apropos,v 1.1 89/02/20 16:03:29 quiroz Locked $
+# $Source: /u1/quiroz/src/cmd/apropos/apropos,v $
+
+man=/usr/ucb/man
+usage="usage: $0 [-k|-f|-a|] arguments"
+
+case $# in
+0)
+    echo 1>&2 $usage
+    exit 1;;
+esac
+
+case $1 in
+-k|-f)
+    exec $man $*
+    ;;
+-a)
+    shift;
+    $man -k $*
+    exec $man -f $*
+    ;;
+*)
+    exec $man -k $*
+    ;;
+esac
+

@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# hack for now, it could be done in x completely
+
+dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
+iconic=
+DEFAULT_XTERM=sakura
+xterm=${XTERM:-${DEFAULT_XTERM}}
+xrows=${XROWS:-36}
+xcols=${XCOLS:-82}
+
+PATH=/usr/bin:/bin
+
+function usage {
+  echo 1>&2 "Usage: " `basename $0` " [cmd [args...]]";
+  echo 1>&2 "	Run _cmd_ (default, \$SHELL) in a terminal, ";
+  echo 1>&2 "	the terminal is \$XTERM, which defaults to $DEFAULT_XTERM.";
+  echo 1>&2 "	passing the _args_ to _cmd_.";
+}
+
+who=${LOGNAME:-${USER:-'me'}}
+where=`uname -n`
+cmd=${1:-${SHELL:-'/bin/sh'}}
+name=`basename $cmd`	# before remapping
+
+[ -f $dispatch ] || touch $dispatch;
+newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
+cmd=${newcmd:-$cmd}
+shift
+
+# $# is already decremented by the shift above
+case $# in 
+0)	title="$who@$where  $name"			;;
+1)	title="@$where  $name $1"			;;
+2)	title="@$where  $name $1 $2"			;;
+3)	title="@$where  $name $1 $2 $3"			;;
+4)	title="@$where  $name $1 $2 $3 $4"		;;
+5)	title="@$where  $name $1 $2 $3 $4 $5"		;;
+*)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
+esac
+
+# Go for it
+# echo xterm=\""$xterm"\"
+# echo cmd=\""$cmd"\"
+# echo title=\""$title"\"
+# echo "$xterm" -r 36 -c 82 -n 1 -t \""$title"\" -e \""$cmd"\" "$@" &
+eval "$xterm" -h -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd" "$@" &
+
+# end of xo

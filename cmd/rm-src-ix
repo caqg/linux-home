@@ -1,0 +1,32 @@
+#!/bin/sh
+
+gtags='\
+GPATH \
+GRTAGS \
+GSYMS \
+GTAGS \
+ID \
+'
+
+ctags='\
+TAGS \
+tags \
+'
+
+cscope='\
+cscope.files \
+cscope.in.out \
+cscope.out \
+cscope.po.out \
+'
+
+ede='\
+ede-cpproot.el \
+'
+
+set -v
+rm -f $ctags
+rm -f $cscope
+rm -f $ede
+rm -f $gtags
+

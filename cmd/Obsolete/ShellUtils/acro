@@ -1,0 +1,6 @@
+#!/bin/sh
+LOCALHOME=/work/apps/Acrobat5
+if [ -d ${LOCALHOME} ];
+then	exec ${LOCALHOME}/bin/acroread "$@"
+else	exec acroread "$@"
+fi

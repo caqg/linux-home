@@ -1,0 +1,11 @@
+#!/bin/sh
+
+machine=`uname -m`
+os=`uname -o`
+release=`uname -r`
+
+# clean up a dubious distinction in Cygwin
+release=`expr $release : '\([0-9.]*\)'`
+
+#--printf "%s%%%s%%%s\n" $machine $os $release
+printf "%s%%%s\n" $machine $os

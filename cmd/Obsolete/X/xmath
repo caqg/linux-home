@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+# Run Mathematica Remotely
+
+mathematica=$HOME/cmd/emath
+hostname=${1-slate}
+
+if [    \( $# -gt 1 \) -o  \
+        \( x$1 = x-help \) -o  \
+        \( x$1 = x-\? \) \
+   ]
+then
+   echo `basename $0` '[hostname]'
+   exit 1
+fi
+
+if [ "$DISPLAY" ]; then
+    xhost +$hostname
+    (   echo TERM=xterm;
+        echo DISPLAY=$DISPLAY;
+        echo export TERM DISPLAY;
+        echo $mathematica -wn Mathematica@$hostname -in Mathematica@$hostname
+    ) | rsh $hostname sh
+else
+    echo Not running under X, please log in to $hostname first
+    exit 1
+fi

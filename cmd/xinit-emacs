@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# emacs  -geometry +106+0  -f server-start  -f shell
+emacs -geometry 130x40+106+0 -f color-theme-solarized-light $HOME

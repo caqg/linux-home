@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# For each given focal distance in mm, print its angle of view, assuming
+# 35mm film.  To change this assumption, set the environment variables
+# FILMWIDTH and FILMHEIGHT to the sizes in mm of the exposable surface.
+
+# With 0 args, gives usage.  With 1, calculates for that focal distance.
+# With 2 args, they are starting and ending focal distance, 1mm apart.
+# With 3 args, start, end, and increment.
+
+FILMWIDTH=${FILMWIDTH-36}
+FILMHEIGHT=${FILMHEIGHT-24}
+
+export FILMWIDTH
+export FILMHEIGHT
+
+case $# in
+1)	startf=$1; endf=$1; incrf=1	;;
+2)	startf=$1; endf=$2; incrf=1	;;
+3)	startf=$1; endf=$2; incrf=$3	;;
+*)	echo 1>&2 "usage: $0 start-f [end-f [incr-f]]"
+	echo 1>&2 "	incr-f defaults to 1mm"
+	echo 1>&2 "	end-f  defaults to start-f"
+	echo 1>&2 "	set \$FILMWIDTH and \$FILMHEIGHT unless 35mm film"
+	exit 1	;;
+esac
+
+gawk '
+BEGIN	{	startf	= '"$startf"';
+		endf	= '"$endf"';
+		incrf	= '"$incrf"';
+
+		width	= '"$FILMWIDTH"';
+		height	= '"$FILMHEIGHT"';
+		r	= sqrt(width*width + height*height)/2.0;
+
+		degrees = 57.295779513087721;	#in a radian
+
+		for (f = startf; f <= endf; f+=incrf) {
+			printf "%g\t%g\n", f, 2.0*atan2(r, f)*degrees
+		}
+	}
+' < /dev/null
+
+#end viewang

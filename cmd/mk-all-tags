@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Tag with (exuberant-)ctags
+
+PATH=/bin:/usr/bin:$HOME/cmd
+
+ctags=ctags                     # probably exuberant-ctags
+ctags_flags=-eR                 # emacs TAGS, often acceptable to vim
+
+$ctags $ctags_flags
+
+
+

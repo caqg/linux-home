@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# find.path <Path> <regexp>...
+
+usage () {
+		echo "usage:	`basename $0`" '<path> <regexp>...'
+		echo '	finds matches for the <regexp>s in the' \
+			':-separated <path>'
+		exit 0
+}
+
+case $# in
+0)	usage;;
+1)	case $1 in
+	-h|-help|-?)
+		usage;;
+	esac
+	exit 0;;
+esac
+
+path=`fmt.path $1`; 
+shift 1
+
+rs=" -name $1";
+shift 1
+for r in "$@"; do
+	rs="$rs -o -name $1"
+	shift 1
+done
+
+find $path $rs -print
+
+#end find.path

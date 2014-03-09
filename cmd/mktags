@@ -1,0 +1,3 @@
+#!/bin/sh
+
+etags `find *.[ch] -type f -print`

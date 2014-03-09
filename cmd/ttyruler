@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# $Id: ttyruler,v 0.1 91/01/03 01:00:34 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/bin/ruler/ttyruler,v $
+
+if [ $# -ne 0 ]; then
+    echo 1>&2 $0: no arguments expected
+    exit 1
+fi
+
+# avoid error messages if possible, even by running things twice
+#( tsize -sh ) 1>/dev/null 2>/dev/null
+#if [ $? -eq 0 ]; then
+#    eval "`tsize -sh`"
+#fi
+
+exec ruler
+

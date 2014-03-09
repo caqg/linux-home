@@ -1,0 +1,2 @@
+#!/bin/sh
+cvs -qz9 up "$@" | grep -v '^\?'; # date

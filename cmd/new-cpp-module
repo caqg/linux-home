@@ -1,0 +1,135 @@
+#! /bin/sh
+## Copyright (C) 2006 by Cesar A Quiroz, Ph.D.
+## 3500 Granada Ave Apt 348 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+PATH=/bin:/usr/bin:/usr/local/bin
+progname="$0"
+
+usage( ) {
+    printf "usage: %s modname\n" `basename $progname`
+    printf "\tCreates skeleton files for a new C++ module named <modname>.\n"
+    printf "\tNamely: <modname>.hpp <modname>.cpp t_<modname>.cpp.\n"
+    printf "\tRefuse to create any of these if any of the others exists.\n"
+}
+
+is_unqualified_identifier( ) {
+    id="$1"
+    test `expr length "$id"` = `expr match "$id" '[_a-zA-Z][_a-zA-Z0-9]*'`
+}
+
+validate( ) {
+    is_unqualified_identifier "$modname" || {
+	printf \
+	    "%s: This name is not a valid C++ unqualified identifier: \"%s\"\n"\
+	    "$progname"						"$modname"
+	exit 1;
+    }
+
+    src="$modname".cpp
+    hdr="$modname".hpp
+    tst=t_"$modname".cpp
+
+    [ -f $src ] && {
+	printf "%s: Source file \"%s\" already exists.\n" \
+	    "$progname"			"$src";
+	ls -l "$src";
+	exit 1;
+    }
+    [ -f $hdr ] && {
+	printf "%s: Header file \"%s\" already exists.\n" \
+	    "$progname"			"$hdr";
+	ls -l "$hdr";	    
+	exit 1;
+    }
+    [ -f $tst ] && {
+	printf "%s: Unit-tests file \"%s\" already exists.\n" \
+	    "$progname"			"$tst";
+	ls -l "$tst";	    
+	exit 1;
+    }
+}
+
+make_guard_symbol() {
+    # Assumes "$modname" is already known to be a good C++ unqualified id.
+    echo INCLUDED_"$modname"_HPP | tr '[a-z]' '[A-Z]'
+}
+
+generate_hdr( ) {
+    cp $HOME/etc/copyright.cpp $hdr
+    guard=`make_guard_symbol`
+    cat >> $hdr <<EOF
+
+//! \file
+//! \brief
+
+#ifndef $guard
+#define $guard
+
+#endif //Guarded by $guard
+
+//end $hdr
+EOF
+}
+
+generate_src( ) {
+    cp $HOME/etc/copyright.cpp $src
+    cat >> $src <<EOF
+
+//! \file
+//! \brief Implement $hdr
+
+#include "$hdr"
+using namespace std;
+
+//end $src
+EOF
+}
+
+generate_tst( ) {
+    cp $HOME/etc/copyright.cpp $tst
+    cat >> $tst <<EOF
+
+//! \file
+//! \brief Unit tests for $src
+
+#include "$hdr"
+#include <cassert>
+#include <iostream>
+using namespace std;
+
+static const char* progname;
+
+int
+main( int, char** argv )
+{
+  progname = argv[0];
+
+
+}
+
+//end $tst
+EOF
+}
+
+case $# in 
+0)	usage; exit 1;;
+1)	case "$1" in
+	-h*|--h*|-\?)
+		usage; exit 0;;
+	esac
+	modname=$1;;
+*)	usage; exit 1;;
+esac
+
+validate 	"$modname";
+trap "rm -f \"$hdr\" \"$src\" \"$tst\"" 0
+generate_hdr	"$hdr"
+generate_src	"$src"
+generate_tst	"$tst"
+trap "" 0
+
+ls -l $hdr $src $tst
+
+##end new-cpp-module

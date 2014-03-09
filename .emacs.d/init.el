@@ -1,0 +1,256 @@
+;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
+
+(load-file "~/.emacs-shared")
+(load-library "cl")
+(setq load-path (cons "~/.emacs.d/lisp" load-path))
+
+(cond ((and (string-match "^GNU Emacs" (emacs-version))
+            (>= emacs-major-version 21)
+            window-system)
+       (if (>= emacs-major-version 22)
+           (setq font-lock-support-mode 'jit-lock-mode)
+         (setq font-lock-support-mode 'lazy-lock-mode))
+       (when (>= emacs-major-version 21)
+         (defun zap-up-to-char (arg char)
+           "Kill up to, but not including, ARG'th occurrence of CHAR.
+Case is ignored if `case-fold-search' is non-nil in the current buffer.
+Goes backward if ARG is negative; error if CHAR not found."
+           (interactive "p\ncZap to char: ")
+           (kill-region (point) (progn
+                                  (search-forward (char-to-string char) nil nil arg)
+                                  (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
+                                  ))))
+       (setq show-paren-style 'expression)
+
+       ;; These are known to work in v24, but may have existed since before.
+       (which-function-mode 1)
+       (filesets-init)
+
+       (require 'delsel)
+       (pending-delete-mode t)
+
+       ;; Known to work at least since v23, again don't know if before.
+       (require 'gamegrid)
+       (defun gamegrid-add-score-with-update-game-score-1( file target score ))
+
+       (require 'uniquify)
+
+       (add-hook 'dired-load-hook
+                 (lambda ()
+                   ;; Bind dired-x-find-file.
+                   (setq dired-x-hands-off-my-keys nil)
+                   (load "dired-x")
+                   ))
+       (require 'dired-x)
+
+       (require 'xcscope)
+
+       (when t                          ;working around a problem in emacs24
+         (require 'slime)
+         (slime-setup))
+
+       (require 'org-install)
+       (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
+       (global-set-key "\C-cl" 'org-store-link)
+       (global-set-key "\C-ca" 'org-agenda)
+       (global-set-key "\C-cb" 'org-iswitchb)
+       (setq org-todo-keywords
+             '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
+       (setq org-log-done t)            ; or '(done) instead of t
+       (setq org-agenda-include-diary t)
+       (add-hook 'org-mode-hook (lambda () (require 'vc)))
+       (add-hook 'org-mode-hook 'turn-on-font-lock)
+
+       (require 'remember)
+       (require 'org-remember)
+       (org-remember-insinuate)
+       (setq org-directory "~/Notes")
+       (setq org-default-notes-file (concat org-directory "/notes.org"))
+       (define-key global-map "\C-cr" 'org-remember)
+
+       (require 'ede)
+       (global-ede-mode t)
+       (require 'semantic)
+       (setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
+                                        ;ecb 2.40
+       (setq ecb-version-check nil)
+       (require 'ecb)
+       (require 'cq-x-utils)
+       (require 'font-lock)
+       (require 'parenface)
+       (require 'linum)
+
+       ;; (setq load-path (cons "~/.emacs.d/color-theme" load-path))
+       (setq load-path (cons "~/.emacs.d/color-theme-solarized" load-path))
+       (require 'color-theme)
+       (require 'color-theme-solarized)
+
+       ;; compensate for the frame-background-mode setting
+       (defun set-color-theme-solarized (mode)
+         "Switch to solarized-MODE, adjusting the frame-background-mode too."
+         (interactive "Slight or dark? ")
+         (unless (memq mode '(light dark))
+           (error "Bad mode '%s, should be one of 'light or 'dark" mode))
+         (let ((sym 'frame-background-mode)
+               ;; (cfc (current-frame-configuration))
+               )
+           (funcall (or (get sym 'custom-set) 'set) sym mode)
+           ;; (set-frame-configuration cfc)
+           (color-theme-solarized mode)
+           (adjust-paren-face-fg)))
+
+       (defun set-color-theme-solarized-light ()
+         "Convenience invocation for (set-color-theme-solarized 'light)"
+         (interactive)
+         (set-color-theme-solarized 'light))
+
+       (defun set-color-theme-solarized-dark ()
+         "Convenience invocation for (set-color-theme-solarized 'dark)"
+         (interactive)
+         (set-color-theme-solarized 'dark))
+
+       (defun set-color-theme-solarized-flip ()
+         "Flip the background mode (from light or default to dark, and from dark to light."
+         (interactive)
+         (let* ((ofbm frame-background-mode)
+                (nfbm (case ofbm
+                        (light 'dark)
+                        (dark 'light)
+                        (otherwise 'dark))))
+           (set-color-theme-solarized nfbm)))
+
+       ;; (fset 'dark (symbol-function 'set-color-theme-solarized-dark))
+       ;; (fset 'light (symbol-function 'set-color-theme-solarized-light))
+
+       (defvar menu-bar-solarized-menu (make-sparse-keymap "Light or Dark?"))
+       (define-key menu-bar-solarized-menu [solarized-light]
+         '(menu-item "Light mode" set-color-theme-solarized-light
+                     :help "Set color theme to solarized, with light background"))
+       (define-key menu-bar-solarized-menu [solarized-dark]
+         '(menu-item "Dark mode" set-color-theme-solarized-dark
+                     :help "Set color theme to solarized, with dark background"))
+       (define-key menu-bar-solarized-menu [solarized-flip]
+         '(menu-item "Flip bg mode" set-color-theme-solarized-flip
+                     :help "Flip background mode between light and dark"))
+       (define-key menu-bar-options-menu [color-theme-background]
+         (list 'menu-item "Light or Dark?" menu-bar-solarized-menu))
+
+       (global-set-key [f12] 'set-color-theme-solarized-flip)))
+
+(global-set-key [(meta z)] 'zap-up-to-char)
+(global-set-key [(meta Z)] 'zap-to-char)
+
+(wrap-up-start)
+(when (memq window-system (list 'x 'w32))
+  (set-default-xtitle)
+  (set-color-theme-solarized-light))
+
+;;;end ~/.emacs -- don't edit beyond
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(adaptive-fill-mode t)
+ '(align-indent-before-aligning t)
+ '(backup-by-copying-when-linked t)
+ '(calendar-date-style (quote iso))
+ '(calendar-mark-diary-entries-flag t)
+ '(calendar-mark-holidays-flag t)
+ '(calendar-week-start-day 1)
+ '(case-fold-search t)
+ '(column-number-mode t)
+ '(compilation-scroll-output t)
+ '(compile-command "time -p make LANG=C -j")
+ '(completion-auto-help (quote lazy))
+ '(current-language-environment "Latin-1")
+ '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1) (tool-bar-lines . 0))))
+ '(default-input-method "latin-9-prefix")
+ '(delete-old-versions t)
+ '(develock-auto-enable nil)
+ '(diary-file "~/.diary")
+ '(diff-switches "-du")
+ '(dired-dwim-target t)
+ '(dired-isearch-filenames (quote dwim))
+ '(dired-kept-versions 3)
+ '(dired-listing-switches "-alh --time-style=long-iso --group-directories-first")
+ '(dired-use-ls-dired t)
+ '(dired-x-hands-off-my-keys nil)
+ '(display-time-mode t)
+ '(ecb-auto-expand-tag-tree (quote all))
+ '(ecb-compile-window-height 8)
+ '(ecb-compile-window-width (quote edit-window))
+ '(ecb-layout-name "left1")
+ '(ecb-options-version "2.40")
+ '(ecb-show-sources-in-directories-buffer (quote ("left7" "left9" "left13" "left14")))
+ '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/usr/src/repos" "Repos") ("/" "/") (#("/home/cesar/Work/Bulk/qemu-exp" 0 30 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) "QEMU exp"))))
+ '(ecb-tip-of-the-day nil)
+ '(ecb-toggle-layout-sequence (quote ("left9" "left14" "left7" "left1")))
+ '(ecb-windows-width 0.25)
+ '(ediff-custom-diff-options "-U10")
+ '(ediff-prefer-iconified-control-frame t)
+ '(ediff-show-clashes-only t)
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(ediff-use-toolbar-p nil)
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
+ '(enable-recursive-minibuffers t)
+ '(explicit-shell-file-name "bash")
+ '(fill-column 78)
+ '(font-lock-maximum-size nil)
+ '(gdb-enable-debug t)
+ '(gdb-max-frames 64)
+ '(gdb-use-separate-io-buffer t)
+ '(global-font-lock-mode t nil (font-lock))
+ '(global-semantic-decoration-mode nil)
+ '(global-semantic-highlight-func-mode t)
+ '(global-semantic-idle-completions-mode t nil (semantic/idle))
+ '(global-semantic-idle-scheduler-mode t)
+ '(global-semantic-idle-summary-mode t)
+ '(global-semantic-mru-bookmark-mode t)
+ '(grep-command "grep -n -e ")
+ '(indent-tabs-mode nil)
+ '(indicate-buffer-boundaries (quote left))
+ '(indicate-empty-lines t)
+ '(inhibit-startup-screen t)
+ '(list-directory-brief-switches "-ACF")
+ '(list-directory-verbose-switches "-lgaF")
+ '(mail-archive-file-name "~/mail/babyl/OUT")
+ '(mail-use-rfc822 t)
+ '(mouse-autoselect-window -0.25)
+ '(mouse-wheel-mode t nil (mwheel))
+ '(mouse-yank-at-point t)
+ '(normal-erase-is-backspace t)
+ '(org-startup-indented t)
+ '(recentf-mode t)
+ '(require-final-newline (quote ask))
+ '(rmail-file-name "~/mail/babyl/RMAIL")
+ '(scroll-bar-mode nil)
+ '(scroll-conservatively 99)
+ '(search-slow-window-lines 3)
+ '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-mode t)
+ '(set-mark-command-repeat-pop t)
+ '(shell-popd-regexp "popd\\|-")
+ '(shell-pushd-regexp "pushd\\|+")
+ '(show-trailing-whitespace nil)
+ '(spice-output-local "Gnucap")
+ '(spice-simulator "Gnucap")
+ '(spice-waveform-viewer "Gwave")
+ '(tab-always-indent (quote complete))
+ '(text-mode-hook (quote (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
+ '(tool-bar-mode nil nil (tool-bar))
+ '(truncate-lines t)
+ '(use-file-dialog nil)
+ '(user-mail-address "cesar.q@sisa.samsung.com")
+ '(visible-bell t)
+ '(wdired-allow-to-change-permissions t)
+ '(wdired-use-dired-vertical-movement (quote sometimes)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
+ '(org-hide ((((background light)) (:foreground "gray85")))))
+(put 'scroll-left 'disabled nil)

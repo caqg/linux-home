@@ -1,0 +1,21 @@
+#!/bin/sed 1d
+          C operator precedence/associativity chart
+
+Arity       Operator                                    Assoc
+--------------------------------------------------------------
+mixed     ()  []  ->  .                                 l -> r
+unary     !   ~   ++  --  -  (type)  *  &  sizeof       r -> l
+binary    *   /   %                                     l -> r
+binary    +   -                                         l -> r
+binary    <<  >>                                        l -> r
+binary    <   <=  >   >=                                l -> r
+binary    ==  !=                                        l -> r
+binary    &                                             l -> r
+binary    ^                                             l -> r
+binary    |                                             l -> r
+binary    &&                                            l -> r
+binary    ||                                            l -> r
+ternary   ?:                                            r -> l
+binary    = += -= *= /= %= >>= <<= &= ^= |=             r -> l
+binary    ,                                             l -> r
+--------------------------------------------------------------

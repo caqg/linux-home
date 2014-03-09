@@ -1,0 +1,29 @@
+#! /bin/sh
+## Copyright (C) 2006 by Cesar A Quiroz, Ph.D.
+## 3500 Granada Ave Apt 348 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+PATH=/bin:/usr/bin:/usr/local/bin
+progname=`basename $0`
+
+usage() {
+    printf "usage: %s dir [dir...]\n" $progname
+    printf "\tCreates the ./TAGS file for the argument directories.\n"
+}
+
+case $# in
+0)	usage; exit 1;;
+1)	case $1 in
+	-h*|--h*|-\?)	usage; exit 0;;
+	esac;;
+esac
+
+# find "$@" -type f |
+# etags --declarations --members -
+
+etags -R --fields=+a+i+S "$@"
+
+ls -l $PWD/TAGS
+
+#end tagshere

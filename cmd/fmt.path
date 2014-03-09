@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case $1 in
+:*)	pathvar=.$1 ;;
+*)	pathvar=$1  ;;
+esac
+case $pathvar in
+*:)	pathvar=${pathvar}. ;;
+esac
+IFS=:
+set -- $pathvar
+for d do echo $d; done

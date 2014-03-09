@@ -1,0 +1,50 @@
+#!/bin/sh
+# $Header: /home/gemini/u1/quiroz/src/cmd/gremv/gremv,v 1.6 90/03/29 01:22:02 quiroz Exp Locker: quiroz $
+# Convert lots of filenames according to some pair of regexps.
+# $Source: /home/gemini/u1/quiroz/src/cmd/gremv/gremv,v $
+
+PATH=/usr/bin:/bin
+
+myself=`basename $0`
+options=acinv
+usage="$myself [-${options}] oldregexp newregexp;"
+
+# Parse command line
+interactive=""; verbose=""; mover="mv"; noop=""
+set -- `getopt $options "$@"`
+if [ $? != 0 ]; then
+    echo 1>&2 $usage;
+    exit 1;
+else
+    for i do
+        case $i in
+	-a)	all="-a"; shift ;;
+        -c)     mover="cp"; shift ;;
+        -i)     interactive="-i"; shift ;;
+        -v)     verbose="verbose"; shift ;;
+        -n)     noop="noop"; verbose="verbose"; shift ;;
+        --)     shift; break ;;
+        *)      echo 1>&2 $myself: bogus option $i;
+                echo 1>&2 $usage;
+                exit 1 ;;
+        esac
+    done
+fi
+
+if [ $# -ne 2 ]; then           # There should be two regexps
+    echo 1>&2 $usage;
+    exit 1
+fi
+
+# Strategy: for each name in the cwd, see what happens if
+# the transformation is applied.  Use mv(1) on the pairs that
+# change, except when just copying.
+# for old in *; do
+ls $all | while read old; do
+    new=`echo $old | sed -e "s/$1/$2/"`
+    if [ "$new" != "$old" ]; then
+        command="$mover \"$interactive\" \"$old\" \"$new\""
+        [ "$verbose" ] && echo 1>&2 $command
+        [ "$noop" ] || eval $command
+    fi
+done

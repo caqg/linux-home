@@ -1,0 +1,24 @@
+Getting cc-mode.el
+===================
+The latest public release version of this file should always be
+available for anonymous ftp on the Emacs Lisp Archive machine.  The
+path to the file is:
+
+archive.cis.ohio-state.edu:pub/gnu/emacs/elisp-archive/modes/cc-mode.tar.Z
+
+This file contains the .el source code and a README file.
+
+For those of you without anon-ftp access, you can use the DEC
+ftpmail'er at the address ftpmail@decwrl.dec.com.  Send the
+following message in the body of your mail to that address to get
+cc-mode:
+
+reply <a valid net address back to you>
+connect archive.cis.ohio-state.edu
+binary
+uuencode
+chdir pub/gnu/emacs/elisp-archive/modes
+get cc-mode.tar.Z
+
+or just send the message "help" for more information on ftpmail.
+Response times will vary with the number of requests in the queue.

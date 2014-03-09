@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# make the MH binaries accessible, even if the binary directory is
+# not on the path.			CQ	94-07-07 16:29:27 UT
+
+MHBIN=${MHBIN:-/usr/local/bin/mh}
+MHLIB=${MHLIB:-/usr/local/lib/mh}
+MHED=${MHEDITOR:-${VISUAL:-${EDITOR:-/bin/ed}}}
+
+PATH=${MHBIN}:${MHLIB}:${PATH}
+export PATH
+
+# try the binaries first, then the library, then look for special
+# pseudo-commands.
+
+if   [ -x ${MHBIN}/$1 ]; then
+	exec ${MHBIN}/$*;
+elif [ -x ${MHLIB}/$1 ]; then
+	exec ${MHLIB}/$*;
+else	case $1 in			#special commands extension
+	--debug)
+		echo "DEBUGGING $*"
+		shift			#dispose of --debug
+		sh -vx $0 $*
+		echo "END DEBUGGING"
+		exit 0;;
+	--showself)
+		echo "Running from $0:"
+		echo
+		/bin/cat $0
+		exit 0;;
+	e)	exec ${MHED} `${MHBIN}/mhpath +drafts $2`
+		;;
+	first)	exec ${MHBIN}/show $*
+		;;
+	last)	exec ${MHBIN}/show $*
+		;;
+	scand)	exec ${MHBIN}/scan +drafts
+		;;
+	sendd)	shift;
+		exec ${MHBIN}/send -alias $HOME/.mh_aliases -draftf +drafts $*
+		;;
+	*)	echo 1>&2 "`basename $0`: $1 unknown"
+		exit 1;;
+	esac
+fi
+	

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+USER=${USER:-${LOGNAME:-"nobody"}}
+PATTERN=${1:-${USER}'*'}
+PATH=${ATRIA:-/usr/atria/bin}:/bin:/usr/ucb
+
+export USER PATTERN PATH
+
+cleartool lsview "$PATTERN" |
+sed -e 's/^ /n/' -e 's/^\*/y/' |
+while read started tag globalpath
+do	case $started in
+	y)	echo '*' $tag;;
+	n)	echo ' ' $tag;;
+	esac
+	df $globalpath | tail +2 |
+	while read fs total used avail percent mount
+	do	echo '    '$avail' KB available in '$fs" ($mount)"
+	done
+	cleartool catcs -tag $tag | sed -e 's/^/	/'
+done
+
+#end view+cs

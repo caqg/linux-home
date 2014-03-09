@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+
+if [ $# != 1 ] 
+then
+   echo "$0: need one argument, a terminal name"
+   exit 1
+fi
+
+entry=`
+tset -sIQ $1 | sed -n 3p | awk '{print $3}' | sed -ne "s/^'\(.*\)';\$/\1/p"`
+IFS=:
+set - $entry
+for arg
+do
+  echo $arg
+done

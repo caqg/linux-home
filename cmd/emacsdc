@@ -1,0 +1,91 @@
+#!/bin/sh
+
+progname=$(basename $0)
+
+usage () {
+    printf "usage: %s -[qknehQ:D:]\n" "$progname"
+    printf "\t-q\tquery if an emacs daemon is running for this user.\n" 
+    printf "\t-k\tkill an emacs daemon, if one is running for this user.\n" 
+    printf "\t-n\tstart a new emacs daemon, even if one was running.\n" 
+    printf "\t-e\tstart a new emacs daemon, or leave an existing one alone.\n" 
+    printf "\t-h\tprovide this help text.\n"
+    printf "\t-Q\tuser name, to query instead of \$USER.\n"
+    printf "\t-D\tdirectory to chdir to before continuing.\n"
+    printf "\n" 
+    printf -- "-D should be given before one of -n or -e, and it sticks.\n"
+    printf "The options are honored in the order given.\n"
+}
+
+launch () {
+    cd $where
+    emacs -daemon
+}
+
+query () {
+    ps -fu"$user" | grep -F " emacs -daemon" | grep -v "grep -F" |
+    awk '
+BEGIN { pid = "none"; }
+NR==1 { pid = $2; }
+END   { printf "%s\n", pid; }
+'
+}
+
+CMDLINE=`getopt -n "$progname" qknehD:Q: "$@"` || { usage; exit 1; }
+eval set -- "$CMDLINE"
+
+user="$USER"
+where=.
+while :; do
+    case "$1" in
+    -D)
+        where=$2;
+        shift 2 ;;
+    -Q)
+        user=$2;
+        pid=$(query)
+        printf "%s: %s found for user %s.\n" "$progname" "$pid" "$user"
+        shift 2 ;;
+    -q)
+        pid=$(query);
+        printf >&2 "%s: %s found.\n" "$progname" "$pid"
+        shift ;;
+    -k)
+        pid=$(query);
+        case "$pid" in
+        none)
+            printf "%s: nothing to kill.\n" "$progname" ;;
+        *)
+            if kill -9 "$pid"; then
+                printf "%s: %d killed.\n" "$progname" "$pid"
+            else
+                printf >&2 "%s: failed: kill -9 %d\n" "$progname" "$pid"
+            fi ;;
+        esac
+        shift ;;
+    -n)
+        pid=$(query);
+        case "$pid" in
+        none)
+            launch; $0 -q ;;
+        *)
+            $0 -k; launch; $0 -q ;;
+        esac
+        shift ;;
+    -e)
+        pid=$(query);
+        case "$pid" in
+        none)
+            launch; $0 -q ;;
+        *)
+            $0 -q ;;
+        esac
+        shift ;;
+    -h)
+        usage;
+        shift ;;
+    --)
+        shift; break;;
+    esac
+done
+
+

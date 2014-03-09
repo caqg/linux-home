@@ -1,0 +1,34 @@
+#!/bin/sh
+# Update the (emacs lisp) version of the folders list.
+# This should be run from a cron/at script at regular intervals,
+# perhaps every night.
+
+# $Source: /home/gemini/u1/quiroz/src/cmd/update-folder-list/update-folder-list,v $
+# $Id: update-folder-list,v 1.3 89/09/29 20:44:35 quiroz Exp Locker: quiroz $
+
+PATH=/bin:/usr/bin:$HOME/cmd
+
+file=${MHFOLDERLIST-$HOME/.mh-folder-list.el}
+folders=/usr/local/bin/mh/folders
+tmpfile=${TMPDIR-/tmp}/ufl$$
+
+# Build new list in a temporary file; then make it into lisp
+# $folders -fast -recurse > ${tmpfile}
+list-folders > ${tmpfile}
+ed - ${tmpfile} <<\Fin
+1,$s/.*/			("+&")/
+0a
+(setq mh-folder-list  '(
+.
+$a
+			))
+.
+w
+q
+Fin
+
+# Lock emacs out, rename, and unlock
+chmod -r $file
+mv $tmpfile $file
+chmod u+r $file
+

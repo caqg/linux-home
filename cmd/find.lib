@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# check $LD_LIBRARY_PATH to find a binary library.
+
+$HOME/cmd/fmt.path $LD_LIBRARY_PATH |
+while read d;
+do
+	for name
+	do
+		[ -f $d/$name ] && echo $d/$name
+	done
+done

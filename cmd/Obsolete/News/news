@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# make the news binaries accessible, even if the binary directory is
+# not on the path.			CQ	94-07-07 16:29:27 UT
+
+NEWSBIN=${NEWSBIN:-/usr/local/news}
+
+# try executables first, then pseudo-commands
+
+if   [ -x ${NEWSBIN}/$1 ]; then
+	exec ${NEWSBIN}/$*;
+else	case $1 in			#special commands extension
+	--debug)
+		echo "DEBUGGING $*"
+		shift			#dispose of --debug
+		sh -vx $0 $*
+		echo "END DEBUGGING"
+		exit 0;;
+	--showself)
+		echo "Running from $0:"
+		echo
+		/bin/cat $0
+		exit 0;;
+	sort)	shift;
+		$HOME/cmd/sort-newsrc $*
+		;;
+	squeeze) shift;
+		$HOME/cmd/squeeze-newsrc $*
+		;;
+	*)	echo 1>&2 "`basename $0`: $1 unknown"
+		exit 1;;
+	esac
+fi
+	

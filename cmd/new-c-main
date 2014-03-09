@@ -1,0 +1,89 @@
+#! /bin/sh
+## Copyright (C) 2007 by Cesar A Quiroz, Ph.D.
+## 3500 Granada Ave Apt 348 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+PATH=/bin:/usr/bin:/usr/local/bin
+progname="$0"
+
+usage( ) {
+    printf "usage: %s app\n" `basename $progname`
+    printf "\tCreates a skeleton main program for an application named <app>.\n"
+    printf "\tNamely: <app>.c\n"
+    printf "\tRefuses to overwrite an existing file.\n"
+}
+
+is_unqualified_identifier( ) {
+    id="$1"
+    test `expr length "$id"` = `expr match "$id" '[_a-zA-Z][_a-zA-Z0-9]*'`
+}
+
+validate( ) {
+    is_unqualified_identifier "$appname" || {
+	printf \
+	    "%s: This name is not a valid C unqualified identifier: \"%s\"\n"\
+	    "$progname"						"$appname"
+	exit 1;
+    }
+
+    src="$appname".c
+
+    [ -f $src ] && {
+	printf "%s: Source file \"%s\" already exists.\n" \
+	    "$progname"			"$src";
+	ls -l "$src";
+	exit 1;
+    }
+}
+
+make_guard_symbol() {
+    # Assumes "$appname" is already known to be a good C++ unqualified id.
+    echo INCLUDED_"$appname"_H | tr '[a-z]' '[A-Z]'
+}
+
+generate_src( ) {
+    cp $HOME/etc/copyright.c $src
+    cat >> $src <<EOF
+/** \file
+ * \brief
+ */
+
+static const char* progname;
+
+int 
+main( int argc , char** argv )
+{
+  progname = argv[0];
+
+  return 0;
+}
+
+void
+usage( )
+{
+}
+
+
+/* end $src */
+EOF
+}
+
+case $# in 
+0)	usage; exit 1;;
+1)	case "$1" in
+	-h*|--h*|-\?)
+		usage; exit 0;;
+	esac
+	appname=$1;;
+*)	usage; exit 1;;
+esac
+
+validate 	"$appname";
+trap "rm -f \"$hdr\" \"$src\"" 0
+generate_src	"$src"
+trap "" 0
+
+ls -l $hdr $src
+
+##end new-c-main

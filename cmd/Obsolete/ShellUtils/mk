@@ -1,0 +1,49 @@
+#!/bin/sh
+# Run make in the background.
+# usage is 'mk <arguments for make>'
+# leaves a file 'make.out' where make's output
+# is accumulated, plus some time and identification 
+# info.
+
+# $Source: /home/gemini/u1/quiroz/src/cmd/mk/mk,v $
+# $Id: mk,v 1.8 91/01/06 06:13:12 quiroz Exp Locker: quiroz $
+
+PATH=/usr/local/bin:/usr/bin:/usr/ucb:/bin
+
+outfile=mk.out
+make=${THE_MAKE-/bin/make}
+upversion=$HOME/cmd/bkup
+
+# Protect old log files, if needed and possible
+[ -f $upversion ] && $upversion $outfile
+
+# Identify this run.
+echo @: euid\:`whoami` uid\:$USER host:`hostname` :@ > ${outfile}
+echo -n >> ${outfile} " => "`basename $0`
+for arg in ${1+"$@"}; do
+    if echo "$arg" | grep -s '[] 	*?~!)(;&|^[]'
+    then # arg needs quotes when passed
+        echo -n >> ${outfile} " "\'$arg\'
+    else # arg can be passed as-is
+        echo -n >> ${outfile} " "$arg
+    fi
+done
+
+echo >> ${outfile} # final newline
+date >> ${outfile}
+echo >> ${outfile}
+
+# Now run make.
+if [ "$*" = "" ]
+then # no args given, no args passed
+    ${make} >> ${outfile} 2>&1
+else # some args given, passed quoted
+    ${make} >> ${outfile} 2>&1 "$@"
+fi
+MAKESTATUS=$?
+
+# Close script file and return the status returned by make.
+echo >> ${outfile}
+date >> ${outfile}
+exit ${MAKESTATUS}
+

@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# squeeze the number ranges
+# goes from N1,N2-N3,N4,N5-N6,N7 to plain N1-N7
+
+mark="!"
+errors=0
+set -- `getopt a $*`
+case $? in 
+0)	for a in $*; do
+		case $a in
+		-a)	mark="."
+			shift;;
+		--)	shift;
+			break;;
+		esac
+	done
+	case $# in
+	1)	d=$1
+		;;
+	*)	errors=1
+		;;
+	esac
+	;;
+*)	errors=1
+	;;
+esac
+case $errors in
+0)	;;
+*)	echo "usage:	$0 [-a] directory"
+	echo "	-a indicates to squeeze all groups, including subscribed ones"
+	exit 1
+esac
+
+timestamp=`/bin/date -u +%y%m%d%H%M%S`
+newsrc=$d/.newsrc
+backup=${newsrc}.${timestamp}~
+
+[ -d $d ] || {
+	echo $0: $d is not a directory, aborting
+	exit 1
+}
+[ -r $newsrc ] || {
+	echo $0: cannot read $newsrc, aborting
+	exit 1
+}
+[ -w $newsrc ] || {
+	echo $0: cannot write $newsrc, left untouched
+	exit 1
+}
+if [ -w $backup ]; then
+	echo $0: cannot write to $backup, ignoring
+else
+	/bin/cp -p $newsrc $backup
+fi
+
+temp=${TMPDIR-/tmp}/newsrc.$$
+/bin/cp -p $newsrc $temp
+/bin/cat > $temp < /dev/null
+trap '/bin/rm $temp' 1 2 15
+
+/bin/sed <$newsrc >$temp\
+ -e '/'"$mark"'/s/\([0-9][0-9]*\)[-,].*[-,]\([0-9][0-9]*\)/\1-\2/'
+/bin/cp -p $temp $newsrc && /bin/rm $temp
+
+ 

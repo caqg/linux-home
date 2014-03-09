@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+cmd='emacs -f resume-math '"$@"
+
+exec $cmd
+

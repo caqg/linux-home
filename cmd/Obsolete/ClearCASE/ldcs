@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# LoaD Configuration Specification
+
+HOMECS=${HOMECS-$HOME/cs}
+ct=/usr/atria/bin/cleartool
+
+case $# in
+1)	name=$HOMECS/$1
+	;;
+*)	echo "usage: "`/bin/basename $0`" config-spec-name"
+	echo "	see lscs for the names available now"
+	echo "	see shcs for the contents of a spec"
+	echo "	see svcs for how to save a spec"
+	exit 1
+	;;
+esac
+
+if [ -f $name ]; then
+	$ct setcs $name;
+	$ct catcs
+elif $ct lstype -s lbtype:$1 2>/dev/null 1>/dev/null; then
+	# the argument is a label!
+	echo "element * $1" > $name
+	$ct setcs $name
+	$ct catcs
+else	echo "`/bin/basename $0`: can't find $name"
+	exit 1
+fi

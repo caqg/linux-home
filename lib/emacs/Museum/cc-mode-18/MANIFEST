@@ -1,0 +1,18 @@
+You should have received the following files in the distribution tar
+file for cc-mode 3.349:
+
+    MANIFEST: This file
+
+    cc-mode.el: Version 3.349 of the mode
+
+    cc-mode-18.el: Emacs 18 compatibility file
+
+    README: manual on how to use cc-mode to edit C and C++
+    files. Eventually this will be replaced by a texinfo manual.
+
+    DUMPING: A guide to ditching c-mode.el in favor of cc-mode.el.
+
+    ChangeLog: Extremely verbose history of changes.
+
+    lemacs.patch: fix to obscure C++ comment bug for Lucid Emacs 19
+    only.  See comments in file re: FSF Emacs 19.

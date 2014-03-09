@@ -1,0 +1,17 @@
+#!/bin/sh
+
+PATH=$HOME/cmd:/bin
+
+echo "(progn"
+echo "  (save-excursion"
+echo "    (save-restriction"
+changed 	|
+sed 's/^M //'	|
+while read f; do
+    echo "      (find-file-noselect \"$f\")"
+done
+echo "      (when (and (boundp 'ecb-minor-mode) ecb-minor-mode)"
+echo "            (ecb-clear-history) (ecb-add-all-buffers-to-history))))"
+echo "  'done)"
+
+#find-cvs-changed 2007-06-18 05:50:37UT (cesar@bears06-01)

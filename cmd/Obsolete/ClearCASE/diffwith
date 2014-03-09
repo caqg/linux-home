@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Diff the filenames appearing in stdin against their versions with 
+# the label given in the command line argument.  This program must be 
+# run from a view already set for the correct configuration specification.
+
+ATRIA=${ATRIA:-/usr/atria/bin}
+PATH=/bin:/usr/bin:/usr/local/bin:$ATRIA
+export PATH
+
+# Determine correct usage, find the label we are testing against.
+sayusage=no
+case $# in
+1)
+	case $1 in
+	-help|--help|-?|-h)
+		sayusage=yes
+		;;
+	*)
+		label=$1; shift;
+		;;
+	esac
+	;;
+*)
+	sayusage=yes
+	;;
+esac
+case $sayusage in
+yes)
+	progname=`basename $0`
+	echo "usage: $progname CLEARCASE_LABEL"
+	echo "	Filenames read from stdin are used to compare with label"
+	exit 1;;
+esac
+
+# Determine diff program
+if [ -x /eng/devtools/SunOS_5.7/bin/diff ];
+then	diff="/eng/devtools/SunOS_5.7/bin/diff -p -U12 -b";
+else	diff="/bin/diff -c";
+fi
+
+# Do the diffs
+while read f; 
+do	$diff ${f}@@/${label} $f
+done

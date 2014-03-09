@@ -1,0 +1,3 @@
+# -*- Tcl -*-
+
+proc p args { puts $args }

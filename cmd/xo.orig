@@ -1,0 +1,47 @@
+#!/bin/sh
+TMPDIR=${TMPDIR:-/tmp}
+# PATH=/usr/bin:/bin
+
+xterm=xterm
+geometry=${xGEOMETRY:-80x40}
+pager=${PAGER:-less}
+temporary=${TMPDIR}/x.tmp.$$
+rm=/bin/rm
+who=${LOGNAME:-${USER:-me}}
+where=`/bin/uname -n`
+cmd=${1:-${SHELL:-/bin/sh}}
+name=`basename $cmd`
+
+echo '#!/bin/sh' > ${temporary}
+printf "%s" "$* " >> ${temporary}
+printf "%s\n" "2>&1 | ${pager}" >> ${temporary}
+chmod +x ${temporary}
+
+case $# in 
+0)	title="$who@$where $name"		;;
+1)	title="@$where  $name"			;;
+2)	title="@$where  $name $2"		;;
+3)	title="@$where  $name $2 $3"		;;
+4)	title="@$where  $name $2 $3 $4"		;;
+5)	title="@$where  $name $2 $3 $4 $5"	;;
+*)	title="@$where  $name $2 $3 $4 $5 ..."	;;
+esac
+
+fn=$(whichXFont font)
+fb=$(whichXFont boldFont)
+
+# ls -l ${temporary}
+# cat ${temporary}
+
+case "${DESKTOP_SESSION:-none}"  in
+gnome)
+	(sh $temporary | gview -M - && rm -f $temporary) &
+	;;
+*)
+	(${xterm} -fn "$fn" -fb "$fb" \
+	    -geometry ${geometry} +sb -n "$title" -T "$title" -e ${temporary} &&
+	    ${rm} -f ${temporary}) &
+	;;
+esac
+
+# end of xo

@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Batch-compile .el files (or directories)
+# usage: emacs-compile <filenames>
+
+emacs=/usr/new/emacs
+
+if [ $# -eq 0 ]
+then
+   echo >/dev/tty "usage: " $0 " <filenames>"
+   echo >/dev/tty "       Where the <filenames> are compiled.  Directories"
+   echo >/dev/tty "       can be used, too.  They are byte-recompiled."
+   exit 0
+fi
+
+exec $emacs -batch -f batch-byte-compile $* >& compile.out&
+

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Prints the VOB name for its only argument.
+# Or, if many, a list of path tab vob
+# Or, if none, the vob for .
+
+CT=${CT:-/usr/atria/bin/cleartool}
+
+case $# in
+0)	$CT describe -s -vob .
+	;;
+1)	$CT describe -s -vob $1
+	;;
+*)	for arg
+	do	echo -n $arg'	'
+		$CT describe -s -vob $arg
+	done
+esac

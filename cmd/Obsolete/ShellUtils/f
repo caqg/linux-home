@@ -1,0 +1,3 @@
+#!/bin/sh
+
+finger $* | tr -d \\015 | ${BROWSER-${PAGER-more}}

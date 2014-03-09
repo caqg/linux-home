@@ -1,0 +1,51 @@
+#!/bin/sh
+
+# usage: cgrep [-<number>] <egrep arguments>
+IFS=' 	
+'
+PATH=/bin:/usr/ucb:/usr/bin
+usage='usage: cgrep [{+-}<context:5>] <egrep arguments>'
+
+case $# in
+0)	echo 1>&2 "$usage"
+	exit 1			;;
+esac
+
+case "$1" in
+-\?|-help|-h|--help)
+	echo 1>&2 "$usage"
+	exit 1			
+	;;
+-*)	number=`expr "$1" : '^-0*\([0-9][0-9]*\)$'`
+	nopt=""
+	;;
++*)	number=`expr "$1" : '^+0*\([0-9][0-9]*\)$'`
+	nopt="-n"
+	;;
+esac
+
+context=${number:-5}
+[ "$number" ] && shift
+
+(echo $context $nopt;
+ egrep -n ${1+"$@"} /dev/null
+)	|
+awk '
+NR == 1		{	context = $1; nopt = $2;
+			FS = ":"; next;
+		}
+		{	fname=$1; midln = $2;
+			begin = midln - context;
+			if (begin < 1)
+				begin = 1;
+			end = midln + context;
+			printf "echo %s %09d,%09d vvvvvvvvvvvvvvvvvvvv\n", \
+				fname, begin, end
+			printf "cat %s %s | sed -n -e %d,%dp\n", \
+				nopt, fname, begin, end
+			printf "echo %s %09d,%09d \"^^^^^^^^^^^^^^^^^^^^\"\n", \
+				fname, begin, end
+			printf "echo\n"
+		}
+'	|
+sh

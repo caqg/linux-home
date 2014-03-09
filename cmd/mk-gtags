@@ -1,0 +1,13 @@
+#!/bin/sh
+PATH=/bin:/usr/bin
+
+GFILES="\
+GPATH \
+GRTAGS \
+GSYMS \
+GTAGS \
+"
+
+gtags -I
+ls -l $GFILES |
+sed -e 's/^/	/'

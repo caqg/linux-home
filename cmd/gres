@@ -1,0 +1,44 @@
+#! /bin/sh
+# $Header: /home/gemini/u1/quiroz/src/cmd/gres/gres,v 1.5 90/03/29 01:27:36 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/cmd/gres/gres,v $
+
+# usage: gres [-g] pattern string [file ...]
+
+PATH=/bin:$HOME/cmd
+
+overwrite=overwrite
+usage="usage: gres [-g] pattern string [file ...]"
+
+case $# in
+0|1)
+    echo 1>&2 $usage
+    exit 1 ;;
+*)
+    case $1 in
+    -g)
+        modifier=; shift ;;
+    *)
+        modifier=g ;;
+    esac
+    case $# in
+    0|1)
+        echo 1>&2 $usage
+        exit 1 ;;
+    esac
+esac
+
+pattern=$1
+replacement=$2
+shift; shift;
+
+case $# in
+0)  # Modifying STDIN only
+    sed -e "s/${pattern}/${replacement}/${modifier}" ;;
+*)  # Loop on the filenames provided.
+    # This was done in release 1.1 with ed.  I had to change it
+    # because the standard ed has a 64K buffer limitation.
+    for file do
+        $overwrite $file\
+            sed -e "s/${pattern}/${replacement}/${modifier}" $file
+    done ;;
+esac

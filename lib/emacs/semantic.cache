@@ -1,0 +1,63 @@
+;; Object semantic.cache
+;; SEMANTICDB Tags save file
+(semanticdb-project-database "semantic.cache"
+  :file "semantic.cache"
+  :tables (list 
+   (semanticdb-table "cq-lisp-mode.el"
+    :file "cq-lisp-mode.el"
+    :pointmax 18269
+    :major-mode 'emacs-lisp-mode
+    :tokens '(("cq-shell" include nil nil nil [60 79]) ("*global-functionals-or-typed*" variable nil (quote (apply assoc-if assoc-if-not concatenate count-if count-if-not delete-if delete-if-not every find-if find-if-not funcall (map . 2) mapc mapcan mapcar mapcon maphash mapl maplist member-if member-if-not merge notany notevery (nsubst-if . 2) (nsubst-if-not . 2) (nsubstitute-if . 2) (nsubstitute-if-not . 2) position-if position-if-not rassoc-if rassoc-if-not reduce remove-if remove-if-not some (subst-if . 2) (subst-if-not . 2) (substitute-if . 2) (substitute-if-not . 2))) nil "List of [some] Common Lisp functions that take a function argument
+or a type specifier argument early in their lambda-lists, and for
+which I might use a non-standard indentation.  Each entry is either a
+symbol (in whose case the spec used for indentation will be `1') or a
+cons, whose `car' is the symbol to set and whose `cdr' is the spec to use.
+See also `[un]set-questionable-indentation'." nil [81 1055]) ("set-questionable-indentation" function nil nil ((user-visible . t)) "Set the indent hooks of several Common Lisp functions in a
+non-standard, but perhaps clearer way.  The affected functions take a
+function or a type specifier `early' in their arglists, making it
+desirable to consider all the arguments up to that one `special'.  See
+the variables `*global-functionals-or-typed*'.  Undo these settings with
+the function `unset-questionable-indentation'" nil [1057 1865]) ("unset-questionable-indentation" function nil nil ((user-visible . t)) "Undo the effect of `set-questionable-indentation' (q.v.)" nil [1867 2304]) ("cq-lisp-mode" function nil nil ((user-visible . t)) "Customizations common to all the lisp modes." nil [2307 3868]) ("cq-emacs-lisp-mode" function nil nil ((user-visible . t)) "Customizations used for Emacs-Lisp only" nil [3870 4202]) ("cq-lisp-interaction-mode" function nil nil ((user-visible . t)) "Customizations for Lisp Interaction." nil [4204 4313]) ("cq-common-lisp-mode" function nil nil nil "Customizations for Common Lisp." nil [4653 5801]) ("cq-both-in" function nil ("dot1" "dot2") ((user-visible . t)) "Insert parentheses around the sexps containing the region.
+A program has to pass two positions, DOT1 and DOT2
+The left parenthesis goes before the sexp that BEGINS at or before DOT1,
+the right one goes after the sexp that ENDS at or after DOT2
+Most likely, what you really want is INSERT-PARENTHESES
+See also WITHIN-DELIMITERS" nil [5841 6666]) ("cq-both-out" function nil ("dot") ((user-visible . t)) "Remove parentheses around the list enclosing DOT.
+Common usage:  put the cursor at the beginning of the list you want,
+mark that list and call this function.  BUG: it should know to operate
+inside the region only" nil [6668 7229]) ("cq-extract-sexp" function nil ("dot") ((user-visible . t)) "Take the s-expression at or after DOT out of the list enclosing it
+The extracted sexp replaces the containing list, and is regrinded.
+To extract a list from inside another, set point first to the open delimiter" nil [7231 8081]) ("inferior-lisp-editor" variable nil "emacsclient" ((user-visible . t)) "*Editor to mention to the inferior lisp, in case it needs one ;-)" nil [8168 8281]) ("*lisp-history-capacity*" variable nil *shell-history-capacity* nil "Size of the inferior lisp interaction histories." nil [8283 8393]) ("resume-lisp" function nil nil ((user-visible . t)) "Return to the *lisp* buffer.  Create a new one if needed.  If the
+buffer exists, but the inferior-lisp lisp has exited, restart it." nil [8395 9602]) ("resume-scheme" function nil nil ((user-visible . t)) "Return to the *scheme* buffer.  Create a new one if needed.  If the
+buffer exists, but the inferior-scheme scheme has exited, restart it." nil [9604 10552]) ("cq-backward-up-list" function nil ("arg") ((user-visible . t)) "This is like backward-up-list (q.v.), except that it treats strings
+as atoms, and skips them completely.  See also cq-down-list and
+cq-backward-up-list-or-string." nil [10868 11501]) ("cq-down-list" function nil ("arg") ((user-visible . t)) "This is like down-list (q.v.), except that it treats strings
+as atoms, and skips them completely.  See also cq-backward-up-list." nil [11503 12081]) ("out-of-string-maybe" function nil ("arg") ((user-visible . t)) "If point is inside a string, and ARG is not zero,
+   Then, if ARG is positive,
+           Then
+                Point moves to the initiating string quote,
+                ARG-1 is returned
+           Else (ARG is negative)
+                Point moves beyond the terminating string quote,
+                ARG+1 is returned
+   Else
+         ARG is returned." nil [12338 13558]) ("cq-backward-up-list-or-string" function nil ("arg") ((user-visible . t)) "Like backward-up-list, but if point is inside a string, exiting the
+string counts as one of the ARG jumps.  See also cq-backward-up-list.
+An argument of C-u is understood as -1, not as 4." nil [13560 13921]) ("cq-stuff-alist" variable nil nil ((user-visible . t)) "*Alist of (character left right) for cq-stuff.
+Character cannot be '?'." nil [13924 14027]) ("cond" code nil [14029 14385]) ("cq-stuff-sexp" function nil nil ((user-visible . t)) "Stuff a given sexp, left and right parts come from cq-stuff-alist, q.v." nil [14387 15367]) ("cq-inferior-lisp-mode" function nil nil ((user-visible . t)) "Set up stuff for inferior lisp mode.
+This is just for Common Lisp inferiors, and runs at the end of cq-lisp-mode." nil [15369 15896]) ("rebuild-doc" function nil nil ((user-visible . t)) "Goes and finishes fixing up the DOC file, and reloads it.
+Run after you have done (rebuild-doc) in the KCL window." nil [15946 16533]) ("fset" code nil [16600 16662]) ("cq-close-defun" function nil ("where") ((user-visible . t)) "Try to close the top level s-expression ending at the position WHERE,
+which is the value of point by default.  By 'closing' the s-exp we mean this: 
++ If inside a comment, break to the next line and reindent, and...
++ If inside a string, close the string, and...
++ If inside a nest of open parentheses, add enough closing parentheses to
+  get the nesting back to zero.
+This function does *not* look at right contexts.  Instead, you should use it
+as if the point of insertion were the end of the buffer.  Useful when actually
+at the end of the buffer, or when you know that the next expression is a top
+level one.
+" nil [16666 18243]))
+    :unmatched-syntax 'nil
+    )
+   )
+  )

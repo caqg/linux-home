@@ -1,0 +1,43 @@
+#!/bin/sh
+# $Header$
+# $Source$
+
+PATH=$PATH:/usr/local/bin/mh
+
+# Called with $0 %A %P %c %a %B %C "%b" %X from rn
+# This is used only from the NORMSAVER variable for rn.
+# Preferably, run -N, +/, SAVEDIR=/tmp, SAVENAME=+inbox
+
+if [ $# -ne 8 ]; then
+    echo 1>&2 Need 8 arguments for norm.saver.
+    exit 1;
+fi
+
+fullname=$1                     # %A
+spooldir=$2                     # %P
+groupdir=$3                     # %c
+artnumber=$4                    # %a
+boffset=$5                      # %B
+groupdot=$6                     # %C
+savedest=$7                     # %b
+rnlib=$8                        # %X
+
+# If the offset is zero and the destination name begins with a `+',
+# transfer to MH, else do the default in this case.
+if [ $boffset -eq 0 ]           # => not in w|W cases
+then
+    folder=`basename $savedest`
+    case $folder in
+        +*)
+            inc $folder -file $fullname
+            echo $fullname refiled to MH folder $folder
+            exit 1              #so rn doesn't say "Saved..."
+    esac
+fi
+
+# the actual norm.saver could be elsewhere
+default=$rnlib/norm.saver
+[ -f $default ] || default=/usr/spool/newslib/rn/norm.saver
+
+$default $1 $2 $3 $4 $5 $6 "$7"
+

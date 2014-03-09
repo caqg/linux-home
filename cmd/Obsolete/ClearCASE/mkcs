@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# MaKe Configuration Specification
+
+HOMECS=${HOMECS-$HOME/cs}
+ct=/usr/atria/bin/cleartool
+
+case $# in
+1)	label=$1
+	name=$HOMECS/$label
+	;;
+2)	label=$1
+	branch=$2
+	name=$HOMECS/$branch
+	;;
+3)	label=$1
+	branch=$2
+	name=$HOMECS/$3
+	;;
+*)	echo "usage: "`/bin/basename $0`" labeltype [branchtype [specname]]"
+	echo "	see ldcs for how to load a spec"
+	echo "	see lscs for the names available now"
+	echo "	see shcs for the contents of a spec"
+	echo "	see svcs for how to save a spec"
+	exit 1
+	;;
+esac
+
+if [ -f $name ]; then 
+	echo "There is already a config spec named $name"
+	exit 2;
+fi
+
+echo > $name "element * CHECKEDOUT"
+echo >>$name "element * .../$branch/LATEST"
+echo >>$name "element * $label -mkbranch $branch"
+cat $name

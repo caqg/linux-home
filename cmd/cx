@@ -1,0 +1,7 @@
+#!/bin/sh
+
+exec /bin/chmod +x $*
+
+# Emacs # local variables:
+# Emacs # eval: (if (fboundp 'unix-script-mode) (unix-script-mode))
+# Emacs # end:

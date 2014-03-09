@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# SaVe Configuration Specification
+
+HOMECS=${HOMECS-$HOME/cs}
+
+set -- `getopt f $*`
+if [ $? != 0 ]
+then	echo "usage: "`/bin/basename [-f] $0`" config-spec-name"
+	echo "	-f forces the write"
+	exit 1
+fi
+
+force=0
+for i in $*
+do	case $i in
+	-f)	force=1; shift;;
+	--)	shift; break;;
+	esac
+done
+
+case $# in
+1)	name=$HOMECS/$1
+	;;
+*)	echo "usage: "`/bin/basename [-f] $0`" config-spec-name"
+	echo "	-f forces the write"
+	echo "	see lscs for the names available now"
+	echo "	see shcs for the contents of a spec"
+	echo "	see ldcs for how to load a saved spec"
+	exit 1
+	;;
+esac
+
+
+if [ -f $name ]
+then exists=1
+else exists=0
+fi
+
+if [ $exists = 0 -o $force = 1 ]
+then	/usr/atria/bin/cleartool catcs > $name
+else	echo `/bin/basename $0`": $name exists, give -f to overwrite"
+	exit 1
+fi

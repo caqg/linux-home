@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$0" in
+*-s)                            # 20131227-223949Z
+        /bin/echo -n `/bin/date -u +'%Y%m%d-%H%M%SZ'`
+        ;;
+*)                              # 2013-12-27 22:39:57UT (cesar@cesar-u64)
+        /bin/echo -n `/bin/date -u +'%Y-%m-%d %H:%M:%SUT'`\
+	"(`whoami`@`/bin/hostname`)"
+        ;;
+esac

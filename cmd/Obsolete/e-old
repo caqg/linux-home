@@ -1,0 +1,14 @@
+#!/bin/sh
+
+e=${LOCALEDITOR-${VISUAL-${EDITOR-/bin/ed}}}
+
+case $TERM in
+*xterm)
+    echo 1>&2 $0: editing \`$*\', please wait...
+    x $e "$@"
+    ;;
+*)
+    echo 1>&2 $0: editing \`$*\', please wait...
+    $e "$@"
+    ;;
+esac

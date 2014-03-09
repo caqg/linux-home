@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sakura --config-file=rogue.conf -r 24 -c 80 -t Rogue -e /usr/games/rogue

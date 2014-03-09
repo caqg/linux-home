@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# *unannotate* the first argument -> remove %X fields
+
+if  [ $# != 1 ] 
+then
+   echo >/dev/tty "$0 <refs> removes annotations for <refs>"
+   exit 0
+fi
+
+if  [ ! \( -f $1 \) ]
+then
+   echo >/dev/tty "$1 isn't a file"
+   exit 1
+fi
+
+awk  '
+/^%A/ { 
+  if (inX) {
+     print ""; 
+     inX = 0;
+  }
+  print
+  next
+}
+/^%X/ {
+  inX = 1
+}
+inX != 0 {
+  next
+}
+inX == 0 {
+  print
+}
+' $1
+

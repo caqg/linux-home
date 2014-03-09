@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# save.newsrc:	backup .newsrc over rn crashes
+
+if [ $# -ne 0 ]; then
+	echo 1>&2 usage: `basename $0`
+	echo 1>&2 '       creates backup copy, if needed, for .newsrc'
+	exit 1
+fi
+
+\cd;
+
+if [ ! -f .newsrc ]; then 		# create first version if needed
+	> .newsrc
+fi
+if [ ! -f .curnewsrc ]; then
+	rm -f .curnewsrc			# the link, not the file
+	first=`newversion .newsrc`
+	cp -p .newsrc $first
+	ln -s $first .curnewsrc
+else					# update old version
+	cmp -s .newsrc .curnewsrc || {
+		new=`newversion .newsrc`
+		cp -p .newsrc $new
+		rm -f .curnewsrc
+		ln -s $new .curnewsrc
+	}
+fi
+
+
+# end of save.newsrc

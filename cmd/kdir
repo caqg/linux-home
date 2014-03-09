@@ -1,0 +1,27 @@
+#!/bin/sh
+
+usage () {
+    /usr/bin/printf "usage: %s directory-name\n" `basename $0`
+    /usr/bin/printf "\trenames the directory and deletes it, which lets another \n"
+    /usr/bin/printf "\t(build) process to reuse that name for a new directory.\n"
+}
+
+# input completion may convert DIR to DIR/ -- normalize the name to not end in /.
+case $# in
+1)	dir=`expr "$1" : '\([^/]*\)\/*'`; shift;;
+*)	usage; exit 1;;
+esac
+
+[ -d "$dir" ] || {
+    /usr/bin/printf "%s: \"%s\" not a directory.\n" `basename $0` "$dir"
+    exit 2
+}
+
+diralias="$dir".$$
+
+/bin/mv "$dir" "$diralias" || {
+    /usr/bin/printf "%s: could not rename \"$dir\".\n" `basename $0` "$dir"
+    exit 2
+}
+
+/bin/rm -fr "$diralias" &

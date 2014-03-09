@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+# ding -- try to attract the user's attention
+
+PATH=/usr/bin
+tput=/usr/5bin/tput
+
+if [ $# -ne 0 ]; then
+    echo 'usage: '`basename $0`
+    exit 1
+fi
+
+exec 2>/dev/null                #we are committed to do something
+bel=`$tput bel` || bel=`$tput flash` || bel=`DING...`
+echo -n $bel

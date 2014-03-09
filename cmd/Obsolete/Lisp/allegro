@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+allegro=/s5/allegro/bin
+
+[ -d $allegro ] || mounts5      #is it already mounted?
+
+PATH=$allegro:$PATH             #ensure accessibility
+RUN_ALLEGRO=yes 
+export PATH
+export RUN_ALLEGRO
+
+hostname=`hostname | sed -e 's/\([^.]*\)\..*/\1/'`
+
+exec $allegro/emacs -wn allegro@$hostname -in allegro@$hostname \
+     -f fi:common-lisp $*
+

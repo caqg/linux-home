@@ -1,0 +1,6 @@
+#!/bin/sh
+
+LD_LIBRARY_PATH=/mnt/sqa12/X11R5/lib:/usr/openwin/lib:/mnt/sw1/X/usr/lib
+export LD_LIBRARY_PATH
+
+exec Mosaic $*

@@ -1,0 +1,9 @@
+#!/bin/sh
+ROGUEOPTS='noscore,notomb,terse,jump,passgo,flush,name=Latin Hacker,fruit=lime,file=.roguegame'
+SHELL=/bin/sh
+export ROGUEOPTS SHELL
+rogue=$HOME/bin/Mach.${MACH}/rogue
+
+exec $rogue $*
+
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+PATH=/usr/ucb:/usr/bin:/bin
+
+lpr -Plp -p $*
+lpq -Plp
+

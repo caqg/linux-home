@@ -1,0 +1,57 @@
+Release announcement for cc-mode 4.379
+Barry A. Warsaw <cc-mode-help@python.org>
+1997/03/10 01:04:38
+
+This message announces the availability of cc-mode version 4.379.
+cc-mode is a GNU Emacs mode for editing C (ANSI and K&R), C++,
+Objective-C, and Java code.  A list of user visible changes is
+available from <http://www.python.org/ftp/emacs/cc-details.html>.
+
+Since the distribution is fairly large and since it is readily
+available via the Web, anonymous ftp, and email, the source code is
+not being posted here.  Downloading instructions are provided further
+down in this message.
+
+NOTE: XEmacs 19.14 and Emacs 19.34 both contain an older version of
+cc-mode, so users of these Emacsen should upgrade their cc-mode.
+
+If you want to become a beta tester send subscribe requests to
+cc-mode-victims-request@python.org.  If you just want announcements of
+new versions, send subscribe requests to
+cc-mode-announce-request@python.org.  You do not need to subscribe to
+both of these lists!  These mailing lists are maintained by the
+Majordomo automated mailing list software.
+
+Getting cc-mode.el
+===================
+
+The canonical ftp site for the full cc-mode tar distribution is:
+
+	<ftp://ftp.python.org/pub/emacs/cc-mode.tar.gz>
+
+This is a gzip'd tar file containing the .el source code and
+documentation, along with sundry other useful files.  See the MANIFEST
+a complete list of the contained files.  You can get individual files
+from the directory:
+
+	<ftp://ftp.python.org/pub/emacs/cc-mode/>
+
+Find out more about cc-mode on the Web:
+
+	<http://www.python.org/ftp/emacs/>
+
+For those of you without anon-ftp access, you can use the DEC
+ftpmail'er at the address ftpmail@decwrl.dec.com.  Send the following
+message in the body of your mail to that address to get cc-mode:
+
+reply <a valid net address back to you>
+connect ftp.python.org
+binary
+uuencode
+chdir pub/emacs
+get cc-mode.tar.gz
+
+or just send the message "help" for more information on ftpmail.
+Response times will vary with the number of requests in the queue.
+Note that I am in no way connected with the DEC ftpmail'er so you are
+own your own with this route.

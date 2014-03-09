@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# pref.printer [<hostname>]
+#
+#	chooses a preferred printer for a given machine
+#	the table of printers is in $HOME/etc/printers
+#	if no argument is given, <domainname>.<hostname>
+#	of the current host is used.  only the first match is
+#	printed
+
+table=$HOME/etc/printers
+
+case $# in
+0)	key="`hostname`.`domainname`"
+	;;
+1)	key="$1"
+	;;
+*)	key="-help"
+	;;
+esac
+
+case $key in
+-h|-help|-?)	echo usage: `basename $0` '[<hostname>]'
+		exit 1
+		;;
+esac
+
+awk 'NF>1 && ($1 == "'"$key"'") {print $2}' < $table | sed 1q
+
+
+
+#end pref.printer

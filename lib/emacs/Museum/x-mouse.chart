@@ -1,0 +1,7 @@
+                =       left             middle          right
+===============================================================================
+unshifted       =       set-and-hilite   paste-text      paste-at-point
+shift           =       select-and-mark  cut             paste
+control         =                        cut-and-wipe    select-and-split
+control-shift   =                        this-chart      keep-this-window
+===============================================================================

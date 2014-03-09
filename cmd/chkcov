@@ -1,0 +1,44 @@
+#! /bin/sh
+## Copyright (C) 2006 by Cesar A Quiroz, Ph.D.
+## 3500 Granada Ave Apt 348 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+usage() {
+    progname=`basename $0`
+    printf "usage: %s srcdir...\n" $progname;
+    printf "\tLooks for *.c or *.cpp files in each srcdir,\n"
+    printf "\truns gcov -a on each of them against run time\n"
+    printf "\tdata in the current working directory.\n"
+    printf "\n\tTest files (named t_*.c or t_*.cpp) are ignored.\n"
+}
+
+case $# in
+0)	dirlist=../../src;;	# methodology dependent
+1)	case "$1" in
+	-h*|--h* |-?)
+		usage; exit 0;;
+	*)
+		dirlist="$1";;
+	esac;;
+*)	dirlist="$@";;
+esac
+
+for d in $dirlist; do
+    find $d -type f -a \( -name '*.c' -o -name '*.cpp' \) -print |
+    while read f; do basename $f; done |
+    grep -v '^t_' |
+    while read f; do
+	gcov -a "$f" |
+	awk '
+	    /^File `/		{ record=$0; }
+	    /^Lines executed:/	{ print record, $0;  record=""; }
+	    ' |
+	sed '
+	    s/File `\([^'"'"']*\)'"'"' Lines executed:\([^ ]*\) of \(.*\)/\2 "\1"/
+	' |
+	grep -e "$f"
+   done
+done
+
+#end chkcov

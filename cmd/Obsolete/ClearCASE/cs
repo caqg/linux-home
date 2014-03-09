@@ -1,0 +1,66 @@
+#!/bin/sh
+
+usage () {
+	prog=`basename $0`
+	echo usage: $prog '<command>';
+}
+
+CSED=${CSEDITOR:-${WINEDITOR:-${VISUAL:-${EDITOR:-/bin/ed}}}}
+CSHOME=${CSHOME:-$HOME/cs}
+CSBIN=${CSBIN:-$HOME/cmd}
+ATRIA=/usr/atria/bin
+
+export CSED CSHOME CSBIN ATRIA
+
+case ${1:---help} in
+##COMMANDS
+--debug)
+	echo "DEBUGGING $*"
+	shift			#dispose of --debug
+	sh -vx $0 $*
+	echo "END DEBUGGING"
+	exit 0 ;;
+--help|-?)
+	usage; echo;
+	/bin/sed -n -e '/^##COMMANDS/,/^##END/p' $0 |
+	/bin/sed -n \
+		-e '/^[ 	#]/d' \
+		-e 's/\([^)]*\).*/	\1/p' |
+	/bin/sed \
+		-e 's/\\//g' \
+		-e 's/|/ | /g'
+	exit 0 ;;
+--showself)
+	echo "Running from $0:"
+	echo
+	/bin/cat $0
+	exit 0 ;;
+\.|cat)	exec $CSBIN/catcs
+	;;
+ed|e)
+	shift;
+	$ATRIA/cleartool edcs; exec $CSBIN/catcs
+	;;
+\=|load|ld)shift;
+	exec $CSBIN/ldcs "$@"
+	;;
+list|ls)
+	exec $CSBIN/lscs
+	;;
+make|mk)shift;
+	exec $CSBIN/mkcs "$@"
+	;;
+remove|rm)shift;
+	exec $CSBIN/rmcs "$@"
+	;;
+save|sv)shift;
+	exec $CSBIN/svcs "$@"
+	;;
+show|sh)shift;
+	exec $CSBIN/shcs "$@"
+	;;
+##END
+*)	echo 1>&2 "`basename $0`: $1 unknown"
+	exit 1;;
+esac
+	

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+PATH=/usr/bin:/bin
+
+was=$(gsettings get org.gnome.desktop.wm.preferences focus-mode)
+gsettings set org.gnome.desktop.wm.preferences focus-mode "'sloppy'"
+now=$(gsettings get org.gnome.desktop.wm.preferences focus-mode)
+
+echo "Focus-mode was $was, now it is $now."

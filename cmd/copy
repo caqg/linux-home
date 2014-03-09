@@ -1,0 +1,93 @@
+#!/bin/sh
+#
+# a generalized copy utility
+#
+# usage:   copy <sources> -to <targets>
+
+PATH=/usr/bin:/bin
+
+copier="/bin/cp -i "
+remote="/usr/ucb/rcp"
+roptions=" "
+query="$HOME/bin/Mach.${MACH}/ask"
+delim="-to"
+me=`/bin/basename $0`
+
+if  [ $# -eq 0 ]; then
+    echo "usage:  $me <sources> "$delim" <targets>"
+    echo "        attempts to copy ALL of <sources> to EACH of <targets>"
+    exit  1
+fi
+
+if [ "$1" = "$delim" ]; then 
+    echo ${me}": copy what?"
+    exit  1
+fi
+
+# gather the two file lists
+from=
+to=
+phase=0     # tracks the scanning of the arguments 
+
+for x in "$@"; do
+
+    if [ "$x" = "$delim" ]; then # separator found
+        if [ $phase -eq 0 ]; then
+            phase=1
+        else
+            echo ${me}": delimiter ("$delim") appears more than once"
+            exit 1
+        fi
+    elif [ $phase -eq 0 ]; then # still in <sources>
+        # special option needed when source is a directory
+        [ -d $x ] && roptions=" -r "
+        from=${from}" "\"$x\"
+    elif [ $phase -eq 1 ]; then # first entry in the <targets> list
+        to=$x
+        phase=2
+    else                        # still in <targets>
+        to=$to' '$x
+    fi
+
+done
+
+case $phase in
+0)
+    echo ${me}": copy where? (no "$delim" delimiter!)"
+    exit 1 ;;
+1)
+    echo ${me}": copy where? ("$delim" is just a delimiter!)"
+    exit 1 ;;
+esac
+
+# do real work
+
+set - $to
+
+for y in "$@"; do               # for each destination
+
+    if  [ $? -ne 0 ]; then
+        ${query} "${me}: last copy failed. Should I continue? " 
+        [ $? -eq 1 ] && exit 1
+    fi
+
+    case $y in
+    *:*)                        # looks like a hostname
+        cmd=${remote}${roptions}${from}" "\"${y}\"
+        echo $cmd
+        ${query} "${me}: remote copy?" && eval $cmd ;;
+    *)                          # normal destination
+        if  [ -d $y ]; then
+            cmd=${copier}" -r "${from}" "\"${y}\"
+            echo $cmd
+            eval $cmd
+        else
+            cmd=${copier}" "${from}" "\"${y}\"
+            echo $cmd
+            eval $cmd
+        fi ;;
+    esac
+
+done
+
+exit $?

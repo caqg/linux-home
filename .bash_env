@@ -1,0 +1,139 @@
+# -*- Shell-Script -*-
+
+# PATH="/usr/X11R6/bin\
+# :/usr/local/bin\
+# :/bin\
+# :/cygdrive/c/smlnj/bin\
+# :/cygdrive/c/WINNT/system32\
+# :/cygdrive/c/WINNT\
+# :.\
+# "
+
+# :/cygdrive/c/iverilog-0.8.6/bin\
+# :/cygdrive/c/gtkwave\
+# :/cygdrive/c/iverilog/bin
+# :/cygdrive/c/program files/icarus verilog/bin\
+
+
+# INFOPATH="\
+# $HOME/Downloads/emacs-23-pkgs/cedet/common\
+# :$HOME/Downloads/emacs-23-pkgs/ecb/info-help\
+# :$HOME/Downloads/emacs-23-pkgs/org/doc\
+# :/home/cesar/Downloads/emacs-23-pkgs/cedet/common\
+# :/home/cesar/Downloads/emacs-23-pkgs/ecb/info-help\
+# :/home/cesar/Downloads/emacs-23-pkgs/org/doc\
+# :/usr/share/info\
+# :/usr/share/xemacs-21.4.22/info\
+# :/usr/share/xemacs/xemacs-packages/info\
+# :/usr/share/xemacs/mule-packages/info\
+# :/usr/local/share/info\
+# :/usr/include/gnu/java/beans/info\
+# :/usr/share/doc/Singular-3.0.3/info\
+# :/usr/share/git-core/templates/info\
+# :.\
+# "
+
+# MANPATH="/usr/local/man\
+# :/usr/man\
+# :/usr/share/doc/tiff/html/man\
+# :/usr/share/doc/XmHTML-1.1.7/html/man\
+# :/usr/share/man\
+# :/usr/share/TeXmacs/plugins/r/r/TeXmacs/man\
+# :/usr/share/xemacs/mule-packages/man\
+# :/usr/share/xemacs/xemacs-packages/man\
+# :/usr/ssl/man\
+# :/usr/X11R6/man\
+# :/usr/X11R6/share/man\
+# :.\
+# "
+# platform=`$HOME/cmd/platid`
+
+# export MY=$HOME/my/$platform
+# export MYPLATFORMBIN=$MY/bin
+
+# export PLATFORM=$platform
+# export PLATFORMROOT=$HOME/$platform
+# PLATFORMBIN=$PLATFORMROOT/bin
+# if [ -d $PLATFORMBIN ]; then
+#     PATH=$PLATFORMBIN:$PATH
+#     export PLATFORMBIN
+# fi
+# if [ -d $MYPLATFORMBIN ]; then
+#     PATH=$MYPLATFORMBIN:$PATH
+#     export MYPLATFORMBIN
+# fi
+
+# export PATH=$HOME/cmd:$PATH
+
+# PLATFORMMAN=$PLATFORMROOT/man
+# MYPLATFORMMAN=$MY/man
+# MYSHAREPLATFORMMAN=$MY/share/man
+# if [ -d $PLATFORMMAN ]; then
+#     MANPATH=$PLATFORMMAN:$MANPATH
+#     export PLATFORMMAN
+# fi
+# if [ -d $MYPLATFORMMAN ]; then
+#     MANPATH=$MYPLATFORMMAN:$MANPATH
+#     export MYPLATFORMAN
+# fi
+# if [ -d $MYSHAREPLATFORMMAN ]; then
+#     MANPATH=$MYSHAREPLATFORMMAN:$MANPATH
+#     export MYSHAREPLATFORMAN
+# fi
+# export MANPATH
+
+# Set MANPAGER to its default, to avoid interference with PAGER.
+export MANPAGER="less -isrR"
+
+# PLATFORMINFO=$PLATFORMROOT/info
+# MYPLATFORMINFO=$MY/info
+# if [ -d $PLATFORMINFO ]; then
+#     INFOPATH=$PLATFORMINFO:$INFOPATH
+#     export PLATFORMINFO
+# fi
+
+# if [ -d $MYPLATFORMINFO ]; then
+#     INFOPATH=$MYPLATFORMINFO:$INFOPATH
+#     export MYPLATFORMINFO
+# fi
+# export INFOPATH
+
+# Pure-Perl modules go here; scripts go in $HOME/cmd:
+PERL5LIB=$HOME/lib/perl5
+export PERL5LIB
+
+# # Tcl
+export TCLLIBPATH=$HOME/lib/tcltk
+
+# SMLNJ_HOME=/cydrive/c/smlnj
+# [ -d ${SMLNJ_HOME} ] && export SMLNJ_HOME;
+
+# export CVSROOT=:local:$HOME/src/cvsroot
+export CVSROOT=:local:$HOME/Dropbox/Repos/cq-CVS
+
+export PAGER=less
+export LESS=cq
+export EDITOR=ed
+export CSCOPE_EDITOR=$HOME/cmd/e
+# export VISUAL=gvim
+
+# Rogue
+export ROGUEOPTS="fruit=eyeberry\
+,name=Muzh Bear\
+,jump\
+,noaskquit\
+,skull\
+,tomb\
+,passgo\
+"
+
+# Workaround for emacs-23 bug with timezone resolution
+export TZ=:America/Los_Angeles
+
+# Workaround for ls case-insensitivity. Feels like massive overkill.
+export LC_ALL=C
+
+# Workaround for AT_SPI and (at least) Emacs24 not getting along in GNOME 3.8+
+export NO_AT_BRIDGE=1
+
+##end .bash_env

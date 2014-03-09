@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Some Sun programs want names like MC68010, while mach(1) is 
+# more Unix like and uses lowercase.
+
+mach | tr 'a-z' 'A-Z'

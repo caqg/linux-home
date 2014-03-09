@@ -1,0 +1,23 @@
+#! /bin/sh
+
+# Adds 'wc' output, produces a summary.
+# The output comes in two lines.  The first is the number of entries
+# processed. The second line contains one total for each field of wc
+# output (so giving 'wc -l', for instance, requires only one field of
+# output). 
+
+awk '
+	{	for ( i = 1; i < NF; ++i ) {
+			sum[ i ] += $i;
+		}
+		if ( NF > maxNF ) maxNF = NF;
+	}
+END	{	print NR;
+		for ( i = 1; i < maxNF; ++i ) {
+			printf "%d ", sum[ i ]
+		}
+		printf "\n";
+	}
+'
+
+#end addwc

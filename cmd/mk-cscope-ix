@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# (Re)build the cscope index files unconditionally.
+# Works recursively down from the cwd; the index entries are relative to the cwd.
+PATH=/bin:/usr/bin
+
+cscope=cscope
+cscope_files=cscope.files
+cscope_flags=-bqu
+find=find
+
+echo -q > $cscope-files
+# don't use cscope for C++ :-(  ctags and gtags do a good-enough job
+$find . -type f -name '*.[chyl]' >> $cscope_files &&
+$cscope $cscope_flags
+ls -l cscope.* | sed -e 's/^/	/'

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Gdiff the named file with respect to /main/LATEST
+
+diff=${DIFF-/usr/local/bin/diff}
+diffopts=${DIFFOPTS-"--unified=10"}
+
+for f
+do
+	$diff $diffopts ${f}@@/main/LATEST ${f}
+done
+

@@ -1,0 +1,120 @@
+#!/bin/sh
+# C Quiroz, D of CSc, U of R
+
+PATH=/usr/bin:/usr/local/bin:/usr/local/bin/mh
+TMPDIR=${TMPDIR-$HOME/tmp}		#was /tmp, this is safer
+
+template=$HOME/mail/mh/m.skel
+draft=${TMPDIR}/mm.$$
+
+# get rid of the trivialest case
+[ $# -eq 0 ] && exec comp -editor ${VISUAL-${EDITOR-/bin/ed}}
+
+collecting=to
+collected=
+to=
+fcc=
+bcc=
+sub=
+sendit=no				# go through the editor
+stdin=
+verbose=
+
+# parse command line
+for arg do
+    case $1 in
+    -.)
+	sendit=yes ;;
+    --)
+	stdin=yes ;;
+    -f)
+        eval "${collecting}=${collected}"
+        collected=
+        collecting=fcc ;;
+    -b)
+        eval "${collecting}=${collected}"
+        collected=
+        collecting=bcc ;;
+    -c)
+        eval "${collecting}=${collected}"
+        collected=
+        collecting=cc ;;
+    -s)
+        eval "${collecting}=${collected}"
+        collected=
+        collecting=sub ;;
+    -v)
+	verbose=-verbose ;;
+    -h|-help|-?)
+        echo 1>&2 "usage: `basename $0` [args]"
+        echo 1>&2 "       The args may include:"
+	echo 1>&2 "       -- to append the stdin to the message"
+	echo 1>&2 "       -. to send the message without interaction;"
+	echo 1>&2 "          this works only if there are To: destinations"
+	echo 1>&2 "          and a Subject:, else it is ignored."
+	echo 1>&2 "       -v to do things verbosely"
+        echo 1>&2 "       -f to collect Fcc destinations"
+        echo 1>&2 "       -b to collect Bcc destinations"
+        echo 1>&2 "       -c to collect Cc destinations"
+        echo 1>&2 "       -s to collect a subject"
+        echo 1>&2 "       other args are collected in the given field,"
+        echo 1>&2 "             which by default is the To: field"
+	echo 1>&2 "       BUGS: there are race conditions between draft"
+	echo 1>&2 "             creation and actual use.  The window is"
+	echo 1>&2 "             small, but it is there."
+	echo 1>&2 "       Directory "$TMPDIR" used for temporaries,"
+	echo 1>&2 "       can be controlled by setting TMPDIR in environment."
+        exit 1 ;;
+    *)
+        collected="$collected$1" ;;
+    esac
+    shift
+done
+
+# terminate pending collection
+eval "${collecting}=${collected}"
+
+# build the draft as a temporary
+cp $template $draft
+ed - $draft <<Fin
+g/^To:/s/\$/$to/
+g/^Cc:/s/\$/$cc/
+g/^Fcc:/s/\$/$fcc/
+g/^Bcc:/s/\$/$bcc/
+g/^Subject:/s/\$/$sub/
+g//s// /g
+w
+q
+Fin
+
+[ -n "$stdin" ] && {
+ed - $draft <<\Fin
+/^----/+1,$d
+w
+q
+Fin
+cat >> $draft
+}
+
+# now actually send the message, or get into the editor
+if [ \( X$sendit = Xyes -a -n "$to" -a -n "$sub" \) -o -n "$stdin" ]; then
+    case $verbose in
+    -verbose)
+	echo 1>&2 $0: sending $draft ;;
+    *)
+	verbose='-push -forward' ;;
+    esac
+    # this leaves a copy of the temporary!  trying to remove it would cause 
+    # trouble synchronizing with -push.  on the other hand, mh will call at
+    # least rmm on the draft file.  for safety, set TMPDIR to a file private
+    # to you.
+    exec send $draft $verbose 
+else
+    folder -push +drafts	>/dev/null
+    refile +drafts -file $draft		# this removes the temporary
+    folder +drafts last	>/dev/null	# possible race here!!
+    folder -pop		>/dev/null	# room for another race!!
+    exec comp -use -editor ${VISUAL-${EDITOR-/bin/ed}}
+fi
+
+# end of m

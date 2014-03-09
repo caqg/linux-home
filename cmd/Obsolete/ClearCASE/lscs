@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#LiSt Configuration Specifications
+
+HOMECS=${HOMECS-$HOME/cs}
+
+cd ${HOMECS}
+/bin/ls
+

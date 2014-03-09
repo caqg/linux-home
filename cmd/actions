@@ -1,0 +1,2 @@
+#!/bin/awk -f
+/^ACTION/,/^[ \t]*$/ {print; next}

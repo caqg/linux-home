@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# $Id$
+# $Source$
+
+hostname=${ALLEGRO_HOST-slate}
+
+if [ "$DISPLAY" ]; then
+    xhost +$hostname
+    (   echo TERM=xterm;
+        echo DISPLAY=$DISPLAY;
+        echo export TERM DISPLAY;
+        echo allegro
+    ) | rsh $hostname sh
+else
+    echo Not running under X, please log in to $hostname first
+    exit 1
+fi
+

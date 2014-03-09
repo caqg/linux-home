@@ -1,0 +1,2 @@
+#!/bin/sh
+cvs -qn up "$@" | grep -v '^\?'

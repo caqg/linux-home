@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# Typical usage:
+#	% cleanview cesar_build
+#	% cleanview cesar /view/cesar_scfe/vobs/SystemC
+# Use 'ct lsview <yourname>*' to find which views you have, then clean
+# up their storage.
+
+# Refuses to remove anything if there are checked-out elements (the
+# removal would include their work versions).
+
+ATRIA=${ATRIA-/usr/atria/bin}
+PATH=$ATRIA:/usr/bin:/usr/ucb:/bin:/etc:/usr/etc
+TMPDIR=${TMPDIR-/tmp}
+TMPFILE=$TMPDIR/cleanview.$$
+
+export PATH
+
+case $# in
+1)	view=$1; vob=/vobs/SystemC
+	;;
+2)	view=$1; vob=$2
+	;;
+*)	echo usage: $0 '[viewtag [vob]]'
+	exit 1
+	;;
+esac
+
+pname=`echo /view/$view/$vob | sed -e 's_//*_/_g' -e 's_/$__'`
+vstore=`cleartool lsview $view | awk '{print $NF}'`
+
+echo 'Cleaning	"'$pname'"'
+echo 'Stored at	"'$vstore'"'
+
+# Start (don't set) the view first.  Cd to the path that represents
+# the VOB.  For this the /view mechanism is needed.
+cleartool startview $view
+cd $pname || {
+	echo $0: cannot cd to $pname
+	exit 1
+}
+# Here, we are at the top of the VOB
+
+# A temporary file will be needed.  Touch it and set things for its
+# automatic removal.
+> $TMPFILE
+trap 'rm -f $TMPFILE' 0 1 2 15
+
+
+cleartool lsc -cvi -s -r > $TMPFILE		# Are there any check-outs?
+if test `wc -l < $TMPFILE` -ne 0;
+then	echo Objects still checked out:
+	echo '	'$pname/
+	sed 's/^/		/' $TMPFILE
+elif	cleartool ls -view -r -nxn > $TMPFILE	# Any view-local files?
+then	if test -s $TMPFILE;
+	then	echo Removing:
+		cat $TMPFILE |
+		while read f; do
+			echo '	'$f
+			if test -d $f;		# Directories require -r
+			then	rm -fr $f;
+			else	rm -f $f;
+			fi
+		done
+		df $vstore
+	else	echo Nothing to remove;
+	fi
+else	echo "$0: 'cleartool ls -view -r -nxn'" failed
+	exit 1
+fi
+
+rm -f $TMPFILE
+
+#end cleanview

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# start an emacs server
+
+exec emacs --funcall=server-start --eval='(set-xtitle " SERVER " 1)'

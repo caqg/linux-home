@@ -1,0 +1,26 @@
+#!/bin/sh
+
+PATH=/bin:/usr/bin
+
+# Run from the top of the project whose include directories you want to show to semantic.
+elfile=$PWD/ede-cpproot.el
+projname=$(basename $(pwd))
+
+(
+    echo '(ede-cpp-root-project "'"$projename"'" :file "'"$elfile"'"'
+    echo '  :include-path '"'"'('
+
+    find . -type f \( \
+        -name '*.h' -o \
+        -name '*.hh' -o \
+        -name '*.hpp' -o \
+        -name '*.hxx'  \) |
+    while read h; do dirname $h; done |
+    sort |
+    uniq |
+    sed -e 's/^\./    "/' -e 's/$/"/'
+
+    echo '  ))'
+) > $elfile
+
+ls -l $elfile | sed -e 's/^/	/'

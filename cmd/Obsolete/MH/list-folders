@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Produce one line per folder, relative to the MH home
+
+PATH=/bin:/usr/bin
+
+mhhome=`/usr/local/bin/mh/mhpath +`
+find=/usr/bin/find
+
+if [ ! -d $mhhome ];
+then	echo NO MH HOME!
+	exit 1
+fi
+
+cd $mhhome
+find . -type d -print |
+sed -e 's@\./@@' -e '/^\.$/d' |
+sort
+
+#end list-folders

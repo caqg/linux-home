@@ -1,0 +1,92 @@
+#!/bin/sh
+
+# $Id: histogram,v 1.1 89/12/21 02:45:40 quiroz Exp Locker: quiroz $
+# $Source: /home/gemini/u1/quiroz/src/cmd/histogram/histogram,v $
+
+
+case $# in
+0|1) 
+    maxhashes=${1-50}
+    ;;
+*)
+    echo 1>&2 usage: `basename $0` '[max. number of stars--default 50]'
+    echo 1>&2 usage: '	the input is pairs of count/value wsp-separated'
+    exit 1
+    ;;
+esac
+
+gawk '
+BEGIN       {   
+                i = 0
+                maxhashes = '"$maxhashes"'
+            }
+            {
+                count[i] = $1
+                value[i] = $2
+                sum   += $1 * $2
+                sumsq += $1 * $2 * $2
+                i++
+                if (NR == 1) min = $2
+                if ($1 > maxcnt) {
+                    maxcnt = $1
+                    mode = $2
+                }
+                ssize += $1     #sample size
+            }
+END         {
+                max = value[NR-1]
+                mediancnt = ssize/2.0
+                sofar = 0.0
+                for (i = 0; i < NR; i++) {
+                    sofar += count[i]
+                    if (sofar == mediancnt) {
+                        if (i == NR - 1)
+                            median = value[i]
+                        else
+                            median = (value[i + 1] + value[i]) / 2
+                        break;
+                    } else if (sofar > mediancnt) {
+                        if (i == 0) {
+                            median = value[0]
+                        } else {
+                            bv = value[i-1];
+                            av = value[i];
+                            dc = count[i];
+                            median = bv + \
+                                     (mediancnt - sofar + dc) * (av - bv) / dc
+                        }
+                        break;
+                    }
+                }
+                mean = sum / ssize
+                stddev = sqrt(sumsq / ssize - mean * mean)
+                scale = int((maxcnt / maxhashes) + 0.5)
+                if ( scale == 0 ) scale = 1
+                printf "each # is %g items\n", scale
+                printf "each : is fewer than %g items, but not 0\n", scale
+                print
+                previous=value[0]-1
+                for (i = 0; i < NR; i++) {
+                    while (value[i] > previous+1) {
+                        printf "%8d %8g |\n", 0, ++previous
+                    }
+                    printf "%8d %8g |", count[i], value[i]
+                    fulls = int((count[i] / scale))
+                    for (j = 0; j < fulls; j++)
+                        printf "#"
+                    if (count[i] > (fulls * scale)) printf ":"
+                    printf "\n"
+                    previous=value[i]
+                }
+                print
+                printf "minimum = %g\n", min
+                printf "maximum = %g\n", max
+                printf "sample size =  %g\n", ssize
+                printf "mean = %g\n", mean
+                printf "standard deviation = %g\n", stddev
+                printf "mode = %g\n", mode
+                printf "modal frequency = %g\n", maxcnt
+                printf "median = %g\n", median
+            }
+'
+#end histogram

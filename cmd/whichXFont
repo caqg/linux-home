@@ -1,0 +1,27 @@
+#!/bin/sh
+
+validKinds="font|boldFont|italicFont|boldItalicFont";
+
+usage () {
+    printf >&2 \
+	"usage: %s [fontKind]\nwhere fontKind is one of %s\n" \
+	$(basename $0) \
+	"$validKinds"
+}
+
+case $# in
+0) set -- font ;;
+1) ;;
+*) usage; exit 1;;
+esac
+
+case "$1" in
+font|boldFont|italicFont|boldItalicFont)
+	xrdb -q | sed -n -e 's/\*'"$1"':[	 ]*\(.*\)/\1/p'
+	;;
+*)
+	usage; exit 1;
+esac
+	
+
+#end whichXFont

@@ -1,0 +1,78 @@
+#!/bin/sh
+
+dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
+iconic=
+xterm=${XTERM:-xterm}
+
+function usage {
+  echo 1>&2 "Usage: " `basename $0` " [-h|-i] [cmd [args...]]";
+  echo 1>&2 "	Run _cmd_ (default, \$SHELL) in an xterm, ";
+  echo 1>&2 "	passing the _args_ to _cmd_."
+  echo 1>&2 "	";
+  echo 1>&2 "	-h	print this message and exit";
+  echo 1>&2 "	-i	start the xterm iconified (depends on window manager)";
+}
+
+case $1 in
+-h|-help|--help|-\?) 		usage; exit 1;;
+-i|-ico|-iconic|--iconic)	iconic=-iconic; shift ;;
+esac
+
+who=${LOGNAME:-${USER:-'me'}}
+where=`/bin/uname -n`
+cmd=${1:-${SHELL:-'/bin/sh'}}
+name=`basename $cmd`	# before remapping
+
+[ -f $dispatch ] || touch $dispatch;
+newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
+cmd=${newcmd:-$cmd}
+
+case $# in
+0)	scrollbar=-sb;;
+*)	scrollbar=+sb; shift;;
+esac
+
+# $# is already decremented by the shift above
+case $# in 
+0)	title="$who@$where  $name"			;;
+1)	title="@$where  $name $1"			;;
+2)	title="@$where  $name $1 $2"			;;
+3)	title="@$where  $name $1 $2 $3"			;;
+4)	title="@$where  $name $1 $2 $3 $4"		;;
+5)	title="@$where  $name $1 $2 $3 $4 $5"		;;
+*)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
+esac
+
+fn=$(whichXFont font)
+case x"$fn" in
+    x) fnopt="" ;;
+    *) fnopt="-fn \"$fn\"" ;;
+esac
+
+fb=$(whichXFont boldFont)
+case x"$fb" in
+    x) fbopt="";;
+    *) fbopt="-fb \"$fb\"";;
+esac
+
+case "${DESKTOP_SESSION:-none}"  in
+# gnome)
+# 	exec "gnome-terminal" \
+# 	    --title "$title" \
+# 	    --geometry "80x40" \
+#          -e $cmd "$@" &
+# 	;;
+*)
+	exec "$xterm" \
+	    $scrollbar \
+	    -name $name \
+	    -xrm '*iconName: '"$title" \
+	    $fnopt \
+	    $fbopt \
+	    -title "$title" \
+	    $iconic\
+         -e $cmd "$@" &
+	;;
+esac
+
+# end of x

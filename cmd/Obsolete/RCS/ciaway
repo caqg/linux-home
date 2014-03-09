@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# usage: 'ciaway file'  does a ci -l on file, in directory $CIAWAY
+
+: ${CIAWAY?Need\ directory\ in\ environment\ variable\ CIAWAY}
+
+ci=ci
+
+case $# in
+    1)  ;;
+    *)  echo 'usage: ciaway file';
+        echo '       does a ci -l on <file>, in directory $CIAWAY';
+        exit 1;;
+esac
+
+if [ -d $CIAWAY ]
+then
+    exec ${ci} -l $1 ${CIAWAY}/$1,v
+else
+    echo $0': CIAWAY: '$CIAWAY is not a directory.
+fi
+

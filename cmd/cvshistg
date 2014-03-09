@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# CVS revisions histogram
+# usage: cvshistg module...
+#	run from the repository's root
+
+PATH=/usr/local/bin:/bin:/usr/bin
+export PATH
+
+histogram=$HOME/cmd/histogram
+
+case $# in 
+0)	echo "usage: $0 moduledir..."
+	echo "	cd to the repository before applying,"
+	echo "	and call this only on real modules."
+	exit 2
+	;;
+esac
+
+find "$@" -type f -name '*,v' -exec rlog {} \; |
+sed -n 's/^total revisions: \([0-9][0-9]*\);.*/\1/p' |
+sort -n |
+uniq -c |
+$histogram
+
+
+#end cvshistg

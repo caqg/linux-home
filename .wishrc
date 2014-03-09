@@ -1,0 +1,3 @@
+# -*- Tcl -*-
+
+catch { source ~/.tclshrc }

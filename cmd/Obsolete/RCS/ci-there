@@ -1,0 +1,20 @@
+#!/bin/csh -f
+#
+# recursive inplace ci(1) on the last argument (presumably a directory)
+set basename=/usr/bin/basename
+set ci_it=ci-it
+set find=/usr/bin/find
+
+if ( $#argv == 0 ) then
+   echo `$basename $0` "[ci options] directory";
+   exit(1);
+endif
+
+set dirname=$argv[$#argv]
+
+if ( ! -d $dirname) then
+   echo "`$basename $0`: Last name ($dirname) should be a directory";
+   exit(1);
+endif
+
+exec $find $dirname ! -name '*,v' -type f -exec ${ci_it} {} \;

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+perl -w -p -i~ -e 's/\r//' "$@"
+
+#end unixify

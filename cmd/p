@@ -1,0 +1,7 @@
+#!/bin/sh
+less=less
+LESS=CQ; export LESS
+
+pager=${PAGER-$less}
+
+exec $pager $*

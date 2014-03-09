@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# $Source: /home/gemini/u1/quiroz/src/cmd/lispaway/lispaway,v $
+# $Id: lispaway,v 1.3 89/08/22 15:13:27 quiroz Exp Locker: quiroz $
+
+# A Lisp running away from this host.
+# 
+#          lispaway $*
+#          
+# runs $LISPNAME in $LISPHOST passing all its arguments to
+# the remote process.
+
+lisphost=${LISPHOST-slate}
+lispname=${LISPNAME-/usr/grads/bin/akcl}
+execaway=/usr/ucb/rsh
+here=`/bin/pwd`
+SHELL=/bin/sh
+
+echo ";;;; $lisphost $ cd $here"
+echo ";;;; $lisphost $ $lispname $*"
+echo
+
+(   echo cd $here;
+    echo exec $lispname $*;
+    trap '' 2;                  #needed to pass SIGINTs to lisp
+    cat -u
+) |
+exec $execaway $lisphost $SHELL
+

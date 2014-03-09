@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# inspired by /usr/share/xemacs*/etc/editclient.sh
+# updated for Emacs 23
+# rewritten for Emacs 24
+# massively simplified when I gave up on the xemacs one.
+
+PATH=/usr/bin:/bin
+
+emacsclient -a $HOME/cmd/eserver ${1+"$@"}
+
+# # Is there a server out there for us?
+# if [ $(ps -fu $USER | grep -c 'emacs[0-9]* -f server-start') -lt 1 ]; then
+#     echo $0: starting emacs server
+#     $HOME/cmd/eserver >/dev/null 2>&1 &
+#     spid=$!
+#     until emacsclient --eval t >/dev/null 2>&1; do
+# 	sleep 1
+#     done
+#     echo $0: emacs server started: pid $spid
+# fi
+
+# case $# in
+# 0)
+#     echo $0: no \(more\) arguments, done        
+#     ;;
+# *)
+#     emacsclient ${1+"$@"}
+#     ;;
+# esac

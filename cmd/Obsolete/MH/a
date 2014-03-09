@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec repl -editor ${VISUAL-${EDITOR-/bin/ed}} $*

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+export ROGUEOPTS="fruit=eyeberry\
+,name=Muzh Bear\
+,jump\
+,noaskquit\
+,skull\
+,tomb\
+,passgo\
+"
+
+/usr/games/rogue

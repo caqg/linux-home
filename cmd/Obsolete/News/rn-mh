@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# A different interface for RN and MH is defined here.  Every attempt
+# to reply or follow-up an article from inside RN will transfer to MH
+# 2 files: one is the original article, the other is the header file
+# constructed by rn.  The idea is to use all the machinery available
+# to MH-E to handle this traffic from inside a single invocation of
+# Emacs. 
+
+newheader=${1}
+original=${2}
+# saver=mail
+# dest=${USER}
+
+saver=${HOME}/bin/rcvstore
+dest=+inbox
+
+${saver} ${dest} < ${original}
+${saver} ${dest} < ${newheader}
+

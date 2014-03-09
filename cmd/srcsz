@@ -1,0 +1,29 @@
+#!/bin/sh
+
+usage="usage: $0 [-s] file-or-directory-names..."
+sumprog='cat'
+case $# in
+0)	echo "$usage"
+	exit 1;
+	;;
+*)
+	case $1 in
+	-h* | --h* )
+		echo "$usage"
+		exit 1
+		;;
+	-s  | --sum )
+		shift
+		sumprog='addwc'
+		;;
+	esac
+esac
+
+find "$@" -type f \
+	\( -name '*.c' -o -name '*.h' \
+	-o -name '*.cc' -o -name '*.hh' \
+	-o -name '*.cpp' -o -name '*.hpp' \) \
+	-exec wc {} \; |
+$sumprog
+
+#end srcsz

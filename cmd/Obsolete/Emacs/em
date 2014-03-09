@@ -1,0 +1,19 @@
+#!/bin/sh
+
+emacs=emacs
+#emacs=$HOME/cmd/emacs
+#THE_EMACS=/usr/grads/bin/emacs19; export THE_EMACS
+
+case $# in
+0)
+    # used to have `-f calendar -f first-window' in there
+    exec $emacs \
+        -f display-time \
+        -f cq-inbox \
+        -f identify-in-minibuffer
+    ;;
+1)
+    exec $emacs $*
+esac
+
+# end em

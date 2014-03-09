@@ -1,0 +1,33 @@
+Experiences in dumping Emacs with cc-mode:
+
+    Do this:
+
+    % cd <wherever_c_mode.el_is>
+    % mv c-mode.el c-mode.el.bak
+    % mv cc-mode.el c-mode.el
+
+    Then byte-compile c-mode.el to produce c-mode.elc
+
+    In both FSF 19.22 and Lucid 19.9 version.el is loaded too late in
+    the loadup.el file.  cc-mode.el depends on the value of
+    emacs-version so you need to move the load of version.el higher up
+    in the file.
+
+    You may need to crank up PURESIZE in src/pursize.h.  I found I had
+    to add about 14k, but of course YMMV.
+
+    Tell your users not to add the f/makunbound's or autoloads to
+    their .emacs files, since they'll now get cc-mode for free.
+
+    In Lucid 19.9, loaddefs.el contains a lot of automatically
+    generated autoload definitions which will cause warnings when it
+    finds pointers to doc strings.  You can either ignore these
+    warnings (they won't hurt you), or you can comment out the
+    autoloads for c++-mode and c-style.  Or you can regenerate the
+    automatic autoloads once you've moved c++-mode.el and c-mode.el
+    aside, but you'll have to figure this part out by yourself.
+
+    I've also been told that under FSF Emacs 19, you have to get rid
+    of the autoloads for cplus-md*.el since c++-mode.el has been
+    renamed. You should also do an update-directory-autoloads on the
+    lisp directory before you redump.

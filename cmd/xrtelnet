@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case $# in
+1)  # real hostname and prettyname coincide
+    host=$1
+    pretty=$1
+    ;;
+2)  # specific pretty name given
+    host=$1
+    pretty=$2
+    ;;
+*)  # wrong number of arguments
+    echo $0 "hostname"
+    ;;
+esac
+
+xhost +
+exec xterm -n "$pretty" -T "$pretty" -e rtelnet $host &
+

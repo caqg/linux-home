@@ -1,0 +1,33 @@
+\#*
+\.\#*
+*~
+
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+ID    
+
+cscope.files
+cscope.in.out
+cscope.out
+cscope.po.out
+
+tags
+TAGS
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+*.ko

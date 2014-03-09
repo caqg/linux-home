@@ -1,0 +1,25 @@
+#!/bin/sh
+
+PATH=$HOME/cmd:/bin
+export PATH
+
+usage() {
+    progname=`basename $0`
+    echo "usage: $progname old-suffix new-suffix"
+    echo "	Move each file $f.old-suffix to $f.new-suffix,"
+    echo "	complain if the target already exists."
+    echo
+    echo "Ex.:	$progname cc cpp"
+    echo "	NOT $progname .cc .cpp, unless your file names look"
+    echo "	like x..cc, of course."
+}
+
+case $# in
+2)	old=$1; new=$2;;
+0)	usage; exit 0;;
+*)	usage; exit 1;;
+esac
+
+gremv -vi '\(.*\)\.'$old'$' '\1.'$new
+
+#end chsuffix
