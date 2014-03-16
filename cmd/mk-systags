@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# make system tags for GCC
+
+# There is a size issue with /usr/include or /mingw/msys/1.0/include (that is,
+# non-compiler directories)--they tend to accrete *everything*. So we need to
+# identify excluded directories in some other way.
+
+tagsfile=tags
+
+rm -f "$tagsfile"
+
+{
+	cpp -v -xc++ </dev/null 2>&1 | grep '^ ' | grep -v cc1
+	cpp -v -xc   </dev/null 2>&1 | grep '^ ' | grep -v cc1
+} |
+awk '
+{
+	d = $1
+	if (!(d in dir)) {
+		++i
+		dir[d] = i 
+		out[i] = d
+	}
+}
+END {
+	for (j = 1; j <= i; ++j ) {
+		print out[j]
+	}
+}
+' |
+while read d; do
+	printf "Tagging \"%s\"...\n" "$d"
+	ctags -o "$tagsfile" -aR "$d"
+done
+
+ls -lh "$tagsfile"

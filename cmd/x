@@ -5,7 +5,7 @@ iconic=
 DEFAULT_XTERM=sakura
 xterm=${XTERM:-${DEFAULT_XTERM}}
 xrows=${XROWS:-36}
-xcols=${XCOLS:-82}
+xcols=${XCOLS:-90}
 
 PATH=/usr/bin:/bin
 
@@ -26,6 +26,7 @@ newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
 cmd=${newcmd:-$cmd}
 
 shift
+# printf "cmd=\"%s\"\nname=\"%s\"\nargs=\"%s\"\n" "$cmd" "$name" "$*"
 
 # $# is already decremented by the shift above
 case $# in 
@@ -43,6 +44,6 @@ esac
 # echo cmd=\""$cmd"\"
 # echo title=\""$title"\"
 # echo "$xterm" -r 36 -c 82 -n 1 -t "$title" -e "$cmd" "$@" &
-"$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd ""$@" &
+"$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" 
 
 # end of x

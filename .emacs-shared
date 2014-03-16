@@ -36,6 +36,13 @@
 
 ;; (setq font-lock-maximum-size 500000)    ;workaround for its use in the hooks below.
 
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (auto-fill-mode 1)
+            (font-lock-mode 1)
+            (hs-minor-mode 1)           ;where meaningful
+            ))
+
 (add-hook 'awk-mode-hook
 	  (lambda ()
 	    (setq c-basic-offset 2)
@@ -180,7 +187,7 @@
             (setq sh-basic-offset 4)
             (setq sh-indent-for-case-alt '+)
             (setq sh-indent-for-case-label 0)
-	    (auto-fill-mode 0)
+	    (auto-fill-mode 1)          ;it is a prog-mode
 	    (font-lock-mode 1)))
 
 (add-hook 'tcl-mode-hook
