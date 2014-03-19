@@ -15,6 +15,8 @@ set guioptions+=g
 set guioptions-=l
 set guioptions+=r
 set guioptions+=t
+set guioptions-=b
+set guioptions-=r
 set guioptions-=T
 
 if &diff

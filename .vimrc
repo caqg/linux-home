@@ -1,11 +1,13 @@
 " vim Initialization
-set lines=36
-set columns=86
+"set lines=36
+"set columns=86
 
 source $HOME/.exrc
 syntax on
 filetype indent on
 filetype plugin on
+"set smarttab
+"set expandtab
 
 if has("cscope")
   set cscopeprg=cscope
@@ -22,7 +24,7 @@ let TE_Use_Right_Window=1
 
 " Not in plain vi
 set backup
-set laststatus=2
+set laststatus=1
 set writebackup
 set nohlsearch
 set incsearch
@@ -35,10 +37,8 @@ autocmd FileType c,cpp,java :set cinoptions=:0,j1,J1,l0,g0,t0,(0,)30
 autocmd FileType c,cpp,java :set foldmethod=syntax
 autocmd FileType c,cpp,java :set foldcolumn=4
 autocmd FileType c,cpp,java :set nofoldenable
-autocmd FileType c,cpp,java :set columns=86
 
 set ruler
-
 set diffopt=filler,iwhite
 
 " Adjust Verilog's indentation
