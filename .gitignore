@@ -1,9 +1,12 @@
+# editor artifacts
 \#*
 \.\#*
 *~
+*.swp
 
 BOOKMARKS
 
+# source indexing
 GPATH
 GRTAGS
 GSYMS
