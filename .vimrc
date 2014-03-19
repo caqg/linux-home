@@ -1,6 +1,21 @@
 " vim Initialization
-"set lines=36
-"set columns=86
+
+set directory=
+set directory+=~/tmp
+set directory+=.		"do not interfere with git or svn
+set directory+=/var/tmp
+set directory+=/tmp
+
+set path=.,,
+set path+=/usr/include/c++/4.8
+set path+=/usr/include/x86_64-linux-gnu/c++/4.8
+set path+=/usr/include/c++/4.8/backward
+set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include
+set path+=/usr/local/include
+set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
+set path+=/usr/include/x86_64-linux-gnu
+set path+=/usr/include
+
 
 source $HOME/.exrc
 syntax on
