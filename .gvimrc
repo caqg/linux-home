@@ -1,8 +1,5 @@
 " gvim Initialization -- 2006-10-11 01:33:19UT (cesar@cesar-xp)
 
-color solarized
-call togglebg#map("<F12>")
-
 set background=light
 set guicursor=a:block
 "set guifont=Terminal\ 14
@@ -26,5 +23,9 @@ else
   set columns=96
   set lines=36
 endif
+
+color solarized
+call togglebg#map("<F12>")
+set background=light
 
 "end .gvimrc
