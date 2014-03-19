@@ -1,5 +1,7 @@
 " vim Initialization
 
+source $HOME/.exrc
+
 set directory=
 set directory+=~/tmp
 set directory+=.		"do not interfere with git or svn
@@ -16,8 +18,11 @@ set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
 set path+=/usr/include/x86_64-linux-gnu
 set path+=/usr/include
 
+set tags=
+set tags+=tags
+set tags+=./tags
+set tags+=../tags
 
-source $HOME/.exrc
 syntax on
 filetype indent on
 filetype plugin on
