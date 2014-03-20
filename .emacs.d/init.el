@@ -2,7 +2,9 @@
 
 (load-file "~/.emacs-shared")
 (load-library "cl")
+(setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
+(setq load-path (cons "~/.emacs.d/solarized-emacs" load-path))
 
 (cond ((and (string-match "^GNU Emacs" (emacs-version))
             (>= emacs-major-version 21)
@@ -80,62 +82,14 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'parenface)
        (require 'linum)
 
-       ;; (setq load-path (cons "~/.emacs.d/color-theme" load-path))
-       (setq load-path (cons "~/.emacs.d/color-theme-solarized" load-path))
-       (require 'color-theme)
-       (require 'color-theme-solarized)
-
-       ;; compensate for the frame-background-mode setting
-       (defun set-color-theme-solarized (mode)
-         "Switch to solarized-MODE, adjusting the frame-background-mode too."
-         (interactive "Slight or dark? ")
-         (unless (memq mode '(light dark))
-           (error "Bad mode '%s, should be one of 'light or 'dark" mode))
-         (let ((sym 'frame-background-mode)
-               ;; (cfc (current-frame-configuration))
-               )
-           (funcall (or (get sym 'custom-set) 'set) sym mode)
-           ;; (set-frame-configuration cfc)
-           (color-theme-solarized mode)
-           (adjust-paren-face-fg)))
-
-       (defun set-color-theme-solarized-light ()
-         "Convenience invocation for (set-color-theme-solarized 'light)"
-         (interactive)
-         (set-color-theme-solarized 'light))
-
-       (defun set-color-theme-solarized-dark ()
-         "Convenience invocation for (set-color-theme-solarized 'dark)"
-         (interactive)
-         (set-color-theme-solarized 'dark))
-
-       (defun set-color-theme-solarized-flip ()
-         "Flip the background mode (from light or default to dark, and from dark to light."
-         (interactive)
-         (let* ((ofbm frame-background-mode)
-                (nfbm (case ofbm
-                        (light 'dark)
-                        (dark 'light)
-                        (otherwise 'dark))))
-           (set-color-theme-solarized nfbm)))
-
-       ;; (fset 'dark (symbol-function 'set-color-theme-solarized-dark))
-       ;; (fset 'light (symbol-function 'set-color-theme-solarized-light))
-
-       (defvar menu-bar-solarized-menu (make-sparse-keymap "Light or Dark?"))
-       (define-key menu-bar-solarized-menu [solarized-light]
-         '(menu-item "Light mode" set-color-theme-solarized-light
-                     :help "Set color theme to solarized, with light background"))
-       (define-key menu-bar-solarized-menu [solarized-dark]
-         '(menu-item "Dark mode" set-color-theme-solarized-dark
-                     :help "Set color theme to solarized, with dark background"))
-       (define-key menu-bar-solarized-menu [solarized-flip]
-         '(menu-item "Flip bg mode" set-color-theme-solarized-flip
-                     :help "Flip background mode between light and dark"))
-       (define-key menu-bar-options-menu [color-theme-background]
-         (list 'menu-item "Light or Dark?" menu-bar-solarized-menu))
-
-       (global-set-key [f12] 'set-color-theme-solarized-flip)))
+       (cond ((>= emacs-major-version 23)
+              (require 'emacs23-theme-init))
+             (nil                    ;work in progress
+              ;; (setf custom-theme-load-path
+              ;;      (cons "~/.emacs.d/solarized-emacs"
+              ;;      custom-theme-load-path))
+              (require 'solarized)
+              (require 'solarized-theme)))))
 
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
@@ -165,7 +119,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(compile-command "time -p make LANG=C -j")
  '(completion-auto-help (quote lazy))
  '(current-language-environment "Latin-1")
- '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1) (tool-bar-lines . 0))))
+ '(custom-safe-themes (quote ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-9-prefix")
  '(delete-old-versions t)
  '(develock-auto-enable nil)
@@ -184,7 +139,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-layout-name "left1")
  '(ecb-options-version "2.40")
  '(ecb-show-sources-in-directories-buffer (quote ("left7" "left9" "left13" "left14")))
- '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/usr/src/repos" "Repos") ("/" "/") (#("/home/cesar/Work/Bulk/qemu-exp" 0 30 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) "QEMU exp"))))
+ '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/usr/src/repos" "Repos") ("/" "/") (#("/home/cesar/Work/Bulk/qemu-exp" 0 30 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) "QEMU exp") (#("/verifysys" 0 10 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) "VerifySys"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left9" "left14" "left7" "left1")))
  '(ecb-windows-width 0.25)
