@@ -6,7 +6,7 @@ set background=light
 set guicursor=a:block
 "set guifont=Terminal\ 14
 "set guifont=Monospace\ Regular\ 10
-set guifont=Ubuntu\ Mono\ 11
+set guifont=Ubuntu\ Mono\ Regular\ 11
 set guioptions+=a
 set guioptions+=b
 set guioptions+=h
@@ -14,9 +14,9 @@ set guioptions+=g
 set guioptions-=l
 set guioptions+=r
 set guioptions+=t
+set guioptions-=T
 set guioptions-=b
 set guioptions-=r
-set guioptions-=T
 
 if &diff
   set columns=180
