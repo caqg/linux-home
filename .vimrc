@@ -46,6 +46,7 @@ set laststatus=1
 set writebackup
 set nohlsearch
 set incsearch
+set textwidth=76
 if v:version >= 700
   set numberwidth=5
 endif
