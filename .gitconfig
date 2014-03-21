@@ -12,6 +12,7 @@
 	ci		= commit
 	co		= checkout
 	d		= diff
+	ds		= diff --staged
 	l		= log --date=short --pretty=tformat:'%h %ad %s' --no-merges
 	s		= status -bs -uno
 [push]
