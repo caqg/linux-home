@@ -5,7 +5,7 @@ export SYSTEMC_HOME=${VERIFYSYS_ROOT}
 
 export PATH=${VERIFYSYS_ROOT}/bin:$PATH
 
-export LD_LIBRARY_PATH+=:$(VERIFYSYS_ROOT}/lib-linux64
+export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib-linux64
 export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib
 export LD_LIBRARY_PATH+=:.
 
