@@ -136,4 +136,8 @@ export LC_ALL=C
 # Workaround for AT_SPI and (at least) Emacs24 not getting along in GNOME 3.8+
 export NO_AT_BRIDGE=1
 
+
+# For Verifysys project
+[ -f $HOME/.bash_env_Verifysys ] && . $HOME/.bash_env_Verifysys
+
 ##end .bash_env

@@ -1,0 +1,16 @@
+: source me, I am a bash -*- Shell-Script -*-
+
+export VERIFYSYS_ROOT=/verifysys/rootdir
+export SYSTEMC_HOME=${VERIFYSYS_ROOT}
+
+export PATH=${VERIFYSYS_ROOT}/bin:$PATH
+
+export LD_LIBRARY_PATH+=:$(VERIFYSYS_ROOT}/lib-linux64
+export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib
+export LD_LIBRARY_PATH+=:.
+
+export MANPATH+=${VERIFYSYS_ROOT}/share/man
+
+# example: CXXFLAGS += -I ${SYSTEMC_HOME}/include
+
+#end .bash_env_Verifysys
