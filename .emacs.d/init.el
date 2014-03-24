@@ -163,7 +163,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(global-semantic-idle-scheduler-mode t)
  '(global-semantic-idle-summary-mode t)
  '(global-semantic-mru-bookmark-mode t)
- '(grep-command "grep -n -e ")
+ '(grep-command "grep -nR -e ")
  '(indent-tabs-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
@@ -197,7 +197,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
  '(use-file-dialog nil)
- '(user-mail-address "cesar.q@sisa.samsung.com")
+ '(user-mail-address "cesar.quiroz@gmail.com")
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes)))
@@ -206,6 +206,6 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
  '(org-hide ((((background light)) (:foreground "gray85")))))
 (put 'scroll-left 'disabled nil)
