@@ -70,6 +70,10 @@ Goes backward if ARG is negative; error if CHAR not found."
        (setq org-default-notes-file (concat org-directory "/notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
+       (require 'markdown-mode)
+       (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
+       (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
+
        (require 'ede)
        (global-ede-mode t)
        (require 'semantic)
