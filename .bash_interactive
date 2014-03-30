@@ -23,10 +23,10 @@ function +  { pushd "$@"; }
 function -  { popd "$@"; }
 function =  { dirs -v "$@"; }
 function h  { history "$@"; }
-function hf { if [ $# -gt 0 ]; then history | grep "$@" -; else history; fi; }
+function hf { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
 function j  { jobs "$@"; }
 function k  { kill -9 "$@"; }
-function l  { ls -ltrha "$@"; }
+function l  { ls -Altrh "$@"; }
 function gp { gview -M -; }
 
 ##end .bash_interactive

@@ -2,6 +2,7 @@
 
 export VERIFYSYS_ROOT=/verifysys/rootdir
 export SYSTEMC_HOME=${VERIFYSYS_ROOT}
+export SYSTEMC=${SYSTEMC_HOME}
 
 export PATH=${VERIFYSYS_ROOT}/bin:$PATH
 
