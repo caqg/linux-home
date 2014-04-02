@@ -74,6 +74,9 @@ function! VerilogSettings ()
 endfunction
 autocmd BufReadPost *.v call VerilogSettings()
 
+" Treat *.md as markdown, not modula2
+autocmd BufNewFile,BufRead *.md setfiletype markdown
+
 " Man pages
 runtime! ftplugin/man.vim
 
