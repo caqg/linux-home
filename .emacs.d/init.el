@@ -89,11 +89,10 @@ Goes backward if ARG is negative; error if CHAR not found."
        (cond ((>= emacs-major-version 23)
               (require 'emacs23-theme-init))
              (nil                    ;work in progress
-              ;; (setf custom-theme-load-path
-              ;;      (cons "~/.emacs.d/solarized-emacs"
-              ;;      custom-theme-load-path))
+              (add-to-list 'custom-theme-load-path "~/.emacs.d/solarized-emacs")
               (require 'solarized)
-              (require 'solarized-theme)))))
+              (load-theme 'solarized-dark)
+              ))))
 
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
@@ -101,7 +100,9 @@ Goes backward if ARG is negative; error if CHAR not found."
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle)
-  (set-color-theme-solarized-light))
+  ;; (color-theme-solarized-dark)
+  (set-color-theme-solarized-light)
+  )
 
 ;;;end ~/.emacs -- don't edit beyond
 
@@ -156,10 +157,12 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(enable-recursive-minibuffers t)
  '(explicit-shell-file-name "bash")
  '(fill-column 78)
+ '(filladapt-turn-on-mode-hooks (quote (text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook)))
  '(font-lock-maximum-size nil)
  '(gdb-enable-debug t)
  '(gdb-max-frames 64)
  '(gdb-use-separate-io-buffer t)
+ '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-semantic-decoration-mode nil)
  '(global-semantic-highlight-func-mode t)
@@ -167,7 +170,10 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(global-semantic-idle-scheduler-mode t)
  '(global-semantic-idle-summary-mode t)
  '(global-semantic-mru-bookmark-mode t)
- '(grep-command "grep -nR -e ")
+ '(grep-command "grep -inHR -e ")
+ '(grep-find-template "find . <X> -type f <F> -exec grep <C> -n -e <R> /dev/null {} +")
+ '(grep-template "grep <X> <C> -n -e <R> <F>")
+ '(home-end-enable t)
  '(indent-tabs-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
@@ -187,7 +193,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(search-slow-window-lines 3)
- '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-cedet-m3-minor-mode)))
  '(semantic-mode t)
  '(set-mark-command-repeat-pop t)
  '(shell-popd-regexp "popd\\|-")
@@ -200,6 +206,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(text-mode-hook (quote (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
  '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(use-file-dialog nil)
  '(user-mail-address "cesar.quiroz@gmail.com")
  '(visible-bell t)
