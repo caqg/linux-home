@@ -2,7 +2,6 @@
 
 source $HOME/.vimrc
 
-set background=light
 set guicursor=a:block
 "set guifont=Terminal\ 14
 "set guifont=Monospace\ Regular\ 10
@@ -22,7 +21,7 @@ if &diff
   set columns=180
   set lines=999
 else
-  set columns=96
+  set columns=90
   set lines=36
 endif
 
