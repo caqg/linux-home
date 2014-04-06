@@ -794,7 +794,7 @@ This function pushes the mark before moving!"
          (forward-line (1- pfx)))))
 
 (defun cq-timestamp (pfx)
-  "Insert a time stamp at point.  Pushes mark before the time stamp.
+  "Insert a time stamp at point, leaves point before the time stamp.
 If *timestamp-program* is bound, it is a program and arguments to be run
 by shell-command (q.v.) to obtain the time stamp.  
 Else the value (current-time-string) is used."
@@ -802,11 +802,11 @@ Else the value (current-time-string) is used."
   (cond ((and (boundp '*timestamp-program*) *timestamp-program*)
          (shell-command (concat *timestamp-program*
                                 (if current-prefix-arg "-s" ""))
-                        t)
-         (exchange-point-and-mark))
+                        t))
         (t
          (push-mark (point) t)
-         (insert (current-time-string)))))
+         (insert (current-time-string))
+         (exchange-point-and-mark))))
 
 ;;; Like our good friend in MH-E, only a macro.
 
