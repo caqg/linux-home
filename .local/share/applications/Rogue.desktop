@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Rogue
+Comment=Use the command line
+#TryExec=rogue
+Exec=sakura --config-file=rogue.conf -r 24 -c 80 -t Rogue -x /home/cesar/cmd/unity-rogue
+#Icon=terminal-tango
+Type=Application
+Categories=GTK;TerminalEmulator;System;
+StartupNotify=true
+

@@ -1,23 +1,30 @@
 [user]
-	name		= Cesar A. Quiroz, Ph.D.
-	email		= cesar_quiroz@ieee.org
+name                    = Cesar A. Quiroz, Ph.D.
+email                   = cesar_quiroz@ieee.org
+
 [core]
-	editor		= $HOME/cmd/e
-	pager		=
+editor                  = $HOME/cmd/e
+pager                   =
+
 [diff]
-	tool		= $HOME/cmd/ediff
+tool                    = $HOME/cmd/ediff
+
 [merge]
-	tool		= $HOME/cmd/emerge
+tool                    = $HOME/cmd/emerge
+
 [alias]
-	ci		= commit
-	co		= checkout
-	d		= diff
-	ds		= diff --staged
-	l		= log --date=short --pretty=tformat:'%h %ad %s' --no-merges
-	s		= status -bs -uno
+ci                      = commit
+co                      = checkout
+d                       = diff
+ds                      = diff --staged
+l                       = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
+s                       = status -bs -uno
+
 [push]
-	default		= simple
+default                 = simple
+
 [color]
-	ui		= true
+ui                      = true
+
 [gui]
-	warndetachedcommit = true
+warndetachedcommit      = true

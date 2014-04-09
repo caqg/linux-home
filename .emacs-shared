@@ -53,6 +53,7 @@
 (add-hook 'c-mode-common-hook
 	  (lambda ()
 	    (setq c-basic-offset 8)
+            (setq indent-tabs-mode t)
 	    (c-set-offset 'substatement-open 0)
 	    (c-set-offset 'inextern-lang 0)
 	    (c-set-offset 'inline-open 0)
@@ -65,6 +66,25 @@
                 (subword-mode 1)
               (c-subword-mode 1))
 	    (font-lock-mode 1)))
+
+(c-add-style "llvm.org"
+             '((fill-column . 80)
+	       (c++-indent-level . 2)
+	       (c-basic-offset . 2)
+	       (indent-tabs-mode . nil)
+               (c-offsets-alist . ((innamespace 0)))))
+
+(add-hook 'c-mode-hook
+	  (function
+	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+	     (when (string-match "llvm" buffer-file-name)
+               (c-set-style "llvm.org")))))
+
+(add-hook 'c++-mode-hook
+	  (function
+	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+	     (when (string-match "llvm" buffer-file-name)
+               (c-set-style "llvm.org")))))
 
 (add-hook 'comint-mode-hook
 	  (lambda ( )
