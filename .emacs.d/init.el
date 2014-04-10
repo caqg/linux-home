@@ -28,7 +28,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        (which-function-mode 1)
        (filesets-init)
 
-       (add-to-list 'auto-mode-alist (cons "\\.gitconfig$" 'conf-unix-mode))
+       ;; (add-to-list 'auto-mode-alist (cons "\\.gitconfig$" 'conf-unix-mode))
 
        (require 'delsel)
        (pending-delete-mode t)
@@ -94,7 +94,8 @@ Goes backward if ARG is negative; error if CHAR not found."
               (add-to-list 'custom-theme-load-path "~/.emacs.d/solarized-emacs")
               (require 'solarized)
               (load-theme 'solarized-dark)
-              ))))
+              ))
+       (package-initialize)))
 
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
@@ -192,6 +193,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(mouse-yank-at-point t)
  '(normal-erase-is-backspace t)
  '(org-startup-indented t)
+ '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(recentf-mode t)
  '(require-final-newline (quote ask))
  '(rmail-file-name "~/mail/babyl/RMAIL")
