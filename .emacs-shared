@@ -77,13 +77,13 @@
 (add-hook 'c-mode-hook
 	  (function
 	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-	     (when (string-match "llvm" buffer-file-name)
+	     (when (and buffer-file-name (string-match "llvm" buffer-file-name))
                (c-set-style "llvm.org")))))
 
 (add-hook 'c++-mode-hook
 	  (function
 	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-	     (when (string-match "llvm" buffer-file-name)
+	     (when (and buffer-file-name (string-match "llvm" buffer-file-name))
                (c-set-style "llvm.org")))))
 
 (add-hook 'comint-mode-hook

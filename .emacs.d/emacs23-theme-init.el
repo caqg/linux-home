@@ -6,7 +6,7 @@
 
 
 ;; (setq load-path (cons "~/.emacs.d/color-theme" load-path))
-(setq load-path (cons "~/.emacs.d/color-theme-solarized" load-path))
+;; (setq load-path (cons "~/.emacs.d/color-theme-solarized" load-path))
 (require 'color-theme)
 (require 'color-theme-solarized)
 

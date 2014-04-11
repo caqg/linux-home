@@ -4,7 +4,7 @@
 (load-library "cl")
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
-(setq load-path (cons "~/.emacs.d/solarized-emacs" load-path))
+;; (setq load-path (cons "~/.emacs.d/solarized-emacs" load-path))
 
 (cond ((and (string-match "^GNU Emacs" (emacs-version))
             (>= emacs-major-version 21)
@@ -72,7 +72,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        (setq org-default-notes-file (concat org-directory "/notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
-       (require 'markdown-mode)
+       ;;(require 'markdown-mode)
        (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
        (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
 
@@ -88,14 +88,19 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'parenface)
        (require 'linum)
 
+       (package-initialize)
        (cond ((>= emacs-major-version 23)
-              (require 'emacs23-theme-init))
+              (require 'emacs23-theme-init)
+              (set-color-theme-solarized-light)
+              ;;(require 'solarized-theme)
+              ;;(require 'emacs24-theme-init)
+              )
              (nil                    ;work in progress
               (add-to-list 'custom-theme-load-path "~/.emacs.d/solarized-emacs")
               (require 'solarized)
               (load-theme 'solarized-dark)
               ))
-       (package-initialize)))
+       ))
 
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
@@ -104,10 +109,10 @@ Goes backward if ARG is negative; error if CHAR not found."
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle)
   ;; (color-theme-solarized-dark)
-  (set-color-theme-solarized-light)
+  ;; (set-color-theme-solarized-light)
   )
 
-;;;end ~/.emacs -- don't edit beyond
+;;;end ~/.emacs.d/init.el -- don't edit beyond
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -116,6 +121,9 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If there is more than one, they won't work right.
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
+ '(ansi-color-names-vector ["black" "light gray" "dark gray" "light slate gray"])
+ '(background-color "#202020")
+ '(background-mode dark)
  '(backup-by-copying-when-linked t)
  '(calendar-date-style (quote iso))
  '(calendar-mark-diary-entries-flag t)
@@ -127,7 +135,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(compile-command "time -p make LANG=C -j")
  '(completion-auto-help (quote lazy))
  '(current-language-environment "Latin-1")
- '(custom-safe-themes (quote ("e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(cursor-color "#cccccc")
+ '(custom-safe-themes (quote ("a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-9-prefix")
  '(delete-old-versions t)
@@ -163,8 +172,13 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(filladapt-turn-on-mode-hooks (quote (text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook)))
  '(find-ls-option (quote ("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first")))
  '(font-lock-maximum-size nil)
- '(gdb-enable-debug t)
+ '(foreground-color "#cccccc")
+ '(gdb-enable-debug nil)
+ '(gdb-many-windows t)
  '(gdb-max-frames 64)
+ '(gdb-show-main t)
+ '(gdb-speedbar-auto-raise t)
+ '(gdb-stack-buffer-addresses t)
  '(gdb-use-separate-io-buffer t)
  '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
@@ -200,7 +214,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(search-slow-window-lines 3)
- '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-cedet-m3-minor-mode)))
+ '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
  '(semantic-mode t)
  '(set-mark-command-repeat-pop t)
  '(shell-popd-regexp "popd\\|-")
