@@ -10,12 +10,12 @@ target=
 for a; do
     case "$a" in
     -*)	;;                      # skip
-    *) target=-"$a"; break;;
+    *) target=$(basename "$a"); break;;
     esac
 done
 
-logfile=make"$target".log
+logfile=make-"$target".log
 
-make "$@" 2>&1 | tee "$logfile"
+make LANG=C "$@" 2>&1 | tee "$logfile"
 
 #end m
