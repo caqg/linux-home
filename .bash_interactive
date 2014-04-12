@@ -19,14 +19,18 @@ set -o ignoreeof
 shopt -s cdspell
 shopt -s globstar
 
-function +  { pushd "$@"; }
-function -  { popd "$@"; }
-function =  { dirs -v "$@"; }
-function h  { history "$@"; }
-function hf { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
-function j  { jobs "$@"; }
-function k  { kill -9 "$@"; }
-function l  { ls -Altrh "$@"; }
-function gp { gview -M -; }
+function +    { pushd "$@"; }
+function -    { popd "$@"; }
+function =    { dirs -v "$@"; }
+function dir  { LC_ALL=C /bin/dir -F "$@"; }
+function h    { history "$@"; }
+function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
+function j    { jobs "$@"; }
+function k    { kill -9 "$@"; }
+function l    { LC_ALL=C /bin/ls -Alh --time-style=iso --group-directories-first "$@"; }
+function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso --group-directories-first "$@"; }
+function ls   { LC_ALL=C /bin/ls "$@"; }
+function gp   { gview -M -; }
+function vdir { LC_ALL=C /bin/dir "$@"; }
 
 ##end .bash_interactive

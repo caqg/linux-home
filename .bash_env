@@ -131,7 +131,7 @@ export ROGUEOPTS="fruit=eyeberry\
 export TZ=:America/Los_Angeles
 
 # Workaround for ls case-insensitivity. Feels like massive overkill.
-export LC_ALL=C
+# export LC_ALL=C
 
 # Workaround for AT_SPI and (at least) Emacs24 not getting along in GNOME 3.8+
 export NO_AT_BRIDGE=1
