@@ -1,0 +1,21 @@
+#!/bin/bash
+## Copyright (C) 2014 by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+# Is there a target (an arg that does not start with a dash?)
+
+target=
+for a; do
+    case "$a" in
+    -*)	;;                      # skip
+    *) target=-"$a"; break;;
+    esac
+done
+
+logfile=make"$target".log
+
+make "$@" 2>&1 | tee "$logfile"
+
+#end m

@@ -44,6 +44,6 @@ esac
 # echo cmd=\""$cmd"\"
 # echo title=\""$title"\"
 # echo "$xterm" -r 36 -c 82 -n 1 -t "$title" -e "$cmd" "$@" &
-"$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" 
+"$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" &
 
 # end of x

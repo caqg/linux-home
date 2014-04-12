@@ -7,7 +7,7 @@ root)
     export PS1='$ ';;
 esac
 case "$TERM" in
-xterm*|rxvt*)
+xterm*|rxvt*|cygwin)
     PS1='\[\e]0;\u@\h: \w\a\]'"$PS1";;
 esac
 
@@ -29,8 +29,8 @@ function j    { jobs "$@"; }
 function k    { kill -9 "$@"; }
 function l    { LC_ALL=C /bin/ls -Alh --time-style=iso --group-directories-first "$@"; }
 function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso --group-directories-first "$@"; }
-function ls   { LC_ALL=C /bin/ls "$@"; }
+# function ls   { LC_ALL=C /bin/ls "$@"; }
 function gp   { gview -M -; }
-function vdir { LC_ALL=C /bin/dir "$@"; }
+function vdir { LC_ALL=C /bin/vdir "$@"; }
 
 ##end .bash_interactive
