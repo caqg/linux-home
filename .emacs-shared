@@ -385,7 +385,7 @@
 ;;+? (global-set-key "\^X,"              'attach-to-register)
 ;;+? (global-set-key "\^XR"              'replace-regexp)
 ;;+? (global-set-key "\^X%"              'query-replace-regexp)
-(global-set-key "\^X="              'cq-what-cursor-position)
+;;+? (global-set-key "\^X="              'cq-what-cursor-position)
 ;;+? (global-set-key "\^XB"              'list-buffers)
 (global-set-key "\^X\^B"            'buffer-menu);was electric-buffer-list
 (global-set-key "\^Zv"              'shrink-window)

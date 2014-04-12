@@ -2,7 +2,7 @@
 
 PATH=/usr/bin:/bin
 
-default=',* #* *~ .*~ *.BAK .*.BAK core a.out *.stackdump'
+default=",* \#* *~ .*~ *.BAK .*.BAK core a.out *.stackdump"
 
 case $# in
 0)  ;;
@@ -11,4 +11,4 @@ case $# in
     exit 1;;
 esac
 
-rm -f ${TRASH-${default}}
+eval rm -f ${TRASH-${default}}
