@@ -1,17 +1,17 @@
 ;;;; -*- Emacs-Lisp -*-  Common Start-Up options
 
-(defvar homedir                       (getenv "HOME")
+(defvar *cq/homedir*                    (getenv "HOME")
   "${HOME}")
-(defvar emacslib                      (concat homedir "/lib/emacs/")
+(defvar *cq/emacslib*                   (concat *cq/homedir* "/lib/emacs/")
   "Pathname of my private library")
-(setq load-path (append (list emacslib) load-path (list ".")))
+(setq load-path (append (list *cq/emacslib*) load-path (list ".")))
 
 (put 'eval-expression  'disabled	nil)
 (put 'narrow-to-region 'disabled	nil)
 (put 'narrow-to-page   'disabled	nil)
 (put 'set-goal-column  'disabled	nil)
 
-(setq default-major-mode 'indented-text-mode)
+(setq-default major-mode 'indented-text-mode)
 
 (defvar *timestamp-program* (concat (getenv "HOME") "/cmd/timestamp")
   "Program to produce a time stamp (see cq-timestamp).")
@@ -37,35 +37,35 @@
 ;; (setq font-lock-maximum-size 500000)    ;workaround for its use in the hooks below.
 
 (add-hook 'prog-mode-hook
-          (lambda ()
-            (auto-fill-mode 1)
-            (font-lock-mode 1)
-            (hs-minor-mode 1)           ;where meaningful
-            ))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (font-lock-mode 1)
+              (hs-minor-mode 1)         ;where meaningful
+              ))
 
 (add-hook 'awk-mode-hook
-	  (lambda ()
-	    (setq c-basic-offset 2)
-	    (auto-fill-mode 1)
-            (hs-minor-mode 1)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (setq c-basic-offset 2)
+              (auto-fill-mode 1)
+              (hs-minor-mode 1)
+              (font-lock-mode 1)))
 
 (add-hook 'c-mode-common-hook
-	  (lambda ()
-	    (setq c-basic-offset 8)
-            (setq indent-tabs-mode t)
-	    (c-set-offset 'substatement-open 0)
-	    (c-set-offset 'inextern-lang 0)
-	    (c-set-offset 'inline-open 0)
-            (c-set-offset 'arglist-intro '+)
-            (c-set-offset 'arglist-close 0)
-	    ;; (local-set-key "\M-\C-a" 'c-beginning-of-defun)
-	    ;; (local-set-key "\M-\C-e" 'c-end-of-defun)
-            (hs-minor-mode 1)
-            (if (string-match "^GNU Emacs" (emacs-version))
-                (subword-mode 1)
-              (c-subword-mode 1))
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (setq c-basic-offset 8)
+              (setq indent-tabs-mode t)
+              (c-set-offset 'substatement-open 0)
+              (c-set-offset 'inextern-lang 0)
+              (c-set-offset 'inline-open 0)
+              (c-set-offset 'arglist-intro '+)
+              (c-set-offset 'arglist-close 0)
+              ;; (local-set-key "\M-\C-a" 'c-beginning-of-defun)
+              ;; (local-set-key "\M-\C-e" 'c-end-of-defun)
+              (hs-minor-mode 1)
+              (if (string-match "^GNU Emacs" (emacs-version))
+                  (subword-mode 1)
+                (c-subword-mode 1))
+              (font-lock-mode 1)))
 
 (c-add-style "llvm.org"
              '((fill-column . 80)
@@ -76,163 +76,163 @@
 
 (add-hook 'c-mode-hook
 	  (function
-	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-	     (when (and buffer-file-name (string-match "llvm" buffer-file-name))
-               (c-set-style "llvm.org")))))
+           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+               (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+                 (c-set-style "llvm.org")))))
 
 (add-hook 'c++-mode-hook
 	  (function
-	   (lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-	     (when (and buffer-file-name (string-match "llvm" buffer-file-name))
-               (c-set-style "llvm.org")))))
+           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+               (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+                 (c-set-style "llvm.org")))))
 
 (add-hook 'comint-mode-hook
-	  (lambda ( )
-	    (add-hook 'comint-output-filter-functions
-		      'comint-strip-ctrl-m)))
+          #'(lambda ( )
+              (add-hook 'comint-output-filter-functions
+                        'comint-strip-ctrl-m)))
 
 (add-hook 'compilation-mode-hook
-	  (lambda ()
-            (font-lock-mode 1)))
+          #'(lambda ()
+              (font-lock-mode 1)))
 
 (add-hook 'cperl-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-            (hs-minor-mode 1)
-	    (font-lock-mode 1)
-	    (setq cperl-tab-always-indent nil)))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (hs-minor-mode 1)
+              (font-lock-mode 1)
+              (setq cperl-tab-always-indent nil)))
 
 (add-hook 'diff-mode-hook
-	  (lambda ()
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (font-lock-mode 1)))
 
 (add-hook 'emacs-lisp-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-	    (setq fill-column 79)
-	    (setq indent-tabs-mode nil)
-            (hs-minor-mode 1)
-	    (font-lock-mode 1)
-            (eldoc-mode 1)
-	    (require 'balanced-insertions)
-	    (set-balanced-insertions )
-	    (local-set-key "\C-zi"    'cq-both-in)
-	    (local-set-key "\C-zo"    'cq-both-out)
-	    (local-set-key "\C-zx"    'cq-extract-sexp)
-	    (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
-	    (local-set-key "\C-\M-d"  'cq-down-list)
-	    ;;(local-set-key "\C-z]"    'cq-close-defun)
-	    ))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (setq fill-column 79)
+              (setq indent-tabs-mode nil)
+              (hs-minor-mode 1)
+              (font-lock-mode 1)
+              (eldoc-mode 1)
+              (require 'balanced-insertions)
+              (set-balanced-insertions )
+              (local-set-key "\C-zi"    'cq-both-in)
+              (local-set-key "\C-zo"    'cq-both-out)
+              (local-set-key "\C-zx"    'cq-extract-sexp)
+              (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
+              (local-set-key "\C-\M-d"  'cq-down-list)
+              ;;(local-set-key "\C-z]"    'cq-close-defun)
+              ))
 
 (setq inferior-lisp-program "clisp")
 (add-hook 'ilisp-mode-hook
-	  (lambda () (setq lisp-no-popper t)))
+          #'(lambda () (setq lisp-no-popper t)))
 (add-hook 'lisp-mode-hook		;tailored for CLISP-HS
-	  (lambda ()
-	    ;; (require 'ilisp)
-            (require 'slime)
-	    (require 'balanced-insertions)
-	    (set-balanced-insertions )
-	    (local-set-key "\C-zi"    'cq-both-in)
-	    (local-set-key "\C-zo"    'cq-both-out)
-	    (local-set-key "\C-zx"    'cq-extract-sexp)
-	    (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
-	    (local-set-key "\C-\M-d"  'cq-down-list)
-	    ;;(local-set-key "\C-z]"    'cq-close-defun)
-	    (auto-fill-mode 1)
-            (hs-minor-mode 1)
-	    (font-lock-mode 1)
-	    (setq lisp-no-popper t)	;this is smoother in Cygwin
-	    ;;(put 'if 'lisp-indent-function nil)
-	    (let* ((name (buffer-file-name (current-buffer)))
-		   (ext (and name (file-name-extension name))))
-	      (if (and ext
-		       (or (string= ext "emacs")
-			   (string= ext "el")
-			   (string= ext "elc")))
-		  nil			;must be Emacs Lisp
-		(make-local-variable 'lisp-indent-function)
-		(setq lisp-indent-function 'common-lisp-indent-function))
-	      (put 'defclass 'lisp-indent-function 3)
-	      (put 'defgeneric 'lisp-indent-function 'defun)
-	      ;; (put 'defmethod 'lisp-indent-function 'defun)
-	      (put 'define-method-combination 'lisp-indent-function 2)
-	      (put 'generic-flet 'lisp-indent-function
-		   (get 'flet 'lisp-indent-function))
-	      (put 'generic-labels 'lisp-indent-function
-		   (get 'labels 'lisp-indent-function))
-	      (put 'generic-function 'lisp-indent-function
-		   (get 'lambda 'lisp-indent-function))
-	      (put 'with-accessors 'lisp-indent-function 2)
-	      (put 'with-slots 'lisp-indent-function 2)
-	      (put 'with-added-methods 'lisp-indent-function 'defun))))
+          #'(lambda ()
+              ;; (require 'ilisp)
+              (require 'slime)
+              (require 'balanced-insertions)
+              (set-balanced-insertions )
+              (local-set-key "\C-zi"    'cq-both-in)
+              (local-set-key "\C-zo"    'cq-both-out)
+              (local-set-key "\C-zx"    'cq-extract-sexp)
+              (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
+              (local-set-key "\C-\M-d"  'cq-down-list)
+              ;;(local-set-key "\C-z]"    'cq-close-defun)
+              (auto-fill-mode 1)
+              (hs-minor-mode 1)
+              (font-lock-mode 1)
+              (setq lisp-no-popper t)	;this is smoother in Cygwin
+              ;;(put 'if 'lisp-indent-function nil)
+              (let* ((name (buffer-file-name (current-buffer)))
+                     (ext (and name (file-name-extension name))))
+                (if (and ext
+                         (or (string= ext "emacs")
+                             (string= ext "el")
+                             (string= ext "elc")))
+                    nil			;must be Emacs Lisp
+                  (make-local-variable 'lisp-indent-function)
+                  (setq lisp-indent-function 'common-lisp-indent-function))
+                (put 'defclass 'lisp-indent-function 3)
+                (put 'defgeneric 'lisp-indent-function 'defun)
+                ;; (put 'defmethod 'lisp-indent-function 'defun)
+                (put 'define-method-combination 'lisp-indent-function 2)
+                (put 'generic-flet 'lisp-indent-function
+                     (get 'flet 'lisp-indent-function))
+                (put 'generic-labels 'lisp-indent-function
+                     (get 'labels 'lisp-indent-function))
+                (put 'generic-function 'lisp-indent-function
+                     (get 'lambda 'lisp-indent-function))
+                (put 'with-accessors 'lisp-indent-function 2)
+                (put 'with-slots 'lisp-indent-function 2)
+                (put 'with-added-methods 'lisp-indent-function 'defun))))
 (setq common-lisp-hyperspec-root
       "http://www.lispworks.com/documentation/HyperSpec/")
 
 (add-hook 'makefile-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 0)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (auto-fill-mode 0)
+              (font-lock-mode 1)))
 
 (add-hook 'pascal-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-	    (font-lock-mode 1)
-	    (setq pascal-tab-always-indent nil)))
+	  #'(lambda ()
+              (auto-fill-mode 1)
+              (font-lock-mode 1)
+              (setq pascal-tab-always-indent nil)))
 
 (add-hook 'shell-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 0)
-	    (lsetq shell-pushd-regexp "pushd\\|\\+")
-	    (lsetq shell-popd-regexp "popd\\|-")
-	    (setq shell-prompt-pattern "^[$%#] "
-                  comint-prompt-regexp shell-prompt-pattern)))
+	  #'(lambda ()
+              (auto-fill-mode 0)
+              (lsetq shell-pushd-regexp "pushd\\|\\+")
+              (lsetq shell-popd-regexp "popd\\|-")
+              (setq shell-prompt-pattern "^[$%#] "
+                    comint-prompt-regexp shell-prompt-pattern)))
 
 (add-hook 'shell-mode-hook
-          (lambda ()
-            (make-local-variable 'mode-line-format)
-            (setq mode-line-format
-                  (list " %b(%s) %p (%l,%c) "
-                        'default-directory
-                        " "
-                        'global-mode-string
-                        "("
-                        'mode-name
-                        'minor-mode-alist
-                        ") %-")))
+          #'(lambda ()
+              (make-local-variable 'mode-line-format)
+              (setq mode-line-format
+                    (list " %b(%s) %p (%l,%c) "
+                          'default-directory
+                          " "
+                          'global-mode-string
+                          "("
+                          'mode-name
+                          'minor-mode-alist
+                          ") %-")))
           t)
 
 (add-hook 'sh-mode-hook
-	  (lambda ()
-            (setq sh-basic-offset 4)
-            (setq sh-indent-for-case-alt '+)
-            (setq sh-indent-for-case-label 0)
-	    (auto-fill-mode 1)          ;it is a prog-mode
-	    (font-lock-mode 1)))
+	  #'(lambda ()
+              (setq sh-basic-offset 4)
+              (setq sh-indent-for-case-alt '+)
+              (setq sh-indent-for-case-label 0)
+              (auto-fill-mode 1)        ;it is a prog-mode
+              (font-lock-mode 1)))
 
 (add-hook 'tcl-mode-hook
-	  (lambda ()
-	    (setq tcl-tab-always-indent nil)
-	    (tcl-auto-fill-mode 1)
-            (hs-minor-mode 1)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (setq tcl-tab-always-indent nil)
+              (tcl-auto-fill-mode 1)
+              (hs-minor-mode 1)
+              (font-lock-mode 1)))
 (setq tcl-application "tclsh"
       tcl-prompt-regexp "\(^> \)|\(^\\ \)")
 
 (add-hook 'vhdl-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (font-lock-mode 1)))
 
 (add-hook 'xml-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (font-lock-mode 1)))
 
 (add-hook 'xrdb-mode-hook
-	  (lambda ()
-	    (auto-fill-mode 1)
-	    (font-lock-mode 1)))
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (font-lock-mode 1)))
 
 ;;; For FORTRAN mode
 (add-hook 'fortran-mode-hook             'cq-fortran-mode)
@@ -324,14 +324,14 @@
 (autoload 'diary    "diary"    "" t nil)
 (autoload 'holidays "holidays" "" t nil)
 (add-hook 'initial-calendar-window-hook
-          (function (lambda ()
-                      (when (and ecb-minor-mode
-                                 (ecb-point-in-edit-window-number))
-                        ;; if no horizontal split then nothing
-                        ;; special to do
-                        (or (= (frame-width) (window-width))
-                            (shrink-window (- (window-height) 9))))
-                      )))
+          #'(lambda ()
+              (when (and ecb-minor-mode
+                         (ecb-point-in-edit-window-number))
+                ;; if no horizontal split then nothing
+                ;; special to do
+                (or (= (frame-width) (window-width))
+                    (shrink-window (- (window-height) 9))))
+              ))
 
 ;;; Other customizations
 (setq safe-kill-region-threshold        5120)
@@ -340,16 +340,16 @@
 ;;; Other hooks
 
 (add-hook 'after-save-hook
-	  (lambda ()
-	    (save-excursion
-	      (save-restriction
-		(widen)
-		(goto-char (point-min))
-		(and (looking-at "^#!")	;magic number detector
-		     (not (file-executable-p buffer-file-truename))
-		     (set-file-modes buffer-file-truename
-				     (logior (file-modes buffer-file-truename)
-					     #o755)))))))
+          #'(lambda ()
+              (save-excursion
+                (save-restriction
+                  (widen)
+                  (goto-char (point-min))
+                  (and (looking-at "^#!") ;magic number detector
+                       (not (file-executable-p buffer-file-truename))
+                       (set-file-modes buffer-file-truename
+                                       (logior (file-modes buffer-file-truename)
+                                               #o755)))))))
 
 ;;;
 ;;; Some global key bindings
@@ -426,7 +426,7 @@
 
 ;;; Functions to load on demand.
 
-(let ((file (concat emacslib "cq-c-mode")))
+(let ((file (concat *cq/emacslib* "cq-c-mode")))
   (autoload 'cq-c-mode file "C mode settings" t nil)
   (autoload 'cq-c++-mode file "C++ mode settings" t nil)
   (autoload 'cq-java-mode file "Java mode settings" t nil)
@@ -438,7 +438,7 @@
   (autoload 'c68-when  file "Build a when clause" t nil)
   (autoload 'cq-insert-braces file "Insert a pair of matching braces." t nil))
 
-(let ((file (concat emacslib "cq-lisp-mode")))
+(let ((file (concat *cq/emacslib* "cq-lisp-mode")))
   (autoload 'cq-lisp-mode file "Lisp Mode customizations" t nil)
   (autoload 'cq-emacs-lisp-mode file "Emacs-Lisp Mode customizations" t nil)
   (autoload 'cq-lisp-interaction-mode file "Lisp Interaction details" t nil)
@@ -458,15 +458,15 @@
             "Exits up from lists or strings" t nil)
   (autoload 'cq-down-list file "Like \\C-M-d, doesn't fail on strings" t nil))
 
-(let ((file (concat emacslib "perldoc")))
+(let ((file (concat *cq/emacslib* "perldoc")))
   (autoload 'perldoc file "Run perldoc" t nil))
 
-;;(let ((file (concat emacslib "xe-balanced-insertions")))
+;;(let ((file (concat *cq/emacslib* "xe-balanced-insertions")))
 ;;  (autoload 'insert-bookends file "" t nil)
 ;;  (autoload 'globalize-bookends file "" t nil))
 ;;(globalize-bookends)
 
-(let ((file (concat emacslib "cq-text-modes")))
+(let ((file (concat *cq/emacslib* "cq-text-modes")))
   (autoload 'cq-text-mode file  "Text mode with auto-fill" t nil)
   (autoload 'cq-nroff-mode file "Nroff mode with indentation" t nil)
   (autoload 'cq-next-tab file   "Move to next tab stop" t nil)
@@ -476,21 +476,21 @@
   (autoload 'cq-latex-mode file "LaTeX mode settings" t nil))
 (autoload   'new-latex-document "latex-mode" "Start a LaTeX paper" t nil)
 
-(let ((file (concat emacslib "pic-mode")))
+(let ((file (concat *cq/emacslib* "pic-mode")))
   (autoload 'pic-mode file "Mode for pic input" t nil))
 
-;;;(let ((file (concat emacslib "cq-babyl")))
+;;;(let ((file (concat *cq/emacslib* "cq-babyl")))
 ;;;  (autoload 'cq-mail-mode         file "Set Mail mode" t nil)
 ;;;  (autoload 'cq-mail-setup        file "Affect formatting of a message" t nil)
 ;;;  (autoload 'cq-rmail-mode        file "Set Rmail mode" t nil)
 ;;;  (autoload 'cq-rmail-summary-mode file "Set Rmail Summary mode" t nil))
 
-(let ((file (concat emacslib "cq-multi-shell")))
+(let ((file (concat *cq/emacslib* "cq-multi-shell")))
   (autoload 'cq-multi-shell file "Handle multiple shell buffers" t nil)
   (autoload 'cq-multi-shell-other-window file
     "Start or pop a shell in another buffer" t nil))
 
-(let ((file (concat emacslib "cq-utils")))
+(let ((file (concat *cq/emacslib* "cq-utils")))
   (autoload 'double-line file "neato" t nil)
   (autoload 'cq-suspend-saving file "Suspend and save all buffers" t nil)
   (autoload 'cq-iconify-saving file "Iconify and save all buffers" t nil)
@@ -543,7 +543,7 @@
   (autoload 'locate-indentation file "Find indentation extent for current line."
     nil t ))
 
-(let ((file (concat emacslib "cq-generic-code-mode")))
+(let ((file (concat *cq/emacslib* "cq-generic-code-mode")))
   (autoload 'cq-generic-code-mode file "Customize generic code mode" t nil)
   (autoload 'new-script file "Write a new executable script." t nil)
   (autoload 'cq-cakefile-mode file "Setup for cakefiles" t nil)
@@ -551,31 +551,31 @@
   (autoload 'cq-sun-assembler-mode file "Setup for sun-assembler" t nil)
   (autoload 'Mathematica-mode file "Edit Mathematica sources" t nil))
 
-;;(let ((file (concat emacslib "cq-comint")))
+;;(let ((file (concat *cq/emacslib* "cq-comint")))
 ;;  (autoload 'cq-shell-mode file "Setup shell modes" t nil))
 
-;;(let ((file (concat emacslib "xe-sh-mode")))
+;;(let ((file (concat *cq/emacslib* "xe-sh-mode")))
 ;;  (autoload 'cq-sh-mode-hook file "Setup shell modes" t nil)
 ;;  (autoload 'cq-sh-indent-line file "Handle indentation" t nil)
 ;;  (add-hook 'sh-mode-hook 'cq-sh-mode-hook))
 
-(let ((file (concat emacslib "cq-dired-mode")))
+(let ((file (concat *cq/emacslib* "cq-dired-mode")))
   (autoload 'cq-dired-mode file "Customizations of DIRED mode" t nil))
 
-(let ((file (concat emacslib "cq-buffer-menu-mode")))
+(let ((file (concat *cq/emacslib* "cq-buffer-menu-mode")))
   (autoload 'cq-buffer-menu file "Customizations of BUFFER-MENU" t nil)
   (autoload 'cq-nuke-temp-buffers file "Kill the temporary buffers" t nil))
 
-(let ((file (concat emacslib "electric-minibuffer")))
+(let ((file (concat *cq/emacslib* "electric-minibuffer")))
   (autoload 'minibuffer-yank-next-completion file "M-n" t nil)
   (autoload 'minibuffer-yank-previous-completion file "M-p" t nil))
 
-(let ((file (concat emacslib "cq-lpr")))
+(let ((file (concat *cq/emacslib* "cq-lpr")))
   (autoload 'lprint-buffer file "Like print-buffer, but spools to -Plp." t nil)
   (autoload 'lprint-region file "Like print-region, but spools to -Plp." t nil)
   (autoload 'lpq file "Run lpq" t nil))
 
-(let ((file (concat emacslib "starweb")))
+(let ((file (concat *cq/emacslib* "starweb")))
   (autoload 'starweb-mode file "Supports writing orders" t nil))
 
 ;;; Load Abbreviations.

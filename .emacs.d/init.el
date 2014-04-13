@@ -22,13 +22,21 @@ Goes backward if ARG is negative; error if CHAR not found."
                                   (search-forward (char-to-string char) nil nil arg)
                                   (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
                                   ))))
-       (setq show-paren-style 'expression)
+
+       ;; (add-to-list 'auto-mode-alist (cons "\\.gitconfig$" 'conf-unix-mode))
+       (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
+       (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
+
+       (package-initialize)
+       (message "Initialized ELPA packages.")
 
        ;; These are known to work in v24, but may have existed since before.
        (which-function-mode 1)
        (filesets-init)
 
-       ;; (add-to-list 'auto-mode-alist (cons "\\.gitconfig$" 'conf-unix-mode))
+       (when t                          ;working around a problem in emacs24
+         (require 'slime)
+         (slime-setup))
 
        (require 'delsel)
        (pending-delete-mode t)
@@ -40,18 +48,14 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'uniquify)
 
        (add-hook 'dired-load-hook
-                 (lambda ()
-                   ;; Bind dired-x-find-file.
-                   (setq dired-x-hands-off-my-keys nil)
-                   (load "dired-x")
-                   ))
+                 #'(lambda ()
+                     ;; Bind dired-x-find-file.
+                     (setq dired-x-hands-off-my-keys nil)
+                     (load "dired-x")
+                     ))
        (require 'dired-x)
 
        (require 'xcscope)
-
-       (when t                          ;working around a problem in emacs24
-         (require 'slime)
-         (slime-setup))
 
        (require 'org-install)
        (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
@@ -62,7 +66,7 @@ Goes backward if ARG is negative; error if CHAR not found."
              '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
        (setq org-log-done t)            ; or '(done) instead of t
        (setq org-agenda-include-diary t)
-       (add-hook 'org-mode-hook (lambda () (require 'vc)))
+       (add-hook 'org-mode-hook #'(lambda () (require 'vc)))
        (add-hook 'org-mode-hook 'turn-on-font-lock)
 
        (require 'remember)
@@ -88,7 +92,6 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'parenface)
        (require 'linum)
 
-       (package-initialize)
        (cond ((>= emacs-major-version 23)
               (require 'emacs23-theme-init)
               (set-color-theme-solarized-light)
@@ -111,6 +114,7 @@ Goes backward if ARG is negative; error if CHAR not found."
   ;; (color-theme-solarized-dark)
   ;; (set-color-theme-solarized-light)
   )
+(message "About to do custom-set-variables.")
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -143,6 +147,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(develock-auto-enable nil)
  '(diary-file "~/.diary")
  '(diff-switches "-du")
+ '(dired-auto-revert-buffer t)
  '(dired-dwim-target t)
  '(dired-isearch-filenames (quote dwim))
  '(dired-kept-versions 3)
@@ -196,7 +201,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
- '(list-directory-brief-switches "-ACF")
+ '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list (quote ("%Y-%m-%d %H:%M" "%Y-%m-%d     ")))
@@ -219,6 +224,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(set-mark-command-repeat-pop t)
  '(shell-popd-regexp "popd\\|-")
  '(shell-pushd-regexp "pushd\\|+")
+ '(show-paren-style (quote expression))
  '(show-trailing-whitespace nil)
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")
@@ -233,6 +239,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes)))
+
+(message "About to do custom-set-faces.")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -240,4 +248,6 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
  '(org-hide ((((background light)) (:foreground "gray85")))))
+
 (put 'scroll-left 'disabled nil)
+(message "Now all done in init.el.")

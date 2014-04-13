@@ -41,17 +41,17 @@ with the cursor where the _ is:
 you should get
     in ~|this short boring line|~_ of text")
 
-(if nil                                 ;what a sick way to comment out
-    (defun test-stuff (num-prefix raw-prefix)
-      "See the documentation of *balanced-delimiters-alist*"
-      (interactive "p\nP")
-      (let* ((keystrokes (this-command-keys))
-             (len (length keystrokes))
-             (lastchar   last-command-char))
-        (message "num:%d raw:%s keys:%s firstkey:%c lastkey:%c lastchar:%c"
-                 num-prefix (prin1-to-string raw-prefix)
-                 keystrokes (elt keystrokes 0) (elt keystrokes (1- len))
-                 lastchar))))
+
+;; (defun test-stuff (num-prefix raw-prefix)
+;;   "See the documentation of *balanced-delimiters-alist*"
+;;   (interactive "p\nP")
+;;   (let* ((keystrokes (this-command-keys))
+;;          (len (length keystrokes))
+;;          (lastchar   last-command-char))
+;;     (message "num:%d raw:%s keys:%s firstkey:%c lastkey:%c lastchar:%c"
+;;              num-prefix (prin1-to-string raw-prefix)
+;;              keystrokes (elt keystrokes 0) (elt keystrokes (1- len))
+;;              lastchar)))
 
 (defun within-delimiters-by-chars (num-prefix raw-prefix)
   "Insert balanced delimiters
@@ -67,7 +67,7 @@ You shouldn't bind this function to `C-u'"
   (let* ((keystrokes    (this-command-keys))
          (len           (length keystrokes))
          (firstchar     (elt keystrokes 0))
-         (lastchar      last-command-char)
+         (lastchar      last-command-event)
          (items         (cond ((and (consp raw-prefix)
                                     (= len 2))
                                1)
