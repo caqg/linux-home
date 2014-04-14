@@ -10,6 +10,7 @@
 (put 'narrow-to-region 'disabled	nil)
 (put 'narrow-to-page   'disabled	nil)
 (put 'set-goal-column  'disabled	nil)
+(put 'scroll-left 'disabled nil)
 
 (setq-default major-mode 'indented-text-mode)
 
@@ -75,16 +76,14 @@
                (c-offsets-alist . ((innamespace 0)))))
 
 (add-hook 'c-mode-hook
-	  (function
-           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-               (when (and buffer-file-name (string-match "llvm" buffer-file-name))
-                 (c-set-style "llvm.org")))))
+          #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+              (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+                (c-set-style "llvm.org"))))
 
 (add-hook 'c++-mode-hook
-	  (function
            #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
                (when (and buffer-file-name (string-match "llvm" buffer-file-name))
-                 (c-set-style "llvm.org")))))
+                 (c-set-style "llvm.org"))))
 
 (add-hook 'comint-mode-hook
           #'(lambda ( )

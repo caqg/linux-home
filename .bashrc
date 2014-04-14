@@ -39,5 +39,32 @@ fi
     . ~/.bash_interactive
 }
 
-
+eval $( ~/cmd/path |
+/usr/bin/awk '
+BEGIN { n = 0; }
+{
+	if ($0 in map) {
+#		printf "REPEATED: %s\n", $0
+	} else {
+#		printf "NEW     :  %d\t%s\n", n, $0
+		array[n] = $0
+		map[$0] = n
+		n += 1
+	}
+}
+END {
+	for (i = 0; i < n; ++i) {
+		if (i == 0) {
+			newpath=array[0]
+#			print i, newpath
+		} else {
+			newpath=newpath":"array[i]
+#			print i, newpath
+		}
+	}
+	printf "export PATH=%s\n", newpath
+}
+' )
 # User specific aliases and functions
+
+#end .bashrc
