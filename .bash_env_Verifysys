@@ -11,7 +11,7 @@ export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib-linux64
 export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib
 export LD_LIBRARY_PATH+=:.
 
-export MANPATH+=${VERIFYSYS_ROOT}/share/man
+export MANPATH+=:${VERIFYSYS_ROOT}/share/man
 
 # example: CXXFLAGS += -I ${SYSTEMC_HOME}/include
 

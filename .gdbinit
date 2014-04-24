@@ -1,5 +1,7 @@
 ### -*- GDB-Script -*-
 
+add-auto-load-safe-path /verifysys/SystemC-engine/BOM/.gdbinit
+
 define ps
   set $i = 0
   while ($i < $argc)

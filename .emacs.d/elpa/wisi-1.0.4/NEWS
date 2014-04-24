@@ -1,0 +1,32 @@
+GNU Emacs wisi NEWS -- history of user-visible changes.
+
+Copyright (C) 2014 Free Software Foundation, Inc.
+See the end of the file for license conditions.
+
+Please send wisi bug reports to bug-gnu-emacs@gnu.org, with
+'wisi' in the subject. If possible, use M-x report-emacs-bug.
+
+
+* wisi 1.0.4
+19 Apr 2014
+
+** add support for GNAT Ada bracket hex character notation
+
+* wisi 1.0.3
+16 Mar 2014
+
+** fix another packaging bug; forgot to add files to ELPA git!
+
+* wisi 1.0.2
+14 Mar 2014
+
+** Emacs 24.2 supported, via cl-lib in Gnu ELPA
+
+* wisi 1.0.1
+
+** minor fixes for byte compiler warnings
+
+* wisi 1.0
+Feb 2 2014
+
+** first release in ELPA
