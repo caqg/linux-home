@@ -13,6 +13,8 @@ tool                    = $HOME/cmd/ediff
 tool                    = $HOME/cmd/emerge
 
 [alias]
+aa                      = add -A .
+au                      = add -u .
 ci                      = commit
 co                      = checkout
 d                       = diff
