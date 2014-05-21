@@ -27,6 +27,8 @@ Goes backward if ARG is negative; error if CHAR not found."
        (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
        (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
 
+       (require 'speedbar)
+       (require 'ert)
        (package-initialize)
        (message "Initialized ELPA packages.")
 
@@ -125,7 +127,6 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If there is more than one, they won't work right.
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
- '(ansi-color-names-vector ["black" "light gray" "dark gray" "light slate gray"])
  '(background-color "#202020")
  '(background-mode dark)
  '(backup-by-copying-when-linked t)
@@ -147,6 +148,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-postfix")
  '(delete-old-versions t)
+ '(delete-selection-mode t)
  '(describe-char-unidata-list (quote (name old-name general-category decomposition mirrored iso-10646-comment)))
  '(develock-auto-enable nil)
  '(diary-file "~/.diary")
@@ -206,6 +208,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
+ '(line-move-visual nil)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
  '(ls-lisp-dirs-first t)
@@ -252,7 +255,6 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Ubuntu Mono"))))
- '(org-hide ((((background light)) (:foreground "gray85")))))
+ )
 
 (message "Now all done in init.el.")
