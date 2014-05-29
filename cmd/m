@@ -4,18 +4,37 @@
 ## All Rights Reserved Worldwide
 ## mailto:cesar.quiroz@gmail.com
 
-# Is there a target (an arg that does not start with a dash?)
+# Is there a target (an arg that does not start with a dash)?
 
 target=
 for a; do
     case "$a" in
-    -*)	;;                      # skip
-    *) target=$(basename "$a"); break;;
+    -* | *=*)				;; # skip
+    *) target=$(basename "$a"); break	;;
     esac
 done
 
-logfile=make-"$target".log
+tstamp=$(/bin/date +%Y%m%d_%H%M%S)
+
+case "$target" in
+"")	tag="$tstamp"			;;
+*) 	tag="$target-$tstamp"		;;
+esac
+
+D=
+[ -d "$LOGSDIR" ] && 
+case "$LOGSDIR" in
+*/)	D="$LOGSDIR"			;;
+*)	D="$LOGSDIR"/			;;
+esac
+
+logfile="$D"make-"$tag".log
+case "$logfile" in
+/*)					;;
+*)	logfile="$(pwd)/$logfile"	;;
+esac
 
 make LANG=C "$@" 2>&1 | tee "$logfile"
+echo Log: $(/bin/ls "$logfile")
 
 #end m
