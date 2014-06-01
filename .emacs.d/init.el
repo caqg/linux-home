@@ -164,7 +164,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-auto-expand-tag-tree (quote all))
  '(ecb-compile-window-height 10)
  '(ecb-compile-window-width (quote edit-window))
- '(ecb-layout-name "left1")
+ '(ecb-layout-name "leftright-analyse")
  '(ecb-options-version "2.40")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer (quote ("left7" "left9" "left13" "left14")))
