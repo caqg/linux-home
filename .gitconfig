@@ -1,32 +1,34 @@
 [user]
-name                    = Cesar A. Quiroz, Ph.D.
-email                   = cesar_quiroz@ieee.org
+	name                    = Cesar A. Quiroz, Ph.D.
+	email                   = cesar_quiroz@ieee.org
 
 [core]
-editor                  = gvim -f
-pager                   =
+	editor                  = gvim -f
+	pager                   =
 
 [diff]
-tool                    = $HOME/cmd/ediff
+	tool                    = $HOME/cmd/ediff
 
 [merge]
-tool                    = $HOME/cmd/emerge
+	tool                    = $HOME/cmd/emerge
 
 [alias]
-aa                      = add -A .
-au                      = add -u .
-ci                      = commit
-co                      = checkout
-d                       = diff
-ds                      = diff --staged
-l                       = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
-s                       = status -bs -uno
+	aa                      = add -A .
+	au                      = add -u .
+	ci                      = commit
+	co                      = checkout
+	d                       = diff
+	ds                      = diff --staged
+	l                       = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
+	prefix                  = rev-parse --show-prefix
+	s                       = status -bs -uno
+	top                     = rev-parse --show-toplevel
 
 [push]
-default                 = simple
+	default                 = simple
 
 [color]
-ui                      = true
+	ui                      = true
 
 [gui]
-warndetachedcommit      = true
+	warndetachedcommit      = true
