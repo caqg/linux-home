@@ -239,6 +239,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
  '(tab-always-indent (quote complete))
+ '(tabbar-mode t nil (tabbar))
+ '(tabbar-mwheel-mode t nil (tabbar))
  '(text-mode-hook (quote (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
  '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
