@@ -380,6 +380,7 @@
 (global-set-key "\^Z\^C"            'compile)
 (global-set-key "\^Z\^K"            'kill-compilation)
 (global-set-key "\^Z\^N"            'next-error)
+(global-set-key "\^Z\^R"            'recompile)
 (global-set-key "\^X\^C"            'cq-kill-emacs-maybe)
 ;;+? (global-set-key "\^X,"              'attach-to-register)
 ;;+? (global-set-key "\^XR"              'replace-regexp)
