@@ -94,6 +94,16 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'parenface)
        (require 'linum)
 
+       ;; tabbar (already initialized)
+       ;; (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
+       ;;                                  (tabset object &optional append))
+       ;;   "Present the tab bar contents in ascending order by buffer name."
+       ;;   (setq tabset (sort tabset
+       ;;                      #'(lambda (a b)
+       ;;                          (string< (buffer-name (car a))
+       ;;                                   (buffer-name (car b)))))))
+       ;; (ad-activate 'tabbar-add-tab -1)
+
        (cond ((>= emacs-major-version 23)
               (require 'emacs23-theme-init)
               (set-color-theme-solarized-light)
@@ -227,7 +237,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(search-slow-window-lines 3)
- '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-stickyfunc-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
  '(semantic-mode t)
  '(set-mark-command-repeat-pop t)
  '(shell-popd-regexp "popd\\|-")
