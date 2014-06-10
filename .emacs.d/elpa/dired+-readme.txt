@@ -15,6 +15,25 @@
    (define-key ctl-x-4-map "d" 'diredp-dired-files-other-window)
 
 
+ Wraparound Navigation
+ ---------------------
+
+ In vanilla Dired, `dired-next-marked-file' (`M-}' or `* C-n') and
+ `dired-previous-marked-file' (`M-{' or `* C-p') wrap around when
+ you get to the end or the beginning of the Dired buffer.  Handy.
+
+ But the other navigation commands do not wrap around.  In `Dired+'
+ they do, provided option `diredp-wrap-around-flag' is non-nil,
+ which it is by default.  This means the following commands:
+
+   `diredp-next-line'     - `n', `C-n', `down', `SPC'
+   `diredp-previous-line' - `p', `C-p', `up'
+   `diredp-next-dirline'  - `>'
+   `diredp-prev-dirline'  - `<'
+   `diredp-next-subdir'   - `C-M-n'
+   `diredp-prev-subdir'   - `C-M-p'
+
+
  Hide/Show Details
  -----------------
 
@@ -119,23 +138,23 @@
  to retrieve them, and `C-M-<' (in Dired) to open Dired on them.
 
 
- Wraparound Navigation
- ---------------------
+ Image Files
+ -----------
 
- In vanilla Dired, `dired-next-marked-file' (`M-}' or `* C-n') and
- `dired-previous-marked-file' (`M-{' or `* C-p') wrap around when
- you get to the end or the beginning of the Dired buffer.  Handy.
+ `Dired+' provides several enhancements regarding image files.
+ Most of these require standard library `image-dired.el'.  One of
+ them, command `diredp-do-display-images', which displays all of
+ the marked image files, requires library `image-file.el'.
 
- But the other navigation commands do not wrap around.  In Dired+
- they do, provided option `diredp-wrap-around-flag' is non-nil,
- which it is by default.  This means the following commands:
+ `Dired+' loads these libraries automatically, if available, which
+ means an Emacs version that supports image display (Emacs 22 or
+ later).  (You must of course have installed whatever else your
+ Emacs version needs to display images.)
 
-   `diredp-next-line'     - `n', `C-n', `down', `SPC'
-   `diredp-previous-line' - `p', `C-p', `up'
-   `diredp-next-dirline'  - `>'
-   `diredp-prev-dirline'  - `<'
-   `diredp-next-subdir'   - `C-M-n'
-   `diredp-prev-subdir'   - `C-M-p'
+ Besides command `diredp-do-display-images', see the commands whose
+ names have prefix `diredp-image-'.  And see options
+ `diredp-image-preview-in-tooltip' and
+ `diredp-auto-focus-frame-for-thumbnail-tooltip-flag'.
 
 
  Inserted Subdirs, Multiple Dired Buffers, Files from Anywhere,...
@@ -164,7 +183,7 @@
    are interpreted relative to the value of `default-directory'.
    Use absolute file names if appropriate.
 
- `i' and `$' are improved in Dired+:
+ `i' and `$' are improved in `Dired+':
 
  * Once a subdir has been inserted, `i' bounces between the subdir
    listing and the subdir line in the parent listing.  If the
@@ -182,7 +201,7 @@
  might have multiple Dired buffers that have quite specific
  contents and that you want to keep around during a session.
 
- This is one motivation for the Dired+ `diredp-*-recursive'
+ This is one motivation for the `Dired+' `diredp-*-recursive'
  commands, which act on the marked files in marked subdirectories,
  recursively.  In one sense, these commands are an alternative to
  using a single Dired buffer with inserted subdirectories.  They
@@ -271,6 +290,7 @@
    `diredp-find-a-file-other-window',
    `diredp-find-file-other-frame',
    `diredp-find-file-reuse-dir-buffer',
+   `diredp-find-line-file-other-window',
    `diredp-flag-region-files-for-deletion',
    `diredp-grep-this-file', `diredp-hardlink-this-file',
    `diredp-image-dired-comment-file',
@@ -308,7 +328,9 @@
    `diredp-mouse-do-shell-command', `diredp-mouse-do-symlink',
    `diredp-mouse-do-tag', `diredp-mouse-do-untag',
    `diredp-mouse-downcase', `diredp-mouse-ediff',
-   `diredp-mouse-find-file', `diredp-mouse-find-file-other-frame',
+   `diredp-mouse-find-file',
+   `diredp-mouse-find-line-file-other-window',
+   `diredp-mouse-find-file-other-frame',
    `diredp-mouse-find-file-reuse-dir-buffer',
    `diredp-mouse-flag-file-deletion', `diredp-mouse-mark',
    `diredp-mouse-mark-region-files', `diredp-mouse-mark/unmark',
@@ -343,8 +365,10 @@
 
  User options defined here:
 
-   `diff-switches', `diredp-hide-details-initially-flag' (Emacs
-   24.4+), `diredp-hide-details-propagate-flag' (Emacs 24.4+),
+   `diredp-auto-focus-frame-for-thumbnail-tooltip-flag',
+   `diredp-image-preview-in-tooltip', `diff-switches',
+   `diredp-hide-details-initially-flag' (Emacs 24.4+),
+   `diredp-hide-details-propagate-flag' (Emacs 24.4+),
    `diredp-prompt-for-bookmark-prefix-flag',
    `diredp-w32-local-drives', `diredp-wrap-around-flag'.
 
@@ -369,8 +393,9 @@
    `diredp-get-files-for-dir', `diredp-get-subdirs',
    `diredp-hide-details-if-dired' (Emacs 24.4+),
    `diredp-hide/show-details' (Emacs 24.4+),
+   `diredp-image-dired-required-msg',
    `diredp-internal-do-deletions', `diredp-list-files',
-   `diredp-make-find-file-keys-reuse-dirs',
+   `diredp-looking-at-p', `diredp-make-find-file-keys-reuse-dirs',
    `diredp-make-find-file-keys-not-reuse-dirs', `diredp-maplist',
    `diredp-marked-here', `diredp-mark-files-tagged-all/none',
    `diredp-mark-files-tagged-some/not-all',
@@ -386,7 +411,8 @@
    `diredp-file-line-overlay', `diredp-files-within-dirs-done',
    `diredp-font-lock-keywords-1', `diredp-hide-details-last-state'
    (Emacs 24.4+), `diredp-hide-details-toggled' (Emacs 24.4+),
-   `diredp-loaded-p', `diredp-menu-bar-encryption-menu',
+   `diredp-list-files-map', `diredp-loaded-p',
+   `diredp-menu-bar-encryption-menu',
    `diredp-menu-bar-images-menu.',
    `diredp-menu-bar-immediate-menu',
    `diredp-menu-bar-immediate-bookmarks-menu',
@@ -397,12 +423,17 @@
    `diredp-menu-bar-regexp-menu', `diredp-menu-bar-subdir-menu',
    `diredp-re-no-dot', `diredp-w32-drives-mode-map'.
 
+ Macros defined here:
+
+   `diredp-with-help-window'.
+
 
  ***** NOTE: The following macros defined in `dired.el' have
              been REDEFINED HERE:
 
  `dired-map-over-marks'    - Treat multiple `C-u' specially.
  `dired-mark-if'           - Better initial msg - Emacs bug #8523.
+
 
  ***** NOTE: The following functions defined in `dired.el' have
              been REDEFINED HERE:

@@ -1,17 +1,4 @@
 (1
- (emacs-cl .
-	   [(0 5)
-	    nil "Emacs Common Lisp" tar])
- (operate-on-number .
-		    [(1 1 0)
-		     nil "Operate on number at point with arithmetic functions" single])
- (marmalade-upload .
-		   [(0 0 2)
-		    ((web
-		      (0 4 1))
-		     (kv
-		      (0 0 19)))
-		    "upload client for marmalade from emacs" single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -1292,7 +1279,7 @@
      [(0 12)
       nil "Emacs Lisp interface to the PostgreSQL RDBMS" single])
  (perspective .
-	      [(1 9)
+	      [(1 10)
 	       nil "switch between named \"perspectives\" of the editor" single])
  (persistent-soft .
 		  [(0 8 8)
@@ -1531,6 +1518,9 @@
  (org-blog .
 	   [(1 18 1 1)
 	    nil "create and publish a blog with org-mode" single])
+ (operate-on-number .
+		    [(1 1 0)
+		     nil "Operate on number at point with arithmetic functions" single])
  (openwith .
 	   [(20120531)
 	    nil "Open files with external programs" single])
@@ -1763,6 +1753,13 @@
  (master-mode .
 	      [(0 1)
 	       nil "Become an Emacs master" single])
+ (marmalade-upload .
+		   [(0 0 2)
+		    ((web
+		      (0 4 1))
+		     (kv
+		      (0 0 19)))
+		    "upload client for marmalade from emacs" single])
  (marmalade-test .
 		 [(0 0 1)
 		  nil "A test tarball package." tar])
@@ -2953,7 +2950,7 @@
 		  (1)))
 		"Paredit support for evil keybindings" single])
  (evil-numbers .
-	       [(0 3)
+	       [(0 4)
 		nil "increment/decrement numbers like in vim" single])
  (evil-nerd-commenter .
 		      [(1 3 1)
@@ -2962,7 +2959,7 @@
 	       [(1 3 0)
 		nil "Vim matchit ported into Emacs (requires EVIL)" tar])
  (evil-leader .
-	      [(0 4 1)
+	      [(0 4 3)
 	       ((evil
 		 (0)))
 	       "let there be <leader>" single])
@@ -3084,11 +3081,14 @@
  (emacs-droid .
 	      [(0 0 0)
 	       nil "Android application development tools for Emacs" single])
+ (emacs-cl .
+	   [(0 5)
+	    nil "Emacs Common Lisp" tar])
  (elscreen .
 	   [(1 4 6)
 	    nil "Screen for Emacsen" single])
  (elpy .
-       [(1 2 1)
+       [(1 4 1)
 	((auto-complete
 	  (1 4))
 	 (find-file-in-project
@@ -3103,8 +3103,8 @@
 	  (0 97))
 	 (nose
 	  (0 1 1))
-	 (virtualenv
-	  (1 2))
+	 (pyvenv
+	  (1 0))
 	 (yasnippet
 	  (0 8 0)))
 	"Emacs Python Development Environment" tar])
@@ -3394,14 +3394,14 @@
 	(0 0 11)))
       "A database for EmacsLisp" single])
  (dash-functional .
-		  [(1 0 0)
+		  [(1 1 0)
 		   ((dash
 		     (2 0 0))
 		    (emacs
 		     (24)))
 		   "Collection of useful combinators for Emacs Lisp" single])
  (dash .
-       [(2 5 0)
+       [(2 7 0)
 	nil "A modern list library for Emacs" single])
  (dart-mode .
 	    [(0 9)
