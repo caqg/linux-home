@@ -119,6 +119,7 @@ Goes backward if ARG is negative; error if CHAR not found."
               ))
        ))
 
+(setq-default ediff-auto-refine nil)
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
 
@@ -173,8 +174,9 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(dired-use-ls-dired t)
  '(dired-x-hands-off-my-keys nil)
  '(display-time-mode t)
+ '(ecb-activation-selects-ecb-frame-if-already-active t)
  '(ecb-auto-expand-tag-tree (quote all))
- '(ecb-compile-window-height 10)
+ '(ecb-compile-window-height 0.5)
  '(ecb-compile-window-width (quote edit-window))
  '(ecb-layout-name "leftright-analyse")
  '(ecb-options-version "2.40")
@@ -183,6 +185,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/verifysys" "VerifySys"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("leftright-analyse" "leftright1" "left1")))
+ '(ecb-version-check nil)
  '(ecb-windows-width 0.2)
  '(ediff-custom-diff-options "-U10")
  '(ediff-prefer-iconified-control-frame t)
