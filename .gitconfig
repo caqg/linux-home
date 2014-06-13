@@ -21,7 +21,7 @@
 	ds                      = diff --staged
 	l                       = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
 	prefix                  = rev-parse --show-prefix
-	s                       = status -bs -uno
+	s                       = status -bs -uall
 	top                     = rev-parse --show-toplevel
 
 [push]
