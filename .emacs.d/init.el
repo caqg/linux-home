@@ -64,12 +64,14 @@ Goes backward if ARG is negative; error if CHAR not found."
        (global-set-key "\C-cl" 'org-store-link)
        (global-set-key "\C-ca" 'org-agenda)
        (global-set-key "\C-cb" 'org-iswitchb)
+       (global-set-key "\C-cc" 'org-capture)
        (setq org-todo-keywords
              '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
        (setq org-log-done t)            ; or '(done) instead of t
        (setq org-agenda-include-diary t)
        (add-hook 'org-mode-hook #'(lambda () (require 'vc)))
        (add-hook 'org-mode-hook 'turn-on-font-lock)
+       (add-hook 'org-mode-hook 'turn-off-filladapt-mode)
 
        (require 'remember)
        (require 'org-remember)
@@ -223,6 +225,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
+ '(iswitchb-mode t)
  '(line-move-visual nil)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
