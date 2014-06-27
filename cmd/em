@@ -1,0 +1,14 @@
+#!/bin/sh
+
+## To be run under Msys (not plain Windows), or under any Unix.
+
+SET_THEME='-f set-color-theme-solarized-dark'
+
+case `uname -o` in 
+Msys*)
+    exec /c/Program\ Files\ \(x86\)/Emacs/emacs-24.3/bin/runemacs.exe ${SET_THEME} "$@"
+    ;;
+*)
+    exec emacs ${SET_THEME} "$@"
+    ;;
+esac
