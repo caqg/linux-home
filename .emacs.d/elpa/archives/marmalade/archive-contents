@@ -1,4 +1,7 @@
 (1
+ (highlight-sexp .
+		 [(1 0)
+		  nil "highlight current zone according to its context" single])
  (tdd .
       [(1 0)
        nil "recompile on save and indicate success in the mode line" single])
@@ -212,7 +215,7 @@
 	  [(2012 3 27 2)
 	   nil "Get weather reports via worldweatheronline.com" single])
  (wcheck-mode .
-	      [(2013 6 25)
+	      [(2014 6 21)
 	       nil "General interface for text checkers" tar])
  (wc-mode .
 	  [(1 3)
@@ -1498,7 +1501,7 @@
 	       (6 1)))
 	     "basic support for magit links" single])
  (org-journal .
-	      [(1 4 8)
+	      [(1 5 1)
 	       nil "a simple org-mode based journaling mode" single])
  (org-gnome .
 	    [(0 1)
@@ -3470,7 +3473,7 @@
 	      [(0 0 5)
 	       nil "a markup mode for creole" single])
  (creole .
-	 [(1 0 3)
+	 [(1 0 4)
 	  ((noflet
       (0 0 3))
 	   (kv
@@ -3760,7 +3763,7 @@
 	   (1 1)))
 	 "Client for IRC in Emacs" tar])
  (cider .
-	[(0 5 0)
+	[(0 6 0)
 	 ((clojure-mode
 	   (2 0 0))
 	  (cl-lib
