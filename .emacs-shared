@@ -53,6 +53,7 @@
 
 (add-hook 'c-mode-common-hook
           #'(lambda ()
+              (c-set-style "user")
               (setq c-basic-offset 8)
               (setq indent-tabs-mode t)
               (c-set-offset 'substatement-open 0)
@@ -67,6 +68,11 @@
                   (subword-mode 1)
                 (c-subword-mode 1))
               (font-lock-mode 1)))
+
+(add-hook 'java-mode-hook
+          #'(lambda ()
+              (setq c-basic-offset 4)
+              (setq indent-tabs-mode nil)))
 
 (c-add-style "llvm.org"
              '((fill-column . 80)
