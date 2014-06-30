@@ -32,6 +32,9 @@ Goes backward if ARG is negative; error if CHAR not found."
        (package-initialize)
        (message "Initialized ELPA packages.")
 
+       (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
+       (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
+
        ;; These are known to work in v24, but may have existed since before.
        (which-function-mode 1)
        (filesets-init)
@@ -145,6 +148,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(background-color "#202020")
  '(background-mode dark)
  '(backup-by-copying-when-linked t)
+ '(c++-font-lock-extra-types (quote ("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference" "[[:upper:]]\\\\sw*[[:lower:]]\\\\sw")))
+ '(c-tab-always-indent nil)
  '(calendar-date-style (quote iso))
  '(calendar-mark-diary-entries-flag t)
  '(calendar-mark-holidays-flag t)
