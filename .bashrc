@@ -7,6 +7,8 @@ fi
 
 unalias -a
 
+export LC_TIME="en_GB.UTF-8"
+
 # Add personal prefixes to the PATH, but only if they are not already there.
 [ -d $HOME/bin ] &&
 case "$PATH" in
@@ -65,6 +67,7 @@ END {
 	printf "export PATH=%s\n", newpath
 }
 ' )
+
 # User specific aliases and functions
 
 #end .bashrc
