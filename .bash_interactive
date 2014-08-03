@@ -29,7 +29,7 @@ function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi
 function j    { jobs "$@"; }
 function k    { kill -9 "$@"; }
 function l    { LC_ALL=C /bin/ls -Alh --time-style=iso --group-directories-first "$@"; }
-function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso --group-directories-first "$@"; }
+function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso "$@"; }
 function gp   { gview -M -; }
 function vdir { LC_ALL=C /bin/vdir "$@"; }
 
