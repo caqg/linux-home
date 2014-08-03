@@ -1,10 +1,15 @@
 # apt-clone/
 
-Keep here up-to-date apt configurations, to be able to restore preferred apps quickly.
+Keep here up-to-date apt configurations, to be able to restore preferred apps
+quickly.
+
 
 ## How to update
 
+The `update-clone-info` automates the invocation of `apt-clone`:
+
     ./update-clone-info
+	
 
 ## Naming convention
 
