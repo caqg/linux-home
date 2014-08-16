@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# an alternative to markdown-mode's preview C-c C-c p
+# works from vi as well
+# picks whatever you choose for sensible-browser (q.v.)
+
+/usr/bin/markdown "$@" |
+/usr/bin/sensible-browser \
+	"data:text/html;charset=UTF-8;base64,$(base64 -w0)"
+
+#end show-md
