@@ -21,7 +21,7 @@
 	ds                      = diff --staged
 	l                       = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
 	prefix                  = rev-parse --show-prefix
-	s                       = status -bs -uall
+	s                       = status -bs -uall .
 	top                     = rev-parse --show-toplevel
 
 [push]
@@ -32,3 +32,5 @@
 
 [gui]
 	warndetachedcommit      = true
+[credential]
+	helper = cache
