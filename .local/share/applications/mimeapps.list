@@ -1,0 +1,19 @@
+[Added Associations]
+x-scheme-handler/http=mozilla-firefox.desktop;
+x-scheme-handler/mailto=evolution.desktop;userapp-Evolution-QB8QWW.desktop;
+text/calendar=evolution.desktop;
+audio/x-vorbis+ogg=totem.desktop;
+video/x-ogm+ogg=totem.desktop;
+image/jpeg=gnome-eog.desktop;
+x-content/unix-software=nautilus-autorun-software.desktop;
+text/x-makefile=emacsclient.desktop;
+text/x-csrc=gedit.desktop;
+application/x-shellscript=gedit.desktop;
+application/xml=xmlcopyeditor.desktop;
+
+[Default Applications]
+audio/x-vorbis+ogg=rhythmbox.desktop
+image/jpeg=gthumb.desktop
+x-content/unix-software=nautilus-autorun-software.desktop
+x-scheme-handler/mailto=gnome-gmail.desktop
+application/xml=xmlcopyeditor.desktop

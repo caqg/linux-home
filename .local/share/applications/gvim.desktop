@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GVim
+GenericName=Text Editor
+Comment=Edit text files
+TryExec=gvim
+Exec=/bin/bash -l -c "gvim -f %F"
+Terminal=false
+Type=Application
+Icon=vim
+Categories=Utility;TextEditor;
+StartupNotify=true
+MimeType=text/plain;
