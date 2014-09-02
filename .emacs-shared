@@ -69,6 +69,10 @@
                 (c-subword-mode 1))
               (font-lock-mode 1)))
 
+(add-hook 'c++-mode-hook
+          #'(lambda ()
+              (c-set-offset 'innamespace 0)))
+
 (add-hook 'java-mode-hook
           #'(lambda ()
               (setq c-basic-offset 4)
