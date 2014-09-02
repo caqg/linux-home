@@ -1,4 +1,7 @@
 (1
+ (isearch-switch .
+		 [(1 0)
+		  nil "switch the manner you are isearching in." single])
  (linky-client .
 	       [(0 0 2)
 		nil "a client for linky.elnode.org" single])
@@ -1049,7 +1052,7 @@
 	     (1 2)))
 	   "A library for pasting to https://refheap.com" single])
  (recursive-narrow .
-		   [(20140801 1400)
+		   [(20140811 1546)
 		    nil "narrow-to-region that operates recursively" single])
  (rect-mark .
 	    [(1 4)
