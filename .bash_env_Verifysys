@@ -4,11 +4,18 @@ export VERIFYSYS_ROOT=/verifysys/rootdir
 export SYSTEMC_HOME=${VERIFYSYS_ROOT}
 export SYSTEMC=${SYSTEMC_HOME}
 export LLVMROOT=${VERIFYSYS_ROOT}
+export INNERGY_ROOT=/verifysys/Software/Innergy
+export VERIFIC_ROOT=/scratch/verific_eval/verific_lib_eval
 
 export PATH=${VERIFYSYS_ROOT}/bin:$PATH
+export PATH=/verifysys/Software/QT/build-VerifySys-Desktop-Debug:$PATH
+export PATH=${INNERGY_ROOT}/bin:$PATH
+export PATH=${VERIFIC_ROOT}/bin:$PATH
 
-export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib-linux64
+export LD_LIBRARY_PATH+=${VERIFYSYS_ROOT}/lib-linux64
+export LD_LIBRARY_PATH+=${VERIFYSYS_ROOT}/lib-linux64
 export LD_LIBRARY_PATH+=:${VERIFYSYS_ROOT}/lib
+export LD_LIBRARY_PATH+=:${INNERGY_ROOT}/lib
 export LD_LIBRARY_PATH+=:.
 
 export MANPATH+=:${VERIFYSYS_ROOT}/share/man
