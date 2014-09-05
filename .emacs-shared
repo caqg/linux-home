@@ -69,7 +69,9 @@
                 (c-subword-mode 1))
               (font-lock-mode 1)
               (c-setup-filladapt)
-              (filladapt-mode 1)))
+              (filladapt-mode 1)
+              (require 'gtags)
+              (gtags-mode 1)))
 
 (add-hook 'c++-mode-hook
           #'(lambda ()
