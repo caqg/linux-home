@@ -3,7 +3,7 @@
 	email                   = cesar_quiroz@ieee.org
 
 [core]
-	editor                  = gvim -f
+	editor                  = $HOME/cmd/e -c
 	pager                   =
 
 [diff]
@@ -28,9 +28,17 @@
 	default                 = simple
 
 [color]
+	branch 			= true
+	diff 			= true
+	grep 			= true
+	interactive 		= true
+	pager 			= true
+	showbranch 		= true
+	status 			= true
 	ui                      = true
 
 [gui]
 	warndetachedcommit      = true
+
 [credential]
-	helper = cache
+	helper = cache --timeout=3600
