@@ -7,5 +7,5 @@ case $# in
    exit 2 ;;
 esac
 
-e --eval \
+e -n --eval \
  '(ediff-merge-files-with-ancestor "'"$C"'" "'"$B"'" "'"$A"'" () "'"$M"'")'

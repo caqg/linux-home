@@ -134,6 +134,7 @@
               (local-set-key "\C-zx"    'cq-extract-sexp)
               (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
               (local-set-key "\C-\M-d"  'cq-down-list)
+              (local-set-key "\C-c\C-v" 'view-mode)
               ;;(local-set-key "\C-z]"    'cq-close-defun)
               ))
 
@@ -151,6 +152,7 @@
               (local-set-key "\C-zx"    'cq-extract-sexp)
               (local-set-key "\C-\M-u"  'cq-backward-up-list-or-string)
               (local-set-key "\C-\M-d"  'cq-down-list)
+              (local-set-key "\C-c\C-v" 'view-mode)
               ;;(local-set-key "\C-z]"    'cq-close-defun)
               (auto-fill-mode 1)
               (hs-minor-mode 1)
@@ -185,13 +187,15 @@
 (add-hook 'makefile-mode-hook
           #'(lambda ()
               (auto-fill-mode 0)
-              (font-lock-mode 1)))
+              (font-lock-mode 1)
+              (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'pascal-mode-hook
 	  #'(lambda ()
               (auto-fill-mode 1)
               (font-lock-mode 1)
-              (setq pascal-tab-always-indent nil)))
+              (setq pascal-tab-always-indent nil)
+              (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'shell-mode-hook
 	  #'(lambda ()
@@ -227,6 +231,7 @@
           #'(lambda ()
               (setq tcl-tab-always-indent nil)
               (tcl-auto-fill-mode 1)
+              (local-set-key "\C-c\C-v" 'view-mode)
               (hs-minor-mode 1)
               (font-lock-mode 1)))
 (setq tcl-application "tclsh"
@@ -235,12 +240,14 @@
 (add-hook 'vhdl-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
-              (font-lock-mode 1)))
+              (font-lock-mode 1)
+              (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'xml-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
-              (font-lock-mode 1)))
+              (font-lock-mode 1)
+              (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'xrdb-mode-hook
           #'(lambda ()
@@ -395,6 +402,7 @@
 (global-set-key "\^Z\^K"            'kill-compilation)
 (global-set-key "\^Z\^N"            'next-error)
 (global-set-key "\^Z\^R"            'recompile)
+(global-set-key "\^Z\^Z"	    'suspend-frame)
 (global-set-key "\^X\^C"            'cq-kill-emacs-maybe)
 ;;+? (global-set-key "\^X,"              'attach-to-register)
 ;;+? (global-set-key "\^XR"              'replace-regexp)
@@ -426,6 +434,9 @@
 
 (define-key help-map "\C-f"         'flash-describe-function)
 (define-key help-map "\C-v"         'flash-describe-variable)
+
+(global-set-key "\C-c\C-v" 'view-mode)
+
 
 ;;; For electric-minibuffer
 (define-key minibuffer-local-completion-map "\en"
