@@ -6,10 +6,10 @@
   "Pathname of my private library")
 (setq load-path (append (list *cq/emacslib*) load-path (list ".")))
 
-(put 'eval-expression  'disabled	nil)
-(put 'narrow-to-region 'disabled	nil)
-(put 'narrow-to-page   'disabled	nil)
-(put 'set-goal-column  'disabled	nil)
+(put 'eval-expression  'disabled        nil)
+(put 'narrow-to-region 'disabled        nil)
+(put 'narrow-to-page   'disabled        nil)
+(put 'set-goal-column  'disabled        nil)
 (put 'scroll-left      'disabled        nil)
 
 (setq-default major-mode 'indented-text-mode)
@@ -17,23 +17,23 @@
 (defvar *timestamp-program* (concat (getenv "HOME") "/cmd/timestamp")
   "Program to produce a time stamp (see cq-timestamp).")
 
-(setq-default auto-mode-alist 
-      (append
-       (list
-	(cons "[Mm]akefile"		'makefile-mode)
-	(cons "\\.lisp$"		'lisp-mode)
-	(cons "\\.lsp$"			'lisp-mode)
-	(cons "\\.cl$"			'lisp-mode)
-        (cons "\\.txt$"			'indented-text-mode))
-       auto-mode-alist))
+(setq-default auto-mode-alist
+              (append
+               (list
+                (cons "[Mm]akefile"             'makefile-mode)
+                (cons "\\.lisp$"                'lisp-mode)
+                (cons "\\.lsp$"                 'lisp-mode)
+                (cons "\\.cl$"                  'lisp-mode)
+                (cons "\\.txt$"                 'indented-text-mode))
+               auto-mode-alist))
 (setq tag-table-alist nil)
 
 ;;; Mode Hooks
 
-(add-hook 'c-mode-hook			'cq-c-mode)
-(add-hook 'c++-mode-hook		'cq-c++-mode)
-(add-hook 'java-mode-hook		'cq-java-mode)
-(setq c-style-variables-are-local-p 	t)
+(add-hook 'c-mode-hook                  'cq-c-mode)
+(add-hook 'c++-mode-hook                'cq-c++-mode)
+(add-hook 'java-mode-hook               'cq-java-mode)
+(setq c-style-variables-are-local-p     t)
 
 ;; (setq font-lock-maximum-size 500000)    ;workaround for its use in the hooks below.
 
@@ -84,9 +84,9 @@
 
 (c-add-style "llvm.org"
              '((fill-column . 80)
-	       (c++-indent-level . 2)
-	       (c-basic-offset . 2)
-	       (indent-tabs-mode . nil)
+               (c++-indent-level . 2)
+               (c-basic-offset . 2)
+               (indent-tabs-mode . nil)
                (c-offsets-alist . ((innamespace 0)))))
 
 (add-hook 'c-mode-hook
@@ -95,9 +95,9 @@
                 (c-set-style "llvm.org"))))
 
 (add-hook 'c++-mode-hook
-           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-               (when (and buffer-file-name (string-match "llvm" buffer-file-name))
-                 (c-set-style "llvm.org"))))
+          #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
+              (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+                (c-set-style "llvm.org"))))
 
 (add-hook 'comint-mode-hook
           #'(lambda ( )
@@ -141,7 +141,7 @@
 (setq inferior-lisp-program "clisp")
 (add-hook 'ilisp-mode-hook
           #'(lambda () (setq lisp-no-popper t)))
-(add-hook 'lisp-mode-hook		;tailored for CLISP-HS
+(add-hook 'lisp-mode-hook               ;tailored for CLISP-HS
           #'(lambda ()
               ;; (require 'ilisp)
               (require 'slime)
@@ -157,7 +157,7 @@
               (auto-fill-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)
-              (setq lisp-no-popper t)	;this is smoother in Cygwin
+              (setq lisp-no-popper t)   ;this is smoother in Cygwin
               ;;(put 'if 'lisp-indent-function nil)
               (let* ((name (buffer-file-name (current-buffer)))
                      (ext (and name (file-name-extension name))))
@@ -165,7 +165,7 @@
                          (or (string= ext "emacs")
                              (string= ext "el")
                              (string= ext "elc")))
-                    nil			;must be Emacs Lisp
+                    nil                 ;must be Emacs Lisp
                   (make-local-variable 'lisp-indent-function)
                   (setq lisp-indent-function 'common-lisp-indent-function))
                 (put 'defclass 'lisp-indent-function 3)
@@ -191,14 +191,14 @@
               (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'pascal-mode-hook
-	  #'(lambda ()
+          #'(lambda ()
               (auto-fill-mode 1)
               (font-lock-mode 1)
               (setq pascal-tab-always-indent nil)
               (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'shell-mode-hook
-	  #'(lambda ()
+          #'(lambda ()
               (auto-fill-mode 0)
               (lsetq shell-pushd-regexp "pushd\\|\\+")
               (lsetq shell-popd-regexp "popd\\|-")
@@ -220,7 +220,7 @@
           t)
 
 (add-hook 'sh-mode-hook
-	  #'(lambda ()
+          #'(lambda ()
               (setq sh-basic-offset 4)
               (setq sh-indent-for-case-alt '+)
               (setq sh-indent-for-case-label 0)
@@ -282,34 +282,34 @@
 ;; (if (file-readable-p akcl-DOC) (visit-doc-file akcl-DOC))
 
 ;;; For Text modes
-(add-hook 'text-mode-hook  	            'cq-text-mode)
-(add-hook 'nroff-mode-hook 	            'cq-nroff-mode)
+(add-hook 'text-mode-hook                   'cq-text-mode)
+(add-hook 'nroff-mode-hook                  'cq-nroff-mode)
 (add-hook 'edit-picture-hook             'cq-picture-mode)
-(add-hook 'texinfo-mode-hook	            'cq-texinfo-mode)
-(add-hook 'TeX-mode-hook   	            'cq-tex-mode)
-(add-hook 'LaTeX-mode-hook 	            'cq-latex-mode)
-(setq TeX-default-mode 	            'latex-mode)
+(add-hook 'texinfo-mode-hook                'cq-texinfo-mode)
+(add-hook 'TeX-mode-hook                    'cq-tex-mode)
+(add-hook 'LaTeX-mode-hook                  'cq-latex-mode)
+(setq TeX-default-mode              'latex-mode)
 
 ;;;; For MH-E
-;(setq load-path (cons (expand-file-name "~/lib/emacs/mh") load-path))
+                                        ;(setq load-path (cons (expand-file-name "~/lib/emacs/mh") load-path))
 ;;; hooks
-;(add-hook 'mh-compose-letter-hook        'cq-mh-compose-letter)
-;(add-hook 'mh-folder-mode-hook           'cq-mh-folder-mode)
-;(add-hook 'mh-inc-folder-hook            'cq-mh-inc-folder)
-;(add-hook 'mh-letter-mode-hook           'cq-mh-letter-mode)
+                                        ;(add-hook 'mh-compose-letter-hook        'cq-mh-compose-letter)
+                                        ;(add-hook 'mh-folder-mode-hook           'cq-mh-folder-mode)
+                                        ;(add-hook 'mh-inc-folder-hook            'cq-mh-inc-folder)
+                                        ;(add-hook 'mh-letter-mode-hook           'cq-mh-letter-mode)
 ;;; options
 
-;(setq mh-delete-yanked-msg-window   t)
-;(setq mh-ins-buf-prefix             "| ")
-;(setq mh-recursive-folders          t)
-;(setq mh-redist-full-contents       nil) ;otherwise dist fails in Rochester
-;(setq mh-yank-from-start-of-msg     'body) ;fix cq-mh-e.el in next release
-;(setq mhl-formfile t)
+                                        ;(setq mh-delete-yanked-msg-window   t)
+                                        ;(setq mh-ins-buf-prefix             "| ")
+                                        ;(setq mh-recursive-folders          t)
+                                        ;(setq mh-redist-full-contents       nil) ;otherwise dist fails in Rochester
+                                        ;(setq mh-yank-from-start-of-msg     'body) ;fix cq-mh-e.el in next release
+                                        ;(setq mhl-formfile t)
 ;;; my own stuff
-;(setq mh-cq-citation-prefix         "| ")
-;(setq mh-postnews-skel              "~/.mh-e.news.skel")
-;(setq mh-news-default-newsgroups    "cs.general")
-;(setq cq-mh-default-reply-to        "cesar.quiroz@gmail.com")
+                                        ;(setq mh-cq-citation-prefix         "| ")
+                                        ;(setq mh-postnews-skel              "~/.mh-e.news.skel")
+                                        ;(setq mh-news-default-newsgroups    "cs.general")
+                                        ;(setq cq-mh-default-reply-to        "cesar.quiroz@gmail.com")
 
 ;;; For the Babyl mailer
 ;; (setq mail-archive-file-name        "~/mail/babyl/OUT")
@@ -338,8 +338,8 @@
 ;; (setq mark-diary-entries-in-calendar    nil)
 ;; (setq diary-file                        "~/.diary")
 ;; (setq european-calendar-style           nil)
-;; (setq calendar-date-display-form	'((format "%s-%02s-%02s" year month day)))
-;; (setq calendar-week-start-day		1)
+;; (setq calendar-date-display-form     '((format "%s-%02s-%02s" year month day)))
+;; (setq calendar-week-start-day                1)
 (autoload 'calendar "calendar" "" t nil)
 (autoload 'diary    "diary"    "" t nil)
 (autoload 'holidays "holidays" "" t nil)
@@ -380,12 +380,12 @@
 
 (global-unset-key "\C-z")               ;make it user-specific (thanks Neil)
 
-(global-set-key [(button4)]		'scroll-down-one)
-(global-set-key [(button5)]		'scroll-up-one)
-(global-set-key [(control button4)] 	'backward-block-of-lines)
-(global-set-key [(control button5)]	'forward-block-of-lines)
-(global-set-key [(meta button4)]	'scroll-down-command)
-(global-set-key [(meta button5)]	'scroll-up-command)
+(global-set-key [(button4)]             'scroll-down-one)
+(global-set-key [(button5)]             'scroll-up-one)
+(global-set-key [(control button4)]     'backward-block-of-lines)
+(global-set-key [(control button5)]     'forward-block-of-lines)
+(global-set-key [(meta button4)]        'scroll-down-command)
+(global-set-key [(meta button5)]        'scroll-up-command)
 
 (global-set-key "\C-^"              'call-last-kbd-macro)
 ;;+? (global-set-key "\M-\C-l"           'force-recenter)
@@ -402,7 +402,7 @@
 (global-set-key "\^Z\^K"            'kill-compilation)
 (global-set-key "\^Z\^N"            'next-error)
 (global-set-key "\^Z\^R"            'recompile)
-(global-set-key "\^Z\^Z"	    'suspend-frame)
+(global-set-key "\^Z\^Z"            'suspend-frame)
 (global-set-key "\^X\^C"            'cq-kill-emacs-maybe)
 ;;+? (global-set-key "\^X,"              'attach-to-register)
 ;;+? (global-set-key "\^XR"              'replace-regexp)
@@ -414,14 +414,14 @@
 ;;+? (global-set-key "\^Z|"              'goto-column)
 (global-set-key "\^X\""             'double-line)
 (global-set-key "\^X\^L"            'inferior-lisp)
-(global-set-key "\^X\^N"	    'set-goal-column)
+(global-set-key "\^X\^N"            'set-goal-column)
 ;;(global-set-key "\^X4!"             'cq-comint-shell-other-window)
 ;;(global-set-key "\^X4!"             'cq-multi-shell-other-window)
 ;;(global-set-key "\^X!"              'cq-multi-shell)
 (global-set-key "\^X!"              'shell)
 (global-set-key "\^W"               'safe-kill-region)
 (global-set-key "\^Z\^F"            'cq-revert-buffer)
-(global-set-key "\^Zb"		    'cq-insert-buffer-file-name)
+(global-set-key "\^Zb"              'cq-insert-buffer-file-name)
 (global-set-key "\^Zg"              'cq-goto-line)
 (global-set-key "\^Zt"              'cq-timestamp)
 ;;+? (global-set-key "\^Z\et"            'transpose-paragraphs)
@@ -429,8 +429,8 @@
 ;;+? (global-set-key "\^Z\ef"            'forward-sentence)
 ;;+? (global-set-key "\^Z\e\^?"          'backward-delete-paragraph)
 ;;+? (global-set-key "\^Z\^Z"            'cq-suspend-saving)
-(global-set-key "\^Zm"		    'vm-compose-mail)
-(global-set-key "\^Zr"		    'vm)
+(global-set-key "\^Zm"              'vm-compose-mail)
+(global-set-key "\^Zr"              'vm)
 
 (define-key help-map "\C-f"         'flash-describe-function)
 (define-key help-map "\C-v"         'flash-describe-variable)
@@ -480,7 +480,7 @@
   ;;; structured in-file navigation
   (autoload 'cq-backward-up-list file "Like \\C-M-u, strings are safe" t nil)
   (autoload 'cq-backward-up-list-or-string file
-            "Exits up from lists or strings" t nil)
+    "Exits up from lists or strings" t nil)
   (autoload 'cq-down-list file "Like \\C-M-d, doesn't fail on strings" t nil))
 
 (let ((file (concat *cq/emacslib* "perldoc")))
@@ -523,10 +523,10 @@
   (autoload 'x-mouse-chart file "Reminder of X-mouse bindings" t nil)
   (autoload 'x-reconfig    file "Reconfigure X window." t nil)
   (autoload 'x-mouse-select-and-mark file
-            "Select window, set mark where cursor landed" t nil)
+    "Select window, set mark where cursor landed" t nil)
   (autoload 'cq-no-suspend file "Do not suspend this EMACS" t nil)
   (autoload 'cq-kill-emacs-maybe file "Do not kill this EMACS recklessly"
-            t nil)
+    t nil)
   (autoload 'cq-shell file "Start/Restart a shell" t nil)
   (autoload 'cq-shell-other-window file "Shell in another window." t nil)
   (autoload 'cq-comint-shell-other-window file
@@ -537,32 +537,32 @@
   (autoload 'set-flow-control file "Set/Reset flow controlled input." t nil)
   (autoload 'cq-switch-del-and-bs file "BS<->DEL" t nil)
   (autoload 'cq-save-modified-buffers file "Saved all modified buffers."
-            t nil)
+    t nil)
   (autoload 'see-chars file
-            "Displays characters typed, terminated by a 3-second timeout."
-            t nil)
+    "Displays characters typed, terminated by a 3-second timeout."
+    t nil)
   (autoload 'first-window file
-            "Other-window implemented to be used from the command line."
-            t nil)
+    "Other-window implemented to be used from the command line."
+    t nil)
   (autoload 'identify-in-minibuffer file
-            "Verbose identification dump."
-            t nil)
+    "Verbose identification dump."
+    t nil)
   (autoload 'safe-kill-region file
-            "Kill region, ask for confirmation if too large." t nil)
+    "Kill region, ask for confirmation if too large." t nil)
   (autoload 'flash-describe-function file
-            "Flash the documentation of FUNCTION (a symbol)" t nil)
+    "Flash the documentation of FUNCTION (a symbol)" t nil)
   (autoload 'flash-describe-variable file
-            "Flash the documentation of VARIABLE (a symbol)" t nil)
+    "Flash the documentation of VARIABLE (a symbol)" t nil)
   (autoload 'cq-display-temporarily file
-            "Temporary display of a string, if doable" t nil)
+    "Temporary display of a string, if doable" t nil)
   (autoload 'cq-revert-buffer file "Like revert-buffer, but less chatty" t nil)
   (autoload 'copy-region-as-kill-command file
-            "Chatty copy-region-as-kill" t nil)
+    "Chatty copy-region-as-kill" t nil)
   (autoload 'attach-to-register file
-            "Either prepend or append to register" t nil)
+    "Either prepend or append to register" t nil)
   (autoload 'force-recenter file "(recenter '(0))" t nil)
   (autoload 'cq-goto-line file "Go to line given by the prefix, a la CCA"
-            t nil)
+    t nil)
   (autoload 'cq-timestamp file "Insert a time stamp at point" t nil)
   (autoload 'lsetq file "Setq variables after making them buffer-local" nil t)
   (autoload 'locate-indentation file "Find indentation extent for current line."
@@ -609,8 +609,8 @@
 ;; (setq display-time-string-forms
 ;;       '((format "%s-%02d-%02d "
 ;;                 year (string-to-number month) (string-to-number day))
-;; 	(format "%s:%s " 24-hours minutes)
-;; 	(if mail "Mail ")))
+;;      (format "%s:%s " 24-hours minutes)
+;;      (if mail "Mail ")))
 
 (defun wrap-up-start ()
   (setq display-time-day-and-date t
