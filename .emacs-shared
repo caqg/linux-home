@@ -20,11 +20,11 @@
 (setq-default auto-mode-alist
               (append
                (list
-                (cons "[Mm]akefile"             'makefile-mode)
-                (cons "\\.lisp$"                'lisp-mode)
-                (cons "\\.lsp$"                 'lisp-mode)
-                (cons "\\.cl$"                  'lisp-mode)
-                (cons "\\.txt$"                 'indented-text-mode))
+                (cons "[Mm]akefile"     'makefile-mode)
+                (cons "\\.lisp$"        'lisp-mode)
+                (cons "\\.lsp$"         'lisp-mode)
+                (cons "\\.cl$"          'lisp-mode)
+                (cons "\\.txt$"         'indented-text-mode))
                auto-mode-alist))
 (setq tag-table-alist nil)
 
@@ -36,13 +36,6 @@
 (setq c-style-variables-are-local-p     t)
 
 ;; (setq font-lock-maximum-size 500000)    ;workaround for its use in the hooks below.
-
-(add-hook 'prog-mode-hook
-          #'(lambda ()
-              (auto-fill-mode 1)
-              (font-lock-mode 1)
-              (hs-minor-mode 1)         ;where meaningful
-              ))
 
 (add-hook 'awk-mode-hook
           #'(lambda ()
@@ -282,34 +275,34 @@
 ;; (if (file-readable-p akcl-DOC) (visit-doc-file akcl-DOC))
 
 ;;; For Text modes
-(add-hook 'text-mode-hook                   'cq-text-mode)
-(add-hook 'nroff-mode-hook                  'cq-nroff-mode)
-(add-hook 'edit-picture-hook             'cq-picture-mode)
-(add-hook 'texinfo-mode-hook                'cq-texinfo-mode)
-(add-hook 'TeX-mode-hook                    'cq-tex-mode)
-(add-hook 'LaTeX-mode-hook                  'cq-latex-mode)
+(add-hook 'text-mode-hook           'cq-text-mode)
+(add-hook 'nroff-mode-hook          'cq-nroff-mode)
+(add-hook 'edit-picture-hook        'cq-picture-mode)
+(add-hook 'texinfo-mode-hook        'cq-texinfo-mode)
+(add-hook 'TeX-mode-hook            'cq-tex-mode)
+(add-hook 'LaTeX-mode-hook          'cq-latex-mode)
 (setq TeX-default-mode              'latex-mode)
 
 ;;;; For MH-E
-                                        ;(setq load-path (cons (expand-file-name "~/lib/emacs/mh") load-path))
+;;(setq load-path (cons (expand-file-name "~/lib/emacs/mh") load-path))
 ;;; hooks
-                                        ;(add-hook 'mh-compose-letter-hook        'cq-mh-compose-letter)
-                                        ;(add-hook 'mh-folder-mode-hook           'cq-mh-folder-mode)
-                                        ;(add-hook 'mh-inc-folder-hook            'cq-mh-inc-folder)
-                                        ;(add-hook 'mh-letter-mode-hook           'cq-mh-letter-mode)
+;;(add-hook 'mh-compose-letter-hook        'cq-mh-compose-letter)
+;;(add-hook 'mh-folder-mode-hook           'cq-mh-folder-mode)
+;;(add-hook 'mh-inc-folder-hook            'cq-mh-inc-folder)
+;;(add-hook 'mh-letter-mode-hook           'cq-mh-letter-mode)
 ;;; options
 
-                                        ;(setq mh-delete-yanked-msg-window   t)
-                                        ;(setq mh-ins-buf-prefix             "| ")
-                                        ;(setq mh-recursive-folders          t)
-                                        ;(setq mh-redist-full-contents       nil) ;otherwise dist fails in Rochester
-                                        ;(setq mh-yank-from-start-of-msg     'body) ;fix cq-mh-e.el in next release
-                                        ;(setq mhl-formfile t)
+;;(setq mh-delete-yanked-msg-window   t)
+;;(setq mh-ins-buf-prefix             "| ")
+;;(setq mh-recursive-folders          t)
+;;(setq mh-redist-full-contents       nil) ;otherwise dist fails in Rochester
+;;(setq mh-yank-from-start-of-msg     'body) ;fix cq-mh-e.el in next release
+;;(setq mhl-formfile t)
 ;;; my own stuff
-                                        ;(setq mh-cq-citation-prefix         "| ")
-                                        ;(setq mh-postnews-skel              "~/.mh-e.news.skel")
-                                        ;(setq mh-news-default-newsgroups    "cs.general")
-                                        ;(setq cq-mh-default-reply-to        "cesar.quiroz@gmail.com")
+;;(setq mh-cq-citation-prefix         "| ")
+;;(setq mh-postnews-skel              "~/.mh-e.news.skel")
+;;(setq mh-news-default-newsgroups    "cs.general")
+;;(setq cq-mh-default-reply-to        "cesar.quiroz@gmail.com")
 
 ;;; For the Babyl mailer
 ;; (setq mail-archive-file-name        "~/mail/babyl/OUT")
