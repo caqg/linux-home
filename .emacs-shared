@@ -10,7 +10,7 @@
 (put 'narrow-to-region 'disabled	nil)
 (put 'narrow-to-page   'disabled	nil)
 (put 'set-goal-column  'disabled	nil)
-(put 'scroll-left 'disabled nil)
+(put 'scroll-left      'disabled        nil)
 
 (setq-default major-mode 'indented-text-mode)
 
@@ -67,7 +67,9 @@
               (if (string-match "^GNU Emacs" (emacs-version))
                   (subword-mode 1)
                 (c-subword-mode 1))
-              (font-lock-mode 1)))
+              (font-lock-mode 1)
+              (c-setup-filladapt)
+              (filladapt-mode 1)))
 
 (add-hook 'c++-mode-hook
           #'(lambda ()
