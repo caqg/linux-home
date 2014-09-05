@@ -6,11 +6,12 @@
 # massively simplified when I gave up on the xemacs one.
 # rewritten once more
 
+OPATH=$PATH
 PATH=/usr/bin:/bin
 
 emacs=/usr/bin/emacs
 emacsclient=/usr/bin/emacsclient
-emacsserver="$emacs -geometry +420+0 -f server-start -f set-color-theme-solarized-dark"
+emacsserver="$emacs -geometry -0+0 -f server-start -f set-color-theme-solarized-dark"
 server_is_up () { $emacsclient -e t 1>/dev/null 2>&1; }
 progname=$(basename $0);
 
@@ -21,12 +22,13 @@ case $# in
     exit 1;;
 esac
 
-server_is_up || {
-    $emacsserver 1>/dev/null 2>&1 &
+server_is_up || (
+    PATH=$OPATH
+    cd; $emacsserver 1>/dev/null 2>&1 &
     echo 1>&2 "$progname: server starting: pid $!"   
     until server_is_up; do sleep 1; done 
     echo 1>&2 "$progname: server is up"
-}
+)
 
 $emacsclient ${1+"$@"}
 
