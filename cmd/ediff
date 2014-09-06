@@ -5,4 +5,4 @@ case $# in
 *) echo "usage: "`basename $0`" OLD NEW"; exit 2 ;;
 esac
 
-e -c --eval '(ediff-files "'"$A"'" "'"$B"'")'
+e -c -F '((fullscreen . maximized))' -e '(ediff-files "'"$A"'" "'"$B"'")'
