@@ -20,7 +20,7 @@ case $# in
     progname="$(basename $0)"
     echo "usage: $(basename $0) emacsclient-args"
     echo "	runs $emacsclient, but first makes sure a server is present."
-    echo 
+    echo
     echo "	$progname -n ...	does not wait in the foreground"
     echo "	$progname -c ...	starts a new frame"
     exit 1 ;;
@@ -29,8 +29,8 @@ esac
 server_is_up || (
     PATH=$OPATH
     cd; $emacsserver 1>/dev/null 2>&1 &
-    echo 1>&2 "$progname: server starting: pid $!"   
-    until server_is_up; do sleep 1; done 
+    echo 1>&2 "$progname: server starting: pid $!"
+    until server_is_up; do sleep 1; done
     echo 1>&2 "$progname: server is up"
 )
 
