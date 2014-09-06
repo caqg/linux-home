@@ -16,10 +16,14 @@ server_is_up () { $emacsclient -e t 1>/dev/null 2>&1; }
 progname=$(basename $0);
 
 case $# in
-0)  
-    echo "usage: $progname <emacsclient args>"
-    echo "	see info emacsclient for details."
-    exit 1;;
+0)
+    progname="$(basename $0)"
+    echo "usage: $(basename $0) emacsclient-args"
+    echo "	runs $emacsclient, but first makes sure a server is present."
+    echo 
+    echo "	$progname -n ...	does not wait in the foreground"
+    echo "	$progname -c ...	starts a new frame"
+    exit 1 ;;
 esac
 
 server_is_up || (
