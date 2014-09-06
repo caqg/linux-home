@@ -44,6 +44,7 @@ esac
 # echo cmd=\""$cmd"\"
 # echo title=\""$title"\"
 # echo "$xterm" -r 36 -c 82 -n 1 -t "$title" -e "$cmd" "$@" &
-"$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" &
+#sakura "$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" &
+gnome-terminal --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
 
 # end of x
