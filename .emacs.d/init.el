@@ -242,7 +242,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ls-lisp-format-time-list (quote ("%Y-%m-%d %H:%M" "%Y-%m-%d     ")))
  '(mail-archive-file-name "~/mail/babyl/OUT")
  '(mail-use-rfc822 t)
- '(mouse-autoselect-window -0.25)
+ '(mouse-autoselect-window -0.1)
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point t)
  '(normal-erase-is-backspace t)
