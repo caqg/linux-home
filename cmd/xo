@@ -1,26 +1,41 @@
 #!/bin/bash
 
-# hack for now, it could be done in x completely
-
 dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
-iconic=
-DEFAULT_XTERM=sakura
+
+DEFAULT_XTERM=gnome-terminal
 xterm=${XTERM:-${DEFAULT_XTERM}}
+
+DEFAULT_PAGER="view -"
+pager=${PAGER:-${DEFAULT_PAGER}}
+
 xrows=${XROWS:-36}
 xcols=${XCOLS:-82}
 
 PATH=/usr/bin:/bin
 
 function usage {
-  echo 1>&2 "Usage: " `basename $0` " [cmd [args...]]";
-  echo 1>&2 "	Run _cmd_ (default, \$SHELL) in a terminal, ";
-  echo 1>&2 "	the terminal is \$XTERM, which defaults to $DEFAULT_XTERM.";
-  echo 1>&2 "	passing the _args_ to _cmd_.";
+  echo 1>&2 "Usage: " `basename $0` " cmd [args...]"
+  echo 1>&2 "	Run _cmd_ (not a function or alias) in a terminal, "
+  echo 1>&2 "	the terminal is \$XTERM, which defaults to '$DEFAULT_XTERM'."
+  echo 1>&2 "		(Your current setting is '$XTERM'.)"
+  echo 1>&2 "	passing the _args_ to _cmd_ and displaying the results"
+  echo 1>&2 "	using \$PAGER, which defaults to '$DEFAULT_PAGER'."
+  echo 1>&2 "		(Your current setting is '$PAGER'.)"
 }
+
+case $# in
+0)
+    usage; exit 1 ;;
+1)
+    case "$1" in
+    -h*|--h*|-\?)
+        usage; exit 0 ;;
+    esac ;;
+esac
 
 who=${LOGNAME:-${USER:-'me'}}
 where=`uname -n`
-cmd=${1:-${SHELL:-'/bin/sh'}}
+cmd=$1
 name=`basename $cmd`	# before remapping
 
 [ -f $dispatch ] || touch $dispatch;
@@ -29,7 +44,7 @@ cmd=${newcmd:-$cmd}
 shift
 
 # $# is already decremented by the shift above
-case $# in 
+case $# in
 0)	title="$who@$where  $name"			;;
 1)	title="@$where  $name $1"			;;
 2)	title="@$where  $name $1 $2"			;;
@@ -39,11 +54,13 @@ case $# in
 *)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
 esac
 
-# Go for it
-# echo xterm=\""$xterm"\"
-# echo cmd=\""$cmd"\"
-# echo title=\""$title"\"
-# echo "$xterm" -r 36 -c 82 -n 1 -t \""$title"\" -e \""$cmd"\" "$@" &
-eval "$xterm" -h -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd" "$@" &
+tmpfn=${TMPDIR:-/tmp}/xo-"$who"$$
+
+# auxiliary script deletes itself
+echo >"$tmpfn" $cmd ${1+"$@"} \| $pager
+echo >> "$tmpfn" /bin/rm -f "$tmpfn"
+
+chmod +x "$tmpfn"
+"$xterm" -t "$title" -x "$tmpfn"
 
 # end of xo

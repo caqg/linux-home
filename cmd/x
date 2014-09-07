@@ -1,20 +1,30 @@
 #!/bin/bash
 
 dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
-iconic=
-DEFAULT_XTERM=sakura
+
+DEFAULT_XTERM=gnome-terminal
 xterm=${XTERM:-${DEFAULT_XTERM}}
+
 xrows=${XROWS:-36}
 xcols=${XCOLS:-90}
 
 PATH=/usr/bin:/bin
 
 function usage {
-  echo 1>&2 "Usage: " `basename $0` " [cmd [args...]]";
-  echo 1>&2 "	Run _cmd_ (default, \$SHELL) in a terminal, ";
-  echo 1>&2 "	the terminal is \$XTERM, which defaults to $DEFAULT_XTERM.";
+  echo 1>&2 "Usage: " `basename $0` " [cmd [args...]]"
+  echo 1>&2 "	Run _cmd_ (default, \$SHELL, currently '$SHELL') in a terminal,"
+  echo 1>&2 "	the terminal is \$XTERM, which defaults to $DEFAULT_XTERM."
+  echo 1>&2 "		(Your current setting is '$xterm'.)"
   echo 1>&2 "	passing the _args_ to _cmd_."
 }
+
+case $# in
+1)
+    case "$1" in
+    -h*|--h*|-\?)
+        usage; exit 0 ;;
+    esac ;;
+esac
 
 who=${LOGNAME:-${USER:-'me'}}
 where=`uname -n`
@@ -26,9 +36,6 @@ newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
 cmd=${newcmd:-$cmd}
 
 shift
-# printf "cmd=\"%s\"\nname=\"%s\"\nargs=\"%s\"\n" "$cmd" "$name" "$*"
-
-# $# is already decremented by the shift above
 case $# in 
 0)	title="$who@$where  $name"			;;
 1)	title="@$where  $name $1"			;;
@@ -40,11 +47,6 @@ case $# in
 esac
 
 # Go for it
-# echo xterm=\""$xterm"\"
-# echo cmd=\""$cmd"\"
-# echo title=\""$title"\"
-# echo "$xterm" -r 36 -c 82 -n 1 -t "$title" -e "$cmd" "$@" &
-#sakura "$xterm" -r "$xrows" -c "$xcols" -n 1 -t "$title" -x "$cmd $*" &
-gnome-terminal --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
 
 # end of x
