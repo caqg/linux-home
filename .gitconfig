@@ -3,7 +3,7 @@
         email           = cesar_quiroz@ieee.org
 
 [core]
-        editor          = $HOME/cmd/e -c
+        editor          = $HOME/cmd/e -c -F '((width . 80)(height . 24))'
         pager           =
 
 [diff]
@@ -25,6 +25,7 @@
         ci              = commit
         co              = checkout
         d               = diff
+	di              = diff
         ds              = diff --staged
         l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
         prefix          = rev-parse --show-prefix
@@ -48,6 +49,6 @@
         warndetachedcommit = true
 
 [credential]
-        helper          = cache --timeout=3600
+        helper          = cache --timeout=14400
 
 ## end .gitconfig
