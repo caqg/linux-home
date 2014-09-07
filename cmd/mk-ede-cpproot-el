@@ -10,7 +10,7 @@ projname=$(basename $(pwd))
     echo '(ede-cpp-root-project "'"$projename"'" :file "'"$elfile"'"'
     echo '  :include-path '"'"'('
 
-    find . -type f \( \
+    find -L . -type f \( \
         -name '*.h' -o \
         -name '*.hh' -o \
         -name '*.hpp' -o \
