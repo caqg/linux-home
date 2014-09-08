@@ -63,8 +63,9 @@
               (font-lock-mode 1)
               (c-setup-filladapt)
               (filladapt-mode 1)
-              (require 'gtags)
-              (gtags-mode 1)))
+              (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+                (gtags-mode 1)
+                (ggtags-mode 1))))
 
 (add-hook 'c++-mode-hook
           #'(lambda ()
@@ -253,9 +254,13 @@
 ;;; For Mod2 mode
 (add-hook 'mod2-mode-hook                'cq-mod2-mode)
 
-;;; For Yacc mode
-(add-hook 'yacc-mode-hook                'cq-yacc-mode)
-
+;; ;;; For Yacc mode
+;; (add-hook 'yacc-mode-hook
+;;           #'(lambda ()
+;;               (font-lock-mode 1)
+;;               (filladapt-mode 1)
+;;               (gtags-mode 1)
+;;               (ggtags-mode 1)))
 ;;; For Lisp modes
 ;;(setq inferior-lisp-program         "gcl")
 ;;(setq inferior-lisp-program         "clisp")
