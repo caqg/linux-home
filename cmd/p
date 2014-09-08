@@ -1,7 +1,12 @@
 #!/bin/sh
-less=less
-LESS=CQ; export LESS
 
-pager=${PAGER-$less}
+# LESS=isrRQ; export LESS
 
-exec $pager $*
+case "$TERM" in
+dumb)	pager=/bin/cat ;;	# don't even try in Emacs buffers
+*)	pager=/usr/bin/less ;;
+esac
+
+exec $pager "$@"
+
+## end p
