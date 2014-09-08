@@ -8,6 +8,7 @@ xterm=${XTERM:-${DEFAULT_XTERM}}
 xrows=${XROWS:-36}
 xcols=${XCOLS:-90}
 
+OPATH="$PATH"
 PATH=/usr/bin:/bin
 
 function usage {
@@ -35,7 +36,7 @@ name=`basename $cmd`	# before remapping
 newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
 cmd=${newcmd:-$cmd}
 
-shift
+shift				# consume the cmd name
 case $# in 
 0)	title="$who@$where  $name"			;;
 1)	title="@$where  $name $1"			;;
@@ -47,6 +48,7 @@ case $# in
 esac
 
 # Go for it
+export PATH="$OPATH"
 "$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
 
 # end of x

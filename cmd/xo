@@ -41,9 +41,8 @@ name=`basename $cmd`	# before remapping
 [ -f $dispatch ] || touch $dispatch;
 newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
 cmd=${newcmd:-$cmd}
-shift
 
-# $# is already decremented by the shift above
+shift
 case $# in
 0)	title="$who@$where  $name"			;;
 1)	title="@$where  $name $1"			;;
