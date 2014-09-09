@@ -1,6 +1,7 @@
 ;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
 
 (load-file "~/.emacs-shared")
+(message "Done loading ~/.emacs-shared (legacy)")
 (load-library "cl")
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
@@ -27,11 +28,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
 
        (ignore-errors (load-library "id-utils")) ;if available
-
        (require 'speedbar)
-       (require 'ert)
-       (package-initialize)
-       (message "Initialized ELPA packages.")
 
        (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
        (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
@@ -57,8 +54,7 @@ Goes backward if ARG is negative; error if CHAR not found."
                  #'(lambda ()
                      ;; Bind dired-x-find-file.
                      (setq dired-x-hands-off-my-keys nil)
-                     (load "dired-x")
-                     ))
+                     (load "dired-x")))
        (require 'dired-x)
 
        ;; (require 'dired-toggle-sudo)
@@ -84,7 +80,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'org-remember)
        (org-remember-insinuate)
        (setq org-directory "~/Notes")
-       (setq org-default-notes-file (concat org-directory "/notes.org"))
+       (setq org-default-notes-file (concat org-directory "/my-notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
        ;;(require 'markdown-mode)
@@ -102,6 +98,9 @@ Goes backward if ARG is negative; error if CHAR not found."
        (require 'font-lock)
        (require 'parenface)
        (require 'linum)
+
+       (package-initialize)
+       (color-theme-initialize)
 
        ;; tabbar (already initialized)
        (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
