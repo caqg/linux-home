@@ -4,7 +4,6 @@
 (load-library "cl")
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
-;; (setq load-path (cons "~/.emacs.d/solarized-emacs" load-path))
 
 (cond ((and (string-match "^GNU Emacs" (emacs-version))
             (>= emacs-major-version 21)
@@ -137,9 +136,8 @@ Goes backward if ARG is negative; error if CHAR not found."
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle)
   ;; (set-color-theme-solarized-dark)
-  ;; (set-color-theme-solarized-light)
+  (set-color-theme-solarized-light)
   )
-(message "About to do custom-set-variables.")
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -160,6 +158,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(calendar-mark-holidays-flag t)
  '(calendar-week-start-day 1)
  '(case-fold-search t)
+ '(color-theme-selection nil nil (color-theme_seldefcustom))
  '(column-number-mode t)
  '(compilation-scroll-output t)
  '(compile-command "time -p make LANG=C -j")
@@ -193,12 +192,13 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-layout-name "leftright1")
  '(ecb-options-version "2.40")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
- '(ecb-show-sources-in-directories-buffer (quote ("left7" "left9" "left13" "left14")))
+ '(ecb-show-sources-in-directories-buffer (quote never))
  '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/verifysys" "VerifySys"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("leftright-analyse" "left1" "leftright1")))
  '(ecb-version-check nil)
  '(ecb-windows-width 0.2)
+ '(ede-project-directories (quote ("/home/cesar/workspace" "/work")))
  '(ediff-custom-diff-options "-U10")
  '(ediff-prefer-iconified-control-frame t)
  '(ediff-show-clashes-only t)
@@ -247,7 +247,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(mouse-autoselect-window -0.1)
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point t)
- '(normal-erase-is-backspace t)
+ '(normal-erase-is-backspace (quote maybe))
+ '(nxml-slash-auto-complete-flag t)
  '(org-startup-indented t)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(recentf-mode t)
@@ -287,12 +288,11 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes)))
 
-(message "About to do custom-set-faces.")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
 (message "Now all done in init.el.")
