@@ -27,6 +27,8 @@ Goes backward if ARG is negative; error if CHAR not found."
        (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
        (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
 
+       (ignore-errors (load-library "id-utils")) ;if available
+
        (require 'speedbar)
        (require 'ert)
        (package-initialize)
