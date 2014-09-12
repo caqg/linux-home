@@ -1,14 +1,23 @@
 # -*- Shell-Script -*-
 
-case "$(whoami)" in
+case $(whoami) in
 root)
-    export PS1='# ';;
+    export PS1='# ' ;;
 *)
-    export PS1='$ ';;
+    export PS1='$ ' ;;
 esac
-case "$TERM" in
-xterm*|rxvt*|cygwin)
-    PS1='\[\e]0;\u@\h: \w\a\]'"$PS1";;
+
+case "${TERM}" in
+xterm*|rxvt*)
+    function updatePS1WithGitBranch {
+        left='\[\e]0;\u@\h: \w'
+        middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
+        right='\a\]\$ '
+        PS1="$left$middle$right"
+    }
+
+    PROMPT_COMMAND=updatePS1WithGitBranch
+    ;;
 esac
 
 # export PS2='> '
@@ -24,6 +33,7 @@ function -    { popd "$@"; }
 function =    { dirs -v "$@"; }
 
 function 2top { cd $(git rev-parse --show-toplevel); }
+
 function dir  { LC_ALL=C /bin/dir -F "$@"; }
 function h    { history "$@"; }
 function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
@@ -33,5 +43,6 @@ function l    { LC_ALL=C /bin/ls -Alh --time-style=iso --group-directories-first
 function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso "$@"; }
 function v    { gview -M -; }
 function vdir { LC_ALL=C /bin/vdir "$@"; }
+function vf   { ~/cmd/e -nc "$@"; }
 
 ##end .bash_interactive
