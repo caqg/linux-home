@@ -15,7 +15,7 @@ case "$PATH" in
 $HOME/bin:* | *:$HOME/bin | *:$HOME/bin:*)
     ;;
 *)
-    PATH=$HOME/bin:$PATH;; 
+    PATH=$HOME/bin:$PATH;;
 esac
 
 [ -d $HOME/cmd ] &&
@@ -42,7 +42,7 @@ fi
 }
 
 eval $( ~/cmd/path |
-/usr/bin/awk '
+    /usr/bin/awk '
 BEGIN { n = 0; }
 {
 	if ($0 in map) {

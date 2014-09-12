@@ -218,6 +218,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(gdb-speedbar-auto-raise t)
  '(gdb-stack-buffer-addresses t)
  '(gdb-use-separate-io-buffer t)
+ '(ggtags-global-treat-text t)
  '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-semantic-decoration-mode nil)
