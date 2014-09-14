@@ -5,7 +5,8 @@ dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
 DEFAULT_XTERM=gnome-terminal
 xterm=${XTERM:-${DEFAULT_XTERM}}
 
-DEFAULT_PAGER="view -"
+# DEFAULT_PAGER="view -"
+DEFAULT_PAGER=less
 pager=${PAGER:-${DEFAULT_PAGER}}
 
 xrows=${XROWS:-36}
