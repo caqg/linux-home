@@ -49,6 +49,9 @@
            unless dir return nil
            for f in dir
            when (file-exists-p f) do (delete-file f))
+  ;; Ensure async is reloaded when async.elc is deleted.
+  ;; This happen when recompiling its own directory.
+  (load "async")
   (let ((call-back
          `(lambda (&optional ignore)
             (if (file-exists-p async-byte-compile-log-file)
@@ -64,8 +67,9 @@
                       (goto-char (point-min))
                       (while (re-search-forward "^.*:Error:" nil t)
                         (incf n)))
-                    (when (> n 0)
-                      (message "Failed to compile %d files in directory `%s'" n ,directory))))
+                    (if (> n 0)
+                        (message "Failed to compile %d files in directory `%s'" n ,directory)
+                        (message "Directory `%s' compiled asynchronously with warnings" ,directory))))
                 (message "Directory `%s' compiled asynchronously with success" ,directory)))))
     (async-start
      `(lambda ()

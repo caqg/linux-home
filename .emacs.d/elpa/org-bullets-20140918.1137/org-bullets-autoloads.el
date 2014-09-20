@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (org-bullets-mode) "org-bullets" "org-bullets.el"
-;;;;;;  (21319 37399 839914 303000))
+;;;;;;  (21533 1431 696225 328000))
 ;;; Generated autoloads from org-bullets.el
 
 (autoload 'org-bullets-mode "org-bullets" "\
@@ -14,8 +14,8 @@ UTF8 Bullets for org-mode
 
 ;;;***
 
-;;;### (autoloads nil nil ("org-bullets-pkg.el") (21319 37399 940060
-;;;;;;  696000))
+;;;### (autoloads nil nil ("org-bullets-pkg.el") (21533 1431 848927
+;;;;;;  573000))
 
 ;;;***
 
