@@ -41,7 +41,7 @@ function j    { jobs "$@"; }
 function k    { kill -9 "$@"; }
 function l    { LC_ALL=C /bin/ls -Alh --time-style=iso --group-directories-first "$@"; }
 function lt   { LC_ALL=C /bin/ls -Altrh --time-style=iso "$@"; }
-function v    { gview -M -; }
+function v    { gvim -MR -; }
 function vdir { LC_ALL=C /bin/vdir "$@"; }
 function vf   { ~/cmd/e -nc "$@"; }
 
