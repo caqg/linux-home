@@ -1,7 +1,7 @@
 # -*- Shell-Script -*-
 
 # Set MANPAGER to its default, to avoid interference with PAGER.
-export MANPAGER="less -isrR"
+export MANPAGER="less -isrRQ"
 
 # Pure-Perl modules go here; scripts go in $HOME/cmd:
 PERL5LIB=$HOME/lib/perl5
@@ -13,7 +13,7 @@ export TCLLIBPATH=$HOME/lib/tcltk
 export CVSROOT=:local:$HOME/Dropbox/Repos/cq-CVS
 
 export PAGER=less
-export LESS=cq
+export LESS=isrRQ
 export EDITOR=$HOME/cmd/e
 export CSCOPE_EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e
