@@ -23,41 +23,43 @@ Goes backward if ARG is negative; error if CHAR not found."
                                   (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
                                   ))))
 
-       ;; (add-to-list 'auto-mode-alist (cons "\\.gitconfig$" 'conf-unix-mode))
        (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
        (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
-
-       (ignore-errors (load-library "id-utils")) ;if available
-       (require 'speedbar)
-
        (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
        (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
-
-       ;; These are known to work in v24, but may have existed since before.
-       (which-function-mode 1)
-       (filesets-init)
-
-       (when t                          ;working around a problem in emacs24
-         (require 'slime)
-         (slime-setup))
-
-       (require 'delsel)
-       (pending-delete-mode t)
-
-       ;; Known to work at least since v23, again don't know if before.
-       (require 'gamegrid)
-       (defun gamegrid-add-score-with-update-game-score-1( file target score ))
-
-       (require 'uniquify)
+       (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
+       (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
 
        (add-hook 'dired-load-hook
                  #'(lambda ()
                      ;; Bind dired-x-find-file.
                      (setq dired-x-hands-off-my-keys nil)
                      (load "dired-x")))
-       (require 'dired-x)
 
-       ;; (require 'dired-toggle-sudo)
+       (package-initialize)
+
+       ;; These are known to work in v24, but may have existed since before.
+       (which-function-mode 1)
+       (filesets-init)
+
+;;-       (ignore-errors (load-library "id-utils")) ;if available
+;;-       (require 'speedbar)
+
+       (when t                          ;working around a problem in emacs24
+;;-      (require 'slime)
+         (slime-setup))
+
+;;-       (require 'delsel)
+       (pending-delete-mode t)
+
+       ;; Known to work at least since v23, again don't know if before.
+;;-       (require 'gamegrid)
+       (defun gamegrid-add-score-with-update-game-score-1( file target score ))
+
+;;-    (require 'uniquify)
+
+       (require 'dired-x)
+       (require 'dired-toggle-sudo)
        (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
 
        (require 'xcscope)
@@ -83,24 +85,17 @@ Goes backward if ARG is negative; error if CHAR not found."
        (setq org-default-notes-file (concat org-directory "/my-notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
-       ;;(require 'markdown-mode)
-       (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
-       (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
-
-       (require 'ede)
+;;-       (require 'ede)
        (global-ede-mode t)
-       (require 'semantic)
+;;-       (require 'semantic)
        (setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
                                         ;ecb 2.40
-       (setq ecb-version-check nil)
-       (require 'ecb)
+       ;;(setq ecb-version-check nil)
+;;-       (require 'ecb)
        (require 'cq-x-utils)
-       (require 'font-lock)
+;;-       (require 'font-lock)
        (require 'parenface)
-       (require 'linum)
-
-       (package-initialize)
-       (color-theme-initialize)
+;;-       (require 'linum)
 
        ;; tabbar (already initialized)
        (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
@@ -127,7 +122,7 @@ Goes backward if ARG is negative; error if CHAR not found."
               ))
        ))
 
-(setq-default ediff-auto-refine nil)
+(setq-default ediff-auto-refine 'on)
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
 
@@ -297,3 +292,4 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
 (message "Now all done in init.el.")
+(put 'dired-find-alternate-file 'disabled nil)
