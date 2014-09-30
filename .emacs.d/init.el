@@ -250,6 +250,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(recentf-mode t)
  '(require-final-newline nil)
  '(rmail-file-name "~/mail/babyl/RMAIL")
+ '(safe-local-variable-values (quote ((ggtags-process-environment))))
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(search-slow-window-lines 3)
