@@ -155,7 +155,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(color-theme-selection nil nil (color-theme_seldefcustom))
  '(column-number-mode t)
  '(compilation-scroll-output t)
- '(compile-command "time -p make LANG=C -j")
+ '(compile-command "time -p make LANG=C BUILD=debug -j")
  '(completion-auto-help (quote lazy))
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
