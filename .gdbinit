@@ -1,6 +1,11 @@
 ### -*- GDB-Script -*-
 
-add-auto-load-safe-path /verifysys/SystemC-engine/BOM/.gdbinit
+set auto-load safe-path /
+set print pretty
+set print array
+set print array-indexes
+set print union
+set print null-stop
 
 # define ps
 #   set $i = 0
