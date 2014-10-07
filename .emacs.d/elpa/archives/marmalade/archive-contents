@@ -1,4 +1,7 @@
 (1
+ (garoon .
+	 [(0 0 1)
+	  nil "A Garoon client." single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -721,7 +724,7 @@
 	       [(0 6)
 		nil "vim-like window controlling plugin" single])
  (smart-whitespace-comment-fixup .
-				 [(1 0)
+				 [(1 1)
 				  nil "Enables advice around yanking/killing lines that auto-indents and formats properly" single])
  (smart-tab .
 	    [(0 3)
@@ -1463,7 +1466,7 @@
 	      (1 6 8)))
 	    "Blog from Org mode to wordpress" tar])
  (org-trello .
-	     [(0 6 1)
+	     [(0 6 2)
 	      ((request-deferred
 		(0 1 0))
 	       (deferred
@@ -1490,7 +1493,7 @@
 		(21 0)))
 	      "Integrates Readme.org and Commentary/Change-logs." single])
  (org-publish-agenda .
-		     [(1 0)
+		     [(1 4)
 		      nil "Publish org agenda with links to other files" single])
  (org-protocol-jekyll .
 		      [(0 1)
@@ -1804,7 +1807,7 @@
 	      [(0 1)
 	       nil "Become an Emacs master" single])
  (marmalade-upload .
-		   [(0 0 4)
+		   [(0 0 5)
 		    ((web
 		      (0 4 2))
 		     (kv
@@ -1990,6 +1993,9 @@
  (livescript-mode .
 		  [(0 0 1)
 		   nil "Major mode for LiveScript files in Emacs" single])
+ (livecoder .
+	    [(0 0 2)
+	     nil "tools for live coders" single])
  (list-utils .
 	     [(0 4 2)
 	      nil "List-manipulation utility functions" single])
@@ -3234,7 +3240,7 @@
 	      [(1 0 0)
 	       nil "Major mode for editing Elixir files" single])
  (elixir-mix .
-	     [(0 3 0)
+	     [(1 0 0)
 	      nil "Emacs integration for Elixir's mix" single])
  (elisp-slime-nav .
 		  [(0 7)
@@ -3916,6 +3922,9 @@
  (buffer-move .
 	      [(0 4)
 	       nil "swap buffers between windows" single])
+ (buffer-file-utils .
+		    [(1 0)
+		     nil "utilities operating on a buffer and the associated file" single])
  (bubbleberry-theme .
 		    [(0 1 2)
 		     ((emacs
