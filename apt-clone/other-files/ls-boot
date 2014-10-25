@@ -1,0 +1,15 @@
+total 75052
+-rw------- 1 root root  3386479 Sep  3 15:24 System.map-3.13.0-36-generic
+-rw------- 1 root root  3386945 Sep 22 15:24 System.map-3.13.0-37-generic
+-rw-r--r-- 1 root root  1163858 Sep  3 15:24 abi-3.13.0-36-generic
+-rw-r--r-- 1 root root  1164489 Sep 22 15:24 abi-3.13.0-37-generic
+-rw-r--r-- 1 root root   165671 Sep  3 15:24 config-3.13.0-36-generic
+-rw-r--r-- 1 root root   165712 Sep 22 15:24 config-3.13.0-37-generic
+drwxr-xr-x 5 root root     4096 Oct 20 20:00 grub
+-rw-r--r-- 1 root root 27614977 Oct  2 10:51 initrd.img-3.13.0-36-generic
+-rw-r--r-- 1 root root 27624112 Oct  8 23:36 initrd.img-3.13.0-37-generic
+-rw-r--r-- 1 root root   176500 Mar 12  2014 memtest86+.bin
+-rw-r--r-- 1 root root   178176 Mar 12  2014 memtest86+.elf
+-rw-r--r-- 1 root root   178680 Mar 12  2014 memtest86+_multiboot.bin
+-rw------- 1 root root  5806848 Sep  3 15:24 vmlinuz-3.13.0-36-generic
+-rw------- 1 root root  5808832 Sep 22 15:24 vmlinuz-3.13.0-37-generic
