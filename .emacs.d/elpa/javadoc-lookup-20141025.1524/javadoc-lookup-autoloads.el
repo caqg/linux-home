@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (add-java-import sort-java-imports) "java-import"
-;;;;;;  "java-import.el" (21319 36392 567888 98000))
+;;;;;;  "java-import.el" (21580 40637 827046 320000))
 ;;; Generated autoloads from java-import.el
 
 (autoload 'sort-java-imports "java-import" "\
@@ -20,7 +20,7 @@ Insert an import statement at import section at the top of the file.
 ;;;***
 
 ;;;### (autoloads (javadoc-lookup) "javadoc-lookup" "javadoc-lookup.el"
-;;;;;;  (21319 36392 451888 95000))
+;;;;;;  (21580 40637 763046 323000))
 ;;; Generated autoloads from javadoc-lookup.el
 
 (autoload 'javadoc-lookup "javadoc-lookup" "\
@@ -31,7 +31,7 @@ Lookup based on class name.
 ;;;***
 
 ;;;### (autoloads (javadoc-add-artifacts) "maven-fetch" "maven-fetch.el"
-;;;;;;  (21319 36392 651888 101000))
+;;;;;;  (21580 40638 95046 309000))
 ;;; Generated autoloads from maven-fetch.el
 
 (autoload 'javadoc-add-artifacts "maven-fetch" "\
@@ -43,8 +43,8 @@ An artifact is specified by a sequence of three strings:
 
 ;;;***
 
-;;;### (autoloads nil nil ("javadoc-lookup-pkg.el") (21319 36392
-;;;;;;  782122 186000))
+;;;### (autoloads nil nil ("javadoc-lookup-pkg.el") (21580 40638
+;;;;;;  150428 424000))
 
 ;;;***
 
