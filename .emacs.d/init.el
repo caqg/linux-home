@@ -38,25 +38,22 @@ Goes backward if ARG is negative; error if CHAR not found."
 
        (package-initialize)
 
+       (when (and (= emacs-major-version 24)
+                  (< emacs-minor-version 4))
+         (setq compilation-directory-matcher
+               '("\\(?:Entering\\|Leavin\\(g\\)\\) directory [`']\\(.+\\)'$" (2 . 1))))
+
        ;; These are known to work in v24, but may have existed since before.
        (which-function-mode 1)
        (filesets-init)
 
-;;-       (ignore-errors (load-library "id-utils")) ;if available
-;;-       (require 'speedbar)
-
        (when t                          ;working around a problem in emacs24
-;;-      (require 'slime)
          (slime-setup))
 
-;;-       (require 'delsel)
        (pending-delete-mode t)
 
        ;; Known to work at least since v23, again don't know if before.
-;;-       (require 'gamegrid)
        (defun gamegrid-add-score-with-update-game-score-1( file target score ))
-
-;;-    (require 'uniquify)
 
        (require 'dired-x)
        (require 'dired-toggle-sudo)
@@ -79,23 +76,19 @@ Goes backward if ARG is negative; error if CHAR not found."
        (add-hook 'org-mode-hook 'turn-off-filladapt-mode)
 
        (require 'remember)
-       (require 'org-remember)
-       (org-remember-insinuate)
+       (when (and (= emacs-major-version 24)
+                  (< emacs-minor-version 4))
+         (require 'org-remember)
+         (org-remember-insinuate))
        (setq org-directory "~/Notes")
        (setq org-default-notes-file (concat org-directory "/my-notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
-;;-       (require 'ede)
        (global-ede-mode t)
-;;-       (require 'semantic)
        (setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
                                         ;ecb 2.40
-       ;;(setq ecb-version-check nil)
-;;-       (require 'ecb)
        (require 'cq-x-utils)
-;;-       (require 'font-lock)
        (require 'parenface)
-;;-       (require 'linum)
 
        ;; tabbar (already initialized)
        (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
@@ -152,7 +145,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(calendar-mark-holidays-flag t)
  '(calendar-week-start-day 1)
  '(case-fold-search t)
- '(color-theme-selection nil nil (color-theme_seldefcustom))
+ ;; '(color-theme-selection nil nil (color-theme_seldefcustom))
  '(column-number-mode t)
  '(compilation-scroll-output t)
  '(compile-command "time -p make LANG=C BUILD=debug -j")
