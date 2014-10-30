@@ -127,8 +127,8 @@
 	   [(1 4)
 	    nil "Remember buffer positions per-window, not per buffer" single])
  (window-number .
-		[(1 0 1)
-		 nil "Jump to a window by number" single])
+		[(1 0 2)
+		 nil "Select windows by numbers." single])
  (window-margin .
 		[(0 1)
 		 nil "automatic margins for visual-line-mode wrapping" single])
@@ -1201,6 +1201,21 @@
  (psgml .
 	[(1 4 1)
 	 nil "Lennart Staflin's Psgml package, with Elisp syntax and sgml-validate fixed for Emacsen >=24." tar])
+ (psci .
+       [(0 0 3)
+	((purescript-mode
+	  (13 10))
+	 (dash
+	  (2 9 0))
+	 (projectile
+	  (0 11 0))
+	 (s
+	  (1 9 0))
+	 (f
+	  (0 17 1))
+	 (deferred
+	     (0 3 2)))
+	"Major mode for purescript repl psci" single])
  (ps-ccrypt .
 	    [(1 10)
 	     nil "reading/writing/loading encrypted files" tar])
@@ -1441,7 +1456,7 @@
 	     (1 0)))
 	   "Simple package system for Emacs" single])
  (pabbrev .
-	  [(3 1)
+	  [(4 1)
 	   nil "Predictive abbreviation expansion" single])
  (p4 .
      [(11 0)
@@ -1746,6 +1761,9 @@
 	     ((ruby-mode
 	       (1 1)))
 	     "Mote minor mode" single])
+ (monroe .
+	 [(0 2 0)
+	  nil "Yet another client for nREPL" single])
  (monokai-theme .
 		[(0 0 12)
 		 nil "DEPRECATED: Monokai Color Theme for Emacs." single])
@@ -1813,6 +1831,9 @@
  (mic-paren .
 	    [(3 8)
 	     nil "advanced highlighting of matching parentheses" single])
+ (message-templ .
+		[(0 1 20141026)
+		 nil "Templates for message-mode." single])
  (memoize .
 	  [(1 0 1)
 	   nil "Memoization functions" single])
@@ -1862,11 +1883,13 @@
 		 [(0 0 5)
 		  nil "a demonstration elpa package" single])
  (marmalade-client .
-		   [(0 0 9)
+		   [(0 0 11)
 		    ((web
 		      (0 4 2))
 		     (kv
-		      (0 0 19)))
+		      (0 0 19))
+		     (gh
+		      (0 8 0)))
 		    "client for marmalade API from emacs" single])
  (marmalade .
 	    [(0 0 4)
@@ -2052,7 +2075,7 @@
 	       [(21 0)
 		nil "Commands to list Emacs Lisp library dependencies." single])
  (lexbind-mode .
-	       [(0 8)
+	       [(0 9)
 		nil "Puts the value of lexical-binding in the mode line" single])
  (levenshtein .
 	      [(1 0)
@@ -2638,8 +2661,12 @@
 		       (0 1 1)))
 		     "Fringe version of git-gutter.el" single])
  (git-gutter .
-	     [(0 42)
-	      nil "Port of Sublime Text plugin GitGutter" single])
+	     [(0 78)
+	      ((cl-lib
+		(0 5))
+	       (emacs
+		(24)))
+	      "Port of Sublime Text plugin GitGutter" single])
  (git-draft .
 	    [(0 0 2)
 	     ((dash
@@ -2749,6 +2776,9 @@
 		 ((emacs
 		   (24 1)))
 		 "Restore Emacs frame" single])
+ (fooddice .
+	   [(0 1)
+	    nil "Help me I am hungry and dont know what to eat!" single])
  (font-utils .
 	     [(0 7 0)
 	      ((persistent-soft
@@ -2939,7 +2969,7 @@
 		   (0 6 0)))
 		 "Cask support in Flycheck" single])
  (flycheck .
-	   [(0 20)
+	   [(0 21)
 	    ((dash
 	      (2 4 0))
 	     (pkg-info
@@ -3157,7 +3187,7 @@
 		(24)))
 	      "Window-management utilities" single])
  (ertx .
-       [(0 0 1)
+       [(0 0 2)
 	nil "Extra useful testing functions for EmacsLisp." single])
  (ert-x .
 	[(0)
@@ -3253,12 +3283,16 @@
 	  (0 8 0)))
 	"Emacs Python Development Environment" tar])
  (elpakit .
-	  [(1 1 1)
-	   ((anaphora
-	     (0 0 6))
-	    (dash
-	     (2 3 0)))
-	   "package archive builder" single])
+	  [(2 0 2)
+	   ((dash
+	     (2 9 0))
+	    (shadchen
+	     (1 2))
+	    (noflet
+       (0 0 14))
+	    (s
+	     (1 9 0)))
+	   "The ELPA package maintainer's friend" tar])
  (elpa-mirror .
 	      [(1 1 2)
 	       nil "ELPA mirror from locally installed packages is easy" tar])
@@ -3423,7 +3457,7 @@
 	      (22)))
 	    "A bucket of tricks for Clojure and Slime." single])
  (dummy-package .
-		[(0 0 22)
+		[(0 0 25)
 		 ((timeclock
 		   (2 6 1)))
 		 "a fake package for the marmalade test suite" single])
@@ -3522,6 +3556,9 @@
 		      ((anything
 			(1 287)))
 		      "Yet Another `describe-bindings' with `anything'." single])
+ (demo-multifile .
+		 [(0 0 2)
+		  nil "a demo multifile package." tar])
  (deft .
      [(0 3)
       nil "quickly browse, filter, and edit plain text notes" single])
@@ -4154,6 +4191,11 @@
 		((clojure-mode
 		  (1 11 5)))
 		"Space align various Clojure forms" single])
+ (alchemist .
+	    [(0 2 0)
+	     ((emacs
+	       (24)))
+	     "Elixir tooling integration into emacs" tar])
  (ahg .
       [(0 99)
        nil "Alberto's Emacs interface for Mercurial (Hg)" single])
