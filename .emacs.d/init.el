@@ -3,7 +3,7 @@
 (load-file "~/.emacs-shared")
 (message "Done loading ~/.emacs-shared (legacy)")
 (load-library "cl")
-(setq load-path (cons "~/.emacs.d" load-path))
+;;(setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/lisp" load-path))
 
 (cond ((and (string-match "^GNU Emacs" (emacs-version))
