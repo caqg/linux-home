@@ -9,8 +9,8 @@
 OPATH=$PATH
 PATH=/usr/bin:/bin
 
-emacs=/usr/bin/emacs
-emacsclient=/usr/bin/emacsclient
+emacs=/usr/local/bin/emacs
+emacsclient=/usr/local/bin/emacsclient
 emacsserver="$emacs -geometry -0+0 -f server-start -f set-color-theme-solarized-dark"
 server_is_up () { $emacsclient -e t 1>/dev/null 2>&1; }
 progname=$(basename $0);
