@@ -138,14 +138,15 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(background-color "#202020")
  '(background-mode dark)
  '(backup-by-copying-when-linked t)
- '(c++-font-lock-extra-types (quote ("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference" "[[:upper:]]\\\\sw*[[:lower:]]\\\\sw")))
+ '(c++-font-lock-extra-types
+   (quote
+    ("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference" "[[:upper:]]\\\\sw*[[:lower:]]\\\\sw")))
  '(c-tab-always-indent nil)
  '(calendar-date-style (quote iso))
  '(calendar-mark-diary-entries-flag t)
  '(calendar-mark-holidays-flag t)
  '(calendar-week-start-day 1)
  '(case-fold-search t)
- ;; '(color-theme-selection nil nil (color-theme_seldefcustom))
  '(column-number-mode t)
  '(compilation-scroll-output t)
  '(compile-command "time -p make LANG=C BUILD=debug -j")
@@ -155,12 +156,16 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(cscope-option-use-inverted-index t)
  '(current-language-environment "UTF-8")
  '(cursor-color "#cccccc")
- '(custom-safe-themes (quote ("a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(custom-safe-themes
+   (quote
+    ("a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-postfix")
  '(delete-old-versions t)
  '(delete-selection-mode t)
- '(describe-char-unidata-list (quote (name old-name general-category decomposition mirrored iso-10646-comment)))
+ '(describe-char-unidata-list
+   (quote
+    (name old-name general-category decomposition mirrored iso-10646-comment)))
  '(develock-auto-enable nil)
  '(diary-file "~/.diary")
  '(diff-switches "-du")
@@ -182,7 +187,12 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-options-version "2.40")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer (quote never))
- '(ecb-source-path (quote (("/home/cesar" "Home") ("/home/cesar/Work" "Work") ("/repos" "Repos") ("/verifysys" "VerifySys"))))
+ '(ecb-source-path
+   (quote
+    (("/home/cesar" "Home")
+     ("/home/cesar/Work" "Work")
+     ("/repos" "Repos")
+     ("/verifysys" "VerifySys"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("leftright-analyse" "left1" "leftright1")))
  '(ecb-version-check nil)
@@ -196,8 +206,12 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(enable-recursive-minibuffers t)
  '(explicit-shell-file-name "bash")
  '(fill-column 78)
- '(filladapt-turn-on-mode-hooks (quote (text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook)))
- '(find-ls-option (quote ("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first")))
+ '(filladapt-turn-on-mode-hooks
+   (quote
+    (text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook)))
+ '(find-ls-option
+   (quote
+    ("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first")))
  '(focus-follows-mouse t)
  '(font-lock-maximum-size nil)
  '(foreground-color "#cccccc")
@@ -218,14 +232,14 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(global-semantic-idle-summary-mode t)
  '(global-semantic-mru-bookmark-mode t)
  '(grep-command "grep -inHR -e ")
- '(grep-find-template "find . <X> -type f <F> -exec grep <C> -n -e <R> /dev/null {} +")
+ '(grep-find-template
+   "find . <X> -type f <F> -exec grep <C> -n -e <R> /dev/null {} +")
  '(grep-template "grep <X> <C> -n -e <R> <F>")
  '(home-end-enable t)
  '(indent-tabs-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
-;; '(iswitchb-mode t)
  '(line-move-visual nil)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
@@ -239,7 +253,11 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
  '(org-startup-indented t)
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/") ("marmalade" . "https://marmalade-repo.org/packages/"))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.org/packages/")
+     ("marmalade" . "https://marmalade-repo.org/packages/"))))
  '(recentf-mode t)
  '(require-final-newline nil)
  '(rmail-file-name "~/mail/babyl/RMAIL")
@@ -247,9 +265,18 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(search-slow-window-lines 3)
- '(semantic-c-dependency-system-include-path (quote ("/usr/include/c++/4.8" "/usr/include/x86_64-linux-gnu/c++/4.8" "/usr/include/c++/4.8/backward" "/usr/lib/gcc/x86_64-linux-gnu/4.8/include" "/usr/local/include" "/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" "/usr/include/x86_64-linux-gnu" "/usr/include" "/usr/include/libxml2")))
- '(semantic-decoration-styles (quote (("semantic-decoration-on-protected-members" . t) ("semantic-decoration-on-private-members" . t) ("semantic-tag-boundary"))))
- '(semantic-default-submodes (quote (global-semantic-highlight-func-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
+ '(semantic-c-dependency-system-include-path
+   (quote
+    ("/usr/include/c++/4.9" "/usr/include/x86_64-linux-gnu/c++/4.9" "/usr/include/c++/4.9/backward" "/usr/lib/gcc/x86_64-linux-gnu/4.9/include" "/usr/local/include" "/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" "/usr/include/x86_64-linux-gnu" "/usr/include" "/usr/include/libxml2")))
+ '(semantic-decoration-styles
+   (quote
+    (("semantic-decoration-on-includes" . t)
+     ("semantic-decoration-on-protected-members")
+     ("semantic-decoration-on-private-members")
+     ("semantic-tag-boundary"))))
+ '(semantic-default-submodes
+   (quote
+    (global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
  '(semantic-mode t)
  '(set-mark-command-repeat-pop t)
  '(sh-basic-offset 8)
@@ -267,7 +294,9 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(tab-always-indent (quote complete))
  '(tabbar-mode t nil (tabbar))
  '(tabbar-mwheel-mode t nil (tabbar))
- '(text-mode-hook (quote (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
+ '(text-mode-hook
+   (quote
+    (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
  '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
@@ -286,4 +315,3 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
 (message "Now all done in init.el.")
-(put 'dired-find-alternate-file 'disabled nil)
