@@ -84,6 +84,7 @@ Goes backward if ARG is negative; error if CHAR not found."
        (setq org-default-notes-file (concat org-directory "/my-notes.org"))
        (define-key global-map "\C-cr" 'org-remember)
 
+       (require 'semantic)
        (global-ede-mode t)
        (setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
                                         ;ecb 2.40
