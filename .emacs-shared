@@ -6,11 +6,12 @@
   "Pathname of my private library")
 (setq load-path (append (list *cq/emacslib*) load-path (list ".")))
 
-(put 'eval-expression  'disabled        nil)
-(put 'narrow-to-region 'disabled        nil)
-(put 'narrow-to-page   'disabled        nil)
-(put 'set-goal-column  'disabled        nil)
-(put 'scroll-left      'disabled        nil)
+(put 'dired-find-alternate-file 'disabled nil)
+(put 'eval-expression  'disabled          nil)
+(put 'narrow-to-page   'disabled          nil)
+(put 'narrow-to-region 'disabled          nil)
+(put 'scroll-left      'disabled          nil)
+(put 'set-goal-column  'disabled          nil)
 
 (setq-default major-mode 'indented-text-mode)
 
