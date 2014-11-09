@@ -244,6 +244,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(line-move-visual nil)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
+ '(load-prefer-newer t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list (quote ("%Y-%m-%d %H:%M" "%Y-%m-%d     ")))
  '(mail-archive-file-name "~/mail/babyl/OUT")
