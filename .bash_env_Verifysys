@@ -9,7 +9,7 @@ export INNERGY_ROOT=/verifysys/Software/Innergy
 
 export PATH=${VERIFYSYS_ROOT}/bin:$PATH
 export PATH=/verifysys/Software/QT/build-VerifySys-Desktop-Debug:$PATH
-export PATH=${INNERGY_ROOT}/bin:$PATH
+export PATH=${INNERGY_ROOT}/bin:$PATH:.
 #export PATH=${VERIFIC_ROOT}/bin:$PATH
 
 export LD_LIBRARY_PATH+=${VERIFYSYS_ROOT}/lib-linux64
