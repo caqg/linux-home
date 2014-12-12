@@ -51,6 +51,7 @@ Goes backward if ARG is negative; error if CHAR not found."
          (slime-setup))
 
        (pending-delete-mode t)
+       (electric-indent-mode -1)
 
        ;; Known to work at least since v23, again don't know if before.
        (defun gamegrid-add-score-with-update-game-score-1( file target score ))
@@ -215,6 +216,7 @@ Goes backward if ARG is negative; error if CHAR not found."
     ("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first")))
  '(focus-follows-mouse t)
  '(font-lock-maximum-size nil)
+ '(font-use-system-font t)
  '(foreground-color "#cccccc")
  '(gdb-enable-debug nil)
  '(gdb-many-windows t)
@@ -266,6 +268,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(safe-local-variable-values (quote ((ggtags-process-environment))))
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
+ '(scroll-preserve-screen-position t)
  '(search-slow-window-lines 3)
  '(semantic-c-dependency-system-include-path
    (quote
@@ -314,6 +317,6 @@ Goes backward if ARG is negative; error if CHAR not found."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
 (message "Now all done in init.el.")
