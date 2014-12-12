@@ -30,6 +30,7 @@
         l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
         prefix          = rev-parse --show-prefix
         s               = status -bs -uall .
+        ss              = status -bs -uno .
         top             = rev-parse --show-toplevel
 
 [push]

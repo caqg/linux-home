@@ -1,0 +1,23 @@
+: source me, I am a bash -*- Shell-Script -*-
+
+export INNERGY_ROOT=/work/Innergy/rootdir
+export SYSTEMC_HOME=${INNERGY_ROOT}
+export SYSTEMC=${SYSTEMC_HOME}
+export LLVMROOT=${INNERGY_ROOT}
+export SOFTWARE_INNERGY=/work/Innergy/Software/Innergy
+
+export PATH=${SOFTWARE_INNERGY}/bin:$PATH
+export PATH=/work/Innergy/Software/QT/build-Work/Innergy-Desktop-Debug:$PATH
+export PATH=${SOFTWARE_INNERGY}/bin:$PATH:.
+
+export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
+export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
+export LD_LIBRARY_PATH+=:${SOFTWARE_INNERGY}/lib
+export LD_LIBRARY_PATH+=:${SOFTWARE_INNERGY}/lib
+export LD_LIBRARY_PATH+=:.
+
+export MANPATH+=:${SOFTWARE_INNERGY}/share/man
+
+# example: CXXFLAGS += -I ${SYSTEMC_HOME}/include
+
+#end .bash_env_Innergy

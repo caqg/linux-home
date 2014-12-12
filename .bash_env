@@ -35,6 +35,7 @@ export TZ=:America/Los_Angeles
 export NO_AT_BRIDGE=1
 
 # For Verifysys project
-[ -f $HOME/.bash_env_Verifysys ] && . $HOME/.bash_env_Verifysys
+# [ -f $HOME/.bash_env_Verifysys ] && . $HOME/.bash_env_Verifysys
+[ -f $HOME/.bash_env_Innergy ] && . $HOME/.bash_env_Innergy
 
 ##end .bash_env
