@@ -35,4 +35,10 @@ TAGS
 *.la
 *.a
 
+# Kernel objects
 *.ko
+
+# Random things form git'd $HOME
+.cache/*
+
+#end .gitignore
