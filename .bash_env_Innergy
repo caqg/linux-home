@@ -6,7 +6,7 @@ export SYSTEMC=${SYSTEMC_HOME}
 export LLVMROOT=${INNERGY_ROOT}
 export SOFTWARE_INNERGY=/work/Innergy/Software/Innergy
 
-export PATH=${SOFTWARE_INNERGY}/bin:$PATH
+export PATH=${INNERGY_ROOT}/bin:$PATH
 export PATH=/work/Innergy/Software/QT/build-Work/Innergy-Desktop-Debug:$PATH
 export PATH=${SOFTWARE_INNERGY}/bin:$PATH:.
 
