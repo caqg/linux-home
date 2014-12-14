@@ -22,6 +22,7 @@
 [alias]
         aa              = add -A .
         au              = add -u .
+        b               = branch
         ci              = commit
         co              = checkout
         d               = diff
