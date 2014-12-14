@@ -1,0 +1,28 @@
+#!/bin/bash
+
+case "$#" in
+0)
+    ;;
+*)
+    echo usage: `basename $0`
+    exit 1
+    ;;
+esac
+
+
+moniker=`/bin/date -u +'%Y%m%d%H%M%SZ'`
+if [ -f /etc/lsb-release ]; then
+    . /etc/lsb-release
+    moniker="${DISTRIB_ID}-${DISTRIB_CODENAME}"
+fi
+
+host=unknown
+if [ -x /bin/uname ]; then
+    host=`/bin/uname -n`
+elif [ -x /bin/hostname ]; then
+    host=`/bin/hostname`
+fi
+
+echo apt-clone clone "${host}-${moniker}" | ${SHELL} -x
+
+#end update-clone-info
