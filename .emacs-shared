@@ -386,6 +386,9 @@
 (global-set-key [(meta button4)]        'scroll-down-command)
 (global-set-key [(meta button5)]        'scroll-up-command)
 
+(global-set-key [(control -)] 'text-scale-decrease)
+(global-set-key [(control +)] 'text-scale-increase)
+
 (global-set-key "\C-^"              'call-last-kbd-macro)
 ;;+? (global-set-key "\M-\C-l"           'force-recenter)
 ;;+? (global-set-key "\eG"               'goto-line)
