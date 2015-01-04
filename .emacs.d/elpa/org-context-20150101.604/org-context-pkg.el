@@ -1,0 +1,1 @@
+(define-package "org-context" "20150101.604" "Contextual capture and agenda commands for Org-mode" 'nil :url "https://github.com/thisirs/org-context" :keywords '("org" "capture" "agenda" "convenience"))
