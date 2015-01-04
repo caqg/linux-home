@@ -68,6 +68,10 @@
                 (gtags-mode 1)
                 (ggtags-mode 1))))
 
+(add-hook 'c-mode-common-hook
+          #'(lambda ()
+              (form-feed-mode 1)))
+
 (add-hook 'c++-mode-hook
           #'(lambda ()
               (c-set-offset 'innamespace 0)))
