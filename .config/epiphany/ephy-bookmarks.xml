@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<ephy_bookmarks version="1.03">
+  <!--Do not rely on this file, it's only for internal use. Use bookmarks.rdf instead.-->
+  <node id="30">
+    <property id="5" value_type="gchararray">Entertainment</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="31">
+    <property id="5" value_type="gchararray">News</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="32">
+    <property id="5" value_type="gchararray">Shopping</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="33">
+    <property id="5" value_type="gchararray">Sports</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="34">
+    <property id="5" value_type="gchararray">Travel</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="35">
+    <property id="5" value_type="gchararray">Work</property>
+    <property id="8" value_type="gint">2</property>
+    <parent id="1"/>
+  </node>
+  <node id="36">
+    <property id="2" value_type="gchararray">Search the web</property>
+    <property id="3" value_type="gchararray">http://duckduckgo.com/?q=%s&amp;t=epiphany</property>
+    <property id="4" value_type="gchararray"> search the web</property>
+    <parent id="0"/>
+    <parent id="10"/>
+    <parent id="3"/>
+  </node>
+  <node id="37">
+    <property id="2" value_type="gchararray">Ubuntu</property>
+    <property id="3" value_type="gchararray">http://www.ubuntu.com/</property>
+    <property id="4" value_type="gchararray"> ubuntu</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+  <node id="38">
+    <property id="2" value_type="gchararray">Ubuntu Wiki (community-edited website)</property>
+    <property id="3" value_type="gchararray">https://wiki.ubuntu.com/</property>
+    <property id="4" value_type="gchararray"> ubuntu wiki (community-edited website)</property>
+    <property id="7" value_type="gchararray">https://wiki.ubuntu.com/favicon.ico</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+  <node id="39">
+    <property id="2" value_type="gchararray">Make a Support Request to the Ubuntu Community</property>
+    <property id="3" value_type="gchararray">https://answers.launchpad.net/ubuntu/+addquestion</property>
+    <property id="4" value_type="gchararray"> make a support request to the ubuntu community</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+  <node id="40">
+    <property id="2" value_type="gchararray">Debian (Ubuntu is based on Debian)</property>
+    <property id="3" value_type="gchararray">http://www.debian.org/</property>
+    <property id="4" value_type="gchararray"> debian (ubuntu is based on debian)</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+  <node id="41">
+    <property id="2" value_type="gchararray">Ubuntu One - The personal cloud that brings your digital life together</property>
+    <property id="3" value_type="gchararray">https://one.ubuntu.com/</property>
+    <property id="4" value_type="gchararray"> ubuntu one - the personal cloud that brings your digital life together</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+  <node id="42">
+    <property id="2" value_type="gchararray">GNOME</property>
+    <property id="3" value_type="gchararray">http://www.gnome.org/</property>
+    <property id="4" value_type="gchararray"> gnome</property>
+    <parent id="0"/>
+    <parent id="3"/>
+  </node>
+</ephy_bookmarks>

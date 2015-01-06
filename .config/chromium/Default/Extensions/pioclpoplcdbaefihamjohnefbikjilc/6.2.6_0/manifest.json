@@ -1,0 +1,55 @@
+{
+   "author": "Evernote",
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/web-clipper-19x19.png",
+         "38": "images/web-clipper-19x19@2x.png"
+      },
+      "default_title": "__MSG_BrowserActionTitle__"
+   },
+   "content_scripts": [ {
+      "css": [ "content/chrome_fonts.css", "css/contentpreview.css", "content/clip_result/iframe.css", "content/tooltips/TooltipCoordinator.css", "content/tooltips/gmail_tooltip_check.css", "css/coordinator.css" ],
+      "js": [ "third_party/port.js", "js/common/Browser.js", "js/common/Log.js", "js/GlobalUtils.js", "content/ContentVeil.js", "content/Veil.js", "content/PageInfo.js", "content/gmail_clipper/GmailTypes.js", "content/gmail_clipper/GmailClipper.js", "content/Preview.js", "third_party/jquery-1.11.0.min.js", "content/HtmlSerializer.js", "content/Clipper.js", "content/simSearch.js", "js/common/UUID.js", "content/ClipResultCoordinator.js", "content/feedback_form/FeedbackFormCoordinator.js", "clearly/js/detect.js", "clearly/js/next.js", "clearly/js/highlight.js", "clearly/js/reformat.js", "content/Coordinator.js", "content/init.js", "content/evernote.js", "content/tooltips/TooltipCoordinator.js", "content/tooltips/gmail_tooltip_check.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "content/tooltips/PdfTooltipCheck.js", "content/tooltips/nudge_inactive.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": true,
+      "js": [ "third_party/port.js", "js/common/Browser.js", "content/frame_loader.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "content/preparePage.js", "skitch/js/skitch.js", "content/scriptsInjected.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   }, {
+      "css": [ "content/salesforce/salesforce.css" ],
+      "js": [ "js/common/Browser.js", "content/salesforce/salesforce.js" ],
+      "matches": [ "*://*.salesforce.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_ExtensionDescription__",
+   "icons": {
+      "128": "Icon.png",
+      "16": "images/icon-16x16.png",
+      "48": "images/web-clipper-48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDagHdvA7LfpgVcEBFjt6ADW0PMXRJpeSnRsjAJWdapZYbS2LAIMB5lftI0ZjGZyyH2obL2coYBgcULJkidtZ8YIX9yP5tbB7mh1RzHj2oNfXBlh2yzJm/4/QELGmHhOy3S6x/2102Zo+Q7AgBtPN5RPX1X2FJbasBT02O4DvvRcwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "12",
+   "name": "__MSG_ExtensionName__",
+   "options_page": "options.html",
+   "permissions": [ "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications", "http://*/*", "https://*/*", "activeTab", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.2.6",
+   "web_accessible_resources": [ "clearly/css/additional.css", "clearly/css/base__newsprint.css", "clearly/css/base__night_owl.css", "clearly/css/base__notable.css", "clearly/css/style.css", "clearly/images/highlight--cursor.png", "clearly/images/highlight--delete-sprite.png", "clearly/images/highlight--delete-sprite@2x.png", "clearly/images/highlight--yellow.png", "clearly/images/highlight--yellow@2x.png", "clearly/images/loading--background.png", "clearly/images/loading--background@2x.png", "clearly/images/loading--big.gif", "clearly/images/loading--big@2x.gif", "css/daumsearchhelper.css", "css/searchhelper.css", "css/yandexrusearchhelper.css", "fonts/caecilialtstd-roman-webfont.woff", "images/arrow-right.png", "images/arrow-right@2x.png", "images/article-contract.png", "images/article-contract@2x.png", "images/article-expand.png", "images/article-expand@2x.png", "images/gmail_msg_selected.png", "images/gmail_msg_selected@2x.png", "images/loading.gif", "images/loading@2x.gif", "images/tooltip_arrow.png", "images/tooltip_arrow@2x.png", "js/GlobalUtils.js", "content/user_tools/user_tools.html", "content/clip_result/clip_result.html", "content/clip_result/iframe.css", "content/feedback_form/feedback_form.html", "content/filing_tools/filing_tools.html", "content/global_tools/global_tools.html", "content/pdf_tooltip/pdf_tooltip.html", "content/release_notes/shortcuts.html", "content/salesforce/promo.html", "content/share_tools/email_sharing.html", "content/share_tools/share_tools.html", "content/sim_search_results.html", "content/tooltips/screenshot_toast.html", "content/tooltips/tooltip.html", "content/HtmlSerializer.js", "content/frame.js", "options.html", "skitch/sounds/snap.wav", "content/fle/fle.html", "content/fle/flemarkup.css", "content/fle/flemarkup.html", "fonts/GothamSSm-Medium.otf", "fonts/GothamSSm-Bold.otf", "logs.html" ]
+}

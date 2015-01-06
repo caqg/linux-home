@@ -1,0 +1,22 @@
+html, body {
+  height: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+
+#main,
+#markdown-preview-window,
+.dialog {
+  display: none;
+  visibility: hidden;
+}
+
+#print-window {
+  display: block;
+}
+
+#print-window p {
+  line-height: 1.2em;
+}
+

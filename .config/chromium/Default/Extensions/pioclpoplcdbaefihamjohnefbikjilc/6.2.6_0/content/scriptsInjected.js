@@ -1,0 +1,2 @@
+var inited=!1,visible="undefined"===typeof document.hidden?!0:!document.hidden;function init(){!inited&&visible&&(inited=!0,Browser.sendToExtension({name:"tabLoaded"}))}function isExtensionOpen(a,b,c){(a=document.querySelector("#evernoteGlobalTools"))&&/evernoteClipperVisible/.test(a.className)&&Browser.sendToExtension({name:"showOpenState"})}
+window===window.parent&&(Browser.addMessageHandlers({isExtensionOpen:isExtensionOpen}),document.addEventListener("visibilitychange",function(){visible=!document.hidden||visible;init()}),init());

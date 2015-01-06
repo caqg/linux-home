@@ -1,0 +1,55 @@
+.evernoteTooltip {
+  border: none !important;
+  bottom: auto !important;
+  box-shadow: none !important;
+  box-sizing: content-box !important;
+  left: auto !important;
+  margin: 0 !important;
+  max-height: none !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  opacity: 0 !important;
+  outline: invert none medium !important;
+  padding: 0 !important;
+  position: fixed !important;
+  resize: none !important;
+  vertical-align: baseline !important;
+  visibility: visible !important;
+  -webkit-animation-duration: 0 !important;
+  -webkit-transition: opacity 300ms !important;
+  -webkit-user-select: none !important;
+  z-index: 2147483647 !important;
+}
+
+.evernoteTooltip.evernoteTooltipShow {
+  opacity: 1 !important;
+}
+
+#evernoteNudgeInactive {
+  height: 215px !important;
+  right: 30px !important;
+  top: 30px !important;
+  width: 280px !important;
+}
+
+#evernoteSSOProgress {
+  height: 100% !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
+#evernoteGmail {
+  height: 159px !important;
+  right: 30px !important;
+  top: 30px !important;
+  width: 316px !important;
+}
+
+#evernotePdfTooltip {
+  height: 173px !important;
+  right: 30px !important;
+  top: 30px !important;
+  width: 310px !important;
+}

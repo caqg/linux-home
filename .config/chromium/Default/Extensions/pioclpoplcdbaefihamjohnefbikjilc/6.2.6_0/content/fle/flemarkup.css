@@ -1,0 +1,118 @@
+#webclipper-fle-markup {
+  position: fixed;
+  top: 260px;
+  right: 154px;
+  width: 420px;
+  padding-bottom: 13px;
+  -webkit-transition: opacity 0.5s;
+  opacity: 0;
+
+  font-size: 11px;
+  font-style: normal;
+  overflow: visible;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#webclipper-fle-markup * {
+  font: inherit;
+  text-shadow: inherit;
+  -webkit-font-smoothing: inherit;
+  box-sizing: border-box;
+}
+
+#webclipper-fle-markup div {
+  overflow: visible;
+}
+
+#webclipper-fle-markup h1 {
+  font-family: 'caecilia', Times, serif;
+  font-weight: bold;
+  color: #4dbdcb;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 12px 0px;
+}
+
+#webclipper-fle-markup h2, #webclipper-fle-markup p {
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: normal;
+  margin: 11px 0px;
+}
+
+#webclipper-fle-markup a {
+  text-decoration: none;
+}
+
+#webclipper-fle-markup .blurb-border {
+  width: 400px;
+  background-color: rgba(34, 40, 44, 0.38);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+#webclipper-fle-markup .blurb-outer {
+  width: 100%;
+  height: 100%;
+  background-color: #2f373d;
+  color: #fafafa;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 16px;
+  padding: 20px;
+}
+
+#webclipper-fle-markup .blurb-inner {
+  position: relative;
+}
+
+#webclipper-fle-markup .blurb-body {
+  padding-bottom: 28px;
+}
+
+#webclipper-fle-markup .next-button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 6px 23px;
+  text-align: center;
+  height: 28px;
+  background-color: #209bc9;
+  font-size: 11px;
+  text-shadow: 0px 1px 2px rgba(000, 000, 000, 0.5);
+  -webkit-box-shadow: inset 0 1px 0px #48c0ed;
+  box-shadow: inset 0 1px 0px #48c0ed;
+  border-radius: 2px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.arrow-right {
+  background-image: url(chrome-extension://__MSG_@@extension_id__/images/arrow-right.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  left: 398px;
+  top: 13px;
+  background-size: 11px 20px;
+}
+html.evernoteSafari .arrow-right {
+  background-image: url(../../images/arrow-right.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  .arrow-right {
+    background-image: url(chrome-extension://__MSG_@@extension_id__/images/arrow-right@2x.png);
+  }
+  html.evernoteSafari .arrow-right {
+    background-image: url(../../images/arrow-right@2x.png);
+  }
+}

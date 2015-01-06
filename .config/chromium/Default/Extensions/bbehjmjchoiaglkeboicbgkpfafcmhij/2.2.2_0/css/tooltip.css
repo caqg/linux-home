@@ -1,0 +1,33 @@
+
+.tooltip-triangle {
+  position:absolute;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid #b22222;
+  opacity:0.9;
+  z-index:10000;
+}
+
+.tooltip-text {
+  position:absolute;
+  white-space: nowrap;
+  background: #b22222;
+  padding: 4px 10px;
+  margin:0px;
+  color: #FFFFFF;
+  font-size:12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  opacity:0.9;
+  z-index:10000;
+}
+
+.tooltip-triangle-gray {
+  border-bottom: 8px solid #333;
+}
+.tooltip-text-gray {
+  background: #333;
+  color:white;
+}

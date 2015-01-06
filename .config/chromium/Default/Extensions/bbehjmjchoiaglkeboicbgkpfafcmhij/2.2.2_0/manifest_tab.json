@@ -1,0 +1,24 @@
+{
+  "manifest_version":2,
+  "name": "Writebox",
+  "description": "Distraction-free text editor",
+  "version": "2.2.2",
+  "app": {
+    "launch": {
+      "local_path": "app.html"
+    }
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage", "tabs",
+    "https://write-box.appspot.com/"
+  ],
+  "offline_enabled": true,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}

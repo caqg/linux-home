@@ -1,0 +1,116 @@
+{
+   "appdescription": {
+      "message": "Konfigurowalny, lokalny, i pełno ekranowy edytor tekstu."
+   },
+   "appname": {
+      "message": "Write Space"
+   },
+   "backgroundcolor": {
+      "message": "Kolor Tła:"
+   },
+   "charactercount": {
+      "message": " | Znaki: "
+   },
+   "data": {
+      "message": "Ustawienia Danych"
+   },
+   "displayfooter": {
+      "message": "Pokaż Pasek Stanu:"
+   },
+   "editoroptions": {
+      "message": "Ustawienia Edytora"
+   },
+   "editorwidth": {
+      "message": "Długość:"
+   },
+   "editorwindow": {
+      "message": "Ustawienia Okna"
+   },
+   "enablescrollbar": {
+      "message": "Pokaż Scrollbar:"
+   },
+   "enablespellcheck": {
+      "message": "Sprawdź Pisownie:"
+   },
+   "export": {
+      "message": "Export"
+   },
+   "exportbutton": {
+      "message": "Export do Pliku"
+   },
+   "exportfail": {
+      "message": "Export Nieudany: "
+   },
+   "fontcolor": {
+      "message": "Kolor Czczionki:"
+   },
+   "fontfamily": {
+      "message": "Czczionka:"
+   },
+   "fontsize": {
+      "message": "Rozmiar Czczionki:"
+   },
+   "footercolor": {
+      "message": "Pasek Kolorów:"
+   },
+   "footertext": {
+      "message": "Kolor Paska Stanu:"
+   },
+   "import": {
+      "message": "Import"
+   },
+   "importbutton": {
+      "message": "Importuj Plik"
+   },
+   "importfail": {
+      "message": "Import Nieudany: "
+   },
+   "importwarning": {
+      "message": "Jesteś pewny, że chcesz zaimportować zaznaczy plik? Wszystkie aktualne dane zostaną nadpisane."
+   },
+   "linecount": {
+      "message": " | Linie: "
+   },
+   "lineheight": {
+      "message": "Odstęp Między Wierszami:"
+   },
+   "monospace": {
+      "message": "Monospace"
+   },
+   "options": {
+      "message": "Opcje"
+   },
+   "optionspage": {
+      "message": "Write Space: Opcje"
+   },
+   "pixels": {
+      "message": "px"
+   },
+   "points": {
+      "message": "punktów"
+   },
+   "resetbutton": {
+      "message": "Przywróć Domyślne"
+   },
+   "sansserif": {
+      "message": "Sans-Serif"
+   },
+   "savebutton": {
+      "message": "Zapisz"
+   },
+   "serif": {
+      "message": "Serif"
+   },
+   "spellcheck": {
+      "message": "Pisownia"
+   },
+   "statusbar": {
+      "message": "Pasek Stanu"
+   },
+   "verticalpadding": {
+      "message": "Dopełnienie Górne:"
+   },
+   "wordcount": {
+      "message": "Wyrazy: "
+   }
+}

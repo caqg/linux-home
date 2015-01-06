@@ -1,0 +1,23 @@
+{
+  "manifest_version":2,
+  "name": "Writebox for Chrome",
+  "description": "Distraction-free text editor",
+  "version": "1.1",
+  "app": {
+    "background" : {
+      "scripts": ["/script/bg.js"]
+    }
+  },
+  "icons": {
+    "16": "icon_16.png",
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "storage",
+    "identity",
+    "webview",
+    "overrideEscFullscreen",
+    "https://write-box.appspot.com/"
+  ],
+  "offline_enabled": true
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../css/common.css" />
+    <link type="text/css" rel="stylesheet" href="clip_result/small_snippet.css" />
+    <link type="text/css" rel="stylesheet" href="sim_search_results.css" />
+    <script type="text/javascript" src="../third_party/port.js"></script>
+    <script type="text/javascript" src="../js/common/Browser.js"></script>
+    <script type="text/javascript" src="../js/GlobalUtils.js"></script>
+    <script type="text/javascript" src="clip_result/NoteSnippets.js"></script>
+    <script type="text/javascript" src="../js/common/Log.js"></script>
+    <script type="text/javascript" src="sim_search_results.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <a class="branding" target="_blank">
+        <span></span>
+      </a>
+      <div id="closeSimSearch">
+        <div id="closeButton"></div>
+        <div id="closeOptions">
+          <ul>
+            <li id="dismiss" message="searchHelper_hideTemp"></li>
+            <li class="divider"></li>
+            <li id="dismissForever" message="searchHelper_hidePerm"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="simSearchNotes">
+      <div id="margin"></div>
+      <div class="noteSection" id="account">
+        <div class="noteSectionTitle"></div>
+        <div class="noteSectionNotes"></div>
+      </div>
+      <div class="noteSection" id="library">
+        <div class="noteSectionTitle"></div>
+        <div class="noteSectionNotes"></div>
+      </div>
+      <div class="noteSection" id="all">
+        <div class="noteSectionTitle"></div>
+        <div class="noteSectionNotes"></div>
+      </div>
+      <div class="grayText" id="noNotes" message="searchHelperNotesNotFoundPers"></div>
+    </div>
+  </body>
+</html>

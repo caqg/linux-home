@@ -1,0 +1,1 @@
+function Notebook(b){this.sharedNotebookIds=this.stack=this.published=this.publishing=this.serviceUpdated=this.serviceCreated=this.defaultNotebook=this.updateSequenceNum=this.name=this.guid=null;Object.preventExtensions(this);for(var a in b)"undefined"!==typeof this[a]&&(this[a]=b[a])}Object.preventExtensions(Notebook);

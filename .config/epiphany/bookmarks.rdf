@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ephy="http://gnome.org/ns/epiphany#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <channel rdf:about="file:///home/cesar/.config/epiphany/bookmarks.rdf">
+    <title>Epiphany bookmarks</title>
+    <link>http://www.gnome.org/projects/epiphany/</link>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://duckduckgo.com"/>
+        <rdf:li rdf:resource="http://www.ubuntu.com/"/>
+        <rdf:li rdf:resource="https://wiki.ubuntu.com/"/>
+        <rdf:li rdf:resource="https://answers.launchpad.net/ubuntu/+addquestion"/>
+        <rdf:li rdf:resource="http://www.debian.org/"/>
+        <rdf:li rdf:resource="https://one.ubuntu.com/"/>
+        <rdf:li rdf:resource="http://www.gnome.org/"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://duckduckgo.com">
+    <title>Search the web</title>
+    <link>http://duckduckgo.com</link>
+    <ephy:smartlink>http://duckduckgo.com/?q=%s&amp;t=epiphany</ephy:smartlink>
+  </item>
+  <item rdf:about="http://www.ubuntu.com/">
+    <title>Ubuntu</title>
+    <link>http://www.ubuntu.com/</link>
+  </item>
+  <item rdf:about="https://wiki.ubuntu.com/">
+    <title>Ubuntu Wiki (community-edited website)</title>
+    <link>https://wiki.ubuntu.com/</link>
+  </item>
+  <item rdf:about="https://answers.launchpad.net/ubuntu/+addquestion">
+    <title>Make a Support Request to the Ubuntu Community</title>
+    <link>https://answers.launchpad.net/ubuntu/+addquestion</link>
+  </item>
+  <item rdf:about="http://www.debian.org/">
+    <title>Debian (Ubuntu is based on Debian)</title>
+    <link>http://www.debian.org/</link>
+  </item>
+  <item rdf:about="https://one.ubuntu.com/">
+    <title>Ubuntu One - The personal cloud that brings your digital life together</title>
+    <link>https://one.ubuntu.com/</link>
+  </item>
+  <item rdf:about="http://www.gnome.org/">
+    <title>GNOME</title>
+    <link>http://www.gnome.org/</link>
+  </item>
+</rdf:RDF>

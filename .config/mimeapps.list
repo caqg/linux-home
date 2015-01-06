@@ -1,0 +1,4 @@
+[Default Applications]
+x-scheme-handler/mailto=gnome-gmail.desktop
+
+[Added Associations]

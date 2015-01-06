@@ -1,0 +1,216 @@
+body {
+  background: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.step {
+  position: fixed;
+  width: 420px;
+  right: 0px;
+  padding-bottom: 13px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  visibility: hidden;
+}
+
+h1 {
+  font-family: "CaeciliaRoman", Times, serif;
+  font-weight: bold;
+  color: #4dbdcb;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h2, p {
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-family: GothamBold, Helvetica, Arial, sans-serif;
+  color: #4dbdcb;
+  font-size: inherit;
+}
+
+/** phase1 - Welcome **/
+#clipper-tour-phase1 {
+  top: 30px;
+}
+
+/** phase2 - Markup **/
+#clipper-tour-phase2 {
+  top: 118px;
+}
+
+#clipper-tour-phase2 .arrow-right {
+  position: absolute;
+  left: 398px;
+  top: 13px;
+}
+
+/** phase4 - Share **/
+#clipper-tour-phase4 {
+  bottom: 7px;
+}
+
+#clipper-tour-phase4 .arrow-right {
+  top: -webkit-calc((100% - 20px)/2);
+}
+
+/** phase5 - Share Dialog**/
+#clipper-tour-phase5 {
+  bottom: 200px;
+}
+
+#clipper-tour-phase5 .arrow-down {
+  bottom: 4px;
+}
+
+/** phase6 - Conclusion **/
+#clipper-tour-phase6 {
+  text-align: center;
+  margin: 100px auto;
+  position: fixed;
+  left: -webkit-calc((100% - 400px)/2);
+  width: 420px;
+  right: auto;
+}
+
+.blurb-border {
+  width: 400px;
+  background-color: rgba(34, 40, 44, 0.38);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.blurb-outer {
+  width: 100%;
+  height: 100%;
+  background-color: #2f373d;
+  color: #fafafa;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 16px;
+  padding: 20px;
+}
+
+.blurb-inner {
+  position: relative;
+}
+
+.blurb-body {
+  padding-bottom: 28px;
+}
+
+.button {
+  height: 28px;
+  padding: 6px 23px;
+  background-color: #209bc9;
+  font-size: 11px;
+  text-shadow: 0px 1px 2px rgba(000, 000, 000, 0.5);
+  -webkit-box-shadow: inset 0 1px 0px #48c0ed;
+  box-shadow: inset 0 1px 0px #48c0ed;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.next-button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 6px 23px;
+  text-align: center;
+}
+
+.done-button {
+  bottom: 0px;
+  padding: 6px 23px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.finish-button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 6px 23px;
+  text-align: center;
+}
+
+.arrow-right {
+  background-image: url(../../images/arrow-right.png);
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 20px;
+  background-size: 11px 20px;
+  position: absolute;
+  left: 398px;
+  top: 13px;
+}
+
+.arrow-down {
+  background-image: url(../../images/arrow-down-black.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 11px;
+  background-size: 20px 11px;
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+}
+
+.shares span {
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 17px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+.shares .twitter {
+  background-image: url(../../images/twitter_light.png);
+  background-size: 16px 14px;
+}
+
+.shares .linkedin {
+  background-image: url(../../images/linkedin_light.png);
+  background-size: 15px 15px;
+}
+
+.shares .facebook {
+  background-image: url(../../images/facebook_light.png);
+  background-size: 10px 17px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  .arrow-right {
+    background-image: url(../../images/arrow-right@2x.png);
+  }
+  .arrow-down {
+    background-image: url(../../images/arrow-down-black@2x.png);
+  }
+  .shares .twitter {
+    background-image: url(../../images/twitter_light@2x.png);
+  }
+  .shares .linkedin {
+    background-image: url(../../images/linkedin_light@2x.png);
+  }
+  .shares .facebook {
+    background-image: url(../../images/facebook_light@2x.png);
+  }
+}

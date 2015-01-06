@@ -1,0 +1,116 @@
+{
+   "appdescription": {
+      "message": "A customizable, offline, and full-screen text-editor."
+   },
+   "appname": {
+      "message": "Write Space"
+   },
+   "backgroundcolor": {
+      "message": "Background Color:"
+   },
+   "charactercount": {
+      "message": " | Characters: "
+   },
+   "data": {
+      "message": "Data Options"
+   },
+   "displayfooter": {
+      "message": "Show Status Bar:"
+   },
+   "editoroptions": {
+      "message": "Editor Options"
+   },
+   "editorwidth": {
+      "message": "Editor Width:"
+   },
+   "editorwindow": {
+      "message": "Editor Window"
+   },
+   "enablescrollbar": {
+      "message": "Show Scrollbar:"
+   },
+   "enablespellcheck": {
+      "message": "Check Spelling:"
+   },
+   "export": {
+      "message": "Export"
+   },
+   "exportbutton": {
+      "message": "Export to File"
+   },
+   "exportfail": {
+      "message": "Export Failed: "
+   },
+   "fontcolor": {
+      "message": "Font Color:"
+   },
+   "fontfamily": {
+      "message": "Font Family:"
+   },
+   "fontsize": {
+      "message": "Font Size:"
+   },
+   "footercolor": {
+      "message": "Status Bar Color:"
+   },
+   "footertext": {
+      "message": "Status Bar Text Color:"
+   },
+   "import": {
+      "message": "Import"
+   },
+   "importbutton": {
+      "message": "Import File"
+   },
+   "importfail": {
+      "message": "Import Failed: "
+   },
+   "importwarning": {
+      "message": "Are you sure you want to import the selected file? This will overwrite any data that is currently saved in the Write Space editor."
+   },
+   "linecount": {
+      "message": " | Lines: "
+   },
+   "lineheight": {
+      "message": "Line Spacing:"
+   },
+   "monospace": {
+      "message": "Monospace"
+   },
+   "options": {
+      "message": "Options"
+   },
+   "optionspage": {
+      "message": "Write Space: Options"
+   },
+   "pixels": {
+      "message": "pixels"
+   },
+   "points": {
+      "message": "points"
+   },
+   "resetbutton": {
+      "message": "Reset to Default"
+   },
+   "sansserif": {
+      "message": "Sans-Serif"
+   },
+   "savebutton": {
+      "message": "Save"
+   },
+   "serif": {
+      "message": "Serif"
+   },
+   "spellcheck": {
+      "message": "Spellcheck"
+   },
+   "statusbar": {
+      "message": "Status Bar"
+   },
+   "verticalpadding": {
+      "message": "Vertical Padding:"
+   },
+   "wordcount": {
+      "message": "Words: "
+   }
+}

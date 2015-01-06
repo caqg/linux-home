@@ -1,0 +1,136 @@
+.tContainer {
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  position: relative;
+}
+
+.tInput {
+  border: 1px solid #8A9CA8 !important;
+  border-radius: 22px;
+  box-sizing: border-box;
+  color: #8A9CA8;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  line-height: 20px;
+  margin: 0 0 0 23px;
+  max-width: -webkit-calc(100% - 23px);
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 9px;
+  transition: min-width .3s ease;
+  -webkit-user-select: text;
+  white-space: nowrap;
+}
+.tInput:focus, .tInput:hover {
+  border: 1px solid white !important;
+  color: white;
+}
+.tInput:focus {
+  cursor: text;
+  min-width: -webkit-calc(100% - 23px);
+}
+.tInput.tDisabled {
+  cursor: default;
+}
+.tInput:empty:before {
+  content: attr(data-placeholder);
+}
+.tInput.tDisabled.tMax:before {
+  content: attr(data-max-tags-placeholder);
+}
+.tInput.tDisabled.tLinked:before {
+  content: attr(data-linked-placeholder);
+}
+
+.tExisting {
+  margin: 8px 0 0 23px;
+  max-height: 52px;
+  min-height: 22px;
+  overflow-x: hidden;
+  position: relative;
+}
+.tExisting:empty {
+  display: none;
+}
+.tTag {
+  background-color: #8A9CA8;
+  border-radius: 22px;
+  box-sizing: border-box;
+  color: #2F373D;
+  cursor: default;
+  display: inline-block;
+  line-height: 22px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  max-width: -webkit-calc(100% - 3px);
+  padding: 0 9px;
+}
+.tTag:last-child {
+  margin-right: 0;
+}
+.tTag.lastRow {
+  margin-bottom: 0;
+}
+.tTagText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tDeleteTag {
+  background-image: url(../../images/delete_tag.png);
+  background-position: 50%;
+  background-size: 8px;
+  cursor: pointer;
+  float: right;
+  height: 22px;
+  margin-left: 4px;
+  width: 8px;
+}
+
+.tDropdown {
+  background-color: #BBCBD5;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #2F373D;
+  left: 23px;
+  max-height: 98px;
+  overflow-y: auto;
+  position: absolute;
+  top: 30px;
+  width: 182px;
+}
+.tDropdown:before {
+  border-left: 6px solid transparent;
+  border-bottom: 8px solid #BBCBD5;
+  border-right: 6px solid transparent;
+  content: "";
+  left: 8px;
+  position: absolute;
+  top: -8px;
+}
+.tDropdownTag {
+  cursor: pointer;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 0 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tDropdownTag.tHover {
+  background-color: #4CA4E6;
+  color: white;
+}
+.tDropdownTag:first-child {
+  margin-top: 3px;
+}
+.tDropdownTag:last-child {
+  margin-bottom: 3px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  .tDeleteTag {
+    background-image: url(../../images/delete_tag@2x.png);
+  }
+}

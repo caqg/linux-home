@@ -1,0 +1,131 @@
+body.chrome-app * {
+  -webkit-user-select: text;
+}
+
+body.chrome-app #header {
+  background: #eee;
+  height: 40px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+
+body.chrome-app #header #menu {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+body.chrome-app #menu .command {
+  color: #111;
+}
+
+body.chrome-app #menu .command:hover {
+  background-color: #ccc;
+}
+
+body.chrome-app #menu .command span {
+  display: none;
+}
+
+body.chrome-app #menu #filename {
+  color: #333;
+  line-height: 30px;
+}
+
+body.chrome-app #menu #filename img.storage-icon {
+  margin-right: 0px;
+  opacity: 1.0;
+}
+
+body.chrome-app #recent-button {
+  /*display: none;*/
+}
+
+body.chrome-app #sync-button {
+  /*display: none;*/
+  background: #ccc;
+  border-color: #999;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #999;
+  font-size: 90%;
+  margin-left: 20px;
+  padding: 0px 7px;
+  line-height: 22px;
+  min-width: 0;
+}
+
+body.chrome-app #menu #sync-button.command span {
+  display: inline-block;
+}
+
+body.chrome-app #menu .left {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+}
+
+body.chrome-app #menu .right {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+}
+
+body.chrome-app #menu #filename {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+}
+
+body.chrome-app #preview-markdown-esc-message {
+  line-height: 40px;
+  color: #333;
+}
+
+@media screen and (max-width: 800px) {
+  #header {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  div#main ,
+  div.dialog,
+  input,
+  button {
+    font-size:10pt;
+    font-weight:normal;  
+  }
+
+  #filename .storage-icon {
+    display: inline;
+  }
+} 
+
+
+#window-close-button {
+  width: auto;
+  font-size: 150%;
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+  cursor: pointer;
+}
+
+#link-window {
+  position: absolute;
+  z-index: 100000;
+  background-color: #ddd;
+}
+
+#link-window-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  padding: 10px;
+  border-bottom: 1px solid #999;
+}
+
+#link-window-header .cancel-button:hover {
+  cursor: pointer;
+}
+
+#link-window webview {
+  width: 100%;
+}
