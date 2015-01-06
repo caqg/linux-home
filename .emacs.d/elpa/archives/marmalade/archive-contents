@@ -1895,8 +1895,10 @@
 	      [(0 1)
 	       nil "Become an Emacs master" single])
  (marshal .
-	  [(0 2 0)
+	  [(0 3 1)
 	   ((eieio
+	     (1 4))
+	    (json
 	     (1 4)))
 	   "eieio extension for automatic (un)marshalling" single])
  (marmalade-upload .
