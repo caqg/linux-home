@@ -5,7 +5,7 @@ source $HOME/.vimrc
 set guicursor=a:block
 "set guifont=Terminal\ 14
 "set guifont=Monospace\ Regular\ 10
-set guifont=Ubuntu\ Mono\ Regular\ 10
+set guifont=Ubuntu\ Mono\ Regular\ 13
 set guioptions+=a
 set guioptions+=b
 set guioptions+=h
