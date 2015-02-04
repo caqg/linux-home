@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "sane-term" "sane-term.el" (21683 8115 796009
-;;;;;;  260000))
+;;;### (autoloads nil "sane-term" "sane-term.el" (21713 52720 597477
+;;;;;;  616000))
 ;;; Generated autoloads from sane-term.el
 
 (autoload 'sane-term-create "sane-term" "\

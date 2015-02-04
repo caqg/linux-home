@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "pp+" "pp+.el" (21683 8116 132009 252000))
+;;;### (autoloads nil "pp+" "pp+.el" (21713 52723 313829 632000))
 ;;; Generated autoloads from pp+.el
 
 (defvar pp-eval-expression-print-length nil "\

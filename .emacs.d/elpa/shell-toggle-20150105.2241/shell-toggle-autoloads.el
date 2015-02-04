@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "shell-toggle" "shell-toggle.el" (21683 8115
-;;;;;;  416009 270000))
+;;;### (autoloads nil "shell-toggle" "shell-toggle.el" (21713 52720
+;;;;;;  233430 218000))
 ;;; Generated autoloads from shell-toggle.el
 
 (autoload 'shell-toggle-cd "shell-toggle" "\

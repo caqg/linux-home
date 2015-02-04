@@ -4,7 +4,7 @@
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
 ;;;### (autoloads nil "color-theme-solarized" "color-theme-solarized.el"
-;;;;;;  (21683 8125 216009 25000))
+;;;;;;  (21713 52875 159739 748000))
 ;;; Generated autoloads from color-theme-solarized.el
 
 (autoload 'color-theme-solarized "color-theme-solarized" "\
@@ -32,7 +32,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads nil "solarized-definitions" "solarized-definitions.el"
-;;;;;;  (21683 8125 208009 25000))
+;;;;;;  (21713 52875 155739 521000))
 ;;; Generated autoloads from solarized-definitions.el
 
 (when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
@@ -40,8 +40,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads nil nil ("color-theme-solarized-pkg.el" "solarized-dark-theme.el"
-;;;;;;  "solarized-light-theme.el" "solarized-theme.el") (21683 8125
-;;;;;;  260704 470000))
+;;;;;;  "solarized-light-theme.el" "solarized-theme.el") (21713 52875
+;;;;;;  182476 982000))
 
 ;;;***
 
