@@ -21,7 +21,9 @@
         )
     (funcall (or (get sym 'custom-set) 'set) sym mode)
     ;; (set-frame-configuration cfc)
-    (color-theme-solarized mode)
+    ;;(color-theme-solarized mode)
+    (mapc 'frame-set-background-mode (frame-list))
+    (color-theme-solarized)
     (adjust-paren-face-fg)))
 
 (defun set-color-theme-solarized-light ()
