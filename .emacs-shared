@@ -189,6 +189,11 @@
               (font-lock-mode 1)
               (local-set-key "\C-c\C-v" 'view-mode)))
 
+(add-hook 'markdown-mode-hook
+          #'(lambda ()
+              (setq tab-width 8)
+              (local-set-key "\C-c\C-v" 'view-mode)))
+
 (add-hook 'pascal-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
