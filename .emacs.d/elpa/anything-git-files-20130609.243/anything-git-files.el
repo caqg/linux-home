@@ -1,8 +1,8 @@
 ;;; anything-git-files.el --- anything for git files
 
 ;; Author: INA Lintaro <tarao.gnn at gmail.com>
-;; Version: 20130609.243
-;; X-Original-Version: 0.1
+;; Version: 0.1
+;; Package-Version: 20130609.243
 ;; Package-Requires: ((anything "1.3.9"))
 ;; Keywords: anything, git
 

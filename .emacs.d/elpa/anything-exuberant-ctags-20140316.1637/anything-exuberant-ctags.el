@@ -21,8 +21,8 @@
 ;; the Free Software Foundation, Inc., 51 Franklin Street, Fifth
 ;; Floor, Boston, MA 02110-1301, USA.
 
-;; Version: 20140316.1637
-;; X-Original-Version: 0.1.2
+;; Version: 0.1.2
+;; Package-Version: 20140316.1637
 ;; Author: Kenichirou Oyama <k1lowxb@gmail.com>
 ;; URL: http://code.101000lab.org
 ;; Keywords: anything, exuberant ctags

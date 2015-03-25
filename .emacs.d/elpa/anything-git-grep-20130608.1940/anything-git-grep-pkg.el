@@ -2,3 +2,6 @@
   '((anything "1.3.9"))
   :url "https://github.com/mechairoi/anything-git-grep" :keywords
   '("anything" "git"))
+;; Local Variables:
+;; no-byte-compile: t
+;; End:

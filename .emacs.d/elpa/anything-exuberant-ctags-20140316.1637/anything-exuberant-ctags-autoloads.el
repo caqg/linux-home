@@ -1,12 +1,10 @@
 ;;; anything-exuberant-ctags-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (anything-exuberant-ctags-toggle-cache anything-exuberant-ctags-disable-cache
-;;;;;;  anything-exuberant-ctags-enable-cache anything-exuberant-ctags-select-from-here
-;;;;;;  anything-exuberant-ctags-select) "anything-exuberant-ctags"
-;;;;;;  "anything-exuberant-ctags.el" (21339 19044 164675 104000))
+;;;### (autoloads nil "anything-exuberant-ctags" "anything-exuberant-ctags.el"
+;;;;;;  (21778 25813 34897 348000))
 ;;; Generated autoloads from anything-exuberant-ctags.el
 
 (autoload 'anything-exuberant-ctags-select "anything-exuberant-ctags" "\
@@ -39,16 +37,9 @@ Toggle tag file cache directory status.
 
 ;;;***
 
-;;;### (autoloads nil nil ("anything-exuberant-ctags-pkg.el") (21339
-;;;;;;  19044 273017 241000))
-
-;;;***
-
-(provide 'anything-exuberant-ctags-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; anything-exuberant-ctags-autoloads.el ends here

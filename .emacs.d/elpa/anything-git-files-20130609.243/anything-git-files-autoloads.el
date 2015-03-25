@@ -1,11 +1,10 @@
 ;;; anything-git-files-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (anything-git-files anything-git-files:submodule-sources
-;;;;;;  anything-git-files:git-p) "anything-git-files" "anything-git-files.el"
-;;;;;;  (21339 19043 596675 90000))
+;;;### (autoloads nil "anything-git-files" "anything-git-files.el"
+;;;;;;  (21778 25812 706908 4000))
 ;;; Generated autoloads from anything-git-files.el
 
 (autoload 'anything-git-files:git-p "anything-git-files" "\
@@ -31,16 +30,9 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("anything-git-files-pkg.el") (21339 19043
-;;;;;;  686938 453000))
-
-;;;***
-
-(provide 'anything-git-files-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; anything-git-files-autoloads.el ends here

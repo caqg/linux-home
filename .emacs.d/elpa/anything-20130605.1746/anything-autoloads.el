@@ -1,10 +1,10 @@
 ;;; anything-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (anything-other-buffer anything-at-point anything)
-;;;;;;  "anything" "anything.el" (21339 18672 920665 868000))
+;;;### (autoloads nil "anything" "anything.el" (21778 25815 546815
+;;;;;;  717000))
 ;;; Generated autoloads from anything.el
 
 (autoload 'anything "anything" "\
@@ -99,64 +99,8 @@ Call `anything' with only ANY-SOURCES and ANY-BUFFER as args.
 
 ;;;***
 
-;;;### (autoloads (anything-ctags-current-file anything-xrandr-set
-;;;;;;  anything-c-apropos anything-ucs anything-ratpoison-commands
-;;;;;;  anything-c-run-external-command anything-eshell-history anything-esh-pcomplete
-;;;;;;  anything-apt anything-world-time anything-select-xfont anything-top
-;;;;;;  anything-create anything-execute-anything-command anything-call-source
-;;;;;;  anything-surfraw anything-calcul-expression anything-eval-expression-with-eldoc
-;;;;;;  anything-eval-expression anything-yaoddmuse-emacswiki-post-library
-;;;;;;  anything-yaoddmuse-emacswiki-edit-or-view anything-all-mark-rings
-;;;;;;  anything-global-mark-ring anything-mark-ring anything-simple-call-tree
-;;;;;;  anything-bookmark-ext anything-manage-advice anything-M-x
-;;;;;;  anything-filelist+ anything-filelist anything-c-etags-select
-;;;;;;  anything-do-pdfgrep anything-do-zgrep anything-do-grep anything-dired-hardlink-file
-;;;;;;  anything-dired-symlink-file anything-dired-copy-file anything-dired-rename-file
-;;;;;;  anything-insert-file anything-write-file anything-find-files
-;;;;;;  anything-c-copy-files-async anything-regexp anything-org-headlines
-;;;;;;  anything-browse-code anything-occur anything-list-emacs-process
-;;;;;;  anything-timers anything-bm-list anything-eev-anchors anything-emms
-;;;;;;  anything-org-keywords anything-man-woman anything-register
-;;;;;;  anything-c-insert-latex-math anything-c-pp-bookmarks anything-bookmarks
-;;;;;;  anything-colors anything-firefox-bookmarks anything-w3m-bookmarks
-;;;;;;  anything-locate anything-bbdb anything-buffers-list anything-for-buffers
-;;;;;;  anything-yahoo-suggest anything-google-suggest anything-imenu
-;;;;;;  anything-gentoo anything-minibuffer-history anything-show-kill-ring
-;;;;;;  anything-info-at-point anything-recentf anything-for-files
-;;;;;;  anything-mini anything-c-reset-adaptative-history anything-c-set-variable
-;;;;;;  anything-c-call-interactively anything-w32-shell-execute-open-file
-;;;;;;  anything-lisp-completion-or-file-name-at-point anything-lisp-completion-at-point-or-indent
-;;;;;;  anything-c-complete-file-name-at-point anything-lisp-completion-at-point
-;;;;;;  anything-completion-mode anything-yaoddmuse-cache-pages anything-c-bmkext-run-edit
-;;;;;;  anything-c-bookmark-run-delete anything-c-bookmark-run-jump-other-window
-;;;;;;  anything-yank-text-at-point anything-c-grep-run-save-buffer
-;;;;;;  anything-c-grep-run-other-window-action anything-c-grep-run-default-action
-;;;;;;  anything-c-grep-run-persistent-action anything-c-goto-next-file
-;;;;;;  anything-c-goto-precedent-file anything-dired-mode anything-ff-run-kill-buffer-persistent
-;;;;;;  anything-ff-persistent-delete anything-ff-properties-persistent
-;;;;;;  anything-ff-run-print-file anything-ff-run-etags anything-ff-run-gnus-attach-files
-;;;;;;  anything-ff-run-locate anything-ff-run-open-file-externally
-;;;;;;  anything-ff-run-switch-other-frame anything-ff-run-switch-other-window
-;;;;;;  anything-ff-run-switch-to-eshell anything-ff-run-complete-fn-at-point
-;;;;;;  anything-ff-run-delete-file anything-ff-run-hardlink-file
-;;;;;;  anything-ff-run-symlink-file anything-ff-run-ediff-merge-file
-;;;;;;  anything-ff-run-ediff-file anything-ff-run-eshell-command-on-file
-;;;;;;  anything-ff-run-load-file anything-ff-run-byte-compile-file
-;;;;;;  anything-ff-run-rename-file anything-ff-run-copy-file anything-ff-run-zgrep
-;;;;;;  anything-ff-run-pdfgrep anything-ff-run-grep anything-ff-run-switch-to-history
-;;;;;;  anything-ff-run-toggle-auto-update anything-buffer-run-ediff
-;;;;;;  anything-buffer-switch-to-elscreen anything-buffer-switch-other-frame
-;;;;;;  anything-buffer-switch-other-window anything-buffer-run-query-replace
-;;;;;;  anything-buffer-run-query-replace-regexp anything-buffer-run-zgrep
-;;;;;;  anything-buffer-run-grep anything-buffer-run-kill-buffers
-;;;;;;  anything-buffer-save-persistent anything-buffer-revert-persistent
-;;;;;;  anything-buffer-diff-persistent anything-toggle-all-marks
-;;;;;;  anything-unmark-all anything-mark-all anything-insert-buffer-name
-;;;;;;  anything-test-sources anything-etags-help anything-pdfgrep-help
-;;;;;;  anything-grep-help anything-generic-file-help anything-read-file-name-help
-;;;;;;  anything-ff-help anything-c-buffer-help anything-configuration)
-;;;;;;  "anything-config" "anything-config.el" (21339 18672 272665
-;;;;;;  852000))
+;;;### (autoloads nil "anything-config" "anything-config.el" (21778
+;;;;;;  25815 534816 108000))
 ;;; Generated autoloads from anything-config.el
 
 (autoload 'anything-configuration "anything-config" "\
@@ -1038,8 +982,8 @@ http://ctags.sourceforge.net/
 
 ;;;***
 
-;;;### (autoloads (anything-mp-toggle-match-plugin) "anything-match-plugin"
-;;;;;;  "anything-match-plugin.el" (21339 18673 120665 873000))
+;;;### (autoloads nil "anything-match-plugin" "anything-match-plugin.el"
+;;;;;;  (21778 25815 506817 17000))
 ;;; Generated autoloads from anything-match-plugin.el
 
 (autoload 'anything-mp-toggle-match-plugin "anything-match-plugin" "\
@@ -1054,15 +998,13 @@ i.e anything-match-plugin.
 ;;;;;;  "anything-grep.el" "anything-gtags.el" "anything-ipa.el"
 ;;;;;;  "anything-menu.el" "anything-migemo.el" "anything-multi-sources.el"
 ;;;;;;  "anything-obsolete.el" "anything-pkg.el" "anything-show-completion.el"
-;;;;;;  "anything-startup.el") (21339 18673 325751 703000))
+;;;;;;  "anything-startup.el") (21778 25815 616452 321000))
 
 ;;;***
 
-(provide 'anything-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; anything-autoloads.el ends here
