@@ -1,11 +1,14 @@
 #!/bin/sh
 
+date; echo;
+
 sudo apt-file           update
 sudo apt-file -a i386   update
 sudo apt-get            update
 sudo apt-get -y         upgrade
 sudo apt-get -y         autoremove
 sudo apt-get -y         autoclean
-date
+
+echo; date;
 
 # end tidy-apt
