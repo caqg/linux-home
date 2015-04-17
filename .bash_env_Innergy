@@ -9,7 +9,6 @@ export SOFTWARE_INNERGY=/work/Innergy/Software/Innergy
 
 # export PATH=${INNERGY_ROOT}/bin:$PATH
 export PATH=${SOFTWARE}/bin:$PATH:.
-export PATH=${SOFTWARE_INNERGY}/bin:$PATH:.
 
 export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
 export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
