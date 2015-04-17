@@ -1,7 +1,4 @@
 (1
- (firestarter .
-	      [(0 0 1)
-	       nil "Execute (shell) commands on save" single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -1367,7 +1364,7 @@
 	   [(0 0 1)
 	    nil "get stuff from pinboard" single])
  (picpocket .
-	    [(8)
+	    [(9)
 	     nil "Image viewer" single])
  (pickup .
 	 [(0 0 3)
@@ -2066,7 +2063,7 @@
 		     (1 2 0)))
 		   "completing-read over all files in Git" single])
  (magit .
-	[(1 4 0)
+	[(1 4 1)
 	 ((cl-lib
 	   (0 5))
 	  (git-commit-mode
@@ -3185,6 +3182,9 @@
  (fit-frame .
 	    [(0)
 	     nil "Resize a frame.  In particular, fit a frame to its buffers." single])
+ (firestarter .
+	      [(0 0 2)
+	       nil "Execute (shell) commands on save" single])
  (fiplr .
 	[(0 1 3)
 	 nil "Fuzzy finder for files in a project." single])
