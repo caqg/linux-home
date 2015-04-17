@@ -193,9 +193,8 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(ecb-source-path
    (quote
     (("/home/cesar" "Home")
-     ("/home/cesar/Work" "Work")
-     ("/repos" "Repos")
-     ("/verifysys" "VerifySys"))))
+     ("/work/Innergy/Software" "Software")
+     ("/work/Innergy/Hardware" "Hardware"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("leftright-analyse" "left1" "leftright1")))
  '(ecb-version-check nil)
