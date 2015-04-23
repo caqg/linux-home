@@ -292,7 +292,7 @@
 	((:url . "http://www.dr-qubit.org/emacs.php")
 	 (:keywords "extensions" "data structures" "heap" "priority queue"))])
  (hydra .
-	[(0 12 1)
+	[(0 13 1)
 	 ((cl-lib
 	   (0 5)))
 	 "Make bindings that stick around." tar
@@ -431,7 +431,7 @@
 	    ((:url . "http://elpa.gnu.org/packages/omn-mode.html")
 	     (:keywords))])
  (org .
-      [(20150413)
+      [(20150420)
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)
@@ -527,7 +527,7 @@
 	     ((:url . "http://elpa.gnu.org/packages/svg-clock.html")
 	      (:keywords "demo" "svg" "clock"))])
  (swiper .
-	 [(0 2 0)
+	 [(0 3 0)
 	  ((emacs
 	    (24 1)))
 	  "Isearch with an overview. Oh, man!" tar
