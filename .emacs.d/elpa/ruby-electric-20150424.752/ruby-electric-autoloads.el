@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ruby-electric" "ruby-electric.el" (21713 52720
-;;;;;;  949523 461000))
+;;;### (autoloads nil "ruby-electric" "ruby-electric.el" (21819 7206
+;;;;;;  981396 895000))
 ;;; Generated autoloads from ruby-electric.el
 
 (autoload 'ruby-electric-mode "ruby-electric" "\
