@@ -4088,7 +4088,7 @@
 	 [(0 1 0)
 	  nil "eldoc mode for clojure" single])
  (clj-refactor .
-	       [(0 13 0)
+	       [(1 0 4)
 		((s
 		  (1 8 0))
 		 (dash
@@ -4096,11 +4096,11 @@
 		 (yasnippet
 		  (0 6 1))
 		 (paredit
-		  (22))
+		  (25 -2))
 		 (multiple-cursors
 		  (1 2 2))
 		 (cider
-		  (0 6 0)))
+		  (0 8 1)))
 		"A collection of clojure refactoring functions" single])
  (clj-mode .
 	   [(0 9)
@@ -4440,13 +4440,6 @@
 	      (auto-complete
 	       (1 4)))
 	     "Auto-complete backend for geiser" tar])
- (ac-cider-compliment .
-		      [(0 1 0)
-		       ((cider
-			 (0 5 0))
-			(auto-complete
-			 (1 4)))
-		       "auto-complete sources for Clojure using" single])
  (ac-cider .
 	   [(0 2 0)
 	    ((cider
