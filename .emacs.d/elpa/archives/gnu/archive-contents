@@ -63,7 +63,7 @@
 			((:url . "http://www.gnuvola.org/software/aa2u/")
 			 (:keywords "ascii" "unicode" "box-drawing"))])
  (auctex .
-	 [(11 88 4)
+	 [(11 88 5)
 	  nil "Integrated environment for *TeX*" tar
 	  ((:url . "http://www.gnu.org/software/auctex/"))])
  (aumix-mode .
@@ -292,7 +292,7 @@
 	((:url . "http://www.dr-qubit.org/emacs.php")
 	 (:keywords "extensions" "data structures" "heap" "priority queue"))])
  (hydra .
-	[(0 13 1)
+	[(0 13 2)
 	 ((cl-lib
 	   (0 5)))
 	 "Make bindings that stick around." tar
