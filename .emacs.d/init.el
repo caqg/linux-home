@@ -1,19 +1,11 @@
 ;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
 
-(load-file "~/.emacs-shared")
-(message "Done loading ~/.emacs-shared (legacy)")
+(load-file "~/.emacs.d/init-legacy.el")
+(message "Done loading legacy init")
 (load-library "cl")
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(load-library "workarounds")
 
-(defun zap-up-to-char (arg char)
-  "Kill up to, but not including, ARG'th occurrence of CHAR.
-Case is ignored if `case-fold-search' is non-nil in the current buffer.
-Goes backward if ARG is negative; error if CHAR not found."
-  (interactive "p\ncZap to char: ")
-  (kill-region (point) (progn
-                         (search-forward (char-to-string char) nil nil arg)
-                         (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
-                         )))
 
 (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
 (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
@@ -30,17 +22,10 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 (package-initialize)
 
-;; (when (and (= emacs-major-version 24)
-;;            (< emacs-minor-version 4))
-;;   (setq compilation-directory-matcher
-;;         '("\\(?:Entering\\|Leavin\\(g\\)\\) directory [`']\\(.+\\)'$" (2 . 1))))
-
-;; These are known to work in v24, but may have existed since before.
 (which-function-mode 1)
 (filesets-init)
 
-(when t                          ;working around a problem in emacs24
-  (slime-setup))
+(slime-setup)
 
 (pending-delete-mode t)
 (electric-indent-mode -1)
@@ -113,11 +98,7 @@ Goes backward if ARG is negative; error if CHAR not found."
 
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
-  (set-default-xtitle)
-  ;; (set-color-theme-solarized-dark)
-  ;; (set-color-theme-solarized-light)
-  ;; (cq/enable-dark-solarized)
-  )
+  (set-default-xtitle))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
