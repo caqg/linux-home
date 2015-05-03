@@ -3,122 +3,111 @@
 (load-file "~/.emacs-shared")
 (message "Done loading ~/.emacs-shared (legacy)")
 (load-library "cl")
-;;(setq load-path (cons "~/.emacs.d" load-path))
-(setq load-path (cons "~/.emacs.d/lisp" load-path))
-;;(setq load-path (cons "~/.emacs.d/lisp/emacs-color-theme-solarized" load-path))
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
-(cond ((and (string-match "^GNU Emacs" (emacs-version))
-            (>= emacs-major-version 21)
-            window-system)
-       (if (>= emacs-major-version 22)
-           (setq font-lock-support-mode 'jit-lock-mode)
-         (setq font-lock-support-mode 'lazy-lock-mode))
-       (when (>= emacs-major-version 21)
-         (defun zap-up-to-char (arg char)
-           "Kill up to, but not including, ARG'th occurrence of CHAR.
+(defun zap-up-to-char (arg char)
+  "Kill up to, but not including, ARG'th occurrence of CHAR.
 Case is ignored if `case-fold-search' is non-nil in the current buffer.
 Goes backward if ARG is negative; error if CHAR not found."
-           (interactive "p\ncZap to char: ")
-           (kill-region (point) (progn
-                                  (search-forward (char-to-string char) nil nil arg)
-                                  (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
-                                  ))))
+  (interactive "p\ncZap to char: ")
+  (kill-region (point) (progn
+                         (search-forward (char-to-string char) nil nil arg)
+                         (goto-char (if (> arg 0) (1- (point)) (1+ (point))))
+                         )))
 
-       (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
-       (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
-       (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
-       (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
-       (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
-       (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
+(add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
+(add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
+(add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
+(add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
+(add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
+(add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
 
-       (add-hook 'dired-load-hook
-                 #'(lambda ()
-                     ;; Bind dired-x-find-file.
-                     (setq dired-x-hands-off-my-keys nil)
-                     (load "dired-x")))
+(add-hook 'dired-load-hook
+          #'(lambda ()
+              ;; Bind dired-x-find-file.
+              (setq dired-x-hands-off-my-keys nil)
+              (load "dired-x")))
 
-       (package-initialize)
+(package-initialize)
 
-       (when (and (= emacs-major-version 24)
-                  (< emacs-minor-version 4))
-         (setq compilation-directory-matcher
-               '("\\(?:Entering\\|Leavin\\(g\\)\\) directory [`']\\(.+\\)'$" (2 . 1))))
+;; (when (and (= emacs-major-version 24)
+;;            (< emacs-minor-version 4))
+;;   (setq compilation-directory-matcher
+;;         '("\\(?:Entering\\|Leavin\\(g\\)\\) directory [`']\\(.+\\)'$" (2 . 1))))
 
-       ;; These are known to work in v24, but may have existed since before.
-       (which-function-mode 1)
-       (filesets-init)
+;; These are known to work in v24, but may have existed since before.
+(which-function-mode 1)
+(filesets-init)
 
-       (when t                          ;working around a problem in emacs24
-         (slime-setup))
+(when t                          ;working around a problem in emacs24
+  (slime-setup))
 
-       (pending-delete-mode t)
-       (electric-indent-mode -1)
+(pending-delete-mode t)
+(electric-indent-mode -1)
 
-       ;; Known to work at least since v23, again don't know if before.
-       (defun gamegrid-add-score-with-update-game-score-1( file target score ))
+;; Known to work at least since v23, again don't know if before.
+(defun gamegrid-add-score-with-update-game-score-1( file target score ))
 
-       (require 'dired-x)
-       (require 'dired-toggle-sudo)
-       (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
+(require 'dired-x)
+(require 'dired-toggle-sudo)
+(define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
 
-       (require 'xcscope)
-       (cscope-setup)
+(require 'xcscope)
+(cscope-setup)
 
-       (require 'org-install)
-       (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
-       (global-set-key "\C-cl" 'org-store-link)
-       (global-set-key "\C-ca" 'org-agenda)
-       ;; (global-set-key "\C-cb" 'org-iswitchb)
-       (global-set-key "\C-cc" 'org-capture)
-       (setq org-todo-keywords
-             '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
-       (setq org-log-done t)            ; or '(done) instead of t
-       (setq org-agenda-include-diary t)
-       (add-hook 'org-mode-hook #'(lambda () (require 'vc)))
-       (add-hook 'org-mode-hook 'turn-on-font-lock)
+(require 'org-install)
+(add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cc" 'org-capture)
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
+(setq org-log-done t)            ; or '(done) instead of t
+(setq org-agenda-include-diary t)
+(add-hook 'org-mode-hook #'(lambda () (require 'vc)))
+(add-hook 'org-mode-hook 'turn-on-font-lock)
 
-       (require 'remember)
-       (when (and (= emacs-major-version 24)
-                  (< emacs-minor-version 4))
-         (require 'org-remember)
-         (org-remember-insinuate))
-       (setq org-directory "~/Notes")
-       (setq org-default-notes-file (concat org-directory "/my-notes.org"))
-       (define-key global-map "\C-cr" 'org-remember)
+(require 'remember)
+(when (and (= emacs-major-version 24)
+           (< emacs-minor-version 4))
+  (require 'org-remember)
+  (org-remember-insinuate))
+(setq org-directory "~/Notes")
+(setq org-default-notes-file (concat org-directory "/my-notes.org"))
+(define-key global-map "\C-cr" 'org-remember)
 
-       (require 'semantic)
-       (global-ede-mode t)
-       (setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
+(require 'semantic)
+(global-ede-mode t)
+(setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
                                         ;ecb 2.40
-       (require 'cq-x-utils)
-       (require 'parenface)
+(require 'cq-x-utils)
+(require 'parenface)
 
-       ;; tabbar (already initialized)
-       (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
-                                        (tabset object &optional append))
-         "Present the tab bar tab sets in ascending order by buffer name."
-         (let* ((tabs (tabbar-tabs tabset))
-                (sorted (sort tabs #'(lambda (a b)
-                                       (string< (buffer-name (car a))
-                                                (buffer-name (car b)))))))
-           ;; (message "sorted-->%s" sorted)
-           (set tabset sorted)))
-       (ad-activate 'tabbar-add-tab 'compile-it)
+;; tabbar (already initialized)
+(defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
+                                 (tabset object &optional append))
+  "Present the tab bar tab sets in ascending order by buffer name."
+  (let* ((tabs (tabbar-tabs tabset))
+         (sorted (sort tabs #'(lambda (a b)
+                                (string< (buffer-name (car a))
+                                         (buffer-name (car b)))))))
+    ;; (message "sorted-->%s" sorted)
+    (set tabset sorted)))
+(ad-activate 'tabbar-add-tab 'compile-it)
 
-       (cond ((>= emacs-major-version 23)
-              (require 'emacs23-theme-init)
-              (set-color-theme-solarized-light)
-              ;;(require 'solarized-theme)
-              ;;(require 'emacs24-theme-init)
-              )
-             (nil                    ;work in progress
-              (add-to-list 'custom-theme-load-path "~/.emacs.d/solarized-emacs")
-              (require 'solarized)
-              (load-theme 'solarized-dark)
-              ))
+(cond ((and nil (>= emacs-major-version 25) window-system)
+       (load-theme 'solarized t)
+       (require 'emacs25-theme-init))
+      ((and t (>= emacs-major-version 23) window-system)
+       (add-to-list 'load-path
+                    "~/.emacs.d/lisp/emacs-color-theme-solarized/")
+       (color-theme-initialize)
+       (require 'emacs23-theme-init)
+       (color-theme-solarized)
        ))
 
-(setq-default ediff-auto-refine 'on)
+(setq-default ediff-auto-refine 'off)
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
 
@@ -126,7 +115,8 @@ Goes backward if ARG is negative; error if CHAR not found."
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle)
   ;; (set-color-theme-solarized-dark)
-  (set-color-theme-solarized-light)
+  ;; (set-color-theme-solarized-light)
+  ;; (cq/enable-dark-solarized)
   )
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
@@ -161,7 +151,7 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(cursor-color "#cccccc")
  '(custom-safe-themes
    (quote
-    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-postfix")
  '(delete-old-versions t)
@@ -266,7 +256,7 @@ Goes backward if ARG is negative; error if CHAR not found."
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(package-selected-packages
    (quote
-    (zenburn-theme yaoddmuse xml-rpc xcscope wiki-nav wiki wget vlf vkill vimrc-mode viewer vector-utils uuid undo-tree ubuntu-theme thing-cmds tdd tabbar systemtap-mode syslog-mode syntax-subword sudo-ext string-utils string-edit strie ssh-config-mode ssh sparkline sml-mode slime-annot shell-toggle shell-here shell-command sane-term s-buffer ruby-tools ruby-test-mode ruby-interpolation ruby-hash-syntax ruby-end ruby-electric relative-line-numbers rainbow-mode python-mode python-info px prolog preproc-font-lock pp+ pod-mode perl-myvar perl-completion peep-dired pcsv path-headerline-mode pastels-on-dark-theme paredit-menu paredit-everywhere pandoc-mode orgtbl-show-header org-pandoc org-mime org-journal org-jira org-download org-context org-cliplink org-bullets org-ac org noctilux-theme nasm-mode move-dup monochrome-theme markdown-toc lib-requires kv jira javadoc-lookup javadoc-help ipython interval-tree http-post-simple ht header2 gtags gscholar-bibtex gitignore-mode gitconfig-mode gitattributes-mode git-rebase-mode git-commit-mode git ggtags gandalf-theme form-feed ess-smart-underscore ess-R-object-popup ess-R-data-view edit-list ediprolog edebug-x ecb display-theme dired-toggle-sudo dired-narrow dircmp dict-tree debbugs csv-nav csharp-mode cperl-mode company-quickhelp company-math company-inf-ruby company-ess company-c-headers color-theme-solarized color-theme-emacs-revert-theme codesearch cmake-mode charmap cedit calmer-forest-theme bubbleberry-theme bison-mode bigint backtrace-mode auto-complete-exuberant-ctags auto-complete-c-headers auto-complete-auctex auctex apt-utils anything-replace-string anything-git-grep anything-git-files anything-exuberant-ctags anti-zenburn-theme ant all-ext aggressive-indent aggressive-fill-paragraph afternoon-theme aes ada-ref-man ada-mode ac-c-headers)))
+    (color-theme-solarized yaoddmuse xml-rpc xcscope wiki-nav wiki wget vlf vkill vimrc-mode viewer vector-utils uuid undo-tree thing-cmds tdd tabbar systemtap-mode syslog-mode syntax-subword sudo-ext string-utils string-edit strie ssh-config-mode ssh sparkline sml-mode slime-annot shell-toggle shell-here shell-command sane-term s-buffer ruby-tools ruby-test-mode ruby-interpolation ruby-hash-syntax ruby-end ruby-electric relative-line-numbers rainbow-mode python-mode python-info px prolog preproc-font-lock pp+ pod-mode perl-myvar perl-completion peep-dired pcsv path-headerline-mode paredit-menu paredit-everywhere pandoc-mode orgtbl-show-header org-pandoc org-mime org-journal org-jira org-download org-context org-cliplink org-bullets org-ac org nasm-mode move-dup markdown-toc lib-requires kv jira javadoc-lookup javadoc-help ipython interval-tree http-post-simple ht header2 gtags gscholar-bibtex gitignore-mode gitconfig-mode gitattributes-mode git-rebase-mode git-commit-mode git ggtags form-feed ess-smart-underscore ess-R-object-popup ess-R-data-view edit-list ediprolog edebug-x ecb dired-toggle-sudo dired-narrow dircmp dict-tree debbugs csv-nav csharp-mode cperl-mode company-quickhelp company-math company-inf-ruby company-ess company-c-headers codesearch cmake-mode charmap cedit bison-mode bigint backtrace-mode auto-complete-exuberant-ctags auto-complete-c-headers auto-complete-auctex auctex apt-utils anything-replace-string anything-git-grep anything-git-files anything-exuberant-ctags ant all-ext aggressive-indent aggressive-fill-paragraph aes ada-ref-man ada-mode ac-c-headers)))
  '(recentf-mode t)
  '(require-final-newline nil)
  '(rmail-file-name "~/mail/babyl/RMAIL")
@@ -318,11 +308,5 @@ Goes backward if ARG is negative; error if CHAR not found."
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes)))
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#fdf6e3" :foreground "#657b83" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
-(message "Now all done in init.el.")
+(unless window-system (normal-erase-is-backspace-mode 0))
