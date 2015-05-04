@@ -2,11 +2,11 @@
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
   <wallpaper>
-    <name>Utopic Unicorn</name>
-    <filename>/usr/share/backgrounds/Utopic_Unicorn__by_Bedis_ElAch&#x41A;che.jpg</filename>
+    <name>Joy</name>
+    <filename>/usr/share/images/desktop-base/joy.xml</filename>
     <options>zoom</options>
-    <shade_type>solid</shade_type>
-    <pcolor>#000000</pcolor>
-    <scolor>#000000</scolor>
+    <shade_type>horizontal</shade_type>
+    <pcolor>#0099cc</pcolor>
+    <scolor>#006699</scolor>
   </wallpaper>
 </wallpapers>

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <session>
-	 <window x="37" y="24" width="1883" height="1056" active-tab="1" role="epiphany-window-3d1c0d6">
-	 	 <embed url="http://www.ubuntu.com/about/about-ubuntu/conduct" title="Ubuntu Code of Conduct v2.0 | Ubuntu"/>
-	 	 <embed url="about:overview" title="Most Visited"/>
+	 <window x="39" y="53" width="1881" height="1027" active-tab="2" role="epiphany-window-7910ba99">
+	 	 <embed url="data:text/html;charset=UTF-8;base64,PGgxPk9jdGF2ZSBMaWJyYXJ5PC9oMT4KCjxwPjIwMTUtMDItMDggMDI6NTM6MzJVVCAoY2VzYXJAY2VzYXItVTY0LTE0KTwvcD4KCjx1bD4KPGxpPk5ldy48L2xpPgo8L3VsPgo=" title="Blank page"/>
+	 	 <embed url="data:text/html;charset=UTF-8;base64,PGgxPnFzeW5saWIgLS0gcXVlcnkgYSBzeW5saWIgZmlsZTwvaDE+Cgo8aDI+U1lOT1BTSVM8L2gyPgoKPHA+PGNvZGU+cXN5bmxpYjwvY29kZT4gPGVtPm9wdGlvbnM8L2VtPiA8ZW0+c3lubGliLWZpbGUtbmFtZTwvZW0+PC9wPgoKPGgyPkRFU0NSSVBUSU9OPC9oMj4KCjxwPjxjb2RlPnFzeW5saWI8L2NvZGU+IGlzIG1lYW50IHRvIGV4dHJhY3QgaW4gdGV4dCBmb3JtIGluZm9ybWF0aW9uIGZyb20gYSBTeW5vcHN5cyBMaWJlcnR5CmZvcm1hdCBsaWJyYXJ5ICh3aXRoIGNvbnZlbnRpb25hbCBleHRlbnNpb24gPGVtPi5saWI8L2VtPikuPC9wPgoKPHA+VGhlIGZpcnN0IHZlcnNpb24gb2J0YWlucyBhIG1hcCBvZiBjZWxsIG5hbWVzIHRvIGEgbWFwIG9mIHBvcnQgbmFtZXMgdG8gYWN0aXZlCmNhcGFjaXRhbmNlcy48L3A+Cg==" title="Blank page"/>
+	 	 <embed url="http://gerbv.geda-project.org/" title="gerbv - A Free/Open Source Gerber Viewer"/>
 	 </window>
 </session>

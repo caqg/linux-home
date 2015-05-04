@@ -1,1 +1,0 @@
-var CommonSelector={SPECIAL_CHAR_REGEX:/^[`~!@#\$%\^&\*\(\)\[\]\{\}\-_\+=\\\|'";:,<\.>/\?]+/,binaryInsert:function(b,f,e,a){a||(a=0);for(var c=b.children.length-1,g=e.innerText.toLowerCase();a<=c;){var d=a+Math.floor((c-a)/2);g<f(b.children[d]).toLowerCase()?c=d-1:a=d+1}b.insertBefore(e,b.children[a])}};

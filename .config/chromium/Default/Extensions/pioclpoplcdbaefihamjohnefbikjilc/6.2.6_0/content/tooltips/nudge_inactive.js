@@ -1,2 +1,0 @@
-var locale,authed;window===window.parent&&(Browser.addMessageHandlers({nudgeInactiveUser:msgHandlerNudgeInactiveUser}),Browser.sendToExtension({name:"checkInactivityPeriod"}));function copyHandler(){setTimeout(function(){new TooltipCoordinator(Browser.extension.getURL("content/tooltips/tooltip.html#which=nudgeInactive&locale="+locale+"&authed="+authed),"nudgeInactive","evernoteNudgeInactive")},300);window.removeEventListener("copy",copyHandler)}
-function msgHandlerNudgeInactiveUser(a,b,c){locale=a.locale;authed=a.authed;window.addEventListener("copy",copyHandler)};

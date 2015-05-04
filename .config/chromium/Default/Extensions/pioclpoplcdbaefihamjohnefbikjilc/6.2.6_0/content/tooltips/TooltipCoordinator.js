@@ -1,2 +1,0 @@
-function TooltipCoordinator(b,d,c){var a;Browser.addMessageHandlers({ttc_close:function(b,c,e){b.which===d&&a&&(a.addEventListener("webkitTransitionEnd",function(){a&&a.parentNode&&a.parentNode.removeChild(a);a=null}),a.classList.remove("evernoteTooltipShow"))}});(function(){a=document.createElement("iframe");a.id=c;a.className="evernoteTooltip";a.src=b;a.addEventListener("load",function(){this.classList.add("evernoteTooltipShow")});document.documentElement.appendChild(a)})();Object.preventExtensions(this)}
-Object.preventExtensions(TooltipCoordinator);
