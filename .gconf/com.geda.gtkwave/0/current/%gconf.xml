@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="savefile" mtime="1429886180" type="string">
+		<stringvalue>axi_rtl.gtkw</stringvalue>
+	</entry>
+	<entry name="optimized_vcd" mtime="1429886180" type="string">
+		<stringvalue>0</stringvalue>
+	</entry>
+	<entry name="dumpfile" mtime="1429886180" type="string">
+		<stringvalue>axi_rtl.vcd</stringvalue>
+	</entry>
+	<entry name="pwd" mtime="1429886180" type="string">
+		<stringvalue>/work/Innergy/Hardware/AxiSimulator</stringvalue>
+	</entry>
+	<entry name="rcfile" mtime="1429886180" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+</gconf>
