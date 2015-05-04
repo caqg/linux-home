@@ -61,8 +61,7 @@
               (if (string-match "^GNU Emacs" (emacs-version))
                   (subword-mode 1)
                 (c-subword-mode 1))
-              ;; (auto-fill-mode 1)
-              (c-setup-filladapt)
+              (auto-fill-mode 1)
               (font-lock-mode 1)
               ;;(c-setup-filladapt)
               ;;(filladapt-mode 1)
@@ -78,7 +77,8 @@
 (add-hook 'c-mode-common-hook
           #'(lambda () "Treat PowerView differently than PowerAnalysys"
               (when (and buffer-file-name
-                         (string-match "/PowerView/" buffer-file-name))
+                         (string-match "\/PowerView\/" buffer-file-name))
+                (message "PowerView settings for \"%s\"" buffer-file-name)
                 (setq c-basic-offset 4)
                 (setq indent-tabs-mode nil)
                 ))
@@ -102,13 +102,17 @@
 
 (add-hook 'c-mode-hook
           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-              (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+              (when (and buffer-file-name
+                         (string-match "llvm" buffer-file-name))
+                (message "LLVM settings for \"%s\"" buffer-file-name)
                 (c-set-style "llvm.org")))
           t)
 
 (add-hook 'c++-mode-hook
           #'(lambda () "Treat as LLVM if \"llvm\" appears in the filename."
-              (when (and buffer-file-name (string-match "llvm" buffer-file-name))
+              (when (and buffer-file-name
+                         (string-match "llvm" buffer-file-name))
+                (message "LLVM settings for \"%s\"" buffer-file-name)
                 (c-set-style "llvm.org")))
           t)
 
