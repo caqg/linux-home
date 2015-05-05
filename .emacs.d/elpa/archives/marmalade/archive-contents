@@ -1566,7 +1566,7 @@
 	      (1 6 8)))
 	    "Blog from Org mode to wordpress" tar])
  (org-trello .
-	     [(0 6 9 3)
+	     [(0 6 9 4)
 	      ((request-deferred
 		(0 2 0))
 	       (deferred
@@ -3254,7 +3254,7 @@
        (2 2 0)))
      "Modern API for working with files and directories" single])
  (eyebrowse .
-	    [(0 4 4)
+	    [(0 4 5)
 	     ((dash
 	       (2 7 0)))
 	     "Easy window config switching" single])
