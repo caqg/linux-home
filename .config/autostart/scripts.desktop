@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Scripts in 'scripts' folder
+Exec=/bin/bash -c 'for f in ~/.config/autostart/scripts/*; do eval "$f&"; done'
+Type=Application

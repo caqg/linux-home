@@ -1,0 +1,16 @@
+#!/bin/bash
+
+exec > ~/.my-logs/run-unclutter.log 2>&1
+
+function log-stamp {
+    /bin/date -Ins
+}
+
+progname=$(basename $0)
+
+echo $(log-stamp)  $0
+echo $(log-stamp) ${progname}: killing any old
+/usr/bin/killall unclutter
+echo $(log-stamp) ${progname}: starting new in bg
+/usr/bin/unclutter -idle 0.5 -reset &
+echo $(log-stamp) ${progname}: done "(status $?, pid $!)"
