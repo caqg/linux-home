@@ -63,9 +63,6 @@
 (define-key global-map "\C-cr" 'org-remember)
 
 (require 'semantic)
-(global-ede-mode t)
-(setq stack-trace-on-error nil) ;obsolete variable in Emacs 24.1, needed by
-                                        ;ecb 2.40
 (require 'cq-x-utils)
 (require 'parenface)
 
@@ -197,7 +194,6 @@
  '(gdb-stack-buffer-addresses t)
  '(gdb-use-separate-io-buffer t)
  '(ggtags-global-treat-text t)
- '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)
