@@ -1,0 +1,5 @@
+This directory's existence is needed by a number of background tools.
+
+One example is the ~/.config/autostart/scripts/run-unclutter script.
+So the empty directory is now in Git--the contents are temporary.
+.
