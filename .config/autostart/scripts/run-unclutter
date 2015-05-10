@@ -3,12 +3,12 @@
 exec > ~/.my-logs/run-unclutter.log 2>&1
 
 function log-stamp {
-    /bin/date -Ins
+    /bin/date +%s.%N
 }
 
 progname=$(basename $0)
 
-echo $(log-stamp)  $0
+echo $(/bin/date --rfc-3339=seconds)  $0
 echo $(log-stamp) ${progname}: killing any old
 /usr/bin/killall unclutter
 echo $(log-stamp) ${progname}: starting new in bg
