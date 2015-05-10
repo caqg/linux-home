@@ -1,6 +1,9 @@
 #!/bin/sh
 
 case "$0" in
+*-n)                            # 1431291358.148792484
+        /bin/echo -n `/bin/date +%s.%N`
+        ;;
 *-s)                            # 20131227-223949Z
         /bin/echo -n `/bin/date -u +'%Y%m%d-%H%M%SZ'`
         ;;
