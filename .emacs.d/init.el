@@ -42,10 +42,10 @@
 
 (require 'org-install)
 (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
-(global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
-;; (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cl" 'org-store-link)
 (setq org-todo-keywords
       '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
 (setq org-log-done t)            ; or '(done) instead of t
@@ -225,6 +225,9 @@
  '(mouse-yank-at-point t)
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
+ '(org-catch-invisible-edits (quote smart))
+ '(org-completion-use-ido t)
+ '(org-outline-path-complete-in-steps nil)
  '(org-startup-indented t)
  '(package-archives
    (quote
@@ -287,3 +290,9 @@
 
 
 (unless window-system (normal-erase-is-backspace-mode 0))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
