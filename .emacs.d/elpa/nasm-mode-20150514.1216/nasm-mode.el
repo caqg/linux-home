@@ -4,7 +4,7 @@
 
 ;; Author: Christopher Wellons <wellons@nullprogram.com>
 ;; URL: https://github.com/skeeto/nasm-mode
-;; Package-Version: 20150427.2036
+;; Package-Version: 20150514.1216
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -539,8 +539,7 @@
     (if (or (looking-at (nasm--opt nasm-directives))
             (looking-at (nasm--opt nasm-pp-directives))
             (looking-at "\\[")
-            (looking-at ";+\\s-+")
-            (looking-at ";+$")
+            (looking-at ";;+")
             (looking-at nasm-label-regexp))
         (indent-line-to 0)
       (indent-line-to nasm-basic-offset))

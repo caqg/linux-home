@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "nasm-mode" "nasm-mode.el" (21824 15540 1933
-;;;;;;  144000))
+;;;### (autoloads nil "nasm-mode" "nasm-mode.el" (21845 11886 461431
+;;;;;;  194000))
 ;;; Generated autoloads from nasm-mode.el
 
 (autoload 'nasm-mode "nasm-mode" "\

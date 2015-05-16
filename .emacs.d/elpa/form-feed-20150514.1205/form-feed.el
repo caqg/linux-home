@@ -4,9 +4,9 @@
 
 ;; Author: Vasilij Schneidermann <v.schneidermann@gmail.com>
 ;; URL: https://github.com/wasamasa/form-feed
-;; Package-Version: 20150501.1311
+;; Package-Version: 20150514.1205
 ;; Keywords: faces
-;; Version: 0.1.6
+;; Version: 0.1.8
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -51,9 +51,37 @@
   "Face for form-feed-mode lines."
   :group 'form-feed)
 
+(defcustom form-feed-line-width t
+  "Width of the form feed line.
+It may be one of the following values:
+
+t: Full width.
+
+floating point number: Ratio of full width.  A value of 0.5 would
+use half the width.
+
+positive integer number: Width as measured in columns.  A value
+of 80 would use a 80 characters wide line.
+
+negative integer number: Full width minus specified number of
+columns.  A value of -1 would leave the last column empty."
+  :type '(choice (const :tag "Full width" t)
+                 (float :tag "Ratio")
+                 (integer :tag "Columns"))
+  :group 'form-feed)
+
+(defvar form-feed--line-width
+  (cond
+   ((integerp form-feed-line-width)
+    (if (>= form-feed-line-width 0)
+        form-feed-line-width
+      `(- text ,(abs form-feed-line-width))))
+   ((floatp form-feed-line-width)
+    `(,form-feed-line-width . text))
+   (t 'text)))
+
 (defcustom form-feed-kick-cursor t
   "When t, entering a line moves the cursor away from it."
-  ;; NOTE doesn't work if ^L is at the beginning of the buffer
   :type 'boolean
   :group 'form-feed)
 
@@ -65,7 +93,7 @@
 (defvar form-feed--font-lock-face
   ;; NOTE see (info "(elisp) Search-based fontification") and the
   ;; `(MATCHER . FACESPEC)' section
-  `(face form-feed-line display (space . (:width text))
+  `(face form-feed-line display (space . (:width ,form-feed--line-width))
          ,@(when form-feed-kick-cursor '(point-entered form-feed--kick-cursor))
          ,@form-feed-extra-properties))
 
@@ -96,17 +124,11 @@ removal of the keywords via
   (set (make-local-variable 'font-lock-extra-managed-props)
        (append `(display ,(when form-feed-kick-cursor 'point-entered)
                          ,@form-feed-extra-properties)
-               font-lock-extra-managed-props))
-  (if (fboundp 'font-lock-flush)
-      (font-lock-flush)
-    (font-lock-fontify-buffer)))
+               font-lock-extra-managed-props)))
 
 (defun form-feed--remove-font-lock-keywords ()
   "Remove buffer-local keywords displaying page delimiter lines."
-  (font-lock-remove-keywords nil form-feed--font-lock-keywords)
-  (if (fboundp 'font-lock-flush)
-      (font-lock-flush)
-    (font-lock-fontify-buffer)))
+  (font-lock-remove-keywords nil form-feed--font-lock-keywords))
 
 ;;;###autoload
 (define-minor-mode form-feed-mode
@@ -118,7 +140,12 @@ window."
   :lighter " ^L"
   (if form-feed-mode
       (form-feed--add-font-lock-keywords)
-    (form-feed--remove-font-lock-keywords)))
+    (form-feed--remove-font-lock-keywords))
+
+  (when (called-interactively-p 'interactive)
+    (if (fboundp 'font-lock-flush)
+        (font-lock-flush)
+      (font-lock-fontify-buffer))))
 
 (provide 'form-feed)
 ;;; form-feed.el ends here
