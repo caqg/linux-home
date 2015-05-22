@@ -194,6 +194,7 @@
  '(gdb-stack-buffer-addresses t)
  '(gdb-use-separate-io-buffer t)
  '(ggtags-global-treat-text t)
+ '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)
