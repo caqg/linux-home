@@ -1,0 +1,10 @@
+* Emacs git
+git://git.savannah.gnu.org/emacs
+
+* rsync
+rsync -a	Best default ('archive')
+rsync -b	Make backups
+rsync -i	Itemize every change
+rsync -n	Dry run
+rsync -u	Do not copy over newer files
+rsync -z	Compress during transfer
