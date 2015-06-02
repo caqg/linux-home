@@ -35,7 +35,7 @@ using Index = size_t;
 using Power = unsigned long long;
 using Entry = pair<size_t, Power>;
 Index indexOf(Entry e) { return e.first; }
-Power  powerOf(Entry e) { return e.second; }
+Power powerOf(Entry e) { return e.second; }
 
 vector<Power> powers(begin(raw_powers), end(raw_powers));
 vector<Entry> expected {

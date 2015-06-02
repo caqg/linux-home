@@ -1,0 +1,26 @@
+#!/bin/sh
+
+PATH=/usr/bin
+
+case $# in 
+1)
+    case "$1" in
+    -h|--help|-\?) echo "usage: $0 [bound [start [end [incr]]]]"
+                   echo "";
+                   echo "Print records of an index and a random integer"
+                   echo "The indices run from start to end stepped by incr"
+                   echo "The random integers run from 0 to bound"
+                   echo "With no arguments, 20 random records are generated"
+                   exit 1
+                   ;;
+    esac ;;
+esac
+
+
+
+bound=${1:-100000000}
+start=${2:-1}
+end=${3:-20}
+incr=${4:-1}
+
+seq "${start}" "${incr}" "${end}" | gawk '{ print $1, int('"$bound"'*rand()); }'
