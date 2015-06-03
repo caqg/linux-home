@@ -96,6 +96,7 @@
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle))
+(adjust-paren-face-fg)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -186,6 +187,7 @@
  '(font-lock-maximum-size nil)
  '(font-use-system-font t)
  '(foreground-color "#cccccc")
+ '(frame-background-mode (quote dark))
  '(gdb-enable-debug nil)
  '(gdb-many-windows t)
  '(gdb-max-frames 64)

@@ -48,7 +48,7 @@ dark or nil)."
                          (dark
                           paren-face-dark)
                          (t             ;if not set yet
-                          paren-face-light))))
+                          paren-face-dark))))
     (set-face-attribute 'paren-face nil :foreground paren-face-fg)))
 
 (provide 'parenface)
