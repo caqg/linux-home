@@ -1,0 +1,98 @@
+#!/bin/bash
+
+defaultWidth () {
+	if [ -t 0 ];
+	then	stty -a |
+		sed -n -e '/.*; columns \([0-9][0-9]*\);.*/s//\1/p';
+	else	echo 80
+	fi
+}
+
+width () {
+	case "$1" in
+        "")	echo $(defaultWidth);;
+        *)	echo "$1";;
+        esac
+}
+
+parseArgs () {
+	while [ $# -gt 0 ]; do
+            case "$1" in
+            -H)		H=1 ;;
+            -F)		H=0 ;;
+            -w)		width="$2"; shift ;;
+            -w*)	width=$(expr substr "$1" 3 $(expr length "$1")) ;;
+            *)		usage; exit 1 ;;
+	    esac;
+            shift
+        done
+}
+
+usage () {
+	echo "usage: $(basename $0) [columns]"
+	echo "       $(basename $0) [-w width] [-H] [-F]"
+        echo
+	echo "       columns defaults to however wide the tty is"
+	echo "		(80 if stdin is  not a tty)"
+        echo "	     -H prints decades above units (header style)"
+        echo "       -F prints units above decades (footer style)"
+        echo "		-H is the default"
+        echo
+        echo "       Options can be repeated, rightmost wins"
+}
+
+# parse command line
+# No args: Header at current terminal width, or 80 if not a ttu
+# 1  arg : must be the width (integer).
+# >1 arg : parse
+H=1
+case $# in
+0)	width=$(defaultWidth) ;;
+1)	if expr match "$1" "[0-9][0-9]*" >/dev/null 2>&1;
+        then	width=$(width "$1"); shift
+        else	parseArgs "$@"
+        fi ;;
+*)	parseArgs "$@" ;;
+esac
+
+# Deal with no options setting the width;
+# this is possible (for instance) with options -F or -H alone.
+width=${width:-$(defaultWidth)}
+# echo width=$width
+# echo H=$H
+
+awk -v W="$width" -v H="$H" '
+# BEGIN { print W; print H;  }
+
+function printDecades () {
+	if (int(W/10) > 0) {
+		for (i = 1; i <= int(W/10); ++i)
+			printf "%10g", i;
+		printf "\n"
+	}
+}
+
+function printUnits () {
+	for (i = 1; i <= W; ++i)
+		if (i % 5 == 0)
+			if (i % 10 == 0)
+				printf "0"
+			else
+				printf "|"
+		else
+			printf "."
+	printf "\n"
+}
+
+BEGIN {
+	if (H) {
+		printDecades();
+		printUnits();
+	} else {
+		printUnits();
+		printDecades();
+	}
+}
+'
+
+# end ruler
