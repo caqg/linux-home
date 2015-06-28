@@ -131,7 +131,7 @@
    [(1 1)
     nil "Poor-man's namespaces for elisp" single])
  (wisp-mode .
-	    [(0 2)
+	    [(0 2 1)
 	     nil "Tools for wisp: the Whitespace-to-Lisp preprocessor" single])
  (wisp .
        [(0 1 4)
@@ -692,6 +692,9 @@
 		(magit
 		 (0 8 1)))
 	       "Saner defaults and goodies." tar])
+ (ssh-file-modes .
+		 [(1 20150626)
+		  nil "major modes for ssh authorized_keys and known_hosts files" single])
  (ssh .
       [(1 2)
        nil "Support for remote logins using ssh." single])
@@ -3259,7 +3262,7 @@
        (2 2 0)))
      "Modern API for working with files and directories" single])
  (eyebrowse .
-	    [(0 6 5)
+	    [(0 6 6)
 	     ((dash
 	       (2 7 0))
 	      (emacs
@@ -3652,7 +3655,7 @@
 	       [(0 2 2)
 		nil "Aspell extra dictionary for Drupal" tar])
  (drupal-mode .
-	      [(0 5 0)
+	      [(0 6 0)
 	       ((php-mode
 		 (1 5 0)))
 	       "Advanced minor mode for Drupal development" tar])
