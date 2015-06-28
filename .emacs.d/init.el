@@ -5,7 +5,9 @@
 (load-library "cl")
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load-library "workarounds")
+(load-library "file-hooks")
 
+(add-hook 'before-save-hook 'cq/trim-whitespace)
 
 (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
 (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
