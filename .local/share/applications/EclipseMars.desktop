@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=EclipseMars
+Exec=/bin/bash -l -c "/usr/bin/env SWT_GTK3=1 /opt/eclipse-mars/eclipse -vm /usr/lib/jvm/java-8-oracle/bin/java"
+Icon=/opt/eclipse-mars/icon.xpm
+Type=Application
+Terminal=false
+Categories=Development;
