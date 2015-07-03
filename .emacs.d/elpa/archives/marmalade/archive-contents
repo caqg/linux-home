@@ -130,6 +130,13 @@
  (with-namespace .
    [(1 1)
     nil "Poor-man's namespaces for elisp" single])
+ (with-editor .
+   [(2 1 0)
+    ((emacs
+      (24 4))
+     (dash
+      (2 10 0)))
+    "Use the Emacsclient as $EDITOR" tar])
  (wisp-mode .
 	    [(0 2 1)
 	     nil "Tools for wisp: the Whitespace-to-Lisp preprocessor" single])
@@ -1556,7 +1563,7 @@
 	     [(0 0 8)
 	      nil "export html and meta data used by static blog like nikola from org file" tar])
  (org2jekyll .
-	     [(0 1 5)
+	     [(0 1 6)
 	      ((dash
 		(2 10 0))
 	       (dash-functional
@@ -1629,7 +1636,7 @@
 	       (6 1)))
 	     "basic support for magit links" single])
  (org-journal .
-	      [(1 8 1)
+	      [(1 9 3)
 	       nil "a simple org-mode based journaling mode" single])
  (org-gnome .
 	    [(0 1)
@@ -2058,6 +2065,13 @@
 		     ((magit
 		       (1 0 0)))
 		     "simple keybindings for Magit" single])
+ (magit-popup .
+	      [(2 1 0)
+	       ((emacs
+		 (24 4))
+		(dash
+		 (2 10 0)))
+	       "Define prefix-infix-suffix command combos" tar])
  (magit-gh-pulls .
 		 [(0 3)
 		  ((gh
@@ -2071,14 +2085,18 @@
 		     (1 2 0)))
 		   "completing-read over all files in Git" single])
  (magit .
-	[(1 4 2)
-	 ((cl-lib
-	   (0 5))
-	  (git-commit-mode
-	   (1 0 0))
-	  (git-rebase-mode
-	   (1 0 0)))
-	 "Control Git from Emacs." tar])
+	[(2 1 0)
+	 ((emacs
+	   (24 4))
+	  (dash
+	   (2 10 0))
+	  (with-editor
+	      (2 1 0))
+	  (git-commit
+	   (2 1 0))
+	  (magit-popup
+	   (2 1 0)))
+	 "A Git porcelain inside Emacs" tar])
  (mactag .
 	 [(0 0 1)
 	  nil "Mode for automatically handle multiple tags files with Mactag rubygem" single])
@@ -2785,7 +2803,7 @@
 	[(1 0)
 	 nil "vc-mode extension for fast git interaction" single])
  (gitignore-mode .
-		 [(1 1 0)
+		 [(1 2 0)
 		  nil "Major mode for editing .gitignore files" single])
  (github-theme .
 	       [(0 0 3)
@@ -2805,7 +2823,7 @@
 			   [(1 20141128)
 			    nil "configure whitespace settings from gitattributes" single])
  (gitattributes-mode .
-		     [(1 1 0)
+		     [(1 2 0)
 		      nil "Major mode for editing .gitattributes files" single])
  (git-rebase-mode .
 		  [(1 0 0)
@@ -3778,7 +3796,7 @@
 		     (24)))
 		   "Collection of useful combinators for Emacs Lisp" single])
  (dash .
-       [(2 10 0)
+       [(2 11 0)
 	nil "A modern list library for Emacs" single])
  (dart-mode .
 	    [(0 13)
@@ -4374,7 +4392,7 @@
 		 (24 1)))
 	       "Ansible documentation Minor Mode" single])
  (annotate .
-	   [(0 2 2)
+	   [(0 2 3)
 	    nil "annotate files without changing them" single])
  (angular-snippets .
 		   [(0 2 3)
