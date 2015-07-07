@@ -1,0 +1,75 @@
+Downloading/unpacking rope
+  Getting page https://pypi.python.org/simple/rope/
+  URLs to search for versions for rope:
+  * https://pypi.python.org/simple/rope/
+  Analyzing links from page https://pypi.python.org/simple/rope/
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.10.0.tar.gz#md5=e5042f460454d469fadec3a0eccfc544 (from https://pypi.python.org/simple/rope/), version: 0.10.0
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.10.1.tar.gz#md5=0a89f6ae0f95a802ac7d8cf27523964d (from https://pypi.python.org/simple/rope/), version: 0.10.1
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.10.2.tar.gz#md5=8d3341cd2994df5ea08e1729b45dac7c (from https://pypi.python.org/simple/rope/), version: 0.10.2
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.2pre5.tar.gz#md5=8e9d3a920f8255c4eb72eaea4a6d5465 (from https://pypi.python.org/simple/rope/), version: 0.2pre5
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.2pre5.zip#md5=5562e62549a013b4a9f7cf5815509b15 (from https://pypi.python.org/simple/rope/), version: 0.2pre5
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.9.2.tar.gz#md5=3ef92a3df40aebe475ac4880b0f6381a (from https://pypi.python.org/simple/rope/), version: 0.9.2
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.9.3.tar.gz#md5=b04971636816d62157cf26e2ec5c1a37 (from https://pypi.python.org/simple/rope/), version: 0.9.3
+    Found link https://pypi.python.org/packages/source/r/rope/rope-0.9.4.tar.gz#md5=6c654c6892f78008e04e2d65f9f859bb (from https://pypi.python.org/simple/rope/), version: 0.9.4
+    Skipping link http://rope.sf.net/ (from https://pypi.python.org/simple/rope/); not a file
+  Ignoring link https://pypi.python.org/packages/source/r/rope/rope-0.2pre5.tar.gz#md5=8e9d3a920f8255c4eb72eaea4a6d5465 (from https://pypi.python.org/simple/rope/), version 0.2pre5 is a pre-release (use --pre to allow).
+  Ignoring link https://pypi.python.org/packages/source/r/rope/rope-0.2pre5.zip#md5=5562e62549a013b4a9f7cf5815509b15 (from https://pypi.python.org/simple/rope/), version 0.2pre5 is a pre-release (use --pre to allow).
+  Using version 0.10.2 (newest of versions: 0.10.2, 0.10.1, 0.10.0, 0.9.4, 0.9.3, 0.9.2)
+  Downloading from URL https://pypi.python.org/packages/source/r/rope/rope-0.10.2.tar.gz#md5=8d3341cd2994df5ea08e1729b45dac7c (from https://pypi.python.org/simple/rope/)
+  Running setup.py (path:/tmp/pip-build-xamksof5/rope/setup.py) egg_info for package rope
+    Traceback (most recent call last):
+      File "<string>", line 17, in <module>
+      File "/tmp/pip-build-xamksof5/rope/setup.py", line 5, in <module>
+        import ropetest
+      File "/tmp/pip-build-xamksof5/rope/ropetest/__init__.py", line 4, in <module>
+        import ropetest.projecttest
+      File "/tmp/pip-build-xamksof5/rope/ropetest/projecttest.py", line 9, in <module>
+        from rope.base.libutils import path_to_resource
+      File "/tmp/pip-build-xamksof5/rope/rope/base/libutils.py", line 4, in <module>
+        import rope.base.project
+      File "/tmp/pip-build-xamksof5/rope/rope/base/project.py", line 1, in <module>
+        import cPickle as pickle
+    ImportError: No module named 'cPickle'
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+
+  File "<string>", line 17, in <module>
+
+  File "/tmp/pip-build-xamksof5/rope/setup.py", line 5, in <module>
+
+    import ropetest
+
+  File "/tmp/pip-build-xamksof5/rope/ropetest/__init__.py", line 4, in <module>
+
+    import ropetest.projecttest
+
+  File "/tmp/pip-build-xamksof5/rope/ropetest/projecttest.py", line 9, in <module>
+
+    from rope.base.libutils import path_to_resource
+
+  File "/tmp/pip-build-xamksof5/rope/rope/base/libutils.py", line 4, in <module>
+
+    import rope.base.project
+
+  File "/tmp/pip-build-xamksof5/rope/rope/base/project.py", line 1, in <module>
+
+    import cPickle as pickle
+
+ImportError: No module named 'cPickle'
+
+----------------------------------------
+Cleaning up...
+Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-xamksof5/rope
+Exception information:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/lib/python3/dist-packages/pip/commands/install.py", line 304, in run
+    requirement_set.prepare_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/usr/lib/python3/dist-packages/pip/req.py", line 1230, in prepare_files
+    req_to_install.run_egg_info()
+  File "/usr/lib/python3/dist-packages/pip/req.py", line 326, in run_egg_info
+    command_desc='python setup.py egg_info')
+  File "/usr/lib/python3/dist-packages/pip/util.py", line 716, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+pip.exceptions.InstallationError: Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-xamksof5/rope

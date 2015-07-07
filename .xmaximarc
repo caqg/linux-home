@@ -1,0 +1,38 @@
+array set maxima_default {
+ConsoleFont {{DejaVu Sans Mono} -12}
+OpenDir ~/
+OpenFile ~/.xmaximrc
+SaveFile ~/.xmaximrc
+adjust 0
+bDebugParse 0
+defaultservers nmtp://genie1.ma.utexas.edu/
+fixed courier
+fixed,1 8
+fixed,2 10
+fixed,3 12
+fixed,4 14
+fixed,5 18
+fixed,6 24
+fixed,7 24
+fixed,8 34
+fixed,adjust 0
+fontAdjust 0
+iConsoleHeight 32
+iConsoleWidth 80
+iLocalPort 4008
+iMathServerPort 4443
+iShowBalloons 0
+indentwidth .7
+plotwindow multiple
+propor arial
+propor,1 8
+propor,2 10
+propor,3 12
+propor,4 14
+propor,5 18
+propor,6 24
+propor,7 24
+propor,8 34
+propor,adjust 0
+sMathServerHost localhost
+}
