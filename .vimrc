@@ -53,13 +53,13 @@ endif
 
 " C/C++, closer to the Emacs settings
 autocmd FileType c,cpp,java :set cinoptions=:0,j1,J1,l0,g0,t0,(0,)30
-autocmd FileType c,cpp,java :set expandtab
+autocmd FileType c,cpp,java :set noexpandtab
 autocmd FileType c,cpp,java :set foldmethod=syntax
 autocmd FileType c,cpp,java :set foldcolumn=0
 autocmd FileType c,cpp,java :set nofoldenable
 autocmd FileType c,cpp,java :set formatoptions+=cj
 autocmd FileType c,cpp,java :set shiftwidth=8
-autocmd FileType c,cpp,java :set smarttab
+autocmd FileType c,cpp,java :set nosmarttab
 
 set ruler
 set diffopt=filler,iwhite

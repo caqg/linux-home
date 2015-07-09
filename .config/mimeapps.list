@@ -1,4 +1,6 @@
 [Default Applications]
 x-scheme-handler/mailto=gnome-gmail.desktop
+application/x-planner=planner.desktop
 
 [Added Associations]
+application/x-planner=planner.desktop;
