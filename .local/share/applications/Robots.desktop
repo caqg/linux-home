@@ -1,10 +1,6 @@
 [Desktop Entry]
-Name=Rogue
-Comment=Use the command line
-#TryExec=rogue
-Exec=sakura -r 24 -c 80 -t Robots -x /home/cesar/cmd/unity-rogue
-#Icon=terminal-tango
+Name=Robots
+Exec=sakura --config-file=rogue.conf --geometry 80x24 -t Robots -x /usr/games/robots
 Type=Application
 Categories=GTK;TerminalEmulator;System;
 StartupNotify=true
-

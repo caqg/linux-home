@@ -1,11 +1,12 @@
 [Desktop Entry]
-Name=Synaptic Package Manager
+Name=Synaptic
 GenericName=Package Manager
 Comment=Install, remove and upgrade software packages
-Exec=/bin/bash -l -c synaptic-pkexec
+Exec=/bin/bash -l -c "pkexec synaptic"
 Icon=synaptic
 Terminal=false
 Type=Application
 Categories=PackageManager;GTK;System;Settings;
 NotShowIn=KDE;
 X-Ubuntu-Gettext-Domain=synaptic
+Name[en_US]=Synaptic
