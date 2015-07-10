@@ -1,56 +1,57 @@
 [user]
-        name            = Cesar A. Quiroz, Ph.D.
-        email           = cesar_quiroz@ieee.org
+	name            = Cesar A. Quiroz, Ph.D.
+	email           = cesar_quiroz@ieee.org
 
 [core]
-        editor          = $HOME/cmd/e -c -F '((width . 80)(height . 24))'
-        pager           =
+	editor          = $HOME/cmd/e -c -F '((width . 80)(height . 36))'
+	pager           =
 
 [diff]
-        tool            = ediff
+	tool            = ediff
 
 [difftool "ediff"]
-        cmd             = $HOME/cmd/ediff $LOCAL $REMOTE
+	cmd             = $HOME/cmd/ediff $LOCAL $REMOTE
 
 [merge]
-        tool            = emerge
-        conflictstyle   = diff3
+	tool            = emerge
+	conflictstyle   = diff3
 
 [mergetool "emerge"]
-        cmd             = $HOME/cmd/emerge $BASE $REMOTE $LOCAL $MERGED
+	cmd             = $HOME/cmd/emerge $BASE $REMOTE $LOCAL $MERGED
 
 [alias]
-        aa              = add -A .
-        au              = add -u .
-        b               = branch
-        ci              = commit
-        co              = checkout
-        d               = diff
+	aa              = add -A .
+	au              = add -u .
+	b               = branch
+	ci              = commit -v
+	co              = checkout
+	d               = diff
 	di              = diff
-        ds              = diff --staged
-        l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
-        prefix          = rev-parse --show-prefix
-        s               = status -bs -uall .
-        ss              = status -bs -uno .
-        top             = rev-parse --show-toplevel
+	ds              = diff --staged
+	l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
+	prefix          = rev-parse --show-prefix
+	s               = status -bs -uall .
+	ss              = status -bs -uno .
+	top             = rev-parse --show-toplevel
 
 [push]
-        default         = simple
+	default         = simple
 
 [color]
-        branch          = true
-        diff            = true
-        grep            = true
-        interactive     = true
-        pager           = true
-        showbranch      = true
-        status          = true
-        ui              = true
+	branch          = true
+	diff            = true
+	grep            = true
+	interactive     = true
+	pager           = true
+	showbranch      = true
+	status          = true
+	ui              = true
 
 [gui]
-        warndetachedcommit = true
+	warndetachedcommit = true
+	recentrepo = /work/linux-home
 
 [credential]
-        helper          = cache --timeout=14400
+	helper          = cache --timeout=14400
 
 ## end .gitconfig
