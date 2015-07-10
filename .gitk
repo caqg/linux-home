@@ -1,6 +1,6 @@
-set mainfont {sans 9}
-set textfont {monospace 9}
-set uifont {sans 9 bold}
+set mainfont {Ubuntu 10}
+set textfont {{Ubuntu Mono} 11}
+set uifont {Ubuntu 9 bold}
 set tabstop 8
 set findmergefiles 0
 set maxgraphpct 50
@@ -16,27 +16,27 @@ set hideremotes 0
 set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
-set uicolor grey85
+set uicolor grey40
 set want_ttk 1
-set bgcolor white
-set fgcolor black
+set bgcolor #002b36
+set fgcolor #839496
 set uifgcolor black
 set uifgdisabledcolor #999
-set colors {green red blue magenta darkgrey brown orange}
-set diffcolors {red "#00a000" blue}
-set mergecolors {red blue green purple brown "#009090" magenta "#808000" "#009000" "#ff0080" cyan "#b07070" "#70b0f0" "#70f0b0" "#f0b070" "#ff70b0"}
-set markbgcolor #e0e0ff
+set colors {#859900 #dc322f #268bd2 #dc322f darkgrey brown #cb4b16}
+set diffcolors {#dc322f #00a000 #268bd2}
+set mergecolors {#dc322f #268bd2 #859900 purple brown #009090 #dc322f #808000 #009000 #ff0080 #2aa198 #fb0707 #70b0f0 #70f0b0 #f0b070 #ff70b0}
+set markbgcolor #073642
 set diffcontext 3
-set selectbgcolor gray85
-set foundbgcolor yellow
-set currentsearchhitbgcolor orange
+set selectbgcolor #073642
+set foundbgcolor #b58900
+set currentsearchhitbgcolor #cb4b16
 set extdifftool /home/cesar/cmd/ediff
 set perfile_attrs 0
-set headbgcolor green
+set headbgcolor #859900
 set headfgcolor black
 set headoutlinecolor black
 set remotebgcolor #ffddaa
-set tagbgcolor yellow
+set tagbgcolor #b58900
 set tagfgcolor black
 set tagoutlinecolor black
 set reflinecolor black
@@ -45,18 +45,18 @@ set filesepfgcolor black
 set linehoverbgcolor #ffff80
 set linehoverfgcolor black
 set linehoveroutlinecolor black
-set mainheadcirclecolor yellow
-set workingfilescirclecolor red
-set indexcirclecolor green
-set circlecolors {white blue gray blue blue}
-set linkfgcolor blue
+set mainheadcirclecolor #b58900
+set workingfilescirclecolor #dc322f
+set indexcirclecolor #859900
+set circlecolors {white #268bd2 gray #268bd2 #268bd2}
+set linkfgcolor #268bd2
 set circleoutlinecolor black
-set geometry(main) 1290x880+376+14
+set geometry(main) 1300x840+226+80
 set geometry(state) normal
-set geometry(topwidth) 1290
+set geometry(topwidth) 1300
 set geometry(topheight) 225
-set geometry(pwsash0) "559 1"
-set geometry(pwsash1) "1103 1"
-set geometry(botwidth) 821
-set geometry(botheight) 650
+set geometry(pwsash0) "636 1"
+set geometry(pwsash1) "984 1"
+set geometry(botwidth) 816
+set geometry(botheight) 610
 set permviews {}
