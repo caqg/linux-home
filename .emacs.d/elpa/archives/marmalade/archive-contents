@@ -1,7 +1,4 @@
 (1
- (nssh .
-       [(0 9 9)
-	nil "New SSH mode for Emacs" single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -1744,6 +1741,9 @@
  (nssh-n .
 	 [(0 9 8)
 	  nil "SSH mode for Emacs" single])
+ (nssh .
+       [(0 9 9)
+	nil "New SSH mode for Emacs" single])
  (nsis-mode .
 	    [(0 44)
 	     nil "NSIS-mode" single])
