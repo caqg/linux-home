@@ -64,10 +64,8 @@
                 (c-subword-mode 1))
               (auto-fill-mode 1)
               (font-lock-mode 1)
-              ;;(c-setup-filladapt)
-              ;;(filladapt-mode 1)
               (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-                (gtags-mode 1)
+                ;; bison mode is derived from c-mode, so it works
                 (ggtags-mode 1))))
 
 (add-hook 'c-mode-common-hook
