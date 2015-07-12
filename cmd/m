@@ -18,11 +18,11 @@ tstamp=$(/bin/date +%Y%m%d_%H%M%S)
 
 case "$target" in
 "")	tag="$tstamp"			;;
-*) 	tag="$target-$tstamp"		;;
+*)	tag="$target-$tstamp"		;;
 esac
 
 D=
-[ -d "$LOGSDIR" ] && 
+[ -d "$LOGSDIR" ] &&
 case "$LOGSDIR" in
 */)	D="$LOGSDIR"			;;
 *)	D="$LOGSDIR"/			;;
@@ -34,7 +34,10 @@ case "$logfile" in
 *)	logfile="$(pwd)/$logfile"	;;
 esac
 
-make LANG=C "$@" 2>&1 | tee "$logfile"
-echo Log: $(/bin/ls "$logfile")
+{	time -p 2>&1 make LANG=C "$@" 2>&1; rc=$?;
+	printf "\f\n";
+	echo "RC:	"$rc;
+	echo "Log:	"$(/bin/ls "$logfile");
+} | tee "$logfile"
 
 #end m
