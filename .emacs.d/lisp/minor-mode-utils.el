@@ -8,10 +8,23 @@
   "If the MODE_SYMBOL argument is true, turn off the associated minor mode.
 Otherwise, turn the minor moe on."
   (interactive "S")
-  (when (and (boundp mode-symbol) (booleanp (symbol-value mode-symbol)))
+  (when (boundp mode-symbol)
     (let* ((current (symbol-value mode-symbol))
-           (flipped (if current -1 0))))
-      (funcall (symbol-function mode-symbol)))))
+           (flipped (if current -1 1))
+           (setter  (symbol-function mode-symbol)))
+      (funcall setter flipped))))
+
+;;;       (message "'%s before %s flipped %s after %s"
+;;;               mode-symbol current flipped (symbol-value mode-symbol))
+
+(defun cq/flip-scroll-bar-modes ()
+  "Invert the status of scroll-bar-mode and horizontal-scroll-bar-mode"
+  (interactive)
+  (cq/minmod-flip 'scroll-bar-mode)
+  (cq/minmod-flip 'horizontal-scroll-bar-mode))
+
+
+;;; Menu entries
 
 
 ;;;; end minor-mode-utils.el
