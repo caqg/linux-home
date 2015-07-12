@@ -1,5 +1,5 @@
-set mainfont {Ubuntu 10}
-set textfont {{Ubuntu Mono} 11}
+set mainfont {Ubuntu 9}
+set textfont {{Ubuntu Mono} 10}
 set uifont {Ubuntu 9 bold}
 set tabstop 8
 set findmergefiles 0
@@ -51,7 +51,7 @@ set indexcirclecolor #859900
 set circlecolors {white #268bd2 gray #268bd2 #268bd2}
 set linkfgcolor #268bd2
 set circleoutlinecolor black
-set geometry(main) 1300x840+226+80
+set geometry(main) 1300x840+0+0
 set geometry(state) normal
 set geometry(topwidth) 1300
 set geometry(topheight) 225
