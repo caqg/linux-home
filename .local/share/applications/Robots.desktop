@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Robots
-Exec=sakura --config-file=rogue.conf --geometry 80x24 -t Robots -x /usr/games/robots
+Exec=sakura --config-file=rogue.conf --geometry 80x24+520+80 -t Robots -x /usr/games/robots
 Type=Application
 Categories=GTK;TerminalEmulator;System;
 StartupNotify=true
