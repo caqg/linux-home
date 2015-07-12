@@ -7,7 +7,10 @@
 (load-library "workarounds")
 
 (load-library "file-hooks")
-(add-hook 'before-save-hook 'cq/trim-whitespace)
+(add-hook 'before-save-hook (lambda ()
+                              ;; clean up source code, but nothing else
+                              (when (derived-mode-p 'prog-mode)
+                                (cq/trim-whitespace))))
 
 (load-library "minor-mode-utils")
 (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
@@ -27,11 +30,10 @@
 
 (package-initialize)
 
-(which-function-mode 1)
 (filesets-init)
-
 (slime-setup)
 
+(which-function-mode 1)
 (pending-delete-mode t)
 (electric-indent-mode -1)
 
@@ -288,7 +290,10 @@
  '(tabbar-mwheel-mode t nil (tabbar))
  '(text-mode-hook
    (quote
-    (turn-on-auto-fill cq-text-mode text-mode-hook-identify)))
+    (turn-on-auto-fill
+     (lambda nil
+       (form-feed-mode 1))
+     cq-text-mode text-mode-hook-identify)))
  '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
