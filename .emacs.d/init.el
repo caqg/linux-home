@@ -101,7 +101,7 @@
 (adjust-paren-face-fg)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
-
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
