@@ -96,6 +96,8 @@
        (color-theme-solarized)
        ))
 
+(require 'ecb)                          ;last require so at end of Tools menu
+
 (setq-default ediff-auto-refine 'off)
 (global-set-key [(meta z)] 'zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char)
@@ -195,7 +197,7 @@
  '(font-lock-maximum-size nil)
  '(font-use-system-font t)
  '(foreground-color "#cccccc")
- '(frame-background-mode (quote dark))
+ '(frame-background-mode nil)
  '(gdb-enable-debug nil)
  '(gdb-many-windows t)
  '(gdb-max-frames 64)
