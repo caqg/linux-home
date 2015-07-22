@@ -1,0 +1,4 @@
+15:46:19 GMT-0700 (PDT) (WARN) /background.html: HTTP Error checking version. Assuming OK.
+    at g (/js/common/Bootstrap.js:2:1288)
+    at Object.cb (/js/common/Bootstrap.js:2:994)
+    at JSONRpcClient._async_handler (/third_party/jsonrpc.js:2:6094)

@@ -1,0 +1,34 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "css": [ "modules/nightmode.css", "modules/commentBoxes.css", "core/res.css", "vendor/players.css", "vendor/guiders.css", "vendor/tokenize.css", "core/batch.css" ],
+      "js": [ "vendor/jquery-1.11.1.min.js", "vendor/guiders-1.2.8.js", "vendor/jquery.dragsort-0.6.js", "vendor/jquery-fieldselection.min.js", "vendor/favico.js", "vendor/jquery.tokeninput.js", "vendor/HTMLPasteurizer.js", "vendor/snuownd.js", "core/utils.js", "browsersupport.js", "browsersupport-chrome.js", "core/console.js", "core/alert.js", "core/migrate.js", "core/storage.js", "core/template.js", "vendor/konami.js", "vendor/hogan-3.0.2.js", "vendor/mediacrush.js", "vendor/gfycat.js", "vendor/gifyoutube.js", "vendor/imgurgifv.js", "reddit_enhancement_suite.user.js", "modules/submitIssue.js", "modules/betteReddit.js", "modules/userTagger.js", "modules/keyboardNav.js", "modules/about.js", "modules/commandLine.js", "modules/hover.js", "modules/subredditTagger.js", "modules/singleClick.js", "modules/commentPreview.js", "modules/commentTools.js", "modules/sourceSnudown.js", "modules/sortCommentsTemporarily.js", "modules/usernameHider.js", "modules/showImages.js", "modules/showKarma.js", "modules/hideChildComments.js", "modules/showParent.js", "modules/neverEndingReddit.js", "modules/saveComments.js", "modules/userHighlight.js", "modules/nightMode.js", "modules/styleTweaks.js", "modules/userbarHider.js", "modules/accountSwitcher.js", "modules/filteReddit.js", "modules/newCommentCount.js", "modules/spamButton.js", "modules/commentNavigator.js", "modules/subredditManager.js", "modules/RESTips.js", "modules/settingsNavigation.js", "modules/dashboard.js", "modules/notifications.js", "modules/subredditInfo.js", "modules/commentHidePersistor.js", "modules/troubleshooter.js", "modules/localDate.js", "modules/context.js", "modules/noParticipation.js", "modules/searchHelper.js", "modules/logoLink.js", "modules/voteEnhancements.js", "modules/tableTools.js", "modules/modhelper.js", "modules/quickMessage.js", "core/init.js" ],
+      "matches": [ "http://redditenhancementsuite.com/*", "http://reddit.com/*", "https://reddit.com/*", "http://*.reddit.com/*", "https://*.reddit.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Reddit Enhancement Suite - a group of enhancements for browsing Reddit",
+   "homepage_url": "http://redditenhancementsuite.com",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0tGrnRoI1FWgRxN/bBk0ZffBG5GUb4yTO+Z6dgHlI80kiskv0w1JFjTjV6v/MGh+6ZZueaD/+gq7CS8wIhDCRks7/9DZtRgRnj5yNF+aK+VDLXiRYZIRWxikXWgiGWYstWbhWpvdcBeZB3IkPMRY00+VMwim30tTgnRiBvSelhQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "26.0",
+   "name": "Reddit Enhancement Suite",
+   "optional_permissions": [ "https://api.twitter.com/*" ],
+   "options_page": "options.html",
+   "page_action": {
+      "default_icon": {
+         "19": "images/css-on-small.png",
+         "38": "images/css-on.png"
+      },
+      "default_title": "Subreddit Style On"
+   },
+   "permissions": [ "cookies", "tabs", "history", "http://redditenhancementsuite.com/", "http://reddit.com/*", "https://reddit.com/*", "http://*.reddit.com/*", "https://*.reddit.com/*", "http://min.us/api/*", "http://*.flickr.com/photos/*", "http://img.photobucket.com/*", "http://backend.deviantart.com/oembed?url=*", "http://api.tumblr.com/v2/blog/*/posts?api_key=*&id=*", "http://noembed.com/embed?url=*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.5.4",
+   "web_accessible_resources": [ "core/templates.html" ]
+}

@@ -1,0 +1,189 @@
+﻿/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2010 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+#InfobarContainer
+{
+    margin: 0px;
+    padding: 0px;
+    max-height: 37px;
+    min-height: 37px;
+    background-color: #ffffff;
+    vertical-align: middle;
+    
+}
+
+#InfobarContainer div.InfobarGroup
+{
+    display: none;
+    vertical-align: middle ;
+}
+
+.InfobarCaptionText
+{
+    font-family:"Segoe UI Light", Tahoma, Sans-Serif;
+    font-size: 14px;
+    font-weight:700;
+    color:#464646;
+}
+
+.InfobarButton,
+.InfobarButtonGray
+{
+    width: 130px;
+    min-width: 130px;
+    height: 36px;
+    min-height: 36px;  
+    vertical-align :middle ;
+}
+
+.InfobarFAButton
+{
+    min-width : 170dip;
+    min-height: 26dip;
+    max-width : 170dip;
+    max-height: 26dip;    
+    vertical-align :middle ;
+}
+
+.InfobarButtonText
+{
+    font-family:"Segoe UI", Tahoma, Sans-Serif;
+    font-weight:normal;
+    font-size: 14px;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+.IDSafeLabel
+{
+    font-family: Arial, Tahoma, Sans-Serif;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle ;
+    Color: White;
+    margin-top: 5px;
+}
+
+.IDSafeButton,
+.IDSafeDefaultButton
+{
+    height: 24px;
+    max-height: 24px ;
+}
+
+.InfobarGroup label
+{
+    float: left;
+    white-space: nowrap;   
+    vertical-align: middle;
+    margin-top: 2px;
+    background-color: transparent;
+}
+.InfobarGroup[type="SaveNewPassword"] .InfobarCaptionText
+{
+    overflow:hidden;
+}
+
+.InfobarText
+{
+    margin-left: 0px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    text-align: right;
+    color: #CCCCCC;
+    font-size:12px;
+}
+
+.ButtonText
+{
+    margin-left: 14px;
+    margin-right: 14px;
+    font-family: Arial, Tahoma, Sans-Serif;
+    font-size: 12px;
+    color: #FFCC00;
+}
+
+.IDSafeDefaultButton .ButtonText
+{
+    color: #000000;
+    font-weight: bold;
+    background-color: transparent ;
+}
+
+.IDSafeButton .ButtonText
+{
+    color: #FFCC00;
+}
+
+.IDSafeDefaultButton[Locked="yes"] .ButtonText
+{
+    color: Black;
+}
+
+.IDSafeButton .ButtonText:hover
+{
+    color: #F60;
+}
+
+.IDSafeButton[Locked="yes"] .ButtonText
+{
+    color: White;
+}
+
+
+div[hide="yes"]
+{
+    display: none;
+}
+
+div[hide="no"]
+{
+    display: inline-block;
+}
+
+
+widget[hide="yes"]
+{
+    display: none;
+}
+
+widget[hide="no"]
+{
+    display: inline-block;
+}
+
+/* Make enough room for the Multiple Login List */
+#IDSafeLoginListMenuBtn
+{
+    min-width: 55px;
+    width: 55px;   
+}
+
+@media sciter == 1
+{
+    .InfobarCaptionText:lang(zh) 
+    {
+        font-family: "Tahoma";
+    }
+}
+@media sciter > 1 
+{
+    .InfobarCaptionText:lang(zh) 
+    {
+        font-family: "Segoe UI", Tahoma, Sans-Serif;
+    }
+}

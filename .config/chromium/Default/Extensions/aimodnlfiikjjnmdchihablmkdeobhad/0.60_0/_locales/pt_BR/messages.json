@@ -1,0 +1,116 @@
+{
+   "appdescription": {
+      "message": "Um editor de textos que funciona offline, em tela cheia e pode ser personalizado."
+   },
+   "appname": {
+      "message": "Write Space"
+   },
+   "backgroundcolor": {
+      "message": "Cor do Plano de Fundo:"
+   },
+   "charactercount": {
+      "message": " | Caracteres: "
+   },
+   "data": {
+      "message": "Opções de Dados"
+   },
+   "displayfooter": {
+      "message": "Mostrar Barra de Status:"
+   },
+   "editoroptions": {
+      "message": "Opções de Edição"
+   },
+   "editorwidth": {
+      "message": "Largura do Editor:"
+   },
+   "editorwindow": {
+      "message": "Janela do Editor"
+   },
+   "enablescrollbar": {
+      "message": "Mostrar Barra de Scroll:"
+   },
+   "enablespellcheck": {
+      "message": "Verificar ortografia:"
+   },
+   "export": {
+      "message": "Exportar"
+   },
+   "exportbutton": {
+      "message": "Exportar para Arquivo"
+   },
+   "exportfail": {
+      "message": "Falha ao Exportar"
+   },
+   "fontcolor": {
+      "message": "Cor da Fonte:"
+   },
+   "fontfamily": {
+      "message": "Família da Fonte:"
+   },
+   "fontsize": {
+      "message": "Tamanho da Fonte:"
+   },
+   "footercolor": {
+      "message": "Cor da Barra de Status:"
+   },
+   "footertext": {
+      "message": "Cor do Texto na Barra de Status:"
+   },
+   "import": {
+      "message": "Importar"
+   },
+   "importbutton": {
+      "message": "Importar Arquivo"
+   },
+   "importfail": {
+      "message": "Falha na Importação: "
+   },
+   "importwarning": {
+      "message": "Tem certeza de que deseja importar o arquivo selecionado? Isso vai apagar qualquer texto que estiver atualmente gravado no editor do Write Space."
+   },
+   "linecount": {
+      "message": " | Linhas: "
+   },
+   "lineheight": {
+      "message": "Espaçamento entre Linhas:"
+   },
+   "monospace": {
+      "message": "Monospace"
+   },
+   "options": {
+      "message": "Opções"
+   },
+   "optionspage": {
+      "message": "Write Space: Opções"
+   },
+   "pixels": {
+      "message": "pixels"
+   },
+   "points": {
+      "message": "pontos"
+   },
+   "resetbutton": {
+      "message": "Restaurar Configurações"
+   },
+   "sansserif": {
+      "message": "Sans-Serif"
+   },
+   "savebutton": {
+      "message": "Salvar"
+   },
+   "serif": {
+      "message": "Serif"
+   },
+   "spellcheck": {
+      "message": "Correção ortográfica"
+   },
+   "statusbar": {
+      "message": "Barra de Status"
+   },
+   "verticalpadding": {
+      "message": "Margem Superior:"
+   },
+   "wordcount": {
+      "message": "Palavras: "
+   }
+}

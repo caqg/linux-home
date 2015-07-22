@@ -1,0 +1,140 @@
+﻿/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2014 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen,contrast-screen
+{
+	div[type="coTB_MenuButton_2"]
+	{
+		background-position:0 4px 0 4px;
+		background-repeat:expand stretch-top stretch-left stretch-right stretch-middle stretch-bottom; 
+		background-image:url('../images/btn_tb_settings_up.png');		
+		
+		min-width:46px;
+		max-width:46px;
+
+		min-height:28px;
+		max-height:28px;
+
+		padding:0px;
+		margin-right:auto;
+		cursor:default;
+		font-weight:normal;
+		font-family:"Segoe UI", Tahoma, Sans-Serif;
+		font-size:10px;
+		position:relative;
+		margin-left: -4px;
+	}
+	
+	div[type="coTB_MenuButton_2"]:hover 
+	{
+		background-color:#bfebfa;
+		background-image:url('../images/btn_tb_settings_hover.png');
+	}
+		
+	div[type="coTB_MenuButton_2"]:active 
+	{
+		background-color:#00afec;
+		background-image:url('../images/btn_tb_settings_click.png');
+	}
+
+	/*
+	**************************************************************************
+	Right-to-left lang - StatusButton changes
+	***************************************************************************
+	*/	
+	
+	
+	body[dir="rtl"] div.coTB_Status
+	{
+		text-align:right;
+	}	
+
+	body[dir="rtl"] div[type="coTB_MenuButton_2"] 
+	{
+		background-position: 8px 4px;  /* Location of safety icon within button */
+		margin-left:1px;
+		margin-right:0px;
+		max-width:min-intrinsic;
+	}
+		
+	body[dir="rtl"] div[type="coTB_MenuButton_2"]:active
+	{
+		margin: 1px 1px 0 0px;
+	}
+	
+	body[dir="rtl"] div[type="coTB_MenuButton_2"]>text
+	{
+		background-position:right center;
+		padding-right:10px;
+	}
+		
+
+	/*
+	****************************************************************************
+	Short form mode - changes
+	****************************************************************************
+	*/
+	
+	div[type="coTB_MenuButton_2"][formfactor="short"],
+	body[dir="rtl"] div[type="coTB_MenuButton_2"][formfactor="short"]
+	{
+		min-width:45px;
+		max-width:45px;
+		background-position:14px 4px !important;
+	}
+		
+	div[type="coTB_MenuButton_2"][formfactor="short"] > text
+	{
+		margin-right:0;
+		margin-left:0;
+		background-position:34px center !important;
+	}	
+	  
+		
+	div[type="coTB_MenuButton_2"][coRating="coTB_Status_ShopGreen"][formfactor="short"], 
+	div[type="coTB_MenuButton_2"][coRating="coTB_Status_ShopBad"][formfactor="short"],
+	div[type="coTB_MenuButton_2"][coRating="coTB_Status_PageBadShopBad"][formfactor="short"]
+	{
+		background-position:4px 4px !important;
+	}	
+	 
+}
+
+@media contrast-screen
+{
+	div[type="coTB_MenuButton_2"]
+	{
+		background-color:White;
+	}
+	
+	div[type="coTB_MenuButton_2"] > text
+	{
+		color:Black;
+		font-weight:bold;
+	}	
+	
+	div[type="coTB_MenuButton_2"]:hover,
+	div[type="coTB_MenuButton_2"]:active
+	{
+		background-color:Window;
+	}
+	
+	popup {
+		font-size:12px;
+	}	
+}
+
+

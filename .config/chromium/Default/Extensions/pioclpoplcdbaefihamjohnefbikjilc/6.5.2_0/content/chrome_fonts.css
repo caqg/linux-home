@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "GothamMedium";
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/GothamSSm-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/GothamSSm-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "caecilia";
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/caecilialtstd-roman-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* for clearly top sites */
+@font-face {
+  font-family: "Gotham";
+  font-weight: normal;
+  font-style: normal;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/GothamSSm-Book.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500;
+  font-style: normal;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/GothamSSm-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "Caecilia";
+  font-weight: 700;
+  font-style: normal;
+  src: url(chrome-extension://__MSG_@@extension_id__/fonts/caecilialtstd-bold-webfont.woff) format('woff');
+}

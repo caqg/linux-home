@@ -1,0 +1,110 @@
+/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2007 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+		
+input#coSBTextField:lang(ja)
+{
+	font-family:"Meiryo UI", Tahoma, Sans-Serif !important;    
+}
+
+div#coSearch:lang(ja)
+{
+	font-family:"Meiryo UI", Tahoma, Sans-Serif !important;    
+}
+
+input#coSBTextField[size="coSBSmall"]
+{
+	max-width:162px;
+	min-width:100px;
+	width:100px;
+}
+
+input#coSBTextField[size="coSBLarge"]
+{
+	max-width:230px;	
+	min-width:100px;
+	width:230px;
+}
+
+input#coSBTextField
+{
+	min-height:23px !important;
+	max-height: 23px !important;
+	margin: 1px 0px 1px 0px;
+	border: 0px;
+	padding: 0px;
+	padding-right: 4px;
+	
+	position:relative;
+	background-image:url('../images/icon_tb_ss_search.png');
+	background-repeat:no-repeat;
+	background-position: 6px 5px;
+	background-color:white;
+	padding-left:28px;
+	
+	border-left: 1px solid #4b412f;
+	border-top: 1px solid #4b412f;
+	border-bottom: 1px solid #4b412f;
+	
+	line-height: 23px;
+	box-sizing: content-box;
+}
+
+/*
+	Search Button
+*/
+div#coSearch
+{
+	margin:0;
+	width:75px;
+	max-width:75px;
+	height:23px;
+	max-height:23px;
+	background-image:url('../images/btn_tb_ss_up.png');
+	background-repeat:no-repeat;		
+	font-size:14px;
+	font-family:"Segoe UI", Tahoma, Sans-Serif;
+	color: White;
+
+	position:relative;
+	margin-left:-2px;
+	margin-top:1px;
+	
+	border-right: 1px solid #4b412f;
+	border-top: 1px solid #4b412f;
+	border-bottom: 1px solid #4b412f;
+	padding-left: 6px;
+	line-height: 23px;
+	box-sizing: content-box;
+}
+
+div#coSearch :first-child
+{
+	text-align:center;
+	margin:0;   
+	margin-top:2px;
+}
+	
+div#coSearch:hover
+{
+	cursor: pointer;
+	background-image:url('../images/btn_tb_ss_hover.png');
+}
+
+div#coSearch:active
+{
+	cursor: pointer;
+	background-image:url('../images/btn_tb_ss_click.png');
+}

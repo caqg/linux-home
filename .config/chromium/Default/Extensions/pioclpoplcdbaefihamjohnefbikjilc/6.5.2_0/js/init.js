@@ -1,0 +1,2 @@
+/*! Copyright 2009-2015 Evernote Corporation. All rights reserved. */
+var workchatBackground,extension,auth=null,sidebarBackground;require(["GlobalUtils","OOXMLReader","spark-md5","SidebarBackground"],function(a,b,c,d){window.GlobalUtils=a,window.OOXMLReader=b,window.SparkMD5=c,workchatBackground=new WorkchatBackground,extension=new Extension,extension.start(),sidebarBackground=d,new ClipResultBackground});

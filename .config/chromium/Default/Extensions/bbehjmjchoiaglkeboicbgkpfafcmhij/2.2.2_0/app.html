@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Writebox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and distraction-free text editor">
+
+    <link rel="stylesheet" type="text/css" href="/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/tooltip.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/pulldown.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/simple-color-picker.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/markdown.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/chromeapp.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.highlighttextarea.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/print.css"/ media="print">
+    <script type="text/javascript" src="/script/jquery.js"></script>
+    <script type="text/javascript" src="/script/jquery.tooltip.js"></script>
+    <script type="text/javascript" src="/script/jquery.pulldown.js"></script>
+    <script type="text/javascript" src="/script/markdown.js"></script>
+    <script type="text/javascript" src="/script/marked.js"></script>
+    <script type="text/javascript" src="/script/FileSaver.js"></script>
+    <script type="text/javascript" src="/script/mydate.js"></script>
+    <script type="text/javascript" src="/script/api2.js"></script>
+    <script type="text/javascript" src="/script/simple-color-picker.js"></script>
+
+
+    <!--
+    <script type="text/javascript" src="/script/WriteboxShortcutController.js"></script>
+    <script type="text/javascript" src="/script/WriteboxSettingController.js"></script>
+    <script type="text/javascript" src="/script/WriteboxAccountManager.js"></script>
+    <script type="text/javascript" src="/script/WriteboxFileManager.js"></script>
+    <script type="text/javascript" src="/script/UILayoutManager.js"></script>
+    <script type="text/javascript" src="/script/WriteboxEditStatus.js"></script>
+    <script type="text/javascript" src="/script/WriteboxShortcuts.js"></script>
+    <script type="text/javascript" src="/script/WriteboxChooser.js"></script>
+    <script type="text/javascript" src="/script/WriteboxEditor.js"></script>
+    <script type="text/javascript" src="/script/WriteboxMenu.js"></script>
+    <script type="text/javascript" src="/script/WriteboxSettings.js"></script>
+    <script type="text/javascript" src="/script/utility.js"></script>
+    <script type="text/javascript" src="/script/main.js"></script>
+  -->
+    <script type="text/javascript" src="/script/textarea-helper.js"></script>
+    <script type="text/javascript" src="/script/main2.js"></script>
+
+    <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/icon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-152x152.png" />
+
+  </head>
+  <body>
+    <div id="link-window" style="display: none;">
+      <div id="link-window-header">
+        <div class="message"></div>
+        <div class="flex"></div>
+        <div class="cancel-button">X</div>
+      </div>
+      <webview src=""></webview>
+    </div>
+
+    <div id="main">
+      <div id="header" style="visibility: hidden;">
+        <div id="menu">
+          <div class="left">
+            <div class="command" id="new-button" title="Create new text">
+              <img src="/image/bar_dark/new.png"/>
+              <span>New</span>
+            </div>
+
+            <div class="command" id="load-button" title="Open text file">
+              <img src="/image/bar_dark/open.png"/>
+              <span>Open</span>
+            </div>
+
+            <div class="command pulldown" id="recent-button" title="Recent Documents">
+              <img class="label" src="/image/bar_dark/history.png"/>
+              <ul style="display:none;"></ul>
+            </div>
+          </div>
+
+          <div id="filename">
+            <img class="storage-icon" />
+            <span></span>
+          </div>
+
+          <div class="flex"></div>
+
+          <div class="right">
+            <div class="command" id="preview-markdown-button" title="Preview">
+              <img src="/image/bar_dark/preview-markdown.png" />
+            </div>
+
+            <div class="command pulldown" id="feature-menu" title="Menu">
+              <img class="label" src="/image/bar_dark/menu.png" />
+              <ul style="display: none;">
+                <li id="saveas-button"><img src="/image/menu/saveas.png" />Save as</li>
+                <li id="download-text-menu"><img src="/image/menu/download.png" />Download (Plain Text)</li>
+                <li id="download-html-menu"><img src="/image/menu/download.png" />Download (HTML)</li>
+                <li class="separation"> </li>
+                <li id="print-button"><img src="/image/menu/print.png" />Print</li>
+                <li id="fullscreen-button"><img src="/image/menu/fullscreen.png" />Fullscreen</li>
+                <li id="find-button"><img src="/image/menu/find.png" />Find</li>
+                <li class="separation"> </li>
+                <li id="discard-button"><img src="/image/menu/discard.png" />Discard this text</li>
+                <li id="delete-local-data-button"><img src="/image/menu/clear.png" />Delete all local data</li>
+                <li class="separation"> </li>
+                <li id="option-button"><img src="/image/menu/settings.png" />Settings</li>
+                <li id="shortcuts-setting-button"><img src="/image/menu/shortcuts.png" />Shortcuts</li>
+                <li id="account-menu"><img src="/image/menu/account.png" />Account</li>
+                <li class="separation"> </li>
+                <li id="about-button"><img src="/image/menu/about.png" />About</li>
+              </ul>
+            </div>
+
+            <div class="command button emphasis" id="sync-button" title="Sync with cloud">
+              <span>Sync</span>
+            </div>
+          </div>
+        </div>
+        <div id="window-close-button" style="display: none;">x</div>
+
+        <div id="preview-markdown-esc-message" class="clickable" style="display:none;">Click here or press ESC to dismiss.</div>
+      </div>
+
+      <div class="slidedown-bar" id="option-bar" style="display:none;">
+        <div class="container">
+          <div class="command l-separate r-separate">
+            <span>Color:</span>
+            <button class="color-pick" id="front-color-picker" title="Text Color"></button>
+            <button class="color-pick" id="bg-color-picker" title="Background Color"></button>
+          </div>
+
+          <div class="command pulldown r-separate">
+            <span class="label" id="current-font-size" title="Font size">13pt</span>
+            <ul style="display:none;">
+              <li class="font-size-menu">8pt</li>
+              <li class="font-size-menu">9pt</li>
+              <li class="font-size-menu">10pt</li>
+              <li class="font-size-menu">11pt</li>
+              <li class="font-size-menu">12pt</li>
+              <li class="font-size-menu">13pt</li>
+              <li class="font-size-menu">14pt</li>
+              <li class="font-size-menu">16pt</li>
+              <li class="font-size-menu">18pt</li>
+              <li class="font-size-menu">24pt</li>
+            </ul>
+          </div>
+
+          <div class="command pulldown r-separate">
+            <span class="label" id="current-font-family" title="Font">Verdana</span>
+            <ul style="display:none;">
+              <li class="font-family-menu">Arial</li>
+              <li class="font-family-menu">Century Gothic</li>
+              <li class="font-family-menu">Console</li>
+              <li class="font-family-menu">Consolas</li>
+              <li class="font-family-menu">Courier</li>
+              <li class="font-family-menu">Helvetica</li>
+              <li class="font-family-menu">Lucida Sans</li>
+              <li class="font-family-menu">Meiryo</li>
+              <li class="font-family-menu">Tahoma</li>
+              <li class="font-family-menu">Time New Roman</li>
+              <li class="font-family-menu">Verdana</li>
+              <li class="font-family-menu">sans-serif</li>
+              <li class="font-family-menu">serif</li>
+              <li class="font-family-menu">monospace</li>
+              <li class="font-family-menu" data-ignore-click="yes"><input id="custom-font-family" type="text" placeholder="Other Font.." /></li>
+            </ul>
+          </div>
+
+          <div class="command pulldown" id="more-options-pulldown">
+            <span class="label">More..</span>
+            <ul style="display:none;">
+              <li data-ignore-click="yes"><div>Line Height:</div><input type="text" id="current-line-height" value="1.6" /></li>
+              <li data-ignore-click="yes"><div>Width(pixel):</div><input type="text" id="current-width" value="800" /></li>
+              <li data-ignore-click="yes"><input type="checkbox" id="current-show-statistics" checked="1"/><span>Show Statistics</span></li>
+              <li data-ignore-click="yes"><input type="checkbox" id="current-show-scrollbar" checked="1"/><span>Show Scrollbar</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="close-button">
+          <span>x</span>
+        </div>
+      </div>
+
+      <div class="slidedown-bar" id="message-bar" style="display:none;">
+        <div class="container">
+          <p>You have a latest version of this text on cloud service. <button id="download-latest-button" class="button">Download latest version</button></p>
+        </div>
+        <div class="close-button">
+          <span>x</span>
+        </div>
+      </div>
+
+      <div id="contents-bg" style="display: none;"></div>
+      <textarea id="editor"></textarea>
+
+      <!--
+      <div id="editor">
+        <div class="contents" contenteditable="true"></div>
+      </div>
+      -->
+      <div id="editor-footer">
+        <div id="processing-message"></div>
+        <div id="document-statistics">
+          <span class="selected"><span id="selected-word-count">-</span> words selected | <span id="selected-char-count">-</span> chars selected</span>
+          <span class="normal"><span id="line-count">-</span> lines | <span id="word-count">-</span> words | <span id="char-count">-</span> chars</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog responsive-dialog" id="chooser-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Select text file</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <div class="chooser-navigator">/</div>
+            <div class="file-navigator">
+              <div class="main-menu">
+                <ul class="chooser-filelist" data-storage="dropbox"></ul>
+                <ul class="chooser-filelist" data-storage="googledrive" style="display:none;"></ul>
+                <!--<ul class="chooser-filelist" data-storage="skydrive" style="display:none;"></ul>-->
+                <!--<ul class="chooser-filelist" data-storage="box" style="display:none;"></ul>-->
+                <ul class="chooser-filelist" data-storage="local" style="display:none;"></ul>
+              </div>
+
+              <div class="side-menu">
+                <ul>
+                  <li class="chooser-storagelist selection"  data-storage="dropbox"><img src="/image/storage/dropbox_icon.png"><span>Dropbox</span></li>
+                  <li class="chooser-storagelist" data-storage="googledrive"><img src="/image/storage/drive_icon.png"><span>Google Drive</span></li>
+                  <!--<li class="chooser-storagelist"  data-storage="skydrive"><img src="/image/storage/skydrive_icon.png"><span>SkyDrive</span></li>-->
+                  <!--<li class="chooser-storagelist"  data-storage="box"><img src="/image/storage/box_icon.png"><span>Box.net</span></li>-->
+
+                  <li class="chooser-storagelist" data-storage="local"><span>Drafts</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottombar">
+            <div id="chooser-save-form" style="display:none;">
+              <input type="text" id="file-name-input" placeholder="File name" value=".txt"></input>
+              <div id="chooser-save-button" class="button">Save</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="find-dialog" style="display:none;">
+      <div>
+        <input id="find-query" type="text" placeholder="Find.." />
+        <div id="find-prev-button" class="button">
+          <img src="/image/menu/previous.png">
+        </div>
+        <div id="find-next-button" class="button">
+          <img src="/image/menu/next.png">
+        </div>
+        <div class="dialog-close-button">x</div>
+      </div>
+    </div>
+
+
+    <div class="dialog responsive-dialog" id="about-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">About Writebox</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+          <div class="main">
+            <p>Writebox is a simple text editor for your Dropbox data that helps you to concentrate to write and sharing your writing text on your computers and devices.</p>
+
+            <h3>Informations</h3>
+            <ul>
+              <li><a href="http://writeboxapps.com/" target="_blank">About</a></li>
+              <li><a href="http://writeboxapps.com/#policies" target="_blank">Policies</a></li>
+              <li>Donation: <a href="http://flattr.com/thing/808293/Writebox" target="_blank">Flattr</a></li>
+              <li>Developer: <a href="http://www.twitter.com//kazuhiroshibuya" target="_blank">@kazuhioroshibuya</a></li>
+              <li><a href="https://itunes.apple.com/jp/app/writebox/id575555790" target="_blank">iOS</a> / <a href="https://play.google.com/store/apps/details?id=com.kazuhiroshibuya.writebox" target="_blank">Android</a> / <a href="https://chrome.google.com/webstore/detail/writebox/bbehjmjchoiaglkeboicbgkpfafcmhij" target="_blank">Chrome</a> / <a href="https://write-box.appspot.com" target="_blank">Web</a></li>
+              <li>App icons by <a href="http://icons8.com/" target="_blank">Icons8</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="error-load-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Error</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Can't Load text data from cloud service.</p>
+          </div>
+
+          <div class="bottombar">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="error-save-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Error</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Can't Save text data to cloud service.</p>
+          </div>
+
+          <div class="bottombar">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="confirm-clear-local-data-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Delete local data?</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Delete all of local data including not synced text data?</p>
+          </div>
+
+          <div class="bottombar">
+            <div class="flex"></div>
+            <button class='button cancel-button'>Not Delete</button>
+            <button class='button okay-button emphasis'>Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="confirm-discard-text-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Discard?</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Discard this editing text data? (Delete completely from your local)</p>
+          </div>
+
+          <div class="bottombar">
+            <div class="flex"></div>
+            <button class='button cancel-button'>Cancel</button>
+            <button class='button okay-button emphasis'>Discard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="confirm-move-to-authorize-process" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Link [[service]]?</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Press [Yes] to move to authorization page.</p>
+          </div>
+
+          <div class="bottombar">
+            <div class="flex"></div>
+            <button class='button cancel-button'>No</button>
+            <button class='button okay-button emphasis'>Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dialog" id="error-localstorage-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">ERROR</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Your local storage is reaching limit. Your data was not saved.</p>
+            <p>You need to delete some text data from [Open] - [Local] menu.</p>
+          </div>
+
+          <div class="bottombar">
+            <div class="flex"></div>
+            <button class='button cancel-button'>Cancel</button>
+            <button class='button okay-button emphasis'>Discard this text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog responsive-dialog" id="account-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Account Settings</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <ul>
+              <li>
+                <div>
+                  <img src="/image/storage/dropbox_icon.png" width="32px">
+                </div>
+                <div>
+                  <div class="account-title-area">
+                    <div class="title">Dropbox</div>
+                    <span class="label" id="dropbox-account"></span>
+                  </div>
+                  <div class="account-manage-button">
+                    <button id="link-dropbox-button" class="button">Link</button>
+                    <button id="unlink-dropbox-button" style="display:hidden;" class="button emphasis">Unlink</button>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <img src="/image/storage/drive_icon.png" width="32px">
+                </div>
+                <div>
+                  <div class="account-title-area">
+                    <div class="title">Google Drive</div>
+                    <span class="label" id="googledrive-account"></span>
+                  </div>
+                  <div class="account-manage-button">
+                    <button id="link-googledrive-button" class="button">Link</button>
+                    <button id="unlink-googledrive-button" style="display:hidden;" class="button emphasis">Unlink</button>
+                  </div>
+                </div>
+              </li>
+
+              <!--
+              <li>
+                <div>
+                  <img src="/image/storage/box_icon.png" width="32px">
+                </div>
+                <div>
+                  <div class="account-title-area">
+                    <div class="title">Box</div>
+                    <span class="label" id="box-account"></span>
+                  </div>
+                  <div class="account-manage-button">
+                    <button id="link-box-button" class="button">Link</button>
+                    <button id="unlink-box-button" style="display:hidden;" class="button emphasis">Unlink</button>
+                  </div>
+                </div>
+              </li>
+            -->
+
+              <!--
+              <li>
+                <div>
+                  <img src="/image/storage/skydrive_icon.png" width="32px">
+                </div>
+                <div>
+                  <div class="account-title-area">
+                    <div class="title">Sky Drive</div>
+                    <span class="label" id="box-account"></span>
+                  </div>
+                  <div class="account-manage-button">
+                    <button id="link-skydrive-button" class="button">Link</button>
+                    <button id="unlink-skydrive-button" style="display:hidden;" class="button emphasis">Unlink</button>
+                  </div>
+                </div>
+              </li>
+            -->
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog responsive-dialog" id="shortcuts-dialog" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Shortcuts</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Keys [0-9] and [A-Z] are available.</p>
+            <table id="shortcuts-setting-table">
+              <tr class="header">
+                <td>Actions</td>
+              </tr>
+
+              <tr>
+                <td class="label">Sync:</td>
+                <td class="modifier">Ctrl(Cmd)+</td>
+                <td class="key"><input class="shortcuts" type="text" value="S" data-action="sync" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">Preview:</td>
+                <td class="modifier">Ctrl(Cmd)+Shift+</td>
+                <td class="key"><input class="shortcuts" type="text" value="P" data-action="preview" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">Statistics:</td>
+                <td class="modifier">Ctrl(Cmd)+Shift+</td>
+                <td class="key"><input class="shortcuts" type="text" value="K" data-action="statistics" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">Print:</td>
+                <td class="modifier">Ctrl(Cmd)+P</td>
+              </tr>
+
+              <tr>
+                <td class="label">Fullscreen:</td>
+                <td class="modifier">Ctrl(Cmd)+Enter</td>
+              </tr>
+
+              <tr class="header">
+                <td>Formatting</td>
+              </tr>
+
+              <tr>
+                <td class="label">Bold:</td>
+                <td class="modifier">Ctrl(Cmd)+</td>
+                <td class="key"><input class="shortcuts" type="text" value="B" data-action="format_bold" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">Italic:</td>
+                <td class="modifier">Ctrl(Cmd)+</td>
+                <td class="key"><input class="shortcuts" type="text" value="I" data-action="format_italic" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">List:</td>
+                <td class="modifier">Ctrl(Cmd)+</td>
+                <td class="key"><input class="shortcuts" type="text" value="L" data-action="format_list" /></td>
+              </tr>
+
+              <tr>
+                <td class="label">Insert Link:</td>
+                <td class="modifier">Ctrl(Cmd)+</td>
+                <td class="key"><input class="shortcuts" type="text" value="K" data-action="format_link" /></td>
+              </tr>
+
+            </table>
+            <a href="#" id="restore-default-shortcuts">Restore defaults</a>
+          </div>
+
+          <div class="bottombar">
+            <div class="flex"></div>
+            <button class='button cancel-button'>Cancel</button>
+            <button class='button okay-button emphasis'>Save settings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog responsive-dialog" id="writebox-info-dialog" attr-infoid="1010" style="display:none;">
+      <div class="window">
+        <div>
+          <div class="topbar">
+            <div class="title">Chrome App version is now available!</div>
+            <div class="flex"></div>
+            <div class="dialog-close-button">x</div>
+          </div>
+
+          <div class="main">
+            <p>Released chrome app version of Writebox. (<a href="https://chrome.google.com/webstore/detail/writebox-for-chrome/gjiojfkjllkkkkcicbaiahobdgjfhkom">link</a>)</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="markdown-preview-window">
+      <div id="preview" class="markdown">
+        <div></div>
+      </div>
+    </div>
+
+    <div id="print-window">
+      <div class="contents"></div>
+    </div>
+  </body>
+  <!--<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
+</html>

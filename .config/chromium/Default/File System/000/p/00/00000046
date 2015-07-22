@@ -1,0 +1,5 @@
+01:01:13 GMT-0700 (PDT) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:2028
+01:01:17 GMT-0700 (PDT) (LOG) /background.html: Went online. at /js/main/Extension.js:3:2102
+19:15:58 GMT-0700 (PDT) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:2028
+19:38:22 GMT-0700 (PDT) (LOG) /background.html: Bootstrapping while offline, will use existing info.    at Bootstrapper.j [as bootstrap] (/js/common/Bootstrap.js:2:2079)
+19:39:21 GMT-0700 (PDT) (LOG) /background.html: Went online. at /js/main/Extension.js:3:2102

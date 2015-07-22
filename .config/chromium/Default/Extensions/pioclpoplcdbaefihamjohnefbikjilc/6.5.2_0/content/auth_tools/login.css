@@ -1,0 +1,121 @@
+#switcher {
+  color: #C2CFD7;
+  cursor: pointer;
+  display: none;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 15px;
+  line-height: 15px;
+  margin-bottom: 14px;
+  outline: none;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+#switcher.visible {
+  display: inline-block;
+}
+#switcher:after {
+  background-image: url(../../images/forward.png);
+  background-size: 16px 16px;
+  content: "";
+  height: 16px;
+  position: absolute;
+  right: -21px;
+  top: 1px;
+  width: 16px;
+}
+
+#globalError {
+  background-color: #262C32;
+  background-image: url(../../images/error-clip.png);
+  background-position: 28px 5px;
+  background-size: 16px 16px;
+  border-bottom: 1px solid #21262C;
+  border-top: 1px solid #21262C;
+  color: white;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  margin: 0 0 15px -28px;
+  overflow: hidden;
+  padding: 8px 28px 8px 49px;
+  width: -webkit-calc(100% - 21px);
+}
+#globalError:empty {
+  display: none;
+}
+#globalError button {
+  color: black;
+  float: right;
+  font-size: 12px;
+  padding: 3px 6px;
+}
+
+input:not([type='checkbox']) {
+  max-width: 251px;
+  width: 251px;
+}
+
+#username {
+  margin-bottom: 18px;
+}
+
+#simsearch {
+  display: inline-block;
+  margin: 0;
+}
+label[for='simsearch'] {
+  color: #C2CFD7;
+  display: inline;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: initial !important;
+  line-height: normal !important;
+  margin-left: 5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+label[for='simsearch']:before {
+  display: none !important;
+}
+#simsearch, label[for='simsearch'] {
+  vertical-align: middle;
+}
+#simsearchContainer {
+  margin-bottom: 26px;
+}
+
+#login {
+  background-color: #26B064;
+  box-shadow: inset 0 1px #33CC78;
+  font-family: "GothamBold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+#reg {
+  background-color: #209BC9;
+  box-shadow: inset 0 1px #48C0ED;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+#forgotPw {
+  color: #C2CFD7;
+  cursor: pointer;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  height: 14px;
+  line-height: 14px;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  #switcher:after {
+    background-image: url(../../images/forward@2x.png);
+  }
+  #globalError {
+    background-image: url(../../images/error-clip@2x.png);
+  }
+}

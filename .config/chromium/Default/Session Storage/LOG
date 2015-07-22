@@ -1,0 +1,11 @@
+2015/07/21-00:43:04.012 13429 Reusing MANIFEST /home/cesar/.config/chromium/Default/Session Storage/MANIFEST-000109
+2015/07/21-00:43:04.012 13429 Recovering log #1086
+2015/07/21-00:43:04.013 13429 Reusing old log /home/cesar/.config/chromium/Default/Session Storage/001086.log 
+2015/07/21-01:54:22.499 16429 Compacting 3@0 + 1@1 files
+2015/07/21-01:54:22.546 16429 Generated table #1089: 72 keys, 822113 bytes
+2015/07/21-01:54:22.546 16429 Compacted 3@0 + 1@1 files => 822113 bytes
+2015/07/21-01:54:22.549 16429 compacted to: files[ 0 1 0 0 0 0 0 ]
+2015/07/21-01:54:22.549 16429 Delete type=2 #1078
+2015/07/21-01:54:22.549 16429 Delete type=2 #1087
+2015/07/21-01:54:22.549 16429 Delete type=2 #1084
+2015/07/21-01:54:22.550 16429 Delete type=2 #1081

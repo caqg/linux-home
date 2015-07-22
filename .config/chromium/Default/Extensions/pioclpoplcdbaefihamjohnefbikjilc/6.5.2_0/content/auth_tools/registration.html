@@ -1,0 +1,48 @@
+<!doctype html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css"></link>
+    <link type="text/css" rel="stylesheet" href="auth_tools.css"></link>
+    <link type="text/css" rel="stylesheet" href="registration.css"></link>
+    <script type="text/javascript" src="../../third_party/port.js"></script>
+    <script type="text/javascript" src="../../js/opera.js"></script>
+    <script type="text/javascript" src="../../js/yandex.js"></script>
+    <script type="text/javascript" src="../../js/common/Browser.js"></script>
+    <script type="text/javascript" src="../../js/GlobalUtils.js"></script>
+    <script type="text/javascript" src="auth_tools.js"></script>
+    <script type="text/javascript" src="registration.js"></script>
+  </head>
+  <body>
+    <div id="left">
+      <div class="inner">
+        <div class="top"></div>
+        <div class="bottom" message="regAd"></div>
+      </div>
+    </div><!--
+    --><div id="main">
+      <div id="logo"></div>
+      <div id="close" tabindex="9"></div>
+      <div id="cancel" message="loginForm_login" tabindex="8"></div>
+      <div class="inputContainer">
+        <input id="email" autofocus tabindex="1" />
+        <div class="errorHoverRegion"></div>
+      </div>
+      <div class="inputContainer">
+        <input id="username" tabindex="2" />
+        <div class="errorHoverRegion"></div>
+      </div>
+      <div class="inputContainer">
+        <input id="password" type="password" tabindex="3" />
+        <div class="errorHoverRegion"></div>
+      </div>
+      <div id="captchaContainer">
+        <div class="inputContainer">
+          <input id="captcha" tabindex="4" />
+          <div class="errorHoverRegion"></div>
+        </div><!--
+        --><img />
+      </div>
+      <div id="register" class="button" message="register" tabindex="5"></div>
+      <div id="legal"></div>
+    </div>
+  </body>
+</html>

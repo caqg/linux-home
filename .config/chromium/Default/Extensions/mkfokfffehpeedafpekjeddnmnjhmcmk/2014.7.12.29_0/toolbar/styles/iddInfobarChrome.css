@@ -1,0 +1,734 @@
+/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2010 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+	Shared IDSafe Buttons style, common between regular button and combo button
+*/
+
+#InfobarContainer
+{
+	width: 100%;
+	height: 38px;
+	min-height: 38px;
+	float: left;
+	white-space: nowrap;
+	border-bottom: solid 1px rgb( 255, 179, 55 );
+}
+
+div.ContentBlock
+{
+	width: 100%;
+	min-width: 420px ;
+	height: 38px;
+	min-height: 38px;
+	vertical-align: middle;
+	float: left;
+	white-space: nowrap;
+}
+
+.InfobarCaptionText
+{
+	max-width: 100% !important;
+	vertical-align: middle;
+	padding-left: 5px;
+	text-align: right;
+	line-height: 38px;
+	cursor: default;
+}
+
+.InfobarCaptionText:rtl
+{
+	text-align:left;
+}
+
+div.emptyspace
+{
+	min-width:100%;
+}
+
+div.NortonLogo
+{
+	width: 38px;
+	height: 38px;
+	background-image: url('../images/icon_infobar_vault_open.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+div.IDsafeInfobarLogo
+{
+	width:70px;
+	height:42px;
+	border: 0px;
+	padding: 10px;
+	margin: 12px;
+	vertical-align: middle;	
+}
+
+hr#InfobarBottomLine
+{
+	border: none;
+	background-color: #FFB81E;
+	color: #FFB81E;
+	height: 4px;    
+}
+
+/*-----close button------*/
+
+div.coCloseButton_Block
+{
+	float: right !important;
+	margin:0px;
+	padding:0px;
+
+	width: 34px;
+	min-width: 34px;
+	height: 30px;
+	min-height: 30px;
+	background-position: center center;
+}
+
+#coInfobarDiv div.coCloseButton
+{
+	background-image:url('../images/button_close_off.png');
+	background-repeat: no-repeat;
+	width: 24px;
+	min-width: 24px;
+	height: 24px;
+	min-height: 24px;
+
+	background-position: center center;
+}
+#coInfobarDiv div.coCloseButton:hover
+{
+	background-image:url('../images/button_close_hover.png');
+	background-repeat: no-repeat;
+}
+#coInfobarDiv div.coCloseButton:active
+{
+	background-image:url('../images/button_close_click.png');
+	background-repeat: no-repeat;
+}
+
+/*-----end close button------*/
+div.InfobarText
+{
+	padding-bottom: 0px;
+	padding-top: 3px;
+} 
+
+span.ButtonText
+{
+	padding-top:6px;
+	padding-bottom: 6px;
+	padding-left:9px;
+	padding-right:9px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+div.InfobarGroup
+{
+	vertical-align: middle;
+	margin-top: -1px;
+	float: left;
+	white-space: nowrap;
+}
+
+div.InfobarButton,
+div.InfobarButtonGray
+{
+	height: 31px !important;
+	min-height: 31px !important;  
+	margin-left: 9px !important;
+	margin-right: 9px !important;
+}
+
+div.InfobarFAButton
+{
+	min-width : 170px;
+	min-height: 31px !important;
+	max-width : 170px;
+	max-height: 31px !important;   
+	vertical-align: middle;
+	margin-left: 9px !important;
+	margin-right: 9px !important;           
+}
+
+div.InfobarButton,
+div.InfobarFAButton,
+div.InfobarButtonGray
+{
+	white-space:nowrap;
+	margin-top: 4px;
+}
+div.InfobarButton,
+div.InfobarFAButton
+{
+	background-image: url('../images/button1A_size3_default.png');
+}
+div.InfobarButton:hover,
+div.InfobarFAButton:hover
+{
+	background-image: url('../images/button1A_size3_hover.png');
+}
+div.InfobarButton:active,
+div.InfobarFAButton:active
+{
+	background-image: url('../images/button1A_size3_onclick.png');
+}
+
+div.InfobarButtonGray
+{
+	background-image: url('../images/button2A_size3_default.png');
+}
+
+div.InfobarButtonGray:hover
+{
+	background-image: url('../images/button2A_size3_hover.png');
+}
+
+div.InfobarButtonGray:active
+{
+	background-image: url('../images/button2A_size3_onclick.png');
+}
+
+
+span.InfobarButtonText
+{
+	margin-top: 5px;
+	text-align: center;
+	vertical-align: middle;
+    width: 100%;
+    cursor:pointer;
+}
+
+div.IDSafeButton,
+div.IDSafeDefaultButton
+{
+	width:0%;  
+	flow:horizontal;
+	white-space:nowrap;
+	background-repeat:stretch ;
+}
+
+div.IDSafeButton:hover
+{
+	background-image: url('../images/infoBar_Background_Hover.png');
+}
+
+div.IDSafeButton:active
+{
+	background-image: url('../images/infoBar_Background_Active.png');
+}
+
+div.IDSafeDefaultButton
+{
+	background-image: url('../images/infoBar_DefaultButton_Normal.png');
+  
+}
+div.IDSafeDefaultButton:hover
+{
+	background-image: url('../images/infoBar_DefaultButton_Hover.png');
+}
+div.IDSafeDefaultButton:active
+{
+	background-image: url('../images/infoBar_DefaultButton_Active.png');
+}
+
+/* Locked means this button is launchnig a dialog and stays in this state until the dialog goes away */
+div.IDSafeButton[Locked="yes"]
+{
+	background-image: none ;
+	font-weight: bold;
+}
+/* Locked means this button is launchnig a dialog and stays in this state until the dialog goes away */
+div.IDSafeDefaultButton[Locked="yes"]
+{
+	background-image: none ;
+	background-color: White;
+	color: Black;
+	font-weight: bold;
+}
+
+/* Different Infobar layouts */
+#InfobarContainer[type="SaveLogin"] div.InfobarGroup[type="SaveLogin"]
+{
+	display: inline-block;
+	float: right;
+	white-space: nowrap;
+}
+
+/* Different Infobar layouts */
+
+#InfobarContainer[type="SaveAdditionalLogin"] div.InfobarGroup[type="SaveAdditionalLogin"],
+#InfobarContainer[type="SaveNewPassword"] div.InfobarGroup[type="SaveNewPassword"],
+#InfobarContainer[type="AlreadySavedLogin"] div.InfobarGroup[type="AlreadySavedLogin"],
+#InfobarContainer[type="SaveAdditionalNewLogin"] div.InfobarGroup[type="SaveAdditionalNewLogin"],
+#InfobarContainer[type="FillForm"] div.InfobarGroup[type="FillForm"],
+#InfobarContainer[type="RemeberPersonalInfo"] div.InfobarGroup[type="RemeberPersonalInfo"],
+#InfobarContainer[type="LoginToIDSafe"] div.InfobarGroup[type="LoginToIDSafe"],
+#InfobarContainer[type="ValidatePassword"] div.InfobarGroup[type="ValidatePassword"],
+#InfobarContainer[type="SetupIDSafe"] div.InfobarGroup[type="SetupIDSafe"],
+#InfobarContainer[type="SetupInformation"] div.InfobarGroup[type="SetupInformation"],
+#InfobarContainer[type="SecurityOverride"] div.InfobarGroup[type="SecurityOverride"],
+#InfobarContainer[type="WantToCreateCard"] div.InfobarGroup[type="WantToCreateCard"],
+#InfobarContainer[type="FillFormAssistance"] div.InfobarGroup[type="FillFormAssistance"],
+#InfobarContainer[type="LaunchFillAssistant"] div.InfobarGroup[type="LaunchFillAssistant"],
+#InfobarContainer[type="LoggingStatus"] div.InfobarGroup[type="LoggingStatus"],
+#InfobarContainer[type="SaveLoginPassStatus"] div.InfobarGroup[type="SaveLoginPassStatus"],
+#InfobarContainer[type="AutosaveSettingPrompt"] div.InfobarGroup[type="AutosaveSettingPrompt"],
+#InfobarContainer[type="SignInToNA"] div.InfobarGroup[type="SignInToNA"],
+#InfobarContainer[type="VaultPwdSecurityPrompt"] div.InfobarGroup[type="VaultPwdSecurityPrompt"],
+#InfobarContainer[type="DisablePasswordManagerPrompt"] div.InfobarGroup[type="DisablePasswordManagerPrompt"],
+#InfobarContainer[type="IgnorePage"] div.InfobarGroup[type="IgnorePage"],
+#InfobarContainer[type="ErrorPage"] div.InfobarGroup[type="ErrorPage"]
+{
+	display: inline-block;
+	float: right;
+}
+
+.InfobarLabelText,
+div.InfobarLabelText
+{
+	min-width : 70px;
+	min-height: 26px;
+	max-width : 70px;
+	max-height: 26px;   
+	 
+	white-space:nowrap;
+	font-family:"Segoe UI", Tahoma, Sans-Serif;
+	font-weight:normal;
+	font-size: 14px;
+	color:#939393;
+	text-align:right;
+}
+
+#IDSaveAsLabel
+{
+	text-align:right center;
+	margin-right: 3px;
+	margin-top: 6px;
+	margin-left: 8px;
+	line-height: 26px;
+}
+
+div.InfobarEditTextDiv
+{
+	min-width : 184px;
+	min-height: 28px !important;
+	max-width : 184px;
+	max-height: 28px !important;   
+	
+	vertical-align: middle;
+}
+
+div.InfobarEditTextDiv[hide="yes"]
+{
+	visibility:collapse;
+}
+
+div#IDSaveIBSiteNameDiv
+{
+	margin-top: 0px;
+}
+
+.InfobarEditText,
+div.InfobarEditText,
+input.InfobarEditText
+{
+	min-width : 178px;
+	min-height: 20px;
+	max-width : 178px;
+	max-height: 20px;    
+		
+	font-family:"Segoe UI", Tahoma, Sans-Serif;
+	font-weight:normal;
+	font-size: 14px;
+	color:#474747;
+	line-height: 12px !important;
+   
+	vertical-align: middle; 
+	box-sizing: border-box;
+
+	display: block;
+	padding: 2px 2px 2px 2px;
+	outline :none !important;
+	outline-style:none;   
+	border: 1px solid #C0C0C0;
+}
+
+.InfobarEditText:focus,
+div.InfobarEditText:focus
+{
+	padding: 2px 2px 2px 2px;
+	border: 1px solid #00AFEC;
+}
+
+/* NortonLogo for Different Infobar layouts */
+#InfobarContainer[type="SaveLogin"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+	
+#InfobarContainer[type="SaveAdditionalLogin"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+} 
+
+#InfobarContainer[type="SaveNewPassword"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="AlreadySavedLogin"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="FillForm"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="RemeberPersonalInfo"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="LoginToIDSafe"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_closed.png');
+}
+	
+#InfobarContainer[type="ValidatePassword"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_closed.png');
+}    
+
+#InfobarContainer[type="SetupIDSafe"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_closed.png');
+}
+
+#InfobarContainer[type="SetupInformation"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="SecurityOverride"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="WantToCreateCard"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+	
+#InfobarContainer[type="FillFormAssistance"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="LaunchFillAssistant"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+	
+#InfobarContainer[type="LoggingStatus"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_progress.png');
+}    
+	
+#InfobarContainer[type="SaveLoginPassStatus"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_success.png');
+} 
+
+#InfobarContainer[type="AutosaveSettingPrompt"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+} 
+
+#InfobarContainer[type="SignInToNA"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_closed.png');
+}
+
+#InfobarContainer[type="SaveAdditionalNewLogin"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="VaultPwdSecurityPrompt"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_secure.png');
+}
+
+#InfobarContainer[type="IgnorePage"][ignorestate="ignore"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_ignored.png');
+}
+
+#InfobarContainer[type="IgnorePage"][ignorestate="removeignore"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_vault_open.png');
+}
+
+#InfobarContainer[type="ErrorPage"] div.NortonLogo
+{
+	background-image: url('../images/icon_infobar_error.png');
+}
+
+/* Vault Lock Images */
+div.VaultLockLogo
+{
+	width: 16px;
+	height: 38px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url('../images/ICON_FA_SECURED.png');
+	margin-right: 8px;
+}
+
+div.VaultLockLogo[hide="yes"]
+{
+	visibility:collapse;
+}
+
+#IDSaveIBSiteName,
+#IDSaveAdditionalLoginIBSiteName,
+#InfobarPwdEditText,
+#LoginInfobarPwdEditText,
+#IDSaveNewPwdIBSiteName
+{
+	min-width : 178px;
+	min-height: 28px;
+	max-width : 178px;
+	max-height: 28px;  
+	
+	padding: 2px 2px 2px 3px;
+	border: 1px solid #C0C0C0;
+	margin-top: 6px;
+    line-height: 28px !important;	
+}
+
+#IDSaveIBSiteName:focus,
+#IDSaveAdditionalLoginIBSiteName:focus,
+#LoginInfobarPwdEditText:focus,
+#InfobarPwdEditText:focus,
+input.InfobarPwdEditText:focus
+{
+	padding: 2px 2px 2px 3px;
+	border: 1px solid #00AFEC;
+}
+
+/*#InfobarContainer[type="VaultPwdSecurityPrompt"] div.InfobarGroup[type="VaultPwdSecurityPrompt"]*/
+#LoginToIDSafe_Caption,
+#VaultPwdSecurityCaption
+{
+	margin-right: 15px;
+}
+
+#LoginVaultPwdSecurityErrorMsg,
+#VaultPwdSecurityErrorMsg
+{
+	height: 25px;
+	font-family:"Segoe UI", Tahoma, Sans-Serif;
+	font-weight:normal;
+	font-size: 12px;
+	line-height: 25px;
+	vertical-align: middle;
+	text-align:center;
+	
+	padding-top: 8px;
+	margin-right: 5px;
+	color: rgb(255, 28, 36);    
+}
+
+/*div.InfobarGroup[type="VaultPwdSecurityPrompt"],*/
+#LoginVaultPwdSecurityErrorMsg[hide="no"] #LoginInfobarPwdEditText,
+#VaultPwdSecurityErrorMsg[hide="no"] #InfobarPwdEditText
+{
+	padding: 2px 2px 2px 2px;
+	border: 1px solid rgb(255, 28, 36);    
+}
+
+.InfobarMultiLoginButton,
+div.InfobarMultiLoginButton
+{
+	width: 55px;
+	min-width: 55px;
+	height: 35px !important;
+	min-height: 35px !important;  
+	margin-left: 9px !important;
+	margin-right: 9px !important;
+
+	white-space:nowrap;
+	background-repeat:no-repeat;
+	margin-top: -2px;
+	margin-bottom: -2px;
+}
+
+div.InfobarMultiLoginButton
+{
+	background-image: url('../images/icon_infobar_mutiple_arrow_up.png');
+	background-position:right;
+	background-color: #f38b00;
+}
+#InfobarContainer[type="FillForm"][multiloginmenu="opened"] div#IDSafeLoginListMenuBtn
+{
+	background-image: url('../images/icon_infobar_mutiple_arrow_active.png');
+	background-position:right;
+	background-color: #0089c6;
+	margin-top: 2px;
+}
+#InfobarContainer[type="FillForm"][multiloginmenu="closed"] div#IDSafeLoginListMenuBtn
+{
+	background-image: url('../images/icon_infobar_mutiple_arrow_up.png');
+	background-position:right;
+	background-color: #f38b00;
+	margin-top: 2px;
+}
+
+span.InfobarMultiLoginButtonText
+{
+	margin-top: 3px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-top: 2px;
+	
+	font-family:"Segoe UI", Tahoma, Sans-Serif;
+	font-weight:normal;
+	font-size: 16px !important;
+	color: #ffffff;    
+}
+
+#IDSafeLoginListMenuBtn
+{
+	min-width: 55px;
+	max-width: 55px;
+	text-align:left !important; 
+	color: #ffffff;
+	cursor: default;
+}
+
+#IDSafeLoginListMenuBtn[hide="no"]
+{
+	visibility:visible;
+}
+	
+#IDSafeLoginListMenuBtn[hide="yes"]
+{
+	visibility:collapse;
+}
+
+div.FormFillComboBox
+{
+	min-width: 160px;
+	margin-left: 10px;
+}
+
+div#IdentitiesComboBoxDiv,
+div#WalletsComboBoxDiv
+{
+	width: 160px;
+	height: 25px;
+	margin-top: 7px;
+	padding-left: 10px;
+}
+
+select#IDSafeIdentitiesTitleCBox,
+select#IDSafeWalletsTitleCBox
+{
+	height: 25px;
+	width: 160px;
+	background-repeat:no-repeat;
+	background-position: 5px 6px;
+	background-color:white;
+	padding-left: 20px;
+}
+
+#IdentitiesComboBoxDiv[hide="no"]
+{
+	visibility:visible;
+}
+	
+#IdentitiesComboBoxDiv[hide="yes"]
+{
+	visibility:collapse;
+}
+
+#WalletsComboBoxDiv[hide="no"]
+{
+	visibility:visible;
+}
+	
+#WalletsComboBoxDiv[hide="yes"]
+{
+	visibility:collapse;
+}
+	
+select#IDSafeIdentitiesTitleCBox
+{
+	background-image:url('../images/icon_id16.png');
+}
+
+select#IDSafeWalletsTitleCBox
+{
+	background-image:url('../images/icon_wallet16.png');
+
+caption.FormFillComboBoxcaption
+{
+	background-image:url('../images/icon_arrow_menu_small.png');
+}
+
+caption.FormFillComboBoxcaption,
+div[type="select-dropdown"] > caption,
+div[type="select-dropdown"] > caption > span
+{
+	width: 130px;
+	text-overflow:ellipsis;
+}
+
+div[type="select-dropdown"] > caption > button,
+div[type="select-dropdown"] > button,
+button[role="dropdown"]
+{
+	background-image:url('../images/icon_arrow_menu_small.png) !important;
+	background-position: 8px center;
+	background-repeat: no-repeat;
+	height: 20px !important;
+	width: 15px !important;
+	cursor: pointer;
+}
+
+div[type="select-dropdown"] > popup > span
+{
+	height: 25px !important;
+	vertical-align:middle;
+}
+
+div#IDSafeSaveOptions
+{
+	background-image:url('../images/icon_arrow_menu_small.png');
+	background-color: #FFFFFF;
+	background-position-right: 8px;
+	background-position-top: center;
+	background-repeat: no-repeat; 
+}

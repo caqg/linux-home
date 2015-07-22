@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "GothamMedium";
+  src: url(../fonts/GothamSSm-Medium.otf);
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(../fonts/GothamSSm-Bold.otf);
+}
+
+@font-face {
+  font-family: "caecilia";
+  src: url(../fonts/caecilialtstd-roman-webfont.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* for clearly top sites */
+@font-face {
+  font-family: "Gotham";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../fonts/GothamSSm-Book.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/GothamSSm-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "Caecilia";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/caecilialtstd-bold-webfont.woff) format('woff');
+}

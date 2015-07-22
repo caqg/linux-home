@@ -1,0 +1,2 @@
+/*! Copyright 2009-2015 Evernote Corporation. All rights reserved. */
+function closePopup(){if(SAFARI){for(var a=safari.extension.toolbarItems,b=0;b<a.length;b++)if("clipper"==a[b].identifier&&a[b].popover){a[b].popover.hide();break}}else window.close()}

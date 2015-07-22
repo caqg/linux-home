@@ -1,0 +1,145 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  border: 1px solid #21262C;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+#main {
+  background-color: #2F373D;
+  border-radius: 4px;
+  padding: 22px 28px;
+}
+
+#logo {
+  background-image: url(../../images/clipboard.png), url(../../images/evernote_web_clipper.png);
+  background-position: -10px -10px, 48px 1px;
+  background-size: 58px 58px, 134px 36px;
+  cursor: pointer;
+  height: 58px;
+}
+#logo.china {
+  background-image: url(../../images/clipboard.png), url(../../images/evernote_web_clipper_china.png);
+  background-position: -10px -10px, 43px 1px;
+  background-size: 58px 58px, 48px 47px;
+}
+
+#close {
+  background-image: url(../../images/close_login.png);
+  background-size: 8px 8px;
+  cursor: pointer;
+  height: 8px;
+  outline: none;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 8px;
+}
+
+.inputContainer {
+  position: relative;
+}
+input:not([type='checkbox']) {
+  background-color: #EAF0F5;
+  border: 1px solid #21262C;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #3A4045;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  height: 36px;
+  margin-bottom: 16px;
+  max-width: 236px;
+  outline: none;
+  padding: 10px;
+  text-shadow: none;
+  width: 236px;
+}
+input:not([type='checkbox'])::-webkit-input-placeholder {
+  color: #8E98A1;
+}
+input:not([type='checkbox'])+.errorHoverRegion {
+  height: 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  width: 16px;
+}
+input:not([type='checkbox']).error {
+  background-image: url(../../images/auth_error.png);
+  background-position: -webkit-calc(100% - 12px) 50%;
+  background-size: 16px 16px;
+}
+input:not([type='checkbox']).error+.errorHoverRegion {
+  pointer-events: all;
+}
+input:not([type='checkbox']).error+.errorHoverRegion:hover:before {
+  background-color: #ED4C5B;
+  border: 1px solid white;
+  border-radius: 3px;
+  bottom: 19px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  content: attr(data-error);
+  color: white;
+  font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 20px;
+  padding: 0 5px;
+  position: absolute;
+  right: -5px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+input:not([type='checkbox']).error+.errorHoverRegion:hover:after {
+  background-image: url(../../images/auth_error_arrow.png);
+  background-position: 0 0;
+  background-size: 14px 7px;
+  content: "";
+  height: 7px;
+  position: absolute;
+  right: 1px;
+  top: -4px;
+  width: 14px;
+}
+input:not([type='checkbox']).valid {
+  background-image: url(../../images/checkmark_green.png);
+  background-position: -webkit-calc(100% - 12px) 50%;
+  background-size: 15px 13px;
+}
+
+.button {
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  #logo {
+    background-image: url(../../images/clipboard@2x.png), url(../../images/evernote_web_clipper@2x.png);
+  }
+  #logo.china {
+    background-image: url(../../images/clipboard@2x.png), url(../../images/evernote_web_clipper_china@2x.png);
+  }
+  #close {
+    background-image: url(../../images/close_login@2x.png);
+  }
+  input:not([type='checkbox']).error {
+    background-image: url(../../images/auth_error@2x.png);
+  }
+  input:not([type='checkbox']).error+.errorHoverRegion:hover:after {
+    background-image: url(../../images/auth_error_arrow@2x.png);
+  }
+  input:not([type='checkbox']).valid {
+    background-image: url(../../images/checkmark_green@2x.png);
+  }
+}

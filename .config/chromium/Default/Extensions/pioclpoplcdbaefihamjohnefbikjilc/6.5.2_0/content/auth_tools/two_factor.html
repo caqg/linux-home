@@ -1,0 +1,27 @@
+<!doctype html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css"></link>
+    <link type="text/css" rel="stylesheet" href="auth_tools.css"></link>
+    <link type="text/css" rel="stylesheet" href="two_factor.css"></link>
+    <script type="text/javascript" src="../../third_party/port.js"></script>
+    <script type="text/javascript" src="../../js/common/Browser.js"></script>
+    <script type="text/javascript" src="../../js/GlobalUtils.js"></script>
+    <script type="text/javascript" src="auth_tools.js"></script>
+    <script type="text/javascript" src="two_factor.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="logo"></div>
+      <div id="close" tabindex="5"></div>
+      <div id="cancel" message="regForm_cancel" tabindex="4"></div>
+      <div id="explanation"></div>
+      <div id="instruction" message="enterCode"></div>
+      <div class="inputContainer">
+        <input id="code" autofocus tabindex="1" />
+        <div class="errorHoverRegion"></div>
+      </div>
+      <div id="continue" class="button" message="continue" tabindex="2"></div>
+      <div id="help" message="twoStepHelp" tabindex="3"></div>
+    </div>
+  </body>
+</html>

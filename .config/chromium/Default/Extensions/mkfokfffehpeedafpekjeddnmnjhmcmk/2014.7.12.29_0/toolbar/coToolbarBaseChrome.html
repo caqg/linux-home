@@ -1,0 +1,239 @@
+﻿<!-- Symantec Watermark: CB70-4860-5397-06-15-6 -->
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./styles/cotoolbarbasechrome.css" media="all"/>
+@media sciter > 1
+{
+    input[type="text"],
+    div[type="text"],
+    input[type="password"],
+    div[type="password"],
+    textarea
+    {
+        context-menu: url(DX-EDIT-CONTEXT-MENU.HTM) !important;
+    }
+}
+
+@media screen,contrast-screen
+{
+    html	
+    { 
+        behavior: accesskeys actions; 
+        background-color:Transparent;
+    }
+
+    body
+    {
+        background-image:url(chrome_tb_light_BG.png);
+        width: 100%;		
+        height:28px;
+        padding-top:1px;
+        margin:0;
+        border:0;  
+        overflow: hidden;
+        flow: horizontal;
+        white-space: nowrap;
+        border-bottom: solid 1px;
+        border-top: solid 1px;
+    }
+
+    *
+    {
+        font-family:"Segoe UI", Tahoma, Sans-Serif;
+    }
+    
+    *:lang(ja) 
+    {
+        font-family:"Meiryo UI", Tahoma, Sans-Serif !important;
+        /* special case for Win7, as it interprets Segoe UI as Meiryo, but as Meiryo UI in Win 8*/
+    }
+    
+    div.coTBBase_Block
+    {
+        flow: horizontal;
+        border:0px;
+        padding: 0px;
+        margin: 0px;
+        display: inline-block;
+        width: auto;
+    }
+
+    div.coTBBase_Menu
+    {
+        flow:vertical;
+        border:0;
+        padding:0;
+        margin:0 0 0 3px;
+        width:84px;
+        height:22px;
+        background-image:none;
+        background-repeat: expand;
+        background-position:0px 4px 0px 4px;
+        behavior: button;
+    }
+    
+    div.coTBBase_Menu:focus,
+    div.coTBBase_Menu:tab-focus 
+    {
+        outline:1px dotted invert -2px;
+    }
+
+    div.coTBBase_Menu:hover
+    {
+        background-image:url(NORTON_TB_MM_OVER_LOGO.PNG);		
+    }
+    
+    div.coTBBase_Menu:active
+    {
+        background-image:url(NORTON_TB_MM_ON_LOGO.PNG);		
+    }
+    
+    
+    div.coTBBase_Menu>text
+    {
+        size:*;
+        background-image:url(NortonBranding.png);
+        background-position:6px 0;
+        background-repeat:no-repeat;
+    }
+    
+    div.coTBBase_Menu:active>text
+    {
+        background-position:6px 1px;
+    }
+    
+    
+        
+    /*-----close button------*/
+    div.coCloseButton_Block
+    {
+        flow: horizontal;
+        padding: 0px;
+        margin: 4px 0px 0px 0px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right:0px;
+        vertical-align:middle;
+    }
+
+    div.coCloseButton
+    {
+        flow: horizontal;
+        padding: 0px;
+        width: 15px;
+        height: 15px;
+        margin-top:7px;
+        background-image:none;
+        behavior: button;
+        vertical-align: middle;
+        background-image:url(CLOSE_DEFAULT.PNG);	
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    div.coCloseButton:hover
+    {
+        background-image:url(CLOSE_HOVER.PNG);	
+    }
+    
+    div.coCloseButton:active
+    {
+        background-image:url(CLOSE_CLICK.PNG);		
+    }
+    
+    div.coCloseButton div
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    div.coCloseButton:active div
+    {
+        background-image: url(CLOSE_ACTIVE.PNG);
+    }
+    
+    div.coHideToolbarButton
+    {
+        flow: horizontal;
+        padding: 0px;
+        width: 40px;
+        height: 15px;
+        margin-top:7px;
+        background-image:none;
+        behavior: button;
+        vertical-align: middle;
+        background-image:url(HIDETOOLBAR_DEFAULT.PNG);	
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    div.coHideToolbarButton:hover
+    {
+        background-image:url(HIDETOOLBAR_HOVER.PNG);	
+    }
+    
+    div.coHideToolbarButton:active
+    {
+        background-image:url(HIDETOOLBAR_CLICK.PNG);		
+    }
+    
+    div.coHideToolbarButton div
+    {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Norton Image*/
+    
+    div#coDefaultLogo
+    {
+        background-image:url(logo_tb_norton.png);
+        background-repeat:no-repeat;	
+        margin-right:8px; 
+        margin-top:3px;
+        padding-left:4px;
+        width:64px;
+        height:28px;
+        max-height:28px;
+        vertical-align:middle; 
+        background-position:right -3px; 
+    }
+
+}
+
+@media contrast-screen
+{
+    div.coTBBase_Menu, 
+    div.coCloseButton
+    {
+        background-color: White;
+    }
+    
+    div.coTBBase_Menu:hover, 
+    div.coTBBase_Menu:active,
+    div.coCloseButton:hover,
+    div.coCloseButton:active
+    {
+        background-color: Window;
+    }
+}
+</head>
+<body width="38" dir="ltr">
+    <html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <!--   -->
+    <link rel="stylesheet" type="text/css" href="./styles/cotoolbarchrome.css" media="all" />
+	<css-ext/>
+</head>
+<body width="38" dir="ltr">
+    <body-ext/>
+
+</body>
+</html>
+</body>
+</html>

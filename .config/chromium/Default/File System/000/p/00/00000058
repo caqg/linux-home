@@ -1,0 +1,20 @@
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: user flow state = normal    at new FirstTime (/js/main/FirstTime.js:2:1785)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: last version = 6,5,1    at a (/js/main/FirstTime.js:2:140)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: current version = 6,5,1    at a (/js/main/FirstTime.js:2:169)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: launch type = 0    at new FirstTime (/js/main/FirstTime.js:2:1827)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: first time startup state = normal    at FirstTime.h [as startUp] (/js/main/FirstTime.js:2:1528)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: init browser action    at o (/js/main/Extension.js:2:5112)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: no need to show intro    at o (/js/main/Extension.js:2:6082)
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: [object Object] at /js/main/Extension.js:2:6148
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: logged in at /js/main/Extension.js:2:6162
+02:04:27 GMT-0700 (PDT) (LOG) /background.html: msg handler on init    at FirstTime.d [as msgHandlerOnInit] (/js/main/FirstTime.js:2:478)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: user flow state = normal    at new FirstTime (/js/main/FirstTime.js:2:1785)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: last version = 6,5,1    at a (/js/main/FirstTime.js:2:140)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: current version = 6,5,1    at a (/js/main/FirstTime.js:2:169)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: launch type = 0    at new FirstTime (/js/main/FirstTime.js:2:1827)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: first time startup state = normal    at FirstTime.h [as startUp] (/js/main/FirstTime.js:2:1528)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: init browser action    at o (/js/main/Extension.js:2:5112)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: no need to show intro    at o (/js/main/Extension.js:2:6082)
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: [object Object] at /js/main/Extension.js:2:6148
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: logged in at /js/main/Extension.js:2:6162
+03:42:18 GMT-0700 (PDT) (LOG) /background.html: msg handler on init    at FirstTime.d [as msgHandlerOnInit] (/js/main/FirstTime.js:2:478)

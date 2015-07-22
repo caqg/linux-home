@@ -1,0 +1,47 @@
+html	{ 
+	background-color:Transparent;
+	zoom: reset;
+}
+
+body {
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	z-index:2147483647;
+	background-color: white;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	zoom: reset;
+}
+
+body * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#coToolbarDiv, #coInfobarDiv {
+	width: 100%;
+	border: none;
+	display: none;
+	zoom: reset;
+}
+
+#coToolbarDiv *, #coInfobarDiv *{
+	float: left;
+}
+
+#coToolbarDiv {
+	height: 28px;
+}
+
+#coInfobarDiv {
+	height: 38px;
+}

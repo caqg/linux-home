@@ -1,0 +1,13 @@
+00:41:47 GMT-0700 (PDT) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:2028
+20:06:21 GMT-0700 (PDT) (WARN) https://lubranoevents.webex.com/mw0401lsp13/mywebex/nbrshared.do?siteurl=lubranoevents&action=playback&recordID=37500872&serviceRecordID=37500877&recordKey=4832534b0000000214dc6471ae50cdad5a12aead30c175a617383d87d92f24440cd4c087e4071c7a: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:113), <anonymous>:2:9079)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:113), <anonymous>:2:231)
+    at b (/content/tooltips/custom_tooltip_check.js:2:93)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:352
+    at Object.I.execCb (/third_party/require/require.js:6:12300)
+    at Object.B.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+22:41:30 GMT-0700 (PDT) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:2534
+22:41:40 GMT-0700 (PDT) (LOG) /background.html: Went online. at /js/main/Extension.js:3:2608

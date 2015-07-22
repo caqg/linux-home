@@ -1,0 +1,11 @@
+{
+  "files": {},
+  "program": {
+    "x86-64": {
+      "url": "coNaCl_64.nexe"
+    },
+    "x86-32": {
+      "url": "coNaCl_32.nexe"
+    }
+  }
+}

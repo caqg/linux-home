@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/options.css" />
+
+    <script type="text/javascript" src="third_party/port.js"></script>
+    <script type="text/javascript" src="js/common/Browser.js"></script>
+    <script type="text/javascript" src="js/GlobalUtils.js"></script>
+    <script type="text/javascript" src="js/common/Persistent.js"></script>
+    <script type="text/javascript" src="js/common/Log.js"></script>
+    <script type="text/javascript" src="js/common/Bootstrap.js"></script>
+    <script type="text/javascript" src="js/options/Version.js"></script>
+    <script type="text/javascript" src="js/options/ShortcutSetter.js"></script>
+    <script type="text/javascript" src="content/global_tools/CommonSelector.js"></script>
+    <script type="text/javascript" src="js/options/OptionsController.js"></script>
+    <title message="options_title"></title>
+  </head>
+  <body>
+    <div id="savingContainer" class="invisible">
+      <div id="saving">
+        <span id="savingIcon"></span><!--
+        --><span message="options_saving"></span>
+      </div>
+    </div>
+    <div id="main">
+      <div id="logo"></div>
+      <div id="versionInfo">
+        <span message="version"></span>
+        <span id="version"></span>
+      </div>
+      <div id="userStatus">
+        <span message="signedInAs"></span>
+        <span id="username"></span>
+        <span id="signOut" message="signout"></span>
+      </div>
+      <div id="tabs">
+        <div id="optionsTab" class="tab pressed" message="options_title"></div><!--
+        --><div id="shortcutsTab" class="tab" message="keyboardShortcuts"></div><!--
+        --><div id="legalTab" class="tab" message="legal"></div>
+      </div>
+      <div class="pinch options">
+        <div id="optionsContainer">
+          <div class="row">
+            <div class="col1" message="notebookSelection"></div>
+            <div class="col2">
+              <div class="radio">
+                <input type="radio" name="notebookSelection" value="smartFiling" id="smartFilingNotebook" />
+                <label for="smartFilingNotebook" message="useSmartFiling"></label>
+                <div id="bizSmartFilingCheckbox" class="checkbox">
+                  <input type="checkbox" name="bizSmartFilingEnabled" id="bizSmartFilingEnabled" />
+                  <label for="bizSmartFilingEnabled" message="options_smartFilingBizDesc"></label>
+                </div>
+              </div>
+              <div class="radio">
+                <input type="radio" name="notebookSelection" value="lastUsed" id="lastUsedNotebook" />
+                <label for="lastUsedNotebook" message="lastUsedNotebook"></label>
+              </div>
+              <div id="alwaysStartInNotebookOption" class="radio hasInput">
+                <input type="radio" name="notebookSelection" value="alwaysStartIn" id="alwaysStartInNotebook" />
+                <label for="alwaysStartInNotebook" message="alwaysStartIn"></label>
+                <select id="startNotebook"></select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1 short" message="tagSelection"></div>
+            <div class="col2">
+              <div class="checkbox">
+                <input type="checkbox" id="smartFilingTags" />
+                <label for="smartFilingTags" message="useSmartFiling"></label>
+              </div>
+              <div class="checkbox hasInput">
+                <input type="checkbox" id="alwaysTagWith" />
+                <label for="alwaysTagWith" message="alwaysTagWith"></label>
+                <input type="text" id="alwaysTags" placeholder="quickNote_addTags" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="options_clipAction"></div>
+            <div class="col2">
+              <div class="radio">
+                <input type="radio" name="defaultClipAction" value="lastUsed" id="lastUsedAction" />
+                <label for="lastUsedAction" message="lastUsedAction"></label>
+              </div>
+              <div class="radio hasInput">
+                <input type="radio" name="defaultClipAction" value="alwaysStartIn" id="alwaysStartIn" />
+                <label for="alwaysStartIn" message="alwaysStartIn"></label>
+                <select id="clipAction">
+                  <option message="articleClip" value="ARTICLE"></option>
+                  <option message="clearly" value="CLEARLY"></option>
+                  <option message="fullPageClip" value="FULL_PAGE"></option>
+                  <option message="urlClip" value="URL"></option>
+                  <option message="screenshotClip" value="SKITCH"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="afterClip"></div>
+            <div class="col2">
+              <div class="radio">
+                <input type="radio" name="afterClip" value="postClipShowFull" id="postClipShowFull" />
+                <label for="postClipShowFull" message="showSuccessfulClipDialog"></label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="afterClip" value="postClipShowPartial" id="postClipShowPartial" />
+                <label for="postClipShowPartial" message="showSuccessfulClipDialogWithoutRelatedNotes"></label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="afterClip" value="postClipShowNothing" id="postClipShowNothing" />
+                <label for="postClipShowNothing" message="autocloseClipper"></label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1 short" message="options_useSearchHelper"></div>
+            <div class="col2">
+              <div class="checkbox">
+                <input type="checkbox" id="useSearchHelper" />
+                <label for="useSearchHelper">
+                  <span message="options_useSearchHelperDescription"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="display: none;">
+            <div class="col1 short" message="tts"></div>
+            <div class="col2">
+              <div message="readingSpeed"></div>
+              <select id="readingSpeed">
+                <option message="fastest" value="fastest'"></option>
+                <option message="fast" value="fast"></option>
+                <option message="faster" value="faster"></option>
+                <option message="normal" value="normal"></option>
+                <option message="slower" value="slower"></option>
+                <option message="slow" value="slow"></option>
+                <option message="slowest" value="slowest"></option>
+              </select>
+              <div message="voice"></div>
+              <select id="voice">
+                <option message="default" value="default"></option>
+                <option message="female" value="female"></option>
+                <option message="male" value="male"></option>
+              </select>
+            </div>
+          </div>
+          <div class="row" id="logsRow">
+            <div class="col1 short" message="errorLogs"></div>
+            <div class="col2">
+              <div id="logDescription"></div>
+              <a id="copyLogs" message="options_eventLogLink" href="logs.html" target="_blank"></a>
+            </div>
+          </div>
+          <div id="developerContainer" style="display: none;">
+            <h2 message="options_developer_title"></h2>
+            <div class="row">
+              <div class="col1 short" message="options_insecureProto"></div>
+              <div class="col2">
+                <input type="text" id="insecureProto" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short" message="options_secureProto"></div>
+              <div class="col2">
+                <input type="text" id="secureProto" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short" message="options_overrideServiceURL"></div>
+              <div class="col2">
+                <input type="text" id="overrideServiceURL" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short" message="options_simulateSimplifiedChinese"></div>
+              <div class="col2">
+                <div class="checkbox">
+                  <input type="checkbox" id="simulateSimplifiedChinese" />
+                  <label for="simulateSimplifiedChinese">
+                    <span message="options_simulateSimplifiedChineseDescription"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short" message="options_useStage"></div>
+              <div class="col2">
+                <input type="checkbox" id="useStage" />
+                <label for="useStage">
+                  <span message="options_useStageDescription"></span>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short">Related Notes Context</div>
+              <div class="col2">
+                <input type="text" id="relatedNotesContext" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1 short">Include Debug Info</div>
+              <div class="col2">
+                <input type="checkbox" id="includeDebugInfo" />
+                <label for="includeDebugInfo">
+                  <a href="logs.html#type=relatedNotesDebugInfo" target="_blank">Logs</a>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col1">Simulate Clipping Error/Upsell</div>
+              <div class="col2">
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="none" id="noErrorSimulation" />
+                  <label for="noErrorSimulation">None</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="nearQuota" id="simulateNearQuota" />
+                  <label for="simulateNearQuota">Near Quota</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="noteSizeExceeded" id="simulateNoteSizeExceeded" />
+                  <label for="simulateNoteSizeExceeded">Note too big</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="overQuota" id="simulateOverQuota" />
+                  <label for="simulateOverQuota">Over Quota</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="basicUpsell" id="simulateBasicUpsell" />
+                  <label for="simulateBasicUpsell">Basic Upsell</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="simulateClippingError" value="overAccountMax" id="simulateOverAccountMax" />
+                  <label for="simulateOverAccountMax">Over Account Notes Max</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--
+        --><div id="shortcutsContainer" style="width: 614px;">
+          <div class="row">
+            <div class="col1" message="enableKeyboardShortcuts"></div>
+            <div class="col2">
+              <div class="checkbox">
+                <input type="checkbox" id="enableKeyboardShortcuts" />
+                <label for="enableKeyboardShortcuts"></label>
+              </div>
+            </div>
+          </div>
+          <div id="resetShortcuts" message="resetShortcuts"></div>
+          <div class="row header">
+            <div class="col1" message="globalShortcuts"></div>
+          </div>
+          <div class="row">
+            <div class="col1" message="startWebClipper"></div>
+            <div class="col2">
+              <input type="text" id="startWebClipperShortcut" readonly />
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col1" message="startWebClipperClearly"></div>
+            <div class="col2">
+              <input type="text" id="startWebClipperClearly" readonly value="Cmd + `" />
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col1" message="closeWebClipper"></div>
+            <div class="col2">
+              <input type="text" id="closeWebClipperShortcut" readonly />
+            </div>
+          </div>
+          <div id="clipShortcutsHeader" class="row header">
+            <div class="col1" message="clipShortcuts"></div>
+          </div>
+          <div class="row">
+            <div class="col1" message="previewArticle"></div>
+            <div class="col2">
+              <input type="text" id="previewArticleShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="previewFullPage"></div>
+            <div class="col2">
+              <input type="text" id="previewFullPageShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="previewUrl"></div>
+            <div class="col2">
+              <input type="text" id="previewUrlShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="selectionMode"></div>
+            <div class="col2">
+              <input type="text" id="selectionModeShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="takeScreenshot"></div>
+            <div class="col2">
+              <input type="text" id="takeScreenshotShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="clearly"></div>
+            <div class="col2">
+              <input type="text" id="clearlyShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="pdf"></div>
+            <div class="col2">
+              <input type="text" id="pdfShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="shortcuts_email"></div>
+            <div class="col2">
+              <input type="text" id="emailShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="expandArticle"></div>
+            <div class="col2">
+              <input type="text" id="expandArticleShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="contractArticle"></div>
+            <div class="col2">
+              <input type="text" id="contractArticleShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="moveArticleUpShortcut"></div>
+            <div class="col2">
+              <input type="text" id="moveArticleUpShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="moveArticleDownShortcut"></div>
+            <div class="col2">
+              <input type="text" id="moveArticleDownShortcut" readonly />
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col1" message="cyclePreviews"></div>
+            <div class="col2">
+              <input type="text" id="cyclePreviewsShortcut" readonly />
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col1" message="selectNotebook"></div>
+            <div class="col2">
+              <input type="text" id="selectNotebookShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="addTags"></div>
+            <div class="col2">
+              <input type="text" id="addTagsShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="saveToEvernote"></div>
+            <div class="col2">
+              <input type="text" id="saveShortcut" readonly />
+            </div>
+          </div>
+          <div id="markupShortcutsHeader" class="row header">
+            <div class="col1" message="markupShortcuts"></div>
+          </div>
+          <div class="row">
+            <div class="col1" message="selectAllMarkup"></div>
+            <div class="col2">
+              <input type="text" id="selectAllMarkupShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="arrow"></div>
+            <div class="col2">
+              <input type="text" id="arrowShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="text"></div>
+            <div class="col2">
+              <input type="text" id="textShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="rectangle"></div>
+            <div class="col2">
+              <input type="text" id="rectangleShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="roundedRectangle"></div>
+            <div class="col2">
+              <input type="text" id="roundedRectangleShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="ellipse"></div>
+            <div class="col2">
+              <input type="text" id="ellipseShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="line"></div>
+            <div class="col2">
+              <input type="text" id="lineShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="marker"></div>
+            <div class="col2">
+              <input type="text" id="markerShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="highlighter"></div>
+            <div class="col2">
+              <input type="text" id="highlighterShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="stamp"></div>
+            <div class="col2">
+              <input type="text" id="stampShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="pixelate"></div>
+            <div class="col2">
+              <input type="text" id="pixelateShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="crop"></div>
+            <div class="col2">
+              <input type="text" id="cropShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="zoomInShortcut"></div>
+            <div class="col2">
+              <input type="text" id="zoomInShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="zoomOutShortcut"></div>
+            <div class="col2">
+              <input type="text" id="zoomOutShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="zoomToFit"></div>
+            <div class="col2">
+              <input type="text" id="zoomToFitShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="zoomToOriginal"></div>
+            <div class="col2">
+              <input type="text" id="zoomToOriginalShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="undo"></div>
+            <div class="col2">
+              <input type="text" id="undoShortcut" readonly />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col1" message="redo"></div>
+            <div class="col2">
+              <input type="text" id="redoShortcut" readonly />
+            </div>
+          </div>
+        </div><!--
+        --><div id="licenseContainer">
+          <div message="legalNoticesTitle"></div>
+          <div class="license">
+            <strong>Apache Thrift</strong><br>
+            <strong>Copyright &copy; 2006 &ndash; 2010 The Apache Software Foundation</strong><br>
+            <a target="_blank" href="http://thrift.apache.org/">http://thrift.apache.org/</a>
+            <p>Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+            <p>  http://www.apache.org/licenses/LICENSE-2.0</p>
+            <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Chrome to Safari port</strong><br>
+            <strong>Copyright &copy;  Michael Gundlach (gundlach@gmail.com)</strong><br>
+            <a target="_blank" href="https://code.google.com/p/adblockforchrome/source/browse/trunk/port.js">https://code.google.com/p/adblockforchrome/source/browse/trunk/port.js</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Crypto-JS</strong><br>
+            <strong>Copyright &copy; 2009 &ndash; 2012 Jeff Mott</strong><br>
+            <a target="_blank" href="https://code.google.com/p/crypto-js/">https://code.google.com/p/crypto-js/</a>
+            <p>All rights reserved.</p>
+            <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+            <p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
+            <p>2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+            <p>3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p>
+            <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Date-Util.js</strong><br>
+            <strong>Copyright &copy; 2011 Jerry Sievert</strong><br>
+            <a target="_blank" href="https://github.com/borgar/dateutil">https://github.com/borgar/dateutil</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>FileSaver.js</strong><br>
+            <strong>Copyright &copy; 2011 Eli Grey</strong><br>
+            <a target="_blank" href="https://github.com/eligrey/FileSaver.js/">https://github.com/eligrey/FileSaver.js/</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Hammer.js</strong><br>
+            <strong>Copyright &copy; 2013 Jorik Tangelder (Eight Media)</strong><br>
+            <a target="_blank" href="https://github.com/EightMedia/hammer.js">https://github.com/EightMedia/hammer.js</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>jabsorb - a Java to Javascript Advanced Object Request Broker</strong><br>
+            <strong>Copyright &copy; 2007 &ndash; 2009 The jabsorb team</strong><br>
+            <strong>Copyright &copy; 2005 Michael Clark, Metaparadigm Pte Ltd</strong><br>
+            <strong>Copyright &copy; 2003 &ndash; 2004 Jan-Klaas Kollhof</strong><br>
+            <a target="_blank" href="http://www.jabsorb.org/">http://www.jabsorb.org/</a>
+            <p>This code is based on original code from the json-rpc-java library which was originally based on Jan-Klaas' JavaScript o lait library (jsolait).</p>
+            <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+            <p>http://www.apache.org/licenses/LICENSE-2.0</p>
+            <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>jQuery</strong><br>
+            <strong>Copyright &copy; 2005 &ndash; 2014 jQuery Foundation, Inc</strong><br>
+            <a target="_blank" href="http://jquery.com/">http://jquery.com/</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>log4javascript</strong><br>
+            <strong>Copyright &copy; 2013 Tim Down</strong><br>
+            <a target="_blank" href="http://log4javascript.org/">http://log4javascript.org/</a>
+            <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+            <p>http://www.apache.org/licenses/LICENSE-2.0</p>
+            <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>pointerevents.js</strong><br>
+            <strong>Copyright &copy; 2013 The Polymer Authors</strong><br>
+            <a target="_blank" href="https://github.com/Polymer/PointerEvents">https://github.com/Polymer/PointerEvents</a>
+            <p>All rights reserved.</p>
+            <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+            <p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
+            <p>2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+            <p>3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</p>
+            <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>RequireJS</strong><br>
+            <strong>Copyright &copy; 2010 &ndash; 2011 The Dojo Foundation</strong><br>
+            <a target="_blank" href="http://requirejs.org/">http://requirejs.org/</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>RSVP.js</strong><br>
+            <strong>Copyright &copy; 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors</strong><br>
+            <a target="_blank" href="https://github.com/tildeio/rsvp.js/">https://github.com/tildeio/rsvp.js/</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Stanford Javascript Crypto Library</strong><br>
+            <strong>Copyright &copy; 2009 &ndash; 2010 Emily Stark, Mike Hamburg, Dan Boneh</strong><br>
+            <a target="_blank" href="https://github.com/bitwiseshiftleft/sjcl">https://github.com/bitwiseshiftleft/sjcl</a>
+            <p>All rights reserved.</p>
+            <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+            <p>1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p>
+            <p>2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+            <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>SparkMD5</strong><br>
+            <strong>Copyright &copy; 2004 Sam Hocevar (sam@hocevar.net)</strong><br>
+            <a target="_blank" href="https://github.com/satazor/SparkMD5">https://github.com/satazor/SparkMD5</a>
+          </div>
+          <div class="license">
+            <strong>StackBlur</strong><br>
+            <strong>Copyright &copy; 2010 Mario Klingemann</strong><br>
+            <a target="_blank" href="http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html">http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+          <div class="license">
+            <strong>Underscore.js</strong><br>
+            <strong>Copyright &copy; 2009 &ndash; 2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors</strong><br>
+            <a target="_blank" href="http://underscorejs.org/">http://underscorejs.org/</a>
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="done" message="done"></div>
+        <div id="copyright"></div>
+      </div>
+    </div>
+  </body>
+</html>

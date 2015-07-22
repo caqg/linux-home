@@ -1,0 +1,360 @@
+/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2012 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media all
+{
+	body
+	{
+		background: #ffffff;
+		width:90%; 
+		margin-left:5%; 
+    		margin-right:5%;
+	}
+	
+	div.HeaderBlock
+	{
+		height: 40px ;
+		width: 100% ;
+	}
+	
+	table.ContentTable
+	{
+		table-layout: fixed;
+		border: 0px;
+	}
+	
+	td.pii-block
+	{
+		padding: 15px;	
+	}
+	
+	td.pii-title
+	{
+		vertical-align: top;
+		padding-top: 9px;
+	}
+	
+	p.pii-title
+	{
+		color:#202020;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 25px; 
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	p.badWebsiteURL
+	{
+		width: 647px;
+		word-wrap: break-word;/* IE 5.5-7.0 proprietary*/
+		white-space:pre-wrap;/* IE8.0+, FF 3.0 and above, include "white-space:  -moz-pre-wrap;" for pre FF 2.x */
+		overflow: hidden;/* This avoids the 'break-word'/'pre-wrap' from spilling and causing YELLOW bars on scroll incident:1667916 */
+		color:#3e3e3e;	
+		font-family: Arial, Helvetica, sans-serif;			
+		font-size: 14px;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	img.hidden-pii-block
+	{
+	    display: none;
+	}
+	
+	td.pii-graybar
+	{
+		width: 100%;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	hr.pii-graybar
+	{
+		height:1px; 
+		color:#d3d3d3;
+		background-color:#d3d3d3;
+		border: none;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	td.pii-body
+	{
+		padding-top: 25px;
+		padding-bottom: 33px;
+	}
+	
+	table.pii-body
+	{
+		border: 0px;
+		border-collapse: collapse;
+	}
+	
+	p.pii-explanation-title
+	{
+		color:#3e3e3e;	
+		font-family: Arial, Helvetica, sans-serif;			
+		font-size: 24px; 
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	p.pii-explanation-body
+	{
+		color:#3e3e3e;	
+		font-family: Arial, Helvetica, sans-serif;			
+		font-size: 14px; 
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	table.DynPane
+	{
+	 	margin-left: 0px; 
+	 	margin-right: 0px;
+	 	border-collapse:collapse;
+	}
+	
+	td.DynPane
+	{
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding-bottom: 33px;
+	}
+	
+	img.DynPaneImg
+	{
+		float: left;
+		margin-top: 0px;
+		margin-right: 24px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	
+	p.DynPaneTitle
+	{
+		font-family: Arial, Helvetica, sans-serif;			
+		font-size: 15px;
+		font-weight:bold;
+		padding: 0px;
+		margin: 1px;
+		border: 0px;
+	}
+	
+	p.DynPaneDescription
+	{
+	    	font-family: Arial, Helvetica, sans-serif;			
+		font-size: 13px;
+		font-weight:normal;
+		padding: 0px;
+		margin: 1px;
+		border: 0px;
+		white-space: nowrap;
+	}
+	
+	td.pii-buttons
+	{
+	    text-align: right;
+	    vertical-align: center;
+	    padding-bottom: 38px;
+	    white-space: nowrap;
+	}
+	
+	span.pii-button-continue
+	{
+	    padding-right: 15px;
+	}
+	
+	/* For default view, don't show any dynamic panes */
+	body[view="default"] td#DynPaneSiteAgeNew,
+	body[view="default"] td#DynPaneSiteAgeYoung,
+	body[view="default"] td#DynPaneSitePopNone,
+	body[view="default"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* For default view, center the buttons so they look good instead of floating right */
+	body[view="default"] td.pii-buttons
+	{
+	    text-align: center;
+	}
+
+	/* Site Age New only - one pane, others hidden */
+	body[view="showsiteagenewonly"] td#DynPaneSiteAgeYoung,
+	body[view="showsiteagenewonly"] td#DynPaneSitePopNone,
+	body[view="showsiteagenewonly"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* Site Age Young only - one pane, others hidden */
+	body[view="showsiteageyoungonly"] td#DynPaneSiteAgeNew,
+	body[view="showsiteageyoungonly"] td#DynPaneSitePopNone,
+	body[view="showsiteageyoungonly"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity None only - one pane, others hidden */
+	body[view="showsitepopnoneonly"] td#DynPaneSiteAgeNew,
+	body[view="showsitepopnoneonly"] td#DynPaneSiteAgeYoung,
+	body[view="showsitepopnoneonly"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity Low only - one pane, others hidden */
+	body[view="showsitepoplowonly"] td#DynPaneSiteAgeNew,
+	body[view="showsitepoplowonly"] td#DynPaneSiteAgeYoung,
+	body[view="showsitepoplowonly"] td#DynPaneSitePopNone
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity None + Site Age New - two panes, others hidden */
+	body[view="showsitepopnonesiteagenew"] td#DynPaneSiteAgeYoung,
+	body[view="showsitepopnonesiteagenew"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity Low + Site Age New - two panes, others hidden */
+	body[view="showsitepoplowsiteagenew"] td#DynPaneSiteAgeYoung,
+	body[view="showsitepoplowsiteagenew"] td#DynPaneSitePopNone
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity None + Site Age Young - two panes, others hidden */
+	body[view="showsitepopnonesiteageyoung"] td#DynPaneSiteAgeNew,
+	body[view="showsitepopnonesiteageyoung"] td#DynPaneSitePopLow
+	{
+	    display: none;
+	}
+	
+	/* Site Popularity Low + Site Age Young - two panes, others hidden */
+	body[view="showsitepoplowsiteageyoung"] td#DynPaneSiteAgeNew,
+	body[view="showsitepoplowsiteageyoung"] td#DynPaneSitePopNone
+	{
+	    display: none;
+	}
+	
+	a
+	{
+		color:#003dad;
+		font-family: Arial, Helvetica, sans-serif;		
+		font-weight:bold;
+		font-size: 14px; 
+	}
+
+	a.Exit
+	{
+		height: 23px;		
+		font-family: Arial, Helvetica, sans-serif;		
+		font-size: 13px; 
+		font-weight: normal;
+		border: solid 1px gray;		
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_default.png');
+		background-repeat:repeat;
+		color: #202020;
+		text-decoration: none;
+		padding: 3px 16px 3px 16px;
+		margin: 0px 0px 5px 0px;		
+	}
+
+	a.Exit:hover
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_hover.png');
+	}
+
+	a.Exit:active
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_click.png');
+	}
+
+	a.Exit:focus
+	{
+		outline-offset: -1px; /* FF only style, the outline is right over the border, so we bring it in */
+	}
+
+	a.Continue
+	{
+		height: 23px;		
+		font-family: Arial, Helvetica, sans-serif;		
+		font-size: 13px; 
+		font-weight: normal;
+		border: solid 1px gray;		
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_default.png');
+		background-repeat:repeat;
+		color: #202020;
+		text-decoration: none;
+		padding: 3px 16px 3px 16px;
+		margin: 0px 0px 5px 0px;		
+	}
+
+	a.Continue:hover
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_hover.png');
+	}
+
+	a.Continue:active
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_click.png');
+	}
+
+	a.Continue:focus
+	{
+		outline-offset: -1px; /* FF only style, the outline is right over the border, so we bring it in */
+	}
+	
+	p.pii-learnmore
+	{
+		color:#3e3e3e;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px; 
+	}
+	
+	a.pii-learnmore
+	{
+		text-decoration: none;
+		color:#003dad;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px; 
+	}
+	
+	td.pii-reportissue
+	{
+		text-align: right;
+		white-space: nowrap;
+	}	
+	
+	a.pii-reportissue
+	{
+		text-decoration: none;
+		color:#003dad;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px; 
+	}
+}

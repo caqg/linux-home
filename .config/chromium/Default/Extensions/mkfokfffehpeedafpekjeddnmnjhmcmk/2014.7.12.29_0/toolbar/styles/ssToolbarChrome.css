@@ -1,0 +1,332 @@
+﻿/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2007 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.coSS_Section 
+{
+	width:min-intrinsic;
+}
+
+@media screen,contrast-screen
+{
+	div[type="SS_Button"] 
+	{
+		background-position:0px 0px;
+		background-repeat:expand;
+		color:Black;	
+		cursor:default;
+		font-family:Arial, Tahoma, Sans-Serif;
+		font-size:11px;
+		font-weight:normal;		
+		background-repeat:no-repeat;
+		height:28px;
+		max-height:28px;
+		white-space:nowrap;
+		padding-left:9px;
+		min-width: 80px;
+		max-width: 80px;
+		position:relative;
+		background-position: 5px 5px;
+		margin-left: -4px;
+		margin-right: -1px;
+	}
+	div[type="SS_Button"]:rtl
+	{
+		position:relative;
+	}
+
+	div#SafeShareButton
+	{
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"]
+	{
+		background-position:3px 3px;
+	}
+	
+	div[type="SS_Button"]  #NortonSafeText
+	{
+		position : relative;
+		min-width : 50px;
+		max-width : 50px;
+		padding-left:20px;
+	}
+	div[type="SS_Button"]  #NortonSafeText:not(:rtl)
+	{
+		left:20px;
+	}
+	div[type="SS_Button"]  #NortonSafeText:rtl
+	{
+		right:20px;
+	}
+	div[type="SS_Button"] .ToolbarButtonLine1
+	{
+	   font-family:"Segoe UI", Tahoma, Sans-Serif;
+	   font-size:10px;
+	   color:#9da0a6;
+	   padding:0;
+	   border:none;
+	}
+		
+	div[type="SS_Button"] .ToolbarButtonLine2
+	{
+	   font-family:"Segoe UI", Tahoma, Sans-Serif;
+	   font-size:10px;
+	   color:#383230;
+	   padding:0;
+	   border:none;
+	} 	
+	
+	div[type="SS_Button"][service="Facebook"] #twitter,
+	div[type="SS_Button"][service="Facebook"] #linkedin,
+	div[type="SS_Button"][service="Facebook"] #gmail,
+	div[type="SS_Button"][service="Facebook"] #yahoo,
+	div[type="SS_Button"][service="Facebook"] #hotmail
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="Twitter"] #facebook,
+	div[type="SS_Button"][service="Twitter"] #linkedin,
+	div[type="SS_Button"][service="Twitter"] #gmail,
+	div[type="SS_Button"][service="Twitter"] #yahoo,
+	div[type="SS_Button"][service="Twitter"] #hotmail
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="GoogleMail"] #facebook,
+	div[type="SS_Button"][service="GoogleMail"] #linkedin,
+	div[type="SS_Button"][service="GoogleMail"] #twitter,
+	div[type="SS_Button"][service="GoogleMail"] #yahoo,
+	div[type="SS_Button"][service="GoogleMail"] #hotmail
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="LinkedIn"] #facebook,
+	div[type="SS_Button"][service="LinkedIn"] #gmail,
+	div[type="SS_Button"][service="LinkedIn"] #twitter,
+	div[type="SS_Button"][service="LinkedIn"] #yahoo,
+	div[type="SS_Button"][service="LinkedIn"] #hotmail
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="Hotmail"] #facebook,
+	div[type="SS_Button"][service="Hotmail"] #gmail,
+	div[type="SS_Button"][service="Hotmail"] #twitter,
+	div[type="SS_Button"][service="Hotmail"] #yahoo,
+	div[type="SS_Button"][service="Hotmail"] #linkedin
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="YahooMail"] #facebook,
+	div[type="SS_Button"][service="YahooMail"] #gmail,
+	div[type="SS_Button"][service="YahooMail"] #twitter,
+	div[type="SS_Button"][service="YahooMail"] #hotmail,
+	div[type="SS_Button"][service="YahooMail"] #linkedin
+	{
+		display : none;   
+	}
+	
+	div[type="SS_Button"][service="Facebook"] #facebook
+	{
+		display : block;   
+	}
+	
+	 div[type="SS_Button"][service="Twitter"] #twitter
+	{
+		display : block;   
+	}
+	
+	 div[type="SS_Button"][service="LinkedIn"] #linkedin
+	{
+		display : block;   
+	}
+	
+	 div[type="SS_Button"][service="GoogleMail"] #gmail
+	{
+		display : block;   
+	}
+	
+	 div[type="SS_Button"][service="YahooMail"] #yahoo
+	{
+		display : block;   
+	}
+	
+	 div[type="SS_Button"][service="Hotmail"] #hotmail
+	{
+		display : block;   
+	}
+		
+	div[type="SS_Button"]:active .ToolbarButtonLine1
+	{
+		color:#a2d9f6;
+	}	
+
+	div[type="SS_Button"]:active .ToolbarButtonLine2
+	{
+		color:White;
+	}
+		
+	div[type="SS_Button"]  div.downArrowIcon
+	{
+		margin-left: 10px;      /* make room for the share icon */
+		padding-left: 5px;    /* padding between text and arrow */
+		margin-right: 5px;      /* padding between arrow and right edge */
+		height: 22px;
+		vertical-align:middle;		
+		background-image:url('../images/icon_tb_dropdown.png');
+		background-repeat:no-repeat;
+		background-position: right center;
+	}
+
+	div[type="SS_Button"]:hover
+	{	
+		background-color:#bfebfa;
+	}
+	
+	div[type="SS_Button"]:active
+	{	
+		background-color:#00afec;
+	}
+	div[type="SS_Button"][class="MenuDisabled"]
+	{
+		color: Gray;
+		background-image: none;
+		opacity: .5;
+	}
+
+div.coSBRightSpacers
+{
+	border-left:1px solid #b3b0ad;
+	margin-bottom:1px;
+	margin-left:1px;
+	margin-right:1px;
+	height: 100%;
+	min-width:2px;
+	padding-left:1px;
+}
+
+	/*
+	****************************************************************************
+	Short form mode - changes
+	****************************************************************************
+	*/
+	
+	div[type="SS_Button"][formfactor="short"],
+	div[type="SS_Button"][formfactor="short"][loggedin="2"]
+	{
+		min-width: 48px;
+		max-width: 48px;
+		background-position: center 4x !important;
+	}
+		
+	div[type="SS_Button"][formfactor="short"] > text
+	{
+		margin-right: 0px;
+		margin-left: 0px;
+	}	
+		
+	div[id="SafeShareButton"]
+	{
+		background-image:url('../images/icon_tb_dropdown.png');	 
+		background-position: 9px 5px;   
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="Facebook"]
+	{ 
+		background-image:url('../images/icon_tb_ssh_facebook.png');
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="Facebook"]:hover
+	{ 
+		background-image:url('../images/icon_tb_ssh_facebook_hover.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="Twitter"]
+	{
+		background-image:url('../images/icon_tb_ssh_twitter.png');
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="Twitter"]:hover
+	{
+		background-image:url('../images/icon_tb_ssh_twitter_hover.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="LinkedIn"]
+	{
+		background-image:url('../images/icon_tb_ssh_linkedin.png');
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="LinkedIn"]:hover
+	{
+		background-image:url('../images/icon_tb_ssh_linkedin_hover.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="GoogleMail"]
+	{
+		background-image:url('../images/icon_tb_ssh_gmail.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="GoogleMail"]:hover
+	{
+		background-image:url('../images/icon_tb_ssh_gmail_hover.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="YahooMail"]
+	{
+		background-image:url('../images/icon_tb_ssh_yahoo.png');
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="YahooMail"]:hover
+	{
+		background-image:url('../images/icon_tb_ssh_yahoo_hover.png');
+	}
+
+	div[type="SS_Button"][id="SafeShareButton"][service="Hotmail"]
+	{
+		background-image:url('../images/icon_tb_ssh_outlook.png');
+	}
+	
+	div[type="SS_Button"][id="SafeShareButton"][service="Hotmail"]:hover
+	{
+		background-image:url('../images/icon_tb_ssh_outlook_hover.png');
+	}
+	
+	div#SafeShareButton[formfactor="short"]
+	{
+		min-width: 48px;
+		max-width: 48px;
+	}
+
+ }
+
+
+@media contrast-screen
+{
+	div[type="SS_Button"] 
+	{
+		background-color: White;
+	}
+	
+	div[type="SS_Button"] > text
+	{
+		color: Black;
+		font-weight: bold;	
+	}	
+}

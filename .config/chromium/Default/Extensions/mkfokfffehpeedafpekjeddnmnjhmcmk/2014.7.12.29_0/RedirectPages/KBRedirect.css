@@ -1,0 +1,112 @@
+/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2007 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+@media all
+{
+	body
+	{
+		background: #ffffff;
+	}
+	
+	p.Title
+	{
+		color:#000000;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 28pt; 
+		font-weight: bold;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	p.Desc
+	{
+		color:#000000;
+		font-family: Arial, Helvetica, sans-serif;		
+		font-size: 14pt; 
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	p.badWebsiteURL
+	{
+		width: 647px;
+		word-wrap: break-word;/* IE 5.5-7.0 proprietary*/
+		white-space:pre-wrap;/* IE8.0+, FF 3.0 and above, include "white-space:  -moz-pre-wrap;" for pre FF 2.x */
+		overflow: hidden;/* This avoids the 'break-word'/'pre-wrap' from spilling and causing YELLOW bars on scroll incident:1667916 */
+		color:#ff6600;	
+		font-family: Arial, Helvetica, sans-serif;			
+		font-size: 14pts;
+		font-weight:bold;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	a
+	{
+		color:#003dad;
+		font-family: Arial, Helvetica, sans-serif;		
+		font-weight:bold;
+		font-size: 14pt; 
+	}
+	
+	a.Exit
+	{
+		height: 23px;		
+		font-family: Arial, Helvetica, sans-serif;		
+		font-size: 14pt; 
+		font-weight: normal;
+		border: solid 1px gray;		
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_default.png');
+		background-repeat:repeat;
+		color: #000000;
+		text-decoration: none;
+		padding: 3px 16px 3px 16px;
+		margin: 0px 0px 5px 0px;		
+	}
+	
+	a.Exit:hover
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_hover.png');		
+	}
+	
+	a.Exit:active
+	{
+		background-image: url('chrome-extension://__MSG_@@extension_id__/RedirectPages/blocked_btn_click.png');		
+	}
+	
+	a.Exit:focus
+	{
+		outline-offset: -1px; /* FF only style, the outline is right over the border, so we bring it in */
+	}
+		
+	p.SamllDesc
+	{
+		color:#000000;
+		font-family: Arial, Helvetica, sans-serif;		
+		font-size: 8pt; 
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	}
+	
+	p.SamllDesc a
+	{
+		font-size: 8pt; 
+		font-weight: normal;
+	}	
+}

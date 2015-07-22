@@ -1,0 +1,48 @@
+﻿/* Symantec Watermark: CB70-4860-5397-06-15-6 */
+/*
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header start
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// PROPRIETARY / CONFIDENTIAL.
+// Use of this product is subject to license terms.
+// Copyright © 2007 Symantec Corporation.
+// All rights reserved.
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+// Symantec copyright header stop
+// ////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen,contrast-screen
+{
+	div#idWAXReportBtn
+	{
+		background-repeat:no-repeat;
+		background-position: 8px center;
+		background-image:url('../images/waxToolbarIcon.png');
+		padding-left: 35px;
+		max-width: 55px;
+	}
+	
+	div#idWAXReportBtn div.ToolbarButtonLine1
+	{
+		font-family:"Segoe UI";
+		font-size:10px;
+		color:#9da0a6;
+		max-width: 5px;
+	}
+	
+	div#idWAXReportBtn div.ToolbarButtonLine2
+	{
+		font-family:"Segoe UI";
+		font-size:10px;
+		color:#383230;
+	}
+	
+	div#idWAXReportBtn[recording="yes"]
+	{
+		background-image:url('../images/waxToolbarIcon2.png');
+	}	
+}
+
