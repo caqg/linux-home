@@ -9,12 +9,12 @@ set directory+=/var/tmp
 set directory+=/tmp
 
 set path=.,,
-set path+=/usr/include/c++/4.8
-set path+=/usr/include/x86_64-linux-gnu/c++/4.8
-set path+=/usr/include/c++/4.8/backward
-set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include
+set path+=/usr/include/c++/4.9
+set path+=/usr/include/x86_64-linux-gnu/c++/4.9
+set path+=/usr/include/c++/4.9/backward
+set path+=/usr/lib/gcc/x86_64-linux-gnu/4.9/include
 set path+=/usr/local/include
-set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
+set path+=/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed
 set path+=/usr/include/x86_64-linux-gnu
 set path+=/usr/include
 
@@ -46,7 +46,7 @@ set laststatus=1
 set writebackup
 set nohlsearch
 set incsearch
-set textwidth=76
+set textwidth=78
 if v:version >= 700
   set numberwidth=5
 endif
@@ -60,6 +60,9 @@ autocmd FileType c,cpp,java :set nofoldenable
 autocmd FileType c,cpp,java :set formatoptions+=cj
 autocmd FileType c,cpp,java :set shiftwidth=8
 autocmd FileType c,cpp,java :set nosmarttab
+
+" delete trailing whitespace
+autocmd FileType c,cpp,java,make autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 set ruler
 set diffopt=filler,iwhite
