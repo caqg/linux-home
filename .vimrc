@@ -62,7 +62,16 @@ autocmd FileType c,cpp,java :set shiftwidth=8
 autocmd FileType c,cpp,java :set nosmarttab
 
 " delete trailing whitespace
-autocmd FileType c,cpp,java,make autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,java	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType gdb,make	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType awk,tcl	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType yacc,lex	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType lisp		autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType scheme		autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType verilog 	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType xml,xsd	autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType conf		autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType gitconfig	autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 set ruler
 set diffopt=filler,iwhite
