@@ -8,30 +8,31 @@
 
 target=
 for a; do
-    case "$a" in
-    -* | *=*)				;; # skip
-    *) target=$(basename "$a"); break	;;
-    esac
+	case "$a" in
+	-* | *=*)				;; # skip
+	*) target=$(basename "$a"); break	;;
+	esac
 done
 
 tstamp=$(/bin/date +%Y%m%d_%H%M%S)
 
 case "$target" in
-"")	tag="$tstamp"			;;
-*)	tag="$target-$tstamp"		;;
+"")	tag="$tstamp"				;;
+*)	tag="$target-$tstamp"			;;
 esac
 
 D=
-[ -d "$LOGSDIR" ] &&
-case "$LOGSDIR" in
-*/)	D="$LOGSDIR"			;;
-*)	D="$LOGSDIR"/			;;
-esac
+[ -d "$LOGSDIR" ] && {
+	case "$LOGSDIR" in
+	*/)	D="$LOGSDIR"			;;
+	*)	D="$LOGSDIR"/			;;
+	esac
+}
 
 logfile="$D"make-"$tag".log
 case "$logfile" in
-/*)					;;
-*)	logfile="$(pwd)/$logfile"	;;
+/*)						;;
+*)	logfile="$(pwd)/$logfile"		;;
 esac
 
 {	printf '%s\n' '-*- Compilation -*-'
