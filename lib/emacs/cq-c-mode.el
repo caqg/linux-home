@@ -28,24 +28,24 @@ parameters. Call only from C-mode buffers; NIL means no-op.")
   ;; Set other preferences.  I have used my own macro, lsetq, back in the 80s,
   ;; when automatic localization was not invented yet.
   (lsetq abbrev-mode                     t
-	 case-fold-search               nil
-	 case-replace                   nil
-	 c-tab-always-indent		nil
-	 blink-matching-paren            t
-	 comment-multi-line              t
-	 comment-column                 40)
+         case-fold-search               nil
+         case-replace                   nil
+         c-tab-always-indent		nil
+         blink-matching-paren            t
+         comment-multi-line              t
+         comment-column                 40)
   (lsetq tab-stop-list '(8 16 20 24 32 40 48 56 64 72 80 88 96 104 112 120 128
-			  136 144 152 160 168 176 184 192 200 208 216 224))
+                          136 144 152 160 168 176 184 192 200 208 216 224))
 
   ;; change the syntax table so that my abbrevs will work
   (modify-syntax-entry ?# "w")
 
   ;; want fill mode
   (auto-fill-mode 1)
-  (set-fill-column 79)
+  (set-fill-column 78)
 
   ;; some help from text modes
-  ;; (local-set-key    "\M-s"	   'center-line)
+  ;; (local-set-key    "\M-s"      'center-line)
 
   ;;(local-set-key    "\e\{"         'cq-insert-braces)
   (set-balanced-insertions)
@@ -70,7 +70,7 @@ parameters. Call only from C-mode buffers; NIL means no-op.")
 ;;; These have to be kept to 6-char significance!  That `g' is a pain.
 ;;; Alternative:  end the name in G.
 ;;; Obviously, `errno', `optind', etc..., are too late to change.
-;;; Also, having module name prefixes makes it easy to avoid the gCap 
+;;; Also, having module name prefixes makes it easy to avoid the gCap
 ;;; convention and still have some semblance of order.
 ;;;
 ;;; 2006-12-24 20:03:25UT (cesar@bears06-01)
@@ -234,7 +234,7 @@ If ANSI-P is not nil, code is treated as for ANSI-C"
 (defun c68-catch ()
   "Builds a catch block.  Extra braces are used for indentation purposes."
   (interactive)
-  (insert "catch {") 
+  (insert "catch {")
   (save-excursion
     (reindent-then-newline-and-indent)
     (insert "}")         (reindent-then-newline-and-indent)
@@ -244,7 +244,7 @@ If ANSI-P is not nil, code is treated as for ANSI-C"
   (newline-and-indent))
 
 (defun c68-when ()
-  "Builds a when() clause.  Extra braces for indentation.  
+  "Builds a when() clause.  Extra braces for indentation.
 Must be inside an onthrow."
   (interactive)
   (newline-and-indent)
