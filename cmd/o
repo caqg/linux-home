@@ -1,0 +1,10 @@
+#!/bin/sh
+## Copyright (C) 2015 by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+{ [ $# -eq 0 ] && echo "." ; echo "$@"; } |
+/usr/bin/xargs -n1 /usr/bin/xdg-open;
+
+# end o
