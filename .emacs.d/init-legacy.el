@@ -243,9 +243,6 @@
 (add-hook 'sh-mode-hook
           #'(lambda ()
               (setq indent-tabs-mode t)
-              (setq sh-basic-offset 8)
-              (setq sh-indent-for-case-alt '+)
-              (setq sh-indent-for-case-label 0)
               (local-set-key "\C-c\C-v" 'view-mode)
               (auto-fill-mode 1)        ;it is a prog-mode
               (font-lock-mode 1)))

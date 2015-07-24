@@ -278,6 +278,7 @@
  '(sh-basic-offset 8)
  '(sh-indent-for-case-alt (quote +))
  '(sh-indent-for-case-label 0)
+ '(sh-indentation 0)
  '(shell-popd-regexp "popd\\|-")
  '(shell-pushd-regexp "pushd\\|+")
  '(show-paren-mode t)
