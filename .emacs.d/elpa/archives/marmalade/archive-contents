@@ -503,7 +503,7 @@
 	    [(2012 4 7)
 	     nil "replace a word with a synonym looked up in a web service." single])
  (theme-looper .
-	       [(0 0 20150710)
+	       [(0 0 20150723)
 		((cl-lib
 		  (0 5)))
 		"Loop thru the available color-themes" single])

@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "names" "names.el" (21925 56665 43021 969000))
+;;;### (autoloads nil "names" "names.el" (21937 55320 995765 605000))
 ;;; Generated autoloads from names.el
 
 (defvar names--inside-make-autoload nil "\
@@ -79,8 +79,8 @@ Use the `names--inside-make-autoload' variable to indicate to
 
 ;;;***
 
-;;;### (autoloads nil nil ("names-dev.el" "names-pkg.el") (21925
-;;;;;;  56665 47021 725000))
+;;;### (autoloads nil nil ("names-dev.el" "names-pkg.el") (21937
+;;;;;;  55320 999766 153000))
 
 ;;;***
 
