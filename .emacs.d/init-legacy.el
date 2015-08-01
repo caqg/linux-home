@@ -155,6 +155,37 @@
               ;;(local-set-key "\C-z]"    'cq-close-defun)
               ))
 
+(add-hook 'gtags-mode-hook
+          #'(lambda ()
+              ;; Use "\C-cg" as the common map
+              (define-key gtags-mode-map "\C-cgh" 'gtags-display-browser)
+              (define-key gtags-mode-map "\C-cg." 'gtags-find-tag-from-here)
+              (define-key gtags-mode-map "\C-cgt" 'gtags-pop-stack)
+              (define-key gtags-mode-map "\C-cgf" 'gtags-find-file)
+              (define-key gtags-mode-map "\C-cgP" 'gtags-parse-file)
+              (define-key gtags-mode-map "\C-cgg" 'gtags-find-with-grep)
+              (define-key gtags-mode-map "\C-cgI" 'gtags-find-with-idutils)
+              (define-key gtags-mode-map "\C-cgs" 'gtags-find-symbol)
+              (define-key gtags-mode-map "\C-cgr" 'gtags-find-rtag)
+              (define-key gtags-mode-map "\C-cgt" 'gtags-find-tag)
+              (define-key gtags-mode-map "\C-cgR" 'gtags-visit-rootdir)
+              (define-key gtags-mode-map "\C-x4g" 'gtags-find-tag-other-window)
+              ))
+
+(add-hook 'gtags-select-mode-hook
+          #'(lambda ()
+              (hl-line-mode 1)          ;minor mode
+              (define-key gtags-select-mode-map "t" 'gtags-pop-stack)
+              (define-key gtags-select-mode-map "\^?" 'scroll-down)
+              (define-key gtags-select-mode-map " " 'scroll-up)
+              (define-key gtags-select-mode-map "p" 'previous-line)
+              (define-key gtags-select-mode-map "n" 'next-line)
+              (define-key gtags-select-mode-map "\C-m" 'gtags-select-tag)
+              (define-key gtags-select-mode-map "\C-o" 'gtags-select-tag-other-window)
+              (if gtags-disable-pushy-mouse-mapping nil
+                (define-key gtags-select-mode-map [mouse-2] 'gtags-select-tag-by-event))))
+
+
 (setq inferior-lisp-program "clisp")
 (add-hook 'ilisp-mode-hook
           #'(lambda () (setq lisp-no-popper t)))
