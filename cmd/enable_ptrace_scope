@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Run this as root!
+
+echo 0 > /proc/sys/kernel/yama/ptrace_scope
