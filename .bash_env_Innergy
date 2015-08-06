@@ -1,19 +1,16 @@
 : source me, I am a bash -*- Shell-Script -*-
 
-export INNERGY_ROOT=/work/Innergy/rootdir
-export SYSTEMC_HOME=${INNERGY_ROOT}
-export SYSTEMC=${SYSTEMC_HOME}
-export LLVMROOT=${INNERGY_ROOT}
 export SOFTWARE=/work/Innergy/Software
-export SOFTWARE_INNERGY=/work/Innergy/Software/Innergy
+export INNERGY_ROOT=${SOFTWARE}
+export SYSTEMC_HOME=${INNERGY_ROOT}/External/systemc
+export SYSTEMC=${SYSTEMC_HOME}
+# export LLVMROOT=${INNERGY_ROOT}
 
 # export PATH=${INNERGY_ROOT}/bin:$PATH
 export PATH=${SOFTWARE}/bin:$PATH:.
 
-export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
-export LD_LIBRARY_PATH+=${SOFTWARE_INNERGY}/lib-linux64
-export LD_LIBRARY_PATH+=:${SOFTWARE_INNERGY}/lib
-export LD_LIBRARY_PATH+=:${SOFTWARE_INNERGY}/lib
+export LD_LIBRARY_PATH+=${SOFTWARE}/lib-linux64
+export LD_LIBRARY_PATH+=:${SOFTWARE}/lib
 export LD_LIBRARY_PATH+=:.
 
 export MANPATH+=:${SOFTWARE_INNERGY}/share/man
