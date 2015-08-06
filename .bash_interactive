@@ -33,7 +33,7 @@ function -    { popd "$@"; }
 function =    { dirs -v "$@"; }
 
 function 2top { cd $(git rev-parse --show-toplevel); }
-function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors); }
+function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors ~/.dircolors); }
 function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
 
 function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
