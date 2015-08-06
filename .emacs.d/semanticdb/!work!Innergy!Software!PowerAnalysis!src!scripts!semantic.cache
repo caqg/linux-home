@@ -1,0 +1,36 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 131])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [131 182])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [182 212])
+            ("bin_DIR" variable (:default-value ("$(TOP)/bin/")) nil [213 239])
+            ("lib_DIR" variable (:default-value ("$(TOP)/lib/")) nil [239 265])
+            ("etc_DIR" variable (:default-value ("$(TOP)/etc/")) nil [265 291])
+            ("src_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/src/")) nil [291 331])
+            ("include_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/include/")) nil [331 375])
+            ("share_DIR" variable (:default-value ("$(TOP)/share/")) nil [375 403])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [404 443])
+            ("bin_PRODUCTS" variable (:default-value ("extract-lite-bom" "extract-nested-bom" "format-lite-bom" "ipa" "map-modules" "pwrwave" "to-rtl" "to-ungrouped-rtl" "vwave")) nil [444 585])
+            ("all" function (:arguments ("install")) nil [611 630])
+            (".PHONY" function (:arguments ("all" "clean" "cleanall" "distclean" "check" "install" "uninstall")) nil [632 696])
+            ("clean" function nil nil [697 739])
+            ("cleanall" function (:arguments ("clean")) nil [740 757])
+            ("distclean" function (:arguments ("cleanall")) nil [758 799])
+            ("check" function nil nil [800 811])
+            ("$(bin_DIR)" function nil nil [812 850])
+            ("install" function (:arguments ("$(bin_DIR)" "$(bin_PRODUCTS)")) nil [851 939])
+            ("uninstall" function nil nil [940 989]))          
+      :file "Makefile"
+      :pointmax 998
+      :fsize 997
+      :lastmodtime '(21815 6883 376848 148000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!PowerAnalysis!src!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,514 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("glhier.h" include nil nil [147 166])
+            ("algorithm" include (:system-flag t) nil [167 187])
+            ("cassert" include (:system-flag t) nil [188 206])
+            ("iostream" include (:system-flag t) nil [207 226])
+            ("utility" include (:system-flag t) nil [227 245])
+            ("vector" include (:system-flag t) nil [246 263])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [265 285])
+            ("Innergy" type
+               (:members 
+                  ( ("Node" function
+                       (:constructor-flag t
+                        :parent "Node"
+                        :arguments 
+                          ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [335 356])
+                            ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [357 378])
+                            ("nodeParent" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [383 416]))                          
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [324 486])
+                    ("getName" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [488 549])
+                    ("getTypeName" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [551 620])
+                    ("getParent" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Node" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [622 689])
+                    ("isRoot" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [691 751])
+                    ("isLeaf" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [753 812])
+                    ("addChild" function
+                       (:parent "Node"
+                        :arguments 
+                          ( ("child" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [841 869]))                          
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [814 916])
+                    ("getChildren" function
+                       (:methodconst-flag t
+                        :parent "Node"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::shared_ptr" type (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [918 1007])
+                    ("dumpNodeBase" function
+                       (:parent "Node"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1042 1063])
+                            ("func" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1064 1081]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1009 1372])
+                    ("debugDump" function
+                       (:parent "Node"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1404 1425]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1374 1847])
+                    ("xmlDump" function
+                       (:parent "Node"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1877 1898]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1849 1937])
+                    ("serializeNodeBase" function
+                       (:parent "Node"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1977 1998]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1939 2434]))                  
+                :type "namespace")
+                nil [287 2438])
+            ("Innergy" type
+               (:members 
+                  ( ("Scope" function
+                       (:constructor-flag t
+                        :parent "Scope"
+                        :arguments 
+                          ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2521 2542])
+                            ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2543 2564])
+                            ("parent" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [2571 2600])
+                            ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [2607 2617]))                          
+                        :type ("Scope" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2508 2673])
+                    ("getDepth" function
+                       (:methodconst-flag t
+                        :parent "Scope"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2675 2722])
+                    ("setUniqueId" function
+                       (:parent "Scope"
+                        :arguments 
+                          ( ("id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2750 2765]))                          
+                        :type ("Scope" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2724 2800])
+                    ("getUniqueId" function
+                       (:methodconst-flag t
+                        :parent "Scope"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2802 2863])
+                    ("debugDump" function
+                       (:parent "Scope"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2896 2917]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2865 3418])
+                    ("xmlDump" function
+                       (:parent "Scope"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3449 3470]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3420 3614]))                  
+                :type "namespace")
+                nil [2470 3618])
+            ("Innergy" type
+               (:members 
+                  ( ("Port" function
+                       (:constructor-flag t
+                        :parent "Port"
+                        :arguments 
+                          ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3703 3724])
+                            ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3725 3746])
+                            ("parent" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [3751 3780])
+                            ("portActiveCapacitance" variable (:type "double") (reparse-symbol arg-sub-list) [3781 3810]))                          
+                        :type ("Port" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3692 3894])
+                    ("getActiveCapacitance" function
+                       (:methodconst-flag t
+                        :parent "Port"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [3897 3968])
+                    ("debugDump" function
+                       (:parent "Port"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4000 4021]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3970 4226])
+                    ("xmlDump" function
+                       (:parent "Port"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4256 4277]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4228 4463]))                  
+                :type "namespace")
+                nil [3655 4466])
+            ("Innergy" type
+               (:members 
+                  ( ("Var" function
+                       (:constructor-flag t
+                        :parent "Var"
+                        :arguments 
+                          ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4547 4568])
+                            ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4569 4590])
+                            ("parent" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [4593 4622])
+                            ("width" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4625 4638])
+                            ("bounds" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [4639 4666]))                          
+                        :type ("Var" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4538 4783])
+                    ("getWidth" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4785 4833])
+                    ("getBounds" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("size_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [4835 4905])
+                    ("isWire" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4908 4970])
+                    ("isScalar" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4971 5030])
+                    ("isVector" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5031 5105])
+                    ("isBitSelect" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5106 5167])
+                    ("isPartSelect" function
+                       (:methodconst-flag t
+                        :parent "Var"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [5168 5229])
+                    ("setIsInputTo" function
+                       (:parent "Var"
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5254 5268]))                          
+                        :type ("Var" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5231 5305])
+                    ("setIsOutputFrom" function
+                       (:parent "Var"
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5332 5346]))                          
+                        :type ("Var" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5306 5380])
+                    ("getIsInputTo" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "Var"
+                        :constant-flag t
+                        :type ("Port" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5383 5443])
+                    ("getIsOutputFrom" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "Var"
+                        :constant-flag t
+                        :type ("Port" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5444 5507])
+                    ("debugDump" function
+                       (:parent "Var"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5538 5559]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5509 6621])
+                    ("xmlDump" function
+                       (:parent "Var"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6650 6671]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6623 6975]))                  
+                :type "namespace")
+                nil [4502 6978])
+            ("Innergy" type
+               (:members 
+                  ( ("addRoot" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("root" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [7076 7103]))                          
+                        :type ("Design" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7052 7146])
+                    ("getRoots" function
+                       (:methodconst-flag t
+                        :parent "Design"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("shared_ptr" type (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [7148 7234])
+                    ("dumpDesignBase" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7273 7294])
+                            ("func" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7295 7312]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7236 7531])
+                    ("debugDump" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7565 7586]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7533 7704])
+                    ("xmlDump" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7736 7757]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7706 7798])
+                    ("serialize" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7832 7853]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7800 7941])
+                    ("serializeDesignBase" function
+                       (:parent "Design"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7985 8006]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7943 8129]))                  
+                :type "namespace")
+                nil [7013 8132])
+            ("Innergy" type
+               (:members 
+                  ( ("setVcdCode" function
+                       (:parent "VerilogDesign"
+                        :arguments 
+                          ( ("code" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8257 8270])
+                            ("node" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [8271 8298]))                          
+                        :type ("VerilogDesign" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8216 8360])
+                    ("getNodeFromVcdCode" function
+                       (:methodconst-flag t
+                        :parent "VerilogDesign"
+                        :arguments 
+                          ( ("code" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8423 8436]))                          
+                        :type ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("Node" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [8362 10232])
+                    ("getNodeCount" function
+                       (:methodconst-flag t
+                        :parent "VerilogDesign"
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [10234 10319])
+                    ("debugDump" function
+                       (:parent "VerilogDesign"
+                        :arguments 
+                          ( ("output" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10362 10383]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [10323 11045])
+                    ("xmlDump" function
+                       (:parent "VerilogDesign"
+                        :arguments 
+                          ( ("xmlout" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11084 11105]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11047 11291]))                  
+                :type "namespace")
+                nil [8170 11295]))          
+      :file "glhier.cpp"
+      :pointmax 11360
+      :fsize 11359
+      :lastmodtime '(21854 58699 75174 962000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 130])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [130 177])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [177 205])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [206 245])
+            ("incdir" variable (:default-value ("$(TOP)/PowerAnalysis/include/")) nil [246 285])
+            ("libdir" variable (:default-value ("$(TOP)/lib/")) nil [285 306])
+            ("lib_PRODUCTS" variable (:default-value ("libinnergy.a")) nil [306 334])
+            ("libinnergy_a_SOURCES" variable (:default-value ("eventmanager.cpp" "sharedmemorymanager.cpp" "glhier.cpp")) nil [335 416])
+            ("libinnergy_a_INCLUDES" variable (:default-value ("$(patsubst %.cpp,$(incdir)%.h,$(libinnergy_a_SOURCES))")) nil [417 496])
+            ("libinnergy_a_OBJECTS" variable (:default-value ("$(libinnergy_a_SOURCES:.cpp=.o)")) nil [497 552])
+            ("CPPFLAGS" variable (:default-value ("-I$(incdir)")) nil [684 708])
+            ("CPPFLAGS" variable (:default-value ("-I$(TOP)/include")) nil [708 737])
+            ("CPPFLAGS" variable (:default-value ("$(EXTRACPPFLAGS)")) nil [903 932])
+            ("CFLAGS" variable (:default-value ("$(EXTRACFLAGS)")) nil [932 959])
+            ("CXXFLAGS" variable (:default-value ("$(EXTRACXXFLAGS)")) nil [959 988])
+            ("LDFLAGS" variable (:default-value ("$(EXTRALDFLAGS)")) nil [988 1016])
+            ("all" function (:arguments ("$(lib_PRODUCTS)")) nil [1049 1076])
+            ("$(1)" function (:arguments ("$(1:.o=.cpp)" "$(1:$(incdir)$(1:.o=.h))")) nil [1097 1142])
+            ("libinnergy.a" function (:arguments ("$(libinnergy_a_OBJECTS)")) nil [1219 1305])
+            (".PHONY" function (:arguments ("all" "clean" "cleanall" "distclean" "check" "install")) nil [1306 1360])
+            ("clean" function nil nil [1361 1396])
+            ("cleanall" function (:arguments ("clean")) nil [1397 1414])
+            ("distclean" function (:arguments ("cleanall")) nil [1415 1456])
+            ("check" function nil nil [1457 1468])
+            ("$(libdir)" function nil nil [1469 1505])
+            ("install" function (:arguments ("$(libdir)" "all")) nil [1506 1624])
+            ("uninstall" function (:arguments ("$(libdir)")) nil [1625 1734]))          
+      :file "Makefile"
+      :pointmax 1742
+      :fsize 1741
+      :lastmodtime '(21866 35290 299889 251000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("eventmanager.h" include nil nil [22 47])
+            ("subscribe" function
+               (:parent "EventManager"
+                :arguments 
+                  ( ("cb" variable (:type ("Callback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78 90]))                  
+                :type "void")
+                nil [49 188])
+            ("publish" function
+               (:parent "EventManager"
+                :arguments 
+                  ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 230])
+                    ("index" variable (:type ("InstanceIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [231 251])
+                    ("p" variable (:type ("Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [252 260]))                  
+                :type "void")
+                nil [190 445]))          
+      :file "eventmanager.cpp"
+      :pointmax 446
+      :fsize 445
+      :lastmodtime '(21916 41601 497739 959000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!PowerAnalysis!src!libinnergy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,37 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 127])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [127 174])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [174 200])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [201 240])
+            ("LIBSUBDIRS" variable (:default-value ("libvcdio" "libinnergy")) nil [345 380])
+            ("EXTRASUBDIRS" variable (:default-value ("VcdReplay")) nil [380 405])
+            ("SCRIPTSDIRS" variable (:default-value ("scripts")) nil [405 428])
+            ("SUBDIRS" variable (:default-value ("$(LIBSUBDIRS)" "$(EXTRASUBDIRS)" "$(SCRIPTSDIRS)")) nil [428 488])
+            ("CPPFLAGS" variable (:default-value ("$(EXTRACPPFLAGS)")) nil [786 815])
+            ("CFLAGS" variable (:default-value ("$(EXTRACFLAGS)")) nil [815 842])
+            ("CXXFLAGS" variable (:default-value ("$(EXTRACXXFLAGS)")) nil [842 871])
+            ("LDFLAGS" variable (:default-value ("$(EXTRALDFLAGS)")) nil [871 899])
+            ("all" function nil nil [932 1060])
+            ("PHONIES" variable (:default-value ("clean" "cleanall" "distclean" "check" "install" "uninstall")) nil [1061 1121])
+            (".PHONY" function (:arguments ("all" "$(PHONIES)")) nil [1121 1147])
+            ("clean" function nil nil [1148 1213])
+            ("cleanall" function nil nil [1214 1281])
+            ("distclean" function nil nil [1282 1351])
+            ("check" function nil nil [1352 1417])
+            ("install" function nil nil [1418 1485])
+            ("uninstall" function nil nil [1486 1555]))          
+      :file "Makefile"
+      :pointmax 1563
+      :fsize 1562
+      :lastmodtime '(21815 7311 191148 24000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!PowerAnalysis!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

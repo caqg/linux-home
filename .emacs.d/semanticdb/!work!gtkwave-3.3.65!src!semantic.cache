@@ -1,0 +1,311 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("globals.h" include nil nil [389 409])
+            ("config.h" include (:system-flag t) nil [410 429])
+            ("gtk/gtk.h" include (:system-flag t) nil [430 450])
+            ("stdio.h" include (:system-flag t) nil [451 469])
+            ("stdlib.h" include (:system-flag t) nil [470 489])
+            ("wave_locale.h" include nil nil [579 603])
+            ("signal.h" include (:system-flag t) nil [651 670])
+            ("sys/types.h" include (:system-flag t) nil [671 693])
+            ("sys/wait.h" include (:system-flag t) nil [694 715])
+            ("sys/time.h" include (:system-flag t) nil [716 737])
+            ("sys/types.h" include (:system-flag t) nil [738 760])
+            ("gnu-getopt.h" include nil nil [921 944])
+            ("unistd.h" include (:system-flag t) nil [962 981])
+            ("symbol.h" include nil nil [1031 1050])
+            ("lx2.h" include nil nil [1051 1067])
+            ("ae2.h" include nil nil [1068 1084])
+            ("vzt.h" include nil nil [1085 1101])
+            ("ghw.h" include nil nil [1102 1118])
+            ("fst.h" include nil nil [1119 1135])
+            ("main.h" include nil nil [1136 1153])
+            ("menu.h" include nil nil [1154 1171])
+            ("vcd.h" include nil nil [1172 1188])
+            ("lxt.h" include nil nil [1189 1205])
+            ("lxt2_read.h" include nil nil [1206 1228])
+            ("vzt_read.h" include nil nil [1229 1250])
+            ("pixmaps.h" include nil nil [1251 1271])
+            ("currenttime.h" include nil nil [1272 1296])
+            ("fgetdynamic.h" include nil nil [1297 1321])
+            ("rc.h" include nil nil [1322 1337])
+            ("translate.h" include nil nil [1338 1360])
+            ("ptranslate.h" include nil nil [1361 1384])
+            ("ttranslate.h" include nil nil [1385 1408])
+            ("tcl_helper.h" include nil nil [1410 1433])
+            ("gtkwave_argv0_cached" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type "char")
+                nil [1562 1596])
+            ("switch_page" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("notebook" variable
+                       (:pointer 1
+                        :type ("GtkNotebook" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1622 1648])
+                    ("page" variable
+                       (:pointer 1
+                        :type ("GtkNotebookPage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1652 1674])
+                    ("page_num" variable (:type ("guint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1678 1704])
+                    ("user_data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1708 1735]))                  
+                :type "void")
+                nil [1598 3895])
+            ("kill_stems_browser_single" function
+               (:arguments 
+                  ( ("V" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3929 3937]))                  
+                :type "void")
+                nil [3898 4524])
+            ("kill_stems_browser" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4572 4577]))                  
+                :type "void")
+                nil [4548 4735])
+            ("print_help" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("nam" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5265 5275]))                  
+                :type "void")
+                nil [5242 10074])
+            ("wave_get_filename_cleanup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("widget" variable
+                       (:pointer 1
+                        :type ("GtkWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10161 10179])
+                    ("data" variable (:type ("gpointer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10180 10194]))                  
+                :type "void")
+                nil [10123 10280])
+            ("wave_get_filename" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dfile" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10313 10325]))                  
+                :type "char")
+                nil [10282 10945])
+            ("addPidToExecutableName" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [11178 11187])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11188 11201])
+                    ("argv_mod" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11202 11219]))                  
+                :type "void")
+                nil [11150 11552])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [11564 11573])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11574 11587]))                  
+                :type "int")
+                nil [11555 11622])
+            ("main_2" function
+               (:arguments 
+                  ( ("opt_vcd" variable (:type "int") (reparse-symbol arg-sub-list) [11635 11647])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [11648 11657])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11658 11671]))                  
+                :type "int")
+                nil [11624 78004])
+            ("get_window_size" function
+               (:arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [78028 78035])
+                    ("y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [78036 78043]))                  
+                :type "void")
+                nil [78006 78213])
+            ("set_window_size" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [78237 78243])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [78244 78250]))                  
+                :type "void")
+                nil [78215 78703])
+            ("get_window_xypos" function
+               (:arguments 
+                  ( ("root_x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [78728 78740])
+                    ("root_y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [78741 78753]))                  
+                :type "void")
+                nil [78706 79332])
+            ("set_window_xypos" function
+               (:arguments 
+                  ( ("root_x" variable (:type "int") (reparse-symbol arg-sub-list) [79356 79367])
+                    ("root_y" variable (:type "int") (reparse-symbol arg-sub-list) [79368 79379]))                  
+                :type "void")
+                nil [79334 80384])
+            ("stems_are_active" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [80463 80468]))                  
+                :type "int")
+                nil [80442 80925])
+            ("activate_stems_reader" function
+               (:arguments 
+                  ( ("stems_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [80962 80979]))                  
+                :type "void")
+                nil [80935 86700])
+            ("optimize_vcd_file" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [86772 86777]))                  
+                :type "void")
+                nil [86749 89234]))          
+      :file "main.c"
+      :pointmax 89242
+      :fsize 89241
+      :lastmodtime '(21618 4409 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("$(LIBZ_DIR)" "$(LIBBZ2_DIR)" "liblzma" "helpers" "helpers/fst" "cocoa")) nil [25 94])
+            ("DIST_SUBDIRS" variable (:default-value ("libz" "libbz2" "liblzma" "helpers" "helpers/fst" "cocoa")) nil [94 154])
+            ("LIBFST_CFLAGS" variable (:default-value ("-I$(srcdir)/helpers/fst")) nil [155 196])
+            ("LIBFST_LDADD" variable (:default-value ("./helpers/fst/libfst.a")) nil [196 236])
+            ("LIBLZMA_CFLAGS" variable (:default-value ("-I$(srcdir)/liblzma" "$(LIBXZ_CFLAGS)")) nil [236 289])
+            ("LIBLZMA_LDADD" variable (:default-value ("./liblzma/libgwlzma.a" "$(LIBXZ_LDADD)")) nil [289 343])
+            ("LIBCOCOA_CFLAGS" variable (:default-value ("-I$(srcdir)/cocoa")) nil [343 379])
+            ("LIBCOCOA_LDADD" variable (:default-value ("./cocoa/libgtkwmacintegration.a" "$(COCOA_GTK_LDADD)")) nil [379 447])
+            ("bin_PROGRAMS" variable (:default-value ("gtkwave")) nil [546 577])
+            ("AM_CFLAGS" variable (:default-value ("-I$(srcdir)/.." "-I$(srcdir)/helpers" "$(FASTTREE_CFLAGS)" "$(GTK_CFLAGS)" "$(LIBLZMA_CFLAGS)" "$(LIBZ_CFLAGS)" "$(LIBBZ2_CFLAGS)" "$(LIBFST_CFLAGS)" "$(AET2_CFLAGS)" "$(FSDB_CFLAGS)" "$(TCL_INCLUDE_SPEC)" "$(TCL_DEFADD)" "$(TK_INCLUDE_SPEC)" "$(EXTLOAD_CFLAGS)" "$(GEDIT_CFLAGS)" "$(LIBJUDY_CFLAGS)" "$(GTK_MAC_CFLAGS)" "$(GCONF_CFLAGS)" "$(LIBCOCOA_CFLAGS)" "$(GTK_UNIX_PRINT_CFLAGS)")) nil [578 949])
+            ("AM_CXXFLAGS" variable (:default-value ("$(AM_CFLAGS)")) nil [950 976])
+            ("./liblzma/libgwlzma.a" function (:arguments ("$(srcdir)/liblzma/LzmaLib.c" "$(srcdir)/liblzma/LzmaLib.h")) nil [977 1056])
+            ("./helpers/fst/libfst.a" function (:arguments ("$(srcdir)/helpers/fst/fastlz.c" "$(srcdir)/helpers/fst/fastlz.h" "$(srcdir)/helpers/fst/fstapi.c" "$(srcdir)/helpers/fst/fstapi.h")) nil [1057 1205])
+            ("./cocoa/libgtkwmacintegration.a" function (:arguments ("$(srcdir)/cocoa/cocoa_misc.c" "$(srcdir)/cocoa/cocoa_misc.h")) nil [1206 1297])
+            ("gtkwave_SOURCES" variable (:default-value ("fsdb_wrapper_api.cc" "fsdb_wrapper_api.h" "baseconvert.h" "wavewindow.h" "zoombuttons.h" "fetchbuttons.h" "timeentry.h" "shiftbuttons.h" "pagebuttons.h" "edgebuttons.h" "signalwindow.h" "entry.h" "file.h" "status.h" "search.h" "showchange.h" "treesearch.h" "hiersearch.h" "renderopt.h" "markerbox.h" "simplereq.h" "help.h" "logfile.h" "vcd_partial.h" "mouseover.h" "mouseover_sigs.h" "interp.h" "globals.c" "globals.h" "ae2.c" "ae2.h" "analyzer.c" "analyzer.h" "baseconvert.c" "bitvec.c" "bsearch.c" "bsearch.h" "busy.c" "busy.h" "clipping.c" "clipping.h" "color.c" "color.h" "currenttime.c" "currenttime.h" "debug.c" "debug.h" "discardbuttons.c" "edgebuttons.c" "entry.c" "extload.c" "extload.h" "fetchbuttons.c" "fgetdynamic.c" "fgetdynamic.h" "file.c" "fonts.c" "fonts.h" "fst.c" "fst.h" "gconf.c" "gconf.h" "getopt.c" "getopt1.c" "ghw.c" "ghw.h" "ghwlib.c" "ghwlib.h" "gnu-getopt.h" "gnu_regex.h" "gtk12compat.h" "hierpack.c" "hierpack.h" "jrb.c" "jrb.h" "help.c" "helpers/lxt2_read.c" "helpers/lxt_write.c" "helpers/vzt_read.c" "hiersearch.c" "interp.c" "logfile.c" "lx2.c" "lx2.h" "lxt.c" "lxt.h" "main.c" "main.h" "markerbox.c" "menu.c" "menu.h" "mouseover.c" "mouseover_sigs.c" "pagebuttons.c" "pipeio.c" "pipeio.h" "pixmaps.c" "pixmaps.h" "print.c" "print.h" "ptranslate.c" "ptranslate.h" "rc.c" "rc.h" "regex.c" "regex_wave.h" "renderopt.c" "rgb.c" "savefile.c" "savefile.h" "search.c" "shiftbuttons.c" "showchange.c" "signalwindow.c" "simplereq.c" "splash.c" "status.c" "strace.c" "strace.h" "symbol.c" "symbol.h" "tcl_callbacks.h" "tcl_commands.c" "tcl_helper.c" "tcl_helper.h" "tcl_np.c" "tcl_np.h" "tcl_support_commands.c" "tcl_support_commands.h" "timeentry.c" "translate.c" "translate.h" "tree.c" "tree.h" "treesearch.c" "tree_component.c" "tree_component.h" "ttranslate.c" "ttranslate.h" "vcd.c" "vcd.h" "vcd_keywords.c" "vcd_partial.c" "vcd_recoder.c" "vcd_saver.c" "vcd_saver.h" "version.h" "vlist.c" "vlist.h" "vzt.c" "vzt.h" "wavealloca.h" "wavewindow.c" "zoombuttons.c")) nil [1298 3076])
+            ("gtkwave_LDADD" variable (:default-value ("$(LIBCOCOA_LDADD)" "$(GTK_LIBS)" "$(LIBLZMA_LDADD)" "$(LIBZ_LDADD)" "$(LIBBZ2_LDADD)" "$(LIBFST_LDADD)" "$(AET2_LDADD)" "$(TCL_LDADD)" "$(TK_LDADD)" "$(FSDB_LDADD)" "$(LIBJUDY_LDADD)" "$(GTK_MAC_LIBS)" "$(GCONF_LIBS)" "$(GTK_UNIX_PRINT_LIBS)" "$(MINGW_LDADD)")) nil [3077 3323])
+            ("gtkwave_LDFLAGS" variable (:default-value ("$(COCOA_GTK_LDFLAGS)")) nil [3323 3362])
+            ("twinwave_SOURCES" variable (:default-value ("twinwave.c")) nil [3363 3392])
+            ("twinwave_LDADD" variable (:default-value ("$(GTK_LIBS)" "$(GTK_MAC_LIBS)" "$(GCONF_LIBS)")) nil [3392 3450])
+            ("vcd_keywords.c" function (:arguments ("vcd_keywords.gperf")) nil [3451 3621])
+            ("BUILT_SOURCES" variable (:default-value ("vcd_keywords.c")) nil [3622 3652])
+            ("EXTRA_DIST" variable (:default-value ("treesearch_gtk1.c" "treesearch_gtk2.c" "vcd_keywords.gperf" "gnu_regex.c")) nil [3794 3873]))          
+      :file "Makefile.am"
+      :pointmax 3873
+      :fsize 3872
+      :lastmodtime '(21743 40331 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "globals.h"
+      :fsize 49737
+      :lastmodtime '(21787 38462 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "gnu-getopt.h"
+      :fsize 6385
+      :lastmodtime '(19946 48273 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "symbol.h"
+      :fsize 3305
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "lx2.h"
+      :fsize 1025
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "ae2.h"
+      :fsize 1153
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "vzt.h"
+      :fsize 626
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "ghw.h"
+      :fsize 520
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "fst.h"
+      :fsize 658
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "main.h"
+      :fsize 1854
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "menu.h"
+      :fsize 14319
+      :lastmodtime '(21491 51939 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "vcd.h"
+      :fsize 3136
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "lxt.h"
+      :fsize 2136
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "pixmaps.h"
+      :fsize 622
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "currenttime.h"
+      :fsize 1893
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "fgetdynamic.h"
+      :fsize 831
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "rc.h"
+      :fsize 3774
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "translate.h"
+      :fsize 1059
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "ptranslate.h"
+      :fsize 702
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "ttranslate.h"
+      :fsize 707
+      :lastmodtime '(21381 27965 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "tcl_helper.h"
+      :fsize 2707
+      :lastmodtime '(21381 27965 0 0)))
+  :file "!work!gtkwave-3.3.65!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

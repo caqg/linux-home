@@ -1,0 +1,116 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_SYNLIB_EXPR_H_" variable (:constant-flag t) nil [584 607])
+            ("SynlibTreeNode.h" include nil nil [609 636])
+            ("Net" type
+               (:prototype t
+                :type "class")
+                nil [733 744])
+            ("Netlist" type
+               (:prototype t
+                :type "class")
+                nil [745 760])
+            ("SynlibTreeNode" variable (:type "int") nil [871 2376])
+            ("SynlibExpr" variable (:type "int") nil [2506 3134])
+            ("SynlibExpr" variable (:type "int") nil [3264 3774])
+            ("SynlibExpr" variable (:type "int") nil [3907 4499])
+            ("SynlibExpr" variable (:type "int") nil [4632 5346])
+            ("SynlibExpr" variable (:type "int") nil [5478 6058])
+            ("SynlibExpr" variable (:type "int") nil [6191 6819])
+            ("SynlibExpr" variable (:type "int") nil [6955 7688])
+            ("SynlibExpr" variable (:type "int") nil [7827 8530]))          
+      :file "SynlibExpr.h"
+      :pointmax 8744
+      :fsize 8743
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax '((PUBLIC 7820 . 7826) (punctuation 7818 . 7819) (symbol 7803 . 7817) (symbol 7790 . 7802) (CLASS 7784 . 7789) (PUBLIC 6948 . 6954) (punctuation 6946 . 6947) (symbol 6931 . 6945) (symbol 6918 . 6930) (CLASS 6912 . 6917) (PUBLIC 6184 . 6190) (punctuation 6182 . 6183) (symbol 6170 . 6181) (symbol 6157 . 6169) (CLASS 6151 . 6156) (PUBLIC 5471 . 5477) (punctuation 5469 . 5470) (symbol 5457 . 5468) (symbol 5444 . 5456) (CLASS 5438 . 5443) (PUBLIC 4625 . 4631) (punctuation 4623 . 4624) (symbol 4612 . 4622) (symbol 4599 . 4611) (CLASS 4593 . 4598) (PUBLIC 3900 . 3906) (punctuation 3898 . 3899) (symbol 3885 . 3897) (symbol 3872 . 3884) (CLASS 3866 . 3871) (PUBLIC 3257 . 3263) (punctuation 3255 . 3256) (symbol 3244 . 3254) (symbol 3231 . 3243) (CLASS 3225 . 3230) (PUBLIC 2499 . 2505) (punctuation 2497 . 2498) (symbol 2487 . 2496) (symbol 2474 . 2486) (CLASS 2468 . 2473) (PUBLIC 864 . 870) (punctuation 862 . 863) (symbol 851 . 861) (symbol 838 . 850) (CLASS 832 . 837))
+      :lexical-table 
+        '(("_VERIFIC_SYNLIB_EXPR_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_SYNLIB_FUNCTION_H_" variable (:constant-flag t) nil [588 615])
+            ("VerificSystem.h" include nil nil [617 643])
+            ("SynlibCompileFlags.h" include nil nil [644 675])
+            ("LineFile.h" include nil nil [677 698])
+            ("SynlibExpr" type
+               (:prototype t
+                :type "class")
+                nil [816 834])
+            ("synlib_function" variable (:type ("VFC_DLL_PORT" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [906 1704]))          
+      :file "synlib_function.h"
+      :pointmax 1923
+      :fsize 1922
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_VERIFIC_SYNLIB_FUNCTION_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_SYNLIB_TREE_NODE_H_" variable (:constant-flag t) nil [589 617])
+            ("VerificSystem.h" include nil nil [619 645])
+            ("SynlibCompileFlags.h" include nil nil [646 677])
+            ("LineFile.h" include nil nil [679 700])
+            ("Netlist" type
+               (:prototype t
+                :type "class")
+                nil [818 833])
+            ("Net" type
+               (:prototype t
+                :type "class")
+                nil [834 845])
+            ("Library" type
+               (:prototype t
+                :type "class")
+                nil [846 861])
+            ("Array" type
+               (:prototype t
+                :type "class")
+                nil [862 875])
+            ("Map" type
+               (:prototype t
+                :type "class")
+                nil [876 887])
+            ("SynlibTreeNode" variable (:type ("VFC_DLL_PORT" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [959 3269]))          
+      :file "SynlibTreeNode.h"
+      :pointmax 3488
+      :fsize 3487
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_VERIFIC_SYNLIB_TREE_NODE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_SYNLIB_COMPILEFLAGS_H_" variable (:constant-flag t) nil [591 622]))          
+      :file "SynlibCompileFlags.h"
+      :pointmax 4161
+      :fsize 4160
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_VERIFIC_SYNLIB_COMPILEFLAGS_H_")
+          )
+))
+  :file "!work!Innergy!Software!External!verific_lib_eval!synlib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

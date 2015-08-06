@@ -1,0 +1,51 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.examples" include nil nil [1510 1559])
+            ("all" function nil nil [1560 1635])
+            ("TESTS" variable (:default-value ("$(check_SCRIPTS)")) nil [1686 1711])
+            ("check_SCRIPTS" variable (:default-value ("$(examples_TESTS:=.sh)")) nil [1711 1751])
+            ("check_PROGRAMS" variable (:default-value ("$(examples_TESTS)")) nil [1751 1786])
+            ("syscexamplesdir" variable (:default-value ("$(examplesdir)/sysc")) nil [1900 1938])
+            ("examples_FILES" variable (:default-value ("Makefile.all" "Makefile.config" "Makefile.rules" "README.txt" "\\")) nil [1939 2028])
+            ("examples_INPUT" variable (:default-value ("input.txt")) nil [2118 2144])
+            ("examples_GOLDEN" variable (:default-value ("golden.log")) nil [2144 2171])
+            ("examples_BUILD" variable nil nil [2188 2205])
+            ("examples_CLEAN" variable nil nil [2205 2222])
+            ("examples_TESTS" variable nil nil [2222 2239])
+            ("fft/fft_flpt/test.am" include nil nil [2293 2322])
+            ("fft/fft_fxpt/test.am" include nil nil [2322 2351])
+            ("fir/test.am" include nil nil [2351 2371])
+            ("pipe/test.am" include nil nil [2371 2392])
+            ("pkt_switch/test.am" include nil nil [2392 2419])
+            ("risc_cpu/test.am" include nil nil [2419 2444])
+            ("rsa/test.am" include nil nil [2444 2464])
+            ("simple_bus/test.am" include nil nil [2464 2491])
+            ("simple_fifo/test.am" include nil nil [2491 2519])
+            ("simple_perf/test.am" include nil nil [2519 2547])
+            ("2.1/dpipe/test.am" include nil nil [2565 2591])
+            ("2.1/forkjoin/test.am" include nil nil [2591 2620])
+            ("2.1/reset_signal_is/test.am" include nil nil [2620 2656])
+            ("2.1/sc_export/test.am" include nil nil [2656 2686])
+            ("2.1/sc_report/test.am" include nil nil [2686 2716])
+            ("2.1/scx_barrier/test.am" include nil nil [2716 2748])
+            ("2.1/scx_mutex_w_policy/test.am" include nil nil [2748 2787])
+            ("2.1/specialized_signals/test.am" include nil nil [2787 2827])
+            ("2.3/sc_rvd/test.am" include nil nil [2845 2872])
+            ("2.3/sc_ttd/test.am" include nil nil [2872 2899])
+            ("nobase_syscexamples_DATA" variable (:default-value ("$(examples_FILES)")) nil [3022 3070])
+            ("EXTRA_DIST" variable (:default-value ("$(examples_FILES)")) nil [3077 3112])
+            ("CLEANFILES" variable (:default-value ("$(examples_CLEAN)" "$(check_SCRIPTS)")) nil [3113 3168]))          
+      :file "Makefile.am"
+      :pointmax 3177
+      :fsize 3176
+      :lastmodtime '(21328 538 0 0)
+      :unmatched-syntax '((shell-command 2029 . 2039) (bol 2028 . 2028))))
+  :file "!work!Innergy!Software!External!systemc-2.3.1!examples!sysc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.sysc" include nil nil [1444 1489])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libkernel.la")) nil [1490 1524])
+            ("H_FILES" variable (:default-value ("sc_attribute.h" "sc_boost.h" "sc_cmnhdr.h" "sc_constants.h" "sc_cor.h" "sc_dynamic_processes.h" "sc_event.h" "sc_except.h" "sc_externs.h" "sc_join.h" "sc_kernel_ids.h" "sc_macros.h" "sc_module.h" "sc_module_name.h" "sc_object.h" "sc_process.h" "sc_process_handle.h" "sc_runnable.h" "sc_sensitive.h" "sc_spawn.h" "sc_spawn_options.h" "sc_status.h" "sc_simcontext.h" "sc_time.h" "sc_ver.h" "sc_wait.h" "sc_wait_cthread.h")) nil [1525 1984])
+            ("NO_H_FILES" variable (:default-value ("sc_cor_fiber.h" "sc_cor_pthread.h" "sc_cor_qt.h" "sc_cthread_process.h" "sc_method_process.h" "sc_module_registry.h" "sc_name_gen.h" "sc_object_int.h" "sc_object_manager.h" "sc_phase_callback_registry.h" "sc_reset.h" "sc_runnable_int.h" "sc_simcontext_int.h" "sc_thread_process.h")) nil [1985 2295])
+            ("CXX_FILES" variable (:default-value ("sc_attribute.cpp" "$(CXX_COR_FILES)" "sc_cthread_process.cpp" "sc_event.cpp" "sc_except.cpp" "sc_join.cpp" "sc_main.cpp" "sc_main_main.cpp" "sc_method_process.cpp" "sc_module.cpp" "sc_module_name.cpp" "sc_module_registry.cpp" "sc_name_gen.cpp" "sc_object.cpp" "sc_object_manager.cpp" "sc_phase_callback_registry.cpp" "sc_process.cpp" "sc_reset.cpp" "sc_sensitive.cpp" "sc_simcontext.cpp" "sc_spawn_options.cpp" "sc_thread_process.cpp" "sc_time.cpp" "sc_ver.cpp" "sc_wait.cpp" "sc_wait_cthread.cpp")) nil [2296 2833])
+            ("CXX_COR_FILES" variable (:default-value ("sc_cor_qt.cpp")) nil [2881 2911])
+            ("CXX_COR_FILES" variable (:default-value ("sc_cor_pthread.cpp")) nil [2941 2976])
+            ("CXX_COR_FILES" variable (:default-value ("sc_cor_fiber.cpp")) nil [2981 3014])
+            ("localincludedir" variable (:default-value ("$(includedir)/sysc/kernel")) nil [3055 3099])
+            ("nobase_localinclude_HEADERS" variable (:default-value ("$(H_FILES)")) nil [3099 3140])
+            ("libkernel_la_SOURCES" variable (:default-value ("$(NO_H_FILES)" "$(CXX_FILES)")) nil [3141 3191]))          
+      :file "Makefile.am"
+      :pointmax 3200
+      :fsize 3199
+      :lastmodtime '(21941 38079 797102 897000)
+      :unmatched-syntax '((ENDIF 3020 . 3025) (bol 3020 . 3020))))
+  :file "!work!Innergy!Software!External!systemc!src!sysc!kernel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

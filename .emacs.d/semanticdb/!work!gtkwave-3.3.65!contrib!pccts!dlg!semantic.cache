@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("noinst_PROGRAMS" variable (:default-value ("dlg")) nil [25 46])
+            ("AM_CFLAGS" variable (:default-value ("-I." "-I$(srcdir)/../support/set" "-I$(srcdir)/../h" "-DUSER_ZZSYN" "-DZZLEXBUFSIZE=32000")) nil [47 143])
+            ("dlg_SOURCES" variable (:default-value ("automata.c" "dlg.h" "dlg_p.c" "dlg_a.c" "err.c" "main.c" "mode.h" "output.c" "relabel.c" "$(srcdir)/../support/set/set.c" "stdpccts.h" "support.c" "tokens.h")) nil [144 301])
+            ("ANTLR" variable (:default-value ("../antlr/antlr")) nil [372 394])
+            ("parser.dlg" function (:arguments ("$(srcdir)/dlg_p.g")) nil [516 997])
+            ("dlg_p.c" function (:arguments ("$(srcdir)/dlg_p.g")) nil [516 997])
+            ("DLG" variable (:default-value ("./dlg")) nil [998 1009])
+            ("mode.h" function (:arguments ("$(srcdir)/parser.dlg")) nil [1009 1457])
+            ("dlg_a.c" function (:arguments ("$(srcdir)/parser.dlg")) nil [1009 1457])
+            ("EXTRA_DIST" variable (:default-value ("DlgMS.mak" "DlgMSVC50.dsp" "DlgMSVC50.dsw" "DlgMSVC60.dsp" "DlgMSVC60.dsw" "dlg.1" "dlg.r" "dlg1.txt" "dlg68K.make" "dlgPPC.make" "dlg_p.g" "makefile.VMS" "makefile1" "parser.dlg" "watdlg.mak")) nil [1459 1647]))          
+      :file "Makefile.am"
+      :pointmax 1648
+      :fsize 1647
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!pccts!dlg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

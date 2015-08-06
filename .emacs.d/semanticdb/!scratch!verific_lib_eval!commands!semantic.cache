@@ -1,0 +1,47 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("VERSION" variable (:default-value ("-O")) nil [1 15])
+            ("LIB_TYPE" variable (:default-value ("$(LIB)")) nil [15 33])
+            ("CXX" variable (:default-value ("$(COMPILER)")) nil [33 51])
+            ("TFLAGS" variable (:default-value ("$(TOPFLAGS)")) nil [51 72])
+            ("FLAGS" variable (:default-value ("$(PFLAGS)")) nil [72 90])
+            ("INCLUDE" variable (:default-value ("verilog")) nil [91 110])
+            ("INCLUDE" variable (:default-value ("vhdl")) nil [111 127])
+            ("INCLUDE" variable (:default-value ("vhdl_sort")) nil [128 149])
+            ("INCLUDE" variable (:default-value ("verilog_sort")) nil [150 174])
+            ("INCLUDE" variable (:default-value ("hdl_file_sort")) nil [176 201])
+            ("INCLUDE" variable (:default-value ("verilog_nl")) nil [204 226])
+            ("INCLUDE" variable (:default-value ("synlib")) nil [227 245])
+            ("INCLUDE" variable (:default-value ("database")) nil [249 269])
+            ("HEADERS" variable (:default-value ("ComWrite.h")) nil [270 292])
+            ("OBJECTS" variable (:default-value ("ComWrite.o")) nil [292 314])
+            ("INCLUDE" variable (:default-value ("util" "containers")) nil [317 344])
+            ("OBJECTS" variable (:default-value ("ComRead.o" "ComList.o" "Commands.o")) nil [345 389])
+            ("HEADERS" variable (:default-value ("ComRead.h" "ComList.h" "Commands.h")) nil [390 433])
+            ("CFLAGS" variable (:default-value ("$(TFLAGS)")) nil [779 798])
+            ("CFLAGS" variable (:default-value ("$(WFLAGS)")) nil [798 818])
+            ("CFLAGS" variable (:default-value ("$(PFLAGS)")) nil [818 838])
+            ("default" function (:arguments ("lib")) nil [1057 1070])
+            (".SUFFIXES" function (:arguments (".cpp" ".o")) nil [1072 1091])
+            (".cpp.o" function nil nil [1093 1168])
+            ("$(TARGET)" function (:arguments ("$(OBJECTS)")) nil [1195 1291])
+            ("$(TARGET)" function (:arguments ("$(OBJECTS)")) nil [1296 1365])
+            ("lib" function (:arguments ("$(TARGET)")) nil [1373 1389])
+            ("$(OBJECTS)" function (:arguments ("$(HEADERS)")) nil [1524 1549])
+            ("clean" function nil nil [1551 1597])
+            ("lexyacc" function nil nil [1598 1627])
+            ("clean_lexyacc" function nil nil [1627 1656]))          
+      :file "Makefile"
+      :pointmax 1657
+      :fsize 1656
+      :lastmodtime '(21934 40367 0 0)
+      :unmatched-syntax '((bol 1549 . 1549) (bol 1389 . 1389) (bol 1371 . 1371) (bol 1091 . 1091) (bol 1070 . 1070) (bol 1055 . 1055) (symbol 949 . 951) (semantic-list 945 . 949) (punctuation 944 . 945) (symbol 935 . 944) (punctuation 933 . 934) (symbol 926 . 932) (bol 923 . 923) (symbol 912 . 917) (punctuation 910 . 911) (punctuation 909 . 910) (symbol 902 . 908) (bol 899 . 899) (symbol 895 . 898) (semantic-list 891 . 895) (punctuation 890 . 891) (symbol 878 . 890) (punctuation 876 . 877) (symbol 869 . 875) (bol 866 . 866) (bol 777 . 777) (punctuation 769 . 770) (punctuation 768 . 769) (symbol 767 . 768) (punctuation 765 . 766) (symbol 761 . 764) (bol 757 . 757) (symbol 729 . 734) (punctuation 727 . 728) (symbol 724 . 726) (bol 721 . 721) (symbol 670 . 677) (punctuation 668 . 669) (symbol 665 . 667) (bol 662 . 662) (symbol 615 . 618) (symbol 611 . 614) (symbol 606 . 610) (symbol 600 . 605) (semantic-list 591 . 599) (punctuation 590 . 591) (punctuation 588 . 589) (symbol 580 . 587) (bol 578 . 578) (symbol 574 . 577) (punctuation 572 . 573) (symbol 569 . 571) (bol 567 . 567) (bol 536 . 536))))
+  :file "!scratch!verific_lib_eval!commands!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

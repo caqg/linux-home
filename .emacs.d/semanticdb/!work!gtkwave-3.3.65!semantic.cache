@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("doc" "examples" "man" "src" "contrib" "share")) nil [25 69])
+            ("EXTRA_DIST" variable (:default-value ("ChangeLog" "COPYING" "INSTALL" "LICENSE.TXT" "README" "NEWS" "AUTHORS" "autogen.sh" "wave_locale.h" "tcl.m4")) nil [69 174]))          
+      :file "Makefile.am"
+      :pointmax 174
+      :fsize 173
+      :lastmodtime '(21167 14827 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "wave_locale.h"
+      :fsize 929
+      :lastmodtime '(19788 26280 0 0)))
+  :file "!work!gtkwave-3.3.65!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

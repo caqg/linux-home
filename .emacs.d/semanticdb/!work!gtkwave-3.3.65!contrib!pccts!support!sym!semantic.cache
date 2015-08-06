@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("sym.c" "template.h")) nil [25 54]))          
+      :file "Makefile.am"
+      :pointmax 55
+      :fsize 54
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!pccts!support!sym!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("packages")) nil [21 39]))          
+      :file "Makefile.am"
+      :pointmax 40
+      :fsize 39
+      :lastmodtime '(20229 64175 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!share!mime!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.examples" include nil nil [1424 1473])
+            ("all" function nil nil [1474 1553])
+            ("check_LTLIBRARIES" variable (:default-value ("libtlm20examples.la")) nil [1554 1594])
+            ("libtlm20examples_la_SOURCES" variable (:default-value ("$(CXX_FILES)")) nil [1594 1638])
+            ("libtlm20examples_la_CPPFLAGS" variable (:default-value ("-I$(srcdir)/include" "$(AM_CPPFLAGS)")) nil [1638 1704])
+            ("libtlm20examples_la_LIBADD" variable (:default-value ("$(top_builddir)/src/sysc/libsystemc.la")) nil [1704 1774])
+            ("H_FILES" variable (:default-value ("include/at_initiator_annotated.h" "include/at_initiator_explicit.h" "include/at_target_1_phase_dmi.h" "include/at_target_1_phase.h" "include/at_target_2_phase.h" "include/at_target_4_phase.h" "include/dmi_memory.h" "include/extension_initiator_id.h" "include/lt_dmi_initiator.h" "include/lt_dmi_target.h" "include/lt_initiator.h" "include/lt_synch_target.h" "include/lt_target.h" "include/lt_td_initiator.h" "include/memory.h" "include/models/README.txt" "include/models/SimpleBusAT.h" "include/models/SimpleBusLT.h" "include/reporting.h" "include/select_initiator.h" "include/traffic_generator.h")) nil [1776 2406])
+            ("EXTRA_DIST" variable (:default-value ("include/at_initiator_temporal_decoupling.h")) nil [2439 2499])
+            ("CXX_FILES" variable (:default-value ("src/at_initiator_annotated.cpp" "src/at_initiator_explicit.cpp" "src/at_target_1_phase.cpp" "src/at_target_1_phase_dmi.cpp" "src/at_target_2_phase.cpp" "src/at_target_4_phase.cpp" "src/dmi_memory.cpp" "src/extension_initiator_id.cpp" "src/lt_dmi_initiator.cpp" "src/lt_dmi_target.cpp" "src/lt_initiator.cpp" "src/lt_synch_target.cpp" "src/lt_target.cpp" "src/lt_td_initiator.cpp" "src/memory.cpp" "src/report.cpp" "src/select_initiator.cpp" "src/traffic_generator.cpp")) nil [2500 3000])
+            ("EXTRA_DIST" variable (:default-value ("src/at_initiator_temporal_decoupling.cpp")) nil [3033 3091])
+            ("tlm20examplesdir" variable (:default-value ("$(examplesdir)/tlm/common")) nil [3138 3183])
+            ("nobase_tlm20examples_HEADERS" variable (:default-value ("$(H_FILES)" "$(CXX_FILES)")) nil [3183 3288])
+            ("EXTRA_DIST" variable (:default-value ("$(H_FILES)" "$(CXX_FILES)")) nil [3313 3357]))          
+      :file "Makefile.am"
+      :pointmax 3397
+      :fsize 3396
+      :lastmodtime '(21941 38079 765103 945000)
+      :unmatched-syntax '((ENDIF 3358 . 3363) (bol 3358 . 3358) (ELSE 3289 . 3293) (bol 3289 . 3289))))
+  :file "!work!Innergy!Software!External!systemc!examples!tlm!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

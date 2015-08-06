@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("fst2Vcd.java" "fstAPI.c" "fstAPI.h" "fstAPI.java" "fstArrayType.java" "fstAttrType.java" "fstEnumValueType.java" "fstFileType.java" "fstHier.java" "fstHierType.java" "fstMiscType.java" "fstPackType.java" "fstReader.java" "fstScopeType.java" "fstSupplementalDataType.java" "fstSupplementalVarType.java" "fstVarDir.java" "fstVarType.java" "fstWriter.java" "fstWriterPackType.java" "Main.java" "zzz_test.csh")) nil [21 462]))          
+      :file "Makefile.am"
+      :pointmax 463
+      :fsize 462
+      :lastmodtime '(21117 35353 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!fst_jni!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

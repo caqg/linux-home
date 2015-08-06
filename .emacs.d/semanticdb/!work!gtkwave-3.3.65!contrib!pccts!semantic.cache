@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("IBM_VISUAL_AGE_PROJECTS" "antlr" "dlg" "h" "sorcerer" "support" "testcpp")) nil [25 95])
+            ("EXTRA_DIST" variable (:default-value ("CHANGES_FROM_131.txt" "CHANGES_FROM_133.txt" "CHANGES_FROM_133_BEFORE_MR13.txt" "CHANGES_SUMMARY.txt" "KNOWN_PROBLEMS.txt" "MPW_Read_Me" "NOTES.OS2" "NOTES.bcc" "NOTES.msvc" "NOTES.watcom" "README" "RIGHTS" "history.ps" "history.txt" "install68K.mpw" "installPPC.mpw" "makefile.vms")) nil [96 376]))          
+      :file "Makefile.am"
+      :pointmax 377
+      :fsize 376
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!pccts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

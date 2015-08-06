@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags nil
+      :file "Makefile.am"
+      :pointmax 1973
+      :fsize 1972
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!pccts!sorcerer!testcpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

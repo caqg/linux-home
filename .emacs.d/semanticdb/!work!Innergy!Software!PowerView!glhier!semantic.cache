@@ -1,0 +1,392 @@
+;; Object glhier/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "glhier/"
+  :tables
+  (list
+    (semanticdb-table "GLHierTreeView.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("GL_HIER_TREE_VIEW_H_" variable (:constant-flag t) nil [38 58])
+            ("QTreeView" include (:system-flag t) nil [60 80])
+            ("GLHierModel" type
+               (:prototype t
+                :type "class")
+                nil [82 100])
+            ("GLHierTreeView" type
+               (:superclasses 
+                  ( ("QTreeView" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [158 165])
+                    ("GLHierTreeView" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("filename" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [194 211])
+                            ("parent" variable
+                               (:pointer 1
+                                :default-value "0"
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [212 231]))                          
+                        :type ("GLHierTreeView" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [179 233])
+                    ("getSelectedPaths" function
+                       (:prototype-flag t
+                        :type ("QStringList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [239 270])
+                    ("sendUpdateGraph" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [285 308])
+                    ("public" label nil (reparse-symbol classsubparts) [310 323])
+                    ("collapseModel" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [328 349])
+                    ("private" label nil (reparse-symbol classsubparts) [351 365])
+                    ("changeGraphContext" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("QModelIndex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [394 419]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [370 420])
+                    ("private" label nil (reparse-symbol classsubparts) [422 430])
+                    ("_model" variable
+                       (:pointer 1
+                        :type ("GLHierModel" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [435 458]))                  
+                :type "class")
+                nil [102 462]))          
+      :file "GLHierTreeView.h"
+      :pointmax 495
+      :fsize 494
+      :lastmodtime '(21804 1415 622442 275000)
+      :unmatched-syntax '((punctuation 279 . 280) (symbol 272 . 279) (EXPLICIT 170 . 178) (symbol 148 . 156))
+      :lexical-table 
+        '(("GL_HIER_TREE_VIEW_H_")
+          )
+)
+    (semanticdb-table "GLHierWidget.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("GLHIERWIDGET_H" variable (:constant-flag t) nil [32 46])
+            ("QWidget" include (:system-flag t) nil [48 66])
+            ("QHash" include (:system-flag t) nil [67 83])
+            ("QVBoxLayout" type
+               (:prototype t
+                :type "class")
+                nil [84 102])
+            ("QHBoxLayout" type
+               (:prototype t
+                :type "class")
+                nil [103 121])
+            ("QPushButton" type
+               (:prototype t
+                :type "class")
+                nil [122 140])
+            ("QFileDialog" type
+               (:prototype t
+                :type "class")
+                nil [141 159])
+            ("GLHierTreeView" type
+               (:prototype t
+                :type "class")
+                nil [161 182])
+            ("GLHierWidget" type
+               (:superclasses 
+                  ( ("QWidget" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [235 242])
+                    ("GLHierWidget" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("filename" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [269 286])
+                            ("parent" variable
+                               (:pointer 1
+                                :default-value "0"
+                                :type ("QWidget" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [287 306]))                          
+                        :type ("GLHierWidget" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [256 308])
+                    ("fireCollapse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [333 353])
+                    ("getNodeIndex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [396 409]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [379 410])
+                    ("treeView" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("GLHierTreeView" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [415 442])
+                    ("protected" label nil (reparse-symbol classsubparts) [444 454])
+                    ("paintEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable
+                               (:pointer 1
+                                :type ("QPaintEvent" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [475 494]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [459 495])
+                    ("private" label nil (reparse-symbol classsubparts) [497 511])
+                    ("sendSelection" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [516 537])
+                    ("initMemory" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [542 560])
+                    ("generateFired" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [575 596])
+                    ("private" label nil (reparse-symbol classsubparts) [598 606])
+                    ("_mainLayout" variable
+                       (:pointer 1
+                        :type ("QVBoxLayout" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [629 657])
+                    ("_buttonLayout" variable
+                       (:pointer 1
+                        :type ("QHBoxLayout" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [662 692])
+                    ("_treeView" variable
+                       (:pointer 1
+                        :type ("GLHierTreeView" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [717 743])
+                    ("_doneButton" variable
+                       (:pointer 1
+                        :type ("QPushButton" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [748 776])
+                    ("_selCount" variable (:type "int") (reparse-symbol classsubparts) [797 838])
+                    ("_nameHash" variable (:type ("QHash" type
+                         (:template-specifier 
+                            ( ("QString" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [843 884]))                  
+                :type "class")
+                nil [184 888]))          
+      :file "GLHierWidget.h"
+      :pointmax 915
+      :fsize 955
+      :lastmodtime '(21812 31961 504594 258000)
+      :unmatched-syntax '((punctuation 569 . 570) (symbol 562 . 569) (EXPLICIT 247 . 255) (symbol 226 . 234))
+      :lexical-table 
+        '(("GLHIERWIDGET_H")
+          )
+)
+    (semanticdb-table "GLHierWidget.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QVBoxLayout" include (:system-flag t) nil [1 23])
+            ("QHBoxLayout" include (:system-flag t) nil [24 46])
+            ("QPushButton" include (:system-flag t) nil [47 69])
+            ("QFileDialog" include (:system-flag t) nil [70 92])
+            ("QTextStream" include (:system-flag t) nil [93 115])
+            ("QPainter" include (:system-flag t) nil [116 135])
+            ("QStyle" include (:system-flag t) nil [136 153])
+            ("QStyleOption" include (:system-flag t) nil [154 177])
+            ("QMessageBox" include (:system-flag t) nil [178 200])
+            ("QTimer" include (:system-flag t) nil [201 218])
+            ("QDebug" include (:system-flag t) nil [219 236])
+            ("stdio.h" include (:system-flag t) nil [237 255])
+            ("unistd.h" include (:system-flag t) nil [256 275])
+            ("glhier/GLHierWidget.h" include (:system-flag t) nil [277 309])
+            ("glhier/GLHierTreeView.h" include (:system-flag t) nil [310 344])
+            ("globalobjects.h" include (:system-flag t) nil [345 371])
+            ("sharedmemorymanager.h" include (:system-flag t) nil [372 404])
+            ("GLHierWidget" function
+               (:constructor-flag t
+                :parent "GLHierWidget"
+                :arguments 
+                  ( ("filename" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [434 451])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [452 468]))                  
+                :type ("GLHierWidget" type (:type "class") nil nil))
+                nil [407 1216])
+            ("fireCollapse" function
+               (:parent "GLHierWidget"
+                :type "void")
+                nil [1218 1316])
+            ("getNodeIndex" function
+               (:parent "GLHierWidget"
+                :arguments 
+                  ( ("name" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1349 1362]))                  
+                :type "int")
+                nil [1318 1400])
+            ("treeView" function
+               (:pointer 1
+                :parent "GLHierWidget"
+                :type ("GLHierTreeView" type (:type "class") nil nil))
+                nil [1402 1468])
+            ("paintEvent" function
+               (:parent "GLHierWidget"
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("QPaintEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1500 1519]))                  
+                :type "void")
+                nil [1470 1671])
+            ("sendSelection" function
+               (:parent "GLHierWidget"
+                :type "void")
+                nil [1673 2571])
+            ("initMemory" function
+               (:parent "GLHierWidget"
+                :type "void")
+                nil [2573 2691]))          
+      :file "GLHierWidget.cpp"
+      :pointmax 2693
+      :fsize 2853
+      :lastmodtime '(21812 31961 504594 258000)
+      :unmatched-syntax nil)
+    (semanticdb-table "GLHierModel.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QVariant" include (:system-flag t) nil [236 255])
+            ("QPixmap" include (:system-flag t) nil [256 274])
+            ("QColor" include (:system-flag t) nil [275 292])
+            ("QString" include (:system-flag t) nil [293 311])
+            ("QDebug" include (:system-flag t) nil [312 329])
+            ("QVector" include (:system-flag t) nil [330 348])
+            ("MainWindow.h" include (:system-flag t) nil [350 373])
+            ("glhier/GLHierModel.h" include (:system-flag t) nil [374 405])
+            ("GLHierModel" function
+               (:constructor-flag t
+                :parent "GLHierModel"
+                :arguments 
+                  ( ("filename" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [432 449])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [450 466]))                  
+                :type ("GLHierModel" type (:type "class") nil nil))
+                nil [407 525])
+            ("index" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [1251 1259])
+                    ("column" variable (:type "int") (reparse-symbol arg-sub-list) [1260 1271])
+                    ("parent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1272 1298]))                  
+                :type ("QModelIndex" type (:type "class") nil nil))
+                nil [1220 1639])
+            ("parent" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1914 1939]))                  
+                :type ("QModelIndex" type (:type "class") nil nil))
+                nil [1882 2193])
+            ("rowCount" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("parent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2323 2349]))                  
+                :type "int")
+                nil [2297 2539])
+            ("columnCount" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("parent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2631 2657]))                  
+                :type "int")
+                nil [2602 2699])
+            ("data" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3029 3054])
+                    ("role" variable (:type "int") (reparse-symbol arg-sub-list) [3055 3064]))                  
+                :type ("QVariant" type (:type "class") nil nil))
+                nil [3002 3828])
+            ("flags" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3863 3888]))                  
+                :type ("Qt::ItemFlags" type (:type "class") nil nil))
+                nil [3830 4100])
+            ("getSelectedPaths" function
+               (:parent "GLHierModel"
+                :type ("QStringList" type (:type "class") nil nil))
+                nil [4102 4192])
+            ("setData" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4220 4245])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QVariant" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4246 4268])
+                    ("role" variable (:type "int") (reparse-symbol arg-sub-list) [4269 4278]))                  
+                :type "bool")
+                nil [4194 4626])
+            ("collapseModel" function
+               (:parent "GLHierModel"
+                :type "void")
+                nil [4628 4755])
+            ("updateColors" function
+               (:parent "GLHierModel"
+                :arguments 
+                  ( ("heatColorList" variable (:type ("QList" type
+                         (:template-specifier 
+                            ( ("QColor" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4788 4816]))                  
+                :type "void")
+                nil [4757 5257]))          
+      :file "GLHierModel.cpp"
+      :pointmax 5258
+      :fsize 5257
+      :lastmodtime '(21815 9658 844313 79000)
+      :unmatched-syntax nil)
+    (semanticdb-table "GLHierModel.h"
+      :file "GLHierModel.h"
+      :fsize 1597
+      :lastmodtime '(21812 31961 504594 258000)))
+  :file "!work!Innergy!Software!PowerView!glhier!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

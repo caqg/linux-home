@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("dist_man_MANS" variable (:default-value ("evcd2vcd.1" "fst2vcd.1" "ghwdump.1" "gtkwave.1" "gtkwaverc.5" "lxt2miner.1" "lxt2vcd.1" "rtlbrowse.1" "shmidcat.1" "twinwave.1" "vcd2fst.1" "vcd2lxt.1" "vcd2lxt2.1" "vcd2vzt.1" "vermin.1" "vzt2vcd.1" "vztminer.1" "fstminer.1")) nil [25 240]))          
+      :file "Makefile.am"
+      :pointmax 241
+      :fsize 240
+      :lastmodtime '(20467 52589 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!man!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

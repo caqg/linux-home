@@ -1,0 +1,868 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [152 172])
+            ("cassert" include (:system-flag t) nil [173 191])
+            ("deque" include (:system-flag t) nil [192 208])
+            ("iostream" include (:system-flag t) nil [209 228])
+            ("cstdio" include (:system-flag t) nil [229 246])
+            ("cstdlib" include (:system-flag t) nil [247 265])
+            ("fstream" include (:system-flag t) nil [266 284])
+            ("utility" include (:system-flag t) nil [285 303])
+            ("vector" include (:system-flag t) nil [304 321])
+            ("unistd.h" include (:system-flag t) nil [323 342])
+            ("MessageChannel.h" include nil nil [344 371])
+            ("PowerMessage.h" include nil nil [372 397])
+            ("BaseMessage.h" include nil nil [398 422])
+            ("MessageTypes.h" include nil nil [423 448])
+            ("vcd_replay.h" include nil nil [450 473])
+            ("vcd_replay_offline.h" include nil nil [474 505])
+            ("glhier_from_vcd.h" include nil nil [506 534])
+            ("libvcdio.h" include nil nil [563 584])
+            ("glhier.h" include nil nil [585 604])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [606 626])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [760 784])
+            ("unnamed" type
+               (:members 
+                  ( ("vcdOutput" variable (:type ("ofstream" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [835 854])
+                    ("totalPowerVcdCode" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [900 925])
+                    ("otherPowerVcdCode" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [926 951])
+                    ("vcdCodeFor" function
+                       (:arguments 
+                          ( ("glName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [976 990]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [953 1030])
+                    ("PowerMessage::Power" variable (:type "int") (reparse-symbol namespacesubparts) [1085 1105])
+                    ("PowerMessage::TimeStamp" variable (:type "int") (reparse-symbol namespacesubparts) [1130 1154])
+                    ("invalidTS" variable
+                       (:default-value "-1"
+                        :type ("TimeStamp" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1165 1191])
+                    ("perBitC" variable
+                       (:default-value "0.5e-12"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1272 1303])
+                    ("V" variable
+                       (:default-value "0.85"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1325 1353])
+                    ("f" variable
+                       (:default-value "250e6"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1378 1407])
+                    ("W_in_nW" variable
+                       (:default-value "1.0e9"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1651 1680]))                  
+                :type "namespace")
+                nil [786 1752])
+            ("unnamed" type
+               (:members 
+                  ( ("ChangesPending" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1889 1896])
+                            ("ChangesPending" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("mc" variable
+                                       (:reference 1
+                                        :type ("MessageChannel" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1913 1932])
+                                    ("vDesign" variable
+                                       (:reference 1
+                                        :type ("VerilogDesign" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1933 1956]))                                  
+                                :type ("ChangesPending" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1898 1957])
+                            ("getVerilogDesign" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("VerilogDesign" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2008 2048])
+                            ("registerModuleId" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("moduleId" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2092 2108]))                                  
+                                :type ("ModuleType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2051 2109])
+                            ("getTime" function
+                               (:methodconst-flag t
+                                :type ("TimeStamp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2111 2171])
+                            ("advanceTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2209 2219]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2173 2220])
+                            ("evaluateVC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("signalCode" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2257 2276]))                                  
+                                :type ("Power" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2222 2277])
+                            ("whichModules" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("signalCode" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2316 2335]))                                  
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("ModuleType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2279 2336])
+                            ("publishTick" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2338 2376])
+                            ("addPower" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2395 2406])
+                                    ("" variable (:type ("Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2407 2413]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2379 2414])
+                            ("getPower" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2432 2443]))                                  
+                                :type ("Power" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2416 2450])
+                            ("getTotalPower" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("Power" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2452 2481])
+                            ("getModuleCount" function
+                               (:methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2483 2550])
+                            ("getModuleName" function
+                               (:methodconst-flag t
+                                :arguments 
+                                  ( ("i" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2573 2582]))                                  
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2552 2622])
+                            ("chipModuleIndex" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "0"
+                                :type ("ModuleType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2625 2669])
+                            ("private" label nil (reparse-symbol classsubparts) [2671 2679])
+                            ("vDesign" variable
+                               (:pointer 1
+                                :type ("VerilogDesign" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2681 2706])
+                            ("mc" variable
+                               (:pointer 1
+                                :type ("MessageChannel" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2708 2729])
+                            ("thisTick" variable
+                               (:default-value "invalidTS"
+                                :type ("TimeStamp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2731 2765])
+                            ("powerThisTick" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("Power" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2767 2798])
+                            ("totalThisTick" variable (:type ("Power" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2800 2824])
+                            ("registeredModuleId" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2826 2863])
+                            ("moduleIdToModuleType" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil)
+                                      ("ModuleType" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2865 2911])
+                            ("vcdCodeToModuleIndices" variable (:type ("map" type
+                                 (:template-specifier 
+                                    ( ("VcdCode" type nil nil nil)
+                                      ("vector" type (:template-specifier 
+                                        ( ("ModuleType" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2913 2969]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1866 2972])
+                    ("ChangesPending" function
+                       (:constructor-flag t
+                        :parent "ChangesPending"
+                        :arguments 
+                          ( ("mc" variable
+                               (:reference 1
+                                :type ("MessageChannel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3005 3024])
+                            ("vDesign" variable
+                               (:reference 1
+                                :type ("VerilogDesign" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3025 3048]))                          
+                        :type ("ChangesPending" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2974 3172])
+                    ("getVerilogDesign" function
+                       (:methodconst-flag t
+                        :parent "ChangesPending"
+                        :type ("VerilogDesign" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3174 3252])
+                    ("registerModuleId" function
+                       (:parent "ChangesPending"
+                        :arguments 
+                          ( ("moduleId" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3433 3449]))                          
+                        :type ("ModuleType" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3389 3735])
+                    ("advanceTime" function
+                       (:parent "ChangesPending"
+                        :arguments 
+                          ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3899 3912]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3866 4121])
+                    ("evaluateVC" function
+                       (:parent "ChangesPending"
+                        :arguments 
+                          ( ("signalCode" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4334 4353]))                          
+                        :type ("Power" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4301 4886])
+                    ("whichModules" function
+                       (:parent "ChangesPending"
+                        :arguments 
+                          ( ("signalCode" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5158 5177]))                          
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("ModuleType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5110 7836])
+                    ("publishTick" function
+                       (:parent "ChangesPending"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7838 8357])
+                    ("addPower" function
+                       (:parent "ChangesPending"
+                        :arguments 
+                          ( ("mt" variable (:type ("ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8389 8403])
+                            ("power" variable (:type ("Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8404 8416]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8359 8484])
+                    ("getPower" function
+                       (:methodconst-flag t
+                        :parent "ChangesPending"
+                        :arguments 
+                          ( ("mt" variable (:type ("ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8517 8531]))                          
+                        :type ("Power" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8486 8572])
+                    ("getTotalPower" function
+                       (:methodconst-flag t
+                        :parent "ChangesPending"
+                        :type ("Power" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8574 8645]))                  
+                :type "namespace")
+                nil [1767 8649])
+            ("unnamed" type
+               (:members 
+                  ( ("replaySimTimeCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8756 8767])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [8768 8782])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8783 8790])
+                            ("newTick" variable (:type ("VcdParser::TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8791 8820]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8735 9548])
+                    ("replayScalarVCCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9572 9583])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9584 9598])
+                            ("vcdCode" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9599 9614])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9615 9632]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9550 9901])
+                    ("replayVectorVCCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9925 9936])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9937 9951])
+                            ("vcdCode" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9952 9967])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9968 9985]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9903 10473])
+                    ("replayAtSimEndCB" function
+                       (:arguments 
+                          ( ("vcdParser" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10497 10518])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [10519 10533])
+                            ("" variable (:type "bool") (reparse-symbol arg-sub-list) [10534 10539]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10475 11524]))                  
+                :type "namespace")
+                nil [8703 11527])
+            ("unnamed" type
+               (:members 
+                  ( ("registerValueChangeReplayCBs" function
+                       (:arguments 
+                          ( ("vcdParser" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11590 11611])
+                            ("cp" variable
+                               (:reference 1
+                                :type ("ChangesPending" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11612 11631]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [11556 11952]))                  
+                :type "namespace")
+                nil [11543 11955])
+            ("unnamed" type
+               (:members 
+                  ( ("openSelectionFile" function
+                       (:arguments 
+                          ( ("result" variable
+                               (:reference 1
+                                :type ("ifstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12066 12083])
+                            ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12084 12100])
+                            ("block_until_file_exists" variable (:type "bool") (reparse-symbol arg-sub-list) [12101 12130]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12043 12257])
+                    ("nextSelectedName" function
+                       (:arguments 
+                          ( ("selection" variable
+                               (:reference 1
+                                :type ("ifstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12290 12310]))                          
+                        :type ("deque" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [12259 12482])
+                    ("glNameFromRTL" function
+                       (:arguments 
+                          ( ("RTL_hierarchical" variable (:type ("deque" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [12505 12536]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12484 12789])
+                    ("registerSelection" function
+                       (:arguments 
+                          ( ("filename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12821 12837])
+                            ("cp" variable
+                               (:reference 1
+                                :type ("ChangesPending" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12838 12857])
+                            ("block_until_file_exists" variable (:type "bool") (reparse-symbol arg-sub-list) [12858 12887]))                          
+                        :type ("ModuleType" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12792 13380]))                  
+                :type "namespace")
+                nil [11971 13383])
+            ("dumpScopeDefinition" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vcdOutput" variable
+                       (:reference 1
+                        :type ("ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13431 13451])
+                    ("np" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13452 13461])
+                    ("nextId" variable
+                       (:reference 1
+                        :type "unsigned long long")
+                        (reparse-symbol arg-sub-list) [13462 13489]))                  
+                :type "void")
+                nil [13399 14247])
+            ("replayOffline" function
+               (:arguments 
+                  ( ("mc" variable
+                       (:reference 1
+                        :type ("MessageChannel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14268 14287])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14288 14311])
+                    ("vcdFilename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14312 14331]))                  
+                :type "void")
+                nil [14249 17504]))          
+      :file "vcd_replay_offline.cpp"
+      :pointmax 17538
+      :fsize 17537
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax '((punctuation 1986 . 1987) (DEFAULT 1979 . 1986) (punctuation 1977 . 1978) (semantic-list 1974 . 1976) (symbol 1960 . 1974) (punctuation 1959 . 1960) (symbol 1641 . 1650) (symbol 1368 . 1377) (symbol 1315 . 1324) (symbol 1262 . 1271) (symbol 1155 . 1164) (punctuation 1128 . 1129) (symbol 1117 . 1126) (USING 1106 . 1111) (punctuation 1083 . 1084) (symbol 1072 . 1077) (USING 1061 . 1066) (punctuation 1059 . 1060) (INT 1056 . 1059) (punctuation 1054 . 1055) (symbol 1043 . 1053) (USING 1032 . 1037)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("VCD_REPLAY_H" variable (:constant-flag t) nil [127 139])
+            ("Innergy" type
+               (:members 
+                  ( ("VcdReplay" type
+                       (:members 
+                          ( ("progName" variable
+                               (:typemodifiers ("extern")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [184 212])
+                            ("verbose" variable
+                               (:typemodifiers ("extern")
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [214 235])
+                            ("randomEvents" variable
+                               (:typemodifiers ("extern")
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [236 262]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [161 265]))                  
+                :type "namespace")
+                nil [141 266]))          
+      :file "vcd_replay.h"
+      :pointmax 350
+      :fsize 349
+      :lastmodtime '(21941 59220 982505 345000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VCD_REPLAY_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("VCD_REPLAY_OFFLINE_H" variable (:constant-flag t) nil [285 305])
+            ("eventmanager.h" include nil nil [307 332])
+            ("MessageChannel.h" include nil nil [333 360])
+            ("innergy::MessageChannel" using (:type ("innergy::MessageChannel" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [362 392])
+            ("replayOffline" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("MessageChannel" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [829 845])
+                    ("vFilename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [846 868])
+                    ("vcdFilename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [869 893]))                  
+                :type "void")
+                nil [810 894]))          
+      :file "vcd_replay_offline.h"
+      :pointmax 962
+      :fsize 935
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VCD_REPLAY_OFFLINE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GLHIER_FROM_VCD_H" variable (:constant-flag t) nil [132 149])
+            ("libvcdio.h" include nil nil [151 172])
+            ("glhier.h" include nil nil [173 192])
+            ("extractGLHier" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vcdFileName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [231 255]))                  
+                :type ("Innergy::VerilogDesign" type (:type "class") nil nil))
+                nil [194 256]))          
+      :file "glhier_from_vcd.h"
+      :pointmax 318
+      :fsize 317
+      :lastmodtime '(21941 59220 982505 345000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GLHIER_FROM_VCD_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [98 117])
+            ("stdexcept" include (:system-flag t) nil [118 138])
+            ("string" include (:system-flag t) nil [139 156])
+            ("vector" include (:system-flag t) nil [157 174])
+            ("unistd.h" include (:system-flag t) nil [176 195])
+            ("MessageChannel.h" include nil nil [277 304])
+            ("vcd_replay.h" include nil nil [331 354])
+            ("vcd_replay_offline.h" include nil nil [355 386])
+            ("vcd_replay_random.h" include nil nil [387 417])
+            ("Innergy" type
+               (:members 
+                  ( ("VcdReplay" type
+                       (:members 
+                          ( ("progName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [462 483])
+                            ("verbose" variable (:type "bool") (reparse-symbol namespacesubparts) [485 499])
+                            ("randomEvents" variable (:type "bool") (reparse-symbol namespacesubparts) [500 519]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [439 522]))                  
+                :type "namespace")
+                nil [419 523])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [525 545])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [546 570])
+            ("usage" function (:type "void") nil [572 929])
+            ("hasRequiredExtension" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fileName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [964 980])
+                    ("reqdExtension" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [981 1002]))                  
+                :type "bool")
+                nil [931 1137])
+            ("designFilenameIsValid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fileName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1174 1190]))                  
+                :type "bool")
+                nil [1140 1240])
+            ("waveformsFilenameIsValid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fileName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1279 1295]))                  
+                :type "bool")
+                nil [1242 1347])
+            ("parseCmdLine" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1581 1590])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1591 1603]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1553 2077])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2089 2098])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2099 2111]))                  
+                :type "int")
+                nil [2080 4190]))          
+      :file "vcd_replay.cpp"
+      :pointmax 4216
+      :fsize 4215
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("VCD_REPLAY_RANDOM_H" variable (:constant-flag t) nil [284 303])
+            ("eventmanager.h" include nil nil [305 330])
+            ("replayRandom" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("period" variable (:type ("EventManager::Timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [783 814])
+                    ("runDuration" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [815 846])
+                    ("nModules" variable (:type ("EventManager::ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [851 885])
+                    ("nSignalsPerModule" variable (:type "int") (reparse-symbol arg-sub-list) [886 908])
+                    ("probabilityIsActive" variable (:type "double") (reparse-symbol arg-sub-list) [909 936])
+                    ("minPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [941 970])
+                    ("maxPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [971 1000]))                  
+                :type "void")
+                nil [765 1001]))          
+      :file "vcd_replay_random.h"
+      :pointmax 1068
+      :fsize 1124
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VCD_REPLAY_RANDOM_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 131])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [131 182])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [182 212])
+            ("bin_DIR" variable (:default-value ("$(TOP)/bin/")) nil [213 239])
+            ("lib_DIR" variable (:default-value ("$(TOP)/lib/")) nil [239 265])
+            ("etc_DIR" variable (:default-value ("$(TOP)/etc/")) nil [265 291])
+            ("src_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/src/")) nil [291 331])
+            ("include_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/include/")) nil [331 375])
+            ("share_DIR" variable (:default-value ("$(TOP)/share/")) nil [375 403])
+            ("VERIFIC" variable (:default-value ("$(TOP)/External/verific_lib_eval")) nil [404 451])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [452 491])
+            ("VERIFIC_COMPONENTS" variable (:default-value ("$(VERIFIC)/commands" "$(VERIFIC)/container" "$(VERIFIC)/database" "$(VERIFIC)/synlib" "$(VERIFIC)/tclmain" "$(VERIFIC)/util" "$(VERIFIC)/verilog" "$(VERIFIC)/verilog_nl" "$(VERIFIC)/verilog_sort" "$(VERIFIC)/vhdl" "$(VERIFIC)/vhdl_sort")) nil [515 773])
+            ("CPPFLAGS" variable (:default-value ("-I$(include_DIR)")) nil [774 803])
+            ("CPPFLAGS" variable (:default-value ("-I$(TOP)/include")) nil [803 832])
+            ("CPPFLAGS" variable (:default-value ("$(VERIFIC_COMPONENTS:%=-I%)")) nil [832 872])
+            ("LDFLAGS" variable (:default-value ("$(VERIFIC_COMPONENTS:%=-L%)")) nil [872 912])
+            ("INNERGY_COMPONENTS" variable (:default-value ("libinnergy.a" "libvcdio.a")) nil [913 960])
+            ("LDFLAGS" variable (:default-value ("-L$(lib_DIR)")) nil [961 985])
+            ("LDFLAGS" variable (:default-value ("$(patsubst lib%.a,-l%,$(INNERGY_COMPONENTS))")) nil [985 1041])
+            ("CPPFLAGS" variable (:default-value ("$(EXTRACPPFLAGS)")) nil [1337 1366])
+            ("CFLAGS" variable (:default-value ("$(EXTRACFLAGS)")) nil [1366 1393])
+            ("CXXFLAGS" variable (:default-value ("$(EXTRACXXFLAGS)")) nil [1393 1422])
+            ("LDFLAGS" variable (:default-value ("$(EXTRALDFLAGS)")) nil [1422 1450])
+            ("bin_PRODUCTS" variable (:default-value ("vcd_replay")) nil [1482 1508])
+            ("vcd_replay_SOURCES" variable (:default-value ("vcd_replay.cpp" "vcd_replay_random.cpp" "vcd_replay_offline.cpp" "glhier_from_vcd.cpp")) nil [1509 1618])
+            ("vcd_replay_OBJECTS" variable (:default-value ("$(vcd_replay_SOURCES:.cpp=.o)")) nil [1619 1670])
+            ("vcd_replay_LIBDEPS" variable (:default-value ("$(patsubst %,$(lib_DIR)%,$(INNERGY_COMPONENTS))")) nil [1670 1739])
+            ("bin_OBJECTS" variable (:default-value ("$(foreach product,$(bin_PRODUCTS),$($(product)_OBJECTS))")) nil [1740 1811])
+            ("all" function (:arguments ("$(bin_PRODUCTS)")) nil [1813 1840])
+            ("vcd_replay" function (:arguments ("$(vcd_replay_OBJECTS)" "$(vcd_replay_LIBDEPS)")) nil [1841 1965])
+            (".PHONY" function (:arguments ("all" "clean" "cleanall" "distclean" "check" "install" "uninstall")) nil [1966 2030])
+            ("clean" function nil nil [2031 2069])
+            ("cleanall" function (:arguments ("clean")) nil [2070 2118])
+            ("distclean" function (:arguments ("cleanall")) nil [2119 2160])
+            ("check" function nil nil [2161 2172])
+            ("$(bin_DIR)" function nil nil [2173 2211])
+            ("install" function (:arguments ("$(bin_DIR)" "$(bin_PRODUCTS)")) nil [2212 2300])
+            ("uninstall" function nil nil [2301 2350]))          
+      :file "Makefile"
+      :pointmax 2358
+      :fsize 2378
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("glhier_from_vcd.h" include nil nil [98 126])
+            ("vcd_replay.h" include nil nil [127 150])
+            ("iostream" include (:system-flag t) nil [151 170])
+            ("fstream" include (:system-flag t) nil [171 189])
+            ("stack" include (:system-flag t) nil [190 206])
+            ("vector" include (:system-flag t) nil [207 224])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [226 250])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [251 271])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("ost" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [294 307])
+                    ("bounds" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("size_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [308 330]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [273 548])
+            ("unnamed" type
+               (:members 
+                  ( ("vh" variable (:type ("VerilogDesign" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [563 597])
+                    ("openScopes" variable (:type ("stack" type
+                         (:template-specifier 
+                            ( ("shared_ptr" type (:template-specifier 
+                                ( ("Node" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [598 640])
+                    ("latestScope" function (:type ("shared_ptr" type
+                         (:template-specifier 
+                            ( ("Node" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [707 800])
+                    ("glhierScopeCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [882 893])
+                            ("ctx" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [894 904])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [905 912])
+                            ("scopeType" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [913 930])
+                            ("id" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [931 941]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [863 1375])
+                    ("glhierVarCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1394 1405])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1406 1420])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1426 1433])
+                            ("varType" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1434 1449])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1450 1462])
+                            ("vcdCode" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1463 1478])
+                            ("id" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1479 1489])
+                            ("bounds" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1495 1517]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1377 2065])
+                    ("glhierUpScopeCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2137 2148])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2149 2156])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2157 2164])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2165 2172]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2116 2526])
+                    ("glhierEndDefinitionsCB" function
+                       (:arguments 
+                          ( ("parser" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2614 2632])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2633 2640])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2641 2648])
+                            ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2649 2656]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2586 3086])
+                    ("glhierAtSimEndCB" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3179 3190])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3191 3198])
+                            ("" variable (:type "bool") (reparse-symbol arg-sub-list) [3199 3204]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3157 3475]))                  
+                :type "namespace")
+                nil [550 3478])
+            ("extractGLHier" function
+               (:arguments 
+                  ( ("vcdFilename" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3509 3528]))                  
+                :type ("VerilogDesign" type (:type "class") nil nil))
+                nil [3480 4208]))          
+      :file "glhier_from_vcd.cpp"
+      :pointmax 4241
+      :fsize 4240
+      :lastmodtime '(21941 59220 982505 345000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [175 195])
+            ("iostream" include (:system-flag t) nil [196 215])
+            ("cstdlib" include (:system-flag t) nil [237 255])
+            ("vector" include (:system-flag t) nil [256 273])
+            ("eventmanager.h" include nil nil [318 343])
+            ("sharedmemorymanager.h" include nil nil [344 376])
+            ("vcd_replay.h" include nil nil [419 442])
+            ("vcd_replay_random.h" include nil nil [443 473])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [475 495])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [496 520])
+            ("unnamed" type
+               (:members 
+                  ( ("em" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("EventManager" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [535 579])
+                    ("randomFraction" function
+                       (:typemodifiers ("static")
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [618 758])
+                    ("randomPower" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("minPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [799 828])
+                            ("maxPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [840 869]))                          
+                        :type ("EventManager::Power" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [760 955])
+                    ("generateEvents" function
+                       (:arguments 
+                          ( ("power" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("EventManager::Power" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [977 1018])
+                            ("tick" variable (:type ("EventManager::Timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1019 1048]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [957 1417]))                  
+                :type "namespace")
+                nil [522 1420])
+            ("replayRandom" function
+               (:arguments 
+                  ( ("period" variable (:type ("EventManager::Timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1453 1484])
+                    ("runDuration" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [1485 1516])
+                    ("nModules" variable (:type ("EventManager::ModuleType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1521 1555])
+                    ("nSignalsPerModule" variable (:type "int") (reparse-symbol arg-sub-list) [1556 1578])
+                    ("probabilityIsActive" variable (:type "double") (reparse-symbol arg-sub-list) [1583 1610])
+                    ("minPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1615 1644])
+                    ("maxPower" variable (:type ("EventManager::Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1645 1674]))                  
+                :type "void")
+                nil [1435 3047]))          
+      :file "vcd_replay_random.cpp"
+      :pointmax 3081
+      :fsize 3102
+      :lastmodtime '(21948 34494 641061 711000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!PowerAnalysis!src!VcdReplay!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

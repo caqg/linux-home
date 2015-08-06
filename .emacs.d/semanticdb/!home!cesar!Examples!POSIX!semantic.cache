@@ -1,0 +1,41 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("libgen.h" include (:system-flag t) nil [24 43])
+            ("assert.h" include (:system-flag t) nil [44 63])
+            ("limits.h" include (:system-flag t) nil [64 83])
+            ("stdio.h" include (:system-flag t) nil [84 102])
+            ("stdlib.h" include (:system-flag t) nil [103 122])
+            ("string.h" include (:system-flag t) nil [123 142])
+            ("unistd.h" include (:system-flag t) nil [143 162])
+            ("self_exe" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"/proc/self/exe\""
+                :type "char")
+                nil [181 234])
+            ("filename_buffer_size" function (:type ("size_t" type (:type "class") nil nil)) nil [235 489])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [507 516])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [517 529]))                  
+                :type "int")
+                nil [498 1521]))          
+      :file "argv0.c"
+      :pointmax 1637
+      :fsize 1636
+      :lastmodtime '(21869 25127 680188 836000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!Examples!POSIX!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

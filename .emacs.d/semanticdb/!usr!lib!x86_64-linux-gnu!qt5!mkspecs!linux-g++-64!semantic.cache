@@ -1,0 +1,17 @@
+;; Object linux-g++-64/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linux-g++-64/"
+  :tables
+  (list
+    (semanticdb-table "qplatformdefs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("../linux-g++/qplatformdefs.h" include nil nil [1967 2006]))          
+      :file "qplatformdefs.h"
+      :pointmax 2007
+      :fsize 2006
+      :lastmodtime '(21550 26147 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!x86_64-linux-gnu!qt5!mkspecs!linux-g++-64!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

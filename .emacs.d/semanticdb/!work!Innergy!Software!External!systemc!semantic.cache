@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("ACLOCAL_AMFLAGS" variable (:default-value ("-I" "config")) nil [1472 1499])
+            ("SUBDIRS" variable (:default-value ("docs" "src" "examples")) nil [1500 1537])
+            ("DOC_FILES" variable (:default-value ("AUTHORS" "COPYING" "ChangeLog" "INSTALL" "LICENSE" "NEWS" "README" "RELEASENOTES")) nil [1538 1641])
+            ("EXTRA_DIST" variable (:default-value ("$(DOC_FILES)" "\\")) nil [1642 1676])
+            ("rootdoc_DATA" variable (:default-value ("$(DOC_FILES)")) nil [1954 1985])
+            ("doxygen" function nil nil [2098 2133]))          
+      :file "Makefile.am"
+      :pointmax 2142
+      :fsize 2141
+      :lastmodtime '(21941 38079 713105 646000)
+      :unmatched-syntax '((ENDIF 1986 . 1991) (bol 1986 . 1986) (shell-command 1677 . 1819) (bol 1676 . 1676))))
+  :file "!work!Innergy!Software!External!systemc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

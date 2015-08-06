@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("AM_CFLAGS" variable (:default-value ("$(LIBZ_CFLAGS)" "$(LIBJUDY_CFLAGS)")) nil [25 74])
+            ("noinst_LIBRARIES" variable (:default-value ("libfst.a")) nil [75 108])
+            ("libfst_a_SOURCES" variable (:default-value ("fastlz.c" "fastlz.h" "lz4.c" "lz4.h" "fstapi.c" "fstapi.h")) nil [109 175])
+            ("EXTRA_DIST" variable (:default-value ("block_format.txt")) nil [176 209]))          
+      :file "Makefile.am"
+      :pointmax 209
+      :fsize 208
+      :lastmodtime '(21117 35353 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!src!helpers!fst!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

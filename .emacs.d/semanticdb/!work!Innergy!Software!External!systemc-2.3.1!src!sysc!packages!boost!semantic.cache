@@ -1,0 +1,21 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.sysc" include nil nil [1458 1503])
+            ("H_FILES" variable (:default-value ("bind.hpp" "config.hpp" "get_pointer.hpp" "mem_fn.hpp" "non_type.hpp" "ref.hpp" "type.hpp" "\\")) nil [1504 1617])
+            ("EXTRA_DIST" variable (:default-value ("LICENSE_1_0.txt")) nil [3499 3532])
+            ("localincludedir" variable (:default-value ("$(includedir)/sysc/packages/boost")) nil [3533 3585])
+            ("nobase_localinclude_HEADERS" variable (:default-value ("$(H_FILES)")) nil [3585 3626]))          
+      :file "Makefile.am"
+      :pointmax 3636
+      :fsize 3635
+      :lastmodtime '(21328 538 0 0)
+      :unmatched-syntax '((shell-command 1618 . 3496) (bol 1617 . 1617))))
+  :file "!work!Innergy!Software!External!systemc-2.3.1!src!sysc!packages!boost!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

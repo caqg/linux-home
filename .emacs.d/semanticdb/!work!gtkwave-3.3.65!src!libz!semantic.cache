@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("noinst_LIBRARIES" variable (:default-value ("libz.a")) nil [25 50])
+            ("AM_CFLAGS" variable (:default-value ("-DNO_VIZ")) nil [51 71])
+            ("libz_a_SOURCES" variable (:default-value ("adler32.c" "deflate.h" "gzread.c" "inffixed.h" "trees.c" "zutil.c" "compress.c" "example.c" "gzwrite.c" "inflate.c" "trees.h" "zutil.h" "crc32.c" "gzclose.c" "infback.c" "inflate.h" "uncompr.c" "crc32.h" "gzguts.h" "inffast.c" "inftrees.c" "zconf.h" "deflate.c" "gzlib.c" "inffast.h" "inftrees.h" "zlib.h")) nil [72 393])
+            ("EXTRA_DIST" variable (:default-value ("README")) nil [394 413]))          
+      :file "Makefile.am"
+      :pointmax 415
+      :fsize 414
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax '((shell-command 414 . 414) (bol 413 . 413))))
+  :file "!work!gtkwave-3.3.65!src!libz!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

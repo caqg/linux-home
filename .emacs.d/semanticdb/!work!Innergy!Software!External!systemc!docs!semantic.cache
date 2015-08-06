@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.common" include nil nil [1424 1471])
+            ("DOXYGEN" variable (:default-value ("doxygen")) nil [1472 1488])
+            ("DOC_FILES" variable (:default-value ("SystemC_Open_Source_License.pdf")) nil [1538 1585])
+            ("DOC_FILES" variable (:default-value ("sysc/README" "sysc/archived/README" "sysc/archived/FuncSpec20.pdf" "sysc/archived/WhitePaper20.pdf" "sysc/archived/UserGuide20.pdf" "sysc/archived/SystemC_2_1_overview.pdf" "sysc/archived/SystemC_2_1_features.pdf" "sysc/SystemC_2011_New_Features.pdf")) nil [1680 1953])
+            ("DOC_FILES" variable (:default-value ("tlm/ChangeLog" "tlm/release/TLM_2_0_requirements.pdf" "tlm/release/TLM_2_0_white_paper.pdf" "tlm/release/README.txt" "tlm/release/TLM_2_0_presentation.ppt" "tlm/release/TLM_2_0_presentation.pdf" "tlm/tlm_README")) nil [2050 2283])
+            ("nobase_doc_DATA" variable (:default-value ("$(DOC_FILES)")) nil [2417 2451])
+            ("nobase_doc_DATA" variable (:default-value ("sysc/doxygen/Doxyfile" "tlm/doxygen/Doxyfile")) nil [2508 2576])
+            ("EXTRA_DIST" variable (:default-value ("$(DOC_FILES)")) nil [2645 2675])
+            ("doxygen" function (:arguments ("sysc/doxygen/Doxyfile" "tlm/doxygen/Doxyfile")) nil [2676 2796])
+            ("%/Doxyfile" function (:arguments ("%/Doxyfile.in")) nil [2797 2879]))          
+      :file "Makefile.am"
+      :pointmax 2888
+      :fsize 2887
+      :lastmodtime '(21941 38079 717105 515000)
+      :unmatched-syntax '((ENDIF 2577 . 2582) (bol 2577 . 2577))))
+  :file "!work!Innergy!Software!External!systemc!docs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

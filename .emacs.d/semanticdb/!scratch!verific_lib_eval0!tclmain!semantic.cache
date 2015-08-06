@@ -1,0 +1,60 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [109 158])
+            ("../common.mk" include nil nil [158 179])
+            ("VERSION" variable (:default-value ("-O")) nil [180 193])
+            ("FLAGS" variable (:default-value ("$(TOPFLAGS)")) nil [224 244])
+            ("LIB_TYPE" variable (:default-value ("$(LIB)")) nil [244 262])
+            ("CXX" variable (:default-value ("$(COMPILER)")) nil [262 280])
+            ("OBJECTS" variable (:default-value ("TclMain.o" "$(SWIGO)")) nil [282 311])
+            ("INCLUDE" variable (:default-value ("commands")) nil [313 332])
+            ("LINKDIRS" variable (:default-value ("commands")) nil [332 352])
+            ("INCLUDE" variable (:default-value ("verilog")) nil [353 372])
+            ("LINKDIRS" variable (:default-value ("verilog")) nil [372 392])
+            ("INCLUDE" variable (:default-value ("vhdl")) nil [393 409])
+            ("LINKDIRS" variable (:default-value ("vhdl")) nil [409 426])
+            ("INCLUDE" variable (:default-value ("vhdl_sort")) nil [428 449])
+            ("LINKDIRS" variable (:default-value ("vhdl_sort")) nil [449 471])
+            ("INCLUDE" variable (:default-value ("verilog_sort")) nil [472 496])
+            ("LINKDIRS" variable (:default-value ("verilog_sort")) nil [496 521])
+            ("INCLUDE" variable (:default-value ("hdl_file_sort")) nil [523 548])
+            ("LINKDIRS" variable (:default-value ("hdl_file_sort")) nil [548 574])
+            ("INCLUDE" variable (:default-value ("verilog_nl")) nil [576 598])
+            ("LINKDIRS" variable (:default-value ("verilog_nl")) nil [598 621])
+            ("INCLUDE" variable (:default-value ("synlib")) nil [622 640])
+            ("LINKDIRS" variable (:default-value ("synlib")) nil [640 659])
+            ("INCLUDE" variable (:default-value ("database")) nil [664 684])
+            ("LINKDIRS" variable (:default-value ("database")) nil [684 705])
+            ("INCLUDE" variable (:default-value ("util" "containers")) nil [706 733])
+            ("LINKDIRS" variable (:default-value ("util" "containers")) nil [733 761])
+            ("LINKTARGET" variable (:default-value ("tclmain-$(OS)$(STATIC)$(VERSION)")) nil [1319 1365])
+            ("CFLAGS" variable (:default-value ("$(WFLAGS)")) nil [1615 1635])
+            ("CFLAGS" variable (:default-value ("$(FLAGS)")) nil [1635 1654])
+            ("default" function (:arguments ("all")) nil [1752 1765])
+            (".SUFFIXES" function (:arguments (".cpp" ".o")) nil [1766 1785])
+            (".cpp.o" function nil nil [1786 1865])
+            ("lib" function (:arguments ("lexyacc")) nil [1867 1991])
+            ("lexyacc" function nil nil [1992 2083])
+            ("$(LINKTARGET)" function (:arguments ("lib" "$(OBJECTS)")) nil [2084 2357])
+            ("all" function (:arguments ("$(LINKTARGET)")) nil [2415 2435])
+            ("$(OBJECTS)" function (:arguments ("$(HEADERS)" "$(patsubst %,../%/*.h,$(INCLUDE))")) nil [2510 2568])
+            ("clean" function nil nil [2569 2668])
+            ("cleanall" function (:arguments ("clean")) nil [2669 2704])
+            ("clean_lexyacc" function nil nil [2705 2789])
+            (".PHONY" function (:arguments ("install" "uninstall")) nil [2790 2818])
+            ("install" function (:arguments ("$(LINKTARGET)")) nil [2819 2905])
+            ("uninstall" function nil nil [2906 2975]))          
+      :file "Makefile"
+      :pointmax 2975
+      :fsize 2974
+      :lastmodtime '(21941 59220 0 0)
+      :unmatched-syntax '((shell-command 2944 . 2974) (bol 2943 . 2943) (shell-command 2388 . 2407) (bol 2387 . 2387) (symbol 1605 . 1606) (punctuation 1603 . 1604) (symbol 1595 . 1602) (bol 1592 . 1592) (symbol 1585 . 1591) (punctuation 1583 . 1584) (symbol 1574 . 1582) (bol 1571 . 1571) (symbol 1563 . 1565) (punctuation 1561 . 1562) (symbol 1553 . 1560) (bol 1550 . 1550) (symbol 1544 . 1549) (punctuation 1542 . 1543) (punctuation 1541 . 1542) (symbol 1534 . 1540) (bol 1531 . 1531) (punctuation 1496 . 1497) (punctuation 1495 . 1496) (symbol 1494 . 1495) (punctuation 1492 . 1493) (symbol 1488 . 1491) (bol 1484 . 1484) (symbol 1307 . 1310) (symbol 1303 . 1306) (symbol 1297 . 1302) (symbol 1292 . 1296) (semantic-list 1282 . 1291) (punctuation 1281 . 1282) (semantic-list 1272 . 1280) (punctuation 1271 . 1272) (punctuation 1269 . 1270) (symbol 1261 . 1268) (bol 1258 . 1258) (symbol 1252 . 1257) (punctuation 1250 . 1251) (symbol 1247 . 1249) (bol 1244 . 1244) (symbol 1197 . 1200) (symbol 1193 . 1196) (symbol 1187 . 1192) (symbol 1178 . 1186) (symbol 1166 . 1177) (symbol 1161 . 1165) (punctuation 1159 . 1160) (symbol 1151 . 1158) (bol 1148 . 1148) (symbol 1140 . 1147) (punctuation 1138 . 1139) (symbol 1135 . 1137) (bol 1132 . 1132) (symbol 1085 . 1088) (symbol 1081 . 1084) (symbol 1076 . 1080) (symbol 1070 . 1075) (semantic-list 1061 . 1069) (punctuation 1060 . 1061) (punctuation 1058 . 1059) (symbol 1050 . 1057) (bol 1048 . 1048) (symbol 1044 . 1047) (punctuation 1042 . 1043) (symbol 1039 . 1041) (bol 1037 . 1037))))
+  :file "!scratch!verific_lib_eval0!tclmain!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,97 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_SYSTEM_H_" variable (:constant-flag t) nil [579 597])
+            ("VERIFIC_NAMESPACE" variable (:constant-flag t) nil [1970 1987])
+            ("VERIFIC_LINEFILE_COLUMN_ALLOCATE_IN_CHUNK" variable (:constant-flag t) nil [6761 6802])
+            ("VERIFIC_TEMPLATED_ITERATOR" variable (:constant-flag t) nil [10014 10040])
+            ("verific_uint64" type
+               (:typedef ("unsigned long long")
+                :type "typedef")
+                nil [11453 11498])
+            ("verific_int64" type
+               (:typedef ("long long")
+                :type "typedef")
+                nil [11503 11547])
+            ("VERIFIC_INT64_MAX" variable (:constant-flag t) nil [11786 11803])
+            ("VERIFIC_INT64_MIN" variable (:constant-flag t) nil [11855 11872])
+            ("stdint.h" include (:system-flag t) nil [12699 12718])
+            ("verific_uintptr" type
+               (:typedef ("uintptr_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [12826 12861])
+            ("verific_intptr" type
+               (:typedef ("intptr_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [12929 12962])
+            ("Verific" type (:type "namespace") nil [13137 13301])
+            ("VFC_DLL_PORT" variable (:constant-flag t) nil [13355 13367])
+            ("assert.h" include (:system-flag t) nil [13603 13622])
+            ("VERIFIC_ASSERT" variable (:constant-flag t) nil [13631 13645])
+            ("INSERT_MM_HOOKS" variable (:constant-flag t) nil [14396 14411])
+            ("VFC_ARRAY_NEW" variable (:constant-flag t) nil [14424 14437])
+            ("VFC_ARRAY_DELETE" variable (:constant-flag t) nil [14480 14496]))          
+      :file "VerificSystem.h"
+      :pointmax 14668
+      :fsize 14667
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("VERIFIC_LINEFILE_COLUMN_ALLOCATE_IN_CHUNK")
+          ("VERIFIC_ASSERT" (spp-arg-list ("exp") 13645 . 13650) . ((symbol "assert" 13651 . 13657) (semantic-list "(exp)" 13657 . 13662)))
+          ("VERIFIC_NAMESPACE")
+          ("VERIFIC_INT64_MAX" . ((semantic-list "((verific_int64)(~((verific_uint64)0)>>1))" 11804 . 11846)))
+          ("INSERT_MM_HOOKS")
+          ("VERIFIC_INT64_MIN" . ((semantic-list "((verific_int64)(-VERIFIC_INT64_MAX)-1)" 11873 . 11912)))
+          ("VFC_ARRAY_DELETE" (spp-arg-list ("P") 14496 . 14499) . 
+              ((DELETE "delete" 14506 . 14512) (semantic-list "[]" 14513 . 14515) (semantic-list "(P)" 14516 . 14519)))
+          ("VFC_ARRAY_NEW" (spp-arg-list ("TYPE" "SIZE") 14437 . 14448) . 
+              ((NEW "new" 14450 . 14453) (symbol "TYPE" 14454 . 14458) (semantic-list "[(SIZE)]" 14459 . 14467)))
+          ("_VERIFIC_SYSTEM_H_")
+          ("VERIFIC_TEMPLATED_ITERATOR")
+          ("VFC_DLL_PORT")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_VERIFIC_LINE_FILE_H_" variable (:constant-flag t) nil [582 603])
+            ("limits.h" include (:system-flag t) nil [605 624])
+            ("VerificSystem.h" include nil nil [639 665])
+            ("Array" type
+               (:prototype t
+                :type "class")
+                nil [1057 1070])
+            ("linefile_type" type
+               (:typedef ("unsigned long")
+                :type "typedef")
+                nil [3650 3687])
+            ("NUM_LINE_BITS" variable (:constant-flag t) nil [4032 4045])
+            ("NUM_FILE_BITS" variable (:constant-flag t) nil [4061 4074])
+            ("MAX_LINE_VALUE" variable (:constant-flag t) nil [4341 4355])
+            ("MAX_FILE_VALUE" variable (:constant-flag t) nil [4400 4414])
+            ("LineFile" variable (:type ("VFC_DLL_PORT" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [4571 7320]))          
+      :file "LineFile.h"
+      :pointmax 13443
+      :fsize 13442
+      :lastmodtime '(21818 51122 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUM_FILE_BITS" . ((number "12" 4075 . 4077)))
+          ("NUM_LINE_BITS" . ((number "20" 4046 . 4048)))
+          ("MAX_LINE_VALUE" . ((semantic-list "((unsigned)~(~0L << NUM_LINE_BITS))" 4356 . 4391)))
+          ("_VERIFIC_LINE_FILE_H_")
+          ("MAX_FILE_VALUE" . ((semantic-list "((unsigned)~(~0L << NUM_FILE_BITS))" 4415 . 4450)))
+          )
+))
+  :file "!work!Innergy!Software!External!verific_lib_eval!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("xdgdatadir" variable (:default-value ("@XDGDATADIR@")) nil [25 49])
+            ("desktopdir" variable (:default-value ("$(xdgdatadir)/applications")) nil [49 87])
+            ("desktop_DATA" variable (:default-value ("gtkwave.desktop")) nil [87 118])
+            ("install-data-hook" function nil nil [131 178])
+            ("uninstall-hook" function nil nil [179 223])
+            ("EXTRA_DIST" variable (:default-value ("gtkwave.desktop")) nil [230 258]))          
+      :file "Makefile.am"
+      :pointmax 259
+      :fsize 258
+      :lastmodtime '(20232 7968 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!share!applications!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

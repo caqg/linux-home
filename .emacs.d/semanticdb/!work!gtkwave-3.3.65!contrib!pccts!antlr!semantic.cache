@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("noinst_PROGRAMS" variable (:default-value ("antlr")) nil [25 48])
+            ("AM_CFLAGS" variable (:default-value ("-I." "-I$(srcdir)/../support/set" "-I$(srcdir)/../h" "-DUSER_ZZSYN" "$(COTHER)" "-DZZLEXBUFSIZE=32000")) nil [49 156])
+            ("antlr_SOURCES" variable (:default-value ("antlr.c" "err.c" "bits.c" "build.c" "egman.c" "fcache.c" "fset.c" "fset2.c" "gen.c" "generic.h" "globals.c" "hash.c" "hash.h" "lex.c" "main.c" "misc.c" "mode.h" "mrhoist.c" "pred.c" "proto.h" "scan.c" "$(srcdir)/../support/set/set.c" "stdpccts.h" "syn.h" "tokens.h")) nil [416 661])
+            ("PCCTS_GEN" variable (:default-value ("antlr.c" "scan.c" "err.c" "tokens.h" "mode.h" "parser.dlg" "stdpccts.h" "remap.h")) nil [717 794])
+            ("ANTLR" variable (:default-value ("./antlr")) nil [865 880])
+            ("stdpccts.h" function (:arguments ("$(srcdir)/antlr.g")) nil [1002 1518])
+            ("antlr.c" function (:arguments ("$(srcdir)/antlr.g")) nil [1002 1518])
+            ("DLG" variable (:default-value ("../dlg/dlg")) nil [1519 1535])
+            ("mode.h" function (:arguments ("$(srcdir)/parser.dlg")) nil [1535 1980])
+            ("scan.c" function (:arguments ("$(srcdir)/parser.dlg")) nil [1535 1980])
+            ("EXTRA_DIST" variable (:default-value ("AntlrMS.mak" "AntlrMSVC50.dsp" "AntlrMSVC50.dsw" "AntlrMSVC50.mak" "AntlrMSVC60.dsp" "AntlrMSVC60.dsw" "README" "antlr.1" "antlr.g" "antlr.r" "antlr1.txt" "antlr68K.make" "antlrPPC.make" "makefile.VMS" "makefile1" "parser.dlg" "watantlr.mak")) nil [1982 2215]))          
+      :file "Makefile.am"
+      :pointmax 2216
+      :fsize 2215
+      :lastmodtime '(19788 26280 0 0)
+      :unmatched-syntax nil))
+  :file "!work!gtkwave-3.3.65!contrib!pccts!antlr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

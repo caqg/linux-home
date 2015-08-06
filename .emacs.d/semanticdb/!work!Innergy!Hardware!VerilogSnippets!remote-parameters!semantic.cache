@@ -1,0 +1,31 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("ALL" variable (:default-value ("sim1" "sim2" "sim1.out.log" "sim1.err.log" "sim2.out.log" "sim2.err.log")) nil [1 69])
+            ("sim_SRCS" variable (:default-value ("constant.v" "top.v")) nil [69 97])
+            ("sim1_FLAGS" variable (:default-value ("-DSINGLE_FILE")) nil [97 124])
+            ("sim2_FlAGS" variable (:default-value ("-USINGLE_FILE")) nil [124 151])
+            ("all" function (:arguments ("$(ALL)" "diffs")) nil [152 171])
+            ("diffs" function nil nil [172 640])
+            ("sim1" function (:arguments ("top.v")) nil [641 698])
+            ("sim2" function (:arguments ("top.v" "constant.v")) nil [699 767])
+            ("sim1.err.log" function (:arguments ("sim1")) nil [768 838])
+            ("sim1.out.log" function (:arguments ("sim1")) nil [768 838])
+            ("sim2.err.log" function (:arguments ("sim2")) nil [839 909])
+            ("sim2.out.log" function (:arguments ("sim2")) nil [839 909])
+            (".PHONY" function (:arguments ("clean" "distclean")) nil [910 935])
+            ("clean" function nil nil [936 975])
+            ("distclean" function (:arguments ("clean")) nil [976 1021]))          
+      :file "Makefile"
+      :pointmax 1021
+      :fsize 1020
+      :lastmodtime '(21911 47073 669617 206000)
+      :unmatched-syntax '((shell-command 1004 . 1020) (bol 1003 . 1003))))
+  :file "!work!Innergy!Hardware!VerilogSnippets!remote-parameters!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

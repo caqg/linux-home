@@ -1,0 +1,52 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("BIGFILES" variable (:default-value ("-D_LARGEFILE_SOURCE" "-D_FILE_OFFSET_BITS=64")) nil [25 79])
+            ("AIXFLAGS" variable (:default-value ("-bmaxdata:0xd0000000/dsa")) nil [79 115])
+            ("LIBLZMA_CFLAGS" variable (:default-value ("-I$(srcdir)/../liblzma" "$(LIBXZ_CFLAGS)")) nil [115 171])
+            ("LIBLZMA_LDADD" variable (:default-value ("$(LIBXZ_LDADD)")) nil [171 203])
+            ("AM_CFLAGS" variable (:default-value ("-I$(srcdir)/.." "-I$(srcdir)/../.." "$(LIBZ_CFLAGS)" "$(LIBBZ2_CFLAGS)" "$(LIBLZMA_CFLAGS)" "$(LIBJUDY_CFLAGS)" "$(EXTLOAD_CFLAGS)" "-I$(srcdir)/fst" "-I$(srcdir)/../../contrib/rtlbrowse")) nil [204 386])
+            ("bin_PROGRAMS" variable (:default-value ("evcd2vcd")) nil [387 518])
+            ("vcd2fst_SOURCES" variable (:default-value ("vcd2fst.c" "$(srcdir)/fst/lz4.c" "$(srcdir)/fst/lz4.h" "$(srcdir)/fst/fastlz.c" "$(srcdir)/fst/fastlz.h" "$(srcdir)/fst/fstapi.c" "$(srcdir)/fst/fstapi.h" "$(srcdir)/../../contrib/rtlbrowse/jrb.h" "$(srcdir)/../../contrib/rtlbrowse/jrb.c")) nil [519 758])
+            ("vcd2fst_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBJUDY_LDADD)")) nil [758 804])
+            ("fst2vcd_SOURCES" variable (:default-value ("fst2vcd.c" "$(srcdir)/fst/lz4.c" "$(srcdir)/fst/lz4.h" "$(srcdir)/fst/fastlz.c" "$(srcdir)/fst/fastlz.h" "$(srcdir)/fst/fstapi.c" "$(srcdir)/fst/fstapi.h")) nil [805 964])
+            ("fst2vcd_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBJUDY_LDADD)")) nil [964 1010])
+            ("fstminer_SOURCES" variable (:default-value ("fstminer.c" "$(srcdir)/fst/lz4.c" "$(srcdir)/fst/lz4.h" "$(srcdir)/fst/fastlz.c" "$(srcdir)/fst/fastlz.h" "$(srcdir)/fst/fstapi.c" "$(srcdir)/fst/fstapi.h")) nil [1011 1172])
+            ("fstminer_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBJUDY_LDADD)")) nil [1172 1219])
+            ("vcd2lxt_SOURCES" variable (:default-value ("vcd2lxt.c" "lxt_write.c" "lxt_write.h" "v2l_analyzer.h" "v2l_debug.c" "v2l_debug.h")) nil [1220 1310])
+            ("vcd2lxt_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBBZ2_LDADD)")) nil [1310 1355])
+            ("lxt2vcd_SOURCES" variable (:default-value ("lxt2_read.c" "lxt2_read.h" "lxt2vcd.c" "scopenav.c")) nil [1356 1418])
+            ("lxt2vcd_LDADD" variable (:default-value ("$(LIBZ_LDADD)")) nil [1418 1447])
+            ("vcd2lxt2_SOURCES" variable (:default-value ("vcd2lxt2.c" "lxt2_write.c" "lxt2_write.h" "v2l_analyzer_lxt2.h" "v2l_debug_lxt2.c" "v2l_debug_lxt2.h")) nil [1448 1557])
+            ("vcd2lxt2_LDADD" variable (:default-value ("$(LIBZ_LDADD)")) nil [1557 1587])
+            ("vzt2vcd_SOURCES" variable (:default-value ("vzt_read.c" "vzt_read.h" "vzt2vcd.c" "scopenav.c" "$(srcdir)/../liblzma/LzmaLib.c" "$(srcdir)/../liblzma/LzmaLib.h")) nil [1588 1710])
+            ("vzt2vcd_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBBZ2_LDADD)" "$(LIBLZMA_LDADD)")) nil [1710 1772])
+            ("vcd2vzt_SOURCES" variable (:default-value ("vcd2vzt.c" "vzt_write.c" "vzt_write.h" "v2l_analyzer_lxt2.h" "v2l_debug_lxt2.c" "v2l_debug_lxt2.h" "$(srcdir)/../liblzma/LzmaLib.c" "$(srcdir)/../liblzma/LzmaLib.h")) nil [1773 1940])
+            ("vcd2vzt_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBBZ2_LDADD)" "$(LIBLZMA_LDADD)")) nil [1940 2002])
+            ("vztminer_SOURCES" variable (:default-value ("vztminer.c" "vzt_read.c" "vzt_read.h" "$(srcdir)/../liblzma/LzmaLib.c" "$(srcdir)/../liblzma/LzmaLib.h")) nil [2003 2116])
+            ("vztminer_LDADD" variable (:default-value ("$(LIBZ_LDADD)" "$(LIBBZ2_LDADD)" "$(LIBLZMA_LDADD)")) nil [2116 2179])
+            ("lxt2miner_SOURCES" variable (:default-value ("lxt2miner.c" "lxt2_read.c" "lxt2_read.h")) nil [2180 2235])
+            ("lxt2miner_LDADD" variable (:default-value ("$(LIBZ_LDADD)")) nil [2235 2266])
+            ("ghwdump_SOURCES" variable (:default-value ("ghwdump.c" "$(srcdir)/../ghwlib.c")) nil [2267 2316])
+            ("evcd2vcd_SOURCES" variable (:default-value ("evcd2vcd.c" "$(srcdir)/../../contrib/rtlbrowse/jrb.h" "$(srcdir)/../../contrib/rtlbrowse/jrb.c")) nil [2317 2426]))          
+      :file "Makefile.am"
+      :pointmax 2426
+      :fsize 2425
+      :lastmodtime '(21190 14811 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "lxt2_read.h"
+      :fsize 8871
+      :lastmodtime '(21427 32140 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "vzt_read.h"
+      :fsize 9704
+      :lastmodtime '(21437 50515 0 0)))
+  :file "!work!gtkwave-3.3.65!src!helpers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

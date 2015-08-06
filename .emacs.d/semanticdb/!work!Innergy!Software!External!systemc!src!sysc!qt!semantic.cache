@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.sysc" include nil nil [1440 1485])
+            ("NO_H_FILES" variable (:default-value ("copyright.h" "qt.h" "qtmd.h" "\\")) nil [1486 1537])
+            ("noinst_HEADERS" variable (:default-value ("$(NO_H_FILES)")) nil [1697 1731])
+            ("C_FILES" variable (:default-value ("qt.c")) nil [1732 1750])
+            ("NO_C_FILES" variable (:default-value ("md/axp.c" "md/m88k.c" "md/null.c" "md/powerpc.c")) nil [1751 1818])
+            ("NO_S_FILES" variable (:default-value ("md/axp_b.s" "md/axp.s" "md/hppa_b.s" "md/hppa.s" "md/i386_b.s" "md/i386.s" "md/iX86_64.s" "md/ksr1_b.s" "md/ksr1.s" "md/m88k_b.s" "md/m88k.s" "md/mips_b.s" "md/mips-irix5.s" "md/mips.s" "md/null.s" "md/powerpc_mach_b.s" "md/powerpc_mach.s" "md/powerpc_sys5_b.s" "md/powerpc_sys5.s" "md/sparc_b.s" "md/sparc.s" "md/vax_b.s" "md/vax.s")) nil [1819 2190])
+            ("EXTRA_DIST" variable (:default-value ("CHANGES" "config" "INSTALL" "Makefile.base" "README" "README.MISC" "README.PORT" "\\")) nil [2191 2299])
+            ("CLEANFILES" variable (:default-value ("$(QT_ARCH_FILES)" "configuration")) nil [2777 2828])
+            ("BUILT_SOURCES" variable (:default-value ("configuration")) nil [2849 2882])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libqt.la")) nil [2883 2913])
+            ("nodist_libqt_la_SOURCES" variable (:default-value ("$(QT_ARCH_FILES)")) nil [2914 2960])
+            ("libqt_la_SOURCES" variable (:default-value ("$(C_FILES)")) nil [2961 2994])
+            ("libqt_la_LIBTOOLFLAGS" variable (:default-value ("--tag=CC")) nil [2995 3031])
+            ("qtmds_o_CCASFLAGS" variable (:default-value ("$(AM_CCASFLAGS)" "$(DEFS)" "$(DEFAULT_INCLUDES)" "$(INCLUDES)")) nil [3032 3111])
+            ("QT_ARCH_FILES" variable (:default-value ("qtmds.s")) nil [3187 3214])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/i386.s" "md/null.c")) nil [3230 3265])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/iX86_64.s" "md/null.c")) nil [3289 3327])
+            ("QT_ARCH_FILES" variable (:default-value ("qtmdc.c")) nil [3359 3382])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/powerpc_mach.s" "md/powerpc.c")) nil [3382 3428])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/sparc.s" "md/null.c")) nil [3451 3487])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/hppa.s" "md/null.c")) nil [3509 3544])
+            ("QT_ARCH_IMPL" variable (:default-value ("md/null.s" "md/null.c")) nil [3570 3605])
+            ("configuration" function nil nil [3676 3691])
+            ("CLEANFILES" variable (:default-value ("$(QT_ARCH_IMPL)")) nil [3997 4031]))          
+      :file "Makefile.am"
+      :pointmax 4094
+      :fsize 4093
+      :lastmodtime '(21941 38079 805102 635000)
+      :unmatched-syntax '((ENDIF 4060 . 4065) (bol 4060 . 4060) (ENDIF 4031 . 4036) (bol 4031 . 4031) (shell-command 3925 . 3972) (bol 3924 . 3924) (ENDIF 3896 . 3901) (bol 3896 . 3896) (shell-command 3747 . 3895) (bol 3746 . 3746) (symbol 3694 . 3713) (IF 3691 . 3693) (bol 3691 . 3691) (symbol 3670 . 3674) (symbol 3663 . 3669) (bol 3663 . 3663) (shell-command 2300 . 2775) (bol 2299 . 2299) (shell-command 1538 . 1695) (bol 1537 . 1537))))
+  :file "!work!Innergy!Software!External!systemc!src!sysc!qt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

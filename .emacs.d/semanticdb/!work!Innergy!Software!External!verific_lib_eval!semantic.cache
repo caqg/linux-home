@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("CP" variable (:default-value ("/bin/cp")) nil [1 22])
+            ("TCLVERSION" variable (:default-value ("8.6")) nil [23 40])
+            ("TCLINCLUDE" variable (:default-value ("-I/usr/include/tcl$(TCLVERSION)")) nil [40 85])
+            ("TCLLIBS" variable (:default-value ("-L/usr/lib/i386-linux-gnu" "-ltcl$(TCLVERSION)")) nil [85 143])
+            ("CFLAGS" variable (:default-value ("$(TCLINCLUDE)")) nil [144 171])
+            ("CPPFLAGS" variable (:default-value ("$(TCLINCLUDE)")) nil [171 198])
+            ("LDFLAGS" variable (:default-value ("$(TCLLIBS)")) nil [198 222]))          
+      :file "common.mk"
+      :pointmax 222
+      :fsize 221
+      :lastmodtime '(21941 60180 476894 523000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!External!verific_lib_eval!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

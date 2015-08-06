@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.sysc" include nil nil [1447 1492])
+            ("noinst_LTLIBRARIES" variable (:default-value ("libdatatypes.la")) nil [1493 1530])
+            ("H_FILES" variable (:default-value ("bit/sc_bit.h" "bit/sc_bit_ids.h" "bit/sc_bit_proxies.h" "bit/sc_bv.h" "bit/sc_bv_base.h" "bit/sc_logic.h" "bit/sc_lv.h" "bit/sc_lv_base.h" "bit/sc_proxy.h" "\\")) nil [1531 1712])
+            ("NO_H_FILES" variable (:default-value ("int/sc_nbcommon.inc" "int/sc_nbfriends.inc" "int/sc_signed_bitref.inc" "int/sc_signed_subref.inc" "int/sc_unsigned_bitref.inc" "int/sc_unsigned_subref.inc" "\\")) nil [2429 2610])
+            ("CXX_FILES" variable (:default-value ("bit/sc_bit.cpp" "bit/sc_bv_base.cpp" "bit/sc_logic.cpp" "bit/sc_lv_base.cpp" "\\")) nil [2628 2727])
+            ("localincludedir" variable (:default-value ("$(includedir)/sysc/datatypes")) nil [3290 3337])
+            ("nobase_localinclude_HEADERS" variable (:default-value ("$(H_FILES)")) nil [3337 3378])
+            ("libdatatypes_la_SOURCES" variable (:default-value ("$(NO_H_FILES)" "$(CXX_FILES)")) nil [3379 3432]))          
+      :file "Makefile.am"
+      :pointmax 3441
+      :fsize 3440
+      :lastmodtime '(21328 538 0 0)
+      :unmatched-syntax '((shell-command 2728 . 3288) (bol 2727 . 2727) (shell-command 2611 . 2626) (bol 2610 . 2610) (shell-command 1713 . 2427) (bol 1712 . 1712))))
+  :file "!work!Innergy!Software!External!systemc-2.3.1!src!sysc!datatypes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

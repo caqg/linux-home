@@ -1,0 +1,528 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INNERGY_POWER_MESSAGE_H_" variable (:constant-flag t) nil [139 163])
+            ("cstdint" include (:system-flag t) nil [165 183])
+            ("vector" include (:system-flag t) nil [184 201])
+            ("BaseMessage.h" include nil nil [203 227])
+            ("innergy" type
+               (:members 
+                  ( ("PowerMessage" type
+                       (:superclasses 
+                          ( ("BaseMessage" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TimeStamp" type
+                               (:typedef ("unsigned long long")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [363 400])
+                            ("Power" type
+                               (:typedef ("unsigned long long")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [402 435])
+                            ("public" label nil (reparse-symbol classsubparts) [437 444])
+                            ("PowerMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("PowerMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [561 576])
+                            ("PowerMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [591 604])
+                                    ("powers" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("Power" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [605 631]))                                  
+                                :type ("PowerMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [578 632])
+                            ("PowerMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("msg" variable (:type ("BaseMessage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [647 663]))                                  
+                                :type ("PowerMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [634 664])
+                            ("setTimeStamp" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [685 698]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [667 699])
+                            ("addPower" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("power" variable (:type ("Power" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [715 727]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [701 728])
+                            ("payload" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type "char")
+                                (reparse-symbol classsubparts) [731 755])
+                            ("size" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("uintHfield_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [757 791])
+                            ("ts" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("TimeStamp" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [794 815])
+                            ("powers" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Power" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [817 851])
+                            ("private" label nil (reparse-symbol classsubparts) [853 861])
+                            ("_ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [863 878])
+                            ("_powers" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Power" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [880 907]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [250 910]))                  
+                :type "namespace")
+                nil [229 913]))          
+      :file "PowerMessage.h"
+      :pointmax 971
+      :fsize 969
+      :lastmodtime '(21952 11256 767835 312000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INNERGY_POWER_MESSAGE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INNERGY_BASE_MESSAGE_H_" variable (:constant-flag t) nil [138 161])
+            ("cassert" include (:system-flag t) nil [163 181])
+            ("cstdint" include (:system-flag t) nil [182 200])
+            ("MessageTypes.h" include nil nil [202 227])
+            ("Innergy" type
+               (:members 
+                  ( ("BaseMessage" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [271 278])
+                            ("BaseMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("BaseMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [280 294])
+                            ("BaseMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("type" variable (:type ("MessageType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [308 325]))                                  
+                                :type ("BaseMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [296 326])
+                            ("BaseMessage" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("incData" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [340 354]))                                  
+                                :type ("BaseMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [328 355])
+                            ("BaseMessage" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [357 372])
+                            ("payload" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type "char")
+                                (reparse-symbol classsubparts) [375 399])
+                            ("size" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("uintHfield_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [401 435])
+                            ("protocol" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("uintHfield_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [438 468])
+                            ("version" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("uintHfield_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [470 499])
+                            ("type" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("MessageType" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [501 526])
+                            ("setType" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("mtype" variable (:type ("MessageType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [542 560]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [529 561])
+                            ("protected" label nil (reparse-symbol classsubparts) [563 573])
+                            ("_payload" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol classsubparts) [575 591])
+                            ("writeValue" function
+                               (:template 
+                                  ( ("anyint_t" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [647 653])
+                                    ("" variable (:type ("dest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [654 659])
+                                    ("val" variable (:type ("anyint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [660 673]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol classsubparts) [594 1506])
+                            ("readValue" function
+                               (:template 
+                                  ( ("anyint_t" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1561 1573])
+                                    ("" variable (:type ("src" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1574 1578])
+                                    ("val" variable
+                                       (:reference 1
+                                        :type ("anyint_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1579 1593]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol classsubparts) [1509 1930])
+                            ("private" label nil (reparse-symbol classsubparts) [1932 1940])
+                            ("_protocol" variable (:type ("uintHfield_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1942 1965])
+                            ("_version" variable (:type ("uintHfield_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1967 1989])
+                            ("_type" variable (:type ("MessageType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1991 2009]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [250 2013]))                  
+                :type "namespace")
+                nil [229 2016]))          
+      :file "BaseMessage.h"
+      :pointmax 2073
+      :fsize 1905
+      :lastmodtime '(21952 11256 767835 312000)
+      :unmatched-syntax '((punctuation 1572 . 1573) (punctuation 652 . 653) (punctuation 1572 . 1573) (punctuation 652 . 653))
+      :lexical-table 
+        '(("INNERGY_BASE_MESSAGE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INNERGY_MESSAGE_CHANNEL_H_" variable (:constant-flag t) nil [141 167])
+            ("string" include (:system-flag t) nil [169 186])
+            ("BasicMessageInterface.h" include nil nil [188 222])
+            ("innergy" type
+               (:members 
+                  ( ("BaseMessage" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [245 263])
+                    ("MessageChannel" type
+                       (:superclasses 
+                          ( ("BasicMessageInterface" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [320 327])
+                            ("OpenMode" type
+                               (:members 
+                                  ( ("READFIRST" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [345 355])
+                                    ("WRITEFIRST" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [356 368]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [329 369])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("errnum" variable (:type "int") (reparse-symbol arg-sub-list) [402 413])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [414 428]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [393 429])
+                            ("MessageChannel" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("MessageChannel" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [452 469])
+                            ("MessageChannel" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("rFifoName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [486 508])
+                                    ("wFifoName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 531])
+                                    ("mode" variable (:type ("OpenMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [532 546]))                                  
+                                :type ("MessageChannel" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [471 547])
+                            ("sendMessage" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("msg" variable
+                                       (:reference 1
+                                        :type ("BaseMessage" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [598 615])
+                                    ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [616 641]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [580 643])
+                            ("receiveMessage" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [673 698]))                                  
+                                :type ("BaseMessage" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [645 700])
+                            ("private" label nil (reparse-symbol classsubparts) [702 710])
+                            ("omode" variable (:type ("OpenMode" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [712 733])
+                            ("BMI_open" variable (:type "bool") (reparse-symbol classsubparts) [735 756])
+                            ("readFifo" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [759 783])
+                            ("writeFifo" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [785 810])
+                            ("doOpenBMI" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [813 830])
+                            ("ifNeededOpenBMI" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [832 855]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [265 858]))                  
+                :type "namespace")
+                nil [224 861]))          
+      :file "MessageChannel.h"
+      :pointmax 921
+      :fsize 920
+      :lastmodtime '(21952 11256 767835 312000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INNERGY_MESSAGE_CHANNEL_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INNERGY_BASIC_MESSAGE_INTERFACE_H_" variable (:constant-flag t) nil [149 183])
+            ("utility" include (:system-flag t) nil [185 203])
+            ("Innergy" type
+               (:members 
+                  ( ("BasicMessageInterface" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [256 263])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [280 305])
+                            ("make_Buffer" function
+                               (:typemodifiers ("static" "inline")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [340 348])
+                                    ("s" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [349 358]))                                  
+                                :type ("Buffer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [307 394])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("errnum" variable (:type "int") (reparse-symbol arg-sub-list) [816 827])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [828 842]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [807 843])
+                            ("BasicMessageInterface" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("defaultEH" variable (:type ("ErrorHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [868 891]))                                  
+                                :type ("BasicMessageInterface" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [846 892])
+                            ("BasicMessageInterface" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [894 919])
+                            ("openRead" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("pathname" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [953 974])
+                                    ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [975 1000]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [936 1002])
+                            ("openWrite" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("pathname" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1022 1043])
+                                    ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1044 1069]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1004 1071])
+                            ("closeRead" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1073 1092])
+                            ("closeWrite" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1094 1114])
+                            ("setBlockSize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("blockSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1136 1153]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1116 1154])
+                            ("getBlockSize" function
+                               (:prototype-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1156 1180])
+                            ("receive" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bufferSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1466 1484])
+                                    ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1485 1510]))                                  
+                                :type ("Buffer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1449 1512])
+                            ("send" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("msg" variable (:type ("Buffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1642 1653])
+                                    ("eh" variable
+                                       (:default-value "nullptr"
+                                        :type ("ErrorHandler" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1654 1679]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1629 1681])
+                            ("private" label nil (reparse-symbol classsubparts) [1683 1691])
+                            ("reportError" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("eh" variable (:type ("ErrorHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2000 2016])
+                                    ("errnum" variable (:type "int") (reparse-symbol arg-sub-list) [2017 2028])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2029 2043]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1980 2044])
+                            ("ensureFifoExists" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :arguments 
+                                  ( ("eh" variable (:type ("ErrorHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2160 2176])
+                                    ("pathname" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2177 2198]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2135 2199])
+                            ("_fdRead" variable (:type "int") (reparse-symbol classsubparts) [2214 2228])
+                            ("_fdReadHold" variable (:type "int") (reparse-symbol classsubparts) [2230 2248])
+                            ("_fdWrite" variable (:type "int") (reparse-symbol classsubparts) [2250 2265])
+                            ("_blockSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2267 2287])
+                            ("_defaultEH" variable (:type ("ErrorHandler" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2289 2317]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [226 2391]))                  
+                :type "namespace")
+                nil [205 2394]))          
+      :file "BasicMessageInterface.h"
+      :pointmax 2462
+      :fsize 2442
+      :lastmodtime '(21952 22014 833163 690000)
+      :unmatched-syntax '((punctuation 805 . 806) (symbol 792 . 804) (USING 786 . 791) (punctuation 278 . 279) (symbol 271 . 277) (USING 265 . 270) (symbol 1498 . 1500))
+      :lexical-table 
+        '(("INNERGY_BASIC_MESSAGE_INTERFACE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("INNERGY_MESSAGE_TYPES_H_" variable (:constant-flag t) nil [139 163])
+            ("innergy" type
+               (:members 
+                  ( ("uintHfield_t" type
+                       (:typedef ("uint16_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [186 216])
+                    ("uintHfield_t" variable (:type "int") (reparse-symbol namespacesubparts) [237 376]))                  
+                :type "namespace")
+                nil [165 379]))          
+      :file "MessageTypes.h"
+      :pointmax 437
+      :fsize 436
+      :lastmodtime '(21952 11256 767835 312000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INNERGY_MESSAGE_TYPES_H_")
+          )
+))
+  :file "!work!Innergy!Software!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

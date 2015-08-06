@@ -1,0 +1,98 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("bindir" variable (:default-value ("$(SWTREE)/bin")) nil [189 214])
+            ("blddir" variable (:default-value ("$(SWTREE)/PowerView/build")) nil [214 251])
+            ("PRODUCT" variable (:default-value ("PowerView")) nil [252 273])
+            ("PROJECT_FILE" variable (:default-value ("PowerView.pro")) nil [273 302])
+            ("SWTREE" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [302 352])
+            ("QMAKE" variable (:default-value ("/usr/bin/qmake")) nil [352 378])
+            ("INSTALL" variable (:default-value ("/usr/bin/install")) nil [378 406])
+            ("GEN_MAKEFILE" variable (:default-value ("$(blddir)/Makefile")) nil [406 440])
+            ("all" function (:arguments ("$(blddir)" "$(blddir)/$(PRODUCT)")) nil [442 478])
+            ("$(blddir)" function nil nil [479 515])
+            ("$(GEN_MAKEFILE)" function (:arguments ("$(PROJECT_FILE)" "$(blddir)")) nil [516 604])
+            ("$(blddir)" function (:arguments ("$(GEN_MAKEFILE)")) nil [605 674])
+            (".PHONY" variable (:default-value ("all" "clean" "cleanall" "install" "uninstall")) nil [675 721])
+            ("clean" function nil nil [722 749])
+            ("cleanall" function (:arguments ("clean")) nil [750 766])
+            ("distclean" function nil nil [767 796])
+            ("install" function (:arguments ("$(bindir)" "$(bindir)/$(PRODUCT)")) nil [797 837])
+            ("$(bindir)" function nil nil [838 874])
+            ("$(bindir)" function (:arguments ("$(bindir)" "$(blddir)" "$(blddir)/$(PRODUCT)")) nil [875 993])
+            ("uninstall" function nil nil [994 1033]))          
+      :file "Makefile"
+      :pointmax 1040
+      :fsize 1039
+      :lastmodtime '(21943 1593 45525 86000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("QApplication" include (:system-flag t) nil [1 24])
+            ("QDebug" include (:system-flag t) nil [25 42])
+            ("toplevel/MainWindow.h" include (:system-flag t) nil [44 76])
+            ("data/SimulState.h" include (:system-flag t) nil [77 105])
+            ("data/DataCollectionThread.h" include (:system-flag t) nil [106 144])
+            ("sharedmemorymanager.h" include (:system-flag t) nil [145 177])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [188 197])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [198 211]))                  
+                :type "int")
+                nil [179 475]))          
+      :file "main.cpp"
+      :pointmax 476
+      :fsize 475
+      :lastmodtime '(21943 1593 49524 936000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("POWERVIEW_DEFINES_H_" variable (:constant-flag t) nil [38 58])
+            ("QList" include (:system-flag t) nil [60 76])
+            ("PowerRecord" type
+               (:prototype t
+                :type "class")
+                nil [78 96])
+            ("QString" type
+               (:prototype t
+                :type "class")
+                nil [97 111])
+            ("InstanceIndex" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [113 139])
+            ("InstanceName" type
+               (:typedef ("QString" type (:type "class") nil nil)
+                :type "typedef")
+                nil [140 169])
+            ("TimeStamp" type
+               (:typedef ("unsigned long long")
+                :type "typedef")
+                nil [170 207])
+            ("Power" type
+               (:typedef ("unsigned long long")
+                :type "typedef")
+                nil [208 241]))          
+      :file "defines.h"
+      :pointmax 274
+      :fsize 273
+      :lastmodtime '(21943 1585 437809 574000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("POWERVIEW_DEFINES_H_")
+          )
+))
+  :file "!work!Innergy!Software!PowerView!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

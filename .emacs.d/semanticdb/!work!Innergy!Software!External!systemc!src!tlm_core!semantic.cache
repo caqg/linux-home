@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-mode
+      :tags 
+        '( ("$(top_srcdir)/config/Make-rules.sysc" include nil nil [1437 1482])
+            ("pkgconfigdir" variable (:default-value ("$(libarchdir)/pkgconfig")) nil [1483 1522])
+            ("pkgconfig_DATA" variable (:default-value ("tlm.pc")) nil [1522 1546])
+            ("H_FILES" variable (:default-value ("tlm_2/tlm_version.h" "tlm_2/tlm_2_interfaces/tlm_2_interfaces.h" "tlm_2/tlm_2_interfaces/tlm_dmi.h" "tlm_2/tlm_2_interfaces/tlm_fw_bw_ifs.h" "\\")) nil [1547 1708])
+            ("EXTRA_DIST" variable (:default-value ("tlm_1/README.txt" "tlm_2/README.txt")) nil [3279 3333])
+            ("localincludedir" variable (:default-value ("$(includedir)/tlm_core")) nil [3334 3375])
+            ("nobase_localinclude_HEADERS" variable (:default-value ("$(H_FILES)")) nil [3375 3416]))          
+      :file "Makefile.am"
+      :pointmax 3416
+      :fsize 3415
+      :lastmodtime '(21941 38079 813102 374000)
+      :unmatched-syntax '((shell-command 1709 . 3277) (bol 1708 . 1708))))
+  :file "!work!Innergy!Software!External!systemc!src!tlm_core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

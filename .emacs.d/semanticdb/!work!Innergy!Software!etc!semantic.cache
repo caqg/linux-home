@@ -1,0 +1,124 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 127])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [127 174])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [174 200])
+            ("bin_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/bin/")) nil [201 241])
+            ("lib_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/lib/")) nil [241 281])
+            ("etc_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/etc/")) nil [281 321])
+            ("src_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/src/")) nil [321 361])
+            ("include_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/include/")) nil [361 405])
+            ("share_DIR" variable (:default-value ("$(TOP)/PowerAnalysis/share/")) nil [405 447])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [448 487])
+            ("CPPFLAGS" variable (:default-value ("$(EXTRACPPFLAGS)")) nil [783 812])
+            ("CFLAGS" variable (:default-value ("$(EXTRACFLAGS)")) nil [812 839])
+            ("CXXFLAGS" variable (:default-value ("$(EXTRACXXFLAGS)")) nil [839 868])
+            ("LDFLAGS" variable (:default-value ("$(EXTRALDFLAGS)")) nil [868 896])
+            ("all" function nil nil [929 940])
+            (".PHONY" function (:arguments ("all" "clean" "cleanall" "distclean" "check" "install" "uninstall")) nil [941 1005])
+            ("clean" function nil nil [1006 1017])
+            ("cleanall" function (:arguments ("clean")) nil [1018 1035])
+            ("distclean" function (:arguments ("cleanall")) nil [1036 1056])
+            ("check" function nil nil [1057 1068])
+            ("install" function nil nil [1069 1080])
+            ("uninstall" function nil nil [1081 1092]))          
+      :file "component.mk"
+      :pointmax 1110
+      :fsize 1109
+      :lastmodtime '(21850 55440 106809 670000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "copyright.c"
+      :pointmax 130
+      :fsize 129
+      :lastmodtime '(21850 55491 529055 922000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "copyright.cpp"
+      :pointmax 108
+      :fsize 107
+      :lastmodtime '(21850 55500 392753 866000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("XXX_H" variable (:constant-flag t) nil [140 145])
+            ("XXX_H" variable (:constant-flag t) nil [140 145])
+            ("C" extern nil nil [165 208]))          
+      :file "copyright.h"
+      :pointmax 246
+      :fsize 245
+      :lastmodtime '(21850 55519 696096 286000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("XXX_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("XXX_H" variable (:constant-flag t) nil [120 125]))          
+      :file "copyright.hpp"
+      :pointmax 159
+      :fsize 158
+      :lastmodtime '(21850 55530 991711 642000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("XXX_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags nil
+      :file "copyright.mk"
+      :pointmax 88
+      :fsize 87
+      :lastmodtime '(21850 55539 807411 521000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags nil
+      :file "copyright.py"
+      :pointmax 111
+      :fsize 110
+      :lastmodtime '(21850 55557 450811 65000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("TOP" variable (:default-value ("$(shell git rev-parse --show-toplevel)")) nil [81 127])
+            ("TO_HERE" variable (:default-value ("$(shell git rev-parse --show-prefix)")) nil [127 174])
+            ("HERE" variable (:default-value ("$(TOP)/$(TO_HERE)")) nil [174 200])
+            ("$(TOP)/PowerAnalysis/Common.mk" include nil nil [201 240])
+            ("SUBDIRS" variable nil nil [277 288])
+            ("CPPFLAGS" variable (:default-value ("$(EXTRACPPFLAGS)")) nil [584 613])
+            ("CFLAGS" variable (:default-value ("$(EXTRACFLAGS)")) nil [613 640])
+            ("CXXFLAGS" variable (:default-value ("$(EXTRACXXFLAGS)")) nil [640 669])
+            ("LDFLAGS" variable (:default-value ("$(EXTRALDFLAGS)")) nil [669 697])
+            ("all" function nil nil [698 754])
+            ("PHONIES" variable (:default-value ("clean" "cleanall" "distclean" "check" "install" "uninstall")) nil [755 815])
+            (".PHONY" function (:arguments ("all" "$(PHONIES)")) nil [815 841])
+            ("clean" function nil nil [842 900])
+            ("cleanall" function nil nil [901 961])
+            ("distclean" function nil nil [962 1024])
+            ("check" function nil nil [1025 1083])
+            ("install" function nil nil [1084 1144])
+            ("uninstall" function nil nil [1145 1207]))          
+      :file "directory.mk"
+      :pointmax 1215
+      :fsize 1214
+      :lastmodtime '(21850 55607 133121 600000)
+      :unmatched-syntax nil))
+  :file "!work!Innergy!Software!etc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
