@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="window_height" mtime="1433389455" type="int" value="365"/>
+	<entry name="window_width" mtime="1433389455" type="int" value="567"/>
+	<entry name="section_start" mtime="1433389379" type="int" value="0"/>
+	<entry name="expanders_expanded" mtime="1432868689" type="bool" value="false"/>
+	<entry name="initial_animation" mtime="1433389379" type="bool" value="true"/>
+</gconf>

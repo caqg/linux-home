@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_dir" mtime="1433750423" type="string">
+		<stringvalue>/work/Innergy/schedule</stringvalue>
+	</entry>
+</gconf>
