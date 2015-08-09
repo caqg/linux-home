@@ -1,2 +1,0 @@
-/*! Copyright 2009-2015 Evernote Corporation. All rights reserved. */
-define(["PageInfo"],function(a){return{version:"1.0.0",load:function(b,c,d){var e=a.isSearchEngine();e&&c([b],function(){d(e)})}}});

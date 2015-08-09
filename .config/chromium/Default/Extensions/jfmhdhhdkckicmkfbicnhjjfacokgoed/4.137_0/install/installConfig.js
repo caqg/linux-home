@@ -1,3 +1,0 @@
-var howItWorksText = "<li>Go to Reddit and click the orange Reddit icon on your search bar.</li><li>A color palette with beautiful colors will pop up.</li><li>Choose your favorite color and click it.</li><li>Enjoy your new Reddit color!</li><li>Rank the extension with 5 stars :)</li><li>To disable the extension, choose the white color.</li>";
-
-var whyShouldIUseText = "<li>Your color is saved on your browser, even if you close it.</li><li>1,000 happy daily active users.</li><li>Easy and simple to use.</li><li>Beautiful color choices.</li>";
