@@ -4257,6 +4257,17 @@
  (center-text .
 	      [(0 8)
 	       nil "Center the text in a fixed-width column" single])
+ (celery .
+	 [(0 0 3)
+	  ((emacs
+	    (24))
+	   (dash-functional
+	    (2 11 0))
+	   (s
+	    (1 9 0))
+	   (deferred
+	       (0 3 2)))
+	  "a minor mode to draw stats from celery and more?" single])
  (cedit .
 	[(0 0 0)
 	 nil "paredit-like commands for c-like languages" single])
