@@ -7,19 +7,6 @@ root)
     export PS1='$ ' ;;
 esac
 
-case "${TERM}" in
-xterm*|rxvt*)
-    function updatePS1WithGitBranch {
-	left='\[\e]0;\u@\h: \w'
-	middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
-	right='\a\]\$ '
-	PS1="$left$middle$right"
-    }
-
-    PROMPT_COMMAND=updatePS1WithGitBranch
-    ;;
-esac
-
 # export PS2='> '
 # export PS3='? '
 # export PS4='+ '
@@ -48,5 +35,19 @@ function lt   { LC_ALL=C /bin/ls  ${LSFLAGS} -Altrh --time-style=iso "$@"; }
 function v    { gvim -MR "$@"; }
 function v-   { gvim -MR -; }
 function vdir { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
+
+case "${TERM}" in
+xterm*|rxvt*)
+    function updatePS1WithGitBranch {
+	left='\[\e]0;\u@\h: \w'
+	middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
+	right='\a\]\$ '
+	PS1="$left$middle$right"
+    }
+
+    PROMPT_COMMAND=updatePS1WithGitBranch
+    colorize-ls
+    ;;
+esac
 
 ##end .bash_interactive
