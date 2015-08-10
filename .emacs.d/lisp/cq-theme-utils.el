@@ -4,6 +4,9 @@
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
+(require 'parenface)
+
+
 (defun cq/adjust-paren-face-fg (which)
   "Set the paren-face :foreground according to the frame-background-mode (light,
 dark), or to argument WHICH ('dark or 'light; else nothing
