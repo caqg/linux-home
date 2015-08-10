@@ -7,21 +7,25 @@
 (require 'parenface)
 
 (defun cq/enable-solarized (which)
-  "Assuming solarized-theme is loaded, enable it.  WHICH should be 'dark or 'light"
-  (message (format "Solarized going %s" which))
+  "Assuming solarized-theme is loaded, enable it.  WHICH should be 'dark or
+'light"
+  (unless (memq which '(dark light))
+    (error "Wrong frame background mode %S, expected 'dark or 'light"
+           which))
+  (let* ((theme-name (concat "solarized-" (symbol-name which)))
+         (theme-symbol (intern theme-name)))
+    (enable-theme theme-symbol))
   (setq frame-background-mode which)
-  (mapc #'frame-set-background-mode (frame-list))
-  (set-frame-parameter nil 'background-mode which)
-  (enable-theme 'solarized)
-  (adjust-paren-face-fg)
-  )
+  (mapc 'frame-set-background-mode (frame-list))
+  (adjust-paren-face-fg which)
+  which)
 
 (defun cq/enable-dark-solarized ()
   "Assuming solarized-theme is loaded, make it dark everywhere"
   (interactive)
   (cq/enable-solarized 'dark))
 
-(defun cq/enable-light-solarized () 
+(defun cq/enable-light-solarized ()
   "Assuming solarized-theme is loaded, make it light everywhere"
   (interactive)
   (cq/enable-solarized 'light))
@@ -30,9 +34,9 @@
   "Assuming solarized-theme is loaded, flip it between dark and light"
   (interactive)
   (cond ((eq frame-background-mode 'dark)
-	 (cq/enable-light-solarized))
-	(t			;light or nil
-	 (cq/enable-dark-solarized))))
+         (cq/enable-light-solarized))
+        (t			;light or nil
+         (cq/enable-dark-solarized))))
 
 
 (defvar menu-bar-solarized-menu (make-sparse-keymap "Light or Dark?"))

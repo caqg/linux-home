@@ -38,9 +38,10 @@
 (add-hook 'emacs-lisp-mode-hook       (paren-face-add-support lisp-font-lock-keywords-2))
 (add-hook 'lisp-interaction-mode-hook (paren-face-add-support lisp-font-lock-keywords-2))
 
-(defun adjust-paren-face-fg ()
+(defun adjust-paren-face-fg (which)
   "Set the paren-face :foreground according to the frame-background-mode (light,
-dark or nil)."
+dark), or to argument WHICH ('dark or 'light; else nothing
+happens) if frame-background-mode is nil."
   (interactive)
   (let ((paren-face-fg (case frame-background-mode
                          (light
@@ -48,8 +49,13 @@ dark or nil)."
                          (dark
                           paren-face-dark)
                          (t             ;if not set yet
-                          paren-face-dark))))
-    (set-face-attribute 'paren-face nil :foreground paren-face-fg)))
+                          (case which
+                            ('dark paren-face-dark)
+                            ('light paren-face-light)
+                            (t nil))))))
+    (unless (null paren-face-fg)
+      (set-face-attribute 'paren-face nil :foreground paren-face-fg))
+    paren-face-fg))
 
 (provide 'parenface)
 

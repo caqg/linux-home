@@ -85,10 +85,14 @@
     (set tabset sorted)))
 (ad-activate 'tabbar-add-tab 'compile-it)
 
-(cond ((and nil (>= emacs-major-version 25) window-system)
-       (load-theme 'solarized t)
-       (require 'emacs25-theme-init))
-      ((and t (>= emacs-major-version 23) window-system)
+(cond ((and (>= emacs-major-version 25) window-system)
+       (load-theme 'solarized t t)
+       (load-theme 'solarized-light t t)
+       (load-theme 'solarized-dark t t)
+       (require 'emacs25-theme-init)
+       (cq/enable-dark-solarized)
+       )
+      ((and (>= emacs-major-version 23) window-system)
        (add-to-list 'load-path
                     "~/.emacs.d/lisp/emacs-color-theme-solarized/")
        (color-theme-initialize)
@@ -105,10 +109,12 @@
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle))
-(adjust-paren-face-fg)
+(adjust-paren-face-fg nil)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
+
 
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -139,7 +145,7 @@
  '(cursor-color "#cccccc")
  '(custom-safe-themes
    (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-frame-alist (quote ((width . 90) (height . 40) (menu-bar-lines . 1))))
  '(default-input-method "latin-postfix")
  '(delete-old-versions t)
@@ -251,7 +257,7 @@
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(package-selected-packages
    (quote
-    (mmt fasm-mode edit-at-point org-dashboard ac-c-headers ada-mode ada-ref-man aes aggressive-fill-paragraph aggressive-indent all-ext ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags backtrace-mode bigint bison-mode cedit charmap cmake-mode codesearch color-theme-solarized company-c-headers company-ess company-inf-ruby company-math company-quickhelp cperl-mode csharp-mode csv-nav debbugs dict-tree dircmp dired-narrow dired-toggle-sudo ecb edebug-x ediprolog edit-list ess-R-data-view ess-R-object-popup ess-smart-underscore form-feed ggtags git git-commit-mode git-rebase-mode gitattributes-mode gitconfig-mode gitignore-mode gscholar-bibtex gtags header2 ht http-post-simple hydra interval-tree ipython javadoc-help javadoc-lookup jira kv lib-requires markdown-toc move-dup nasm-mode org org-ac org-bullets org-cliplink org-context org-download org-jira org-journal org-mime org-pandoc orgtbl-show-header pandoc-mode paredit-everywhere paredit-menu path-headerline-mode pcsv peep-dired perl-completion perl-myvar pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term shell-command shell-here shell-toggle slime-annot sml-mode sparkline ssh ssh-config-mode strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemtap-mode tabbar tdd thing-cmds undo-tree uuid vector-utils viewer vimrc-mode vkill vlf wget wiki wiki-nav xcscope xml-rpc yaoddmuse)))
+    (solarized-theme mmt fasm-mode edit-at-point org-dashboard ac-c-headers ada-mode ada-ref-man aes aggressive-fill-paragraph aggressive-indent all-ext ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags backtrace-mode bigint bison-mode cedit charmap cmake-mode codesearch company-c-headers company-ess company-inf-ruby company-math company-quickhelp cperl-mode csharp-mode csv-nav debbugs dict-tree dircmp dired-narrow dired-toggle-sudo ecb edebug-x ediprolog edit-list ess-R-data-view ess-R-object-popup ess-smart-underscore form-feed ggtags git git-commit-mode git-rebase-mode gitattributes-mode gitconfig-mode gitignore-mode gscholar-bibtex gtags header2 ht http-post-simple hydra interval-tree ipython javadoc-help javadoc-lookup jira kv lib-requires markdown-toc move-dup nasm-mode org org-ac org-bullets org-cliplink org-context org-download org-jira org-journal org-mime org-pandoc orgtbl-show-header pandoc-mode paredit-everywhere paredit-menu path-headerline-mode pcsv peep-dired perl-completion perl-myvar pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term shell-command shell-here shell-toggle slime-annot sml-mode sparkline ssh ssh-config-mode strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemtap-mode tabbar tdd thing-cmds undo-tree uuid vector-utils viewer vimrc-mode vkill vlf wget wiki wiki-nav xcscope xml-rpc yaoddmuse)))
  '(prog-mode-hook (quote ((lambda nil (form-feed-mode 1)))))
  '(recentf-mode t)
  '(require-final-newline nil)
