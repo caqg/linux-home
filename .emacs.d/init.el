@@ -4,15 +4,18 @@
 (message "Done loading legacy init")
 (load-library "cl")
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(load-library "workarounds")
 
-(load-library "file-hooks")
+(load-library "cq-workarounds")
+(global-set-key [(meta z)] 'cq-zap-up-to-char)
+(global-set-key [(meta Z)] 'zap-to-char) ;stock, not workaround
+
+(load-library "cq-file-hooks")
 (add-hook 'before-save-hook (lambda ()
                               ;; clean up source code, but nothing else
                               (when (derived-mode-p 'prog-mode)
                                 (cq/trim-whitespace))))
 
-(load-library "minor-mode-utils")
+(load-library "cq-minor-mode-utils")
 (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
 
 (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
@@ -89,27 +92,26 @@
        (load-theme 'solarized t t)
        (load-theme 'solarized-light t t)
        (load-theme 'solarized-dark t t)
-       (require 'emacs25-theme-init)
+       (require 'cq-emacs25-theme-init)
        (cq/enable-dark-solarized)
        )
       ((and (>= emacs-major-version 23) window-system)
+       ;; This depends on color-theme
        (add-to-list 'load-path
                     "~/.emacs.d/lisp/emacs-color-theme-solarized/")
        (color-theme-initialize)
-       (require 'emacs23-theme-init)
+       (require 'cq-emacs23-theme-init)
        (color-theme-solarized)
        ))
 
 (require 'ecb)                          ;last require so at end of Tools menu
 
 (setq-default ediff-auto-refine 'off)
-(global-set-key [(meta z)] 'zap-up-to-char)
-(global-set-key [(meta Z)] 'zap-to-char)
 
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle))
-(adjust-paren-face-fg nil)
+(cq/adjust-paren-face-fg nil)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
