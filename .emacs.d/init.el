@@ -93,7 +93,7 @@
        (load-theme 'solarized-light t t)
        (load-theme 'solarized-dark t t)
        (require 'cq-emacs25-theme-init)
-       (cq/enable-dark-solarized)
+       ;; (cq/enable-dark-solarized)
        )
       ((and (>= emacs-major-version 23) window-system)
        ;; This depends on color-theme
