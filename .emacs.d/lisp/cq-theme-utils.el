@@ -26,6 +26,16 @@ happens) if frame-background-mode is nil."
       (set-face-attribute 'paren-face nil :foreground paren-face-fg))
     paren-face-fg))
 
+(defun cq/disable-all-themes ()
+  "Disable all the `custom-enabled-themes'"
+  (interactive)
+  (mapc
+   #'(lambda (theme-symbol)
+       (disable-theme theme-symbol))
+   (copy-list custom-enabled-themes))
+  (unless custom-enabled-themes
+    (enable-theme 'user)))
+
 
 
 

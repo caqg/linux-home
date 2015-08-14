@@ -39,22 +39,39 @@
         (t			;light or nil
          (cq/enable-dark-solarized))))
 
+(defun cq/disable-solarized ()
+  "Disable all solarized modes from `custom-enabled-themes'"
+  (interactive)
+  (mapc #'(lambda (theme-symbol)
+            (when (string-prefix-p "solarized-" (symbol-name theme-symbol) t)
+              (disable-theme theme-symbol)))
+        (copy-list custom-enabled-themes))
+  (unless custom-enabled-themes
+    (enable-theme 'user)))
 
 (defvar menu-bar-solarized-menu (make-sparse-keymap "Light or Dark?"))
+
+(define-key menu-bar-solarized-menu [disable-all-themes]
+  '(menu-item "Disable all enabled themes" cq/disable-all-themes
+              :help "Disable all themes in `custom-enabled-themes'"))
+(define-key menu-bar-solarized-menu [disable-solarized]
+  '(menu-item "Disable all solarized themes" cq/disable-solarized
+              :help "Disable all solarized themes in `custom-enabled-themes'"))
 (define-key menu-bar-solarized-menu [solarized-light]
-  '(menu-item "Light mode" cq/enable-light-solarized
+  '(menu-item "Light theme" cq/enable-light-solarized
               :help "Set color theme to solarized, with light background"))
 (define-key menu-bar-solarized-menu [solarized-dark]
-  '(menu-item "Dark mode" cq/enable-dark-solarized
+  '(menu-item "Dark theme" cq/enable-dark-solarized
               :help "Set color theme to solarized, with dark background"))
 (define-key menu-bar-solarized-menu [solarized-flip]
-  '(menu-item "Flip bg mode" cq/flip-solarized
+  '(menu-item "Flip between dark and light" cq/flip-solarized
               :help "Flip background mode between light and dark"))
+
 (define-key menu-bar-options-menu [color-theme-background]
   (list 'menu-item "Light or Dark?" menu-bar-solarized-menu))
 
 (global-set-key [f12] 'cq/flip-solarized)
 
-(provide 'cq-emacs25-theme-init)
+(provide 'cq-solarized-theme-init)
 
 ;;;; end cq-emacs25-theme-init.el
