@@ -31,12 +31,12 @@
 ;; Keep the compiler quiet.
 (eval-when-compile
   (defvar scheme-font-lock-keywords-2 nil)
-  (defvar lisp-font-lock-keywords-2 nil))
+  (defvar lisp-el-font-lock-keywords-2 nil))
 
 (add-hook 'scheme-mode-hook           (paren-face-add-support scheme-font-lock-keywords-2))
-(add-hook 'lisp-mode-hook             (paren-face-add-support lisp-font-lock-keywords-2))
-(add-hook 'emacs-lisp-mode-hook       (paren-face-add-support lisp-font-lock-keywords-2))
-(add-hook 'lisp-interaction-mode-hook (paren-face-add-support lisp-font-lock-keywords-2))
+(add-hook 'lisp-mode-hook             (paren-face-add-support lisp-el-font-lock-keywords-2))
+(add-hook 'emacs-lisp-mode-hook       (paren-face-add-support lisp-el-font-lock-keywords-2))
+(add-hook 'lisp-interaction-mode-hook (paren-face-add-support lisp-el-font-lock-keywords-2))
 
 (provide 'parenface)
 
