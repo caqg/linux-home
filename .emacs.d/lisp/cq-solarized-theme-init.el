@@ -4,6 +4,7 @@
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
+(require 'cl-lib)
 (require 'parenface)
 (require 'cq-theme-utils)
 
@@ -45,7 +46,7 @@
   (mapc #'(lambda (theme-symbol)
             (when (string-prefix-p "solarized-" (symbol-name theme-symbol) t)
               (disable-theme theme-symbol)))
-        (copy-list custom-enabled-themes))
+        (cl-copy-list custom-enabled-themes))
   (unless custom-enabled-themes
     (enable-theme 'user)))
 

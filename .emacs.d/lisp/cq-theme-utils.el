@@ -4,6 +4,7 @@
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
+(require 'cl-lib)
 (require 'parenface)
 
 
@@ -12,13 +13,13 @@
 dark), or to argument WHICH ('dark or 'light; else nothing
 happens) if frame-background-mode is nil."
   (interactive)
-  (let ((paren-face-fg (case frame-background-mode
+  (let ((paren-face-fg (cl-case frame-background-mode
                          (light
                           paren-face-light)
                          (dark
                           paren-face-dark)
                          (t             ;if not set yet
-                          (case which
+                          (cl-case which
                             ('dark paren-face-dark)
                             ('light paren-face-light)
                             (t nil))))))
@@ -32,7 +33,7 @@ happens) if frame-background-mode is nil."
   (mapc
    #'(lambda (theme-symbol)
        (disable-theme theme-symbol))
-   (copy-list custom-enabled-themes))
+   (cl-copy-list custom-enabled-themes))
   (unless custom-enabled-themes
     (enable-theme 'user)))
 
