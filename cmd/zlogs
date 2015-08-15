@@ -119,7 +119,6 @@ esac
 
 echo zip -uv ${zipfile} "${ZLOGSGLOB}" | bash -x
 echo
-echo "zipfile:"
-echo "$zipfile"
+echo "zipfile:	$zipfile"
 
 # end zlogs
