@@ -1,0 +1,125 @@
+#!/bin/bash
+## Copyright (C) 2015 by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+progname=$(basename $0)
+
+zipname=""
+dirname=""
+zipfile=""
+
+ZLOGSGLOB=${ZLOGSGLOB:-'*.log'}
+
+PATH=/bin:/usr/bin
+
+usage () {
+	echo usage: $progname '[zipname [dirname]]'
+	echo ""
+	echo "	Collect the \$ZLOGSGLOB (default \*.log) files in the current"
+	echo "	directory into a zip. The log files are added/updated in the"
+	echo "	zip."
+	echo ""
+	echo ""
+	echo "	DESCRIPTION"
+	echo ""
+	echo ""
+	echo "	With no arguments, and no \$ZLOGSDIR: "
+	echo ""
+	echo "	The zipname is the basename of \$PWD, the dirname is \$PWD."
+	echo "	Therefore, the default zip file is "
+	echo ""
+	echo "		\${PWD}/\$(basename \${PWD}).zip"
+	echo ""
+	echo ""
+	echo "	With no arguments, but \$ZLOGSDIR in the environment:"
+	echo ""
+	echo "	The default dirname is the value of \$ZLOGSDIR, therefore"
+	echo ""
+	echo "		\${ZLOGSDIR}/\$(basename \${PWD}).zip"
+	echo ""
+	echo ""
+	echo "	With a zipname argument, but no dirname:"
+	echo ""
+	echo "	If the zipname does not contain slashes, it is taken"
+	echo "	as-is and combined with the directory determined by the"
+	echo "	presence or absence of \$ZLOGSDIR."
+	echo ""
+	echo "	If the zipname starts with a slash, it is taken as-is,"
+	echo "	and no directory is determined. Any intermediate directories"
+	echo "	are created if needed."
+	echo ""
+	echo "	If the zipname contains slashes, it is interpreted relative"
+	echo "	to the directory determined depending on \$ZLOGSDIR. Any"
+	echo "	needed intermediate directories are created if needed."
+	echo ""
+	echo ""
+	echo "	With both zipname and dirname present:"
+	echo ""
+	echo "	The two arguments get concatenated, the concatenation is used"
+	echo "	as-is."
+	echo ""
+	echo ""
+	echo "	OPTIONS"
+	echo ""
+	echo "	-h"
+	echo "	--help		Print this message to stdout."
+}
+
+#------------------------------------------------------------------------------
+
+
+mk_zipfile_name () {
+	zipname="$1"
+	dirname="$2"
+	case "$zipname" in
+	/*)	zipfile="$zipname"
+		mkdir -p $(dirname "$zipfile")
+		;;
+	*/*)	zipfile="$dirname/$zipname"
+		mkdir -p $(dirname "$zipfile")
+		;;
+	*)	zipfile="$dirname/$zipname"
+		;;
+	esac
+	echo $zipfile
+}
+
+
+#------------------------------------------------------------------------------
+
+for arg in "$@"; do
+	case "$arg" in
+	-h|--help)	usage; exit 0;;
+	esac
+done
+
+case "$#" in
+0)	zipname=$(basename $PWD)
+	dirname=${ZLOGSDIR:-$PWD}
+	zipfile="$dirname/$zipname"
+	;;
+1)	zipname="$1";
+	dirname="${ZLOGSDIR:-$PWD}"
+	zipfile=$(mk_zipfile_name "$zipname" "$dirname")
+	;;
+2)	zipname="$1";
+	dirname="$2";
+	zipfile=$(mk_zipfile_name "$zipname" "$dirname")
+	;;
+*)	usage; exit 1
+	;;
+esac
+
+case "$zipfile" in
+*.zip)	;;
+*)	zipfile="$zipfile".zip ;;
+esac
+
+echo zip -uv ${zipfile} "${ZLOGSGLOB}" | bash -x
+echo
+echo "zipfile:"
+echo "$zipfile"
+
+# end zlogs

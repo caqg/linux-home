@@ -18,6 +18,9 @@ export EDITOR=$HOME/cmd/e
 export CSCOPE_EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e
 
+export ZLOGSDIR=/scratch/LOGS
+export ZLOGSGLOB='make-*.log'
+
 # Rogue
 export ROGUEOPTS="fruit=eyeberry\
 ,name=Muzh Bear\
