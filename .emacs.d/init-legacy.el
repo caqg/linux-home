@@ -276,6 +276,8 @@
           #'(lambda ()
               (setq indent-tabs-mode t)
               (local-set-key "\C-c\C-v" 'view-mode)
+              (require 'balanced-insertions)
+              (set-balanced-insertions)
               (auto-fill-mode 1)        ;it is a prog-mode
               (font-lock-mode 1)))
 
