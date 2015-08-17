@@ -44,7 +44,7 @@ usage () {
 }
 
 # parse command line
-# No args: Header at current terminal width, or 80 if not a ttu
+# No args: Header at current terminal width, or 80 if not a tty
 # 1  arg : must be the width (integer).
 # >1 arg : parse
 H=1
