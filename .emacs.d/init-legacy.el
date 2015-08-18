@@ -13,20 +13,11 @@
 (put 'scroll-left      'disabled          nil)
 (put 'set-goal-column  'disabled          nil)
 
-(setq-default major-mode 'indented-text-mode)
+(setq-default major-mode 'text-mode)    ;indented-text-mode is an alias
 
 (defvar *timestamp-program* (concat (getenv "HOME") "/cmd/timestamp")
   "Program to produce a time stamp (see cq-timestamp).")
 
-(setq-default auto-mode-alist
-              (append
-               (list
-                (cons "[Mm]akefile"     'makefile-mode)
-                (cons "\\.lisp$"        'lisp-mode)
-                (cons "\\.lsp$"         'lisp-mode)
-                (cons "\\.cl$"          'lisp-mode)
-                (cons "\\.txt$"         'indented-text-mode))
-               auto-mode-alist))
 (setq tag-table-alist nil)
 
 ;;; Mode Hooks
