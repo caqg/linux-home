@@ -86,8 +86,8 @@
                                          (buffer-name (car b)))))))
     ;; (message "sorted-->%s" sorted)
     (set tabset sorted)))
-(ad-activate 'tabbar-add-tab 'compile-it)
 
+;;; Color theme
 (cond ((and (>= emacs-major-version 25) window-system)
        (load-theme 'solarized t t)
        (load-theme 'solarized-light t t)
@@ -104,12 +104,20 @@
 
 (require 'ecb)                          ;last require so at end of Tools menu
 
+(if window-system
+    (ad-activate 'tabbar-add-tab 'compile-it))
+
 (setq-default ediff-auto-refine 'off)
 
 (wrap-up-start)
 (when (memq window-system (list 'x 'w32))
   (set-default-xtitle))
-(cq/adjust-paren-face-fg nil)
+(when window-system
+  (cq/adjust-paren-face-fg nil))
+
+(add-hook 'tty-setup-hook #'(lambda ()
+                              (tabbar-mode -1)
+                              (message "init.el: tty setup hook ran")))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -307,12 +315,13 @@
  '(truncate-lines t)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(uniquify-trailing-separator-p t)
- '(use-file-dialog nil)
+ '(use-file-dialog t)
  '(user-full-name "César Quiroz")
  '(user-mail-address "cesar.quiroz@gmail.com")
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
- '(wdired-use-dired-vertical-movement (quote sometimes)))
+ '(wdired-use-dired-vertical-movement (quote sometimes))
+ '(x-gtk-show-hidden-files t))
 
 
 (unless window-system (normal-erase-is-backspace-mode 0))
