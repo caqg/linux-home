@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="savefile" mtime="1435558387" type="string">
-		<stringvalue>axi_rtl.gtkw</stringvalue>
+	<entry name="savefile" mtime="1439798941" type="string">
+		<stringvalue>axi_power.gtkw</stringvalue>
 	</entry>
-	<entry name="optimized_vcd" mtime="1435558387" type="string">
+	<entry name="optimized_vcd" mtime="1439798941" type="string">
 		<stringvalue>0</stringvalue>
 	</entry>
-	<entry name="dumpfile" mtime="1435558387" type="string">
-		<stringvalue>axi_rtl.vcd</stringvalue>
+	<entry name="dumpfile" mtime="1439798941" type="string">
+		<stringvalue>axi_power.vcd</stringvalue>
 	</entry>
-	<entry name="pwd" mtime="1435558387" type="string">
+	<entry name="pwd" mtime="1439798941" type="string">
 		<stringvalue>/work/Innergy/Hardware/test_leaf_nodes_verilog</stringvalue>
 	</entry>
-	<entry name="rcfile" mtime="1435558387" type="string">
+	<entry name="rcfile" mtime="1439969189" type="string">
 		<stringvalue>/home/cesar/.gtkwaverc</stringvalue>
 	</entry>
 </gconf>
