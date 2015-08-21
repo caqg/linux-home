@@ -18,6 +18,9 @@
 (load-library "cq-minor-mode-utils")
 (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
 
+(load-library "cq-cedet-ede-ecb-utils")
+(global-set-key "\C-zL" 'cq/load-ede-project-and-tags)
+
 (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
 (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
 (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
