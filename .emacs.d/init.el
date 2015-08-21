@@ -50,6 +50,8 @@
 (require 'xcscope)
 (cscope-setup)
 
+(require 'gtags)
+
 (require 'org-install)
 (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
 (global-set-key "\C-ca" 'org-agenda)
