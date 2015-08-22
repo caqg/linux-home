@@ -9,6 +9,10 @@
 (global-set-key [(meta z)] 'cq-zap-up-to-char)
 (global-set-key [(meta Z)] 'zap-to-char) ;stock, not workaround
 
+(load-library "cq-edit-utils")
+(global-set-key "\C-x$" 'cq/set-selective-display)
+
+
 (load-library "cq-file-hooks")
 (add-hook 'before-save-hook (lambda ()
                               ;; clean up source code, but nothing else
@@ -176,6 +180,7 @@
  '(dired-listing-switches "-Alh --time-style=long-iso --group-directories-first")
  '(dired-use-ls-dired t)
  '(dired-x-hands-off-my-keys nil)
+ '(display-time-default-load-average nil)
  '(display-time-mode t)
  '(ecb-activation-selects-ecb-frame-if-already-active t)
  '(ecb-auto-expand-tag-tree (quote all))
@@ -246,6 +251,7 @@
  '(inhibit-startup-echo-area-message "cesar")
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ '(isearch-allow-scroll t)
  '(line-move-visual nil)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
@@ -326,7 +332,8 @@
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes))
- '(x-gtk-show-hidden-files t))
+ '(x-gtk-show-hidden-files t)
+ '(yank-pop-change-selection t))
 
 
 (unless window-system (normal-erase-is-backspace-mode 0))
