@@ -447,9 +447,9 @@
 ;;-? (global-set-key "\eo"               'indent-to-point)
 ;;+? (global-set-key "\e\^R"             'isearch-backward-regexp)
 ;;+? (global-set-key "\eR"               'replace-string)
-(global-set-key "\ew"               'copy-region-as-kill-command)
-(global-set-key [ ?\C-c ?\  ]       'set-mark-command)
-(global-set-key [ ?\C-c ?\C-v ]     'view-mode)
+;;+? (global-set-key "\ew"               'copy-region-as-kill-command)
+;; (global-set-key [ ?\C-c ?\  ]       'set-mark-command)
+(global-set-key "\C-c\C-v"          'view-mode)
 (global-set-key "\^Z\^C"            'compile)
 (global-set-key "\^Z\^K"            'kill-compilation)
 (global-set-key "\^Z\^N"            'next-error)
@@ -476,6 +476,8 @@
 (global-set-key "\^Zb"              'cq-insert-buffer-file-name)
 (global-set-key "\^Zg"              'cq-goto-line)
 (global-set-key "\^Zt"              'cq-timestamp)
+(global-set-key "\C-xr>"            'append-to-register)
+(global-set-key "\C-xr<"            'prepend-to-register)
 ;;+? (global-set-key "\^Z\et"            'transpose-paragraphs)
 ;;+? (global-set-key "\^Z\e@"            'mark-end-of-sentence)
 ;;+? (global-set-key "\^Z\ef"            'forward-sentence)
@@ -486,9 +488,6 @@
 
 (define-key help-map "\C-f"         'flash-describe-function)
 (define-key help-map "\C-v"         'flash-describe-variable)
-
-(global-set-key "\C-c\C-v" 'view-mode)
-
 
 ;;; For electric-minibuffer
 (define-key minibuffer-local-completion-map "\en"
@@ -663,14 +662,9 @@
 ;;                 year (string-to-number month) (string-to-number day))
 ;;      (format "%s:%s " 24-hours minutes)
 ;;      (if mail "Mail ")))
-
 (defun wrap-up-start ()
-  (setq display-time-day-and-date t
-        display-time-24hr-format  t
-        display-time-format       "%Y-%m-%d %H:%M ")
-  (display-time)
-  (message "%s (%s) at %s:%s (%s).  Hi!"
-           (user-full-name) (user-login-name)
-           (getenv "HOST") (getenv "TTY") (getenv "TERM")))
+    (message "%s (%s) @ %s"
+             (user-full-name) (user-login-name) (system-name)))
 
 ;;;end .emacs-shared, loaded from ~/.emacs, ~/.xemacs/init.el
+;;;end init-legacy.el, loaded from init.el
