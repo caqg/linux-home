@@ -42,6 +42,7 @@
 
 (filesets-init)
 (slime-setup)
+(require 'tramp)
 
 (which-function-mode 1)
 (pending-delete-mode t)
