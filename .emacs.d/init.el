@@ -127,7 +127,7 @@
 
 (add-hook 'tty-setup-hook #'(lambda ()
                               (tabbar-mode -1)
-                              (message "init.el: tty setup hook ran")))
+                              (menu-bar-mode -1)))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -183,6 +183,7 @@
  '(dired-x-hands-off-my-keys nil)
  '(display-time-default-load-average nil)
  '(display-time-mode t)
+ '(dnd-open-file-other-window t)
  '(ecb-activation-selects-ecb-frame-if-already-active t)
  '(ecb-auto-expand-tag-tree (quote all))
  '(ecb-compile-window-height 0.2)
@@ -261,7 +262,7 @@
  '(ls-lisp-format-time-list (quote ("%Y-%m-%d %H:%M" "%Y-%m-%d     ")))
  '(mail-archive-file-name "~/mail/babyl/OUT")
  '(mail-use-rfc822 t)
- '(mouse-autoselect-window -0.1)
+ '(mouse-autoselect-window -0.2)
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point t)
  '(normal-erase-is-backspace (quote maybe))
@@ -311,6 +312,8 @@
  '(show-paren-style (quote parenthesis))
  '(show-trailing-whitespace nil)
  '(size-indication-mode t)
+ '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
+ '(speedbar-show-unknown-files t)
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
@@ -343,4 +346,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
