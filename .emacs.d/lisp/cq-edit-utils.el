@@ -4,22 +4,37 @@
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
+;;; There may be an emacs lisp function to do this already
+(defun cq/region-width (p1 p2)
+  "Visual distance between positions P1 and P2, if P1 is before P2. Else 0."
+  (let ((pos (goto-char p1))
+        (end (if (markerp p2) (marker-position p2) p2))
+        (width 0))
+    (while (< pos end)
+      (let ((char (char-after pos)))
+        (cond ((char-equal char ?\n)    ;never from cq/set-selective-display
+               (setq width 0))
+              ((char-equal char ?\t)
+               (setq width (+ width tab-width)))
+              ((char-equal char ?\ )
+               (setq width (1+ width)))
+              (t                        ;never from cq/set-selective-display
+               (setq width (1+ width)))))
+      (setq pos (1+ pos)))
+    width))
+
 (defun cq/set-selective-display (p)
   "Same as invoking `set-selective-display' on the prefix argument, except when
 invoked with a plain \\C-u.
 
 In that case, the current line's left margin determines what
 levels of indentation are hidden. As usual, undo by invoking
-set-selective-display again."
+`set-selective-display` again."
   (interactive "P")
   (cond ((consp p)                       ;(4) is the raw form of \C-u
-         (let* ((bol (progn
-                       (move-beginning-of-line nil)
-                       (point)))
-                (margin (progn
-                          (back-to-indentation)
-                          (point)))
-                (indentation (- margin bol)))
+         (let* ((bol (progn (move-beginning-of-line nil) (point)))
+                (margin (progn (back-to-indentation) (point)))
+                (indentation (cq/region-width bol margin)))
            (set-selective-display indentation)))
         (t
          (set-selective-display p))))
