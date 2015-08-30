@@ -140,6 +140,7 @@
  ;; If there is more than one, they won't work right.
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
+ '(auto-mode-case-fold nil)
  '(background-color "#202020")
  '(background-mode dark)
  '(backup-by-copying-when-linked t)
@@ -346,4 +347,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+ )
