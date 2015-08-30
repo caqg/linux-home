@@ -12,6 +12,7 @@
         <rdf:li rdf:resource="http://www.debian.org/"/>
         <rdf:li rdf:resource="https://one.ubuntu.com/"/>
         <rdf:li rdf:resource="http://www.gnome.org/"/>
+        <rdf:li rdf:resource="http://10.0.0.1:80/"/>
       </rdf:Seq>
     </items>
   </channel>
@@ -43,5 +44,9 @@
   <item rdf:about="http://www.gnome.org/">
     <title>GNOME</title>
     <link>http://www.gnome.org/</link>
+  </item>
+  <item rdf:about="http://10.0.0.1:80/">
+    <title>TG862</title>
+    <link>http://10.0.0.1:80/</link>
   </item>
 </rdf:RDF>
