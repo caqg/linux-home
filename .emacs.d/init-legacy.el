@@ -257,7 +257,7 @@
                           'default-directory
                           " "
                           'global-mode-string
-                          "("
+                          " ("
                           'mode-name
                           'minor-mode-alist
                           ") %-")))

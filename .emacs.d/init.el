@@ -138,6 +138,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(Man-switches "-a")
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
  '(auto-mode-case-fold nil)
@@ -182,7 +183,11 @@
  '(dired-listing-switches "-Alh --time-style=long-iso --group-directories-first")
  '(dired-use-ls-dired t)
  '(dired-x-hands-off-my-keys nil)
- '(display-time-default-load-average nil)
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-default-load-average 0)
+ '(display-time-format "%a %m‒%d %H:%M ")
+ '(display-time-interval 30)
  '(display-time-mode t)
  '(dnd-open-file-other-window t)
  '(ecb-activation-selects-ecb-frame-if-already-active t)
