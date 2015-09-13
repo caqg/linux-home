@@ -663,8 +663,9 @@
 ;;      (format "%s:%s " 24-hours minutes)
 ;;      (if mail "Mail ")))
 (defun wrap-up-start ()
-    (message "%s (%s) @ %s"
-             (user-full-name) (user-login-name) (system-name)))
+    (message "%s (%s) @ %s -- %s GCs %s in init"
+             (user-full-name) (user-login-name) (system-name)
+             gcs-done (emacs-init-time)))
 
 ;;;end .emacs-shared, loaded from ~/.emacs, ~/.xemacs/init.el
 ;;;end init-legacy.el, loaded from init.el
