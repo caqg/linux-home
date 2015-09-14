@@ -17,3 +17,6 @@ git clone https://github.com/solarized/xresources.git
 
 ## stable-linux
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
+
+## vim
+git clone https://github.com/vim/vim.git
