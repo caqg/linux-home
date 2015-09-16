@@ -455,7 +455,7 @@
 	     [(12)
 	      nil "A theme loosely based on Tron: Legacy colors" single])
  (transmission .
-	       [(0 4 1)
+	       [(0 5)
 		((emacs
 		  (24 4))
 		 (let-alist
@@ -1983,7 +1983,7 @@
 	      [(0 1)
 	       nil "Become an Emacs master" single])
  (marshal .
-	  [(0 5 0)
+	  [(0 5 1)
 	   ((eieio
 	     (1 4))
 	    (json
