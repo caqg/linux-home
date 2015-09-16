@@ -656,13 +656,15 @@
 
 ;;; Load Abbreviations.
 (quietly-read-abbrev-file nil)
+
 
+
 ;; (setq display-time-string-forms
 ;;       '((format "%s-%02d-%02d "
 ;;                 year (string-to-number month) (string-to-number day))
 ;;      (format "%s:%s " 24-hours minutes)
 ;;      (if mail "Mail ")))
-(defun wrap-up-start ()
+(defun cq/wrap-up-start ()
     (message "%s (%s) @ %s -- %s GCs %s in init"
              (user-full-name) (user-login-name) (system-name)
              gcs-done (emacs-init-time)))
