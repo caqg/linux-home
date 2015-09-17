@@ -9,6 +9,7 @@
 
   (load-file "~/.emacs.d/init-legacy.el")
   (message "Done loading legacy init")
+
   (load-library "cl-lib")
   (add-to-list 'load-path "~/.emacs.d/lisp")
 
@@ -18,7 +19,6 @@
 
   (load-library "cq-edit-utils")
   (global-set-key "\C-x$" 'cq/set-selective-display)
-
 
   (load-library "cq-file-hooks")
   (add-hook 'before-save-hook (lambda ()
@@ -32,12 +32,10 @@
   (load-library "cq-cedet-ede-ecb-utils")
   (global-set-key "\C-zL" 'cq/load-ede-project-and-tags)
 
-  (add-to-list 'auto-mode-alist (cons "bash\\.bashrc$" 'sh-mode))
-  (add-to-list 'auto-mode-alist (cons "bash_completion$" 'sh-mode))
-  (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
-  (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
-  (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
-  (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
+  ;; (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
+  ;; (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
+  ;; (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
+  ;; (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
 
   (add-hook 'dired-load-hook
             #'(lambda ()
@@ -81,17 +79,16 @@
   (add-hook 'org-mode-hook 'turn-on-font-lock)
 
   (require 'remember)
-  (when (and (= emacs-major-version 24)
-             (< emacs-minor-version 4))
-    (require 'org-remember)
-    (org-remember-insinuate))
   (setq org-directory "~/Notes")
   (setq org-default-notes-file (concat org-directory "/my-notes.org"))
   (define-key global-map "\C-cr" 'org-remember)
 
-  (require 'semantic)
   (require 'cq-x-utils)
+  (require 'grep)
+  (require 'paren)
   (require 'parenface)
+  (require 'tabbar)
+  (require 'time)
 
   ;; tabbar (already initialized)
   (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
@@ -101,7 +98,6 @@
            (sorted (sort tabs #'(lambda (a b)
                                   (string< (buffer-name (car a))
                                            (buffer-name (car b)))))))
-      ;; (message "sorted-->%s" sorted)
       (set tabset sorted)))
 
   ;; Color theme
@@ -111,12 +107,21 @@
          (load-theme 'solarized-dark t t)
          (require 'cq-solarized-theme-init)))
 
-  (require 'ecb)                        ;last require so at end of Tools menu
+  (require 'recentf)
+
+  (require 'bison-mode)
+  (require 'gdb-mi)
+  (require 'semantic)
+  (require 'semantic/decorate/mode)
+  (require 'semantic/idle)
+  (require 'semantic/mru-bookmark)
+  (require 'ede)
+  (require 'ecb)                        ;last require, so at end of Tools menu
 
   (if window-system
       (ad-activate 'tabbar-add-tab 'compile-it))
 
-  (setq-default ediff-auto-refine 'off)
+  (setq-default ediff-auto-refine 'on)
 
   (when (memq window-system (list 'x 'w32))
     (set-default-xtitle))
@@ -213,6 +218,7 @@
  '(ecb-windows-width 0.2)
  '(ede-project-directories (quote ("/work/stable-linux")))
  '(ediff-custom-diff-options "-U10")
+ '(ediff-highlight-all-diffs nil)
  '(ediff-prefer-iconified-control-frame t)
  '(ediff-show-clashes-only t)
  '(ediff-split-window-function (quote split-window-horizontally))
