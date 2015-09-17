@@ -1,6 +1,6 @@
 " vim Initialization
 
-source $HOME/.exrc
+source $HOME/.vim/exrc
 
 set directory=
 set directory+=~/tmp
