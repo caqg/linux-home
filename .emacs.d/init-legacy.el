@@ -19,7 +19,9 @@
   "Program to produce a time stamp (see cq-timestamp).")
 
 (setq tag-table-alist nil)
+
 
+
 ;;; Mode Hooks
 
 (add-hook 'c-mode-hook                  'cq-c-mode)
@@ -256,6 +258,9 @@
                     (list " %b(%s) %p (%l,%c) "
                           'default-directory
                           " "
+                          '(:eval (cq/get-git-branch-mode-line-item))
+                          ;; '(vc-mode vc-mode)
+                          " "
                           'global-mode-string
                           " ("
                           'mode-name
@@ -303,7 +308,7 @@
 (add-hook 'fortran-mode-hook             'cq-fortran-mode)
 
 ;;; For Mod2 mode
-(add-hook 'mod2-mode-hook                'cq-mod2-mode)
+;; (add-hook 'mod2-mode-hook                'cq-mod2-mode)
 
 ;; ;;; For Yacc mode
 ;; (add-hook 'yacc-mode-hook
@@ -619,13 +624,13 @@
   (autoload 'locate-indentation file "Find indentation extent for current line."
     nil t ))
 
-(let ((file (concat *cq/emacslib* "cq-generic-code-mode")))
-  (autoload 'cq-generic-code-mode file "Customize generic code mode" t nil)
-  (autoload 'new-script file "Write a new executable script." t nil)
-  (autoload 'cq-cakefile-mode file "Setup for cakefiles" t nil)
-  (autoload 'cq-pic-mode file "Setup for pic input" t nil)
-  (autoload 'cq-sun-assembler-mode file "Setup for sun-assembler" t nil)
-  (autoload 'Mathematica-mode file "Edit Mathematica sources" t nil))
+;; (let ((file (concat *cq/emacslib* "cq-generic-code-mode")))
+;;   (autoload 'cq-generic-code-mode file "Customize generic code mode" t nil)
+;;   (autoload 'new-script file "Write a new executable script." t nil)
+;;   (autoload 'cq-cakefile-mode file "Setup for cakefiles" t nil)
+;;   (autoload 'cq-pic-mode file "Setup for pic input" t nil)
+;;   (autoload 'cq-sun-assembler-mode file "Setup for sun-assembler" t nil)
+;;   (autoload 'Mathematica-mode file "Edit Mathematica sources" t nil))
 
 ;;(let ((file (concat *cq/emacslib* "cq-comint")))
 ;;  (autoload 'cq-shell-mode file "Setup shell modes" t nil))
