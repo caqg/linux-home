@@ -2,6 +2,8 @@
 
 ;;; 2015-09-16 05:21:08UT (cesar@cesar-U64-14):
 ;;; 0.8 MB between gcs is too little nowadays
+;;; hint at reddit from /u/bahblah
+;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
 (setq gc-cons-threshold (* 1024 1024 16))
 
 (let ((file-name-handler-alist nil)
