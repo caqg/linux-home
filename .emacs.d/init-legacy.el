@@ -377,6 +377,13 @@
 
 ;;; Dired Extensions
 (add-hook 'dired-mode-hook               'cq-dired-mode)
+(add-hook 'dired-mode-hook
+          #'(lambda ()
+              (setq mode-line-format
+                    (subst '(:eval (cq/get-git-branch-mode-line-item))
+                           '(vc-mode vc-mode)
+                           mode-line-format
+                           :test #'equal))))
 
 ;;; Buffer-Menu Extensions
 (add-hook 'buffer-menu-mode-hook         'cq-buffer-menu)
