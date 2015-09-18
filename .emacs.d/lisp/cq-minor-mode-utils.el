@@ -14,9 +14,6 @@ Otherwise, turn the minor mode on."
            (setter  (symbol-function mode-symbol)))
       (funcall setter flipped))))
 
-;;;       (message "'%s before %s flipped %s after %s"
-;;;               mode-symbol current flipped (symbol-value mode-symbol))
-
 (defun cq/flip-scroll-bar-modes ()
   "Invert the status of scroll-bar-mode and horizontal-scroll-bar-mode"
   (interactive)
