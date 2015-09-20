@@ -1,3 +1,23 @@
 #!/bin/sh
+## Copyright (C) 20yy by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
 
-etags `find *.[ch] -type f -print`
+PATH=/usr/local/bin:/bin:/usr/bin:$HOME/cmd
+
+ctags=${CTAGSCMD-/usr/bin/ctags}
+ctags_flags=${CTAGSFLAGS:--eR}
+
+gtags=${GTAGSCMD:-/usr/local/bin/gtags}
+gtags_flags=${GTAGSFLAGS:--I}
+
+cscope_indexer=${CSCOPE_INDEXER:-mk-cscope-ix}
+
+###
+
+"$ctags" $ctags_flags
+"$gtags" $gtags_flags
+"$cscope_indexer"
+
+# end

@@ -6,10 +6,7 @@
 
 PATH=/bin:/usr/bin:$HOME/cmd
 
-mkcpproot=${MKCPPROOTCMD:-mk-ede-cpproot-el}
-mkcpproot_flags=""
-
-mktags
-"$mkcpproot" $mkcpproot_flags
+rmtags
+rm -f ede-cpproot.el ede-cpproot.elc
 
 # end

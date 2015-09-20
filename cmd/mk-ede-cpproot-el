@@ -1,26 +1,62 @@
 #!/bin/sh
+## Copyright (C) 20yy by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
 
 PATH=/bin:/usr/bin
 
-# Run from the top of the project whose include directories you want to show to semantic.
+# Run from the top of the project whose include directories you want to show
+# to semantic.
+
+# Set env EDE_SYSTEM_INCLUDE_PATHS for external dependences (not gcc, but, say,
+# qt) that you want EDE to find. This variable is a list of directories, SPACE
+# separatted.
+
 elfile=$PWD/ede-cpproot.el
 projname=$(basename $(pwd))
 
 (
-    echo '(ede-cpp-root-project "'"$projename"'" :file "'"$elfile"'"'
-    echo '  :include-path '"'"'('
+	echo "(require 'ede/cpp-root)"
+	echo '(ede-cpp-root-project'
+	echo ' "'"$projname"'"'
+	echo ' :file "'"$elfile"'"'
+	echo ' :include-path'
+	echo " '("
 
-    find -L . -type f \( \
-        -name '*.h' -o \
-        -name '*.hh' -o \
-        -name '*.hpp' -o \
-        -name '*.hxx'  \) |
-    while read h; do dirname $h; done |
-    sort |
-    uniq |
-    sed -e 's/^\./    "/' -e 's/$/"/'
+	find -L . -type f \( \
+	     -name '*.h' -o \
+	     -name '*.hh' -o \
+	     -name '*.hpp' -o \
+	     -name '*.hxx'  \) |
+	while read h; do dirname $h; done |
+	sort |
+	uniq |
+	sed -e 's/^\./   "/' -e 's/$/"/'
 
-    echo '  ))'
+	case "$EDE_SYSTEM_INCLUDE_PATHS" in
+	"")	echo "  ))"
+		;;
+	*)
+		echo '   )'
+		echo ' :system-include-path'
+		echo ' '"'"'('
+
+		find -L "${EDE_SYSTEM_INCLUDE_PATHS}" -type f \( \
+		     -name '*.h' -o \
+		     -name '*.hh' -o \
+		     -name '*.hpp' -o \
+		     -name '*.hxx'  \) |
+		while read h; do dirname $h; done |
+		sort |
+		uniq |
+		sed -e 's/^/   "/' -e 's/$/"/'
+
+		echo '   ))'
+		;;
+	esac
 ) > $elfile
 
-ls -l $elfile | sed -e 's/^/	/'
+# ls -l $elfile | sed -e 's/^/	/'
+
+# end
