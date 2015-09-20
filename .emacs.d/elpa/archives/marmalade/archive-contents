@@ -2994,7 +2994,7 @@
 	 [(0 1 3)
 	  nil "Send text to http://fpaste.org" single])
  (form-feed .
-	    [(0 2 0)
+	    [(0 2 1)
 	     nil "Display ^L glyphs as horizontal lines" single])
  (fooddice .
 	   [(0 1)
@@ -3713,7 +3713,7 @@
 		   (0 2 3)))
 		 "Set faces based on available fonts" single])
  (dxr .
-      [(2 1)
+      [(2 2)
        nil "Convenient access to a DXR server" single])
  (durendal .
 	   [(0 2)
