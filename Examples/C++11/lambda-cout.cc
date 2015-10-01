@@ -1,4 +1,4 @@
-?#include <algorithm>
+//?#include <algorithm>
 #include <functional>
 #include <iostream>
 #include <iterator>
@@ -7,13 +7,13 @@ using namespace std;
 
 /// Instead of the canonical form:
 /// for (int i = 1; i < argc; ++i) {
-/// 	cout << argv[i] << endl;
+///	cout << argv[i] << endl;
 /// }
 
 int main(int argc, char** argv)
 {       // echo
-        for_each(&argv[1], &argv[argc], // <- argv[1] to argv[argc-1]
-                 [](char* s){cout << s << endl;});
+	for_each(&argv[1], &argv[argc], // <- argv[1] to argv[argc-1]
+		 [](char* s){cout << s << endl;});
 	return 0;
 }
 
