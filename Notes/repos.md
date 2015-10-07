@@ -6,6 +6,9 @@ git clone https://github.com/seebi/dircolors-solarized.git
 ## emacs
 git clone git://git.savannah.gnu.org/emacs
 
+## git
+git clone https://github.com/git/git.git
+
 ## gnome-terminal-colors-solarized
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 

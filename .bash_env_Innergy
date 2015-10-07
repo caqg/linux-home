@@ -2,7 +2,7 @@
 
 export SOFTWARE=/work/Innergy/Software
 export INNERGY_ROOT=${SOFTWARE}
-export SYSTEMC_HOME=${INNERGY_ROOT}/External/systemc
+export SYSTEMC_HOME=${INNERGY_ROOT}/src/External/systemc
 export SYSTEMC=${SYSTEMC_HOME}
 # export LLVMROOT=${INNERGY_ROOT}
 

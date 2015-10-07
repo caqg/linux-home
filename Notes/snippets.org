@@ -1,6 +1,7 @@
 * Emacs git
 git://git.savannah.gnu.org/emacs
 
+
 * rsync
 rsync -a	Best default ('archive')
 rsync -b	Make backups
@@ -8,3 +9,16 @@ rsync -i	Itemize every change
 rsync -n	Dry run
 rsync -u	Do not copy over newer files
 rsync -z	Compress during transfer
+
+
+* Recompile packages
+M-: (byte-recompile-directory package-user-dir nil 'force)
+
+
+* Elisp for git branch
+
+(string-utils-trim-whitespace
+ (shell-command-to-string
+   "git branch 2>/dev/null | sed -n '/\\* \\(.*\\)/s// git:\\1/p'"))
+
+
