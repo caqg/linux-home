@@ -280,7 +280,7 @@
  '(mail-use-rfc822 t)
  '(mouse-autoselect-window -0.2)
  '(mouse-wheel-mode t nil (mwheel))
- '(mouse-yank-at-point t)
+ '(mouse-yank-at-point nil)
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
  '(org-catch-invisible-edits (quote show))
