@@ -283,9 +283,13 @@
  '(mouse-yank-at-point t)
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
- '(org-catch-invisible-edits (quote smart))
+ '(org-catch-invisible-edits (quote show))
  '(org-completion-use-ido t)
+ '(org-export-backends
+   (quote
+    (ascii html icalendar latex man md texinfo freemind groff)))
  '(org-outline-path-complete-in-steps nil)
+ '(org-pretty-entities t)
  '(org-startup-indented t)
  '(package-archives
    (quote
