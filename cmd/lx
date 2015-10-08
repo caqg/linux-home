@@ -1,0 +1,64 @@
+#!/bin/bash
+## Copyright (C) 2014-2015 by Cesar A Quiroz, Ph.D.
+## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
+## All Rights Reserved Worldwide
+## mailto:cesar.quiroz@gmail.com
+
+
+## Logged execution: keep a single log of both fd 1 and fd 2
+##
+## Unless called "lx", runs make "$@"; else runs "$@"
+
+
+progname=$(basename $0)
+
+case "$progname" in
+lx)	runner=""
+	runnerpfx="lx-"
+	;;
+*)	runner="make"
+	runnerpfx="make-"
+	;;
+esac
+
+
+# Is there a target (an arg that does not start with a dash)?
+
+target=
+for a; do
+	case "$a" in
+	-* | *=*)				;; # skip
+	*) target=$(basename "$a"); break	;;
+	esac
+done
+
+tstamp=$(/bin/date +%Y%m%d_%H%M%S)
+
+case "$target" in
+"")	tag="$tstamp"				;;
+*)	tag="$target-$tstamp"			;;
+esac
+
+D=
+[ -d "$LOGSDIR" ] && {
+	case "$LOGSDIR" in
+	*/)	D="$LOGSDIR"			;;
+	*)	D="$LOGSDIR"/			;;
+	esac
+}
+
+logfile="$D""$runnerpfx""$tag".log
+case "$logfile" in
+/*)						;;
+*)	logfile="$(pwd)/$logfile"		;;
+esac
+
+{	printf '# -*- mode: Compilation; default-directory: \"%s\" -*-\n' $(pwd)
+	echo "$@"; echo;
+	time -p 2>&1 $runner "$@" 2>&1; rc=$?;
+	printf "\f\n";
+	printf "RC:\t%d\n" $rc;
+	printf "Log:\t%s\n" $(/bin/ls "$logfile");
+} | tee "$logfile"
+
+#end m
