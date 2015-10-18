@@ -53,9 +53,9 @@ case "$logfile" in
 *)	logfile="$(pwd)/$logfile"		;;
 esac
 
-{	printf '# -*- mode: Compilation; default-directory: \"%s\" -*-\n' $(pwd)
-	echo "$@"; echo;
-	time -p 2>&1 $runner "$@" 2>&1; rc=$?;
+{	printf '# -*- mode: Compilation; default-directory: \"%s\" -*-\n' $(pwd);
+	echo $runner "$@"; echo;
+	time -p $runner "$@" 2>&1; rc=$?;
 	printf "\f\n";
 	printf "RC:\t%d\n" $rc;
 	printf "Log:\t%s\n" $(/bin/ls "$logfile");
