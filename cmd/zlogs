@@ -10,12 +10,12 @@ zipname=""
 dirname=""
 zipfile=""
 
-ZLOGSGLOB=${ZLOGSGLOB:-'*.log'}
+ZLOGSGLOB=${ZLOGSGLOB:-*.log}
 
 PATH=/bin:/usr/bin
 
 usage () {
-	echo usage: $progname '[zipname [dirname]]'
+	echo usage: $progname '[options] [zipname [dirname]]'
 	echo ""
 	echo "	Collect the \$ZLOGSGLOB (default \*.log) files in the current"
 	echo "	directory into a zip. The log files are added/updated in the"
@@ -63,12 +63,13 @@ usage () {
 	echo ""
 	echo "	OPTIONS"
 	echo ""
-	echo "	-h"
+	echo "  -d		Delete logs after zipping them"
+	echo
+	echo "  -n		Show, but not do, what would happen"
+	echo
+	echo "  -h"
 	echo "	--help		Print this message to stdout."
 }
-
-#------------------------------------------------------------------------------
-
 
 mk_zipfile_name () {
 	zipname="$1"
@@ -86,12 +87,13 @@ mk_zipfile_name () {
 	echo $zipfile
 }
 
-
-#------------------------------------------------------------------------------
-
+deleter=":"
+interpreter="bash"
 for arg in "$@"; do
 	case "$arg" in
+	-d|--delete)    deleter="rm -f"; shift;;
 	-h|--help)	usage; exit 0;;
+	-n|--dry-run)   interpreter="cat"; shift;;
 	esac
 done
 
@@ -117,7 +119,12 @@ case "$zipfile" in
 *)	zipfile="$zipfile".zip ;;
 esac
 
-echo zip -uv ${zipfile} "${ZLOGSGLOB}" | bash -x
+cat <<EOF | $interpreter
+zip -uv ${zipfile} ${ZLOGSGLOB}
+case \$? in
+0 | 12) $deleter ${ZLOGSGLOB}; echo; ls ${ZLOGSGLOB} ;;
+esac
+EOF
 echo
 echo "zipfile:	$zipfile"
 
