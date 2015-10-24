@@ -69,4 +69,27 @@
       <output name="VIRTUAL1">
       </output>
   </configuration>
+  <configuration>
+      <clone>no</clone>
+      <output name="eDP1">
+          <vendor>CMN</vendor>
+          <product>0x15b9</product>
+          <serial>0x00000000</serial>
+          <width>1920</width>
+          <height>1080</height>
+          <rate>60</rate>
+          <x>0</x>
+          <y>0</y>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>yes</primary>
+      </output>
+      <output name="HDMI1">
+      </output>
+      <output name="VGA1">
+      </output>
+      <output name="VIRTUAL1">
+      </output>
+  </configuration>
 </monitors>
