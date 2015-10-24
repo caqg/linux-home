@@ -2,7 +2,7 @@
 
 dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
 
-DEFAULT_XTERM=gnome-terminal
+DEFAULT_XTERM=sakura
 xterm=${XTERM:-${DEFAULT_XTERM}}
 
 xrows=${XROWS:-36}
@@ -23,7 +23,7 @@ case $# in
 1)
     case "$1" in
     -h*|--h*|-\?)
-        usage; exit 0 ;;
+	usage; exit 0 ;;
     esac ;;
 esac
 
@@ -37,7 +37,7 @@ newcmd=`sed -n -e "/^$name	\(.*\)/s//\1/p" $dispatch`
 cmd=${newcmd:-$cmd}
 
 shift				# consume the cmd name
-case $# in 
+case $# in
 0)	title="$who@$where  $name"			;;
 1)	title="@$where  $name $1"			;;
 2)	title="@$where  $name $1 $2"			;;
@@ -47,8 +47,14 @@ case $# in
 *)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
 esac
 
-# Go for it
 export PATH="$OPATH"
-"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+case "$xterm" in
+gnome-terminal)
+	"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+	;;
+sakura)
+	"$xterm" -r "$xrows" -c "$xcols" -t "$title" -e $cmd ${1+"$@"} &
+	;;
+esac
 
 # end of x
