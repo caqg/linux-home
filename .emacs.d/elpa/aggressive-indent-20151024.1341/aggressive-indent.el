@@ -4,7 +4,7 @@
 
 ;; Author: Artur Malabarba <emacs@endlessparentheses.com>
 ;; URL: https://github.com/Malabarba/aggressive-indent-mode
-;; Package-Version: 20151014.435
+;; Package-Version: 20151024.1341
 ;; Version: 1.4.1
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 ;; Keywords: indent lisp maint tools
@@ -93,6 +93,7 @@
 (defgroup aggressive-indent nil
   "Customization group for aggressive-indent."
   :prefix "aggressive-indent-"
+  :group 'electricity
   :group 'indent)
 
 (defun aggressive-indent-bug-report ()
