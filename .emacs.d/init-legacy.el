@@ -179,7 +179,7 @@
                 (define-key gtags-select-mode-map [mouse-2] 'gtags-select-tag-by-event))))
 
 
-(setq inferior-lisp-program "clisp")
+;;(setq inferior-lisp-program "clisp")
 (add-hook 'ilisp-mode-hook
           #'(lambda () (setq lisp-no-popper t)))
 (add-hook 'lisp-mode-hook               ;tailored for CLISP-HS

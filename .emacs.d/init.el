@@ -271,6 +271,7 @@
  '(indent-tabs-mode nil)
  '(indicate-buffer-boundaries (quote left))
  '(indicate-empty-lines t)
+ '(inferior-lisp-program "sbcl")
  '(inhibit-startup-echo-area-message "cesar")
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
