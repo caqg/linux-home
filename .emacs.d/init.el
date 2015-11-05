@@ -282,6 +282,11 @@
  '(load-prefer-newer t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list (quote ("%Y-%m-%d %H:%M" "%Y-%m-%d     ")))
+ '(magit-diff-refine-hunk t)
+ '(magit-repository-directories (quote ("/work")))
+ '(magit-status-sections-hook
+   (quote
+    (magit-insert-status-headers magit-insert-repo-header magit-insert-remote-header magit-insert-user-header magit-insert-merge-log magit-insert-rebase-sequence magit-insert-am-sequence magit-insert-sequencer-sequence magit-insert-bisect-output magit-insert-bisect-rest magit-insert-bisect-log magit-insert-untracked-files magit-insert-unstaged-changes magit-insert-staged-changes magit-insert-stashes magit-insert-unpulled-commits magit-insert-unpushed-commits)))
  '(mail-archive-file-name "~/mail/babyl/OUT")
  '(mail-use-rfc822 t)
  '(mouse-autoselect-window -0.2)
