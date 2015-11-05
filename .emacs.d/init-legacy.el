@@ -305,7 +305,7 @@
               (font-lock-mode 1)))
 
 ;;; For FORTRAN mode
-(add-hook 'fortran-mode-hook             'cq-fortran-mode)
+;; (add-hook 'fortran-mode-hook             'cq-fortran-mode)
 
 ;;; For Mod2 mode
 ;; (add-hook 'mod2-mode-hook                'cq-mod2-mode)
