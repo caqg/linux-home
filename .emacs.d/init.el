@@ -34,11 +34,6 @@
   (load-library "cq-cedet-ede-ecb-utils")
   (global-set-key "\C-zL" 'cq/load-ede-project-and-tags)
 
-  ;; (add-to-list 'auto-mode-alist (cons "\\.y$" 'bison-mode))
-  ;; (add-to-list 'auto-mode-alist (cons "\\.l$" 'bison-mode))
-  ;; (add-to-list 'auto-mode-alist (cons "\\.md$" 'markdown-mode))
-  ;; (add-to-list 'auto-mode-alist (cons "\\.markdown$" 'markdown-mode))
-
   (add-hook 'dired-load-hook
             #'(lambda ()
                 ;; Bind dired-x-find-file.
@@ -54,10 +49,9 @@
   (electric-indent-mode -1)
 
   (require 'magit)
-  (defvar *cq/magit-keymap* (make-sparse-keymap "Magit")
-    "Key bindings for Magit, in user-reserved space")
-  (global-set-key "\C-cm" *cq/magit-keymap*)
-  (global-set-key "\C-cms" 'magit-status)
+  (global-set-key "\C-xg" 'magit-status)
+  (global-set-key "\C-x\M-g" 'magit-dispatch-popup)
+  (global-magit-file-mode 1)
 
   (require 'tramp)
 
