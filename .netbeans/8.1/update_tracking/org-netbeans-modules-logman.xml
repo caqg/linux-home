@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.logman">
+    <module_version install_time="1446947743367" last="true" origin="Plugin Portal" specification_version="2.0">
+        <file crc="2603741285" name="config/Modules/org-netbeans-modules-logman.xml"/>
+        <file crc="1692418496" name="modules/ext/jLogMan-2.0.jar"/>
+        <file crc="1691467653" name="modules/ext/nbstubs-1.4.jar"/>
+        <file crc="4274760573" name="modules/ext/simplevalidation-1.4.jar"/>
+        <file crc="749413045" name="modules/org-netbeans-modules-logman.jar"/>
+    </module_version>
+</module>

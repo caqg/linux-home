@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiewb.netbeans.plugin.togglelinewrap">
+    <module_version install_time="1446947744201" last="true" origin="Plugin Portal" specification_version="1.0">
+        <file crc="803173316" name="config/Modules/de-markiewb-netbeans-plugin-togglelinewrap.xml"/>
+        <file crc="1465503815" name="modules/de-markiewb-netbeans-plugin-togglelinewrap.jar"/>
+    </module_version>
+</module>

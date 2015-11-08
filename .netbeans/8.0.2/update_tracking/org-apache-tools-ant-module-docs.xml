@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.apache.tools.ant.module.docs">
+    <module_version install_time="1428210104577" last="true" origin="Certified Plugins" specification_version="2.32">
+        <file crc="2400048576" name="config/Modules/org-apache-tools-ant-module-docs.xml"/>
+        <file crc="2232282651" name="modules/docs/org-apache-tools-ant-module-docs.jar"/>
+        <file crc="647541665" name="modules/org-apache-tools-ant-module-docs.jar"/>
+    </module_version>
+</module>

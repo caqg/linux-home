@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="net.sf.efhnbm/0">
+    <module_version install_time="1428210104054" last="true" origin="Plugin Portal" specification_version="0.4.7">
+        <file crc="2276310837" name="config/Modules/net-sf-efhnbm.xml"/>
+        <file crc="2888972854" name="modules/net-sf-efhnbm.jar"/>
+    </module_version>
+</module>

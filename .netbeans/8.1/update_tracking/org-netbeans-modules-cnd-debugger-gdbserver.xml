@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.cnd.debugger.gdbserver">
+    <module_version install_time="1446947743236" last="true" origin="Plugin Portal" specification_version="2.4.1">
+        <file crc="3761646788" name="config/Modules/org-netbeans-modules-cnd-debugger-gdbserver.xml"/>
+        <file crc="2638067844" name="modules/org-netbeans-modules-cnd-debugger-gdbserver.jar"/>
+    </module_version>
+</module>

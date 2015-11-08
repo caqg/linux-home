@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.junichi11.netbeans.github.issues">
+    <module_version install_time="1428210103902" last="true" origin="Plugin Portal" specification_version="0.1.1">
+        <file crc="4134491668" name="config/Modules/com-junichi11-netbeans-github-issues.xml"/>
+        <file crc="1680946904" name="modules/com-junichi11-netbeans-github-issues.jar"/>
+        <file crc="3385096118" name="modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar"/>
+        <file crc="2267857860" name="modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar"/>
+        <file crc="4229455853" name="modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar"/>
+        <file crc="4145295236" name="modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar"/>
+        <file crc="3420835642" name="modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar"/>
+        <file crc="2906971059" name="modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar"/>
+        <file crc="3141316544" name="modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar"/>
+        <file crc="105624461" name="modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar"/>
+        <file crc="3225033038" name="modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar"/>
+        <file crc="1501686204" name="modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar"/>
+        <file crc="1659550616" name="update_tracking/com-junichi11-netbeans-github-issues.xml"/>
+    </module_version>
+</module>

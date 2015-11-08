@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.elmar_baumann.nbmemusage/1">
+    <module_version install_time="1428210104130" last="true" origin="Plugin Portal" specification_version="1.1">
+        <file crc="277238067" name="config/Modules/de-elmar_baumann-nbmemusage.xml"/>
+        <file crc="3327039045" name="modules/de-elmar_baumann-nbmemusage.jar"/>
+    </module_version>
+</module>

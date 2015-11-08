@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="closeprojects">
+    <module_version install_time="1446947743198" last="true" origin="Plugin Portal" specification_version="1.4.0.1">
+        <file crc="3221317824" name="config/Modules/closeprojects.xml"/>
+        <file crc="108257230" name="modules/closeprojects.jar"/>
+    </module_version>
+</module>

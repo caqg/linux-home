@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="bv.offa.netbeans.cnd.unittest">
+    <module_version install_time="1428211473711" last="false" origin="Plugin Portal" specification_version="0.5.1">
+        <file crc="4263948438" name="config/Modules/bv-offa-netbeans-cnd-unittest.xml"/>
+        <file crc="1150738983" name="modules/bv-offa-NBCndUnit.jar"/>
+    </module_version>
+    <module_version install_time="1431194448246" last="false" origin="Plugin Portal" specification_version="0.6.0">
+        <file crc="4263948438" name="config/Modules/bv-offa-netbeans-cnd-unittest.xml"/>
+        <file crc="3258611645" name="modules/bv-offa-NBCndUnit.jar"/>
+    </module_version>
+    <module_version install_time="1433051131877" last="false" origin="Plugin Portal" specification_version="0.6.1">
+        <file crc="4263948438" name="config/Modules/bv-offa-netbeans-cnd-unittest.xml"/>
+        <file crc="141392201" name="modules/bv-offa-NBCndUnit.jar"/>
+    </module_version>
+    <module_version install_time="1440304703145" last="true" origin="Plugin Portal" specification_version="0.6.2">
+        <file crc="4263948438" name="config/Modules/bv-offa-netbeans-cnd-unittest.xml"/>
+        <file crc="3478471112" name="modules/bv-offa-NBCndUnit.jar"/>
+    </module_version>
+</module>

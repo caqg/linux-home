@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="com.adi.dev.java.netbeans.plugins.laf.changer/1">
+    <module_version install_time="1428210104011" last="true" origin="Plugin Portal" specification_version="1.0.5">
+        <file crc="1433957706" name="config/Modules/com-adi-dev-java-netbeans-plugins-laf-changer.xml"/>
+        <file crc="1244372539" name="modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar"/>
+    </module_version>
+</module>

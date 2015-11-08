@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="jindent.plugin.netbeans">
+    <module_version install_time="1428210104396" last="true" origin="Plugin Portal" specification_version="4.2.4">
+        <file crc="3981588805" name="config/Modules/jindent-plugin-netbeans.xml"/>
+        <file crc="523426771" name="modules/ext/Jindent.jar"/>
+        <file crc="3355589167" name="modules/ext/JindentHelp.jar"/>
+        <file crc="2526228326" name="modules/ext/jhall.jar"/>
+        <file crc="2319626013" name="modules/ext/l2fprod-common-all.jar"/>
+        <file crc="2825720822" name="modules/jindent-plugin-netbeans.jar"/>
+    </module_version>
+</module>

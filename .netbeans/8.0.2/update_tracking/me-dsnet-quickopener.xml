@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="me.dsnet.quickopener/1212">
+    <module_version install_time="1428210104557" last="true" origin="Plugin Portal" specification_version="1.0.2">
+        <file crc="3438671593" name="config/Modules/me-dsnet-quickopener.xml"/>
+        <file crc="764065585" name="modules/ext/OSCommands.jar"/>
+        <file crc="1908353198" name="modules/me-dsnet-quickopener.jar"/>
+    </module_version>
+</module>

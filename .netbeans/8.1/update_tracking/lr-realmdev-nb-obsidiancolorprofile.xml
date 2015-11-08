@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="lr.realmdev.nb.obsidiancolorprofile">
+    <module_version install_time="1446947742761" last="true" origin="Plugin Portal" specification_version="1.0.5">
+        <file crc="1269238066" name="config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml"/>
+        <file crc="2847860650" name="modules/lr-realmdev-nb-obsidiancolorprofile.jar"/>
+    </module_version>
+</module>

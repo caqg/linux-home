@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="netbeans.csv.editor/2">
+    <module_version install_time="1428210104490" last="true" origin="Plugin Portal" specification_version="2.2.1">
+        <file crc="1620368339" name="config/Modules/netbeans-csv-editor.xml"/>
+        <file crc="2695856779" name="modules/netbeans-csv-editor.jar"/>
+    </module_version>
+</module>

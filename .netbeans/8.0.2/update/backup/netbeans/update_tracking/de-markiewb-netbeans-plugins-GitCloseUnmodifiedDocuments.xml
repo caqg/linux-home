@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiewb.netbeans.plugins.GitCloseUnmodifiedDocuments">
+    <module_version install_time="1428210103891" last="false" origin="Plugin Portal" specification_version="1.0.0">
+        <file crc="2242732712" name="config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml"/>
+        <file crc="1044282483" name="modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar"/>
+        <file crc="1910887919" name="update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml"/>
+    </module_version>
+    <module_version install_time="1440304703198" last="true" origin="Plugin Portal" specification_version="1.0.1">
+        <file crc="2242732712" name="config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml"/>
+        <file crc="1206021537" name="modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar"/>
+        <file crc="231777103" name="update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml"/>
+    </module_version>
+</module>

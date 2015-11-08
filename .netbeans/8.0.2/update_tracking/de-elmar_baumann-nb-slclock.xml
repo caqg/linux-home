@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.elmar_baumann.nb.slclock/1">
+    <module_version install_time="1428210103824" last="true" origin="Plugin Portal" specification_version="1.6.2">
+        <file crc="578831539" name="config/Modules/de-elmar_baumann-nb-slclock.xml"/>
+        <file crc="3487584204" name="modules/de-elmar_baumann-nb-slclock.jar"/>
+    </module_version>
+</module>

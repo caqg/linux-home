@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiewb.netbeans.plugins.codeoutline">
+    <module_version install_time="1428210103985" last="true" origin="Plugin Portal" specification_version="1.1.0">
+        <file crc="3391257113" name="config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml"/>
+        <file crc="2380600349" name="modules/de-markiewb-netbeans-plugins-codeoutline.jar"/>
+        <file crc="2793025306" name="update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml"/>
+    </module_version>
+</module>

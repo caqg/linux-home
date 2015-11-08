@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.tvl.netbeans.editor.actions">
+    <module_version install_time="1428210103840" last="true" origin="Plugin Portal" specification_version="1.0">
+        <file crc="4158366636" name="config/Modules/org-tvl-netbeans-editor-actions.xml"/>
+        <file crc="1264160100" name="modules/org-tvl-netbeans-editor-actions.jar"/>
+    </module_version>
+</module>

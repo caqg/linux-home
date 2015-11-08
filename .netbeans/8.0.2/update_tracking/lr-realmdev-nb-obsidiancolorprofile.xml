@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="lr.realmdev.nb.obsidiancolorprofile">
+    <module_version install_time="1428210103995" last="false" origin="Plugin Portal" specification_version="1.0.2">
+        <file crc="1269238066" name="config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml"/>
+        <file crc="4265771519" name="modules/lr-realmdev-nb-obsidiancolorprofile.jar"/>
+    </module_version>
+    <module_version install_time="1429199376465" last="false" origin="Plugin Portal" specification_version="1.0.3">
+        <file crc="1269238066" name="config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml"/>
+        <file crc="3628177188" name="modules/lr-realmdev-nb-obsidiancolorprofile.jar"/>
+    </module_version>
+    <module_version install_time="1431194448333" last="true" origin="Plugin Portal" specification_version="1.0.5">
+        <file crc="1269238066" name="config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml"/>
+        <file crc="2847860650" name="modules/lr-realmdev-nb-obsidiancolorprofile.jar"/>
+    </module_version>
+</module>

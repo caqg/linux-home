@@ -1,0 +1,1250 @@
+Apr 04, 2015 10:01:42 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater deleteInstallLater
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/install_later.xml deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-apisupport-apidocs.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-apisupport-apidocs.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-modules-apisupport-apidocs.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/docs/NetBeansAPIs.zip to /home/cesar/.netbeans/8.0.2/docs/NetBeansAPIs.zip
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-apisupport-apidocs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-apisupport-apidocs.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-apisupport-apidocs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-apisupport-apidocs.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-apisupport-apidocs.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-modules-apisupport-apidocs.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@32039240
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-modules-apisupport-apidocs.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-logman.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-logman.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-modules-logman.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/jLogMan-2.0.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/jLogMan-2.0.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/jLogMan-2.0.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/jLogMan-2.0.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/jLogMan-2.0.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/nbstubs-1.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/nbstubs-1.4.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/nbstubs-1.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/nbstubs-1.4.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/nbstubs-1.4.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/simplevalidation-1.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/simplevalidation-1.4.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/simplevalidation-1.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/simplevalidation-1.4.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/simplevalidation-1.4.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-logman.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-logman.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-logman.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-logman.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-logman.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-modules-logman.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@37aabc75
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-modules-logman.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking open-file-at-cursor-plugin.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/open-file-at-cursor-plugin.xml to /home/cesar/.netbeans/8.0.2/config/Modules/open-file-at-cursor-plugin.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/open-file-at-cursor-plugin.jar to /home/cesar/.netbeans/8.0.2/modules/open-file-at-cursor-plugin.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/open-file-at-cursor-plugin.xml to /home/cesar/.netbeans/8.0.2/update_tracking/open-file-at-cursor-plugin.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/open-file-at-cursor-plugin.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2318fc9
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/open-file-at-cursor-plugin.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-versioning-system-cvss.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-versioning-system-cvss.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-modules-versioning-system-cvss.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-versioning-system-cvss.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-versioning-system-cvss.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-versioning-system-cvss.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-versioning-system-cvss.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-versioning-system-cvss.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-modules-versioning-system-cvss.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@190ae6a8
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-modules-versioning-system-cvss.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking cz-kec-nb-nodejs.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/cz-kec-nb-nodejs.xml to /home/cesar/.netbeans/8.0.2/config/Modules/cz-kec-nb-nodejs.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/cz-kec-nb-NodeJS.jar to /home/cesar/.netbeans/8.0.2/modules/cz-kec-nb-NodeJS.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/cz-kec-nb-nodejs.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@15e594b8
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/cz-kec-nb-nodejs.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-elmar_baumann-nb-slclock.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-elmar_baumann-nb-slclock.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-elmar_baumann-nb-slclock.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-elmar_baumann-nb-slclock.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nb-slclock.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nb-slclock.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nb-slclock.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nb-slclock.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-elmar_baumann-nb-slclock.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7c2644d4
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-elmar_baumann-nb-slclock.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-tvl-netbeans-editor-actions.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-tvl-netbeans-editor-actions.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-tvl-netbeans-editor-actions.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-tvl-netbeans-editor-actions.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-actions.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-actions.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-actions.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-actions.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-tvl-netbeans-editor-actions.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@263476a5
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-tvl-netbeans-editor-actions.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-swing-laf-dark.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-swing-laf-dark.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-swing-laf-dark.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-swing-laf-dark.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-swing-laf-dark.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-swing-laf-dark.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-swing-laf-dark.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-swing-laf-dark.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-swing-laf-dark.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@6c1b9a06
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-swing-laf-dark.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiew-netbeans-plugin-restart.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiew-netbeans-plugin-restart.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiew-netbeans-plugin-restart.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiew-netbeans-plugin-restart.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-markiew-netbeans-plugin-restart.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/de-markiew-netbeans-plugin-restart.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-markiew-netbeans-plugin-restart.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-markiew-netbeans-plugin-restart.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiew-netbeans-plugin-restart.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7f955732
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiew-netbeans-plugin-restart.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking closeprojects.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/closeprojects.xml to /home/cesar/.netbeans/8.0.2/config/Modules/closeprojects.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/closeprojects.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/closeprojects.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@4dffbb48
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/closeprojects.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@59bbb80f
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking com-junichi11-netbeans-github-issues.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/config/Modules/com-junichi11-netbeans-github-issues.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/com-junichi11-netbeans-github-issues.jar to /home/cesar/.netbeans/8.0.2/modules/com-junichi11-netbeans-github-issues.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/com-junichi11-netbeans-github-issues.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2b39e544
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-tvl-editor-containingfolder.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-tvl-editor-containingfolder.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-tvl-editor-containingfolder.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-tvl-editor-containingfolder.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-editor-containingfolder.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-tvl-editor-containingfolder.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-editor-containingfolder.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-tvl-editor-containingfolder.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-tvl-editor-containingfolder.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5848c7b9
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-tvl-editor-containingfolder.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking com-adi-dev-java-netbeans-plugins-favorites-items-find.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.xml to /home/cesar/.netbeans/8.0.2/config/Modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-favorites-items-find.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/com-adi-dev-java-netbeans-plugins-favorites-items-find.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@378fa490
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-adi-dev-java-netbeans-plugins-favorites-items-find.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-hints.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-hints.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-hints.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-hints.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-hints.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/de.markiewb.netbeans.plugins.hints/org-netbeans-external/nb-javac-api.jar to /home/cesar/.netbeans/8.0.2/modules/ext/de.markiewb.netbeans.plugins.hints/org-netbeans-external/nb-javac-api.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-hints.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-hints.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-hints.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@1c1c7a6d
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-hints.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-codeoutline.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-codeoutline.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-codeoutline.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-codeoutline.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@1b50f0bd
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml modified.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking lr-realmdev-nb-obsidiancolorprofile.nbm
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml to /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/lr-realmdev-nb-obsidiancolorprofile.nbm deleted.
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@a9c6958
+Apr 04, 2015 10:01:43 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/lr-realmdev-nb-obsidiancolorprofile.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-readmeinprojectview.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-readmeinprojectview.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-readmeinprojectview.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-readmeinprojectview.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-readmeinprojectview.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-readmeinprojectview.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-readmeinprojectview.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-readmeinprojectview.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@38087dec
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-readmeinprojectview.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking com-adi-dev-java-netbeans-plugins-laf-changer.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/com-adi-dev-java-netbeans-plugins-laf-changer.xml to /home/cesar/.netbeans/8.0.2/config/Modules/com-adi-dev-java-netbeans-plugins-laf-changer.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/com-adi-dev-java-netbeans-plugins-laf-changer.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/com-adi-dev-java-netbeans-plugins-laf-changer.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5aff5a5b
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-adi-dev-java-netbeans-plugins-laf-changer.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking editor-zoom.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/editor-zoom.xml to /home/cesar/.netbeans/8.0.2/config/Modules/editor-zoom.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/editor-zoom.jar to /home/cesar/.netbeans/8.0.2/modules/editor-zoom.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/editor-zoom.xml to /home/cesar/.netbeans/8.0.2/update_tracking/editor-zoom.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/editor-zoom.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@433abf7a
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/editor-zoom.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-lib-cvsclient.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-lib-cvsclient.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-lib-cvsclient.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-lib-cvsclient.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-lib-cvsclient.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-lib-cvsclient.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-lib-cvsclient.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-lib-cvsclient.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-lib-cvsclient.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@78d2be3b
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-lib-cvsclient.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking net-sf-efhnbm.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/net-sf-efhnbm.xml to /home/cesar/.netbeans/8.0.2/config/Modules/net-sf-efhnbm.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/net-sf-efhnbm.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/net-sf-efhnbm.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/net-sf-efhnbm.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/net-sf-efhnbm.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/net-sf-efhnbm.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/net-sf-efhnbm.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@290e22e7
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/net-sf-efhnbm.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-linetools.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-linetools.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-netbeans-modules-linetools.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/docs/org-netbeans-modules-linetools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/docs/org-netbeans-modules-linetools.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/docs/org-netbeans-modules-linetools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/docs/org-netbeans-modules-linetools.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/docs/org-netbeans-modules-linetools.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-linetools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-linetools.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-linetools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-linetools.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-netbeans-modules-linetools.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-netbeans-modules-linetools.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2c5830ce
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-netbeans-modules-linetools.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugin-copyfqn.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugin-copyfqn.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugin-copyfqn.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugin-copyfqn.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugin-copyfqn.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugin-copyfqn.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugin-copyfqn.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugin-copyfqn.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@6d43d089
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugin-copyfqn.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugin-togglelinewrap.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugin-togglelinewrap.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugin-togglelinewrap.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugin-togglelinewrap.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugin-togglelinewrap.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugin-togglelinewrap.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugin-togglelinewrap.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugin-togglelinewrap.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugin-togglelinewrap.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@768f4f7a
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugin-togglelinewrap.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking ch-anchialas-nb-editor.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/ch-anchialas-nb-editor.xml to /home/cesar/.netbeans/8.0.2/config/Modules/ch-anchialas-nb-editor.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ch-anchialas-nb-editor.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ch-anchialas-nb-editor.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ch-anchialas-nb-editor.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ch-anchialas-nb-editor.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ch-anchialas-nb-editor.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/JButtonMenuItem.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/JButtonMenuItem.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/JButtonMenuItem.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/JButtonMenuItem.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/JButtonMenuItem.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/ch-anchialas-nb-editor.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@23c4fd34
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/ch-anchialas-nb-editor.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-changecaseofunicodecharacters.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5d7263a8
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-changecaseofunicodecharacters.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-elmar_baumann-nbmemusage.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-elmar_baumann-nbmemusage.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-elmar_baumann-nbmemusage.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-elmar_baumann-nbmemusage.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nbmemusage.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nbmemusage.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nbmemusage.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-elmar_baumann-nbmemusage.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-elmar_baumann-nbmemusage.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@216a4c1c
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-elmar_baumann-nbmemusage.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-lomatek-jslint.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-lomatek-jslint.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-lomatek-jslint.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/js.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/js.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/js.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/js.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/js.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/js2.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/js2.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/js2.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/js2.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/js2.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-lomatek-jslint.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-lomatek-jslint.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-lomatek-jslint.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-lomatek-jslint.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-lomatek-jslint.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-lomatek-jslint.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2ca345fd
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-lomatek-jslint.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-tvl-netbeans-editor-whitespace.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-tvl-netbeans-editor-whitespace.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-tvl-netbeans-editor-whitespace.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-tvl-netbeans-editor-whitespace.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-whitespace.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-whitespace.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-whitespace.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-tvl-netbeans-editor-whitespace.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-tvl-netbeans-editor-whitespace.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@4b4f690e
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-tvl-netbeans-editor-whitespace.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking git-toolbar.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/git-toolbar.xml to /home/cesar/.netbeans/8.0.2/config/Modules/git-toolbar.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/git-toolbar.jar to /home/cesar/.netbeans/8.0.2/modules/git-toolbar.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/git-toolbar.xml to /home/cesar/.netbeans/8.0.2/update_tracking/git-toolbar.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/git-toolbar.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@72009e90
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/git-toolbar.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking jindent-plugin-netbeans.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/jindent-plugin-netbeans.xml to /home/cesar/.netbeans/8.0.2/config/Modules/jindent-plugin-netbeans.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/Jindent.jar to /home/cesar/.netbeans/8.0.2/modules/ext/Jindent.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/JindentHelp.jar to /home/cesar/.netbeans/8.0.2/modules/ext/JindentHelp.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/jhall.jar to /home/cesar/.netbeans/8.0.2/modules/ext/jhall.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/l2fprod-common-all.jar to /home/cesar/.netbeans/8.0.2/modules/ext/l2fprod-common-all.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/jindent-plugin-netbeans.jar to /home/cesar/.netbeans/8.0.2/modules/jindent-plugin-netbeans.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/jindent-plugin-netbeans.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2efffa76
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/jindent-plugin-netbeans.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking netbeans-csv-editor.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/netbeans-csv-editor.xml to /home/cesar/.netbeans/8.0.2/config/Modules/netbeans-csv-editor.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/netbeans-csv-editor.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/netbeans-csv-editor.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/netbeans-csv-editor.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/netbeans-csv-editor.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/netbeans-csv-editor.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/netbeans-csv-editor.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@6d5ba327
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/netbeans-csv-editor.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-jmcdonnell-netbeans-xml-tools.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-jmcdonnell-netbeans-xml-tools.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-jmcdonnell-netbeans-xml-tools.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/commons-io-2.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/commons-io-2.4.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/commons-io-2.4.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/commons-io-2.4.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/commons-io-2.4.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-jmcdonnell-netbeans-xml-tools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-jmcdonnell-netbeans-xml-tools.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-jmcdonnell-netbeans-xml-tools.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-jmcdonnell-netbeans-xml-tools.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-jmcdonnell-netbeans-xml-tools.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-jmcdonnell-netbeans-xml-tools.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@4fe4afaf
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-jmcdonnell-netbeans-xml-tools.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking com-tusharjoshi-runargs.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/com-tusharjoshi-runargs.xml to /home/cesar/.netbeans/8.0.2/config/Modules/com-tusharjoshi-runargs.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/com-tusharjoshi-runargs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-tusharjoshi-runargs.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/com-tusharjoshi-runargs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/com-tusharjoshi-runargs.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/com-tusharjoshi-runargs.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/com-tusharjoshi-runargs.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@2b6cca1d
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-tusharjoshi-runargs.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-pastetonewfile-core.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-pastetonewfile-core.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-pastetonewfile-core.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-pastetonewfile-core.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-pastetonewfile-core.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-pastetonewfile-core.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-pastetonewfile-core.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-pastetonewfile-core.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7cdaf4d3
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-pastetonewfile-core.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.xml to /home/cesar/.netbeans/8.0.2/config/Modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.jar to /home/cesar/.netbeans/8.0.2/modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@59a695dc
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking me-dsnet-quickopener.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/me-dsnet-quickopener.xml to /home/cesar/.netbeans/8.0.2/config/Modules/me-dsnet-quickopener.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/OSCommands.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/OSCommands.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/ext/OSCommands.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/ext/OSCommands.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/OSCommands.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/me-dsnet-quickopener.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/me-dsnet-quickopener.jar.pack.gz
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/me-dsnet-quickopener.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/me-dsnet-quickopener.jar
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/me-dsnet-quickopener.jar.pack.gz deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/me-dsnet-quickopener.nbm deleted.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@66e51ef6
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/me-dsnet-quickopener.xml modified.
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-apache-tools-ant-module-docs.nbm
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-apache-tools-ant-module-docs.xml to /home/cesar/.netbeans/8.0.2/config/Modules/org-apache-tools-ant-module-docs.xml
+Apr 04, 2015 10:01:44 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/docs/org-apache-tools-ant-module-docs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/docs/org-apache-tools-ant-module-docs.jar.pack.gz
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/docs/org-apache-tools-ant-module-docs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/docs/org-apache-tools-ant-module-docs.jar
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/docs/org-apache-tools-ant-module-docs.jar.pack.gz deleted.
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-apache-tools-ant-module-docs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-apache-tools-ant-module-docs.jar.pack.gz
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/org-apache-tools-ant-module-docs.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/org-apache-tools-ant-module-docs.jar
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/org-apache-tools-ant-module-docs.jar.pack.gz deleted.
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/org-apache-tools-ant-module-docs.nbm deleted.
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5ea509e5
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/org-apache-tools-ant-module-docs.xml modified.
+Apr 04, 2015 10:01:45 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+Apr 16, 2015 8:49:35 AM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking lr-realmdev-nb-obsidiancolorprofile.nbm
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml deleted.
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml to /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz deleted.
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/lr-realmdev-nb-obsidiancolorprofile.nbm deleted.
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@1c08d341
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/lr-realmdev-nb-obsidiancolorprofile.xml modified.
+Apr 16, 2015 8:49:36 AM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+May 09, 2015 11:00:47 AM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking bv-offa-netbeans-cnd-unittest.nbm
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/bv-offa-NBCndUnit.jar
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/bv-offa-netbeans-cnd-unittest.nbm deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7012759b
+May 09, 2015 11:00:48 AM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/bv-offa-netbeans-cnd-unittest.xml modified.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-codeoutline.nbm
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-codeoutline.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-codeoutline.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/de-markiewb-netbeans-plugins-codeoutline.jar
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-codeoutline.jar deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-codeoutline.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-codeoutline.jar
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-codeoutline.nbm deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5a272b38
+May 09, 2015 11:00:48 AM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-codeoutline.xml modified.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking lr-realmdev-nb-obsidiancolorprofile.nbm
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml to /home/cesar/.netbeans/8.0.2/config/Modules/lr-realmdev-nb-obsidiancolorprofile.xml
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/lr-realmdev-nb-obsidiancolorprofile.jar.pack.gz deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/lr-realmdev-nb-obsidiancolorprofile.nbm deleted.
+May 09, 2015 11:00:48 AM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@f57978e
+May 09, 2015 11:00:48 AM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/lr-realmdev-nb-obsidiancolorprofile.xml modified.
+May 09, 2015 11:00:48 AM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+May 30, 2015 10:45:31 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking bv-offa-netbeans-cnd-unittest.nbm
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml deleted.
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/bv-offa-NBCndUnit.jar
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar deleted.
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/bv-offa-netbeans-cnd-unittest.nbm deleted.
+May 30, 2015 10:45:31 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@3d48c1b6
+May 30, 2015 10:45:31 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/bv-offa-netbeans-cnd-unittest.xml modified.
+May 30, 2015 10:45:31 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+Jun 18, 2015 8:19:10 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-projectuiapi.nbm
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/config/ModuleAutoDeps/org-netbeans-modules-projectuiapi.xml to /opt/netbeans-8.0/ide/update/backup/netbeans/config/ModuleAutoDeps/org-netbeans-modules-projectuiapi.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/config/ModuleAutoDeps/org-netbeans-modules-projectuiapi.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/ModuleAutoDeps/org-netbeans-modules-projectuiapi.xml to /opt/netbeans-8.0/ide/config/ModuleAutoDeps/org-netbeans-modules-projectuiapi.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectuiapi.xml to /opt/netbeans-8.0/ide/update/backup/netbeans/config/Modules/org-netbeans-modules-projectuiapi.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectuiapi.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-projectuiapi.xml to /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectuiapi.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectuiapi_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ja.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ja.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ja.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectuiapi_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_pt_BR.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_pt_BR.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_pt_BR.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectuiapi_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ru.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ru.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_ru.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectuiapi_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_zh_CN.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_zh_CN.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectuiapi_zh_CN.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-projectuiapi.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectuiapi.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectuiapi.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectuiapi.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectuiapi.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/update/download/org-netbeans-modules-projectuiapi.nbm deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@65e0ffd5
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /opt/netbeans-8.0/ide/update_tracking/org-netbeans-modules-projectuiapi.xml modified.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-projectui.nbm
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectui.xml to /opt/netbeans-8.0/ide/update/backup/netbeans/config/Modules/org-netbeans-modules-projectui.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectui.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-projectui.xml to /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-projectui.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectui_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ja.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ja.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ja.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectui_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_pt_BR.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_pt_BR.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_pt_BR.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectui_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ru.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ru.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_ru.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-projectui_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_zh_CN.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_zh_CN.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-projectui_zh_CN.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-projectui.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectui.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectui.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectui.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/org-netbeans-modules-projectui.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/update/download/org-netbeans-modules-projectui.nbm deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@38ca3dff
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /opt/netbeans-8.0/ide/update_tracking/org-netbeans-modules-projectui.xml modified.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-javascript2-editor.nbm
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-javascript2-editor.xml to /opt/netbeans-8.0/ide/update/backup/netbeans/config/Modules/org-netbeans-modules-javascript2-editor.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-javascript2-editor.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-javascript2-editor.xml to /opt/netbeans-8.0/ide/config/Modules/org-netbeans-modules-javascript2-editor.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/jsstubs/corestubs.zip to /opt/netbeans-8.0/ide/update/backup/netbeans/jsstubs/corestubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/jsstubs/corestubs.zip deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/jsstubs/corestubs.zip to /opt/netbeans-8.0/ide/jsstubs/corestubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/jsstubs/domstubs.zip to /opt/netbeans-8.0/ide/update/backup/netbeans/jsstubs/domstubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/jsstubs/domstubs.zip deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/jsstubs/domstubs.zip to /opt/netbeans-8.0/ide/jsstubs/domstubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/ide/jsstubs/reststubs.zip to /opt/netbeans-8.0/ide/update/backup/netbeans/jsstubs/reststubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/jsstubs/reststubs.zip deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/jsstubs/reststubs.zip to /opt/netbeans-8.0/ide/jsstubs/reststubs.zip
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javascript2-editor_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ja.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ja.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ja.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ja.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javascript2-editor_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ru.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ru.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ru.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_ru.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar.pack.gz to /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-javascript2-editor.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-javascript2-editor.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/ide/modules/org-netbeans-modules-javascript2-editor.jar.pack.gz to /opt/netbeans-8.0/ide/modules/org-netbeans-modules-javascript2-editor.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/modules/org-netbeans-modules-javascript2-editor.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/ide/update/download/org-netbeans-modules-javascript2-editor.nbm deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@4c7b6a0a
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /opt/netbeans-8.0/ide/update_tracking/org-netbeans-modules-javascript2-editor.xml modified.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-openide-util-lookup.nbm
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/lib/locale/org-openide-util-lookup_ja.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ja.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ja.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ja.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ja.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/lib/locale/org-openide-util-lookup_pt_BR.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_pt_BR.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_pt_BR.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_pt_BR.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_pt_BR.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/lib/locale/org-openide-util-lookup_ru.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ru.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ru.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ru.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_ru.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/lib/locale/org-openide-util-lookup_zh_CN.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_zh_CN.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_zh_CN.jar.pack.gz to /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_zh_CN.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/lib/locale/org-openide-util-lookup_zh_CN.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/lib/org-openide-util-lookup.jar.pack.gz to /opt/netbeans-8.0/platform/lib/org-openide-util-lookup.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/platform/lib/org-openide-util-lookup.jar.pack.gz to /opt/netbeans-8.0/platform/lib/org-openide-util-lookup.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/lib/org-openide-util-lookup.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/platform/update/download/org-openide-util-lookup.nbm deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@5043673a
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /opt/netbeans-8.0/platform/update_tracking/org-openide-util-lookup.xml modified.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module writeModulesConfig
+WARNING: No config file written for module org.openide.util.lookup. No jar file present in "modules" directory.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking org-netbeans-modules-javafx2-scenebuilder.nbm
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /opt/netbeans-8.0/javafx/config/Modules/org-netbeans-modules-javafx2-scenebuilder.xml to /opt/netbeans-8.0/javafx/update/backup/netbeans/config/Modules/org-netbeans-modules-javafx2-scenebuilder.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/config/Modules/org-netbeans-modules-javafx2-scenebuilder.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/org-netbeans-modules-javafx2-scenebuilder.xml to /opt/netbeans-8.0/javafx/config/Modules/org-netbeans-modules-javafx2-scenebuilder.xml
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ja.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ja.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ja.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ja.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ja.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javafx2-scenebuilder_pt_BR.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_pt_BR.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_pt_BR.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_pt_BR.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_pt_BR.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ru.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ru.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ru.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ru.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_ru.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/locale/org-netbeans-modules-javafx2-scenebuilder_zh_CN.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_zh_CN.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_zh_CN.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_zh_CN.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/modules/locale/org-netbeans-modules-javafx2-scenebuilder_zh_CN.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/org-netbeans-modules-javafx2-scenebuilder.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/org-netbeans-modules-javafx2-scenebuilder.jar.pack.gz
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /opt/netbeans-8.0/javafx/modules/org-netbeans-modules-javafx2-scenebuilder.jar.pack.gz to /opt/netbeans-8.0/javafx/modules/org-netbeans-modules-javafx2-scenebuilder.jar
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/modules/org-netbeans-modules-javafx2-scenebuilder.jar.pack.gz deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /opt/netbeans-8.0/javafx/update/download/org-netbeans-modules-javafx2-scenebuilder.nbm deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@1ad2b9c4
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /opt/netbeans-8.0/javafx/update_tracking/org-netbeans-modules-javafx2-scenebuilder.xml modified.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /opt/netbeans-8.0/ide/update/download/additional_information.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /opt/netbeans-8.0/javafx/update/download/additional_information.xml deleted.
+Jun 18, 2015 8:19:11 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /opt/netbeans-8.0/platform/update/download/additional_information.xml deleted.
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking closeprojects.nbm
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/closeprojects.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/closeprojects.xml
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/closeprojects.xml deleted.
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/closeprojects.xml to /home/cesar/.netbeans/8.0.2/config/Modules/closeprojects.xml
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/closeprojects.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack200
+INFO: Unpack /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz to /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/closeprojects.jar.pack.gz deleted.
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/closeprojects.nbm deleted.
+Jul 09, 2015 3:07:56 AM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7597125f
+Jul 09, 2015 3:07:57 AM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/closeprojects.xml modified.
+Jul 09, 2015 3:07:57 AM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+Aug 22, 2015 9:38:22 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking bv-offa-netbeans-cnd-unittest.nbm
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/bv-offa-netbeans-cnd-unittest.xml to /home/cesar/.netbeans/8.0.2/config/Modules/bv-offa-netbeans-cnd-unittest.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/bv-offa-NBCndUnit.jar
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/bv-offa-NBCndUnit.jar to /home/cesar/.netbeans/8.0.2/modules/bv-offa-NBCndUnit.jar
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/bv-offa-netbeans-cnd-unittest.nbm deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@42695fa6
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/bv-offa-netbeans-cnd-unittest.xml modified.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm deleted.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@7a9cb4fb
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml modified.
+Aug 22, 2015 9:38:23 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+Sep 27, 2015 4:15:49 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking com-junichi11-netbeans-github-issues.nbm
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/com-junichi11-netbeans-github-issues.xml
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/com-junichi11-netbeans-github-issues.xml deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/config/Modules/com-junichi11-netbeans-github-issues.xml
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/com-junichi11-netbeans-github-issues.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/com-junichi11-netbeans-github-issues.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/com-junichi11-netbeans-github-issues.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/com-junichi11-netbeans-github-issues.jar to /home/cesar/.netbeans/8.0.2/modules/com-junichi11-netbeans-github-issues.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/com-google-code-gson/gson.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-eclipse-mylyn-github/org.eclipse.egit.github.core.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-netbeans-external/swingx-0.9.5.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-analysis.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-tree.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm-util.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-ow2-asm/asm.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-core.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-parboiled/parboiled-java.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar to /home/cesar/.netbeans/8.0.2/modules/ext/com.junichi11.netbeans.github.issues/org-pegdown/pegdown.jar
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/update_tracking/com-junichi11-netbeans-github-issues.xml
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/com-junichi11-netbeans-github-issues.xml to /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/com-junichi11-netbeans-github-issues.nbm deleted.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@53392213
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/com-junichi11-netbeans-github-issues.xml modified.
+Sep 27, 2015 4:15:50 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.UpdaterFrame <clinit>
+INFO: Entering updater.jar .................................................................... 
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater deleteInstallLater
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/install_later.xml deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: 780: Unpacking de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/config/Modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar to /home/cesar/.netbeans/8.0.2/modules/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.jar
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Backup file /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update/backup/netbeans/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: Copied file netbeans/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml to /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.ModuleUpdater unpack
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.nbm deleted.
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.XMLUtil write
+INFO: Use XML Transformer: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl@773d9138
+Nov 07, 2015 5:41:32 PM org.netbeans.updater.UpdateTracking$Module write
+INFO: File /home/cesar/.netbeans/8.0.2/update_tracking/de-markiewb-netbeans-plugins-GitCloseUnmodifiedDocuments.xml modified.
+Nov 07, 2015 5:41:33 PM org.netbeans.updater.ModuleUpdater deleteAdditionalInfo
+INFO: File /home/cesar/.netbeans/8.0.2/update/download/additional_information.xml deleted.

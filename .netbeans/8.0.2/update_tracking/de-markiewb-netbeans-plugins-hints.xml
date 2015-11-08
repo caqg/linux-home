@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiewb.netbeans.plugins.hints">
+    <module_version install_time="1428210103971" last="true" origin="Plugin Portal" specification_version="1.5.0">
+        <file crc="3879430508" name="config/Modules/de-markiewb-netbeans-plugins-hints.xml"/>
+        <file crc="199839063" name="modules/de-markiewb-netbeans-plugins-hints.jar"/>
+        <file crc="2071547942" name="modules/ext/de.markiewb.netbeans.plugins.hints/org-netbeans-external/nb-javac-api.jar"/>
+        <file crc="109833915" name="update_tracking/de-markiewb-netbeans-plugins-hints.xml"/>
+    </module_version>
+</module>

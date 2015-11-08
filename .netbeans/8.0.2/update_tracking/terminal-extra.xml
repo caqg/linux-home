@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="terminal.extra">
+    <module_version install_time="1428211473726" last="true" origin="Plugin Portal" specification_version="1.11">
+        <file crc="2339903887" name="config/Modules/terminal-extra.xml"/>
+        <file crc="1517899783" name="modules/terminal-extra.jar"/>
+    </module_version>
+</module>

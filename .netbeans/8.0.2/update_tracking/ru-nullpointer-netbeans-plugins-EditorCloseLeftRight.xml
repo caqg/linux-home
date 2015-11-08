@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="ru.nullpointer.netbeans.plugins.EditorCloseLeftRight">
+    <module_version install_time="1428210104549" last="true" origin="Plugin Portal" specification_version="1.0.0">
+        <file crc="3970914578" name="config/Modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.xml"/>
+        <file crc="3802966062" name="modules/ru-nullpointer-netbeans-plugins-EditorCloseLeftRight.jar"/>
+    </module_version>
+</module>

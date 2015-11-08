@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.tvl.editor.containingfolder">
+    <module_version install_time="1428210103946" last="true" origin="Plugin Portal" specification_version="1.0">
+        <file crc="2106892029" name="config/Modules/org-tvl-editor-containingfolder.xml"/>
+        <file crc="600823536" name="modules/org-tvl-editor-containingfolder.jar"/>
+    </module_version>
+</module>

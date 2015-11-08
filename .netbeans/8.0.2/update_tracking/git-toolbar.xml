@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="git.toolbar">
+    <module_version install_time="1428210104387" last="true" origin="Plugin Portal" specification_version="1.1.0">
+        <file crc="672497133" name="config/Modules/git-toolbar.xml"/>
+        <file crc="2957490194" name="modules/git-toolbar.jar"/>
+        <file crc="4181492245" name="update_tracking/git-toolbar.xml"/>
+    </module_version>
+</module>

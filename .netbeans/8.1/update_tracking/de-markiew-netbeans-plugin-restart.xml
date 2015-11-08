@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiew.netbeans.plugin.restart">
+    <module_version install_time="1446947744227" last="true" origin="Plugin Portal" specification_version="1.0">
+        <file crc="3467599480" name="config/Modules/de-markiew-netbeans-plugin-restart.xml"/>
+        <file crc="3104452485" name="modules/de-markiew-netbeans-plugin-restart.jar"/>
+    </module_version>
+</module>

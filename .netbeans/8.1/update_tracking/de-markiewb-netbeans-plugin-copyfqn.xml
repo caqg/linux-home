@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="de.markiewb.netbeans.plugin.copyfqn">
+    <module_version install_time="1446947744215" last="true" origin="Plugin Portal" specification_version="1.3.0.3">
+        <file crc="3568329864" name="config/Modules/de-markiewb-netbeans-plugin-copyfqn.xml"/>
+        <file crc="3454200876" name="modules/de-markiewb-netbeans-plugin-copyfqn.jar"/>
+        <file crc="3633402563" name="update_tracking/de-markiewb-netbeans-plugin-copyfqn.xml"/>
+    </module_version>
+</module>

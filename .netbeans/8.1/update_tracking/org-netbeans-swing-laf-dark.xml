@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.swing.laf.dark/1">
+    <module_version install_time="1446947743432" last="true" origin="Certified Plugins" specification_version="2.0.2">
+        <file crc="3538104847" name="config/Modules/org-netbeans-swing-laf-dark.xml"/>
+        <file crc="2949872424" name="modules/org-netbeans-swing-laf-dark.jar"/>
+    </module_version>
+</module>

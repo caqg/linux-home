@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE editor-preferences PUBLIC "-//NetBeans//DTD Editor Preferences 1.0//EN" "http://www.netbeans.org/dtds/EditorPreferences-1_0.dtd">
+<editor-preferences>
+    <entry javaType="java.lang.Boolean" name="absoluteLabelIndent" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignJavadocExceptionDescriptions" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignJavadocParameterDescriptions" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignJavadocReturnDescription" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineAnnotationArgs" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineArrayInit" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineBinaryOp" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineCallArgs" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineDisjunctiveCatchTypes" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineFor" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineImplements" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineLambdaParams" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineMethodParams" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineParenthesized" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineTernaryOp" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineThrows" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="alignMultilineTryResources" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="blankLineAfterJavadocParameterDescriptions" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="blankLineAfterJavadocReturnTag" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="blankLinesAfterClassHeader" xml:space="preserve">
+        <value><![CDATA[0]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="expand-tabs" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="generateParagraphTagOnBlankLines" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="importGroupsOrder" xml:space="preserve">
+        <value><![CDATA[*;static *]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="indentCasesFromSwitch" xml:space="preserve">
+        <value><![CDATA[false]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="keepGettersAndSettersTogether" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="on-save-use-global-settings" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="on-save.Imports_UNUSED" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="on-save.org.netbeans.modules.java.hints.OrganizeImports" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="preserveNewLinesInComments" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="redundantDoWhileBraces" xml:space="preserve">
+        <value><![CDATA[LEAVE_ALONE]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="redundantForBraces" xml:space="preserve">
+        <value><![CDATA[LEAVE_ALONE]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="redundantIfBraces" xml:space="preserve">
+        <value><![CDATA[LEAVE_ALONE]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="redundantWhileBraces" xml:space="preserve">
+        <value><![CDATA[LEAVE_ALONE]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="separateStaticImports" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="sortMembersByVisibility" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="spaceAfterTypeCast" xml:space="preserve">
+        <value><![CDATA[false]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="spaceBeforeArrayInitLeftBrace" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapAfterAssignOps" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapAfterBinaryOps" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapAfterDotInChainedMethodCalls" xml:space="preserve">
+        <value><![CDATA[false]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapAfterLambdaArrow" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapAfterTernaryOps" xml:space="preserve">
+        <value><![CDATA[true]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapAnnotationArgs" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapArrayInit" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapAssignOps" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapBinaryOps" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapChainedMethodCalls" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapDisjunctiveCatchTypes" xml:space="preserve">
+        <value><![CDATA[WRAP_ALWAYS]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapEnumConstants" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapExtendsImplementsKeyword" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapExtendsImplementsList" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapFor" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapForStatement" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapIfStatement" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapLambdaArrow" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapLambdaParams" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapMethodCallArgs" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapMethodParams" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.Boolean" name="wrapOneLineComment" xml:space="preserve">
+        <value><![CDATA[false]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapTernaryOps" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapThrowsKeyword" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapThrowsList" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry javaType="java.lang.String" name="wrapTryResources" xml:space="preserve">
+        <value><![CDATA[WRAP_IF_LONG]]></value>
+    </entry>
+    <entry name="code-folding-collapse-innerclass" remove="true"/>
+    <entry name="code-folding-collapse-javadoc" remove="true"/>
+    <entry name="code-folding-collapse-method" remove="true"/>
+    <entry name="pair-characters-completion" remove="true"/>
+    <entry name="show-deprecated-members" remove="true"/>
+</editor-preferences>

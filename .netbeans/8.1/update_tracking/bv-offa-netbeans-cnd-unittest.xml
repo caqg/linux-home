@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="bv.offa.netbeans.cnd.unittest">
+    <module_version install_time="1446947743222" last="true" origin="Plugin Portal" specification_version="0.7.0">
+        <file crc="4263948438" name="config/Modules/bv-offa-netbeans-cnd-unittest.xml"/>
+        <file crc="1845259287" name="modules/bv-offa-NBCndUnit.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="ch.anchialas.nb.editor">
+    <module_version install_time="1428210104101" last="true" origin="Plugin Portal" specification_version="1.7">
+        <file crc="3791364824" name="config/Modules/ch-anchialas-nb-editor.xml"/>
+        <file crc="3912315445" name="modules/ch-anchialas-nb-editor.jar"/>
+        <file crc="3254159068" name="modules/ext/JButtonMenuItem.jar"/>
+    </module_version>
+</module>
