@@ -4,3 +4,4 @@ application/x-planner=planner.desktop
 
 [Added Associations]
 application/x-planner=planner.desktop;
+application/postscript=evince.desktop;
