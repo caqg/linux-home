@@ -32,7 +32,7 @@
   (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
 
   (load-library "cq-cedet-ede-ecb-utils")
-  (global-set-key "\C-zL" 'cq/load-ede-project-and-tags)
+  (global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
 
   (add-hook 'dired-load-hook
             #'(lambda ()
@@ -61,6 +61,13 @@
   (require 'cl-lib-highlight)
   (cl-lib-highlight-initialize)
   (cl-lib-highlight-warn-cl-initialize)
+
+  (require 'windmove)
+  (global-set-key (kbd "C-c <right>") 'windmove-right)
+  (global-set-key (kbd "C-c <left>")  'windmove-left)
+  (global-set-key (kbd "C-c <up>")    'windmove-up)
+  (global-set-key (kbd "C-c <down>")  'windmove-down)
+
 
   (require 'dired-x)
   (require 'dired-toggle-sudo)
@@ -367,6 +374,7 @@
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes))
+ '(windmove-wrap-around t)
  '(x-gtk-show-hidden-files t)
  '(yank-pop-change-selection t))
 (custom-set-faces
