@@ -1,0 +1,98 @@
+#!/bin/bash
+
+PATH=/bin:/usr/bin:/usr/local/bin
+
+self=$(basename $0)
+argv0=$0
+
+srcroot=
+outroot=
+
+do_usage=
+cleanout=
+
+usage () {
+	printf "usage: %s [-s SRC] [-o OBJ]\n" $self
+	printf "\tConfigure a build area,\n"
+	printf "\n"
+	printf "\t-s source directory, default the dirname of \$0\n"
+	printf "\t-o output directory, default .\n"
+	printf "\n"
+	printf "The output directory must not be the same as source one,\n"
+	printf "and it better not be under a repo or workdir.\n"
+	printf "\n"
+	printf "Run make after $self to build SRC out-of-tree into OBJ.\n"
+}
+
+parse_args () {
+	for arg; do
+		case "$1" in
+		-c)     cleanout=yes;;
+		-h*|-?) usage; exit 0;;
+		-s)	shift; srcroot="$1";;
+		-o)	shift; outroot="$1";;
+		*)	printf "$self: unknown option '%s' ignored\n" "$1";
+			do_usage=yes;
+			usage;;
+		esac
+		shift;
+	done
+}
+
+validate_args () {
+	[ "$srcroot" ] || srcroot=`dirname $argv0`
+	[ "$outroot" ] || outroot=`pwd`
+
+	[ "$DEBUG" ] && {
+		printf -- "-s %s\n" "$srcroot"
+		printf -- "-o %s\n" "$outroot"
+	}
+
+	[ `readlink -f $srcroot` = `readlink -f $outroot` ] && {
+		printf 2>&1 "$self: %s is the same as %s\n" "$srcroot" "$outroot"
+		do_usage=yes;
+	}
+}
+
+joindirs () {
+	(cd "$1"/"$2"; pwd;)
+}
+
+
+#main------------------
+
+parse_args "$@";
+validate_args
+[ -z "$do_usage" ] || {
+	usage; exit 1;
+}
+
+[ "$cleanout" ] && {
+	rm -fr $outroot/*
+	exit $?
+}
+
+# printf "#### STARTING\n"
+
+(cd $srcroot; find . -type f -name '[mM]akefile') |
+(cd $outroot; while read m; do
+		d=$(dirname "$m");
+		j=$(joindirs "$srcroot" "$d");
+		f=$(basename "$m")
+		mkdir -p $d && {
+			# echo @@@@ "$j" "$f" "$m"
+			awk < "$j"/"$f" > "$m" \
+			    -v J="$j" -v O="$outroot" -v S="$srcroot" '
+			BEGIN         { printf "vpath %%.h %s\n", J;
+					printf "vpath %%.cpp %s\n", J;
+				      }
+			/^TOP[ \t]*=/ { next; }
+			/^outroot[ \t]*=/ { printf "outroot=%s\n", O; next; }
+			/^srcroot[ \t]*=/ { printf "srcroot=%s\n", S; next; }
+			/vpath|VPATH/ { printf "$(warning Not good for oot)\n";
+					print; next; }
+				      { print; }'
+		}
+	      done;)
+
+## end
