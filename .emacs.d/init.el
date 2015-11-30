@@ -175,7 +175,7 @@
  '(case-fold-search t)
  '(column-number-mode t)
  '(compilation-scroll-output t)
- '(compile-command "time -p make -j8 BUILD=debug")
+ '(compile-command "time -p make -j8 BUILD=debug build")
  '(completion-auto-help (quote lazy))
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
