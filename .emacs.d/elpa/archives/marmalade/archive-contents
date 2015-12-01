@@ -994,7 +994,7 @@
 	  [(20110708)
 	   nil "Mode-specific scratch buffers" single])
  (scpaste .
-	  [(0 6 4)
+	  [(0 6 5)
 	   ((htmlize
 	     (1 39)))
 	   "Paste to the web via scp." single])
