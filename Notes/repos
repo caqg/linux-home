@@ -1,4 +1,6 @@
-# Git
+#!/bin/bash
+
+# Git -- run in /work
 
 ## dircolors-solarized
 git clone https://github.com/seebi/dircolors-solarized.git
@@ -15,6 +17,9 @@ git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 ## iverilog
 git clone https://github.com/steveicarus/iverilog.git
 
+## solarized-gedit
+git clone git://github.com/mattcan/solarized-gedit.git
+
 ## solarized-xresources
 git clone https://github.com/solarized/xresources.git
 
@@ -23,3 +28,5 @@ git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.gi
 
 ## vim
 git clone https://github.com/vim/vim.git
+
+## end
