@@ -202,6 +202,11 @@
  '(dired-listing-switches "-Alh --time-style=long-iso --group-directories-first")
  '(dired-use-ls-dired t)
  '(dired-x-hands-off-my-keys nil)
+ '(display-buffer-alist
+   (quote
+    (("^\\*shell"
+      (display-buffer-reuse-window display-buffer-same-window)
+      (nil)))))
  '(display-time-24hr-format t)
  '(display-time-day-and-date t)
  '(display-time-default-load-average 0)
@@ -301,6 +306,7 @@
  '(mouse-yank-at-point nil)
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
+ '(org-agenda-restore-windows-after-quit t)
  '(org-catch-invisible-edits (quote show))
  '(org-completion-use-ido t)
  '(org-export-backends
