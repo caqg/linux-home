@@ -45,4 +45,7 @@ TAGS
 *.log
 *.lock
 
+# Chromium in .config/ down from top
+.config/chromium/
+
 #end .gitignore
