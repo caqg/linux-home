@@ -41,4 +41,8 @@ TAGS
 # Random things form git'd $HOME
 .cache/*
 
+# Log files, lock files
+*.log
+*.lock
+
 #end .gitignore
