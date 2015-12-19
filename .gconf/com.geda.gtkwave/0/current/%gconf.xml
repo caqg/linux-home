@@ -12,7 +12,7 @@
 	<entry name="pwd" mtime="1439798941" type="string">
 		<stringvalue>/work/Innergy/Hardware/test_leaf_nodes_verilog</stringvalue>
 	</entry>
-	<entry name="rcfile" mtime="1439969189" type="string">
+	<entry name="rcfile" mtime="1444871917" type="string">
 		<stringvalue>/home/cesar/.gtkwaverc</stringvalue>
 	</entry>
 </gconf>
