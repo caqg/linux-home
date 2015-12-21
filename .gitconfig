@@ -28,6 +28,8 @@
 	d               = diff
 	di              = diff
 	ds              = diff --staged
+	g               = gui
+	k               = !gitk
 	l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
 	prefix          = rev-parse --show-prefix
 	s               = status -bs -uall .
