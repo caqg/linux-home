@@ -380,6 +380,9 @@
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes))
+ '(whitespace-style
+   (quote
+    (face trailing tabs spaces lines-tail newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark)))
  '(windmove-wrap-around t)
  '(x-gtk-show-hidden-files t)
  '(yank-pop-change-selection t))
