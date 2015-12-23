@@ -315,6 +315,7 @@
  '(org-outline-path-complete-in-steps nil)
  '(org-pretty-entities t)
  '(org-startup-indented t)
+ '(org-use-sub-superscripts (quote {}))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
