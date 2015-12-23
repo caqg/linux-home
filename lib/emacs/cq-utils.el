@@ -114,7 +114,7 @@ returns."
 ;            (" Visible Bell"   . (x-set-bell t))
 ;            (" Noisy Bell" . (x-set-bell nil)))))))
 
-;;;; Based on a contribution by 
+;;;; Based on a contribution by
 ;;;;;erlkonig@walt.cc.utexas.edu (Christopher North-Keys)
 
 ;(defun x-mouse-select-and-mark (arg)
@@ -128,7 +128,7 @@ returns."
 ;                   (sit-for 1))
 ;          (goto-char point-save)))))
 
-;;; 
+;;;
 
 (defun cq-no-suspend ()
   "Tell the User that this Emacs shouldn't be suspended."
@@ -138,21 +138,20 @@ returns."
 
 (defun cq-kill-emacs-maybe (no-query)
   "Check with the user if he really wants to exit, do so if confirmed.
-File-visiting buffers are always saved,
-   to avoid this, use `M-x kill-emacs'
+File-visiting buffers are always saved,to avoid this, use `M-x kill-emacs'
 Giving any numeric argument, typically just `C-u', will inhibit querying
-about processes left behind.  If the argument is given just as `C-u C-u', 
+about processes left behind.  If the argument is given just as `C-u C-u',
 no querying at all is used."
   (interactive "p")
   ;; (declare (special cq-gnews-initialized-p))
   (save-some-buffers 'all)              ;good for X, else I might forget this
   (cond ((equal current-prefix-arg '(16))
          (quote (and (boundp 'cq-gnews-initialized-p) cq-gnews-initialized-p
-		     (news-quit t)))
+                     (news-quit t)))
          (kill-emacs 1))
         ((y-or-n-p "Do you really want to exit this Emacs? ")
          (quote (and (boundp 'cq-gnews-initialized-p) cq-gnews-initialized-p
-		     (news-quit t)))
+                     (news-quit t)))
          (kill-emacs 0))
         (t
          (message "OK, keep hacking, see if I care."))))
@@ -206,7 +205,7 @@ See also `cq-shell-other-window.'"
 (defun cq-shell-other-window (shell-no)
   "Return to the *shell* buffer, initiating a shell process if necessary.
 Returning to a shell that was already running does not destroy the
-event history, nor does it affect the shell's state. 
+event history, nor does it affect the shell's state.
 Always tries to use other window. See also `cq-shell.'"
   (interactive "p")
   (let* ((shellname        (cond ((null current-prefix-arg)
@@ -241,7 +240,7 @@ Always tries to use other window. See also `cq-shell.'"
 (defun cq-comint-shell-other-window ()
   "Return to the *shell* buffer, initiating a shell process if necessary.
 Returning to a shell that was already running does not destroy the
-event history, nor does it affect the shell's state. 
+event history, nor does it affect the shell's state.
 Always tries to use other window. "
   (interactive "")
   (let* ((shellname	"shell")
@@ -282,13 +281,13 @@ Otherwise, one argument `-i' is passed to the shell.
 Note that many people's .cshrc files unconditionally clear the prompt.
 If yours does, you will probably want to change it."
 ;  (let* ((prog (or explicit-shell-file-name
-;		   (getenv "ESHELL")
-;		   (getenv "SHELL")
-;		   "/bin/sh"))		     
-;	 (name (file-name-nondirectory prog))
+;                  (getenv "ESHELL")
+;                  (getenv "SHELL")
+;                  "/bin/sh"))
+;        (name (file-name-nondirectory prog))
 ;         (startfile (concat "~/.emacs_" name))
 ;         (xargs-name (intern-soft (concat "explicit-" name "-args")))
-;	 )
+;        )
 ;    (cond (emacs18
 ;           (switch-to-buffer
 ;            (apply 'make-shell shellname prog
@@ -331,7 +330,7 @@ If yours does, you will probably want to change it."
 ;;; Subject: modified tags-find
 ;;; Date: Sun, 27 Sep 87 20:19:28 -0400
 ;;; Sender: smithln
-;;; 
+;;;
 ;;; Well, I think I have finally figured out what I wanted it to do - so
 ;;; now I do it - Here is a copy of it - maybe you will like it better as
 ;;; well - Neil
@@ -362,13 +361,13 @@ values relative to the current restriction, if one is in effect, and
 the maxima (for x, the end of the line; for y, the last line)."
   (interactive)
   (let* ((char         (following-char))
-	 (beg          (point-min))
-	 (end          (point-max))
+         (beg          (point-min))
+         (end          (point-max))
          (pos          (point))
          (col          (current-column))
          (eol          (save-excursion (end-of-line) (current-column)))
-	 (total        (buffer-size))
-	 (percent      (if (> total 50000)
+         (total        (buffer-size))
+         (percent      (if (> total 50000)
                            ;; Avoid overflow from multiplying by 100!
                            (/ (+ (/ total 200) (1- pos))
                               (max (/ total 100) 1))
@@ -391,7 +390,7 @@ the maxima (for x, the end of the line; for y, the last line)."
          (rtotlines    (if restricted-p
                            (count-lines (point-min) (point-max))
                          totlines))
-	 (hscroll      (if (= (window-hscroll) 0)
+         (hscroll      (if (= (window-hscroll) 0)
                            ""
                          (format " Hscroll=%d" (window-hscroll)))))
     (cond
@@ -425,7 +424,7 @@ the maxima (for x, the end of the line; for y, the last line)."
 ;;; Yet another solution to the ^S/^Q problem in brain-dead connections
 ;;; (set-flow-control 1) [or any non-zero] sets input mode to CBREAK,
 ;;;                       flow controlled and with a translate table
-;;;                       for C-\ and C-^. 
+;;;                       for C-\ and C-^.
 ;;; (set-flow-control 0) sets input mode to interrupt driven, no flow
 ;;;                      control, no translate table.
 ;;;
@@ -517,11 +516,11 @@ See also save-some-buffers"
   "Displays characters typed, terminated by a 3-second timeout."
   (interactive)
   (let ((chars "")
-	(inhibit-quit t))
+        (inhibit-quit t))
     (message "Enter characters, terminated by 3-second timeout...")
     (while (not (sit-for 3))
       (setq chars (concat chars (list (read-char)))
-	    quit-flag nil))		; quit-flag maybe set by C-g
+            quit-flag nil))		; quit-flag maybe set by C-g
     (message "Characters entered: %s" (key-description chars))))
 
 ;;;; Some utility functions to call from the command line.
@@ -546,7 +545,7 @@ See also save-some-buffers"
 ;                         "Unknown System"))
          (os         (if window-system
                          (if (and (boundp 'window-system-version)
-				  window-system-version)
+                                  window-system-version)
                              (format "%s %s%d" system-type
                                      window-system window-system-version)
                            (format "%s %s" system-type window-system))
@@ -562,7 +561,7 @@ See also save-some-buffers"
     (if (string= login-name real-login)
         (message "%s/%s@%s:%s(%s); %s emacs %s"
                  full-name login-name sysname tty term
-		 os emacs-version)
+                 os emacs-version)
       (message "%s (%s for %s)@%s:%s, (%s) %s emacs %s"
                full-name login-name real-login
                sysname tty term os emacs-version))))
@@ -574,9 +573,9 @@ See also save-some-buffers"
 without asking for confirmation.  Nil means never ask.")
 
 (defun safe-kill-region (p1 p2)
-  "Kill region between point and mark, ask for confirmation from the 
-user when more than safe-kill-region-threshold (q.v.) characters are 
-in the region.  Called from a program takes two arguments, point and mark, 
+  "Kill region between point and mark, ask for confirmation from the
+user when more than safe-kill-region-threshold (q.v.) characters are
+in the region.  Called from a program takes two arguments, point and mark,
 smallest first."
   (interactive "r")
   (let* ((size       (length (buffer-substring p1 p2)))
@@ -651,7 +650,7 @@ smallest first."
             (recenter (- (/ (- (window-height) msg-height 1) 2) 1)))
         (momentary-string-display msg (point))
         (recenter (/ (window-height) 2))))))
- 
+
 ;;; For other purposes
 
 (defun cq-display-temporarily (string &optional perm-if-big delimiter)
@@ -728,14 +727,14 @@ With argument, that check is omitted mercifully.  CQ."
   (interactive "r")
   (copy-region-as-kill begin end)
   (message "To kill buffer: %s"
-	   (trim-string-to-fit (buffer-substring begin end)
-			       (- (window-width)
-				  (+ (length "To kill buffer: ")
-				     1)))))
+           (trim-string-to-fit (buffer-substring begin end)
+                               (- (window-width)
+                                  (+ (length "To kill buffer: ")
+                                     1)))))
 
 (defun attach-to-register (register begin end prepend-flag)
-  "Add region to contents of REGISTER.  
-Second and third arguments are the begin and end positions of the region to 
+  "Add region to contents of REGISTER.
+Second and third arguments are the begin and end positions of the region to
 be attached.  Fourth argument (interactively, the prefix) is T if the
 attachment is a prepend, else it is an append.
 CQ"
@@ -776,7 +775,7 @@ Newlines and tabs are made visible first."
 
 (defun cq-goto-line (pfx)
   "(cq-goto-line PFX)
-Go to line PFX.  Interactive, the raw prefix is inspected.  
+Go to line PFX.  Interactive, the raw prefix is inspected.
 If none or '-, go to the beginning of the file.  If \\C-u, go to the end.
 Else, go to the line with that number.  This is like CCA's Emacs.
 This function pushes the mark before moving!"
@@ -796,7 +795,7 @@ This function pushes the mark before moving!"
 (defun cq-timestamp (pfx)
   "Insert a time stamp at point, leaves point before the time stamp.
 If *timestamp-program* is bound, it is a program and arguments to be run
-by shell-command (q.v.) to obtain the time stamp.  
+by shell-command (q.v.) to obtain the time stamp.
 Else the value (current-time-string) is used."
   (interactive "p")                     ;30 Aug 90 00:36:51 UT-04:00
   (cond ((and (boundp '*timestamp-program*) *timestamp-program*)
@@ -833,7 +832,7 @@ Returns the list of SYMBOLS actually seen."
 ;;; Subject: double-line
 ;;; Message-ID: <9011230958.AA02980@sun0.thp.Uni-Koeln.DE>
 ;;; Date: 23 Nov 90 09:58:10 GMT
-;;; 
+;;;
 ;;; It is amazing how often the following little function comes in handy:
 
 ;;; (define-key ctl-x-map "\"" 'double-line) ;; in .emacs
@@ -848,14 +847,14 @@ With negative prefix arg, copies -ARG lines instead of just one."
       (insert
        "\n"
        (buffer-substring
-	(save-excursion (forward-line (1+ arg)) (point))
-	(save-excursion (end-of-line) (point))))
+        (save-excursion (forward-line (1+ arg)) (point))
+        (save-excursion (end-of-line) (point))))
     ;; else insert ARG copies:
     (let ((string (buffer-substring
-		   (save-excursion (beginning-of-line) (point))
-		   (point))))
+                   (save-excursion (beginning-of-line) (point))
+                   (point))))
       (while (>= (setq arg (1- arg)) 0)
-	(insert "\n" string)))))
+        (insert "\n" string)))))
 
 (defun cq-insert-buffer-file-name (which-buffer)
   "At point in the current buffer, insert the file name of the given buffer."
@@ -871,19 +870,19 @@ With negative prefix arg, copies -ARG lines instead of just one."
 ;;; 2000-04-29 00:31:32UT
 ;;;	I found this convenient in the implementation of cq-sh-indent
 (defun locate-indentation ()
-  "Without moving the point, determine if 
+  "Without moving the point, determine if
 1. Point is within the indentation (i.e., in the segment ^[ \t]*).
 2. The position of the beginning of the line,
 3. The position of the end of the indentation."
   (interactive)
   (save-excursion
     (let* ((at-indentation (progn (skip-chars-backward " \t")
-				  (bolp)))
-	   (indentation-start (progn (beginning-of-line)
-				     (point)))
-	   (indentation-end (progn (beginning-of-line)
-				   (skip-chars-forward " \t")
-				   (point))))
+                                  (bolp)))
+           (indentation-start (progn (beginning-of-line)
+                                     (point)))
+           (indentation-end (progn (beginning-of-line)
+                                   (skip-chars-forward " \t")
+                                   (point))))
       (list at-indentation indentation-start indentation-end))))
 
 (defun indent-buffer ( )
@@ -906,13 +905,13 @@ It depends on heuristic ideas, and so it is only good for banners, titles and
 such.  Caches the result of its first call in *any-old-hostname*."
   (interactive)
   (setq *any-old-hostname* (or *any-old-hostname*
-			       (getenv "HOST")
+                               (getenv "HOST")
                                (getenv "USERDOMAIN")
-			       mail-host-address
-			       (delete*
-				?\ ;squeeze spaces out
-				(nsubstitute
-				 ?\ ?\n ;space for newline
-				 (shell-command-to-string "hostname"))))))
+                               mail-host-address
+                               (delete*
+                                ?\ ;squeeze spaces out
+                                (nsubstitute
+                                 ?\ ?\n ;space for newline
+                                 (shell-command-to-string "hostname"))))))
 
 ;;; End of cq-utils.el
