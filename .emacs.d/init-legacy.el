@@ -467,7 +467,7 @@
 (global-set-key "\^Z\^N"            'next-error)
 (global-set-key "\^Z\^R"            'recompile)
 (global-set-key "\^Z\^Z"            'suspend-frame)
-(global-set-key "\^X\^C"            'cq-kill-emacs-maybe)
+;;(global-set-key "\^X\^C"            'cq-kill-emacs-maybe)
 ;;+? (global-set-key "\^X,"              'attach-to-register)
 ;;+? (global-set-key "\^XR"              'replace-regexp)
 ;;+? (global-set-key "\^X%"              'query-replace-regexp)
