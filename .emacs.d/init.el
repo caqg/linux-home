@@ -43,7 +43,22 @@
   (package-initialize)
 
   (filesets-init)
-  (slime-setup)
+
+  (require 'slime-autoloads)
+  (slime-setup '(slime-asdf
+                 slime-banner
+                 slime-editing-commands
+                 slime-fancy
+                 slime-fancy-inspector
+                 ;;slime-highlight-edits
+                 slime-mdot-fu
+                 slime-mrepl
+                 slime-references
+                 slime-tramp
+                 ;;slime-typeout-frame
+                 ))
+  (global-set-key "\C-cs" 'slime-selector)
+
   (which-function-mode 1)
   (pending-delete-mode t)
   (electric-indent-mode -1)
@@ -357,6 +372,8 @@
  '(show-paren-style (quote parenthesis))
  '(show-trailing-whitespace nil)
  '(size-indication-mode t)
+ '(slime-kill-without-query-p t)
+ '(slime-net-coding-system (quote utf-8-unix))
  '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
  '(speedbar-show-unknown-files t)
  '(spice-output-local "Gnucap")
