@@ -31,7 +31,7 @@
 ;; Maintainer: Jason R. Blevins <jrblevin@sdf.org>
 ;; Created: May 24, 2007
 ;; Version: 2.0
-;; Package-Version: 20160104.1226
+;; Package-Version: 20160105.1455
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: http://jblevins.org/projects/markdown-mode/
@@ -122,6 +122,10 @@
 ;; There is no official Markdown file extension, nor is there even a
 ;; _de facto_ standard, so you can easily add, change, or remove any
 ;; of the file extensions above as needed.
+;;
+;; `markdown-mode' depends on `cl-lib', which has been bundled with
+;; GNU Emacs since 24.3.  Users of GNU Emacs 24.1 and 24.2 can install
+;; `cl-lib' with `package.el'.
 
 ;;; Usage:
 
@@ -813,17 +817,12 @@
 ;;   * Syohei Yoshida <syohex@gmail.com> for better heading detection
 ;;     and movement functions.
 
-;;; Compatibility:
-
-;; Markdown mode is developed and tested primarily for compatibility with
-;; GNU Emacs 24.3 and later.  It requires `cl-lib', which has been
-;; bundled with GNU Emacs since 24.3.  Users of GNU Emacs 24.1 and 24.2
-;; can install `cl-lib' with `package.el'.
-
 ;;; Bugs:
 
-;; If you find any bugs in markdown-mode, please construct a test case
-;; or a patch and open a ticket on the [GitHub issue tracker][issues].
+;; markdown-mode is developed and tested primarily for compatibility
+;; with GNU Emacs 24.3 and later.  If you find any bugs in
+;; markdown-mode, please construct a test case or a patch and open a
+;; ticket on the [GitHub issue tracker][issues].
 ;;
 ;;  [issues]: https://github.com/jrblevin/markdown-mode/issues
 
@@ -3276,32 +3275,19 @@ already in `markdown-gfm-recognized-languages' or
       (widget-put widget :error (format "Invalid language spec: '%s'" str))
       widget)))
 
-(defun markdown-compare-language-strings (str1 str2)
-  ;; note that this keeps the first capitalization of a language used in a
-  ;; buffer
-  ;; this also relies upon the fact that all input strings have been cleaned
-  ;; with `markdown-clean-language-string'
-  (eq t (compare-strings str1 nil nil str2 nil nil t)))
+(defun markdown-gfm-get-corpus ()
+  "Create corpus of recognized GFM code block languages for the given buffer."
+  (append markdown-gfm-used-languages
+          markdown-gfm-additional-languages
+          markdown-gfm-recognized-languages))
 
 (defun markdown-add-language-if-new (lang)
   (let* ((cleaned-lang (markdown-clean-language-string lang))
          (find-result
-          (cl-find cleaned-lang (append markdown-gfm-used-languages
-                                        markdown-gfm-additional-languages
-                                        markdown-gfm-recognized-languages)
-                   :test #'markdown-compare-language-strings)))
-    (if find-result (setq markdown-gfm-last-used-language find-result)
-      ;; we have already checked whether it exists in the list using our fuzzy
-      ;; `markdown-compare-language-strings' function, so we can just push
-      (push cleaned-lang markdown-gfm-used-languages)
-      (setq markdown-gfm-last-used-language cleaned-lang))))
-
-(defun markdown-parse-gfm-buffer-for-languages (&optional buffer)
-  (with-current-buffer (or buffer (current-buffer))
-    (save-excursion
-      (goto-char (point-min))
-      (while (re-search-forward markdown-regex-gfm-code-block nil t)
-        (markdown-add-language-if-new (match-string-no-properties 2))))))
+          (cl-find cleaned-lang (markdown-gfm-get-corpus)
+                   :test #'equal)))
+    (setq markdown-gfm-last-used-language cleaned-lang)
+    (unless find-result (push cleaned-lang markdown-gfm-used-languages))))
 
 (defun markdown-insert-gfm-code-block (&optional lang)
   "Insert GFM code block for language LANG.
@@ -3310,14 +3296,12 @@ region is active, wrap this region with the markup instead.  If
 the region boundaries are not on empty lines, these are added
 automatically in order to have the correct markup."
   (interactive
-   (list (let ((completion-ignore-case t))
+   (list (let ((completion-ignore-case nil))
            (markdown-clean-language-string
             (completing-read
              (format "Programming language [%s]: "
                      (or markdown-gfm-last-used-language "none"))
-             (append markdown-gfm-used-languages
-                     markdown-gfm-additional-languages
-                     markdown-gfm-recognized-languages)
+             (markdown-gfm-get-corpus)
              nil 'confirm nil
              'markdown-gfm-language-history
              (or markdown-gfm-last-used-language
@@ -3347,6 +3331,13 @@ automatically in order to have the correct markup."
     (insert "```")
     (markdown-ensure-blank-line-after)
     (forward-line -1)))
+
+(defun markdown-gfm-parse-buffer-for-languages (&optional buffer)
+  (with-current-buffer (or buffer (current-buffer))
+    (save-excursion
+      (goto-char (point-min))
+      (while (re-search-forward markdown-regex-gfm-code-block nil t)
+        (markdown-add-language-if-new (match-string-no-properties 2))))))
 
 
 ;;; Footnotes ======================================================================
@@ -4015,6 +4006,7 @@ Assumes match data is available for `markdown-regex-italic'."
     (define-key map "\C-c\C-s\C-b" 'markdown-blockquote-region)
     (define-key map "\C-c\C-sp" 'markdown-insert-pre)
     (define-key map "\C-c\C-s\C-p" 'markdown-pre-region)
+    (define-key map "\C-c\C-sP" 'markdown-insert-gfm-code-block)
     (define-key map "\C-c-" 'markdown-insert-hr)
     ;; Element insertion (deprecated)
     (define-key map "\C-c\C-ar" 'markdown-insert-reference-link-dwim)
@@ -4084,7 +4076,6 @@ Assumes match data is available for `markdown-regex-italic'."
 (defvar gfm-mode-map
   (let ((map (make-sparse-keymap)))
     (set-keymap-parent map markdown-mode-map)
-    (define-key map (kbd "C-c C-s P") 'markdown-insert-gfm-code-block)
     (define-key map (kbd "C-c C-s d") 'markdown-insert-strike-through)
     (define-key map "`" 'markdown-electric-backquote)
     map)
@@ -4866,9 +4857,8 @@ Only visible heading lines are considered, unless INVISIBLE-OK is non-nil."
 
 (defalias 'markdown-end-of-heading 'outline-end-of-heading)
 
-(defun markdown-on-heading-p (&optional invisible-ok)
-  "Return t if point is on a (visible) heading line.
-If INVISIBLE-OK is non-nil, an invisible heading line is ok too."
+(defun markdown-on-heading-p ()
+  "Return t if point is on a (visible) heading line."
   (get-text-property (point) 'markdown-heading))
 
 (defun markdown-end-of-subtree (&optional invisible-OK)
@@ -5324,7 +5314,9 @@ the rendered output."
       (let ((output-buffer
              (funcall markdown-live-preview-window-function export-file)))
         (with-current-buffer output-buffer
-          (setq markdown-live-preview-source-buffer cur-buf))
+          (setq markdown-live-preview-source-buffer cur-buf)
+          (add-hook 'kill-buffer-hook
+                    #'markdown-live-preview-remove-on-kill t t))
         (with-current-buffer cur-buf
           (setq markdown-live-preview-buffer output-buffer))))
     (with-current-buffer cur-buf
@@ -5533,7 +5525,7 @@ See `markdown-wiki-link-p' and `markdown-follow-wiki-link'."
 
 (defun markdown-unfontify-region-wiki-links (from to)
   "Remove wiki link faces from the region specified by FROM and TO."
-  (interactive "nfrom: \nnto: ")
+  (interactive "*r")
   (remove-text-properties from to '(font-lock-face markdown-link-face))
   (remove-text-properties from to '(font-lock-face markdown-missing-link-face)))
 
@@ -5574,47 +5566,49 @@ newline after."
         (setq new-to (point)))
     (cl-values new-from new-to)))
 
-(defun markdown-check-change-for-wiki-link (from to change)
-  "Check region between FROM and TO for wiki links and re-fontfy as needed.
-Designed to be used with the `after-change-functions' hook.
-CHANGE is the number of bytes of pre-change text replaced by the
-given range."
-  (interactive "nfrom: \nnto: \nnchange: ")
+(defun markdown-check-change-for-wiki-link (from to)
+  "Check region between FROM and TO for wiki links and re-fontify as needed."
+  (interactive "*r")
   (let* ((modified (buffer-modified-p))
          (buffer-undo-list t)
          (inhibit-read-only t)
          (inhibit-point-motion-hooks t)
          deactivate-mark
          buffer-file-truename)
-     (unwind-protect
-         (save-excursion
-           (save-match-data
-             (save-restriction
-               ;; Extend the region to fontify so that it starts
-               ;; and ends at safe places.
-               (cl-multiple-value-bind (new-from new-to)
-                   (markdown-extend-changed-region from to)
-                 (goto-char new-from)
-                 ;; Only refontify when the range contains text with a
-                 ;; wiki link face or if the wiki link regexp matches.
-                 (when (or (markdown-range-property-any
-                            new-from new-to 'font-lock-face
-                            (list markdown-link-face
-                                  markdown-missing-link-face))
-                           (re-search-forward
-                            markdown-regex-wiki-link new-to t))
-                   ;; Unfontify existing fontification (start from scratch)
-                   (markdown-unfontify-region-wiki-links new-from new-to)
-                   ;; Now do the fontification.
-                   (markdown-fontify-region-wiki-links new-from new-to))))))
-       (and (not modified)
-            (buffer-modified-p)
-            (set-buffer-modified-p nil)))))
+    (unwind-protect
+        (save-excursion
+          (save-match-data
+            (save-restriction
+              ;; Extend the region to fontify so that it starts
+              ;; and ends at safe places.
+              (cl-multiple-value-bind (new-from new-to)
+                  (markdown-extend-changed-region from to)
+                (goto-char new-from)
+                ;; Only refontify when the range contains text with a
+                ;; wiki link face or if the wiki link regexp matches.
+                (when (or (markdown-range-property-any
+                           new-from new-to 'font-lock-face
+                           (list markdown-link-face
+                                 markdown-missing-link-face))
+                          (re-search-forward
+                           markdown-regex-wiki-link new-to t))
+                  ;; Unfontify existing fontification (start from scratch)
+                  (markdown-unfontify-region-wiki-links new-from new-to)
+                  ;; Now do the fontification.
+                  (markdown-fontify-region-wiki-links new-from new-to))))))
+      (and (not modified)
+           (buffer-modified-p)
+           (set-buffer-modified-p nil)))))
+
+(defun markdown-check-change-for-wiki-link-after-change (from to _)
+    "Check region between FROM and TO for wiki links and re-fontify as needed.
+Designed to be used with the `after-change-functions' hook."
+  (markdown-check-change-for-wiki-link from to))
 
 (defun markdown-fontify-buffer-wiki-links ()
   "Refontify all wiki links in the buffer."
   (interactive)
-  (markdown-check-change-for-wiki-link (point-min) (point-max) 0))
+  (markdown-check-change-for-wiki-link (point-min) (point-max)))
 
 
 ;;; Following and Jumping =====================================================
@@ -5907,7 +5901,8 @@ before regenerating font-lock rules for extensions."
     (make-local-hook 'window-configuration-change-hook))
 
   ;; Anytime text changes make sure it gets fontified correctly
-  (add-hook 'after-change-functions 'markdown-check-change-for-wiki-link t t)
+  (add-hook 'after-change-functions
+            'markdown-check-change-for-wiki-link-after-change t t)
 
   ;; Make checkboxes buttons
   (when markdown-make-gfm-checkboxes-buttons
@@ -5919,6 +5914,10 @@ before regenerating font-lock rules for extensions."
   ;; refontified when we come back.
   (add-hook 'window-configuration-change-hook
             'markdown-fontify-buffer-wiki-links t t)
+
+  ;; add live preview export hook
+  (add-hook 'after-save-hook #'markdown-live-preview-if-markdown t t)
+  (add-hook 'kill-buffer-hook #'markdown-live-preview-remove-on-kill t t)
 
   ;; do the initial link fontification
   (markdown-fontify-buffer-wiki-links))
@@ -5955,7 +5954,7 @@ before regenerating font-lock rules for extensions."
        '(gfm-font-lock-keywords))
   ;; do the initial link fontification
   (markdown-fontify-buffer-wiki-links)
-  (markdown-parse-gfm-buffer-for-languages))
+  (markdown-gfm-parse-buffer-for-languages))
 
 
 ;;; Live Preview Mode  ============================================
@@ -5965,9 +5964,6 @@ before regenerating font-lock rules for extensions."
   (if markdown-live-preview-mode
       (markdown-display-buffer-other-window (markdown-live-preview-export))
     (markdown-live-preview-remove)))
-
-(add-hook 'after-save-hook #'markdown-live-preview-if-markdown)
-(add-hook 'kill-buffer-hook #'markdown-live-preview-remove-on-kill)
 
 
 (provide 'markdown-mode)
