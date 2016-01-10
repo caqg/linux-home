@@ -1,0 +1,47 @@
+* Overview
+
+Journal of my re-study of Org.
+
+** <2015-05-11 Mon>
+If a paragraph ends in more than one empty-lines, one empty-line is kept when
+the paragraph is hidden.
+
+Look at the variables org-special-ctrl-a/e, org-special-ctrl-k and
+org-ctrl-k-protect-subtree
+
+
+* Journalling
+
+** [2015-07-15 Wed]
+
+Started shortly after midnight, so it appears to come from tomorrow.
+
+*** Meta-Enter followed by editing to get another star in heading
+
+
+* Code
+- Note taken on [2015-10-07 Wed 22:43] \\
+  Studying drawers and blocks.
+Let's have an example here.
+#+BEGIN_SRC C -n
+#include <stdio.h>
+int main(int argc, char** argv) /* can't omit arg names in C */
+{
+	return 0;
+}
+#+END_SRC
+
+- Example inline
+
+: miau!
+
+Out of the example now.
+
+
+* Math
+
+Let's say \alpha \cup \beta is interesting. Or that \mu m, how do we put them together? Try
+\mu{}m (put {} in between). \int f.dx.
+
+x^y^z (x^y)^z
+
