@@ -77,6 +77,9 @@
                 ))
           t)
 
+(autoload 'cmake-font-lock-activate "cmake-font-lock" nil t)
+(add-hook 'cmake-mode-hook 'cmake-font-lock-activate)
+
 (add-hook 'c++-mode-hook
           #'(lambda ()
               (c-set-offset 'innamespace 0)))
@@ -342,6 +345,7 @@
 (add-hook 'texinfo-mode-hook        'cq-texinfo-mode)
 (add-hook 'TeX-mode-hook            'cq-tex-mode)
 (add-hook 'LaTeX-mode-hook          'cq-latex-mode)
+(add-hook 'LaTex-mode-hook          'latex-extra-mode)
 (setq TeX-default-mode              'latex-mode)
 
 ;;;; For MH-E
