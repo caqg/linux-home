@@ -63,11 +63,16 @@ usage () {
 	echo ""
 	echo "	OPTIONS"
 	echo ""
-	echo "  -d		Delete logs after zipping them"
-	echo
-	echo "  -n		Show, but not do, what would happen"
-	echo
-	echo "  -h"
+	echo "	-d"
+	echo "	--delete	Delete logs after zipping them"
+	echo ""
+	echo "	-n"
+	echo "	--dry-run	Show, but not do, what would happen"
+	echo ""
+	echo "	-l"
+	echo "	--list		list the logs zipped already"
+	echo ""
+	echo "	-h"
 	echo "	--help		Print this message to stdout."
 }
 
@@ -90,10 +95,12 @@ mk_zipfile_name () {
 deleter=":"
 interpreter="bash"
 lister="ls -l"
+zippy="zip -uv"
 for arg in "$@"; do
 	case "$arg" in
 	-d|--delete)    deleter="rm -f"; lister=":"; shift;;
 	-h|--help)	usage; exit 0;;
+	-l|--list)      zippy="unzip -l"; deleter=":"; lister=":"; shift;;
 	-n|--dry-run)   interpreter="cat"; shift;;
 	esac
 done
@@ -122,7 +129,7 @@ esac
 
 # Refer to the zip manual page for the meaning of 0 and 12 as exit codes.
 cat <<EOF | $interpreter
-zip -uv ${zipfile} ${ZLOGSGLOB}
+$zippy ${zipfile} ${ZLOGSGLOB}
 case \$? in
 0 | 12) $deleter ${ZLOGSGLOB}; echo; $lister ${ZLOGSGLOB} ;;
 esac
