@@ -2,6 +2,24 @@
 git://git.savannah.gnu.org/emacs
 
 
+* Git worktree
+To maintain two worktrees with different branches of Emacs at the same time:
+
+cd /work
+rm -fr emacs; mkdir emacs
+git clone --separate-git-dir=emacs/emacs.git \
+	git:git://git.savannah.gnu.org/emacs emacs/master
+cd emacs/emacs.git
+git worktree add -b emacs-25 ../emacs-25 origin/emacs-25
+
+At this point /work/emacs contains 3 subdirectories: emacs.git, master, and
+emacs-25.
+
+cd ../emacs-25
+git checkout emacs-25
+
+Ready!
+
 * rsync
 rsync -a	Best default ('archive')
 rsync -b	Make backups
