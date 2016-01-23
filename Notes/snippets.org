@@ -20,6 +20,7 @@ git checkout emacs-25
 
 Ready!
 
+
 * rsync
 rsync -a	Best default ('archive')
 rsync -b	Make backups
