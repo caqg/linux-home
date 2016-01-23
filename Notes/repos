@@ -11,6 +11,9 @@ git clone git://git.savannah.gnu.org/emacs
 ## git
 git clone https://github.com/git/git.git
 
+## global
+cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/global co .
+
 ## gnome-terminal-colors-solarized
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 
