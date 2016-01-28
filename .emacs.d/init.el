@@ -151,6 +151,7 @@
   (require 'semantic/idle)
   (require 'semantic/mru-bookmark)
   (require 'semantic/sb)
+  (require 'semantic/symref)
   (require 'ede)
   (require 'ecb)                        ;last require, so at end of Tools menu
   (global-semantic-mru-bookmark-mode 1)
@@ -374,6 +375,8 @@
    (quote
     (global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode)))
  '(semantic-mode t)
+ '(semantic-symref-auto-expand-results t)
+ '(semantic-symref-results-summary-function (quote semantic-format-tag-canonical-name))
  '(set-mark-command-repeat-pop t)
  '(sh-basic-offset 8)
  '(sh-indent-for-case-alt (quote +))
