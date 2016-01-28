@@ -37,10 +37,10 @@
   (global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
 
   (add-hook 'dired-load-hook
-            #'(lambda ()
-                ;; Bind dired-x-find-file.
-                (setq dired-x-hands-off-my-keys nil)
-                (load "dired-x")))
+            (lambda ()
+              ;; Bind dired-x-find-file.
+              (setq dired-x-hands-off-my-keys nil)
+              (load "dired-x")))
 
   (package-initialize)
 
@@ -72,6 +72,8 @@
   (global-set-key "\C-xg" 'magit-status)
   (global-set-key "\C-x\M-g" 'magit-dispatch-popup)
   (global-magit-file-mode 1)
+
+  (require 'p4)
 
   (require 'tramp)
 
@@ -108,7 +110,7 @@
         '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
   (setq org-log-done t)                 ; or '(done) instead of t
   (setq org-agenda-include-diary t)
-  (add-hook 'org-mode-hook #'(lambda () (require 'vc)))
+  (add-hook 'org-mode-hook (lambda () (require 'vc)))
   (add-hook 'org-mode-hook 'turn-on-font-lock)
 
   (require 'remember)
@@ -128,9 +130,9 @@
                                    (tabset object &optional append))
     "Present the tab bar tab sets in ascending order by buffer name."
     (let* ((tabs (tabbar-tabs tabset))
-           (sorted (sort tabs #'(lambda (a b)
-                                  (string< (buffer-name (car a))
-                                           (buffer-name (car b)))))))
+           (sorted (sort tabs (lambda (a b)
+                                (string< (buffer-name (car a))
+                                         (buffer-name (car b)))))))
       (set tabset sorted)))
 
   ;; Color theme
@@ -163,9 +165,9 @@
   (when window-system
     (cq/adjust-paren-face-fg nil))
 
-  (add-hook 'tty-setup-hook #'(lambda ()
-                                (tabbar-mode -1)
-                                (menu-bar-mode -1)))
+  (add-hook 'tty-setup-hook (lambda ()
+                              (tabbar-mode -1)
+                              (menu-bar-mode -1)))
 
   (unless window-system (normal-erase-is-backspace-mode 0)))
 
@@ -340,6 +342,7 @@
  '(org-pretty-entities t)
  '(org-startup-indented t)
  '(org-use-sub-superscripts (quote {}))
+ '(p4-check-empty-diffs t)
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
@@ -348,7 +351,7 @@
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(package-selected-packages
    (quote
-    (srefactor ada-mode wisi seq ctags ctags-update auto-complete auto-complete-pcmp all async dash dired-hacks-utils ess git-commit heap hide-comnt hide-lines list-utils paredit queue s slime trie with-editor j-mode dts-mode magit magit-popup stream minimap memory-usage quarter-plane cmake-font-lock common-lisp-snippets dynamic-ruler figlet fill-column-indicator fm indent-guide itail json-mode json-reformat latex-extra latex-preview-pane lexbind-mode lisp-extra-font-lock multi-term name-this-color oberon org-magit sicp csv-mode let-alist multishell org-plus-contrib autodisass-llvm-bitcode llvm-mode magit-filenotify magit-find-file magit-gh-pulls magit-gitflow magit-tramp ac-R ac-etags ac-math ac-octave ac-python ac-slime anaconda-mode cl-lib-highlight clang-format beacon glsl-mode python3-info ac-emoji solarized-theme mmt fasm-mode edit-at-point org-dashboard ac-c-headers ada-ref-man aes aggressive-fill-paragraph aggressive-indent all-ext ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags backtrace-mode bigint bison-mode cedit charmap cmake-mode codesearch company-c-headers company-ess company-inf-ruby company-math company-quickhelp cperl-mode csharp-mode csv-nav dict-tree dircmp dired-narrow dired-toggle-sudo ecb edebug-x ediprolog edit-list ess-R-data-view ess-R-object-popup ess-smart-underscore form-feed ggtags git gitattributes-mode gitconfig-mode gitignore-mode gscholar-bibtex gtags header2 ht http-post-simple hydra interval-tree ipython javadoc-help javadoc-lookup jira kv lib-requires markdown-toc move-dup nasm-mode org org-ac org-bullets org-cliplink org-context org-download org-jira org-journal org-mime org-pandoc orgtbl-show-header pandoc-mode paredit-everywhere paredit-menu path-headerline-mode pcsv peep-dired perl-completion perl-myvar pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term shell-command shell-here shell-toggle slime-annot sml-mode sparkline ssh ssh-config-mode strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemtap-mode tabbar tdd thing-cmds undo-tree uuid vector-utils viewer vimrc-mode vkill vlf wget wiki wiki-nav xcscope xml-rpc yaoddmuse)))
+    (p4 srefactor ada-mode wisi seq ctags ctags-update auto-complete auto-complete-pcmp all async dash dired-hacks-utils ess git-commit heap hide-comnt hide-lines list-utils paredit queue s slime trie with-editor j-mode dts-mode magit magit-popup stream minimap memory-usage quarter-plane cmake-font-lock common-lisp-snippets dynamic-ruler figlet fill-column-indicator fm indent-guide itail json-mode json-reformat latex-extra latex-preview-pane lexbind-mode lisp-extra-font-lock multi-term name-this-color oberon org-magit sicp csv-mode let-alist multishell org-plus-contrib autodisass-llvm-bitcode llvm-mode magit-filenotify magit-find-file magit-gh-pulls magit-gitflow magit-tramp ac-R ac-etags ac-math ac-octave ac-python ac-slime anaconda-mode cl-lib-highlight clang-format beacon glsl-mode python3-info ac-emoji solarized-theme mmt fasm-mode edit-at-point org-dashboard ac-c-headers ada-ref-man aes aggressive-fill-paragraph aggressive-indent all-ext ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags backtrace-mode bigint bison-mode cedit charmap cmake-mode codesearch company-c-headers company-ess company-inf-ruby company-math company-quickhelp cperl-mode csharp-mode csv-nav dict-tree dircmp dired-narrow dired-toggle-sudo ecb edebug-x ediprolog edit-list ess-R-data-view ess-R-object-popup ess-smart-underscore form-feed ggtags git gitattributes-mode gitconfig-mode gitignore-mode gscholar-bibtex gtags header2 ht http-post-simple hydra interval-tree ipython javadoc-help javadoc-lookup jira kv lib-requires markdown-toc move-dup nasm-mode org org-ac org-bullets org-cliplink org-context org-download org-jira org-journal org-mime org-pandoc orgtbl-show-header pandoc-mode paredit-everywhere paredit-menu path-headerline-mode pcsv peep-dired perl-completion perl-myvar pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term shell-command shell-here shell-toggle slime-annot sml-mode sparkline ssh ssh-config-mode strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemtap-mode tabbar tdd thing-cmds undo-tree uuid vector-utils viewer vimrc-mode vkill vlf wget wiki wiki-nav xcscope xml-rpc yaoddmuse)))
  '(prog-mode-hook (quote ((lambda nil (form-feed-mode 1)))))
  '(recentf-mode t)
  '(require-final-newline nil)

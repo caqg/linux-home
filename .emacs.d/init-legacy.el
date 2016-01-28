@@ -345,7 +345,7 @@
 (add-hook 'texinfo-mode-hook        'cq-texinfo-mode)
 (add-hook 'TeX-mode-hook            'cq-tex-mode)
 (add-hook 'LaTeX-mode-hook          'cq-latex-mode)
-(add-hook 'LaTex-mode-hook          'latex-extra-mode)
+(add-hook 'LaTeX-mode-hook          'latex-extra-mode)
 (setq TeX-default-mode              'latex-mode)
 
 ;;;; For MH-E
@@ -421,7 +421,9 @@
 ;;; Other customizations
 (setq safe-kill-region-threshold        5120)
 ;; (setq lpq-known-printers                '())
+
 
+
 ;;; Other hooks
 
 (add-hook 'after-save-hook
@@ -435,7 +437,9 @@
                        (set-file-modes buffer-file-truename
                                        (logior (file-modes buffer-file-truename)
                                                #o755)))))))
+
 
+
 ;;;
 ;;; Some global key bindings
 ;;;
@@ -516,6 +520,7 @@
   'minibuffer-yank-previous-completion)
 
 
+
 ;;; Functions to load on demand.
 
 (let ((file (concat *cq/emacslib* "cq-c-mode")))
@@ -576,7 +581,9 @@
 ;;;  (autoload 'cq-mail-setup        file "Affect formatting of a message" t nil)
 ;;;  (autoload 'cq-rmail-mode        file "Set Rmail mode" t nil)
 ;;;  (autoload 'cq-rmail-summary-mode file "Set Rmail Summary mode" t nil))
+
 
+
 (let ((file (concat *cq/emacslib* "cq-multi-shell")))
   (autoload 'cq-multi-shell file "Handle multiple shell buffers" t nil)
   (autoload 'cq-multi-shell-other-window file
