@@ -40,6 +40,20 @@ levels of indentation are hidden. As usual, undo by invoking
          (set-selective-display p))))
 
 
+(defun cq/desensitize-case-for-regexp (r1 r2)
+  "Replace the region, replacing all 2-case characters x with [Xx]"
+  (interactive "*^r")
+  (insert
+   (mapconcat
+    #'(lambda (c)
+        (let ((ucase (upcase c))
+              (dcase (downcase c)))
+          (if (string= ucase dcase)
+              c
+            (concat "[" ucase dcase "]"))))
+    (split-string (delete-and-extract-region r1 r2) "")
+    "")))
+
 
 
 (provide 'cq-edit-utils)
