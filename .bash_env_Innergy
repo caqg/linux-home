@@ -1,6 +1,6 @@
 : source me, I am a bash -*- Shell-Script -*-
 
-export SOFTWARE=/work/Innergy/Software
+export SOFTWARE=/work/innergy/run
 export INNERGY_ROOT=${SOFTWARE}
 export SYSTEMC_HOME=${INNERGY_ROOT}/src/External/systemc
 export SYSTEMC=${SYSTEMC_HOME}
