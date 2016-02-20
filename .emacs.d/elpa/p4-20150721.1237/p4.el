@@ -1772,14 +1772,14 @@ the context to determine the filename if necessary."
                    :mode 'p4-diff-mode :callback 'p4-activate-diff-buffer))
 
 (defun p4-activate-ediff-callback ()
-  "Return a callback function that runs ediff on the current
-buffer and the P4 output buffer."
+  "Return a callback function that runs ediff on the buffer of the depot file
+and the current buffer."
   (lexical-let ((orig-buffer (current-buffer)))
     (lambda ()
       (when (buffer-live-p orig-buffer)
         (p4-fontify-print-buffer t)
         (lexical-let ((depot-buffer (current-buffer)))
-          (ediff-buffers orig-buffer depot-buffer))))))
+          (ediff-buffers depot-buffer orig-buffer))))))
 
 (defun p4-ediff (prefix)
   "Use ediff to compare file with its original client version."
@@ -3318,7 +3318,7 @@ is NIL, otherwise return NIL."
       (p4-reopen (list "-t" type (match-string 2))))))
 
 (defun p4-opened-list-change (change)
-  (interactive 
+  (interactive
    (list (p4-completing-read 'pending "New change: ")))
   (save-excursion
     (beginning-of-line)
