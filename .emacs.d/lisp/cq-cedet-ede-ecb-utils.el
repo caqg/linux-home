@@ -1,11 +1,11 @@
 ;;;;                                                        -*- Emacs-Lisp -*-
-;;; Copyright (C) 2015 by Cesar A Quiroz, Ph.D.
+;;; Copyright (C) 2015-2016 by Cesar A Quiroz, Ph.D.
 ;;; 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
 (defcustom *cq/metadata-file-loaders-alist*
-  (list (cons ".ede-cpproot.el"
+  (list (cons "ede-cpproot.el"
               #'(lambda (f) (load-file f)))
         (cons "TAGS"
               #'(lambda (f) (visit-tags-table f)))
@@ -15,7 +15,8 @@
               #'(lambda (f) (gtags-visit-rootdir))))
   "Map a base filename (e.g, \"TAGS\") to a s-exp which, when evaluated, loads
 that file and any associated ones"
-  :type 'alist)
+  :type 'alist
+  :group 'cq/)
 
 (defun cq/load-ede-project-and-tags ()
   "Load .ede-cpproot.el, and other tag files, if present. The loaders are found
