@@ -239,6 +239,20 @@
  '(display-time-interval 30)
  '(display-time-mode t)
  '(dnd-open-file-other-window t)
+ '(ecb-activate-before-layout-draw-hook
+   (quote
+    ((lambda nil
+       (modify-frame-parameters
+        (selected-frame)
+        (quote
+         ((fullscreen . maximized))))))))
+ '(ecb-activate-hook
+   (quote
+    (ecb-eshell-auto-activate-hook
+     (lambda nil
+       (scroll-bar-mode -1)
+       (horizontal-scroll-bar-mode -1)
+       (ecb-redraw-layout)))))
  '(ecb-activation-selects-ecb-frame-if-already-active t)
  '(ecb-auto-expand-tag-tree (quote all))
  '(ecb-compile-window-height 0.2)
@@ -247,6 +261,7 @@
  '(ecb-enlarged-compilation-window-max-height (quote best))
  '(ecb-ignore-pop-up-frames (quote always))
  '(ecb-layout-name "leftright-analyse")
+ '(ecb-new-ecb-frame t)
  '(ecb-options-version "2.40")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer (quote never))
