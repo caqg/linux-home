@@ -21,7 +21,7 @@ directories=${directories:-"."}
 (
 	echo "(require 'ede/cpp-root)"
 	echo '(ede-cpp-root-project'
-	echo ' "'"$projname"'"'
+	echo ' :name "'"$projname"'"'
 	echo ' :file "'"$elfile"'"'
 	echo ' :include-path'
 	echo " '("
