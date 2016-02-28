@@ -304,8 +304,21 @@
 		  "Emacs mode based on common modern interface and ergonomics." tar
 		  ((:keywords "convenience")
 		   (:url . "https://github.com/ergoemacs/ergoemacs-mode"))])
+ (excorporate .
+	      [(0 7 1)
+	       ((emacs
+		 (24 1))
+		(fsm
+		 (0 2))
+		(soap-client
+		 (3 0 2))
+		(url-http-ntlm
+		 (2 0 2)))
+	       "Exchange integration" tar
+	       ((:keywords "calendar")
+		(:url . "http://elpa.gnu.org/packages/excorporate.html"))])
  (exwm .
-       [(0 3)
+       [(0 4)
 	((xelb
 	  (0 6)))
 	"Emacs X Window Manager" tar
@@ -649,6 +662,11 @@
 		  nil "restore original position after scrolling" single
 		  ((:url . "http://elpa.gnu.org/packages/scroll-restore.html")
 		   (:keywords "scrolling"))])
+ (sed-mode .
+	   [(1 0)
+	    nil "Major mode to edit sed scripts" single
+	    ((:url . "http://elpa.gnu.org/packages/sed-mode.html")
+	     (:keywords))])
  (seq .
       [(1 11)
        nil "Sequence manipulation functions" single
