@@ -1,8 +1,15 @@
 #!/bin/sh
 
+for arg; do
+	case "$arg" in
+	-*)	echo 1>&2 Option $arg discarded.
+		shift;;
+	esac
+done
+
 case $# in
 3) A=$1 B=$2 C=$3;;
 *) echo "usage: "`basename $0`" BASE THEIRS YOURS"; exit 2 ;;
 esac
 
-e --eval '(ediff3 "'"$B"'" "'"$C"'" "'"$A"'")'
+e -c -F '((fullscreen . maximized))' -e '(ediff3 "'"$B"'" "'"$C"'" "'"$A"'")'

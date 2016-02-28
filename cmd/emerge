@@ -1,5 +1,12 @@
 #!/bin/sh
 
+for arg; do
+	case "$arg" in
+	-*)	echo 1>&2 Option $arg discarded.
+		shift;;
+	esac
+done
+
 case $# in
 4) A=$1 B=$2 C=$3 M=$4;;
 *) echo "usage: "`basename $0`" BASE-in THEIRS-in YOURS-in MERGED-out";
