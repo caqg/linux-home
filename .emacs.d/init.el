@@ -278,6 +278,7 @@
  '(ede-project-directories (quote ("/work/stable-linux")))
  '(ediff-custom-diff-options "-U10")
  '(ediff-highlight-all-diffs nil)
+ '(ediff-keep-variants nil)
  '(ediff-prefer-iconified-control-frame t)
  '(ediff-show-clashes-only t)
  '(ediff-split-window-function (quote split-window-horizontally))
