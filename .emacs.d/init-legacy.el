@@ -115,7 +115,9 @@
 (add-hook 'comint-mode-hook
           #'(lambda ( )
               (add-hook 'comint-output-filter-functions
-                        'comint-strip-ctrl-m)))
+                        'comint-strip-ctrl-m)
+              (local-set-key "\C-z\C-n" 'comint-next-prompt)
+              (local-set-key "\C-z\C-p" 'comint-previous-prompt)))
 
 (add-hook 'compilation-mode-hook
           #'(lambda ()
