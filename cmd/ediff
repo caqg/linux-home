@@ -5,7 +5,7 @@ for arg; do
 	-*)	echo 1>&2 Option $arg ignored.
 		shift;;
 	esac
-xodone
+done
 
 case $# in
 2) A=$1 B=$2;;
