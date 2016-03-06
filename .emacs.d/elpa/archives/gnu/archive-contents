@@ -187,7 +187,7 @@
  (csv-mode .
 	   [(1 5)
 	    nil "Major mode for editing comma/char separated values" single
-	    ((:url . "http://centaur.maths.qmul.ac.uk/Emacs/")
+	    ((:url . "http://elpa.gnu.org/packages/csv-mode.html")
 	     (:keywords "convenience"))])
  (darkroom .
 	   [(0 1)
@@ -390,7 +390,7 @@
 		((:keywords "html" "xml")
 		 (:url . "https://github.com/validator/validator"))])
  (hydra .
-	[(0 13 4)
+	[(0 13 5)
 	 ((cl-lib
 	   (0 5)))
 	 "Make bindings that stick around." tar
