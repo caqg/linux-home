@@ -492,7 +492,7 @@
 ;;(global-set-key "\^X4!"             'cq-comint-shell-other-window)
 ;;(global-set-key "\^X4!"             'cq-multi-shell-other-window)
 ;;(global-set-key "\^X!"              'cq-multi-shell)
-(global-set-key "\^X!"              'shell)
+;;(global-set-key "\^X!"              'shell)
 (global-set-key "\^W"               'safe-kill-region)
 (global-set-key "\^Z\^F"            'cq-revert-buffer)
 (global-set-key "\^Zb"              'cq-insert-buffer-file-name)

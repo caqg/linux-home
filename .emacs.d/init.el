@@ -67,6 +67,7 @@
   (electric-indent-mode -1)
 
   (require 'multishell)
+  (global-set-key "\C-x!" 'multishell-pop-to-shell)
 
   (require 'magit)
   (global-set-key "\C-xg" 'magit-status)
@@ -346,7 +347,7 @@
  '(mouse-autoselect-window -0.2)
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point nil)
- '(multishell-activate-command-key t)
+ '(multishell-activate-command-key nil)
  '(multishell-command-key "!")
  '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
