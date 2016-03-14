@@ -48,6 +48,13 @@ case $# in
 esac
 
 export PATH="$OPATH"
+
+if [ "$INSIDE_EMACS" ]; then
+	# Let the tools take their defaults, instead of whatever
+	unset MANPAGER
+	unset PAGER
+fi
+
 case "$xterm" in
 gnome-terminal)
 	"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
