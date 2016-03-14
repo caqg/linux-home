@@ -33,7 +33,7 @@ if [ "${ALREADY_IN:-0}" = 0 ]; then
     export ALREADY_IN=1;
 fi
 
-if [ "${EMACS:-nil}" = t ]; then
+if [ "${INSIDE_EMACS}" ]; then
     . $HOME/.bash_under_emacs
 fi
 
