@@ -39,8 +39,11 @@
   (add-hook 'dired-load-hook
             (lambda ()
               ;; Bind dired-x-find-file.
-              (setq dired-x-hands-off-my-keys nil)
+              (setq dired-x-hands-off-my-keys t)
               (load "dired-x")))
+
+  (require 'ffap)
+  (ffap-bindings)
 
   (package-initialize)
 
