@@ -30,11 +30,14 @@ directories=${directories:-"."}
 	     -name '*.h' -o \
 	     -name '*.hh' -o \
 	     -name '*.hpp' -o \
-	     -name '*.hxx'  \) |
+	     -name '*.hxx'  \) | \
+	grep -v /bld/ | \
+	grep -v /lnk/ | \
+	grep -v /run/ | \
 	while read "h"; do d=`dirname $h`; echo $d; dirname "$d" ; done |
 	sort |
 	uniq |
-	sed -e 's/^/   "/' -e 's/^\./   "/' -e 's/$/"/'
+	sed -e 's/^/   "\//' -e 's/$/"/'
 
 	case "$EDE_SYSTEM_INCLUDE_PATHS" in
 	"")	echo "  ))"

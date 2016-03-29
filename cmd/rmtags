@@ -1,10 +1,14 @@
 #!/bin/sh
-## Copyright (C) 2015 by Cesar A Quiroz, Ph.D.
+## Copyright (C) 2015-2016 by Cesar A Quiroz, Ph.D.
 ## 3595 Granada Ave Unit 114 / Santa Clara, CA 95051 / USA
 ## All Rights Reserved Worldwide
 ## mailto:cesar.quiroz@gmail.com
 
 PATH=/bin:/usr/bin
+
+fileLists='
+tagged.files
+'
 
 fromCTAGS='
 tags
@@ -31,10 +35,16 @@ cscope.out
 cscope.po.out
 '
 
+fromEDE='
+ede-cpproot.el
+'
+
 rm -f $fromCTAGS
 rm -f $fromETAGS
 rm -f $fromGTAGS
 rm -f $fromMKID
 rm -f $fromCSCOPE
+rm -f $fromEDE
+rm -f $fileLists
 
 # end

@@ -13,14 +13,18 @@ cd /work/innergy
 EDE_SYSTEM_INCLUDE_PATHS="$QT" \
 	mk-ede-cpproot-el ${DIRSTOTAG}
 
-${CTAGS} -eR $DIRSTOTAG
-${GTAGS} -I $DIRSTOTAG
 
-find -L ${DIRSTOTAG} \( \
+find -L ${DIRSTOTAG} -type f -a \( \
 	-name '*.c' -o -name '*.cpp' -o -name '*.cc' -o \
 	-name '*.h' -o -name '*.hpp' -o -name '*.hh' -o \
 	-name '*.l' -o -name '*.y' \
 	\) -print | \
-	sort -u | \
-	(echo -q; /bin/cat -) > cscope.files
-${CSCOPE} -bqu
+	grep -v '/bld/' | \
+	grep -v '/lnk/' | \
+	grep -v '/run/' | \
+	sort -u > tagged.files
+
+${CTAGS} -e -L- < tagged.files
+${GTAGS} -I -f- < tagged.files
+
+(printf %s -q; cat tagged.files) | ${CSCOPE} -bqu -i-
