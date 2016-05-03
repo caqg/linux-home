@@ -225,8 +225,8 @@
 	    [(1 0)
 	     nil "Emacs WebSocket client and server" single])
  (web-mode .
-	   [(8 0 4)
-	    nil "major mode for editing html templates" single])
+	   [(13 1 21)
+	    nil "major mode for editing web templates" single])
  (web .
       [(0 5 2)
        ((dash
@@ -1666,7 +1666,7 @@
 	       (6 1)))
 	     "basic support for magit links" single])
  (org-journal .
-	      [(1 10 2)
+	      [(1 11 0)
 	       nil "a simple org-mode based journaling mode" single])
  (org-gnome .
 	    [(0 1)
