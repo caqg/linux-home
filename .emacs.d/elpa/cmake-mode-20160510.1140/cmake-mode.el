@@ -1,4 +1,5 @@
 ;;; cmake-mode.el --- major-mode for editing CMake sources
+;; Package-Version: 20160510.1140
 
 ;=============================================================================
 ; CMake - Cross Platform Makefile Generator
@@ -45,7 +46,6 @@ set the path with these commands:
   :group 'cmake)
 
 ;; Keywords
-;; Package-Version: 20160317.641
 (defconst cmake-keywords-block-open '("IF" "MACRO" "FOREACH" "ELSE" "ELSEIF" "WHILE" "FUNCTION"))
 (defconst cmake-keywords-block-close '("ENDIF" "ENDFOREACH" "ENDMACRO" "ELSE" "ELSEIF" "ENDWHILE" "ENDFUNCTION"))
 (defconst cmake-keywords
@@ -229,7 +229,9 @@ the indentation.  Otherwise it retains the same position on the line"
 ;;
 ;; Indentation increment.
 ;;
-(defvar cmake-tab-width 2)
+(defcustom cmake-tab-width 2
+  "Number of columns to indent cmake blocks"
+  :type 'integer)
 
 ;------------------------------------------------------------------------------
 
