@@ -1,7 +1,4 @@
 (1
- (say-what-im-doing .
-		    [(0 1)
-		     nil "" single])
  (zone-nyan .
 	    [(0 2 2)
 	     ((esxml
@@ -577,6 +574,9 @@
  (systemtap-mode .
 		 [(0 2)
 		  nil "A mode for SystemTap" single])
+ (systemd .
+	  [(1 4 1)
+	   nil "Major mode for editing systemd units" tar])
  (syslog-mode .
 	      [(2 2)
 	       ((hide-lines
@@ -1007,6 +1007,9 @@
  (scala-mode .
 	     [(0 0 2)
 	      nil "Scala major mode" tar])
+ (say-what-im-doing .
+		    [(0 2)
+		     nil "dictate what you're doing with text to speech" single])
  (sawfish .
 	  [(1 32)
 	   nil "Sawfish mode." single])
