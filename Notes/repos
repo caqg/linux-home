@@ -2,6 +2,9 @@
 
 # Git -- run in /work
 
+## cedet
+git clone http://git.code.sf.net/p/cedet/git cedet
+
 ## dircolors-solarized
 git clone https://github.com/seebi/dircolors-solarized.git
 
