@@ -35,4 +35,7 @@ git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.gi
 ## vim
 git clone https://github.com/vim/vim.git
 
+## xfce4 Terminal
+git clone https://github.com/sgerrand/xfce4-terminal-colors-solarized.git
+
 ## end
