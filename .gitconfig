@@ -8,6 +8,7 @@
 
 [diff]
 	tool            = ediff
+	compactionHeuristic = true
 
 [difftool "ediff"]
 	cmd             = $HOME/cmd/ediff $LOCAL $REMOTE
@@ -52,6 +53,8 @@
 [gui]
 	warndetachedcommit = true
 	recentrepo = /work/linux-home
+	fontui = -family Ubuntu -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Ubuntu Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
 
 [credential]
 	helper          = cache --timeout=14400
