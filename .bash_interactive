@@ -45,6 +45,11 @@ xterm*|rxvt*)
 	PS1="$left$middle$right"
     }
 
+    case "$TERM" in
+    xterm*)	export TERM=xterm;;
+    xrvt*)	export TERM=xrvt;;
+    esac
+
     PROMPT_COMMAND=updatePS1WithGitBranch
     colorize-ls
     ;;

@@ -140,7 +140,7 @@
       (set tabset sorted)))
 
   ;; Color theme
-  (cond ((and (>= emacs-major-version 25) window-system)
+  (cond ((and (>= emacs-major-version 25))
          (load-theme 'solarized t t)
          (load-theme 'solarized-light t t)
          (load-theme 'solarized-dark t t)
@@ -174,7 +174,7 @@
                               (tabbar-mode -1)
                               (menu-bar-mode -1)))
 
-  (unless window-system (normal-erase-is-backspace-mode 0)))
+  (unless window-system (normal-erase-is-backspace-mode -1)))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -353,7 +353,6 @@
  '(mouse-yank-at-point nil)
  '(multishell-activate-command-key nil)
  '(multishell-command-key "!")
- '(normal-erase-is-backspace (quote maybe))
  '(nxml-slash-auto-complete-flag t)
  '(org-agenda-restore-windows-after-quit t)
  '(org-catch-invisible-edits (quote show))
