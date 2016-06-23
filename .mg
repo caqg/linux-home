@@ -1,5 +1,6 @@
-auto-indent-mode
 make-backup-files
 set-default-mode fill
-set-fill-column 72
-auto-execute *.[ch] c-mode
+set-default-mode indent
+set-fill-column 78
+column-number-mode
+auto-execute *.[chy] c-mode
