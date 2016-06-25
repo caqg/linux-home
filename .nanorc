@@ -1,5 +1,4 @@
 
-
 ## Please note that you must have configured nano with --enable-nanorc
 ## for this file to be read!  Also note that this file should not be in
 ## DOS or Mac format, and that characters specially interpreted by the
@@ -39,7 +38,7 @@ set boldtext
 ## paragraphs.  They cannot contain blank characters.  Only closing
 ## punctuation, optionally followed by closing brackets, can end
 ## sentences.
-set brackets ""')>]}"
+# set brackets ""')>]}"
 
 ## Do case-sensitive searches by default.
 # set casesensitive
@@ -50,7 +49,7 @@ set brackets ""')>]}"
 ## (The old form, 'const', is deprecated.)
 
 ## Use cut-to-end-of-line by default.
-# set cut
+set cut
 
 ## Set the line length for wrapping text and justifying paragraphs.
 ## If the value is 0 or less, the wrapping point will be the screen
@@ -66,12 +65,12 @@ set justifytrim
 ## Enable vim-style lock-files.  This is just to let a vim user know you
 ## are editing a file [s]he is trying to edit and vice versa. There are
 ## no plans to implement vim-style undo state in these files.
-set locking
+# set locking
 
 ## The opening and closing brackets that can be found by bracket
 ## searches.  They cannot contain blank characters.  The former set must
 ## come before the latter set, and both must be in the same order.
-set matchbrackets "(<[{)>]}"
+# set matchbrackets "(<[{)>]}"
 
 ## Use the blank line below the titlebar as extra editing space.
 set morespace
@@ -80,7 +79,7 @@ set morespace
 ## mouse clicks can be used to place the cursor, set the mark (with a
 ## double click), and execute shortcuts.  The mouse will work in the X
 ## Window System, and on the console when gpm is running.
-# set mouse
+set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
@@ -105,7 +104,7 @@ set nowrap
 # set operatingdir ""
 
 ## Remember the cursor position in each file for the next editing session.
-# set positionlog
+set positionlog
 ## (The old form, 'poslog', is deprecated.)
 
 ## Preserve the XON and XOFF keys (^Q and ^S).
@@ -115,7 +114,7 @@ set nowrap
 ## paragraphs.  They cannot contain blank characters.  Only closing
 ## punctuation, optionally followed by closing brackets, can end
 ## sentences.
-set punct "!.?"
+# set punct "!.?"
 
 ## Do quick statusbar blanking.  Statusbar messages will disappear after
 ## 1 keystroke instead of 26.  Note that "const" overrides this.
@@ -133,7 +132,7 @@ set quickblank
 # set rebinddelete
 
 ## Fix numeric keypad key confusion problem.
-set rebindkeypad
+# set rebindkeypad
 
 ## Do extended regular expression searches by default.
 # set regexp
@@ -180,7 +179,7 @@ set suspend
 
 ## Detect word boundaries more accurately by treating punctuation
 ## characters as parts of words.
-# set wordbounds
+set wordbounds
 
 
 ## Paint the interface elements of nano.
