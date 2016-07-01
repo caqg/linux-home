@@ -39,10 +39,13 @@ usage () {
 	echo "       -H prints decades above units (header style)"
 	echo "       -F prints units above decades (footer style)"
 	echo
-	echo "       -H is the default"
+	echo "       -H is the default. These options are superfluous."
 	echo
-	echo "Options can be repeated, rightmost wins"
-	echo "Pipe to rev for a count-down ruler (works only until 99)"
+	echo "Options can be repeated, rightmost wins."
+	echo
+	echo "The first version is the only one needed in Unix."
+	echo "Pipe it to tac to get the footer style (-F)"
+	echo "Pipe it to rev for a count-down ruler (works only until 99)"
 }
 
 # parse command line
