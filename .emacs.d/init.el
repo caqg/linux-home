@@ -411,6 +411,8 @@
  '(size-indication-mode t)
  '(slime-kill-without-query-p t)
  '(slime-net-coding-system (quote utf-8-unix))
+ '(solarized-distinct-fringe-background t)
+ '(solarized-high-contrast-mode-line nil)
  '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
  '(speedbar-show-unknown-files t)
  '(spice-output-local "Gnucap")
