@@ -20,6 +20,9 @@ cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/global co .
 ## gnome-terminal-colors-solarized
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 
+## nano
+git clone git://git.savannah.gnu.org/nano.git
+
 ## iverilog
 git clone https://github.com/steveicarus/iverilog.git
 
