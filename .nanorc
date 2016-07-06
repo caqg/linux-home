@@ -1,4 +1,3 @@
-
 ## Please note that you must have configured nano with --enable-nanorc
 ## for this file to be read!  Also note that this file should not be in
 ## DOS or Mac format, and that characters specially interpreted by the
@@ -89,7 +88,7 @@ set multibuffer
 # set noconvert
 
 ## Don't display the helpful shortcut lists at the bottom of the screen.
-# set nohelp
+set nohelp
 
 ## Don't add newlines to the ends of files.
 # set nonewlines
