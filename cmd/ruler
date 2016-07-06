@@ -15,62 +15,32 @@ width () {
 	esac
 }
 
-parseArgs () {
-	while [ $# -gt 0 ]; do
-		case "$1" in
-		-H)	H=1 ;;
-		-F)	H=0 ;;
-		-w)	width="$2"; shift ;;
-		-w*)	width=$(expr substr "$1" 3 $(expr length "$1")) ;;
-		*)	usage; exit 1 ;;
-		esac;
-
-		shift
-	done
-}
-
 usage () {
 	me=$(basename $0)
 	echo "usage: $me [columns]"
-	echo "       $me [-w width] [-H] [-F]"
 	echo
 	echo "       columns defaults to however wide the tty is"
-	echo "               (80 if stdin is not a tty)"
-	echo "       -H prints decades above units (header style)"
-	echo "       -F prints units above decades (footer style)"
+	echo "       (80 if stdin is not a tty)"
 	echo
-	echo "       -H is the default. These options are superfluous."
-	echo
-	echo "Options can be repeated, rightmost wins."
-	echo
-	echo "The first version is the only one needed in Unix."
-	echo "Pipe it to tac to get the footer style (-F)"
+	echo "Pipe it to tac to set the ruler as a footer"
 	echo "Pipe it to rev for a count-down ruler (works only until 99)"
 }
 
 # parse command line
 # No args: Header at current terminal width, or 80 if not a tty
-# 1  arg : must be the width (integer).
-# >1 arg : parse
-H=1
+# 1  arg : must be the width (integer), else error, show usage
+# >1 arg : error, show usage
+
 case $# in
 0)	width=$(defaultWidth) ;;
 1)	if expr match "$1" "[0-9][0-9]*" >/dev/null 2>&1;
 	then	width=$(width "$1"); shift
-	else	parseArgs "$@"
+	else	usage; exit 1;
 	fi ;;
-*)	parseArgs "$@" ;;
+*)	usage; exit 1;;
 esac
 
-# Deal with no options setting the width;
-# this is possible (for instance) with options -F or -H alone.
-width=${width:-$(defaultWidth)}
-# echo width=$width
-# echo H=$H
-
-awk -v W="$width" -v H="$H" '
-# BEGIN { print W; print H;  }
-
+awk -v W="$width" '
 function printDecades () {
 	if (int(W/10) > 0) {
 		for (i = 1; i <= int(W/10); ++i)
@@ -91,19 +61,16 @@ function printUnits () {
 				printf "0"
 			else
 				printf "|"
+		else if (i == 1)
+			printf "1"
 		else
 			printf "."
 	printf "\n"
 }
 
 BEGIN {
-	if (H) {
-		printDecades();
-		printUnits();
-	} else {
-		printUnits();
-		printDecades();
-	}
+	printDecades();
+	printUnits();
 }
 '
 
