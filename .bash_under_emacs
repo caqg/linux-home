@@ -2,7 +2,7 @@
 
 export EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e
-export PAGER=
+export PAGER=/bin/cat
 export MANPAGER=
 
 ##end .bash_under_emacs
