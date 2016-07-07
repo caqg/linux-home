@@ -58,7 +58,7 @@ set fill 80
 ## Remember the used search/replace strings for the next session.
 set historylog
 
-## Have the justify command kill whitespace at the end of lines
+## Make the justify command kill whitespace at the end of lines.
 set justifytrim
 
 ## Enable vim-style lock-files.  This is just to let a vim user know you
@@ -231,7 +231,7 @@ set wordbounds
 ## them easier to remember and faster to type using nano's -Y option.
 ##
 ## To include all existing syntax definitions, you can do:
-include "/usr/share/nano/*.nanorc"
+include "/usr/local/share/nano/*.nanorc"
 
 
 ## Key bindings.
