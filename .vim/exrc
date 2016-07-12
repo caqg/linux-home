@@ -1,4 +1,5 @@
 " ex/vi Initialization
+" vim: ft=vim:
 
 set autoindent
 set autowrite

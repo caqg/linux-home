@@ -1,6 +1,11 @@
 " vim Initialization
 
+set modeline
 source $HOME/.vim/exrc
+
+if exists("+autochdir")
+	set autochdir
+endif
 
 set directory=
 set directory+=~/tmp
