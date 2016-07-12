@@ -5,7 +5,8 @@ source $HOME/.vim/vimrc
 set guicursor=a:block
 "set guifont=Terminal\ 14
 "set guifont=Monospace\ Regular\ 10
-set guifont=Ubuntu\ Mono\ Regular\ 10
+set guifont=Ubuntu\ Mono\ Regular\ 11
+"set guifont=Inconsolata\ Regular\ 10
 set guioptions+=a
 set guioptions+=b
 set guioptions+=h
@@ -24,6 +25,8 @@ else
   set columns=90
   set lines=36
 endif
+
+set mousefocus
 
 color solarized
 call togglebg#map("<F12>")

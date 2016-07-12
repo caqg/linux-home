@@ -9,13 +9,11 @@ set directory+=/var/tmp
 set directory+=/tmp
 
 set path=.,,
-set path+=/usr/include/c++/5
-set path+=/usr/include/x86_64-linux-gnu/c++/5
-set path+=/usr/include/c++/5/backward
-set path+=/usr/lib/gcc/x86_64-linux-gnu/5/include
-set path+=/usr/local/include
-set path+=/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+set path+=/usr/include/c++/5/**
+set path+=/usr/include/x86_64-linux-gnu/c++/5/**
+set path+=/usr/lib/gcc/x86_64-linux-gnu/5/include*/**
 set path+=/usr/include/x86_64-linux-gnu
+set path+=/usr/local/include
 set path+=/usr/include
 
 set tags=
@@ -74,7 +72,7 @@ autocmd FileType conf		autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd FileType gitconfig	autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 set ruler
-set diffopt=filler,iwhite
+set diffopt=filler,iwhite,vertical
 
 " Adjust Verilog's indentation
 function! VerilogSettings ()
