@@ -1,10 +1,14 @@
 " vim Initialization
 
-set modeline
-source $HOME/.vim/exrc
+set autoindent
+set autowrite
+set shiftwidth=8
+set shell=/bin/bash
+set tabstop=8
+set nowrap
 
 if exists("+autochdir")
-	set autochdir
+   set autochdir
 endif
 
 set directory=
@@ -31,13 +35,13 @@ filetype indent on
 filetype plugin on
 
 if has("cscope")
-  set cscopeprg=cscope
-  set cscopetag
-  set csto=0
-  set cscopeverbose
-  if filereadable("cscope.out")
-    cscope add cscope.out
-  endif
+    set cscopeprg=cscope
+    set cscopetag
+    set csto=0
+    set cscopeverbose
+    if filereadable("cscope.out")
+	cscope add cscope.out
+    endif
 endif
 
 let TE_Ctags_Path="ctags"
@@ -51,7 +55,7 @@ set nohlsearch
 set incsearch
 set textwidth=78
 if v:version >= 700
-  set numberwidth=5
+    set numberwidth=5
 endif
 
 " C/C++, closer to the Emacs settings
@@ -63,6 +67,10 @@ autocmd FileType c,cpp,java :set nofoldenable
 autocmd FileType c,cpp,java :set formatoptions+=cj
 autocmd FileType c,cpp,java :set shiftwidth=8
 autocmd FileType c,cpp,java :set nosmarttab
+autocmd FileType c,cpp,java :set tabstop=8
+
+" vim
+autocmd FileType vim        :set shiftwidth=4
 
 " delete trailing whitespace
 autocmd FileType c,cpp,java	autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -81,11 +89,11 @@ set diffopt=filler,iwhite,vertical
 
 " Adjust Verilog's indentation
 function! VerilogSettings ()
-  if exists('b:current_syntax')
-    if b:current_syntax == 'verilog'
-      let b:verilog_indent_modules = 1
+    if exists('b:current_syntax')
+	if b:current_syntax == 'verilog'
+	    let b:verilog_indent_modules = 1
+	endif
     endif
-  endif
 endfunction
 autocmd BufReadPost *.v call VerilogSettings()
 
@@ -95,4 +103,4 @@ autocmd BufNewFile,BufRead *.md setfiletype markdown
 " Man pages
 runtime! ftplugin/man.vim
 
-"end .vimrc
+"end vimrc

@@ -19,11 +19,9 @@ set guioptions-=b
 set guioptions-=r
 
 if &diff
-  set columns=999
-  set lines=999
+    set columns=999 lines=999
 else
-  set columns=90
-  set lines=36
+    set columns=90  lines=36
 endif
 
 set mousefocus
@@ -32,4 +30,4 @@ color solarized
 call togglebg#map("<F12>")
 set background=dark
 
-"end .gvimrc
+"end gvimrc
