@@ -1,4 +1,5 @@
-" nex/nvi/nview Initialization
+" nex/nvi/nview Initialization (originally for 1.81.6)
+" 2016-07-13 05:02:13UT (cesar@cesar-U64-14)
 
 set autoindent
 set autowrite
