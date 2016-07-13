@@ -15,6 +15,8 @@ set searchincr
 set shiftwidth=8
 set shell=/bin/bash
 set showmatch
+set showmode
 set tabstop=8
+set verbose
 
 "end ~/.exrc
