@@ -131,7 +131,7 @@
 	 ((:keywords "games")
 	  (:url . "http://elpa.gnu.org/packages/chess.html"))])
  (cl-generic .
-	     [(0 2)
+	     [(0 3)
 	      nil "Forward cl-generic compatibility for Emacs<25" single
 	      ((:url . "http://elpa.gnu.org/packages/cl-generic.html")
 	       (:keywords))])
@@ -682,8 +682,12 @@
 	     (:keywords "xml" "relaxng"))])
  (rudel .
 	[(0 3)
-	 ((cl-lib
-	   (0 5)))
+	 ((emacs
+	   (24))
+	  (cl-lib
+	   (0 5))
+	  (cl-generic
+	   (0 3)))
 	 "A collaborative editing framework for Emacs" tar
 	 ((:keywords "rudel" "collaboration")
 	  (:url . "http://rudel.sourceforge.net/"))])
