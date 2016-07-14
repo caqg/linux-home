@@ -4,7 +4,7 @@
 set autoindent
 set autowrite
 set backup=%~
-"SEGFAULTS in use: set cedit=
+"SEGFAULTS in use: set cedit=
 set comment
 set extended
 set filec=
