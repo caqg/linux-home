@@ -4,7 +4,7 @@
   "${HOME}")
 (defvar *cq/emacslib*  (concat *cq/homedir* "/lib/emacs/")
   "Pathname of my private library")
-(setq load-path (append (list *cq/emacslib*) load-path (list ".")))
+(add-to-list 'load-path (directory-file-name *cq/emacslib*))
 
 (put 'dired-find-alternate-file 'disabled nil)
 (put 'eval-expression  'disabled          nil)
@@ -351,7 +351,7 @@
 (setq TeX-default-mode              'latex-mode)
 
 ;;;; For MH-E
-;;(setq load-path (cons (expand-file-name "~/lib/emacs/mh") load-path))
+;;(add-to-list 'load-path (directory-file-name "~/lib/emacs/mh"))
 ;;; hooks
 ;;(add-hook 'mh-compose-letter-hook        'cq-mh-compose-letter)
 ;;(add-hook 'mh-folder-mode-hook           'cq-mh-folder-mode)
