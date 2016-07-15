@@ -227,6 +227,11 @@
 	   "SOAP library to access debbugs servers" tar
 	   ((:keywords "comm" "hypermedia")
 	    (:url . "http://elpa.gnu.org/packages/debbugs.html"))])
+ (delight .
+	  [(1 5)
+	   nil "A dimmer switch for your lighter text." single
+	   ((:url . "https://savannah.nongnu.org/projects/delight")
+	    (:keywords "convenience"))])
  (dict-tree .
 	    [(0 12 8)
 	     ((trie
