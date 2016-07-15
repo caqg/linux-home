@@ -4,10 +4,10 @@
 set autoindent
 set autowrite
 set backup=%~
-"SEGFAULTS in use: set cedit=
+set cedit=
 set comment
 set extended
-set filec=
+set filec=\	
 set noflash
 set leftright
 set ruler
