@@ -41,7 +41,11 @@ if has("cscope")
     set csto=0
     set cscopeverbose
     if filereadable("cscope.out")
-        cscope add cscope.out
+        try
+            cscope add cscope.out
+        catch /E568:/
+            silent
+        endtry
     endif
 endif
 
