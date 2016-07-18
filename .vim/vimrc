@@ -70,6 +70,17 @@ autocmd FileType c,cpp,java     set shiftwidth     =8
 autocmd FileType c,cpp,java     set nosmarttab
 autocmd FileType c,cpp,java     set tabstop        =8
 
+function! FlipFolding()
+    if &foldenable
+        set nofoldenable
+        set foldcolumn  =0
+    else
+        set foldenable
+        set foldcolumn  =5
+    endif
+endfunction
+command! FlipFolding :call FlipFolding()
+
 " vim script
 autocmd FileType vim            set shiftwidth     =4
 autocmd FileType vim            set expandtab
