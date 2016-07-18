@@ -80,22 +80,27 @@ function! FlipFolding()
     endif
 endfunction
 command! FlipFolding :call FlipFolding()
+noremap <F11> :call FlipFolding()<CR>
 
 " vim script
 autocmd FileType vim            set shiftwidth     =4
 autocmd FileType vim            set expandtab
+autocmd FileType vim            set foldcolumn     =0
+autocmd FileType vim            set foldmethod     =indent
+autocmd FileType vim            set nofoldenable
 
 " delete trailing whitespace
-autocmd FileType c,cpp,java     autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType gdb,make       autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType awk,tcl        autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java     autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType conf           autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType gdb,make       autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType lisp           autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType scheme         autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType conf           autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
 set diffopt=filler,iwhite,vertical
 set scrollopt=hor,ver,jump
