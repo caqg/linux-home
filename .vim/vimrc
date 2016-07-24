@@ -39,9 +39,14 @@ if &term =~ 'xterm*'
         set t_Co=16
     endif
 endif
-color solarized
-call togglebg#map("<F12>")
-set background=dark
+
+if &term == "linux"
+    color default
+else
+    color solarized
+    call togglebg#map("<F12>")
+    set background=dark
+endif
 
 syntax on
 filetype indent on
