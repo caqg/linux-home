@@ -26,8 +26,8 @@ endif
 
 set mousefocus
 
-color solarized
-call togglebg#map("<F12>")
-set background=dark
+"color solarized
+"call togglebg#map("<F12>")
+"set background=dark
 
 "end gvimrc

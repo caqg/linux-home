@@ -34,6 +34,15 @@ set tags        +=tags
 set tags        +=./tags
 set tags        +=../tags
 
+if &term =~ 'xterm*'
+    if has("terminfo")
+        set t_Co=16
+    endif
+endif
+color solarized
+call togglebg#map("<F12>")
+set background=dark
+
 syntax on
 filetype indent on
 filetype plugin on
