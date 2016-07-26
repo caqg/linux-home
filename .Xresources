@@ -1,0 +1,18 @@
+#ifdef XTERM_IS_LIGHT
+#include "/work/solarized-xresources/Xresources.light"
+#else
+#include "/work/solarized-xresources/Xresources.dark"
+#endif
+*VT100.geometry: 80x30
+*VT100.faceName: Ubuntu Mono
+*VT100.faceSize: 11
+*renderFont: true
+*allowFontOps: true
+*allowTcapOps: true
+*allowTitleOps: true
+*allowWindowOps: true
+*altIsNotMeta: false
+*metaSendsEscape: true
+*loginShell: true
+*utf8: true
+*utf8Fonts: always
