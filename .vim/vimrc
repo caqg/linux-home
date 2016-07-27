@@ -1,12 +1,19 @@
-" vim Initialization
+" vim initialization
 
 set autoindent
 set autowrite
+set backup
+set hlsearch
+set incsearch
+set laststatus  =1
+set numberwidth =5
 set ruler
 set shell       =/bin/bash
 set shiftwidth  =8
 set tabstop     =8
+set textwidth   =78
 set nowrap
+set writebackup
 
 if exists("+autochdir")
    set autochdir
@@ -69,19 +76,8 @@ endif
 let TE_Ctags_Path="ctags"
 let TE_Use_Right_Window=1
 
-" Not in plain vi
-set backup
-set laststatus  =1
-set writebackup
-set hlsearch
-set incsearch
-set textwidth   =78
-if v:version >= 700
-    set numberwidth=5
-endif
-
-" C/C++, closer to the Emacs settings
-autocmd FileType c,cpp,java     set cinoptions     =:0,j1,J1,l0,g0,t0,(0,)30,!^F
+" C/C++/Java, closer to the Emacs settings
+autocmd FileType c,cpp,java     set cinoptions=:0,j1,J1,l0,g0,t0,(0,)30,!^F
 autocmd FileType c,cpp,java     set noexpandtab
 autocmd FileType c,cpp,java     set foldmethod     =syntax
 autocmd FileType c,cpp,java     set foldcolumn     =0
@@ -123,8 +119,8 @@ autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
-set diffopt=filler,iwhite,vertical
-set scrollopt=hor,ver,jump
+set diffopt   =filler,iwhite,vertical
+set scrollopt =hor,ver,jump
 
 " Adjust Verilog's indentation
 function! VerilogSettings ()
