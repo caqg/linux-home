@@ -1,8 +1,11 @@
 #if 0
+#if 0
 #include "/work/solarized-xresources/Xresources.light"
 #else
 #include "/work/solarized-xresources/Xresources.dark"
 #endif
+#endif
+
 *VT100.geometry: 80x24
 *VT100.faceName: Ubuntu Mono
 *VT100.faceSize: 11
