@@ -1,21 +1,134 @@
-#if 0
-#if 0
-#include "/work/solarized-xresources/Xresources.light"
-#else
-#include "/work/solarized-xresources/Xresources.dark"
-#endif
+#if 0                           /* Solarized Dark */
+
+#define S_base03                #002b36
+#define S_base02                #073642
+#define S_base01                #586e75
+#define S_base00                #657b83
+#define S_base0                 #839496
+#define S_base1                 #93a1a1
+#define S_base2                 #eee8d5
+#define S_base3                 #fdf6e3
+
+*XTerm*background:              S_base3
+*XTerm*foreground:              S_base00
+*XTerm*fadeColor:               S_base3
+*XTerm*cursorColor:             S_base01
+*XTerm*pointerColorBackground:  S_base1
+*XTerm*pointerColorForeground:  S_base01
+
+#define S_yellow                #b58900
+#define S_orange                #cb4b16
+#define S_red                   #dc322f
+#define S_magenta               #d33682
+#define S_violet                #6c71c4
+#define S_blue                  #268bd2
+#define S_cyan                  #2aa198
+#define S_green                 #859900
+
+!! black dark/light
+*XTerm*color0:                  S_base02
+*XTerm*color8:                  S_base03
+
+!! red dark/light
+*XTerm*color1:                  S_red
+*XTerm*color9:                  S_orange
+
+!! green dark/light
+*XTerm*color2:                  S_green
+*XTerm*color10:                 S_base01
+
+!! yellow dark/light
+*XTerm*color3:                  S_yellow
+*XTerm*color11:                 S_base00
+
+!! blue dark/light
+*XTerm*color4:                  S_blue
+*XTerm*color12:                 S_base0
+
+!! magenta dark/light
+*XTerm*color5:                  S_magenta
+*XTerm*color13:                 S_violet
+
+!! cyan dark/light
+*XTerm*color6:                  S_cyan
+*XTerm*color14:                 S_base1
+
+!! white dark/light
+*XTerm*color7:                  S_base2
+*XTerm*color15:                 S_base3
+
+#else                           /* Solarized Dark */
+
+#define S_base03                #002b36
+#define S_base02                #073642
+#define S_base01                #586e75
+#define S_base00                #657b83
+#define S_base0                 #839496
+#define S_base1                 #93a1a1
+#define S_base2                 #eee8d5
+#define S_base3                 #fdf6e3
+
+*XTerm*background:              S_base03
+*XTerm*foreground:              S_base0
+*XTerm*fadeColor:               S_base03
+*XTerm*cursorColor:             S_base1
+*XTerm*pointerColorBackground:  S_base01
+*XTerm*pointerColorForeground:  S_base1
+
+#define S_yellow                #b58900
+#define S_orange                #cb4b16
+#define S_red                   #dc322f
+#define S_magenta               #d33682
+#define S_violet                #6c71c4
+#define S_blue                  #268bd2
+#define S_cyan                  #2aa198
+#define S_green                 #859900
+
+!! black dark/light
+*XTerm*color0:                  S_base02
+*XTerm*color8:                  S_base03
+
+!! red dark/light
+*XTerm*color1:                  S_red
+*XTerm*color9:                  S_orange
+
+!! green dark/light
+*XTerm*color2:                  S_green
+*XTerm*color10:                 S_base01
+
+!! yellow dark/light
+*XTerm*color3:                  S_yellow
+*XTerm*color11:                 S_base00
+
+!! blue dark/light
+*XTerm*color4:                  S_blue
+*XTerm*color12:                 S_base0
+
+!! magenta dark/light
+*XTerm*color5:                  S_magenta
+*XTerm*color13:                 S_violet
+
+!! cyan dark/light
+*XTerm*color6:                  S_cyan
+*XTerm*color14:                 S_base1
+
+!! white dark/light
+*XTerm*color7:                  S_base2
+*XTerm*color15:                 S_base3
 #endif
 
-*VT100.geometry: 80x24
-*VT100.faceName: Ubuntu Mono
-*VT100.faceSize: 11
-*customization: color
-*renderFont: true
-*allowFontOps: true
-*allowTcapOps: true
-*allowTitleOps: true
-*allowWindowOps: true
-*metaSendsEscape: true
-*loginShell: true
-*utf8: true
-*utf8Fonts: always
+*VT100.geometry:                80x30
+*VT100.faceName:                Ubuntu Mono
+*VT100.faceSize:                11
+*customization:                 color
+*renderFont:                    true
+*allowFontOps:                  true
+*allowTcapOps:                  true
+*allowTitleOps:                 true
+*allowWindowOps:                true
+*metaSendsEscape:               true
+*loginShell:                    true
+*utf8:                          true
+*utf8Fonts:                     always
+
+!End .Xresources
