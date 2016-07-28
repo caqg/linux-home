@@ -1,24 +1,29 @@
 " gvim initialization -- 2006-10-11 01:33:19UT (cesar@cesar-xp)
 
 source $HOME/.vim/vimrc
+set laststatus          =2
 
-set guicursor   =a:block
+set guicursor           =a:block
 
-"set guifont    =Terminal\ 14
-"set guifont    =Monospace\ Regular\ 10
-"set guifont    =Inconsolata\ Regular\ 10
-set guifont     =Ubuntu\ Mono\ Regular\ 11
+"set guifont            =Terminal\ 14
+"set guifont            =Monospace\ Regular\ 10
+"set guifont            =Inconsolata\ Regular\ 10
+set guifont             =Ubuntu\ Mono\ Regular\ 11
 
-set guioptions  +=a
-set guioptions  +=b
-set guioptions  +=h
-set guioptions  +=g
-set guioptions  -=l
-set guioptions  +=r
-set guioptions  +=t
-set guioptions  -=T
-set guioptions  -=b
-set guioptions  -=r
+set guioptions         +=a
+set guioptions         -=b
+set guioptions         -=c
+set guioptions         +=g
+set guioptions         -=h
+set guioptions         -=l
+set guioptions         -=L
+set guioptions         -=m
+set guioptions         -=P
+set guioptions         -=r
+set guioptions         +=r
+set guioptions         -=R
+set guioptions         +=t
+set guioptions         -=T
 
 if &diff
     set columns=999 lines=999

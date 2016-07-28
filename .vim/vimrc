@@ -5,13 +5,13 @@ set autowrite
 set backup
 set hlsearch
 set incsearch
-set laststatus  =1
-set numberwidth =5
+set laststatus          =1
+set numberwidth         =5
 set ruler
-set shell       =/bin/bash
-set shiftwidth  =8
-set tabstop     =8
-set textwidth   =78
+set shell               =/bin/bash
+set shiftwidth          =8
+set tabstop             =8
+set textwidth           =78
 set nowrap
 set writebackup
 
@@ -19,40 +19,40 @@ if exists("+autochdir")
    set autochdir
 endif
 
-set directory   =
-set directory   +=~/tmp
-set directory   +=.                "do not interfere with git or svn
-set directory   +=/var/tmp
-set directory   +=/tmp
+set directory           =
+set directory          +=~/tmp
+set directory          +=.              "do not interfere with git or svn
+set directory          +=/var/tmp
+set directory          +=/tmp
 
-set path        =,,
-set path        +=/usr/include/c++/5/**
-set path        +=/usr/include/x86_64-linux-gnu/c++/5/**
-set path        +=/usr/lib/gcc/x86_64-linux-gnu/5/include*/**
-set path        +=/usr/include/x86_64-linux-gnu
-set path        +=/usr/local/include
-set path        +=/usr/include
-set path        +=/work/innergy/compass/repo/**
-set path        +=/work/innergy/verific/repo/**
+set path                =,,
+set path               +=/usr/include/c++/5/**
+set path               +=/usr/include/x86_64-linux-gnu/c++/5/**
+set path               +=/usr/lib/gcc/x86_64-linux-gnu/5/include*/**
+set path               +=/usr/include/x86_64-linux-gnu
+set path               +=/usr/local/include
+set path               +=/usr/include
+set path               +=/work/innergy/compass/repo/**
+set path               +=/work/innergy/verific/repo/**
 
-set tags        =
-set tags        +=/work/innergy/tags
-set tags        +=tags
-set tags        +=./tags
-set tags        +=../tags
+set tags                =
+set tags               +=/work/innergy/tags
+set tags               +=tags
+set tags               +=./tags
+set tags               +=../tags
 
 if &term =~ 'xterm*'
     if has("terminfo")
-        set t_Co=16
+        set t_Co        =16
     endif
 endif
 
 if &term == "linux"
-    color default
+    colorscheme default
 else
-    color solarized
+    colorscheme solarized
     call togglebg#map("<F12>")
-    set background=dark
+    set background      =dark
 endif
 
 syntax on
@@ -60,9 +60,9 @@ filetype indent on
 filetype plugin on
 
 if has("cscope")
-    set cscopeprg=cscope
+    set cscopeprg       =cscope
     set nocscopetag
-    set csto=0
+    set csto            =0
     set cscopeverbose
     if filereadable("cscope.out")
         try
@@ -77,23 +77,31 @@ let TE_Ctags_Path="ctags"
 let TE_Use_Right_Window=1
 
 " C/C++/Java, closer to the Emacs settings
-autocmd FileType c,cpp,java     set cinoptions=:0,j1,J1,l0,g0,t0,(0,)30,!^F
+autocmd FileType c,cpp,java     set cinoptions          =:0
+autocmd FileType c,cpp,java     set cinoptions         +=(0
+autocmd FileType c,cpp,java     set cinoptions         +=)30
+autocmd FileType c,cpp,java     set cinoptions         +=!^F
+autocmd FileType c,cpp,java     set cinoptions         +=g0
+autocmd FileType c,cpp,java     set cinoptions         +=j1
+autocmd FileType c,cpp,java     set cinoptions         +=J1
+autocmd FileType c,cpp,java     set cinoptions         +=l0
+autocmd FileType c,cpp,java     set cinoptions         +=t0
 autocmd FileType c,cpp,java     set noexpandtab
-autocmd FileType c,cpp,java     set foldmethod     =syntax
-autocmd FileType c,cpp,java     set foldcolumn     =0
+autocmd FileType c,cpp,java     set foldmethod          =syntax
+autocmd FileType c,cpp,java     set foldcolumn          =0
 autocmd FileType c,cpp,java     set nofoldenable
-autocmd FileType c,cpp,java     set formatoptions +=cj
-autocmd FileType c,cpp,java     set shiftwidth     =8
+autocmd FileType c,cpp,java     set formatoptions      +=cj
+autocmd FileType c,cpp,java     set shiftwidth          =8
 autocmd FileType c,cpp,java     set nosmarttab
-autocmd FileType c,cpp,java     set tabstop        =8
+autocmd FileType c,cpp,java     set tabstop             =8
 
 function! FlipFolding()
     if &foldenable
         set nofoldenable
-        set foldcolumn  =0
+        set foldcolumn          =0
     else
         set foldenable
-        set foldcolumn  =5
+        set foldcolumn          =5
     endif
 endfunction
 command! FlipFolding :call FlipFolding()
@@ -119,8 +127,13 @@ autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
-set diffopt   =filler,iwhite,vertical
-set scrollopt =hor,ver,jump
+set diffopt             =filler
+set diffopt            +=iwhite
+set diffopt            +=vertical
+
+set scrollopt           =hor
+set scrollopt          +=ver
+set scrollopt          +=jump
 
 " Adjust Verilog's indentation
 function! VerilogSettings ()
