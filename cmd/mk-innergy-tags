@@ -25,6 +25,7 @@ find -L ${DIRSTOTAG} -type f -a \( \
 	sort -u > tagged.files
 
 ${CTAGS} -e -L- < tagged.files
+${CTAGS} -L-    < tagged.files
 ${GTAGS} -I -f- < tagged.files
 
 (printf %s -q; cat tagged.files) | ${CSCOPE} -bqu -i-
