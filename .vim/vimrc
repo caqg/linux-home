@@ -73,8 +73,8 @@ if has("cscope")
     endif
 endif
 
-let TE_Ctags_Path="ctags"
-let TE_Use_Right_Window=1
+let TE_Ctags_Path       = "/usr/bin/ctags"
+let TE_Use_Right_Window = 1
 
 " C/C++/Java, closer to the Emacs settings
 autocmd FileType c,cpp,java     set cinoptions          =:0
