@@ -120,6 +120,7 @@
 *VT100.geometry:                80x30
 *VT100.faceName:                Ubuntu Mono
 *VT100.faceSize:                11
+*VT100.charclass:               45-47:48
 *customization:                 color
 *renderFont:                    true
 *allowFontOps:                  true
