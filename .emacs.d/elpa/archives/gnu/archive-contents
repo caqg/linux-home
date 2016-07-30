@@ -675,6 +675,17 @@
 		nil "Colorize color names in buffers" single
 		((:url . "http://elpa.gnu.org/packages/rainbow-mode.html")
 		 (:keywords "faces"))])
+ (realgud .
+	  [(1 4 0)
+	   ((load-relative
+	     (1 0))
+	    (loc-changes
+	     (1 1))
+	    (test-simple
+	     (1 0)))
+	   "A modular front-end for interacting with external debuggers" single
+	   ((:url . "http://github.com/realgud/realgud/")
+	    (:keywords))])
  (register-list .
 		[(0 1)
 		 nil "Interactively list/edit registers" single
@@ -826,7 +837,7 @@
 	       ((:url . "http://elpa.gnu.org/packages/tramp-theme.html")
 		(:keywords "convenience" "faces"))])
  (transcribe .
-	     [(1 5 1)
+	     [(1 5 2)
 	      nil "Package for audio transcriptions" single
 	      ((:url . "http://elpa.gnu.org/packages/transcribe.html")
 	       (:keywords))])

@@ -72,6 +72,11 @@
 
 (require 'eieio)
 
+(autoload 'gh-marshal-default-spec "gh-common" "\
+
+
+\(fn SLOT)" nil nil)
+
 (autoload 'gh-defclass "gh-common" "\
 
 
