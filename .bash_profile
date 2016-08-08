@@ -6,6 +6,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-
+umask 22
 
 #end .bash_profile
