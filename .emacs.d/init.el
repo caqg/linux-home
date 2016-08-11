@@ -313,6 +313,8 @@
  '(ggtags-global-treat-text t)
  '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
+ '(global-hl-line-mode t)
+ '(global-hl-line-sticky-flag t)
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)
  '(global-semantic-idle-completions-mode t nil (semantic/idle))
