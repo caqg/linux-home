@@ -10,3 +10,5 @@ augroup filetypedetect
 	au! BufRead,BufNewFile .tclshrc		setfiletype tcl
 	au! BufRead,BufNewFile .wishrc		setfiletype tcl
 augroup END
+
+" end filetype.vim

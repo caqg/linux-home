@@ -2,7 +2,9 @@
 
 set autoindent
 set autowrite
-set backspace           =indent,eol,start
+set backspace           =indent
+set backspace          +=eol
+set backspace          +=start
 set backup
 set hlsearch
 set incsearch

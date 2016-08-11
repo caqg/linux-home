@@ -1,4 +1,4 @@
-" gvim initialization -- 2006-10-11 01:33:19UT (cesar@cesar-xp)
+" gvim initialization
 
 source $HOME/.vim/vimrc
 set laststatus          =2
