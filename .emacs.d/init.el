@@ -186,6 +186,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(Man-switches "-a")
+ '(ada-skel-initial-string "")
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
  '(auto-mode-case-fold nil)

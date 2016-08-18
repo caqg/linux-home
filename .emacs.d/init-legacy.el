@@ -690,9 +690,11 @@
 ;;      (format "%s:%s " 24-hours minutes)
 ;;      (if mail "Mail ")))
 (defun cq/wrap-up-start ()
-    (message "%s (%s) @ %s -- %s GCs %s in init"
-             (user-full-name) (user-login-name) (system-name)
-             gcs-done (emacs-init-time)))
+  "Report startup stats and show splash screen"
+  (display-splash-screen)
+  (message "%s (%s) @ %s -- %s GCs %s in init"
+           (user-full-name) (user-login-name) (system-name)
+           gcs-done (emacs-init-time)))
 
 ;;;end .emacs-shared, loaded from ~/.emacs, ~/.xemacs/init.el
 ;;;end init-legacy.el, loaded from init.el
