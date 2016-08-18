@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/usr/bin/sudo $HOME/cmd/m -j1 "$@"
+
+#end
