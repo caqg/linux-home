@@ -17,7 +17,7 @@ progname=$(basename $0)
 
 maxjobs=
 type >/dev/null -p nproc && {
-	maxjobs="-j$(nproc)"
+	maxjobs="-j$(expr 2 \* $(nproc))"
 }
 
 case "$progname" in
