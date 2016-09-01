@@ -52,6 +52,8 @@ endif
 
 if &term == "linux"
     colorscheme default
+elseif &term == "screen"
+    colorscheme default
 else
     colorscheme solarized
     call togglebg#map("<F12>")

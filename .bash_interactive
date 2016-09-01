@@ -11,6 +11,7 @@ esac
 # export PS3='? '
 # export PS4='+ '
 
+[ "$TERM" = "screen" ] && set -o vi
 set -o ignoreeof
 shopt -s cdspell
 shopt -s globstar
