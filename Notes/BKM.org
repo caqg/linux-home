@@ -1,0 +1,62 @@
+#+TITLE: Best Known Methods
+
+* Emacs git
+src_shell{git://git.savannah.gnu.org/emacs}
+
+
+* Git worktree
+To maintain two worktrees with different branches of Emacs at the same time:
+
+#+NAME: bkm:git-worktrees
+#+BEGIN_SRC shell
+cd /work
+rm -fr emacs; mkdir emacs
+git clone --separate-git-dir=emacs/GNUEmacs.git \
+	git://git.savannah.gnu.org/emacs emacs/master
+cd emacs/GNUEmacs.git
+git worktree add -b emacs-25 ../emacs-25 origin/emacs-25
+#+END_SRC
+
+At this point /work/emacs contains 3 subdirectories: GNUEmacs.git, master, and
+emacs-25.
+
+#+NAME: git worktrees for emacs continued
+#+BEGIN_SRC shell
+cd ../emacs-25
+git checkout emacs-25
+#+END_SRC
+
+Ready!
+
+
+* rsync
+
+|--------+------------------------------|
+| <c>    | <l>                          |
+| Option | Comments                     |
+|--------+------------------------------|
+| -a     | Best default ('archive')     |
+| -b     | Make backups                 |
+| -i     | Itemize every change         |
+| -n     | Dry run                      |
+| -u     | Do not copy over newer files |
+| -z     | Compress during transfer     |
+|--------+------------------------------|
+
+
+* Recompile packages
+
+#+NAME: bkm:elisp:recompile-packages
+#+BEGIN_SRC emacs-lisp
+(byte-recompile-directory package-user-dir nil 'force)
+#+END_SRC
+
+
+* Elisp for $(git branch)
+
+#+NAME: bkm:elisp:git-branch-as-string
+#+BEGIN_SRC emacs-lisp
+(string-utils-trim-whitespace
+ (shell-command-to-string
+   "git branch 2>/dev/null | sed -n '/\\* \\(.*\\)/s// git:\\1/p'"))
+#+END_SRC
