@@ -13,7 +13,7 @@ export LD_LIBRARY_PATH+=${SOFTWARE}/lib-linux64
 export LD_LIBRARY_PATH+=:${SOFTWARE}/lib
 export LD_LIBRARY_PATH+=:.
 
-export MANPATH+=:${SOFTWARE_INNERGY}/share/man
+# export MANPATH+=:${SOFTWARE_INNERGY}/share/man
 
 # example: CXXFLAGS += -I ${SYSTEMC_HOME}/include
 
