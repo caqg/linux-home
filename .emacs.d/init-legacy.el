@@ -691,7 +691,7 @@
 ;;      (if mail "Mail ")))
 (defun cq/wrap-up-start ()
   "Report startup stats and show splash screen"
-  (display-splash-screen)
+  ;; (display-splash-screen)
   (message "%s (%s) @ %s -- %s GCs %s in init"
            (user-full-name) (user-login-name) (system-name)
            gcs-done (emacs-init-time)))
