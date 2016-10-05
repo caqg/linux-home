@@ -437,6 +437,7 @@
  '(use-file-dialog t)
  '(user-full-name "César Quiroz")
  '(user-mail-address "cesar.quiroz@gmail.com")
+ '(vc-follow-symlinks t)
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement (quote sometimes))
