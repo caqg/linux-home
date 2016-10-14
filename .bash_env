@@ -23,7 +23,7 @@ export ZLOGSGLOB='{lx,make}-*.log'
 
 # Rogue
 export ROGUEOPTS="fruit=eyeberry\
-,name=Muzh Bear\
+,name=Nati's Muzh\
 ,jump\
 ,noaskquit\
 ,skull\

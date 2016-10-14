@@ -205,8 +205,7 @@
  '(case-fold-search t)
  '(column-number-mode t)
  '(compilation-scroll-output t)
- '(compile-command
-   "time -p make -r -C compass -f repo/Makefile.new MODE=dbg ACTION=check all")
+ '(compile-command "time -p make -r -C compass MODE=dbg ACTION=check")
  '(completion-auto-help (quote lazy))
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
@@ -268,7 +267,7 @@
  '(ecb-ignore-pop-up-frames (quote always))
  '(ecb-layout-name "leftright-analyse")
  '(ecb-new-ecb-frame t)
- '(ecb-options-version "2.40")
+ '(ecb-options-version "2.50")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer (quote never))
  '(ecb-source-path
@@ -276,6 +275,7 @@
     (("/home/cesar" "Home")
      ("/work/Innergy/Software" "Software")
      ("/work/Innergy/Hardware" "Hardware")
+     ("/work/innergy" "innergy")
      ("/" "/"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("leftright-analyse" "leftright1" "left1")))
