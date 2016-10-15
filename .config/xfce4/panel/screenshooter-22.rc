@@ -1,0 +1,8 @@
+delay=0
+region=3
+action=1
+show_mouse=1
+screenshot_dir=file:///home/cesar/Pictures
+app=/opt/Imagination/PowerVR_Graphics/PowerVR_Tools/PVRTexTool/GUI/Linux_x86_32/PVRTexToolGUI
+last_user=
+
