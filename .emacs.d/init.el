@@ -205,7 +205,7 @@
  '(case-fold-search t)
  '(column-number-mode t)
  '(compilation-scroll-output t)
- '(compile-command "time -p make -r -C compass MODE=dbg ACTION=check")
+ '(compile-command "time -p make -r -C compass MODE=dbg install-run")
  '(completion-auto-help (quote lazy))
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
@@ -452,4 +452,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 113 :width normal)))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 120 :width normal)))))
