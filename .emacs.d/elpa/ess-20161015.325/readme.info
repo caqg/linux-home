@@ -6,7 +6,7 @@ File: readme.info,  Node: General Information
 1 General Information: README
 *****************************
 
-This is the README file for the distribution of ESS version 16.10
+This is the README file for the distribution of ESS version 16.10-beta
 
    ESS is a GNU Emacs and XEmacs mode for interactive statistical
 programming and data analysis.  Languages supported: the S family (S,
@@ -250,6 +250,12 @@ Changes and New Features in 16.10:
      to 'C-c C-w C-a'.  It asks with completion for any devtools command
      that takes 'pkg' as argument.
    * ESS[R]: Fix broken (un)flagging for debugging inside packages
+
+   Bug fixes in 16.10:
+   * ESS[R]: Fixes (and improvements) in Package development
+   * ESS[R]: Completion no longer produces '...=' inside 'list( )'.
+   * ESS[julia]: help and completion work (better)
+   * ESS[julia]: available via 'ess-remote'
 
    Changes and New Features in 16.04:
 
@@ -1150,16 +1156,16 @@ File: readme.info,  Node: Authors,  Prev: Mailing Lists,  Up: General Informatio
 
 Tag Table:
 Node: General Information73
-Node: License1759
-Node: Stability2426
-Node: Requirements2933
-Node: Latest Version3891
-Node: Installation4433
-Node: Starting up6540
-Node: Current Features6923
-Node: New Features8481
-Node: Reporting Bugs51247
-Node: Mailing Lists52059
-Node: Authors52795
+Node: License1764
+Node: Stability2431
+Node: Requirements2938
+Node: Latest Version3896
+Node: Installation4438
+Node: Starting up6545
+Node: Current Features6928
+Node: New Features8486
+Node: Reporting Bugs51500
+Node: Mailing Lists52312
+Node: Authors53048
 
 End Tag Table

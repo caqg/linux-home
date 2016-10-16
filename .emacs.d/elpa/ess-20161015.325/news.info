@@ -23,6 +23,12 @@ Changes and New Features in 16.10:
      that takes 'pkg' as argument.
    * ESS[R]: Fix broken (un)flagging for debugging inside packages
 
+   Bug fixes in 16.10:
+   * ESS[R]: Fixes (and improvements) in Package development
+   * ESS[R]: Completion no longer produces '...=' inside 'list( )'.
+   * ESS[julia]: help and completion work (better)
+   * ESS[julia]: available via 'ess-remote'
+
    Changes and New Features in 16.04:
 
    * ESS[R]: 'developer' functionality has been refactored.  The new
