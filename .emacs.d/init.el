@@ -15,9 +15,12 @@
   (load-library "cl-lib")
   (add-to-list 'load-path "~/.emacs.d/lisp")
 
+  (load-library "misc")
   (load-library "cq-workarounds")
-  (global-set-key [(meta z)] 'cq-zap-up-to-char)
-  (global-set-key [(meta Z)] 'zap-to-char) ;stock, not workaround
+  ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)x
+  ;; stock or misc, not from workarounds:
+  (global-set-key [(meta z)] 'zap-up-to-char)
+  (global-set-key [(meta Z)] 'zap-to-char)
 
   (load-library "cq-edit-utils")
   (global-set-key "\C-x$" 'cq/set-selective-display)
