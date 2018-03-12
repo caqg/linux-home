@@ -1,0 +1,24 @@
+#!/bin/sh
+
+rsync=rsync
+srcs="\
+syncd-dots \
+Examples \
+Notes \
+cmd \
+common-lisp \
+etc \
+quicklisp \
+share \
+"
+dest=/work/linux-home
+from=~
+opts="-aiuz"
+
+# leave line above empty
+cd $from
+
+for d in $srcs; do
+	echo $rsync $opts $d /work/linux-home
+done
+echo $rsync $opts $(cat dots) /work/linux-home

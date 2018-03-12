@@ -1,0 +1,150 @@
+# This is Quarry configuration file.
+#
+# You probably don't really want to edit it directly as you can tweak
+# all the settings from Quarry itself.  However, editing the file is
+# absolutely OK, just make sure that its general format is preserved.
+
+[GTP Engine "GTP GRhino 0.16.1"]
+Screen name format	= "%n %v"
+Name			= "GTP GRhino"
+Version			= "0.16.1"
+Site configuration name	= "GRhino Reversi"
+Command line		= "/usr/games/gtp-rhino"
+Supported games		= "Reversi"
+
+[GTP Engine "GNU Go "]
+Screen name format	= "%n %v"
+Name			= "GNU Go"
+Site configuration name	= "GNU Go"
+Command line		= "gnugo --mode gtp"
+Supported games		= "Go"
+
+[Game Tree View]
+Show tooltips		= true
+Show game tree		= "Auto"
+Track current node	= "Auto"
+Center on current node	= false
+
+[SGF]
+Force UTF-8		= true
+
+[Go Board Appearance]
+Use background texture	= true
+Background texture	= "/usr/share/quarry/textures/wood1.jpg"
+Background color	= "#dbb665"
+Grid and labels color	= "#000000"
+Markup theme		= "Default"
+Use theme defaults	= true
+Markup size		= 0.65
+Markup size is relative	= true
+Markup opacity		= 0.8
+Markup color on white	= "#505050"
+Markup color on black	= "#e6d8c6"
+Markup color on other	= "#186010"
+
+[Amazons Board Appearance]
+Use background texture	= true
+Background texture	= "/usr/share/quarry/textures/wood1.jpg"
+Background color	= "#dbb665"
+Checkerboard pattern color = "#604000"
+Checkerboard pattern opacity = 0.4
+Grid and labels color	= "#000000"
+Markup theme		= "Default"
+Use theme defaults	= true
+Markup size		= 0.65
+Markup size is relative	= true
+Markup opacity		= 0.8
+Markup color on white	= "#505050"
+Markup color on black	= "#e6d8c6"
+Markup color on other	= "#222222"
+
+[Reversi Board Appearance]
+Use background texture	= false
+Background color	= "#087834"
+Grid and labels color	= "#cceebb"
+Markup theme		= "Default"
+Use theme defaults	= true
+Markup size		= 0.65
+Markup size is relative	= true
+Markup opacity		= 0.8
+Markup color on white	= "#505050"
+Markup color on black	= "#e6d8c6"
+Markup color on other	= "#cceebb"
+
+[GTK+ User Interface]
+Use GtkFileChooser if possible = true
+Show main toolbar	= true
+Main toolbar style	= "Default"
+Show editing toolbar	= true
+Editing toolbar style	= "Default"
+Show navigation toolbar	= true
+Navigation toolbar style = "Default"
+Show game action buttons = true
+
+[New Game Parameters]
+Game			= "Reversi"
+White player name	= "Cesar Quiroz"
+White is computer	= true
+Engine playing white	= "GTP GRhino 0.16.1"
+Black player name	= "Cesar Quiroz"
+Black is computer	= false
+Engine playing black	= "GTP GRhino 0.16.1"
+
+[New Go Game Parameters]
+Board size		= 19
+Handicap is fixed	= true
+Fixed handicap		= 0
+Free handicap		= 0
+Komi			= 6.5
+Time control type	= 0
+Keep track of total time = 0
+Time limit for game	= 30:00
+Time limit for move	= 00:30
+Main time		= 10:00
+Overtime period length	= 10:00
+Moves per overtime	= 25
+
+[New Amazons Game Parameters]
+Board size		= 10
+Time control type	= 0
+Keep track of total time = 0
+Time limit for game	= 15:00
+Time limit for move	= 00:20
+Main time		= 00:00
+Overtime period length	= 05:00
+Moves per overtime	= 10
+
+[New Reversi Game Parameters]
+Board size		= 8
+Time control type	= 0
+Keep track of total time = 0
+Time limit for game	= 10:00
+Time limit for move	= 00:15
+Main time		= 00:00
+Overtime period length	= 05:00
+Moves per overtime	= 10
+
+[New Game Record Parameters]
+Game			= "Go"
+White player name	= "White"
+Black player name	= "Black"
+
+[New Go Game Record Parameters]
+Board size		= 19
+Handicap		= null
+Place handicap stones	= true
+Komi			= 6.5
+
+[New Amazons Game Record Parameters]
+Board size		= 10
+
+[New Reversi Game Record Parameters]
+Board size		= 8
+
+[Find Dialog Parameters]
+Case sensitive		= false
+Whole words only	= false
+Wrap around		= true
+Search whole game tree	= true
+Search in		= "Nodes and comments"
+Auto-close search dialog = false

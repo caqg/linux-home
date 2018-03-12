@@ -1,0 +1,19 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+
+U gmain%b		gmain.adb		66eeffd7 NE OO SU
+W greetings%s		greetings.adb		greetings.ali
+
+D gmain.adb		20160814075703 23f0165a gmain%b
+D greetings.ads		20160814074908 451ee98d greetings%s
+D system.ads		20141031112219 1d274481 system%s
+X 1 gmain.adb
+2U11*Gmain 2b11 6l5 6t10
+X 2 greetings.ads
+1K9*Greetings 1|1w6 4r4 5r4 2|4e14
+2U14*Hello 1|4s14
+3U14*Goodbye 1|5s14
+

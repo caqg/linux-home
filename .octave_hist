@@ -1,0 +1,88 @@
+PS2
+disp (getenv ('OCTAVE_SRCDIR'))
+more off;
+PS1 ('octave> ');
+disp (pwd ())
+addpath("~/lib/octave/")
+putenv ('COLUMNS', '90');
+savepath()
+putenv ('COLUMNS', '97');
+# Octave 3.8.1, Sat Feb 07 19:32:53 2015 PST <cesar@cesar-U64-14>
+PS2
+disp (getenv ('OCTAVE_SRCDIR'))
+more off;
+PS1 ('octave> ');
+disp (pwd ())
+edit home
+edit get home
+edit home ~/lib/octave
+edit get home
+putenv ('COLUMNS', '90');
+# Octave 3.8.1, Sat Feb 07 21:06:18 2015 PST <cesar@cesar-U64-14>
+PS2
+disp (getenv ('OCTAVE_SRCDIR'))
+more off;
+PS1 ('octave> ');
+disp (pwd ())
+edit get home
+putenv ('COLUMNS', '90');
+putenv ('COLUMNS', '131');
+x = -10:0.1:10
+plot(x,sin(x))
+graphics_toolkit()
+available_graphics_toolkit()
+available_graphics_toolkits()
+graphics_toolkit('gnuplot')
+plot(x, sin(x))
+graphics_toolkit('fltk')
+plot(x, sin(x))
+eye(2,4)
+eye(5,5)
+  linspace(1, 10, 1)
+  linspace(1, 10, 10)
+  linspace(0, 1, 10)
+  logspace(0, 1, 10)
+log(linspace(1,10,10))
+log10(linspace(1,10,10))
+ dump_prefs()
+sind(30)
+cosd(30)
+e
+i
+i =3
+i
+I
+i = I
+i
+j
+J
+i()
+putenv ('COLUMNS', '266');
+exit
+# Octave 3.8.1, Sun Feb 08 01:08:25 2015 PST <cesar@cesar-U64-14>
+PS2
+disp (getenv ('OCTAVE_SRCDIR'))
+more off;
+PS1 ('octave> ');
+disp (pwd ())
+putenv ('COLUMNS', '131');
+exit
+# Octave 3.8.1, Sun Feb 08 01:10:18 2015 PST <cesar@cesar-U64-14>
+PS2
+disp (getenv ('OCTAVE_SRCDIR'))
+more off;
+PS1 ('octave> ');
+disp (pwd ())
+putenv ('COLUMNS', '131');
+computer()
+uname()
+nproc()
+ispc()
+isunix()
+ismac()
+isieee()
+OCTAVE_HOME()
+octave_config_info()
+pkg list
+# Octave 3.8.1, Sun Feb 08 22:54:47 2015 PST <cesar@cesar-U64-14>
+# Octave 4.0.0, Tue May 10 00:16:27 2016 PDT <cesar@cesar-U64-14>

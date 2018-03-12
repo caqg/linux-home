@@ -8,15 +8,23 @@
 ## Logged execution: keep a single log of both fd 1 and fd 2
 ##
 ## Unless called "lx", runs make "$@"; else runs "$@"
-
+##
+## The runner arguments are prefixed by a default multithreading option
+## (which can be overriden in the user-given arguments). This applies only
+## to make runs.
 
 progname=$(basename $0)
+
+maxjobs=
+type >/dev/null -p nproc && {
+	maxjobs="-j$(expr 2 \* $(nproc))"
+}
 
 case "$progname" in
 lx)	runner=""
 	runnerpfx="lx-"
 	;;
-*)	runner="make"
+*)	runner="make $maxjobs"
 	runnerpfx="make-"
 	;;
 esac

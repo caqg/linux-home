@@ -1,0 +1,17 @@
+#!/bin/sh
+
+case $# in
+1) ;;
+*)	echo usage: $0 executable
+	exit 1;;
+esac
+
+case $1 in
+-h*|--h*|-?) echo usage: $0 executable; exit 0;; 
+*) ;;
+esac
+
+ldd "$1" | 
+awk '
+NF > 3 { print $3, $1; next; }
+'

@@ -1,0 +1,132 @@
+=head2 Sat Oct 28 08:57:58 2017: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Sun Dec 31 07:20:00 2017: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Sat Jan  6 05:05:40 2018: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Sat Jan 13 22:33:50 2018: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Jan 18 07:53:19 2018: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Sun Jan 28 07:56:26 2018: C<Module> L<Git|Git>
+
+=over 4
+
+=item *
+
+C<installed into: /home/cesar/share/perl/5.26.0>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
