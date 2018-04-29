@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/instal
+~MSle0~/his
 
 # Last Substitute Search Pattern:
 ~MSle0&=
@@ -21,11 +21,11 @@ $
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1520409156,,"q"
+|2,0,1524965419,,"q"
+:w
+|2,0,1524965416,,"w"
 :wq
 |2,0,1514718217,,"wq"
-:w
-|2,0,1514717593,,"w"
 :q!
 |2,0,1514705970,,"q!"
 :terminal
@@ -123,6 +123,8 @@ $
 |2,0,1472713833,,"source .vim/vimrc"
 
 # Search String History (newest to oldest):
+?/his
+|2,1,1524965409,47,"his"
 ? @$
 |2,1,1514708049,,"@$"
 ?/instal
@@ -221,8 +223,6 @@ $
 |2,1,1468808927,47,"42"
 ?/option
 |2,1,1468808659,47,"option"
-?/ref
-|2,1,1468808550,47,"ref"
 
 # Expression History (newest to oldest):
 
@@ -231,7 +231,7 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
+"0	CHAR	0
 	ilds/emacs/master/oldXMenu'
 	make -C lwlib distclean
 	make[1]: Entering directory '/scratch/builds/emacs/master/lwlib'
@@ -256,36 +256,36 @@ $
 	make[1]: Entering directory '/scratch/builds/emacs/master/nt'
 	rm -f core *.o *.res
 	
-|3,1,0,0,24,0,1517126702,"ilds/emacs/master/oldXMenu'","make -C lwlib distclean","make[1]: Entering directory '/scratch/builds/emacs/master/lwlib'","rm -f *.o liblw.a \\#* deps/*","rm -f Makefile","rm -fr deps","make[1]: Leaving directory '/scratch/builds/emacs/master/lwlib'","make -C lib distclean","make[1]: Entering directory '/scratch/builds/emacs/master/lib'","rm -f *.[ao] *-t \\#* deps/*",>251
+|3,0,0,0,24,0,1517126702,"ilds/emacs/master/oldXMenu'","make -C lwlib distclean","make[1]: Entering directory '/scratch/builds/emacs/master/lwlib'","rm -f *.o liblw.a \\#* deps/*","rm -f Makefile","rm -fr deps","make[1]: Leaving directory '/scratch/builds/emacs/master/lwlib'","make -C lib distclean","make[1]: Entering directory '/scratch/builds/emacs/master/lib'","rm -f *.[ao] *-t \\#* deps/*",>251
 |<"rm -f core *.stackdump alloca.h byteswap.h dirent.h errno.h execinfo.h fcntl.h getopt.h getopt-cdefs.h inttypes.h limits.h signal.h stdalign.h stddef.h stdint.h stdio.h stdlib.h string.h sys/select.h sys/stat.h sys/time.h sys/types.h time.h unistd.h","rm -f Makefile","rm -fr deps","make[1]: Leaving directory '/scratch/builds/emacs/master/lib'","make -C lib-src distclean","make[1]: Entering directory '/scratch/builds/emacs/master/lib-src'","rm -f core *.o *.res",>69
 |<"rm -f etags ctags emacsclient  ebrowse profile hexl    make-docfile","rm -f TAGS Makefile blessmail","make[1]: Leaving directory '/scratch/builds/emacs/master/lib-src'","make -C nt distclean","make[1]: Entering directory '/scratch/builds/emacs/master/nt'","rm -f core *.o *.res",""
-"1	LINE	0
-	Categories=Development;
-|3,0,1,1,1,0,1514717677,"Categories=Development;"
+""1	LINE	0
+	.bash_history
+|3,1,1,1,1,0,1524965410,".bash_history"
 "2	LINE	0
-	#MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
-|3,0,2,1,1,0,1514717672,"#MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;"
+	Categories=Development;
+|3,0,2,1,1,0,1514717677,"Categories=Development;"
 "3	LINE	0
-	Comment=Edit text
-|3,0,3,1,1,0,1514717671,"Comment=Edit text"
+	#MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+|3,0,3,1,1,0,1514717672,"#MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;"
 "4	LINE	0
-	GenericName=Text Editor
-|3,0,4,1,1,0,1514717670,"GenericName=Text Editor"
+	Comment=Edit text
+|3,0,4,1,1,0,1514717671,"Comment=Edit text"
 "5	LINE	0
-	#TryExec=emacs
-|3,0,5,1,1,0,1514717478,"#TryExec=emacs"
+	GenericName=Text Editor
+|3,0,5,1,1,0,1514717670,"GenericName=Text Editor"
 "6	LINE	0
-	#StartupWMClass=EmacsServer
-|3,0,6,1,1,0,1514717476,"#StartupWMClass=EmacsServer"
+	#TryExec=emacs
+|3,0,6,1,1,0,1514717478,"#TryExec=emacs"
 "7	LINE	0
-	StartupWMClass=EmacsServer
-|3,0,7,1,1,0,1514717407,"StartupWMClass=EmacsServer"
+	#StartupWMClass=EmacsServer
+|3,0,7,1,1,0,1514717476,"#StartupWMClass=EmacsServer"
 "8	LINE	0
-	#TryExec=rogue
-|3,0,8,1,1,0,1514717207,"#TryExec=rogue"
+	StartupWMClass=EmacsServer
+|3,0,8,1,1,0,1514717407,"StartupWMClass=EmacsServer"
 "9	LINE	0
-	Comment=Use the command line
-|3,0,9,1,1,0,1514717202,"Comment=Use the command line"
+	#TryExec=rogue
+|3,0,9,1,1,0,1514717207,"#TryExec=rogue"
 "h	CHAR	0
 	elp 
 |3,0,17,0,1,0,1468804346,"elp "
@@ -300,30 +300,32 @@ $
 |3,0,36,0,1,0,1514717569," "
 
 # File marks:
-'0  60  52  /work/emacs/master/lx-git-20180104_211645.log
-|4,48,60,52,1515129452,"/work/emacs/master/lx-git-20180104_211645.log"
-'1  2  6  ~/.local/share/applications/MyEmacsServer.desktop
-|4,49,2,6,1514718217,"~/.local/share/applications/MyEmacsServer.desktop"
-'2  6  0  ~/Desktop/EmacsServer.desktop
-|4,50,6,0,1514717681,"~/Desktop/EmacsServer.desktop"
-'3  1  0  ~/.local/share/applications/EclipseMars.desktop
-|4,51,1,0,1514717626,"~/.local/share/applications/EclipseMars.desktop"
-'4  10  0  ~/.local/share/applications/EmacsServer.desktop
-|4,52,10,0,1514717597,"~/.local/share/applications/EmacsServer.desktop"
+'0  7  0  ~/syncd-dots
+|4,48,7,0,1524965419,"~/syncd-dots"
+'1  60  52  /work/emacs/master/lx-git-20180104_211645.log
+|4,49,60,52,1515129452,"/work/emacs/master/lx-git-20180104_211645.log"
+'2  2  6  ~/.local/share/applications/MyEmacsServer.desktop
+|4,50,2,6,1514718217,"~/.local/share/applications/MyEmacsServer.desktop"
+'3  6  0  ~/Desktop/EmacsServer.desktop
+|4,51,6,0,1514717681,"~/Desktop/EmacsServer.desktop"
+'4  1  0  ~/.local/share/applications/EclipseMars.desktop
+|4,52,1,0,1514717626,"~/.local/share/applications/EclipseMars.desktop"
 '5  10  0  ~/.local/share/applications/EmacsServer.desktop
-|4,53,10,0,1514717489,"~/.local/share/applications/EmacsServer.desktop"
-'6  11  0  ~/.local/share/applications/EmacsServer.desktop
-|4,54,11,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
-'7  12  0  ~/.local/share/applications/EmacsServer.desktop
-|4,55,12,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
-'8  11  0  ~/.local/share/applications/EmacsServer.desktop
-|4,56,11,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
-'9  12  0  ~/.local/share/applications/EmacsServer.desktop
-|4,57,12,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
+|4,53,10,0,1514717597,"~/.local/share/applications/EmacsServer.desktop"
+'6  10  0  ~/.local/share/applications/EmacsServer.desktop
+|4,54,10,0,1514717489,"~/.local/share/applications/EmacsServer.desktop"
+'7  11  0  ~/.local/share/applications/EmacsServer.desktop
+|4,55,11,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
+'8  12  0  ~/.local/share/applications/EmacsServer.desktop
+|4,56,12,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
+'9  11  0  ~/.local/share/applications/EmacsServer.desktop
+|4,57,11,0,1514717419,"~/.local/share/applications/EmacsServer.desktop"
 
 # Jumplist (newest first):
--'  60  52  /work/emacs/master/lx-git-20180104_211645.log
-|4,39,60,52,1515129452,"/work/emacs/master/lx-git-20180104_211645.log"
+-'  7  0  ~/syncd-dots
+|4,39,7,0,1524965419,"~/syncd-dots"
+-'  1  0  ~/syncd-dots
+|4,39,1,0,1524965409,"~/syncd-dots"
 -'  60  52  /work/emacs/master/lx-git-20180104_211645.log
 |4,39,60,52,1515129452,"/work/emacs/master/lx-git-20180104_211645.log"
 -'  60  52  /work/emacs/master/lx-git-20180104_211645.log
@@ -522,6 +524,12 @@ $
 |4,39,60,52,1515129452,"/work/emacs/master/lx-git-20180104_211645.log"
 
 # History of marks within files (newest to oldest):
+
+> ~/syncd-dots
+	*	1524965418	0
+	"	7	0
+	.	6	0
+	+	6	0
 
 > /work/emacs/master/lx-git-20180104_211645.log
 	*	1515129448	0
@@ -1303,7 +1311,3 @@ $
 > /work/git/Documentation/RelNotes/2.9.0.txt
 	*	1469348881	0
 	"	1	0
-
-> /usr/local/share/vim/vim74/doc/index.txt
-	*	1469347267	0
-	"	733	32
