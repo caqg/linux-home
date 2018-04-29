@@ -6,7 +6,7 @@ set backspace           =indent
 set backspace          +=eol
 set backspace          +=start
 set backup
-set hlsearch
+set nohlsearch
 set incsearch
 set laststatus          =1
 set numberwidth         =5
@@ -79,7 +79,7 @@ if has("cscope")
     endif
 endif
 
-let TE_Ctags_Path       = "/usr/bin/ctags"
+let TE_Ctags_Path       = "/usr/bin/u-ctags"
 let TE_Use_Right_Window = 1
 
 " C/C++/Java, closer to the Emacs settings
