@@ -1,0 +1,10 @@
+;; -*- emacs-lisp -*- <15/10/10 01:45:33 /home/cesar/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["adb" nil "" nil nil]
+  ("getprop" "A500 4.0.3")
+  ("remote-path"
+   ("/sbin" "/vendor/bin" "/system/sbin" "/system/bin" "/system/xbin"))
+  ("ls" "ls")
+  ("test" t)))

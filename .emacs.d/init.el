@@ -36,8 +36,8 @@
   (load-library "cq-minor-mode-utils")
   (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
 
-  (load-library "cq-cedet-ede-ecb-utils")
-  (global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
+  ;;(load-library "cq-cedet-ede-ecb-utils")
+  ;;(global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
 
   (add-hook 'dired-load-hook
             (lambda ()
@@ -160,7 +160,7 @@
   (require 'semantic/sb)
   (require 'semantic/symref)
   (require 'ede)
-  (require 'ecb)                        ;last require, so at end of Tools menu
+  ;;(require 'ecb)                        ;last require, so at end of Tools menu
   (global-semantic-mru-bookmark-mode 1)
 
   (if window-system
@@ -270,9 +270,6 @@
  '(ecb-show-sources-in-directories-buffer 'never)
  '(ecb-source-path
    '(("/home/cesar" "Home")
-     ("/work/Innergy/Software" "Software")
-     ("/work/Innergy/Hardware" "Hardware")
-     ("/work/innergy" "innergy")
      ("/" "/")))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence '("leftright-analyse" "leftright1" "left1"))
