@@ -2,11 +2,12 @@
 
 dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
 
-DEFAULT_XTERM=sakura
+#DEFAULT_XTERM=sakura
+DEFAULT_XTERM=gnome-terminal
 xterm=${XTERM:-${DEFAULT_XTERM}}
 
-xrows=${XROWS:-36}
-xcols=${XCOLS:-90}
+xrows=${XROWS:-48}
+xcols=${XCOLS:-110}
 
 OPATH="$PATH"
 PATH=/usr/bin:/bin
@@ -57,7 +58,8 @@ fi
 
 case "$xterm" in
 gnome-terminal)
-	"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+	#"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+	"$xterm" --geometry "$xcols"x"$xrows"              -- $cmd ${1+"$@"} &
 	;;
 sakura)
 	"$xterm" -r "$xrows" -c "$xcols" -t "$title" -e $cmd ${1+"$@"} &

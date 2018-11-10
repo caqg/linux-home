@@ -36,6 +36,7 @@
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
 	top             = rev-parse --show-toplevel
+	us              = reset --
 
 [push]
 	default         = simple

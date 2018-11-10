@@ -1,0 +1,10 @@
+#!/bin/bash
+
+touchpads=$(xinput list | grep Touchpad |
+	    sed -e 's/.*id=//' -e 's/\t\[.*$//')
+
+for touchpadid in $touchpads; do
+	xinput set-prop $touchpadid "Device Enabled" 0
+done
+
+#end notouchpad

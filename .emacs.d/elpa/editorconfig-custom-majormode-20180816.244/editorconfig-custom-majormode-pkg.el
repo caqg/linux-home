@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "editorconfig-custom-majormode" "20180816.244" "Decide major-mode and mmm-mode from EditorConfig" '((editorconfig "0.6.0")) :commit "13ad1c83f847bedd4b3a19f9df7fd925853b19de" :keywords '("editorconfig" "util") :authors '(("10sr <8slashes+el [at] gmail [dot] com>")) :maintainer '("10sr <8slashes+el [at] gmail [dot] com>") :url "https://github.com/10sr/editorconfig-custom-majormode-el")
