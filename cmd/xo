@@ -30,7 +30,7 @@ case $# in
 1)
     case "$1" in
     -h*|--h*|-\?)
-        usage; exit 0 ;;
+	usage; exit 0 ;;
     esac ;;
 esac
 
@@ -61,6 +61,6 @@ echo >"$tmpfn" $cmd ${1+"$@"} \| $pager
 echo >> "$tmpfn" /bin/rm -f "$tmpfn"
 
 chmod +x "$tmpfn"
-"$xterm" -t "$title" -x "$tmpfn"
+"$xterm" 1>/dev/null -t "$title" -x "$tmpfn"
 
 # end of xo

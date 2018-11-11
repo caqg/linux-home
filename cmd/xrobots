@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xtitle Robots && /usr/games/robots ${1+"$@"}

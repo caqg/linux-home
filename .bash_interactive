@@ -25,7 +25,7 @@ function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors ~/.dircol
 function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
 
 function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
-function ef   { ~/cmd/e -nc "$@"; }
+# function ef   { ~/cmd/e -nc "$@"; }
 function gits { git s; }
 function h    { history "$@"; }
 function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
@@ -47,10 +47,10 @@ xterm*|rxvt*)
 	PS1="$left$middle$right"
     }
 
-    case "$TERM" in
-    xterm*)	export TERM=xterm;;
-    xrvt*)	export TERM=xrvt;;
-    esac
+    # case "$TERM" in
+    # xterm*)	export TERM=xterm;;
+    # xrvt*)	export TERM=xrvt;;
+    # esac
 
     PROMPT_COMMAND=updatePS1WithGitBranch
     colorize-ls
