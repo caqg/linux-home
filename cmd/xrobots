@@ -1,5 +1,6 @@
 #!/bin/bash
 
-~/cmd/with-x-title Robots /usr/games/robots ${1+"$@"}
+export PATH=~/cmd:$PATH
+with-x-title Robots /usr/games/robots ${1+"$@"}
 
 ##end xrobots

@@ -1,6 +1,7 @@
 #!/bin/bash
 
+export PATH=~/cmd:$PATH
 export ROGUEOPTS="fruit=eyeberry,name=Nati's Muzh,jump,noaskquit,skull,tomb,passgo"
-~/cmd/with-x-title Rogue /usr/games/rogue ${1+"$@"}
+with-x-title Rogue /usr/games/rogue ${1+"$@"}
 
 ##end xrogue
