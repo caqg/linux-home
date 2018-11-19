@@ -19,7 +19,7 @@ case $# in
 	;;
 esac
 
-case $1 in 
+case $1 in
 -b)	Ps=${CHANGE_ICON_AND_WINDOW_TITLE_Ps}; shift
 	;;
 -i)	Ps=${CHANGE_ICON_TITLE_ONLY_Ps}; shift
@@ -28,5 +28,6 @@ case $1 in
 	;;
 esac
 
-echo -n ']'${Ps}';'"$@"'' > /dev/tty
+[ "$DISPLAY" ] && echo -n ']'${Ps}';'"$@"'' > /dev/tty
+
 ##end xtitle

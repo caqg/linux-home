@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo systemctl stop bluetooth.service
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+
+#end shake-bluetooth

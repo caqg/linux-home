@@ -1,0 +1,35 @@
+#!/bin/bash
+
+escape_spaces () {
+	echo "$@" | sed -e 's/ /\\ /g'
+}
+
+# view (process output) in (g)vim
+
+usage () {
+	progname=$(basename $0)
+	printf "usage: %s command-line\n\n" $progname
+	printf "\tThe arguments are used to run a process, whose fd1 output\n"
+	printf "\tis displayed in a read-only vim.\n\n"
+	printf "\tIf \$DISPLAY is set, the display program is gvim.\n"
+}
+
+case $# in
+0)
+	usage; exit 0 ;;
+1)
+	case "$1" in
+	-h|--h*)
+		usage; exit 0 ;;
+	esac
+	;;
+*)
+	;;
+esac
+
+set -o errexit
+set -o pipefail
+
+"$@" | vim - ${DISPLAY+-g} --not-a-term -MR -c "set title titlestring=$(escape_spaces in vim: $*)"
+
+##end vv

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Robots
-Exec=sakura --config-file=rogue.conf --geometry 80x24+520+80 -t Robots -x /usr/games/robots
+Exec=gnome-terminal --window-with-profile=Robots
+Icon=/usr/share/icons/Yaru/24x24/apps/games-app.png
 Type=Application
 Categories=GTK;TerminalEmulator;System;
 StartupNotify=true

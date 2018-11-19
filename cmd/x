@@ -2,11 +2,12 @@
 
 dispatch=${xDISPATCH:-"$HOME/.x-dispatch"}
 
-DEFAULT_XTERM=sakura
+#DEFAULT_XTERM=sakura
+DEFAULT_XTERM=gnome-terminal
 xterm=${XTERM:-${DEFAULT_XTERM}}
 
-xrows=${XROWS:-36}
-xcols=${XCOLS:-90}
+xrows=${XROWS:-48}
+xcols=${XCOLS:-110}
 
 OPATH="$PATH"
 PATH=/usr/bin:/bin
@@ -38,13 +39,13 @@ cmd=${newcmd:-$cmd}
 
 shift				# consume the cmd name
 case $# in
-0)	title="$who@$where  $name"			;;
-1)	title="@$where  $name $1"			;;
-2)	title="@$where  $name $1 $2"			;;
-3)	title="@$where  $name $1 $2 $3"			;;
-4)	title="@$where  $name $1 $2 $3 $4"		;;
-5)	title="@$where  $name $1 $2 $3 $4 $5"		;;
-*)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
+0)	title="$who@$where  $name"		;;
+1)	title="$name $1"			;;
+2)	title="$name $1 $2"			;;
+3)	title="$name $1 $2 $3"			;;
+4)	title="$name $1 $2 $3 $4"		;;
+5)	title="$name $1 $2 $3 $4 $5"		;;
+*)	title="$name $1 $2 $3 $4 $5 $6 ..."	;;
 esac
 
 export PATH="$OPATH"
@@ -57,11 +58,13 @@ fi
 
 case "$xterm" in
 gnome-terminal)
-	"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+	#"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
+	"$xterm" 1>/dev/null --geometry "$xcols"x"$xrows" -- \
+		 with-x-title "$title" $cmd ${1+"$@"}
 	;;
 sakura)
 	"$xterm" -r "$xrows" -c "$xcols" -t "$title" -e $cmd ${1+"$@"} &
 	;;
 esac
 
-# end of x
+##end x

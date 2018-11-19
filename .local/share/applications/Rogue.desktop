@@ -1,9 +1,10 @@
 [Desktop Entry]
 Name=Rogue
-Comment=Use the command line
-#TryExec=rogue
-Exec=sakura --config-file=rogue.conf --geometry 80x24+558+0 -t Rogue -x /home/cesar/cmd/unity-rogue
-Icon=/home/cesar/Documents/Icons/Rogue.xcf
+#Exec=/usr/bin/sakura -l -t Rogue -e /usr/games/rogue
+#Exec=/usr/bin/sakura --geometry 80x24+558+0 -l -t Rogue -x /usr/games/rogue
+Exec=gnome-terminal --window-with-profile=Rogue
+Icon=/home/cesar/Documents/Icons/Rogue.png
 Type=Application
 Categories=GTK;TerminalEmulator;System;
 StartupNotify=true
+GenericName[en_US.UTF-8]=Rogue

@@ -1,3 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-exec sakura --config-file=rogue.conf -r 24 -c 80 -t Rogue -x /home/cesar/cmd/unity-rogue&
+export PATH=~/cmd:$PATH
+export ROGUEOPTS="fruit=eyeberry,name=Nati's Muzh,jump,noaskquit,skull,tomb,passgo"
+with-x-title Rogue /usr/games/rogue ${1+"$@"}
+
+##end xrogue

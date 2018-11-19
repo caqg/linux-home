@@ -9,7 +9,7 @@ cmd \
 common-lisp \
 etc \
 quicklisp \
-share \
+share/boilerplate \
 "
 dest=/work/linux-home
 from=~
