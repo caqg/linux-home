@@ -39,13 +39,13 @@ cmd=${newcmd:-$cmd}
 
 shift				# consume the cmd name
 case $# in
-0)	title="$who@$where  $name"			;;
-1)	title="@$where  $name $1"			;;
-2)	title="@$where  $name $1 $2"			;;
-3)	title="@$where  $name $1 $2 $3"			;;
-4)	title="@$where  $name $1 $2 $3 $4"		;;
-5)	title="@$where  $name $1 $2 $3 $4 $5"		;;
-*)	title="@$where  $name $1 $2 $3 $4 $5 $6 ..."	;;
+0)	title="$who@$where  $name"		;;
+1)	title="$name $1"			;;
+2)	title="$name $1 $2"			;;
+3)	title="$name $1 $2 $3"			;;
+4)	title="$name $1 $2 $3 $4"		;;
+5)	title="$name $1 $2 $3 $4 $5"		;;
+*)	title="$name $1 $2 $3 $4 $5 $6 ..."	;;
 esac
 
 export PATH="$OPATH"
