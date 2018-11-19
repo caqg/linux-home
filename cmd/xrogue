@@ -1,3 +1,6 @@
 #!/bin/bash
 
-xtitle Rogue && /usr/games/rogue ${1+"$@"}
+export ROGUEOPTS="fruit=eyeberry,name=Nati's Muzh,jump,noaskquit,skull,tomb,passgo"
+~/cmd/with-x-title Rogue /usr/games/rogue ${1+"$@"}
+
+##end xrogue

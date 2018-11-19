@@ -3,7 +3,7 @@ Name=Rogue
 #Exec=/usr/bin/sakura -l -t Rogue -e /usr/games/rogue
 #Exec=/usr/bin/sakura --geometry 80x24+558+0 -l -t Rogue -x /usr/games/rogue
 Exec=gnome-terminal --window-with-profile=Rogue
-#Icon=/home/cesar/Documents/Icons/Rogue.xcf
+Icon=/home/cesar/Documents/Icons/Rogue.png
 Type=Application
 Categories=GTK;TerminalEmulator;System;
 StartupNotify=true

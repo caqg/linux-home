@@ -61,6 +61,6 @@ echo >"$tmpfn" $cmd ${1+"$@"} \| $pager
 echo >> "$tmpfn" /bin/rm -f "$tmpfn"
 
 chmod +x "$tmpfn"
-"$xterm" 1>/dev/null -t "$title" -x "$tmpfn"
+"$xterm" 1>/dev/null -- ~/cmd/with-x-title "$title" "$tmpfn"
 
 # end of xo

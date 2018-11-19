@@ -1,3 +1,5 @@
 #!/bin/bash
 
-xtitle Robots && /usr/games/robots ${1+"$@"}
+~/cmd/with-x-title Robots /usr/games/robots ${1+"$@"}
+
+##end xrobots
