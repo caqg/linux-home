@@ -30,6 +30,6 @@ esac
 set -o errexit
 set -o pipefail
 
-"$@" | vim - ${DISPLAY+-g} -MR -c "set title titlestring=$(escape_spaces in vim: $*)"
+"$@" | vim - ${DISPLAY+-g} --not-a-term -MR -c "set title titlestring=$(escape_spaces in vim: $*)"
 
 ##end vv
