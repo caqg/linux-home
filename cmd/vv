@@ -30,6 +30,9 @@ esac
 set -o errexit
 set -o pipefail
 
-"$@" | vim - ${DISPLAY+-g} --not-a-term -MR -c "set title titlestring=$(escape_spaces in vim: $*)"
+# Vim would take its name followed by a colon below to indicate a modeline...
+# Keeping the word and the colon separated by double quotes does the trick.
+"$@" | vim - ${DISPLAY:+-g} --not-a-term -MR \
+	-c "set title titlestring=$(escape_spaces view in vim"": $*)"
 
 ##end vv
