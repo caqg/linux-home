@@ -1,0 +1,14 @@
+#!/bin/bash
+
+make all	&&
+make doc	&&
+make info	&&
+make pdf	&&
+
+sudo make install	&&
+sudo make install-html	&&
+sudo make install-info	&&
+sudo make install-man	&&
+sudo make install-pdf
+
+##end make-and-install-git

@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-/usr/bin/sudo $HOME/cmd/m -j1 "$@"
+/usr/bin/sudo $(type -p m) -j1 "$@"
 
-#end
+##end sudom
