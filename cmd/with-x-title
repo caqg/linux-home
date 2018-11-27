@@ -1,19 +1,19 @@
 #!/bin/bash
 
 usage () {
-	progname=$(basename $0)
-	printf "usage: %s title [command [argv...]]\n" $progname
-	printf "\tSets, if possible, the XTerm title to \$1,\n"
-	printf "\tthen runs the rest of the arguments as XTerm's -e argument.\n"
+        progname=$(basename $0)
+        printf "usage: %s title [command [argv...]]\n" $progname
+        printf "\tSets, if possible, the XTerm title to \$1,\n"
+        printf "\tthen runs the rest of the arguments as XTerm's -e argument.\n"
 }
 
 case $# in
 0)
-	usage; exit 2 ;;
+        usage; exit 2 ;;
 *)
-	title="$1"; shift ;;
+        title="$1"; shift ;;
 esac
 
 xtitle "$title" && "$@"
 
-#end with-title
+##end with-x-title
