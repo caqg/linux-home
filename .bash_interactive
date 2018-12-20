@@ -26,6 +26,7 @@ function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
 
 function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
 # function ef   { ~/cmd/e -nc "$@"; }
+function gitl { git l ${1:+-n} ${1:--n 5}; }
 function gits { git s; }
 function h    { history "$@"; }
 function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
