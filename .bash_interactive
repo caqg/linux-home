@@ -58,4 +58,8 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Use bash-completion, if available
+[ -f /usr/share/bash-completion/bash_completion ] && \
+    . /usr/share/bash-completion/bash_completion
+
 ##end .bash_interactive
