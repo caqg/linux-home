@@ -61,5 +61,8 @@ esac
 # Use bash-completion, if available
 [ -f /usr/share/bash-completion/bash_completion ] && \
     . /usr/share/bash-completion/bash_completion
+complete -F _command lx
+complete -F _command vv
+complete -F _command x
 
 ##end .bash_interactive
