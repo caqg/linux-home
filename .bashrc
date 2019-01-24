@@ -7,6 +7,13 @@ fi
 
 unalias -a
 
+shopt -s checkwinsize
+shopt -s direxpand
+shopt -s globstar
+shopt -s histappend
+shopt -s histverify
+shopt -s progcomp
+
 export LC_TIME="en_GB.UTF-8"
 
 # Add personal prefixes to the PATH, but only if they are not already there.
