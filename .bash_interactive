@@ -2,9 +2,9 @@
 
 case $(whoami) in
 root)
-    export PS1='# ' ;;
+	export PS1='# ' ;;
 *)
-    export PS1='$ ' ;;
+	export PS1='$ ' ;;
 esac
 
 # export PS2='> '
@@ -26,6 +26,7 @@ function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
 
 function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
 # function ef   { ~/cmd/e -nc "$@"; }
+function gitd { git d; }
 function gitl { git l ${1:+-n} ${1:--n 5}; }
 function gits { git s; }
 function h    { history "$@"; }
@@ -41,26 +42,29 @@ function vdir { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
 
 case "${TERM}" in
 xterm*|rxvt*)
-    function updatePS1WithGitBranch {
-	left='\[\e]0;\u@\h: \w'
-	middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
-	right='\a\]\$ '
-	PS1="$left$middle$right"
-    }
+	function updatePS1WithGitBranch {
+		left='\[\e]0;\u@\h: \w'
+		middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
+		right='\a\]\$ '
+		PS1="$left$middle$right"
+	}
 
-    # case "$TERM" in
-    # xterm*)	export TERM=xterm;;
-    # xrvt*)	export TERM=xrvt;;
-    # esac
+	# case "$TERM" in
+	# xterm*)	export TERM=xterm;;
+	# xrvt*)	export TERM=xrvt;;
+	# esac
 
-    PROMPT_COMMAND=updatePS1WithGitBranch
-    colorize-ls
-    ;;
+	PROMPT_COMMAND=updatePS1WithGitBranch
+	colorize-ls
+	;;
 esac
 
 # Use bash-completion, if available
-[ -f /usr/share/bash-completion/bash_completion ] && \
-    . /usr/share/bash-completion/bash_completion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash-completion ]; then
+	. /etc/bash_completion
+fi
 complete -F _command lx
 complete -F _command vv
 complete -F _command x
