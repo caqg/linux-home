@@ -7,8 +7,12 @@ fi
 
 unalias -a
 
+set -o ignoreeof
+
+shopt -s cdspell
 shopt -s checkwinsize
 shopt -s direxpand
+shopt -s globstar
 shopt -s globstar
 shopt -s histappend
 shopt -s histverify

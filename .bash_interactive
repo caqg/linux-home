@@ -12,9 +12,6 @@ esac
 # export PS4='+ '
 
 [ "$TERM" = "screen" ] && set -o vi
-set -o ignoreeof
-shopt -s cdspell
-shopt -s globstar
 
 function +    { pushd "$@"; }
 function -    { popd "$@"; }
