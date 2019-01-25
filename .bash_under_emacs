@@ -5,4 +5,7 @@ export VISUAL=$HOME/cmd/e
 export PAGER=/bin/cat
 export MANPAGER=
 
+export TERM=ansi
+colorize-ls
+
 ##end .bash_under_emacs

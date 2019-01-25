@@ -2,6 +2,11 @@
 
 # Set MANPAGER to its default, to avoid interference with PAGER.
 export MANPAGER="less -isrRQ"
+unset MANPATH
+
+# Default infopath
+export INFOPATH=/usr/local/share/info:/usr/share/info
+
 
 # Pure-Perl modules go here; scripts go in $HOME/cmd:
 PERL5LIB=$HOME/lib/perl5
@@ -11,10 +16,12 @@ export PERL5LIB
 export TCLLIBPATH=$HOME/lib/tcltk
 
 export CVSROOT=:local:$HOME/Dropbox/Repos/cq-CVS
+export LC_TIME="en_GB.UTF-8"
 
 export CSCOPE_EDITOR=$HOME/cmd/e
 export EDITOR=$HOME/cmd/e
 export FCEDIT=/bin/ed
+export HISTSIZE=1000
 export LESS=isrRQ
 export PAGER=less
 export VISUAL=$HOME/cmd/e

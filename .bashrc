@@ -1,24 +1,24 @@
 # .bashrc
 
-# Source global definitions
-if [ -f /etc/bash.bashrc ]; then
-    . /etc/bash.bashrc
+if [[ "$-" = *i* ]]; then 
+	[ -f /etc/bash.bashrc ] && . /etc/bash.bashrc
+	unalias -a
+
+	. ~/.bash_interactive 
+
+	[ "$TERM" = "screen" ] && set -o vi
+	set -o ignoreeof
+	set -o pipefail
+
+	shopt -s cdspell
+	shopt -s checkwinsize
+	shopt -s direxpand
+	shopt -s globstar
+	shopt -s globstar
+	shopt -s histappend
+	shopt -s histverify
+	shopt -s progcomp
 fi
-
-unalias -a
-
-set -o ignoreeof
-
-shopt -s cdspell
-shopt -s checkwinsize
-shopt -s direxpand
-shopt -s globstar
-shopt -s globstar
-shopt -s histappend
-shopt -s histverify
-shopt -s progcomp
-
-export LC_TIME="en_GB.UTF-8"
 
 # Add personal prefixes to the PATH, but only if they are not already there.
 [ -d $HOME/bin ] &&
@@ -47,10 +47,6 @@ fi
 if [ "${INSIDE_EMACS}" ]; then
     . $HOME/.bash_under_emacs
 fi
-
-[ "$PS1" ] && {
-    . ~/.bash_interactive
-}
 
 eval $( ~/cmd/path |
     /usr/bin/awk '

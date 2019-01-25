@@ -1,24 +1,11 @@
 # -*- Shell-Script -*-
 
-case $(whoami) in
-root)
-	export PS1='# ' ;;
-*)
-	export PS1='$ ' ;;
-esac
-
-# export PS2='> '
-# export PS3='? '
-# export PS4='+ '
-
-[ "$TERM" = "screen" ] && set -o vi
-
 function +    { pushd "$@"; }
 function -    { popd "$@"; }
 function =    { dirs -v "$@"; }
 
 function 2top { cd $(git rev-parse --show-toplevel); }
-function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors ~/.dircolors); }
+function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors -b ~/.dircolors); }
 function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
 
 function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
@@ -32,10 +19,20 @@ function j    { jobs "$@"; }
 function k    { kill -9 "$@"; }
 function l    { LC_ALL=C /bin/ls  ${LSFLAGS} -Alh --time-style=iso --group-directories-first "$@"; }
 function lt   { LC_ALL=C /bin/ls  ${LSFLAGS} -Altrh --time-style=iso "$@"; }
-# function o    { { [ $# -eq 0 ] && echo "." ; echo "$@"; } | /usr/bin/xargs -n1 /usr/bin/xdg-open; }
+function o    { { [ $# -eq 0 ] && echo "." ; echo "$@"; } | /usr/bin/xargs -n1 /usr/bin/xdg-open; }
 function v    { gvim -MR "$@"; }
 function v-   { gvim -MR --not-a-term -; }
 function vdir { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
+
+case $(whoami) in
+root)
+	export PS1='# ' ;;
+*)
+	export PS1='$ ' ;;
+esac
+export PS2='> '
+export PS3='? '
+export PS4='+ '
 
 case "${TERM}" in
 xterm*|rxvt*)
@@ -46,12 +43,10 @@ xterm*|rxvt*)
 		PS1="$left$middle$right"
 	}
 
-	# case "$TERM" in
-	# xterm*)	export TERM=xterm;;
-	# xrvt*)	export TERM=xrvt;;
-	# esac
-
 	PROMPT_COMMAND=updatePS1WithGitBranch
+	colorize-ls
+	;;
+linux|screen)
 	colorize-ls
 	;;
 esac
