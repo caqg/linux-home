@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Terminal
 Comment=Use the command line
-Keywords=shell;prompt;command;commandline;cmd;
+# Keywords=shell;prompt;command;commandline;cmd;
 TryExec=gnome-terminal
 Exec=gnome-terminal
 Icon=utilities-terminal
@@ -11,7 +11,7 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-terminal
 X-GNOME-Bugzilla-Component=BugBuddyBugs
 X-GNOME-Bugzilla-Version=3.30.1
-Categories=GNOME;GTK;System;TerminalEmulator;
+ Categories=GNOME;GTK;System;TerminalEmulator;
 StartupNotify=true
 X-GNOME-SingleWindow=false
 OnlyShowIn=GNOME;Unity;
