@@ -1,28 +1,36 @@
 # -*- Shell-Script -*-
 
-function +    { pushd "$@"; }
-function -    { popd "$@"; }
-function =    { dirs -v "$@"; }
+### Functions
 
-function 2top { cd $(git rev-parse --show-toplevel); }
-function colorize-ls   { export LSFLAGS=--color=auto; eval $(dircolors -b ~/.dircolors); }
-function uncolorize-ls { unset LSFLAGS; unset LS_COLORS; }
++             () { pushd "$@"; }
+-             () { popd "$@"; }
+=             () { dirs -v "$@"; }
 
-function dir  { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
-# function ef   { ~/cmd/e -nc "$@"; }
-function gitd { git d; }
-function gitl { git l ${1:+-n} ${1:--n 5}; }
-function gits { git s; }
-function h    { history "$@"; }
-function hf   { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
-function j    { jobs "$@"; }
-function k    { kill -9 "$@"; }
-function l    { LC_ALL=C /bin/ls  ${LSFLAGS} -Alh --time-style=iso --group-directories-first "$@"; }
-function lt   { LC_ALL=C /bin/ls  ${LSFLAGS} -Altrh --time-style=iso "$@"; }
-function o    { { [ $# -eq 0 ] && echo "." ; echo "$@"; } | /usr/bin/xargs -n1 /usr/bin/xdg-open; }
-function v    { gvim -MR "$@"; }
-function v-   { gvim -MR --not-a-term -; }
-function vdir { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
+2top          () { cd $(git rev-parse --show-toplevel); }
+colorize-ls   () { export LSFLAGS=--color=auto; eval $(dircolors -b ~/.dircolors); }
+uncolorize-ls () { unset LSFLAGS; unset LS_COLORS; }
+
+dir           () { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
+#ef           () { ~/cmd/e -nc "$@"; }
+
+gitd          () { git d; }
+gitl          () { git l ${1:+-n} ${1:--n 5}; }
+gits          () { git s; }
+
+h             () { history "$@"; }
+hf            () { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
+j             () { jobs "$@"; }
+k             () { kill -9 "$@"; }
+
+l             () { LC_ALL=C /bin/ls  ${LSFLAGS} -Alh --time-style=iso --group-directories-first "$@"; }
+lt            () { LC_ALL=C /bin/ls  ${LSFLAGS} -Altrh --time-style=iso "$@"; }
+vdir          () { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
+
+o             () { { [ $# -eq 0 ] && echo "." ; echo "$@"; } | /usr/bin/xargs -n1 /usr/bin/xdg-open; }
+v             () { gvim -MR "$@"; }
+v-            () { gvim -MR --not-a-term -; }
+
+### Prompts
 
 case $(whoami) in
 root)
@@ -51,12 +59,14 @@ linux|screen)
 	;;
 esac
 
-# Use bash-completion, if available
+### bash-completion
+
 if [ -f /usr/share/bash-completion/bash_completion ]; then
 	. /usr/share/bash-completion/bash_completion
 elif [ -f /etc/bash-completion ]; then
 	. /etc/bash_completion
 fi
+
 complete -F _command lx
 complete -F _command vv
 complete -F _command x
