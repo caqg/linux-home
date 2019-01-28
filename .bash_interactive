@@ -7,7 +7,8 @@
 =             () { dirs -v "$@"; }
 
 2top          () { cd $(git rev-parse --show-toplevel); }
-colorize-ls   () { export LSFLAGS=--color=auto; eval $(dircolors -b ~/.dircolors); }
+colorize-ls   () { export LSFLAGS=--color=auto;
+		   eval $(dircolors -b ~/.dircolors); }
 uncolorize-ls () { unset LSFLAGS; unset LS_COLORS; }
 
 dir           () { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
@@ -18,15 +19,21 @@ gitl          () { git l ${1:+-n} ${1:--n 5}; }
 gits          () { git s; }
 
 h             () { history "$@"; }
-hf            () { if [ $# -gt 0 ]; then history | grep -e "$*" -; else history; fi; }
+hf            () { if [ $# -gt 0 ];
+		   then history | grep -e "$*" -;
+		   else history;
+		   fi; }
 j             () { jobs "$@"; }
 k             () { kill -9 "$@"; }
 
-l             () { LC_ALL=C /bin/ls  ${LSFLAGS} -Alh --time-style=iso --group-directories-first "$@"; }
-lt            () { LC_ALL=C /bin/ls  ${LSFLAGS} -Altrh --time-style=iso "$@"; }
+l             () { LC_ALL=C /bin/ls  ${LSFLAGS} \
+		   -Alh --time-style=iso --group-directories-first "$@"; }
+lt            () { LC_ALL=C /bin/ls  ${LSFLAGS} \
+		   -Altrh --time-style=iso "$@"; }
 vdir          () { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
 
-o             () { { [ $# -eq 0 ] && echo "." ; echo "$@"; } | /usr/bin/xargs -n1 /usr/bin/xdg-open; }
+o             () { { [ $# -eq 0 ] && echo "." ; echo "$@"; } |
+			   /usr/bin/xargs -n1 /usr/bin/xdg-open; }
 v             () { gvim -MR "$@"; }
 v-            () { gvim -MR --not-a-term -; }
 
@@ -44,7 +51,7 @@ export PS4='+ '
 
 case "${TERM}" in
 xterm*|rxvt*)
-	function updatePS1WithGitBranch {
+	updatePS1WithGitBranch () {
 		left='\[\e]0;\u@\h: \w'
 		middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
 		right='\a\]\$ '
