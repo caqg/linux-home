@@ -295,7 +295,7 @@
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(enable-recursive-minibuffers t)
  '(explicit-shell-file-name "bash")
- '(fill-column 78)
+ '(fill-column 80)
  '(filladapt-turn-on-mode-hooks
    '(text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook))
  '(find-ls-option

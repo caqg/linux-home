@@ -36,6 +36,7 @@
               (setq c-basic-offset 8)
               (setq indent-tabs-mode t)
               (auto-fill-mode 1)
+              (fci-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)))
 
@@ -56,6 +57,7 @@
                   (subword-mode 1)
                 (c-subword-mode 1))
               (auto-fill-mode 1)
+              (fci-mode 1)
               (font-lock-mode 1)
               (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
                 ;; bison mode is derived from c-mode, so it works
@@ -126,6 +128,7 @@
 (add-hook 'cperl-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
+              (fci-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)
               (setq cperl-tab-always-indent nil)))
@@ -136,9 +139,10 @@
 
 (add-hook 'emacs-lisp-mode-hook
           #'(lambda ()
-              (auto-fill-mode 1)
-              (setq fill-column 79)
+              (setq fill-column 80)
               (setq indent-tabs-mode nil)
+              (auto-fill-mode 1)
+              (fci-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)
               (eldoc-mode 1)
@@ -201,6 +205,7 @@
               (local-set-key "\C-c\C-v" 'view-mode)
               ;;(local-set-key "\C-z]"    'cq-close-defun)
               (auto-fill-mode 1)
+              (fci-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)
               (setq lisp-no-popper t)   ;this is smoother in Cygwin
@@ -244,9 +249,16 @@
 (add-hook 'pascal-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
+              (fci-mode 1)
               (font-lock-mode 1)
               (setq pascal-tab-always-indent nil)
               (local-set-key "\C-c\C-v" 'view-mode)))
+
+(add-hook 'python-mode-hook
+          #'(lambda ()
+              (auto-fill-mode 1)
+              (fci-mode 1)
+              (eldoc-mode 1)))
 
 (add-hook 'shell-mode-hook
           #'(lambda ()
@@ -280,6 +292,7 @@
               (require 'balanced-insertions)
               (set-balanced-insertions)
               (auto-fill-mode 1)        ;it is a prog-mode
+              (fci-mode 1)
               (font-lock-mode 1)))
 
 (add-hook 'tcl-mode-hook
@@ -287,6 +300,7 @@
               (setq tcl-tab-always-indent nil)
               (tcl-auto-fill-mode 1)
               (local-set-key "\C-c\C-v" 'view-mode)
+              (fci-mode 1)
               (hs-minor-mode 1)
               (font-lock-mode 1)))
 (setq tcl-application "tclsh"
@@ -295,12 +309,14 @@
 (add-hook 'vhdl-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
+              (fci-mode 1)
               (font-lock-mode 1)
               (local-set-key "\C-c\C-v" 'view-mode)))
 
 (add-hook 'xml-mode-hook
           #'(lambda ()
               (auto-fill-mode 1)
+              (fci-mode 1)
               (font-lock-mode 1)
               (local-set-key "\C-c\C-v" 'view-mode)))
 

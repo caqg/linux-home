@@ -11,12 +11,12 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-terminal
 X-GNOME-Bugzilla-Component=BugBuddyBugs
 X-GNOME-Bugzilla-Version=3.30.1
+X-GNOME-SingleWindow=false
+X-Ubuntu-Gettext-Domain=gnome-terminal
 Categories=GNOME;GTK;System;TerminalEmulator;
 StartupNotify=true
-X-GNOME-SingleWindow=false
 OnlyShowIn=GNOME;Unity;
-Actions=new-window;preferences;rogue;robots;tmux;top-left
-X-Ubuntu-Gettext-Domain=gnome-terminal
+Actions=new-window;preferences;rogue;robots;tmux;top-right
 
 [Desktop Action new-window]
 Name=New Window
@@ -38,6 +38,6 @@ Exec=gnome-terminal --window-with-profile=Robots
 Name=TMux
 Exec=gnome-terminal --window-with-profile=TMux --maximize
 
-[Desktop Action top-left]
-Name=TopLeft
-Exec=gnome-terminal --window-with-profile=TopLeft --geometry=+0+0
+[Desktop Action top-right]
+Name=TopRight
+Exec=gnome-terminal --window-with-profile=Shells --geometry=-0+0

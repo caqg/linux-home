@@ -15,7 +15,7 @@ Actions=Server;Client;
 
 [Desktop Action Server]
 Name=Run Emacs Server
-Exec=/bin/bash -l -c "/usr/local/bin/emacs -geometry -0+0 -f server-start -f cq/enable-dark-solarized -f cq/wrap-up-start %F"
+Exec=/bin/bash -l -c "/usr/local/bin/emacs -geometry +0+0 -f server-start -f cq/enable-dark-solarized -f cq/wrap-up-start %F"
 
 [Desktop Action Client]
 Name=Run Emacs Client (can start Server)
