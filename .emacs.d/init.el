@@ -448,4 +448,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 128 :width normal)))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 128 :width normal))))
+ '(custom-face-tag ((t (:inherit variable-pitch :foreground "#6c71c4" :weight normal :height 1.0))))
+ '(custom-group-tag ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
+ '(custom-group-tag-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.0))))
+ '(custom-variable-tag ((t (:inherit variable-pitch :foreground "#2aa198" :height 1.0))))
+ '(org-level-1 ((t (:inherit variable-pitch :foreground "#cb4b16" :height 1.0))))
+ '(org-level-2 ((t (:inherit variable-pitch :foreground "#859900" :height 1.0))))
+ '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
+ '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0)))))
