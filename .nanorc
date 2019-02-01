@@ -48,7 +48,7 @@ set boldtext
 ## (The old form, 'const', is deprecated.)
 
 ## Use cut-to-end-of-line by default.
-set cut
+# set cut
 
 ## Set the line length for wrapping text and justifying paragraphs.
 ## If the value is 0 or less, the wrapping point will be the screen
@@ -59,7 +59,7 @@ set fill 80
 set historylog
 
 ## Make the justify command kill whitespace at the end of lines.
-set justifytrim
+# set justifytrim
 
 ## Enable vim-style lock-files.  This is just to let a vim user know you
 ## are editing a file [s]he is trying to edit and vice versa. There are
