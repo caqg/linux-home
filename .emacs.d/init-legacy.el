@@ -258,7 +258,8 @@
           #'(lambda ()
               (auto-fill-mode 1)
               (fci-mode 1)
-              (eldoc-mode 1)))
+              (eldoc-mode 1)
+              (setq forward-sexp-function nil)))
 
 (add-hook 'shell-mode-hook
           #'(lambda ()
