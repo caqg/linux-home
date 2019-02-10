@@ -9,6 +9,7 @@ set backup
 set nohlsearch
 set incsearch
 set laststatus          =1
+set magic
 set numberwidth         =5
 set ruler
 set shell               =/bin/bash
@@ -53,11 +54,12 @@ endif
 if &term == "linux"
     colorscheme default
 elseif &term == "screen"
-    colorscheme default
+    colorscheme solarized
+    set background=dark
 else
     colorscheme solarized
     call togglebg#map("<F12>")
-    set background      =dark
+    set background=dark
 endif
 
 "Before VIM8:  set noeb vb t_vb=
