@@ -21,7 +21,7 @@
 
 ## When soft line wrapping is enabled, make it wrap lines at blanks
 ## (tabs and spaces) instead of always at the edge of the screen.
-# set atblanks
+set atblanks
 
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
@@ -75,7 +75,7 @@ set locking
 # set matchbrackets "(<[{)>]}"
 
 ## Use the blank line below the title bar as extra editing space.
-# set morespace
+set morespace
 
 ## Enable mouse support, if available for your system.  When enabled,
 ## mouse clicks can be used to place the cursor, set the mark (with a
@@ -136,7 +136,7 @@ set positionlog
 # set rebindkeypad
 
 ## Do extended regular expression searches by default.
-# set regexp
+set regexp
 
 ## Put the cursor on the highlighted item in the file browser;
 ## useful for people who use a braille display.
