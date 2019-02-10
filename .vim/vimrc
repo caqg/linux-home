@@ -13,6 +13,8 @@ set numberwidth         =5
 set ruler
 set shell               =/bin/bash
 set shiftwidth          =8
+set smartcase
+set smarttab
 set tabstop             =8
 set textwidth           =78
 set nowrap
@@ -29,18 +31,15 @@ set directory          +=/var/tmp
 set directory          +=/tmp
 
 set path                =,,
-set path               +=/usr/include/c++/6/**
-set path               +=/usr/include/x86_64-linux-gnu/c++/6/**
-set path               +=/usr/lib/gcc/x86_64-linux-gnu/6/include*/**
+set path               +=/usr/include/c++/8/**
+set path               +=/usr/include/x86_64-linux-gnu/c++/8/**
+set path               +=/usr/lib/gcc/x86_64-linux-gnu/8/include*/**
 set path               +=/usr/include/x86_64-linux-gnu
 set path               +=/usr/local/include
 set path               +=/usr/include
 set path               +=/usr/include/libxml2
-set path               +=/work/innergy/compass/repo/**
-set path               +=/work/innergy/verific/repo/**
 
 set tags                =
-set tags               +=/work/innergy/tags
 set tags               +=tags
 set tags               +=./tags
 set tags               +=../tags
@@ -61,6 +60,9 @@ else
     set background      =dark
 endif
 
+"Before VIM8:  set noeb vb t_vb=
+set belloff=all
+
 syntax on
 filetype indent on
 filetype plugin on
@@ -79,7 +81,7 @@ if has("cscope")
     endif
 endif
 
-let TE_Ctags_Path       = "/usr/bin/u-ctags"
+let TE_Ctags_Path       = "/usr/local/bin/u-ctags"
 let TE_Use_Right_Window = 1
 
 " C/C++/Java, closer to the Emacs settings
