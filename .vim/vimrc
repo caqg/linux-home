@@ -51,12 +51,18 @@ if &term =~ 'xterm*'
     endif
 endif
 
-if &term == "linux"
+if &term == "linux" || &term =~ '[ex]term*'
     colorscheme default
 elseif &term == "screen"
     colorscheme solarized
     set background=dark
 else
+    colorscheme solarized
+    call togglebg#map("<F12>")
+    set background=dark
+endif
+
+if &diff
     colorscheme solarized
     call togglebg#map("<F12>")
     set background=dark
@@ -96,6 +102,7 @@ autocmd FileType c,cpp,java     set cinoptions         +=j1
 autocmd FileType c,cpp,java     set cinoptions         +=J1
 autocmd FileType c,cpp,java     set cinoptions         +=l0
 autocmd FileType c,cpp,java     set cinoptions         +=t0
+autocmd FileType c,cpp,java     set cpoptions          +={
 autocmd FileType c,cpp,java     set noexpandtab
 autocmd FileType c,cpp,java     set foldmethod          =syntax
 autocmd FileType c,cpp,java     set foldcolumn          =0
