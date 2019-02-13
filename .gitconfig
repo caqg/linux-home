@@ -47,7 +47,8 @@
 	grep            = true
 	interactive     = true
 	pager           = true
-	showbranch      = true
+	push            = true
+	showBranch      = true
 	status          = true
 	ui              = true
 
