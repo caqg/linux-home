@@ -44,7 +44,4 @@ export ROGUEOPTS="fruit=eyeberry\
 # Workaround for AT_SPI and (at least) Emacs24 not getting along in GNOME 3.8+
 # export NO_AT_BRIDGE=1
 
-# [ -f $HOME/.bash_env_Verifysys ] && . $HOME/.bash_env_Verifysys
-# [ -f $HOME/.bash_env_Innergy ] && . $HOME/.bash_env_Innergy
-
 ##end .bash_env
