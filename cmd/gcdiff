@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case $# in
-2) A=$1 B=$2;;
-*) echo "usage: "`basename $0`" OLD NEW"; exit 2 ;;
-esac
-
-gc -n --eval '(ediff-files "'"$A"'" "'"$B"'")'

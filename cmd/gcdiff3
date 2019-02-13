@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case $# in
-3) A=$1 B=$2 C=$3;;
-*) echo "usage: "`basename $0`" BASE THEIRS YOURS"; exit 2 ;;
-esac
-
-gc -n --eval '(ediff3 "'"$B"'" "'"$C"'" "'"$A"'")'
