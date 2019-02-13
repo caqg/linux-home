@@ -12,10 +12,9 @@ colorize-ls   () { export LSFLAGS=--color=auto;
 uncolorize-ls () { unset LSFLAGS; unset LS_COLORS; }
 
 dir           () { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
-#ef           () { ~/cmd/e -nc "$@"; }
 
 gitd          () { git d; }
-gitl          () { git l ${1:+-n} ${1:--n 5}; }
+gitl          () { git l ${1:+-n} ${1:--n 5} | cut -c -${COLUMNS:-80}; }
 gits          () { git s; }
 
 h             () { history "$@"; }
