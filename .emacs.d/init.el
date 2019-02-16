@@ -14,6 +14,8 @@
   (load-file "~/.emacs.d/init-legacy.el")
   ;;(message "Done loading legacy init, GCs = %s" gcs-done)
 
+  (package-initialize)
+
   (load-library "cl-lib")
   (add-to-list 'load-path "~/.emacs.d/lisp")
 
@@ -49,9 +51,6 @@
 
   (require 'ffap)
   (ffap-bindings)
-
-  (when (< emacs-major-version 27)
-    (package-initialize))
 
   (filesets-init)
 
