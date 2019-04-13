@@ -31,7 +31,7 @@
 	ds              = diff --staged
 	g               = gui
 	k               = !gitk
-	l               = log --date=short --pretty=tformat:'%h %ad %s' --no-merges
+	l               = log --color=auto --date=short --pretty=tformat:'%h %ad %s' --no-merges
 	prefix          = rev-parse --show-prefix
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
@@ -46,6 +46,7 @@
 	diff            = true
 	grep            = true
 	interactive     = true
+	log             = true
 	pager           = true
 	push            = true
 	showBranch      = true
