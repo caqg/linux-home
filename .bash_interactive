@@ -65,6 +65,8 @@ linux|screen)
 	;;
 esac
 
+[ "$VIM_TERMINAL" ] && uncolorize-ls
+
 ### bash-completion
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then

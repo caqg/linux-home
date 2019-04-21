@@ -42,6 +42,7 @@ export ROGUEOPTS="fruit=eyeberry\
 # export TZ=:America/Los_Angeles
 
 # Workaround for AT_SPI and (at least) Emacs24 not getting along in GNOME 3.8+
-# export NO_AT_BRIDGE=1
+# *Still* needed in 2019.04.
+export NO_AT_BRIDGE=1
 
 ##end .bash_env
