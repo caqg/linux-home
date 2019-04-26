@@ -1,5 +1,7 @@
 #!/bin/bash
 
-make && sudo make install
+parallel=-j
+
+make $parallel && sudo make $parallel install
 
 ##end make-and-install
