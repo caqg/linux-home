@@ -1,7 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-exec /bin/chmod +x $*
+/bin/chmod +x "$@"
 
-# Emacs # local variables:
-# Emacs # eval: (if (fboundp 'unix-script-mode) (unix-script-mode))
-# Emacs # end:
+#end

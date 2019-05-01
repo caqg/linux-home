@@ -1,4 +1,4 @@
-# .bash_profile
+# .bash_profile -*- Shell-Script -*- vim: ft=sh :
 
 # Get interactive settings
 [ -f ~/.bashrc ] && . ~/.bashrc

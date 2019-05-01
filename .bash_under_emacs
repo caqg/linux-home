@@ -1,4 +1,4 @@
-# -*- Shell-Script -*-
+# -*- Shell-Script -*- vim: ft=sh :
 
 export EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e
