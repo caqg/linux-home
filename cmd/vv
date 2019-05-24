@@ -32,7 +32,7 @@ set -o pipefail
 
 # Vim would take its name followed by a colon below to indicate a modeline...
 # Keeping the word and the colon separated by double quotes does the trick.
-"$@" | vim - ${DISPLAY:+-g} --not-a-term -MR \
+"$@" | ${DISPLAY:+g}vim - --cmd 'se nomodeline' --not-a-term -MR \
 	-c "set title titlestring=$(escape_spaces view in vim"": $*)"
 
 ##end vv
