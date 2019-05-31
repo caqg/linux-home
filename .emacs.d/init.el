@@ -104,8 +104,8 @@
   (require 'dired-toggle-sudo)
   (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
 
-  (require 'xcscope)
-  (cscope-setup)
+  ;; (require 'xcscope)
+  ;; (cscope-setup)
 
   (require 'gtags)
 
@@ -374,7 +374,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/")))
  '(package-selected-packages
-   '(slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode p4 srefactor ada-mode wisi seq ctags ctags-update auto-complete auto-complete-pcmp all async dash dired-hacks-utils ess git-commit heap hide-comnt hide-lines list-utils paredit queue s slime trie with-editor j-mode dts-mode magit magit-popup stream minimap memory-usage quarter-plane cmake-font-lock common-lisp-snippets dynamic-ruler figlet fill-column-indicator fm indent-guide itail json-mode json-reformat latex-extra latex-preview-pane lexbind-mode lisp-extra-font-lock multi-term name-this-color oberon org-magit sicp csv-mode let-alist multishell org-plus-contrib autodisass-llvm-bitcode llvm-mode magit-filenotify magit-find-file magit-gh-pulls magit-gitflow magit-tramp ac-R ac-etags ac-math ac-octave ac-python ac-slime anaconda-mode cl-lib-highlight clang-format beacon glsl-mode python3-info ac-emoji solarized-theme mmt fasm-mode edit-at-point org-dashboard ac-c-headers ada-ref-man aes aggressive-fill-paragraph aggressive-indent all-ext ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags backtrace-mode bigint bison-mode cedit charmap cmake-mode codesearch company-c-headers company-ess company-inf-ruby company-math company-quickhelp cperl-mode csharp-mode csv-nav dict-tree dircmp dired-narrow dired-toggle-sudo ecb edebug-x ediprolog edit-list ess-R-data-view ess-R-object-popup ess-smart-underscore form-feed git gitattributes-mode gitconfig-mode gitignore-mode gscholar-bibtex gtags header2 ht http-post-simple hydra interval-tree ipython javadoc-help javadoc-lookup jira kv lib-requires markdown-toc move-dup nasm-mode org org-ac org-bullets org-cliplink org-context org-download org-jira org-journal org-mime org-pandoc orgtbl-show-header pandoc-mode paredit-everywhere paredit-menu path-headerline-mode pcsv peep-dired perl-completion perl-myvar pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term shell-command shell-here shell-toggle slime-annot sml-mode sparkline ssh ssh-config-mode strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemtap-mode tabbar tdd thing-cmds undo-tree uuid vector-utils viewer vimrc-mode vkill vlf wget wiki wiki-nav xcscope xml-rpc yaoddmuse))
+   '(form-feed bison-mode cl-lib-highlight dired-toggle-sudo p4 fill-column-indicator tabbar slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode ada-mode ctags all async dash dired-hacks-utils ess git-commit slime with-editor magit magit-popup minimap memory-usage quarter-plane cmake-font-lock fm org-magit let-alist multishell org-plus-contrib llvm-mode magit-tramp ac-R ac-python anaconda-mode beacon glsl-mode python3-info solarized-theme fasm-mode ada-ref-man aggressive-indent anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex backtrace-mode bigint company-ess company-math cperl-mode csv-nav dired-narrow ess-R-object-popup ess-smart-underscore gtags ht hydra ipython javadoc-help jira move-dup nasm-mode org org-cliplink org-download org-jira org-journal org-mime org-pandoc perl-completion perl-myvar pod-mode prolog python-mode ruby-test-mode slime-annot tdd vkill wget wiki))
  '(prog-mode-hook '((lambda nil (form-feed-mode 1))))
  '(python-shell-interpreter "python3.7")
  '(recentf-mode t)
@@ -418,8 +418,6 @@
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
  '(tab-always-indent 'complete)
- '(tabbar-mode t nil (tabbar))
- '(tabbar-mwheel-mode t nil (tabbar))
  '(text-mode-hook
    '(turn-on-auto-fill
      (lambda nil
