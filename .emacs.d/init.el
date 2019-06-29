@@ -301,6 +301,7 @@
    '("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first"))
  '(focus-follows-mouse t)
  '(font-lock-maximum-size nil)
+ '(font-use-system-font t)
  '(foreground-color "#cccccc")
  '(frame-background-mode nil)
  '(gdb-enable-debug nil)
