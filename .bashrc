@@ -1,22 +1,25 @@
 # .bashrc
 
-if [[ "$-" = *i* ]]; then 
+if [[ "$-" = *i* ]]; then
 	[ -f /etc/bash.bashrc ] && . /etc/bash.bashrc
 	unalias -a
 
-	. ~/.bash_interactive 
+	. $HOME/.bash_interactive
 
 	[ "$TERM" = "screen" ] && set -o vi
 	set -o ignoreeof
 	set -o pipefail
 
+	shopt -s cmdhist
 	shopt -s cdspell
 	shopt -s checkwinsize
 	shopt -s direxpand
 	shopt -s globstar
 	shopt -s globstar
 	shopt -s histappend
+	shopt -s histreedit
 	shopt -s histverify
+	shopt -s lithist
 	shopt -s progcomp
 fi
 
@@ -39,14 +42,11 @@ esac
 
 export PATH
 
-if [ "${ALREADY_IN:-0}" = 0 ]; then
-    . $HOME/.bash_env
-    export ALREADY_IN=1;
-fi
+. $HOME/.bash_env
 
-if [ "${INSIDE_EMACS}" ]; then
+[ "${INSIDE_EMACS}" ] &&
     . $HOME/.bash_under_emacs
-fi
+
 
 eval $( ~/cmd/path |
     /usr/bin/awk '
