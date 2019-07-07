@@ -54,7 +54,7 @@ endif
 if &term == "linux" || &term =~ '[ex]term*'
     colorscheme default
 elseif &term == "screen"
-    colorscheme solarized
+    colorscheme default
     set background=dark
 else
     colorscheme solarized
@@ -67,6 +67,8 @@ if &diff
     call togglebg#map("<F12>")
     set background=dark
 endif
+
+"set rtp+=/usr/share/vim/addons
 
 "Before VIM8:  set noeb vb t_vb=
 set belloff=all
