@@ -52,7 +52,8 @@ case "${TERM}" in
 xterm*|rxvt*)
 	updatePS1WithGitBranch () {
 		left='\[\e]0;\u@\h: \w'
-		middle=$(git branch 2>/dev/null | sed -e '/^ /d' -e 's/^..\(.*\)/ git:\1/')
+		middle=$(git branch --show-current 2>/dev/null |
+				 sed -e '/^ /d' -e 's/^\(..*\)/ git:\1/')
 		right='\a\]\$ '
 		PS1="$left$middle$right"
 	}

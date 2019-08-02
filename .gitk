@@ -1,6 +1,6 @@
-set mainfont {Ubuntu 11}
-set textfont {{Ubuntu Mono} 12}
-set uifont {Ubuntu 11 bold}
+set mainfont {Ubuntu 12}
+set textfont {Inconsolata 14}
+set uifont {Ubuntu 12 bold}
 set tabstop 8
 set findmergefiles 0
 set maxgraphpct 50
@@ -51,12 +51,12 @@ set indexcirclecolor #859900
 set circlecolors {white #268bd2 gray #268bd2 #268bd2}
 set linkfgcolor #268bd2
 set circleoutlinecolor black
-set geometry(main) 1410x877+0+0
+set geometry(main) 1410x929+0+0
 set geometry(state) normal
 set geometry(topwidth) 1410
 set geometry(topheight) 251
 set geometry(pwsash0) "781 1"
 set geometry(pwsash1) "1227 1"
 set geometry(botwidth) 787
-set geometry(botheight) 621
+set geometry(botheight) 673
 set permviews {}
