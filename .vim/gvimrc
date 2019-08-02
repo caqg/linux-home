@@ -7,8 +7,8 @@ set guicursor           =a:block
 
 "set guifont            =Terminal\ 14
 "set guifont            =Monospace\ Regular\ 10
-set guifont             =Inconsolata\ Regular\ 14
-"fset guifont           =Ubuntu\ Mono\ Regular\ 14
+set guifont             =Inconsolata\ Medium\ 14
+"set guifont            =Ubuntu\ Mono\ Regular\ 14
 
 set guioptions         +=a
 set guioptions         -=b
@@ -17,7 +17,7 @@ set guioptions         +=g
 set guioptions         -=h
 set guioptions         -=l
 set guioptions         -=L
-set guioptions         -=m
+set guioptions         +=m
 set guioptions         -=P
 set guioptions         -=r
 set guioptions         -=R
