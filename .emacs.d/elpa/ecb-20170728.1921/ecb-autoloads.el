@@ -13,9 +13,7 @@
 Activates ECB and creates the special buffers for the choosen layout.
 For the layout see `ecb-layout-name'. This function raises always the
 ECB-frame if called from another frame. This is the same as calling
-`ecb-minor-mode' with a positive argument.
-
-\(fn)" t nil)
+`ecb-minor-mode' with a positive argument." t nil)
 
 (autoload 'ecb-minor-mode "ecb" "\
 Toggle ECB minor mode.

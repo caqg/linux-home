@@ -11,35 +11,23 @@
 
 (autoload 'tabbar-backward "tabbar" "\
 Select the previous available tab.
-Depend on the setting of the option `tabbar-cycle-scope'.
-
-\(fn)" t nil)
+Depend on the setting of the option `tabbar-cycle-scope'." t nil)
 
 (autoload 'tabbar-forward "tabbar" "\
 Select the next available tab.
-Depend on the setting of the option `tabbar-cycle-scope'.
-
-\(fn)" t nil)
+Depend on the setting of the option `tabbar-cycle-scope'." t nil)
 
 (autoload 'tabbar-backward-group "tabbar" "\
-Go to selected tab in the previous available group.
-
-\(fn)" t nil)
+Go to selected tab in the previous available group." t nil)
 
 (autoload 'tabbar-forward-group "tabbar" "\
-Go to selected tab in the next available group.
-
-\(fn)" t nil)
+Go to selected tab in the next available group." t nil)
 
 (autoload 'tabbar-backward-tab "tabbar" "\
-Select the previous visible tab.
-
-\(fn)" t nil)
+Select the previous visible tab." t nil)
 
 (autoload 'tabbar-forward-tab "tabbar" "\
-Select the next visible tab.
-
-\(fn)" t nil)
+Select the next visible tab." t nil)
 
 (autoload 'tabbar-press-home "tabbar" "\
 Press the tab bar home button.

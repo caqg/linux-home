@@ -1,5 +1,5 @@
 (
- (:id "sha1:24c7a1e6369fef1e50de1deb1a9e5bbc68f80c8b" :fingerprint "sha1:0c:d1:76:a5:8f:7c:c5:8e:b2:2d:b5:00:57:63:7f:54:27:a6:30:83" :host "orgmode.org:443")
- (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:96:dd:30:ca:91:ef:8b:f3:d5:f4:15:38:a0:0e:c4:ed:ef:73:da:1e" :host "elpa.gnu.org:443")
- (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:f2:08:a5:85:30:e5:e9:b5:36:0c:ca:b3:86:41:b2:68:6d:85:31:34" :host "melpa.org:443")
+ (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:8a:24:16:cb:86:21:fc:7c:fa:e3:29:4c:4e:87:63:2e:12:82:23:7e" :host "melpa.org:443")
+ (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprint "sha1:6e:b1:56:2a:a1:90:ec:bd:8a:d7:c3:b0:0b:b5:ab:29:9a:1a:e0:e8" :host "elpa.gnu.org:443")
+ (:id "sha1:24c7a1e6369fef1e50de1deb1a9e5bbc68f80c8b" :fingerprint "sha1:38:34:b6:47:e9:45:0f:96:93:29:aa:43:fd:b6:54:ba:58:0c:49:58" :host "orgmode.org:443")
 )
