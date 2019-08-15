@@ -17,8 +17,8 @@
   (package-initialize)
 
   (load-library "cl-lib")
-  (add-to-list 'load-path "~/.emacs.d/lisp")
 
+  (add-to-list 'load-path "~/.emacs.d/lisp")
   (load-library "misc")
   (load-library "cq-workarounds")
   ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)x
@@ -134,6 +134,12 @@
   (require 'tabbar)
   (require 'time)
 
+  (add-to-list 'load-path "/work/emacswiki")
+  (load-library "hide-comnt")
+  (load-library "hideshow-fringe")
+  (load-library "hideshowvis")
+  (global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
+
   ;; tabbar (already initialized)
   (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
                                    (tabset object &optional append))
@@ -147,6 +153,8 @@
   ;; Color theme
   (cond ((and (>= emacs-major-version 25))
          (load-theme 'solarized t t)
+
+
          (load-theme 'solarized-light t t)
          (load-theme 'solarized-dark t t)
          (require 'cq-solarized-theme-init)))
@@ -350,7 +358,7 @@
  '(magit-view-git-manual-method 'man)
  '(mail-archive-file-name "~/mail/babyl/OUT")
  '(mail-use-rfc822 t)
- '(menu-bar-mode nil)
+ '(menu-bar-mode t)
  '(mouse-autoselect-window -0.2)
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point nil)
@@ -445,7 +453,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Inconsolata" :foundry "PfEd" :slant normal :weight normal :height 143 :width normal))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 143 :width normal))))
  '(custom-face-tag ((t (:inherit variable-pitch :foreground "#6c71c4" :weight normal :height 1.0))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
  '(custom-group-tag-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.0))))
