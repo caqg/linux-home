@@ -38,6 +38,10 @@ Exec=gnome-terminal --window-with-profile=Robots
 Name=TMux
 Exec=gnome-terminal --window-with-profile=TMux --maximize
 
+[Desktop Action top-left]
+Name=TopLeft
+Exec=gnome-terminal --window-with-profile=Shells --geometry=+0+0
+
 [Desktop Action top-right]
 Name=TopRight
 Exec=gnome-terminal --window-with-profile=Shells --geometry=-0+0
