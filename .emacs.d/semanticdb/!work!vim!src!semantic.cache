@@ -1,0 +1,372 @@
+;; Object semanticdb-project-database-file-156e73c72ae0
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-156e73c72ae0"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-156e74071af0"
+      :major-mode c-mode
+      :tags 
+        '( ("EXTERN" variable (:constant-flag t) nil [286 292])
+            ("vim.h" include nil nil [293 309])
+            ("EDIT_NONE" variable (:constant-flag t) nil [622 631])
+            ("EDIT_FILE" variable (:constant-flag t) nil [671 680])
+            ("EDIT_STDIN" variable (:constant-flag t) nil [750 760])
+            ("EDIT_TAG" variable (:constant-flag t) nil [803 811])
+            ("EDIT_QF" variable (:constant-flag t) nil [872 879])
+            ("mainerr" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1044 1048])
+                    ("" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1049 1058]))                  
+                :type "void")
+                nil [1024 1059])
+            ("early_arg_scan" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1175 1190]))                  
+                :type "void")
+                nil [1148 1191])
+            ("usage" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1230 1235]))                  
+                :type "void")
+                nil [1212 1236])
+            ("parse_command_name" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1268 1283]))                  
+                :type "void")
+                nil [1237 1284])
+            ("command_line_scan" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1315 1330]))                  
+                :type "void")
+                nil [1285 1331])
+            ("check_tty" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1354 1369]))                  
+                :type "void")
+                nil [1332 1370])
+            ("read_stdin" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1394 1399]))                  
+                :type "void")
+                nil [1371 1400])
+            ("create_windows" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1428 1443]))                  
+                :type "void")
+                nil [1401 1444])
+            ("edit_buffers" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1470 1485])
+                    ("cwd" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1486 1498]))                  
+                :type "void")
+                nil [1445 1499])
+            ("exe_pre_commands" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1529 1544]))                  
+                :type "void")
+                nil [1500 1545])
+            ("exe_commands" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1571 1586]))                  
+                :type "void")
+                nil [1546 1587])
+            ("source_startup_scripts" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1623 1638]))                  
+                :type "void")
+                nil [1588 1639])
+            ("main_start_gui" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1667 1672]))                  
+                :type "void")
+                nil [1640 1673])
+            ("params" variable
+               (:typemodifiers ("static")
+                :type ("mparm_T" type (:type "class") nil nil))
+                nil [2749 2771])
+            ("start_dir" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("char_u" type (:type "class") nil nil))
+                nil [2824 2856])
+            ("has_dash_c_arg" variable
+               (:typemodifiers ("static")
+                :default-value "FALSE"
+                :type "int")
+                nil [2895 2929])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3060 3069])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3070 3082]))                  
+                :type "int")
+                nil [2935 12280])
+            ("vim_main2" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12517 12522]))                  
+                :type "int")
+                nil [12503 24548])
+            ("common_init" function
+               (:arguments 
+                  ( ("paramp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24629 24645]))                  
+                :type "void")
+                nil [24612 27546])
+            ("is_not_a_term" function (:type "int") nil [27616 27669])
+            ("main_loop" function
+               (:arguments 
+                  ( ("cmdwin" variable (:type "int") (reparse-symbol arg-sub-list) [28002 28014])
+                    ("noexmode" variable (:type "int") (reparse-symbol arg-sub-list) [28074 28088]))                  
+                :type "void")
+                nil [27982 36977])
+            ("getout" function
+               (:arguments 
+                  ( ("exitval" variable (:type "int") (reparse-symbol arg-sub-list) [37710 37722]))                  
+                :type "void")
+                nil [37698 40899])
+            ("early_arg_scan" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42362 42383])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42377 42384]))                  
+                :type "void")
+                nil [42335 44365])
+            ("get_number_arg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44475 44485])
+                    ("idx" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [44520 44530])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [44579 44588]))                  
+                :type "int")
+                nil [44444 44759])
+            ("parse_command_name" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45287 45302]))                  
+                :type "void")
+                nil [45256 47321])
+            ("command_line_scan" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47400 47415]))                  
+                :type "void")
+                nil [47370 65961])
+            ("check_tty" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66120 66135]))                  
+                :type "void")
+                nil [66098 68213])
+            ("read_stdin" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [68274 68279]))                  
+                :type "void")
+                nil [68251 69020])
+            ("create_windows" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69173 69194])
+                    ("" variable (:type ("UNUSED" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69188 69195]))                  
+                :type "void")
+                nil [69146 72389])
+            ("edit_buffers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72576 72591])
+                    ("cwd" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72596 72608]))                  
+                :type "void")
+                nil [72546 75294])
+            ("exe_pre_commands" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75394 75409]))                  
+                :type "void")
+                nil [75365 75861])
+            ("exe_commands" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75940 75955]))                  
+                :type "void")
+                nil [75915 76955])
+            ("source_startup_scripts" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("parmp" variable
+                       (:pointer 1
+                        :type ("mparm_T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [77030 77045]))                  
+                :type "void")
+                nil [76995 81548])
+            ("main_start_gui" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [81661 81666]))                  
+                :type "void")
+                nil [81634 81820])
+            ("process_env" function
+               (:arguments 
+                  ( ("env" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82020 82032])
+                    ("is_viminit" variable (:type "int") (reparse-symbol arg-sub-list) [82037 82053]))                  
+                :type "int")
+                nil [81999 82805])
+            ("mainerr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [83436 83443])
+                    ("str" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83477 83489]))                  
+                :type "void")
+                nil [83411 83910])
+            ("mainerr_arg_missing" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :type ("char_u" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83941 83953]))                  
+                :type "void")
+                nil [83916 83991])
+            ("main_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [84111 84119]))                  
+                :type "void")
+                nil [84090 84178])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [84266 84271]))                  
+                :type "void")
+                nil [84248 92312]))          
+      :file "main.c"
+      :pointmax 112818
+      :fsize 112817
+      :lastmodtime '(23626 37152 525787 286000)
+      :unmatched-syntax '((punctuation 2622 . 2623) (semantic-list 2209 . 2622) (punctuation 2207 . 2208) (semantic-list 2191 . 2206) (punctuation 2190 . 2191) (CHAR 2185 . 2189) (STATIC 2178 . 2184))
+      :lexical-table 
+        '(("EDIT_STDIN" . ((number "2" 762 . 763)))
+          ("EDIT_TAG" . ((number "3" 815 . 816)))
+          ("ME_INVALID_ARG" . ((number "5" 2619 . 2620)))
+          ("EDIT_NONE" . ((number "0" 634 . 635)))
+          ("EXTERN")
+          ("ME_ARG_MISSING" . ((number "2" 2394 . 2395)))
+          ("EDIT_QF" . ((number "4" 884 . 885)))
+          ("ME_EXTRA_CMD" . ((number "4" 2561 . 2562)))
+          ("ME_GARBAGE" . ((number "3" 2457 . 2458)))
+          ("EDIT_FILE" . ((number "1" 683 . 684)))
+          ("ME_UNKNOWN_OPTION" . ((number "0" 2272 . 2273)))
+          ("ME_TOO_MANY_ARGS" . ((number "1" 2334 . 2335)))
+          )
+)
+    (semanticdb-table "semanticdb-table-156e74cf4a0c"
+      :file "vim.h"
+      :fsize 86392
+      :lastmodtime '(23629 10779 89388 167000)))
+  :file "!work!vim!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

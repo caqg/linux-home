@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-214be40
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-214be40"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-214be5c"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "ac-math-autoloads.el"
+      :pointmax 353
+      :fsize 985
+      :lastmodtime '(23387 65085 642511 647000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!ac-math-20141116.2127!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

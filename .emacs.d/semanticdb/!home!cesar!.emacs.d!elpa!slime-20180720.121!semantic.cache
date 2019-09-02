@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-e2597c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-e2597c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-1f5b0b4"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "slime-autoloads.el"
+      :pointmax 1290
+      :fsize 2296
+      :lastmodtime '(23387 64958 576795 887000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!slime-20180720.121!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

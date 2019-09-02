@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "ess-smart-underscore-autoloads.el"
+      :pointmax 335
+      :fsize 2186
+      :lastmodtime '(22768 39349 963800 383000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!ess-smart-underscore-20170222.1715!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

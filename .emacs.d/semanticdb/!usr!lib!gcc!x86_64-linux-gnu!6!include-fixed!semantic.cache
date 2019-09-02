@@ -1,0 +1,66 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_GCC_LIMITS_H_" variable (:constant-flag t) nil [1268 1282])
+            ("syslimits.h" include nil nil [1382 1404])
+            ("_LIMITS_H___" variable (:constant-flag t) nil [2397 2409])
+            ("CHAR_BIT" variable (:constant-flag t) nil [2470 2478])
+            ("MB_LEN_MAX" variable (:constant-flag t) nil [2568 2578])
+            ("SCHAR_MIN" variable (:constant-flag t) nil [2674 2683])
+            ("SCHAR_MAX" variable (:constant-flag t) nil [2726 2735])
+            ("UCHAR_MAX" variable (:constant-flag t) nil [2924 2933])
+            ("CHAR_MIN" variable (:constant-flag t) nil [3226 3234])
+            ("CHAR_MAX" variable (:constant-flag t) nil [3271 3279])
+            ("SHRT_MIN" variable (:constant-flag t) nil [3387 3395])
+            ("SHRT_MAX" variable (:constant-flag t) nil [3436 3444])
+            ("USHRT_MAX" variable (:constant-flag t) nil [3635 3644])
+            ("INT_MIN" variable (:constant-flag t) nil [3754 3761])
+            ("INT_MAX" variable (:constant-flag t) nil [3800 3807])
+            ("UINT_MAX" variable (:constant-flag t) nil [3911 3919])
+            ("LONG_MIN" variable (:constant-flag t) nil [4049 4057])
+            ("LONG_MAX" variable (:constant-flag t) nil [4099 4107])
+            ("ULONG_MAX" variable (:constant-flag t) nil [4218 4227])
+            ("LONG_LONG_MIN" variable (:constant-flag t) nil [4825 4838])
+            ("LONG_LONG_MAX" variable (:constant-flag t) nil [4893 4906])
+            ("ULONG_LONG_MAX" variable (:constant-flag t) nil [5034 5048]))          
+      :file "limits.h"
+      :pointmax 5383
+      :fsize 5382
+      :lastmodtime '(22516 42340 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("UINT_MAX" . ((semantic-list "(INT_MAX * 2U + 1U)" 3920 . 3939)))
+          ("USHRT_MAX" . ((semantic-list "(SHRT_MAX * 2 + 1)" 3645 . 3663)))
+          ("UCHAR_MAX" . ((semantic-list "(SCHAR_MAX * 2 + 1)" 2934 . 2953)))
+          ("LONG_LONG_MAX" . ((symbol "__LONG_LONG_MAX__" 4907 . 4924)))
+          ("CHAR_BIT" . ((symbol "__CHAR_BIT__" 2479 . 2491)))
+          ("SHRT_MAX" . ((symbol "__SHRT_MAX__" 3445 . 3457)))
+          ("ULONG_MAX" . ((semantic-list "(LONG_MAX * 2UL + 1UL)" 4228 . 4250)))
+          ("LONG_LONG_MIN" . ((semantic-list "(-LONG_LONG_MAX - 1LL)" 4839 . 4861)))
+          ("CHAR_MAX" . ((symbol "SCHAR_MAX" 3280 . 3289)))
+          ("SHRT_MIN" . ((semantic-list "(-SHRT_MAX - 1)" 3396 . 3411)))
+          ("CHAR_MIN" . ((symbol "SCHAR_MIN" 3235 . 3244)))
+          ("INT_MAX" . ((symbol "__INT_MAX__" 3808 . 3819)))
+          ("LONG_MAX" . ((symbol "__LONG_MAX__" 4108 . 4120)))
+          ("_LIMITS_H___")
+          ("INT_MIN" . ((semantic-list "(-INT_MAX - 1)" 3762 . 3776)))
+          ("LONG_MIN" . ((semantic-list "(-LONG_MAX - 1L)" 4058 . 4074)))
+          ("MB_LEN_MAX" . ((number "1" 2579 . 2580)))
+          ("SCHAR_MAX" . ((symbol "__SCHAR_MAX__" 2736 . 2749)))
+          ("ULONG_LONG_MAX" . ((semantic-list "(LONG_LONG_MAX * 2ULL + 1ULL)" 5049 . 5078)))
+          ("SCHAR_MIN" . ((semantic-list "(-SCHAR_MAX - 1)" 2684 . 2700)))
+          ("_GCC_LIMITS_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "syslimits.h"
+      :fsize 330
+      :lastmodtime '(22516 42340 0 0)))
+  :file "!usr!lib!gcc!x86_64-linux-gnu!6!include-fixed!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,508 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [98 118])
+            ("cstdlib" include (:system-flag t) nil [119 137])
+            ("EndMessage.h" include nil nil [138 161])
+            ("Innergy" type
+               (:members 
+                  ( ("EndMessage" function
+                       (:constructor-flag t
+                        :parent "EndMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [207 231]))                          
+                        :type ("EndMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [184 312])
+                    ("EndMessage" function
+                       (:constructor-flag t
+                        :parent "EndMessage"
+                        :arguments 
+                          ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [337 350]))                          
+                        :type ("EndMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [314 364])
+                    ("pack" function
+                       (:parent "EndMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [366 564]))                  
+                :type "namespace")
+                nil [163 568]))          
+      :file "EndMessage.cpp"
+      :pointmax 615
+      :fsize 614
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [98 116])
+            ("iostream" include (:system-flag t) nil [117 136])
+            ("string" include (:system-flag t) nil [137 154])
+            ("CommonTypes.h" include nil nil [156 180])
+            ("PVPAMessage.h" include nil nil [181 205])
+            ("EndMessage.h" include nil nil [207 230])
+            ("PowerMessage.h" include nil nil [231 256])
+            ("SelectionChangedMessage.h" include nil nil [257 293])
+            ("StartMessage.h" include nil nil [294 319])
+            ("TimeResolutionMessage.h" include nil nil [320 354])
+            ("PauseMessage.h" include nil nil [355 380])
+            ("ResumeMessage.h" include nil nil [381 407])
+            ("TriggersFiredMessage.h" include nil nil [408 441])
+            ("TriggersSettingMessage.h" include nil nil [442 477])
+            ("Innergy" type
+               (:members 
+                  ( ("unpack" function
+                       (:parent "PVPAMessage"
+                        :arguments 
+                          ( ("type" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [552 566])
+                            ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [574 598]))                          
+                        :type ("std::unique_ptr" type
+                             (:template-specifier 
+                                ( ("MessagePacket" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [501 1712]))                  
+                :type "namespace")
+                nil [480 1715]))          
+      :file "PVPAMessage.cpp"
+      :pointmax 1747
+      :fsize 1746
+      :lastmodtime '(22407 11770 55166 149000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [98 116])
+            ("cstdlib" include (:system-flag t) nil [117 135])
+            ("PauseMessage.h" include nil nil [136 161])
+            ("Innergy" type
+               (:members 
+                  ( ("PauseMessage" function
+                       (:constructor-flag t
+                        :parent "PauseMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [211 235]))                          
+                        :type ("PauseMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [184 389])
+                    ("PauseMessage" function
+                       (:constructor-flag t
+                        :parent "PauseMessage"
+                        :arguments 
+                          ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [419 432]))                          
+                        :type ("PauseMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [392 448])
+                    ("pack" function
+                       (:parent "PauseMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [450 691]))                  
+                :type "namespace")
+                nil [163 695]))          
+      :file "PauseMessage.cpp"
+      :pointmax 744
+      :fsize 743
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [98 116])
+            ("PowerMessage.h" include nil nil [117 142])
+            ("Innergy" type
+               (:members 
+                  ( ("PowerMessage" function
+                       (:constructor-flag t
+                        :parent "PowerMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [192 216]))                          
+                        :type ("PowerMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [165 607])
+                    ("PowerMessage" function
+                       (:constructor-flag t
+                        :parent "PowerMessage"
+                        :arguments 
+                          ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 649])
+                            ("powers" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Power" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [650 676]))                          
+                        :type ("PowerMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [609 709])
+                    ("pack" function
+                       (:parent "PowerMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [711 1057]))                  
+                :type "namespace")
+                nil [144 1061]))          
+      :file "PowerMessage.cpp"
+      :pointmax 1110
+      :fsize 1109
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [98 116])
+            ("iostream" include (:system-flag t) nil [117 136])
+            ("PowerMessage.h" include nil nil [138 163])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [165 185])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [186 210])
+            ("main" function (:type "int") nil [213 965]))          
+      :file "PowerMessage_t.cpp"
+      :pointmax 995
+      :fsize 994
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("unistd.h" include (:system-flag t) nil [1 20])
+            ("sys/wait.h" include (:system-flag t) nil [21 42])
+            ("iostream" include (:system-flag t) nil [43 62])
+            ("string" include (:system-flag t) nil [63 80])
+            ("vector" include (:system-flag t) nil [81 98])
+            ("MessagePacket.h" include nil nil [100 126])
+            ("MessageChannel.h" include nil nil [127 154])
+            ("PowerMessage.h" include nil nil [155 180])
+            ("PVPAMessage.h" include nil nil [181 205])
+            ("CommonTypes.h" include nil nil [206 230])
+            ("TimeResolutionMessage.h" include nil nil [231 265])
+            ("Innergy" using (:type ("Innergy" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [267 291])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [381 385])
+                    ("" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [386 393]))                  
+                :type "int")
+                nil [372 1676]))          
+      :file "ProtocolTest.cpp"
+      :pointmax 1677
+      :fsize 1676
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [98 118])
+            ("cstdlib" include (:system-flag t) nil [119 137])
+            ("ResumeMessage.h" include nil nil [138 164])
+            ("Innergy" type
+               (:members 
+                  ( ("ResumeMessage" function
+                       (:constructor-flag t
+                        :parent "ResumeMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [216 240]))                          
+                        :type ("ResumeMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [187 267])
+                    ("ResumeMessage" function
+                       (:constructor-flag t
+                        :parent "ResumeMessage"
+                        :type ("ResumeMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [269 303])
+                    ("pack" function
+                       (:parent "ResumeMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [305 377]))                  
+                :type "namespace")
+                nil [166 381]))          
+      :file "ResumeMessage.cpp"
+      :pointmax 431
+      :fsize 430
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [98 118])
+            ("cstdlib" include (:system-flag t) nil [119 137])
+            ("SelectionChangedMessage.h" include nil nil [138 174])
+            ("Innergy" type
+               (:members 
+                  ( ("SelectionChangedMessage" function
+                       (:constructor-flag t
+                        :parent "SelectionChangedMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [246 270]))                          
+                        :type ("SelectionChangedMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [197 332])
+                    ("SelectionChangedMessage" function
+                       (:constructor-flag t
+                        :parent "SelectionChangedMessage"
+                        :arguments 
+                          ( ("filename" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [383 404]))                          
+                        :type ("SelectionChangedMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [334 430])
+                    ("pack" function
+                       (:parent "SelectionChangedMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [432 636]))                  
+                :type "namespace")
+                nil [176 640]))          
+      :file "SelectionChangedMessage.cpp"
+      :pointmax 700
+      :fsize 699
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [98 118])
+            ("cstdlib" include (:system-flag t) nil [119 137])
+            ("StartMessage.h" include nil nil [138 163])
+            ("Innergy" type
+               (:members 
+                  ( ("StartMessage" function
+                       (:constructor-flag t
+                        :parent "StartMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [213 237]))                          
+                        :type ("StartMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [186 264])
+                    ("StartMessage" function
+                       (:constructor-flag t
+                        :parent "StartMessage"
+                        :type ("StartMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [266 298])
+                    ("pack" function
+                       (:parent "StartMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [300 371]))                  
+                :type "namespace")
+                nil [165 375]))          
+      :file "StartMessage.cpp"
+      :pointmax 424
+      :fsize 423
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [98 116])
+            ("cstdlib" include (:system-flag t) nil [117 135])
+            ("TimeResolutionMessage.h" include nil nil [136 170])
+            ("Innergy" type
+               (:members 
+                  ( ("TimeResolutionMessage" function
+                       (:constructor-flag t
+                        :parent "TimeResolutionMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [238 262]))                          
+                        :type ("TimeResolutionMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [193 517])
+                    ("TimeResolutionMessage" function
+                       (:constructor-flag t
+                        :parent "TimeResolutionMessage"
+                        :arguments 
+                          ( ("units_per_sec" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [565 588])
+                            ("units_per_tick" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [589 613]))                          
+                        :type ("TimeResolutionMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [520 684])
+                    ("pack" function
+                       (:parent "TimeResolutionMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [686 1038]))                  
+                :type "namespace")
+                nil [172 1042]))          
+      :file "TimeResolutionMessage.cpp"
+      :pointmax 1100
+      :fsize 1099
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [98 116])
+            ("TriggersFiredMessage.h" include nil nil [117 150])
+            ("Innergy" type
+               (:members 
+                  ( ("TriggersFiredMessage" function
+                       (:constructor-flag t
+                        :parent "TriggersFiredMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [216 240]))                          
+                        :type ("TriggersFiredMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [173 559])
+                    ("TriggersFiredMessage" function
+                       (:constructor-flag t
+                        :parent "TriggersFiredMessage"
+                        :arguments 
+                          ( ("ts" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [604 617])
+                            ("trips" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Trip" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [618 642]))                          
+                        :type ("TriggersFiredMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [561 672])
+                    ("pack" function
+                       (:parent "TriggersFiredMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [674 1024]))                  
+                :type "namespace")
+                nil [152 1028]))          
+      :file "TriggersFiredMessage.cpp"
+      :pointmax 1085
+      :fsize 1084
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdlib" include (:system-flag t) nil [98 116])
+            ("TriggersSettingMessage.h" include nil nil [117 152])
+            ("Innergy" type
+               (:members 
+                  ( ("TriggersSettingMessage" function
+                       (:constructor-flag t
+                        :parent "TriggersSettingMessage"
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [222 246]))                          
+                        :type ("TriggersSettingMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [175 508])
+                    ("TriggersSettingMessage" function
+                       (:constructor-flag t
+                        :parent "TriggersSettingMessage"
+                        :arguments 
+                          ( ("triggers" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Trigger" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [557 587]))                          
+                        :type ("TriggersSettingMessage" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [510 613])
+                    ("pack" function
+                       (:parent "TriggersSettingMessage"
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [615 929]))                  
+                :type "namespace")
+                nil [154 933]))          
+      :file "TriggersSettingMessage.cpp"
+      :pointmax 992
+      :fsize 991
+      :lastmodtime '(22407 11770 55166 149000)
+      :unmatched-syntax nil))
+  :file "!work!innergy!compass!repo!protocol!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,21 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("info_TEXINFOS" variable (:default-value ("nano.texi")) nil [1 27])
+            ("MAKEINFO" variable (:default-value ("makeinfo" "--no-split")) nil [28 59])
+            ("BUILT_SOURCES" variable (:default-value ("nano.html")) nil [60 86])
+            ("nano.html" function (:arguments ("nano.texi")) nil [87 146])
+            ("EXTRA_DIST" variable (:default-value ("$(info_TEXINFOS)" "$(BUILT_SOURCES)")) nil [147 194]))          
+      :file "Makefile.am"
+      :pointmax 194
+      :fsize 193
+      :lastmodtime '(22382 5417 237 854000)
+      :unmatched-syntax nil))
+  :file "!work!nano!doc!texinfo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

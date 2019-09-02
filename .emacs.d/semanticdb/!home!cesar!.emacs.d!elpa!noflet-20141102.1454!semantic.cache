@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-1c3e67c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-1c3e67c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-1c3e688"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "noflet-autoloads.el"
+      :pointmax 351
+      :fsize 561
+      :lastmodtime '(23387 64996 578248 781000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!noflet-20141102.1454!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-15e742c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-15e742c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-15e7438"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "solarized-theme-autoloads.el"
+      :pointmax 369
+      :fsize 1978
+      :lastmodtime '(23387 64920 179541 194000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!solarized-theme-20180621.2107!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

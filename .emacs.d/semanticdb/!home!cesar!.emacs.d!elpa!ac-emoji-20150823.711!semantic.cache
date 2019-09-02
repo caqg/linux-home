@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-2475f18
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-2475f18"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-2475f34"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "ac-emoji-autoloads.el"
+      :pointmax 355
+      :fsize 938
+      :lastmodtime '(23387 65086 806477 511000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!ac-emoji-20150823.711!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

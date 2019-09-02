@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("INNERGY_REPO" variable (:default-value ("https://github.com/ninadvf/Software.git")) nil [1 56])
+            ("SOURCE_REPO" variable (:default-value ("https://github.com/ninadvf/Software.git")) nil [56 110])
+            ("MODE" variable (:default-value ("dbg")) nil [111 120])
+            ("../ecosystem/Makefile.ecosystem" include nil nil [121 161])
+            ("install-local" function nil nil [162 206])
+            ("PACKAGES" variable (:default-value ("../apt/qtbase5-dev.pkg")) nil [207 241])
+            ("PACKAGES" variable (:default-value ("../apt/libqwt-qt5-6.pkg" "../apt/libqwt-qt5-dev.pkg")) nil [241 303])
+            ("packages" function (:arguments ("../apt" "$(PACKAGES)")) nil [304 334])
+            ("check" function (:arguments ("clone" "|" "bld")) nil [335 426])
+            ("build" function (:arguments ("clone" "|" "bld")) nil [335 426])
+            ("install-run" function (:arguments ("clone" "|" "bld")) nil [427 549])
+            ("install-opt" function (:arguments ("clone" "|" "bld")) nil [550 672])
+            ("clean" function nil nil [673 694]))          
+      :file "Makefile"
+      :pointmax 694
+      :fsize 693
+      :lastmodtime '(22512 12917 736373 854000)
+      :unmatched-syntax '((shell-command 682 . 693) (bol 681 . 681))))
+  :file "!work!innergy!compass!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1409 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("LIBVCDIO_H" variable (:constant-flag t) nil [483 493])
+            ("istream" include (:system-flag t) nil [495 513])
+            ("map" include (:system-flag t) nil [514 528])
+            ("string" include (:system-flag t) nil [529 546])
+            ("utility" include (:system-flag t) nil [547 565])
+            ("vector" include (:system-flag t) nil [566 583])
+            ("Innergy" type
+               (:members 
+                  ( ("VcdParser" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [707 714])
+                            ("VcdParser" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::istream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [726 740]))                                  
+                                :type ("VcdParser" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [716 741])
+                            ("parse" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [769 782])
+                            ("parseNext" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [832 849])
+                            ("endParse" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [898 914])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1135 1153])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [1154 1168])
+                                    ("kwd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1180 1196])
+                                    ("txt" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1197 1213]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1126 1214])
+                            ("CommentCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1222 1253])
+                            ("DateCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1261 1290])
+                            ("EndDefinitionsCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1298 1335])
+                            ("TimeScaleCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1343 1376])
+                            ("UpScopeCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1384 1415])
+                            ("VersionCB" variable
+                               (:default-value "DeclarationCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [1423 1454])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1486 1518])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1549 1581])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1612 1644])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1675 1707])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1738 1770])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1801 1833])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [1864 1896])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1998 2016])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2017 2031])
+                                    ("kwd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2041 2057])
+                                    ("scopeType" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2058 2080])
+                                    ("id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2090 2105]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1989 2106])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2133 2151])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2152 2166])
+                                    ("kwd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2176 2192])
+                                    ("varType" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2193 2213])
+                                    ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2223 2240])
+                                    ("vcdCode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2241 2261])
+                                    ("id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2271 2286])
+                                    ("bounds" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::size_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2296 2328]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2124 2329])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [2352 2378])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [2400 2424])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2620 2638])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2639 2653])
+                                    ("kwd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2665 2681])
+                                    ("timeValue" variable (:type ("TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2682 2702]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2611 2703])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2736 2754])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2755 2769])
+                                    ("vcdCode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2781 2801])
+                                    ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2802 2820]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2727 2821])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2854 2872])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2873 2887])
+                                    ("vcdCode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2899 2919])
+                                    ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2920 2938]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2845 2939])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2972 2990])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [2991 3005])
+                                    ("vcdCode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3017 3037])
+                                    ("realValue" variable (:type "double") (reparse-symbol arg-sub-list) [3038 3055]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2963 3056])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3082 3110])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3135 3164])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3189 3218])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3243 3270])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3405 3423])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [3424 3438])
+                                    ("kwd" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3446 3462])
+                                    ("start" variable (:type "bool") (reparse-symbol arg-sub-list) [3463 3474]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3396 3475])
+                            ("DumpAllCB" variable
+                               (:default-value "SimKwdCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [3483 3511])
+                            ("DumpOnCB" variable
+                               (:default-value "SimKwdCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [3519 3547])
+                            ("DumpOffCB" variable
+                               (:default-value "SimKwdCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [3555 3583])
+                            ("DumpVarsCB" variable
+                               (:default-value "SimKwdCB"
+                                :type "int")
+                                (reparse-symbol classsubparts) [3591 3619])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3647 3674])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3701 3729])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3756 3783])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3810 3838])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [3865 3894])
+                            ("" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("parser" variable
+                                       (:reference 1
+                                        :type ("VcdParser" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4164 4182])
+                                    ("context" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [4183 4197])
+                                    ("andNoMore" variable (:type "bool") (reparse-symbol arg-sub-list) [4203 4218]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4155 4219])
+                            ("std::pair" variable (:type "int") (reparse-symbol classsubparts) [4245 4274])
+                            ("registerCommentCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4445 4463]))                                  
+                                :type ("CommentCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4408 4464])
+                            ("registerDateCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4497 4515]))                                  
+                                :type ("DateCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4466 4516])
+                            ("registerEndDefinitionsCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4564 4582]))                                  
+                                :type ("EndDefinitionsCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4518 4583])
+                            ("registerTimeScaleCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4626 4644]))                                  
+                                :type ("TimeScaleCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4585 4645])
+                            ("registerUpScopeCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4684 4702]))                                  
+                                :type ("UpScopeCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4647 4703])
+                            ("registerVersionCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4742 4760]))                                  
+                                :type ("VersionCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4705 4761])
+                            ("registerScopeCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("ScopeCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4829 4841]))                                  
+                                :type ("ScopeCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4796 4842])
+                            ("registerVarCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("VarCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4904 4914]))                                  
+                                :type ("VarCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4875 4915])
+                            ("registerSimTimeCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("SimTimeCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4982 4996]))                                  
+                                :type ("SimTimeCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4945 4997])
+                            ("registerScalarVCCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("ScalarVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5066 5081]))                                  
+                                :type ("ScalarVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5027 5082])
+                            ("registerVectorVCCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("VectorVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5123 5138]))                                  
+                                :type ("VectorVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5084 5139])
+                            ("registerRealVCCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("RealVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5176 5189]))                                  
+                                :type ("RealVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5141 5190])
+                            ("registerDumpAllCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DumpAllCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5263 5277]))                                  
+                                :type ("DumpAllCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5226 5278])
+                            ("registerDumpOnCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DumpOnCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5315 5328]))                                  
+                                :type ("DumpOnCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5280 5329])
+                            ("registerDumpOffCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DumpOffCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5368 5382]))                                  
+                                :type ("DumpOffCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5331 5383])
+                            ("registerDumpVarsCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("DumpVarsCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5424 5439]))                                  
+                                :type ("DumpVarsCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5385 5440])
+                            ("registerAtSimEndCB" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("AtSimEndCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5517 5532]))                                  
+                                :type ("AtSimEndCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5478 5533])
+                            ("protected" label nil (reparse-symbol classsubparts) [5535 5545])
+                            ("HeadKind" type
+                               (:members 
+                                  ( ("UNKNOWN" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5563 5571])
+                                    ("DECL" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5572 5577])
+                                    ("SCOPE" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5578 5584])
+                                    ("VAR" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5585 5589])
+                                    ("SIMTIME" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5590 5598])
+                                    ("SCALARVC" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5602 5611])
+                                    ("VECTORVC" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5612 5621])
+                                    ("REALVC" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5622 5629])
+                                    ("SIMKWD" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5630 5637])
+                                    ("SIMKWDEND" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [5641 5652]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [5547 5653])
+                            ("classifyHead" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5687 5704]))                                  
+                                :type ("HeadKind" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5656 5716])
+                            ("pickDeclarationCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5754 5771]))                                  
+                                :type ("DeclarationCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5718 5778])
+                            ("pickScopeCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5810 5827]))                                  
+                                :type ("ScopeCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5780 5840])
+                            ("pickVarCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5870 5887]))                                  
+                                :type ("VarCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5842 5902])
+                            ("pickSimTimeCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5936 5953]))                                  
+                                :type ("SimTimeCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5904 5964])
+                            ("pickScalarVCCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5999 6016]))                                  
+                                :type ("ScalarVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5966 6026])
+                            ("pickVectorVCCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6061 6078]))                                  
+                                :type ("VectorVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6028 6088])
+                            ("pickRealVCCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6121 6138]))                                  
+                                :type ("RealVCCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6090 6150])
+                            ("pickSimKwdCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6183 6200]))                                  
+                                :type ("SimKwdCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6152 6212])
+                            ("pickAtSimEndCB" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("AtSimEndCBInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6214 6274])
+                            ("getTextTillEnd" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6381 6410])
+                            ("processDeclaration" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6899 6916])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6917 6938]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6875 6939])
+                            ("processScope" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6959 6976])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6977 6998]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6941 6999])
+                            ("processVar" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7017 7034])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7035 7056]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7001 7057])
+                            ("processSimTime" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7079 7096]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7059 7097])
+                            ("processScalarVC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7120 7137]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7099 7138])
+                            ("processVectorVC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7161 7178])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7179 7200]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7140 7201])
+                            ("processRealVC" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7222 7239])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7240 7261]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7203 7262])
+                            ("processSimKwd" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7283 7300])
+                                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7301 7322]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7264 7323])
+                            ("processAtSimEnd" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("andNoMore" variable (:type "bool") (reparse-symbol arg-sub-list) [7346 7361]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7325 7362])
+                            ("private" label nil (reparse-symbol classsubparts) [7364 7372])
+                            ("vcdInput" variable (:type ("std::istream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7374 7433])
+                            ("mustEndParse" variable (:type "bool") (reparse-symbol classsubparts) [7435 7498])
+                            ("commentCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7501 7565])
+                            ("dateCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7567 7628])
+                            ("endDefinitionsCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7630 7701])
+                            ("timeScaleCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7703 7769])
+                            ("upScopeCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7771 7835])
+                            ("versionCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7837 7901])
+                            ("scopeCBInfo" variable (:type ("ScopeCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7903 7965])
+                            ("varCBInfo" variable (:type ("VarCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7967 8027])
+                            ("simTimeCBInfo" variable (:type ("SimTimeCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8029 8093])
+                            ("scalarVCCBInfo" variable (:type ("ScalarVCCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8095 8160])
+                            ("vectorVCCBInfo" variable (:type ("VectorVCCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8162 8227])
+                            ("realVCCBInfo" variable (:type ("RealVCCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8229 8292])
+                            ("dumpAllCBInfo" variable (:type ("DumpAllCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8294 8358])
+                            ("dumpOnCBInfo" variable (:type ("DumpOnCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8360 8423])
+                            ("dumpOffCBInfo" variable (:type ("DumpOffCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8425 8489])
+                            ("dumpVarsCBInfo" variable (:type ("DumpVarsCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8491 8556])
+                            ("atSimEndCBInfo" variable (:type ("AtSimEndCBInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8558 8623])
+                            ("kwdKindMap" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("HeadKind" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8626 8687])
+                            ("declKwdCbMap" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("DeclarationCBInfo" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8689 8752])
+                            ("simKwdCbMap" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("SimKwdCBInfo" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8754 8816]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [689 8819])
+                    ("toVcdCode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [9018 9038]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8995 9039])
+                    ("fromVcdCode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9329 9341]))                          
+                        :type ("std::pair" type
+                             (:template-specifier 
+                                ( ("bool" type nil nil nil)
+                                  ("unsigned long long" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [9281 9342]))                  
+                :type "namespace")
+                nil [668 9345]))          
+      :file "libvcdio.h"
+      :pointmax 9412
+      :fsize 9411
+      :lastmodtime '(22549 15134 367974 252000)
+      :unmatched-syntax '((punctuation 4243 . 4244) (symbol 4228 . 4242) (USING 4222 . 4227) (punctuation 4153 . 4154) (symbol 4138 . 4148) (USING 4132 . 4137) (punctuation 3863 . 3864) (symbol 3846 . 3860) (USING 3840 . 3845) (punctuation 3808 . 3809) (symbol 3791 . 3804) (USING 3785 . 3790) (punctuation 3754 . 3755) (symbol 3737 . 3749) (USING 3731 . 3736) (punctuation 3699 . 3700) (symbol 3682 . 3695) (USING 3676 . 3681) (punctuation 3645 . 3646) (symbol 3628 . 3640) (USING 3622 . 3627) (USING 3585 . 3590) (USING 3549 . 3554) (USING 3513 . 3518) (USING 3477 . 3482) (punctuation 3394 . 3395) (symbol 3378 . 3386) (USING 3372 . 3377) (punctuation 3241 . 3242) (symbol 3226 . 3238) (USING 3220 . 3225) (punctuation 3187 . 3188) (symbol 3172 . 3186) (USING 3166 . 3171) (punctuation 3133 . 3134) (symbol 3118 . 3132) (USING 3112 . 3117) (punctuation 3080 . 3081) (symbol 3065 . 3078) (USING 3059 . 3064) (punctuation 2961 . 2962) (symbol 2947 . 2955) (USING 2941 . 2946) (punctuation 2843 . 2844) (symbol 2829 . 2839) (USING 2823 . 2828) (punctuation 2725 . 2726) (symbol 2711 . 2721) (USING 2705 . 2710) (punctuation 2609 . 2610) (symbol 2595 . 2604) (USING 2589 . 2594) (punctuation 2586 . 2587) (LONG 2582 . 2586) (LONG 2577 . 2581) (UNSIGNED 2568 . 2576) (punctuation 2566 . 2567) (symbol 2552 . 2561) (USING 2546 . 2551) (punctuation 2398 . 2399) (symbol 2386 . 2395) (USING 2380 . 2385) (punctuation 2350 . 2351) (symbol 2338 . 2349) (USING 2332 . 2337) (punctuation 2122 . 2123) (symbol 2114 . 2119) (USING 2108 . 2113) (punctuation 1987 . 1988) (symbol 1977 . 1984) (USING 1971 . 1976) (punctuation 1862 . 1863) (symbol 1841 . 1854) (USING 1835 . 1840) (punctuation 1799 . 1800) (symbol 1778 . 1791) (USING 1772 . 1777) (punctuation 1736 . 1737) (symbol 1715 . 1730) (USING 1709 . 1714) (punctuation 1673 . 1674) (symbol 1652 . 1672) (USING 1646 . 1651) (punctuation 1610 . 1611) (symbol 1589 . 1599) (USING 1583 . 1588) (punctuation 1547 . 1548) (symbol 1526 . 1539) (USING 1520 . 1525) (punctuation 1484 . 1485) (symbol 1463 . 1480) (USING 1457 . 1462) (USING 1417 . 1422) (USING 1378 . 1383) (USING 1337 . 1342) (USING 1292 . 1297) (USING 1255 . 1260) (USING 1216 . 1221) (punctuation 1124 . 1125) (symbol 1110 . 1123) (USING 1104 . 1109) (punctuation 765 . 766) (DEFAULT 758 . 765) (punctuation 756 . 757) (semantic-list 753 . 755) (symbol 744 . 753) (punctuation 743 . 744))
+      :lexical-table 
+        '(("LIBVCDIO_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("VCDIO_H" variable (:constant-flag t) nil [122 129])
+            ("iostream" include (:system-flag t) nil [131 150])
+            ("set" include (:system-flag t) nil [151 165])
+            ("map" include (:system-flag t) nil [166 180])
+            ("type_traits" include (:system-flag t) nil [181 203])
+            ("timestate.h" include nil nil [205 227])
+            ("Innergy" type
+               (:members 
+                  ( ("vcd_code" type
+                       (:superclasses 
+                          ( ("uint32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [255 294])
+                    ("vcd_code_representation" type
+                       (:typedef ("std::underlying_type::type" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [295 364])
+                    (">>" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [393 410])
+                            ("vc" variable
+                               (:reference 1
+                                :type ("vcd_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [411 425]))                          
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [366 426])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [454 471])
+                            ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [472 485]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [427 486])
+                    ("vcd_change_kind" type (:type "class") (reparse-symbol namespacesubparts) [493 559])
+                    ("vcd_change" type
+                       (:members 
+                          ( ("kind" variable (:type ("vcd_change_kind" type (:type "class") nil nil)) (reparse-symbol classsubparts) [581 602])
+                            ("code" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [604 618])
+                            ("" type
+                               (:members 
+                                  ( ("simulation_time" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [630 656])
+                                    ("binary_value" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [659 681])
+                                    ("real_value" variable (:type "double") (reparse-symbol classsubparts) [715 733]))                                  
+                                :type "union")
+                                (reparse-symbol classsubparts) [620 737])
+                            ("vcd_change" function
+                               (:constructor-flag t
+                                :type ("vcd_change" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [740 814])
+                            ("vcd_change" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("ts" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [828 842]))                                  
+                                :type ("vcd_change" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [816 907])
+                            ("vcd_change" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [921 933])
+                                    ("bv" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [934 947]))                                  
+                                :type ("vcd_change" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [909 1022])
+                            ("vcd_change" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1036 1048])
+                                    ("rv" variable (:type "double") (reparse-symbol arg-sub-list) [1049 1060]))                                  
+                                :type ("vcd_change" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1024 1131]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [560 1134])
+                    ("vcd_code_maps" type
+                       (:members 
+                          ( ("signal" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("vcd_code" type nil nil nil)
+                                      ("std::vector" type (:template-specifier 
+                                        ( ("net_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1160 1216])
+                            ("capacitance" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("vcd_code" type nil nil nil)
+                                      ("std::vector" type (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1218 1282])
+                            ("direct_energy" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("vcd_code" type nil nil nil)
+                                      ("std::vector" type (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1284 1350])
+                            ("indirect_energy" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("vcd_code" type nil nil nil)
+                                      ("std::vector" type (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1352 1420])
+                            ("state" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("vcd_code" type nil nil nil)
+                                      ("std::vector" type (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1422 1480]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1136 1483])
+                    ("vcd_reader" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1504 1511])
+                            ("changes" type
+                               (:members 
+                                  ( ("iterator" type
+                                       (:members 
+                                          ( ("" function
+                                               (:operator-flag t
+                                                :function-pointer t
+                                                :type ("vcd_change" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1586 1627])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1631 1672])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1698 1702]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1676 1720])
+                                            ("==" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1742 1759]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1724 1786])
+                                            ("!=" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1808 1825]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1790 1853])
+                                            ("private" label nil (reparse-symbol classsubparts) [1856 1864])
+                                            ("data" variable (:type ("vcd_change" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1868 1884]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1534 1889])
+                                    ("begin" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1893 1910])
+                                    ("end" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1913 1928]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1514 1932])
+                            ("changes" variable (:type ("changes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1934 1950])
+                            ("timestates" type
+                               (:members 
+                                  ( ("iterator" type
+                                       (:members 
+                                          ( ("iterator" function
+                                               (:constructor-flag t
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2028 2074])
+                                            ("iterator" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("t" variable
+                                                       (:pointer 1
+                                                        :type ("timestate" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2088 2101])
+                                                    ("r" variable
+                                                       (:pointer 1
+                                                        :type ("vcd_reader" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2102 2116])
+                                                    ("c" variable (:type ("changes::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2122 2143]))                                                  
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2078 2144])
+                                            ("iterator" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2148 2184])
+                                            ("" function
+                                               (:operator-flag t
+                                                :function-pointer t
+                                                :type ("timestate" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2188 2227])
+                                            ("++" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2231 2255])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [2276 2280]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2259 2298])
+                                            ("==" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2320 2343]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2302 2380])
+                                            ("!=" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2402 2425]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2384 2462])
+                                            ("=" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2488 2511]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2466 2576])
+                                            ("value_changes" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2580 2601])
+                                            ("private" label nil (reparse-symbol classsubparts) [2604 2612])
+                                            ("ts" variable
+                                               (:pointer 1
+                                                :type ("timestate" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2616 2630])
+                                            ("vr" variable
+                                               (:pointer 1
+                                                :type ("vcd_reader" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2634 2649])
+                                            ("ci" variable (:type ("changes::iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2653 2674])
+                                            ("store_change" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("vc" variable
+                                                       (:reference 1
+                                                        :type ("vcd_change" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2697 2713]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2678 2714]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1976 2719])
+                                    ("timestates" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("m" variable
+                                               (:pointer 1
+                                                :type ("vcd_reader" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2735 2750]))                                          
+                                        :type ("timestates" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [2723 2764])
+                                    ("begin" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2768 2785])
+                                    ("end" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2788 2803])
+                                    ("private" label nil (reparse-symbol classsubparts) [2806 2814])
+                                    ("mine" variable
+                                       (:pointer 1
+                                        :type ("vcd_reader" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2818 2835]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1953 2839])
+                            ("timestates" variable (:type ("timestates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2841 2863])
+                            ("maps" variable (:type ("vcd_code_maps" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2866 2885])
+                            ("vcd_reader" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("vcd_reader" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2888 2901]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1485 2904])
+                    ("vcd_writer" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2925 2932])
+                            ("changes" type
+                               (:members 
+                                  ( ("iterator" type
+                                       (:members 
+                                          ( ("proxy" type
+                                               (:members 
+                                                  ( ("actual" variable
+                                                       (:pointer 1
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3030 3047])
+                                                    ("proxy" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("ip" variable
+                                                               (:pointer 1
+                                                                :type ("iterator" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3059 3073]))                                                          
+                                                        :type ("proxy" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [3052 3090])
+                                                    ("=" function
+                                                       (:operator-flag t
+                                                        :arguments 
+                                                          ( ("arg" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("vcd_change" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3113 3136]))                                                          
+                                                        :type ("proxy" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3095 3190]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3008 3196])
+                                            ("iterator" function
+                                               (:constructor-flag t
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [3201 3228])
+                                            ("iterator" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("w" variable
+                                                       (:pointer 1
+                                                        :type ("vcd_writer" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3242 3257]))                                                  
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [3232 3269])
+                                            ("" function
+                                               (:operator-flag t
+                                                :function-pointer t
+                                                :type ("proxy" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3273 3317])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3321 3362])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [3388 3392]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3366 3410])
+                                            ("==" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3432 3455]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [3414 3492])
+                                            ("!=" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3514 3537]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [3496 3574])
+                                            ("=" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3600 3623]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3578 3688])
+                                            ("private" label nil (reparse-symbol classsubparts) [3691 3699])
+                                            ("vw" variable
+                                               (:pointer 1
+                                                :type ("vcd_writer" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3703 3718]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [2955 3723])
+                                    ("begin" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3727 3744])
+                                    ("self" variable
+                                       (:pointer 1
+                                        :type ("vcd_writer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3747 3764]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [2935 3768])
+                            ("changes" variable (:type ("changes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3770 3786])
+                            ("timestates" type
+                               (:members 
+                                  ( ("iterator" type
+                                       (:members 
+                                          ( ("proxy" type
+                                               (:members 
+                                                  ( ("actual" variable
+                                                       (:pointer 1
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3887 3904])
+                                                    ("proxy" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("ip" variable
+                                                               (:pointer 1
+                                                                :type ("iterator" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3916 3930]))                                                          
+                                                        :type ("proxy" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [3909 3947])
+                                                    ("=" function
+                                                       (:prototype-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("" variable
+                                                               (:reference 1
+                                                                :type ("timestate" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3970 3982]))                                                          
+                                                        :type ("proxy" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3952 3983]))                                                  
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3865 3989])
+                                            ("iterator" function
+                                               (:constructor-flag t
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [3994 4021])
+                                            ("iterator" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("t" variable
+                                                       (:pointer 1
+                                                        :type ("timestate" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4035 4048])
+                                                    ("w" variable
+                                                       (:pointer 1
+                                                        :type ("vcd_writer" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4049 4064]))                                                  
+                                                :type ("iterator" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4025 4111])
+                                            ("iterator" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4115 4151])
+                                            ("" function
+                                               (:operator-flag t
+                                                :function-pointer t
+                                                :type ("proxy" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4155 4199])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4203 4244])
+                                            ("++" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [4270 4274]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4248 4292])
+                                            ("==" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4314 4337]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [4296 4374])
+                                            ("!=" function
+                                               (:methodconst-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4396 4419]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [4378 4456])
+                                            ("=" function
+                                               (:operator-flag t
+                                                :arguments 
+                                                  ( ("other" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4482 4505]))                                                  
+                                                :type ("iterator" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4460 4570])
+                                            ("private" label nil (reparse-symbol classsubparts) [4573 4581])
+                                            ("ts" variable
+                                               (:pointer 1
+                                                :type ("timestate" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4585 4599])
+                                            ("vw" variable
+                                               (:pointer 1
+                                                :type ("vcd_writer" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4603 4618])
+                                            ("co" variable (:type ("changes::iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4622 4643])
+                                            ("change_time" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("ts" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4665 4679]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4647 4680])
+                                            ("change_binary" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4704 4716])
+                                                    ("uv" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4717 4730]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4684 4731])
+                                            ("change_real" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4753 4765])
+                                                    ("rv" variable (:type "double") (reparse-symbol arg-sub-list) [4766 4777]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4735 4778]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [3812 4783])
+                                    ("begin" function
+                                       (:prototype-flag t
+                                        :type ("iterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4787 4804])
+                                    ("self" variable
+                                       (:pointer 1
+                                        :type ("vcd_writer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4807 4824]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [3789 4828])
+                            ("timestates" variable (:type ("timestates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4830 4852])
+                            ("maps" variable (:type ("vcd_code_maps" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4855 4874])
+                            ("begin_write" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("start" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4903 4920]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4877 4925])
+                            ("write_change" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("vcd_change" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4954 4973]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4927 4978])
+                            ("vcd_writer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("vcd_writer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4981 4994])
+                            ("vcd_writer" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [4996 5021]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2906 5024])
+                    ("rtl_vcd_reader" type
+                       (:superclasses 
+                          ( ("vcd_reader" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5070 5077])
+                            ("rtl_vcd_reader" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("is" variable
+                                       (:reference 1
+                                        :type ("std::istream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5095 5112])
+                                    ("to_update" variable
+                                       (:reference 1
+                                        :type ("design" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5113 5132]))                                  
+                                :type ("rtl_vcd_reader" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5079 5133]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5027 5136])
+                    ("rtl_vcd_writer" type
+                       (:superclasses 
+                          ( ("vcd_writer" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("vout" variable (:type ("std::ostream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5182 5201])
+                            ("d" variable (:type ("design" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5203 5213])
+                            ("live_modules" variable (:type ("std::set" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5215 5248])
+                            ("capacitance_code" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("vcd_code" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5250 5299])
+                            ("direct_energy_code" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("vcd_code" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5301 5352])
+                            ("indirect_energy_code" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("vcd_code" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5354 5407])
+                            ("state_code" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("vcd_code" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5409 5452])
+                            ("signal_code" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("vcd_code" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5454 5495])
+                            ("public" label nil (reparse-symbol classsubparts) [5496 5503])
+                            ("rtl_vcd_writer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5521 5538])
+                                    ("to_emit" variable
+                                       (:reference 1
+                                        :type ("design" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5539 5556]))                                  
+                                :type ("rtl_vcd_writer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5505 5557])
+                            ("begin_write" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("start" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5585 5602]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5559 5603])
+                            ("write_change" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("vcd_change" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5632 5651]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5605 5652])
+                            ("private" label nil (reparse-symbol classsubparts) [5653 5661])
+                            ("write_date" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("disable_date" variable (:type "bool") (reparse-symbol arg-sub-list) [5680 5699]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5663 5700])
+                            ("write_version" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [5702 5723])
+                            ("write_timescale" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [5725 5748])
+                            ("try_emit_analysis_var" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5778 5795])
+                                    ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5796 5808])
+                                    ("mv_map" variable
+                                       (:reference 1
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("module_id" type nil nil nil)
+                                                  ("vcd_code" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5820 5861]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5750 5862])
+                            ("try_emit_net" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5883 5900])
+                                    ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5901 5911]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5864 5912])
+                            ("try_emit_usage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5935 5952])
+                                    ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5953 5965]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5914 5966])
+                            ("emit_module_body" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5991 6004]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5968 6005])
+                            ("emit_module" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6025 6042])
+                                    ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6043 6056]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6007 6057])
+                            ("emit_types" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6059 6077])
+                            ("write_hierarchy" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6079 6102])
+                            ("walk_hierarchy" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6104 6126]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5138 6129]))                  
+                :type "namespace")
+                nil [229 6132]))          
+      :file "vcdio.h"
+      :pointmax 6162
+      :fsize 6161
+      :lastmodtime '(22529 59713 75234 222000)
+      :unmatched-syntax '((symbol 545 . 556) (punctuation 543 . 544) (symbol 530 . 543) (punctuation 528 . 529) (symbol 517 . 528) (ENUM 488 . 492) (number 290 . 291) (punctuation 288 . 289) (symbol 283 . 287) (ENUM 250 . 254))
+      :lexical-table 
+        '(("VCDIO_H")
+          )
+)
+)
+  :file "!work!innergy!compass!repo!vcdio!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

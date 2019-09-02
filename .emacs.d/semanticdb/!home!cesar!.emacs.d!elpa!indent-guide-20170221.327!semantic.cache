@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "indent-guide-autoloads.el"
+      :pointmax 319
+      :fsize 1585
+      :lastmodtime '(22768 39347 639868 767000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!indent-guide-20170221.327!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

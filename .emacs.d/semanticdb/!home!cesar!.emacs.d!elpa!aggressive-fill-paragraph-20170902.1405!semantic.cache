@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-214ca28
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-214ca28"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-214ca44"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "aggressive-fill-paragraph-autoloads.el"
+      :pointmax 389
+      :fsize 1340
+      :lastmodtime '(23387 65082 958591 459000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!aggressive-fill-paragraph-20170902.1405!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

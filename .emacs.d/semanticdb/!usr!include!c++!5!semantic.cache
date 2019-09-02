@@ -1,0 +1,75 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :file "istream"
+      :fsize 30941
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "map"
+      :fsize 2559
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "string"
+      :fsize 1943
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "utility"
+      :fsize 8477
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "vector"
+      :fsize 2748
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "iostream"
+      :fsize 2695
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "set"
+      :fsize 2559
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "type_traits"
+      :fsize 68840
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "fstream"
+      :fsize 33851
+      :lastmodtime '(22508 25919 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("bits/c++config.h" include (:system-flag t) nil [1568 1595])
+            ("time.h" include (:system-flag t) nil [1596 1613])
+            ("_GLIBCXX_CTIME" variable (:constant-flag t) nil [1646 1660])
+            ("std" type
+               (:members 
+                  ( ("clock_t" variable (:type "int") (reparse-symbol namespacesubparts) [1895 1903])
+                    ("time_t" variable (:type "int") (reparse-symbol namespacesubparts) [1914 1921])
+                    ("tm" variable (:type "int") (reparse-symbol namespacesubparts) [1932 1935])
+                    ("clock" variable (:type "int") (reparse-symbol namespacesubparts) [1947 1953])
+                    ("difftime" variable (:type "int") (reparse-symbol namespacesubparts) [1964 1973])
+                    ("mktime" variable (:type "int") (reparse-symbol namespacesubparts) [1984 1991])
+                    ("time" variable (:type "int") (reparse-symbol namespacesubparts) [2002 2007])
+                    ("asctime" variable (:type "int") (reparse-symbol namespacesubparts) [2018 2026])
+                    ("ctime" variable (:type "int") (reparse-symbol namespacesubparts) [2037 2043])
+                    ("gmtime" variable (:type "int") (reparse-symbol namespacesubparts) [2054 2061])
+                    ("localtime" variable (:type "int") (reparse-symbol namespacesubparts) [2072 2082])
+                    ("strftime" variable (:type "int") (reparse-symbol namespacesubparts) [2093 2102]))                  
+                :type "namespace")
+                nil [1869 2104]))          
+      :file "ctime"
+      :pointmax 2126
+      :fsize 2125
+      :lastmodtime '(22508 25919 0 0)
+      :unmatched-syntax '((punctuation 2092 . 2093) (punctuation 2091 . 2092) (USING 2085 . 2090) (punctuation 2071 . 2072) (punctuation 2070 . 2071) (USING 2064 . 2069) (punctuation 2053 . 2054) (punctuation 2052 . 2053) (USING 2046 . 2051) (punctuation 2036 . 2037) (punctuation 2035 . 2036) (USING 2029 . 2034) (punctuation 2017 . 2018) (punctuation 2016 . 2017) (USING 2010 . 2015) (punctuation 2001 . 2002) (punctuation 2000 . 2001) (USING 1994 . 1999) (punctuation 1983 . 1984) (punctuation 1982 . 1983) (USING 1976 . 1981) (punctuation 1963 . 1964) (punctuation 1962 . 1963) (USING 1956 . 1961) (punctuation 1946 . 1947) (punctuation 1945 . 1946) (USING 1939 . 1944) (punctuation 1931 . 1932) (punctuation 1930 . 1931) (USING 1924 . 1929) (punctuation 1913 . 1914) (punctuation 1912 . 1913) (USING 1906 . 1911) (punctuation 1894 . 1895) (punctuation 1893 . 1894) (USING 1887 . 1892) (symbol 1553 . 1566) (symbol 1549 . 1552) (symbol 1541 . 1548))
+      :lexical-table 
+        '(("_GLIBCXX_CTIME" . ((number "1" 1661 . 1662)))
+          )
+))
+  :file "!usr!include!c++!5!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

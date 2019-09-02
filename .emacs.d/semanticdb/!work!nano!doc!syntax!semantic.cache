@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("pkgdata_DATA" variable (:default-value ("asm.nanorc" "autoconf.nanorc" "awk.nanorc" "changelog.nanorc" "cmake.nanorc" "c.nanorc" "css.nanorc" "debian.nanorc" "default.nanorc" "elisp.nanorc" "fortran.nanorc" "gentoo.nanorc" "go.nanorc" "groff.nanorc" "guile.nanorc" "html.nanorc" "java.nanorc" "javascript.nanorc" "json.nanorc" "lua.nanorc" "makefile.nanorc" "man.nanorc" "mgp.nanorc" "mutt.nanorc" "nanorc.nanorc" "nftables.nanorc" "objc.nanorc" "ocaml.nanorc" "patch.nanorc" "perl.nanorc" "php.nanorc" "po.nanorc" "postgresql.nanorc" "pov.nanorc" "python.nanorc" "ruby.nanorc" "rust.nanorc" "sh.nanorc" "spec.nanorc" "tcl.nanorc" "tex.nanorc" "texinfo.nanorc" "xml.nanorc")) nil [1 732])
+            ("EXTRA_DIST" variable (:default-value ("$(pkgdata_DATA)")) nil [733 762]))          
+      :file "Makefile.am"
+      :pointmax 762
+      :fsize 761
+      :lastmodtime '(22383 3948 387031 864000)
+      :unmatched-syntax nil))
+  :file "!work!nano!doc!syntax!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

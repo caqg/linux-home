@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-117d3fc
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-117d3fc"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-1190bc0"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "paredit-autoloads.el"
+      :pointmax 353
+      :fsize 1350
+      :lastmodtime '(23387 64988 338739 838000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!paredit-20171127.205!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

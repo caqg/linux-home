@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-273c9b0
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-273c9b0"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-273c9cc"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "cmake-font-lock-autoloads.el"
+      :pointmax 369
+      :fsize 919
+      :lastmodtime '(23387 65066 23133 876000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!cmake-font-lock-20170117.2025!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

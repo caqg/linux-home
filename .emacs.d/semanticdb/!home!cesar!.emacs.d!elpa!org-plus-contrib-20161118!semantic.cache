@@ -1,0 +1,1144 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "org-plus-contrib-autoloads.el"
+      :pointmax 327
+      :fsize 77502
+      :lastmodtime '(22576 56277 322883 476000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("if" code nil nil [160 258])
+            ("if" code nil nil [357 462])
+            ("if" code nil nil [561 667])
+            ("if" code nil nil [772 872])
+            ("if" code nil nil [995 1101])
+            ("if" code nil nil [1206 1306])
+            ("if" code nil nil [1414 1515])
+            ("if" code nil nil [1632 1736])
+            ("if" code nil nil [1850 1960])
+            ("if" code nil nil [2065 2184])
+            ("org-babel-execute-safely-maybe" function (:prototype-flag t) nil [2292 2364])
+            ("org-babel-execute-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2366 2429])
+            ("org-babel-view-src-block-info" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2431 2673])
+            ("org-babel-expand-src-block-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2675 2884])
+            ("org-babel-load-in-session-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2886 3104])
+            ("org-babel-pop-to-session-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3106 3309])
+            ("org-babel-execute-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3311 3972])
+            ("org-babel-expand-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3974 4210])
+            ("org-babel-check-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4212 4341])
+            ("org-babel-insert-header-arg" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4343 4509])
+            ("org-babel-load-in-session" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4511 4774])
+            ("org-babel-initiate-session" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4776 5089])
+            ("org-babel-switch-to-session" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [5091 5371])
+            ("org-babel-switch-to-session-with-code" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [5373 5511])
+            ("org-babel-do-in-edit-buffer" function (:prototype-flag t) nil [5513 5714])
+            ("org-babel-open-src-block-result" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [5716 6006])
+            ("org-babel-map-src-blocks" function (:prototype-flag t) nil [6008 7160])
+            ("function-put" code nil nil [7162 7227])
+            ("org-babel-map-inline-src-blocks" function (:prototype-flag t) nil [7229 7443])
+            ("function-put" code nil nil [7445 7517])
+            ("org-babel-map-call-lines" function (:prototype-flag t) nil [7519 7716])
+            ("function-put" code nil nil [7718 7783])
+            ("org-babel-map-executables" function (:prototype-flag t) nil [7785 7991])
+            ("function-put" code nil nil [7993 8059])
+            ("org-babel-execute-buffer" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8061 8258])
+            ("org-babel-execute-subtree" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8260 8460])
+            ("org-babel-sha1-hash" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8462 8585])
+            ("org-babel-hide-result-toggle-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8587 8698])
+            ("org-babel-goto-src-block-head" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8700 8815])
+            ("org-babel-goto-named-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8817 8924])
+            ("org-babel-goto-named-result" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [8926 9019])
+            ("org-babel-next-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [9021 9201])
+            ("org-babel-previous-src-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [9203 9392])
+            ("org-babel-mark-block" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [9394 9477])
+            ("if" code nil nil [9479 9574])
+            ("if" code nil nil [9688 9791])
+            ("if" code nil nil [9896 9996])
+            ("if" code nil nil [10107 10203])
+            ("if" code nil nil [10308 10408])
+            ("if" code nil nil [10516 10617])
+            ("if" code nil nil [10743 10850])
+            ("if" code nil nil [10973 11073])
+            ("if" code nil nil [11181 11282])
+            ("if" code nil nil [11387 11481])
+            ("if" code nil nil [11592 11694])
+            ("if" code nil nil [11805 11907])
+            ("if" code nil nil [12024 12128])
+            ("if" code nil nil [12245 12371])
+            ("if" code nil nil [12485 12588])
+            ("if" code nil nil [12705 12809])
+            ("if" code nil nil [12911 13010])
+            ("if" code nil nil [13118 13219])
+            ("if" code nil nil [13321 13420])
+            ("if" code nil nil [13531 13633])
+            ("org-babel-describe-bindings" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [13741 13863])
+            ("if" code nil nil [13865 13966])
+            ("if" code nil nil [14077 14179])
+            ("if" code nil nil [14293 14396])
+            ("if" code nil nil [14516 14637])
+            ("if" code nil nil [14745 14846])
+            ("org-babel-lob-execute-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [14951 15201])
+            ("org-babel-lob-get-info" function (:prototype-flag t) nil [15203 15533])
+            ("if" code nil nil [15535 15635])
+            ("if" code nil nil [15740 15840])
+            ("if" code nil nil [15960 16065])
+            ("if" code nil nil [16202 16310])
+            ("if" code nil nil [16436 16543])
+            ("if" code nil nil [16657 16760])
+            ("if" code nil nil [16874 16977])
+            ("if" code nil nil [17088 17190])
+            ("if" code nil nil [17304 17407])
+            ("if" code nil nil [17512 17612])
+            ("if" code nil nil [17714 17841])
+            ("if" code nil nil [17949 18050])
+            ("if" code nil nil [18170 18275])
+            ("if" code nil nil [18395 18494])
+            ("if" code nil nil [18620 18727])
+            ("if" code nil nil [18841 18944])
+            ("if" code nil nil [19049 19149])
+            ("if" code nil nil [19257 19358])
+            ("if" code nil nil [19466 19567])
+            ("if" code nil nil [19678 19780])
+            ("if" code nil nil [19894 19997])
+            ("if" code nil nil [20111 20214])
+            ("if" code nil nil [20319 20419])
+            ("if" code nil nil [20530 20632])
+            ("if" code nil nil [20740 20841])
+            ("if" code nil nil [20946 21046])
+            ("if" code nil nil [21160 21263])
+            ("if" code nil nil [21371 21472])
+            ("if" code nil nil [21583 21685])
+            ("if" code nil nil [21796 21892])
+            ("org-babel-tangle-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [22006 22446])
+            ("org-babel-tangle" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [22448 23040])
+            ("if" code nil nil [23042 23145])
+            ("if" code nil nil [23250 23350])
+            ("if" code nil nil [23461 23563])
+            ("org-toggle-sticky-agenda" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [23680 23788])
+            ("org-agenda" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [23790 25570])
+            ("org-batch-agenda" function (:prototype-flag t) nil [25572 26010])
+            ("org-batch-agenda-csv" function (:prototype-flag t) nil [26012 27794])
+            ("org-store-agenda-views" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [27796 27897])
+            ("org-batch-store-agenda-views" function (:prototype-flag t) nil [27899 28044])
+            ("org-agenda-list" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [28046 28766])
+            ("org-search-view" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [28768 31090])
+            ("org-todo-list" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [31092 31474])
+            ("org-tags-view" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [31476 31690])
+            ("org-agenda-list-stuck-projects" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [31692 31996])
+            ("org-diary" function (:prototype-flag t) nil [31998 33161])
+            ("org-agenda-check-for-timestamp-as-reason-to-ignore-todo-item" function (:prototype-flag t) nil [33163 33356])
+            ("org-agenda-set-restriction-lock" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [33358 33714])
+            ("org-calendar-goto-agenda" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [33716 33919])
+            ("org-agenda-to-appt" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [33921 35169])
+            ("if" code nil nil [35171 35269])
+            ("org-annotate-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [35415 35655])
+            ("org-annotate-file-show-section" function (:prototype-flag t) nil [35657 35945])
+            ("if" code nil nil [35947 36066])
+            ("org-add-archive-files" function (:prototype-flag t) nil [36186 36387])
+            ("org-archive-subtree" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [36389 37197])
+            ("org-archive-to-archive-sibling" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [37199 37613])
+            ("org-toggle-archive-tag" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [37615 37877])
+            ("org-archive-subtree-default" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [37879 38072])
+            ("org-archive-subtree-default-with-confirmation" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [38074 38285])
+            ("if" code nil nil [38287 38386])
+            ("org-attach" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [38503 38670])
+            ("if" code nil nil [38672 38777])
+            ("org-bbdb-anniversaries" function (:prototype-flag t) nil [38888 39011])
+            ("org-bbdb-anniversaries-future" function (:prototype-flag t) nil [39013 39172])
+            ("if" code nil nil [39174 39275])
+            ("if" code nil nil [39421 39526])
+            ("if" code nil nil [39643 39741])
+            ("if" code nil nil [39864 39973])
+            ("org-bullets-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [40093 40196])
+            ("if" code nil nil [40198 40305])
+            ("org-capture-string" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [40425 40559])
+            ("org-capture" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [40561 41776])
+            ("org-capture-import-remember-templates" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [41778 41929])
+            ("if" code nil nil [41931 42030])
+            ("if" code nil nil [42156 42257])
+            ("if" code nil nil [42374 42479])
+            ("org-resolve-clocks" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [42593 42846])
+            ("org-clock-in" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [42848 43575])
+            ("org-clock-in-last" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [43577 44078])
+            ("org-clock-out" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [44080 44429])
+            ("org-clock-cancel" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [44431 44546])
+            ("org-clock-goto" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [44548 44763])
+            ("org-clock-sum" function (:prototype-flag t) nil [44765 45326])
+            ("org-clock-display" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [45328 45905])
+            ("org-clock-remove-overlays" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [45907 46144])
+            ("org-clock-get-clocktable" function (:prototype-flag t) nil [46146 46382])
+            ("org-clock-report" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [46384 46835])
+            ("org-clocktable-shift" function (:prototype-flag t) nil [46837 47327])
+            ("org-dblock-write:clocktable" function (:prototype-flag t) nil [47329 47437])
+            ("org-clock-update-time-maybe" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [47439 47579])
+            ("if" code nil nil [47581 47678])
+            ("if" code nil nil [47804 47916])
+            ("org-columns-remove-overlays" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [48036 48151])
+            ("org-columns-get-format-and-top-level" function (:prototype-flag t) nil [48153 48235])
+            ("org-columns" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [48237 48753])
+            ("org-columns-compute" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [48755 48961])
+            ("org-dblock-write:columnview" function (:prototype-flag t) nil [48963 50143])
+            ("org-columns-insert-dblock" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [50145 50267])
+            ("org-agenda-columns" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [50269 50375])
+            ("if" code nil nil [50377 50476])
+            ("org-check-version" function (:prototype-flag t) nil [50593 50703])
+            ("if" code nil nil [50705 50803])
+            ("org-contacts" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [50926 51034])
+            ("if" code nil nil [51036 51159])
+            ("if" code nil nil [51273 51370])
+            ("if" code nil nil [51484 51587])
+            ("org-datetree-find-date-create" function (:prototype-flag t) nil [51710 51999])
+            ("org-datetree-find-iso-week-create" function (:prototype-flag t) nil [52001 52413])
+            ("if" code nil nil [52415 52524])
+            ("if" code nil nil [52641 52746])
+            ("if" code nil nil [52866 52973])
+            ("if" code nil nil [53087 53488])
+            ("if" code nil nil [53599 53700])
+            ("if" code nil nil [53846 53965])
+            ("org-eldoc-load" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [54079 54175])
+            ("add-hook" code nil nil [54177 54219])
+            ("if" code nil nil [54221 54324])
+            ("org-element-update-syntax" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [54444 54537])
+            ("org-element-interpret-data" function (:prototype-flag t) nil [54539 54757])
+            ("org-element-cache-reset" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [54759 54941])
+            ("org-element-cache-refresh" function (:prototype-flag t) nil [54943 55048])
+            ("org-element-at-point" function (:prototype-flag t) nil [55050 55840])
+            ("org-element-context" function (:prototype-flag t) nil [55842 56600])
+            ("if" code nil nil [56602 56709])
+            ("if" code nil nil [56852 56969])
+            ("if" code nil nil [57092 57197])
+            ("if" code nil nil [57314 57419])
+            ("if" code nil nil [57556 57669])
+            ("if" code nil nil [57780 57881])
+            ("if" code nil nil [57989 58088])
+            ("if" code nil nil [58205 58310])
+            ("if" code nil nil [58424 58521])
+            ("org-feed-update-all" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [58632 58743])
+            ("org-feed-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [58745 58984])
+            ("org-feed-goto-inbox" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [58986 59101])
+            ("org-feed-show-raw-feed" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [59103 59206])
+            ("if" code nil nil [59208 59309])
+            ("org-footnote-action" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [59432 59886])
+            ("if" code nil nil [59888 59997])
+            ("if" code nil nil [60120 60223])
+            ("if" code nil nil [60334 60430])
+            ("if" code nil nil [60544 60641])
+            ("org-id-get-create" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [60746 60977])
+            ("org-id-copy" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [60979 61107])
+            ("org-id-get" function (:prototype-flag t) nil [61109 61515])
+            ("org-id-get-with-outline-path-completion" function (:prototype-flag t) nil [61517 61896])
+            ("org-id-get-with-outline-drilling" function (:prototype-flag t) nil [61898 62174])
+            ("org-id-goto" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [62176 62328])
+            ("org-id-find" function (:prototype-flag t) nil [62330 62618])
+            ("org-id-new" function (:prototype-flag t) nil [62620 63090])
+            ("org-id-update-id-locations" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [63092 63426])
+            ("org-id-find-id-file" function (:prototype-flag t) nil [63428 63554])
+            ("org-id-store-link" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [63556 63660])
+            ("if" code nil nil [63662 63759])
+            ("org-indent-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [63876 64277])
+            ("if" code nil nil [64279 64377])
+            ("if" code nil nil [64491 64593])
+            ("if" code nil nil [64704 64805])
+            ("if" code nil nil [64942 65055])
+            ("if" code nil nil [65213 65335])
+            ("if" code nil nil [65455 65554])
+            ("org-irc-store-link" function (:prototype-flag t) nil [65662 65793])
+            ("if" code nil nil [65795 65894])
+            ("if" code nil nil [66008 66253])
+            ("if" code nil nil [66373 66480])
+            ("org-link-edit-forward-slurp" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [66606 67175])
+            ("org-link-edit-backward-slurp" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [67177 67655])
+            ("org-link-edit-forward-barf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [67657 68130])
+            ("org-link-edit-backward-barf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [68132 68605])
+            ("if" code nil nil [68607 68719])
+            ("org-lint" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [68830 69215])
+            ("if" code nil nil [69217 69318])
+            ("if" code nil nil [69429 69525])
+            ("if" code nil nil [69648 69763])
+            ("if" code nil nil [69886 69997])
+            ("if" code nil nil [70111 70214])
+            ("org-load-noerror-mustsuffix" function (:prototype-flag t) nil [70325 70455])
+            ("if" code nil nil [70457 70553])
+            ("if" code nil nil [70670 70768])
+            ("if" code nil nil [70876 70975])
+            ("if" code nil nil [71083 71182])
+            ("if" code nil nil [71290 71389])
+            ("if" code nil nil [71500 71601])
+            ("org-mobile-push" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [71743 71998])
+            ("org-mobile-pull" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [72000 72234])
+            ("if" code nil nil [72348 72451])
+            ("if" code nil nil [72568 72673])
+            ("if" code nil nil [72793 72900])
+            ("if" code nil nil [73014 73114])
+            ("org-passwords-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [73240 73330])
+            ("org-passwords" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [73332 73909])
+            ("if" code nil nil [73911 74022])
+            ("if" code nil nil [74148 74271])
+            ("org-plot/gnuplot" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [74407 74644])
+            ("if" code nil nil [74767 74876])
+            ("org-registry-show" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [74999 75145])
+            ("org-registry-visit" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [75147 75282])
+            ("org-registry-initialize" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [75284 75619])
+            ("org-registry-insinuate" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [75621 75794])
+            ("org-registry-update" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [75796 75905])
+            ("if" code nil nil [75907 76016])
+            ("if" code nil nil [76130 76233])
+            ("if" code nil nil [76350 76454])
+            ("org-screenshot-take" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [76591 77300])
+            ("org-screenshot-rotate-prev" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [77302 77521])
+            ("org-screenshot-rotate-next" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [77523 77742])
+            ("org-screenshot-show-unused" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [77744 77867])
+            ("if" code nil nil [77869 77982])
+            ("if" code nil nil [78108 78220])
+            ("if" code nil nil [78328 78423])
+            ("if" code nil nil [78572 78693])
+            ("if" code nil nil [78810 78915])
+            ("org-table-create-with-table.el" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [79054 79260])
+            ("org-table-create-or-convert-from-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [79262 79694])
+            ("org-table-create" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [79696 79872])
+            ("org-table-convert-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [79874 80824])
+            ("org-table-import" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [80826 81126])
+            ("org-table-export" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [81128 81858])
+            ("org-table-align" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [81860 81972])
+            ("org-table-begin" function (:prototype-flag t) nil [81974 82246])
+            ("org-table-end" function (:prototype-flag t) nil [82248 82506])
+            ("org-table-justify-field-maybe" function (:prototype-flag t) nil [82508 82729])
+            ("org-table-next-field" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [82731 82915])
+            ("org-table-previous-field" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [82917 83071])
+            ("org-table-next-row" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [83073 83237])
+            ("org-table-copy-down" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [83239 84052])
+            ("org-table-blank-field" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84054 84164])
+            ("org-table-field-info" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84166 84304])
+            ("org-table-current-dline" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84306 84443])
+            ("org-table-goto-column" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84445 84819])
+            ("org-table-insert-column" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84821 84921])
+            ("org-table-delete-column" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [84923 85019])
+            ("org-table-move-column-right" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85021 85115])
+            ("org-table-move-column-left" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85117 85209])
+            ("org-table-move-column" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85211 85360])
+            ("org-table-move-row-down" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85362 85447])
+            ("org-table-move-row-up" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85449 85530])
+            ("org-table-move-row" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85532 85664])
+            ("org-table-insert-row" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85666 85845])
+            ("org-table-insert-hline" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [85847 86040])
+            ("org-table-hline-and-move" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [86042 86181])
+            ("org-table-kill-row" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [86183 86300])
+            ("org-table-sort-lines" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [86302 87855])
+            ("org-table-cut-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [87857 88054])
+            ("org-table-copy-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [88056 88276])
+            ("org-table-paste-rectangle" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [88278 88617])
+            ("org-table-convert" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [88619 89221])
+            ("org-table-wrap-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [89223 90476])
+            ("org-table-edit-field" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [90478 90764])
+            ("org-table-sum" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [90766 91449])
+            ("org-table-get-stored-formulas" function (:prototype-flag t) nil [91451 91811])
+            ("org-table-maybe-eval-formula" function (:prototype-flag t) nil [91813 91980])
+            ("org-table-rotate-recalc-marks" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [91982 92418])
+            ("org-table-analyze" function (:prototype-flag t) nil [92420 92851])
+            ("org-table-maybe-recalculate-line" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [92853 93003])
+            ("org-table-eval-formula" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [93005 94915])
+            ("org-table-recalculate" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [94917 95489])
+            ("org-table-iterate" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [95491 95717])
+            ("org-table-recalculate-buffer-tables" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [95719 95841])
+            ("org-table-iterate-buffer-tables" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [95843 95987])
+            ("org-table-edit-formulas" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [95989 96114])
+            ("org-table-toggle-coordinate-overlays" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [96116 96245])
+            ("org-table-toggle-formula-debugger" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [96247 96360])
+            ("orgtbl-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [96362 96496])
+            ("orgtbl-exp-regexp" variable (:default-value "^\\([-+]?[0-9][0-9.]*\\)[eE]\\([-+]?[0-9]+\\)$") nil [96498 96639])
+            ("org-table-to-lisp" function (:prototype-flag t) nil [96641 96976])
+            ("orgtbl-to-generic" function (:prototype-flag t) nil [96978 99921])
+            ("orgtbl-to-tsv" function (:prototype-flag t) nil [99923 100049])
+            ("orgtbl-to-csv" function (:prototype-flag t) nil [100051 100241])
+            ("orgtbl-to-latex" function (:prototype-flag t) nil [100243 100902])
+            ("orgtbl-to-html" function (:prototype-flag t) nil [100904 101402])
+            ("orgtbl-to-texinfo" function (:prototype-flag t) nil [101404 101942])
+            ("orgtbl-to-orgtbl" function (:prototype-flag t) nil [101944 102520])
+            ("orgtbl-ascii-plot" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [102522 102912])
+            ("org-timer-start" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [103051 103639])
+            ("org-timer" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [103641 104218])
+            ("org-timer-change-times-in-region" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [104220 104353])
+            ("org-timer-item" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [104355 104485])
+            ("org-timer-set-timer" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [104487 105325])
+            ("org-toc-show" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [105433 105568])
+            ("if" code nil nil [105570 105665])
+            ("org-track-fetch-package" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [105779 106032])
+            ("org-track-compile-org" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [106034 106318])
+            ("if" code nil nil [106320 106423])
+            ("if" code nil nil [106546 106654])
+            ("org-release" function (:prototype-flag t) nil [106774 106917])
+            ("org-git-version" function (:prototype-flag t) nil [106919 107062])
+            ("org-odt-data-dir" variable (:default-value "/usr/share/emacs/etc/org") nil [107064 107148])
+            ("if" code nil nil [107253 107350])
+            ("if" code nil nil [107458 107557])
+            ("if" code nil nil [107683 107794])
+            ("if" code nil nil [107899 107996])
+            ("org-babel-do-load-languages" function (:prototype-flag t) nil [108092 108224])
+            ("org-babel-load-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [108226 108586])
+            ("org-version" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [108588 108898])
+            ("turn-on-orgtbl" function (:prototype-flag t) nil [108900 108990])
+            ("org-clock-persistence-insinuate" function (:prototype-flag t) nil [108992 109096])
+            ("org-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [109098 109972])
+            ("org-cycle" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [109974 112376])
+            ("org-global-cycle" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [112378 112634])
+            ("put" code nil nil [112635 112703])
+            ("orgstruct-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [112705 113017])
+            ("turn-on-orgstruct" function (:prototype-flag t) nil [113019 113115])
+            ("turn-on-orgstruct++" function (:prototype-flag t) nil [113117 113217])
+            ("org-run-like-in-org-mode" function (:prototype-flag t) nil [113219 113500])
+            ("org-store-link" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [113502 114223])
+            ("org-insert-link-global" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [114225 114387])
+            ("org-open-at-point-global" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [114389 114730])
+            ("org-open-link-from-string" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [114732 114880])
+            ("org-switchb" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [114882 115152])
+            ("org-cycle-agenda-files" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [115154 115394])
+            ("org-submit-bug-report" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [115396 115743])
+            ("org-reload" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [115745 115896])
+            ("org-customize" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [115898 115996])
+            ("if" code nil nil [115998 116110])
+            ("org-export-as" function (:prototype-flag t) nil [116228 117169])
+            ("org-export-string-as" function (:prototype-flag t) nil [117171 117738])
+            ("org-export-replace-region-by" function (:prototype-flag t) nil [117740 118001])
+            ("org-export-insert-default-template" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [118003 118514])
+            ("org-export-to-buffer" function (:prototype-flag t) nil [118516 119892])
+            ("function-put" code nil nil [119894 119955])
+            ("org-export-to-file" function (:prototype-flag t) nil [119957 121295])
+            ("function-put" code nil nil [121297 121356])
+            ("org-export-dispatch" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [121358 122129])
+            ("org-ascii-export-as-ascii" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [122265 123324])
+            ("org-ascii-export-to-ascii" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [123326 124268])
+            ("org-ascii-publish-to-ascii" function (:prototype-flag t) nil [124270 124565])
+            ("org-ascii-publish-to-latin1" function (:prototype-flag t) nil [124567 124865])
+            ("org-ascii-publish-to-utf8" function (:prototype-flag t) nil [124867 125161])
+            ("org-beamer-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [125300 125422])
+            ("org-beamer-export-as-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [125424 126512])
+            ("org-beamer-export-to-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [126514 127498])
+            ("org-beamer-export-to-pdf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [127500 128479])
+            ("org-beamer-select-environment" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [128481 128878])
+            ("org-beamer-publish-to-latex" function (:prototype-flag t) nil [128880 129201])
+            ("org-beamer-publish-to-pdf" function (:prototype-flag t) nil [129203 129531])
+            ("if" code nil nil [129645 129749])
+            ("if" code nil nil [129875 129987])
+            ("if" code nil nil [130095 130195])
+            ("if" code nil nil [130306 130414])
+            ("org-freemind-export-to-freemind" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [130534 131507])
+            ("if" code nil nil [131509 131617])
+            ("if" code nil nil [131728 131830])
+            ("put" code nil nil [131963 132036])
+            ("put" code nil nil [132038 132088])
+            ("put" code nil nil [132090 132146])
+            ("org-html-htmlize-generate-css" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [132148 132760])
+            ("org-html-export-as-html" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [132762 133828])
+            ("org-html-convert-region-to-html" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [133830 134111])
+            ("org-html-export-to-html" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [134113 135062])
+            ("org-html-publish-to-html" function (:prototype-flag t) nil [135064 135355])
+            ("org-icalendar-export-to-ics" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [135503 136315])
+            ("org-icalendar-export-agenda-files" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [136317 136534])
+            ("org-icalendar-combine-agenda-files" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [136536 136934])
+            ("org-koma-letter-export-as-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [137071 138173])
+            ("org-koma-letter-export-to-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [138175 139242])
+            ("org-koma-letter-export-to-pdf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [139244 140230])
+            ("if" code nil nil [140232 140346])
+            ("org-latex-export-as-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [140482 141566])
+            ("org-latex-convert-region-to-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [141568 141854])
+            ("org-latex-export-to-latex" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [141856 142795])
+            ("org-latex-export-to-pdf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [142797 143780])
+            ("org-latex-publish-to-latex" function (:prototype-flag t) nil [143782 144077])
+            ("org-latex-publish-to-pdf" function (:prototype-flag t) nil [144079 144382])
+            ("if" code nil nil [144487 144585])
+            ("org-md-export-as-markdown" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [144712 145509])
+            ("org-md-convert-region-to-md" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [145511 145793])
+            ("org-md-export-to-markdown" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [145795 146478])
+            ("org-md-publish-to-md" function (:prototype-flag t) nil [146480 146769])
+            ("put" code nil nil [146899 146967])
+            ("org-odt-export-as-odf" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [146969 147439])
+            ("org-odt-export-as-odf-and-open" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [147441 147662])
+            ("org-odt-export-to-odt" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [147664 148496])
+            ("org-odt-convert" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [148498 148917])
+            ("org-org-export-as-org" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [149047 150088])
+            ("org-org-export-to-org" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [150090 151014])
+            ("org-org-publish-to-org" function (:prototype-flag t) nil [151016 151303])
+            ("defalias" code nil nil [151445 151489])
+            ("org-publish" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [151491 151884])
+            ("org-publish-all" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [151886 152195])
+            ("org-publish-current-file" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [152197 152465])
+            ("org-publish-current-project" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [152467 152682])
+            ("org-rss-export-as-rss" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [152787 153577])
+            ("org-rss-export-to-rss" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [153579 154254])
+            ("org-rss-publish-to-rss" function (:prototype-flag t) nil [154256 154543])
+            ("if" code nil nil [154545 154643])
+            ("if" code nil nil [154745 154841])
+            ("org-taskjuggler-export" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [154978 156230])
+            ("org-taskjuggler-export-and-process" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [156232 157338])
+            ("org-taskjuggler-export-process-and-open" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [157340 157796])
+            ("if" code nil nil [157798 157912])
+            ("org-texinfo-publish-to-texinfo" function (:prototype-flag t) nil [158054 158357])
+            ("org-texinfo-convert-region-to-texinfo" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [158359 158655])
+            ("org-export-as" function (:prototype-flag t) nil [158748 159689])
+            ("org-export-string-as" function (:prototype-flag t) nil [159691 160258])
+            ("org-export-replace-region-by" function (:prototype-flag t) nil [160260 160521])
+            ("org-export-insert-default-template" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [160523 161034])
+            ("org-export-to-buffer" function (:prototype-flag t) nil [161036 162412])
+            ("function-put" code nil nil [162414 162475])
+            ("org-export-to-file" function (:prototype-flag t) nil [162477 163815])
+            ("function-put" code nil nil [163817 163876])
+            ("org-export-dispatch" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [163878 164649])
+            ("if" code nil nil [164651 164748])
+            ("org-loaddefs" package nil nil [164759 164782]))          
+      :file "org-loaddefs.el"
+      :pointmax 164934
+      :fsize 164933
+      :lastmodtime '(22576 56277 418880 460000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!org-plus-contrib-20161118!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

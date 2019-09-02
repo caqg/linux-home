@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-c9c150
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-c9c150"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-c9c180"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "json-snatcher-autoloads.el"
+      :pointmax 365
+      :fsize 732
+      :lastmodtime '(23387 65022 568887 559000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!json-snatcher-20150512.347!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

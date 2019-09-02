@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("man")) nil [1 15])
+            ("SUBDIRS" variable (:default-value ("texinfo")) nil [33 52])
+            ("SUBDIRS" variable (:default-value ("syntax")) nil [72 90])
+            ("dist_html_DATA" variable (:default-value ("faq.html")) nil [97 123]))          
+      :file "Makefile.am"
+      :pointmax 123
+      :fsize 122
+      :lastmodtime '(22382 5416 996237 994000)
+      :unmatched-syntax nil))
+  :file "!work!nano!doc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

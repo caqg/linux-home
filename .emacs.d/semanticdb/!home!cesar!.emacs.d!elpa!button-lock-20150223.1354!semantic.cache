@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-188e80c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-188e80c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-188e818"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "button-lock-autoloads.el"
+      :pointmax 361
+      :fsize 10477
+      :lastmodtime '(23387 65068 887037 259000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!button-lock-20150223.1354!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

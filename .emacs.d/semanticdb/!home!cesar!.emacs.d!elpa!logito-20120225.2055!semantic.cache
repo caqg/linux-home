@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-25dcfa8
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-25dcfa8"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-25dcfc4"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "logito-autoloads.el"
+      :pointmax 351
+      :fsize 552
+      :lastmodtime '(23387 65016 813166 187000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!logito-20120225.2055!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

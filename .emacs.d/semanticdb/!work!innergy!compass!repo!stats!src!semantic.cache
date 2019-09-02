@@ -1,0 +1,179 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [98 116])
+            ("stdlib.h" include (:system-flag t) nil [117 136])
+            ("packet_stats.h" include nil nil [138 163])
+            ("main" function (:type "int") nil [165 2314]))          
+      :file "echo-stats.cpp"
+      :pointmax 2315
+      :fsize 2314
+      :lastmodtime '(22515 19316 370463 158000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("packet_stats.h" include nil nil [97 122])
+            ("map" include (:system-flag t) nil [123 137])
+            ("iostream" include (:system-flag t) nil [138 157])
+            ("fstream" include (:system-flag t) nil [158 176])
+            ("string.h" include (:system-flag t) nil [177 196])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [198 218])
+            ("innergy_packet_statistics_manager" type
+               (:members 
+                  ( ("module_pkttype" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("char" type
+                                 (:pointer 1
+                                  :constant-flag t)
+                                  nil nil)
+                              ("u_int32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [264 307])
+                    ("module_pkttype_total_energy" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("char" type
+                                 (:pointer 1
+                                  :constant-flag t)
+                                  nil nil)
+                              ("map" type (:template-specifier 
+                                ( ("u_int32_t" type nil nil nil)
+                                  ("float" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [309 378])
+                    ("module_pkttype_total_cycles" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("char" type
+                                 (:pointer 1
+                                  :constant-flag t)
+                                  nil nil)
+                              ("map" type (:template-specifier 
+                                ( ("u_int32_t" type nil nil nil)
+                                  ("u_int32_t" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [380 453]))                  
+                :type "struct")
+                nil [220 456])
+            ("innergy_get_packet_energy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "float"
+                :arguments 
+                  ( ("manager" variable
+                       (:pointer 1
+                        :type ("innergy_packet_statistics_manager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3465 3508])
+                    ("module_type_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3510 3539])
+                    ("packet_type_code" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3541 3567])
+                    ("packet_length_in_cycles" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3569 3603]))                  )
+                (reparse-symbol extern-c-contents) [3431 3894])
+            ("innergy_put_packet_energy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("manager" variable
+                       (:pointer 1
+                        :type ("innergy_packet_statistics_manager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3046 3089])
+                    ("module_type_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3091 3120])
+                    ("packet_type_code" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3122 3148])
+                    ("packet_length_in_cycles" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3150 3183])
+                    ("energy_consumed_by_packet" variable (:type "float") (reparse-symbol arg-sub-list) [3185 3218]))                  )
+                (reparse-symbol extern-c-contents) [3013 3429])
+            ("innergy_close_statistics_manager" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("manager" variable
+                       (:pointer 1
+                        :type ("innergy_packet_statistics_manager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2933 2977]))                  )
+                (reparse-symbol extern-c-contents) [2893 3011])
+            ("innergy_save_statistics_manager" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("manager" variable
+                       (:pointer 1
+                        :type ("innergy_packet_statistics_manager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1930 1973])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1975 1997]))                  )
+                (reparse-symbol extern-c-contents) [1891 2891])
+            ("innergy_load_statistics_manager" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("innergy_packet_statistics_manager" type (:type "class") nil nil)
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [748 770]))                  
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [679 1889])
+            ("it_pkt_tot_cyc" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("iterator" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [653 677])
+            ("it_penrgy" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("iterator" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [600 619])
+            ("it_nm2penrgy" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("iterator" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [547 569]))          
+      :file "packet_stats.cpp"
+      :pointmax 3938
+      :fsize 3937
+      :lastmodtime '(22515 19316 370463 158000)
+      :unmatched-syntax '((punctuation 652 . 653) (punctuation 651 . 652) (punctuation 650 . 651) (symbol 642 . 650) (punctuation 640 . 641) (symbol 632 . 640) (punctuation 631 . 632) (symbol 628 . 631) (TYPEDEF 620 . 627) (punctuation 599 . 600) (punctuation 598 . 599) (punctuation 597 . 598) (FLOAT 592 . 597) (punctuation 590 . 591) (symbol 582 . 590) (punctuation 581 . 582) (symbol 578 . 581) (TYPEDEF 570 . 577) (punctuation 546 . 547) (punctuation 545 . 546) (punctuation 544 . 545) (punctuation 542 . 543) (FLOAT 537 . 542) (punctuation 535 . 536) (symbol 527 . 535) (punctuation 526 . 527) (symbol 523 . 526) (punctuation 521 . 522) (punctuation 520 . 521) (CHAR 516 . 520) (CONST 510 . 515) (punctuation 509 . 510) (symbol 506 . 509) (TYPEDEF 498 . 505)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vpi_user.h" include (:system-flag t) nil [1 23])
+            ("stats_compiletf" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52 67]))                  
+                :type "int")
+                nil [25 82])
+            ("stats_calltf" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("user_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [108 123]))                  
+                :type "int")
+                nil [84 201])
+            ("stats_register" function (:type "void") nil [203 458]))          
+      :file "vpi_wrapper.cpp"
+      :pointmax 521
+      :fsize 520
+      :lastmodtime '(22512 19643 680831 704000)
+      :unmatched-syntax '((punctuation 519 . 520) (semantic-list 496 . 519) (punctuation 494 . 495) (semantic-list 491 . 493) (semantic-list 465 . 491) (VOID 460 . 464))))
+  :file "!work!innergy!compass!repo!stats!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

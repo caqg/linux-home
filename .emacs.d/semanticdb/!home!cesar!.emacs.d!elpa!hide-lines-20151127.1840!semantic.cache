@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-4d178c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-4d178c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-ca4e8c"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "hide-lines-autoloads.el"
+      :pointmax 359
+      :fsize 1181
+      :lastmodtime '(23387 65029 200581 247000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!hide-lines-20151127.1840!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

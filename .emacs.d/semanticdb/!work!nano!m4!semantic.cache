@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("EXTRA_DIST" variable (:default-value ("ac_define_dir.m4" "codeset.m4" "gettext.m4" "glib-2.0.m4" "glibc21.m4" "iconv.m4" "intdiv0.m4" "inttypes_h.m4" "inttypes.m4" "inttypes-pri.m4" "isc-posix.m4" "lcmessage.m4" "lib-ld.m4" "lib-link.m4" "lib-prefix.m4" "progtest.m4" "stdint_h.m4" "uintmax_t.m4" "ulonglong.m4")) nil [1 266]))          
+      :file "Makefile.am"
+      :pointmax 266
+      :fsize 265
+      :lastmodtime '(22382 5417 237 854000)
+      :unmatched-syntax nil))
+  :file "!work!nano!m4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

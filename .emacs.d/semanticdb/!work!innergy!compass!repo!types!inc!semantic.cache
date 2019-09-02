@@ -1,0 +1,1693 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TIMESTATE_H" variable (:constant-flag t) nil [126 137])
+            ("signal.h" include nil nil [139 158])
+            ("timestamp.h" include nil nil [159 181])
+            ("design.h" include nil nil [182 201])
+            ("Innergy" type
+               (:members 
+                  ( ("energy_breakdown" type
+                       (:members 
+                          ( ("direct" variable (:type ("energy" type (:type "class") nil nil)) (reparse-symbol classsubparts) [251 265])
+                            ("indirect" variable (:type ("energy" type (:type "class") nil nil)) (reparse-symbol classsubparts) [267 283])
+                            ("total" function (:type ("energy" type (:type "class") nil nil)) (reparse-symbol classsubparts) [286 330])
+                            ("+=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("energy_breakdown" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [364 395]))                                  
+                                :type ("energy_breakdown" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [333 473]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [224 476])
+                    ("timestate" type
+                       (:members 
+                          ( ("simulation_time" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [498 524])
+                            ("signal_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("uint64_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [526 579])
+                            ("module_active_capacitance" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("capacitance" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [581 649])
+                            ("module_energy" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("energy_breakdown" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [651 712])
+                            ("module_packet_state" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("uint32_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [714 773]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [478 810]))                  
+                :type "namespace")
+                nil [203 1507]))          
+      :file "timestate.h"
+      :pointmax 1537
+      :fsize 1536
+      :lastmodtime '(22512 19643 684831 583000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TIMESTATE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TIMESTAMP_H" variable (:constant-flag t) nil [126 137])
+            ("cstdint" include (:system-flag t) nil [139 157])
+            ("Innergy" type
+               (:members 
+                  ( ("timestamp" type
+                       (:typedef ("std::uint64_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [180 212]))                  
+                :type "namespace")
+                nil [159 215]))          
+      :file "timestamp.h"
+      :pointmax 245
+      :fsize 244
+      :lastmodtime '(22502 57042 532536 831000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TIMESTAMP_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DESIGN_H" variable (:constant-flag t) nil [123 131])
+            ("assert.h" include (:system-flag t) nil [133 152])
+            ("string" include (:system-flag t) nil [154 171])
+            ("map" include (:system-flag t) nil [172 186])
+            ("unit.h" include nil nil [188 205])
+            ("logicsigs.h" include nil nil [206 228])
+            ("dense_attribute.h" include nil nil [229 257])
+            ("Innergy" type
+               (:members 
+                  ( ("module_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [490 529])
+                    ("usage_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [535 573])
+                    ("net_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [579 615])
+                    ("line_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [621 658])
+                    ("port_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [664 701])
+                    ("pin_id" type
+                       (:superclasses 
+                          ( ("int32_t" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [707 743])
+                    ("any_id" type
+                       (:members 
+                          ( ("item" type
+                               (:members 
+                                  ( ("is_none" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [942 950])
+                                    ("is_module" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [951 961])
+                                    ("is_usage" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [962 971])
+                                    ("is_net" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [972 979])
+                                    ("is_line" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [980 988])
+                                    ("is_port" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [989 997])
+                                    ("is_pin" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [998 1006]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [929 1007])
+                            ("kind" variable (:type ("item" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1010 1020])
+                            ("" type
+                               (:members 
+                                  ( ("module" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1032 1049])
+                                    ("usage" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1052 1067])
+                                    ("net" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1070 1081])
+                                    ("line" variable (:type ("line_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1084 1097])
+                                    ("port" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1100 1113])
+                                    ("pin" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1116 1127]))                                  
+                                :type "union")
+                                (reparse-symbol classsubparts) [1022 1131])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1173 1231])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1248 1262]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1233 1296])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1313 1326]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1298 1358])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1375 1386]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1360 1414])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("line_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1431 1443]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1416 1473])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1490 1502]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1475 1532])
+                            ("any_id" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("id" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1549 1560]))                                  
+                                :type ("any_id" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1534 1588])
+                            ("module_id" function (:type "int") (reparse-symbol classsubparts) [1647 1706])
+                            ("usage_id" function (:type "int") (reparse-symbol classsubparts) [1717 1773])
+                            ("net_id" function (:type "int") (reparse-symbol classsubparts) [1784 1834])
+                            ("line_id" function (:type "int") (reparse-symbol classsubparts) [1845 1898])
+                            ("port_id" function (:type "int") (reparse-symbol classsubparts) [1909 1962])
+                            ("pin_id" function (:type "int") (reparse-symbol classsubparts) [1973 2023]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [911 2130])
+                    ("usage" type (:type "class") (reparse-symbol namespacesubparts) [2198 2221])
+                    ("port" type (:type "class") (reparse-symbol namespacesubparts) [2227 2263])
+                    ("net" type (:type "class") (reparse-symbol namespacesubparts) [2269 2288])
+                    ("design" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2355 2362])
+                            ("design" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2385 2394])
+                            ("design" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2477 2487])
+                            ("private" label nil (reparse-symbol classsubparts) [2489 2497])
+                            ("module_id::none" variable (:type "int") (reparse-symbol classsubparts) [2542 2558])
+                            ("usage_id::none" variable (:type "int") (reparse-symbol classsubparts) [2582 2597])
+                            ("port_id::none" variable (:type "int") (reparse-symbol classsubparts) [2619 2633])
+                            ("pin_id::none" variable (:type "int") (reparse-symbol classsubparts) [2653 2666])
+                            ("net_id::none" variable (:type "int") (reparse-symbol classsubparts) [2686 2699])
+                            ("line_id::none" variable (:type "int") (reparse-symbol classsubparts) [2721 2735])
+                            ("allocate" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("T" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("last" variable
+                                       (:reference 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2781 2790]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol classsubparts) [2738 2926])
+                            ("module_name" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3439 3493])
+                            ("module_types" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3510 3558])
+                            ("usage_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("usage_id" type nil nil nil)
+                                      ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3607 3662])
+                            ("usage_name" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("usage_id" type nil nil nil)
+                                      ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3679 3731])
+                            ("usage_prototype" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("usage_id" type nil nil nil)
+                                      ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3748 3803])
+                            ("usage_instance" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("usage_id" type nil nil nil)
+                                      ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3805 3859])
+                            ("usage_items" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("usage_id" type nil nil nil)
+                                      ("std::map" type (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("port_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3894 3970])
+                            ("module_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("usage_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4053 4109])
+                            ("module_area" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("area" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4143 4190])
+                            ("module_items" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("module_id" type nil nil nil)
+                                      ("std::map" type (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("any_id" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4192 4269])
+                            ("net_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("module_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4403 4454])
+                            ("net_name" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4471 4519])
+                            ("net_kind" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("net" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4536 4576])
+                            ("net_msb" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4578 4626])
+                            ("net_lsb" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("net_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4628 4676])
+                            ("line_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("line_id" type nil nil nil)
+                                      ("net_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4739 4789])
+                            ("line_index" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("line_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4806 4858])
+                            ("line_module_capacitance" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("line_id" type nil nil nil)
+                                      ("std::map" type (:template-specifier 
+                                        ( ("module_id" type nil nil nil)
+                                          ("capacitance" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4927 5020])
+                            ("port_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("any_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5078 5128])
+                            ("port_name" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5192 5242])
+                            ("port_kind" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("port" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5310 5353])
+                            ("port_msb" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5355 5405])
+                            ("port_lsb" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5407 5457])
+                            ("port_connect" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("port_id" type nil nil nil)
+                                      ("net_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5459 5507])
+                            ("pin_container" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("pin_id" type nil nil nil)
+                                      ("port_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5534 5583])
+                            ("pin_index" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("pin_id" type nil nil nil)
+                                      ("signal_index" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5600 5650])
+                            ("pin_connect" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("pin_id" type nil nil nil)
+                                      ("line_id" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5719 5766])
+                            ("pin_capacitance" variable (:type ("dense_attribute" type
+                                 (:template-specifier 
+                                    ( ("pin_id" type nil nil nil)
+                                      ("capacitance" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5768 5823])
+                            ("public" label nil (reparse-symbol classsubparts) [5825 5832])
+                            ("build_type" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6937 6955]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6915 6956])
+                            ("query_name" function
+                               (:arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6983 6996]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6959 7030])
+                            ("what_types" function
+                               (:constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7033 7113])
+                            ("find_type" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7137 7155]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7116 7156])
+                            ("build_usage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("containing" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7200 7221])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7222 7240]))                                  
+                                :type ("usage_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7178 7241])
+                            ("query_container" function
+                               (:arguments 
+                                  ( ("m" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7271 7283]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7244 7321])
+                            ("query_name" function
+                               (:arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7348 7360]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7324 7393])
+                            ("query_path" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7420 7432]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7396 7433])
+                            ("assign_prototype" function
+                               (:arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7459 7470])
+                                    ("prototype" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7471 7492]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7436 7537])
+                            ("query_prototype" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7568 7580]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7540 7617])
+                            ("query_instance" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7647 7659]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7620 7695])
+                            ("what_ports" function
+                               (:constant-flag t
+                                :arguments 
+                                  ( ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7750 7762]))                                  
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("port_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [7698 7796])
+                            ("find_port" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7818 7827])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7828 7846]))                                  
+                                :type ("port_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7799 7847])
+                            ("build_instance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7898 7908]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7872 7909])
+                            ("query_container" function
+                               (:arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7938 7951]))                                  
+                                :type ("usage_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7912 8052])
+                            ("add_area" function
+                               (:arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8087 8099])
+                                    ("die_area" variable (:type ("area" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8100 8115]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [8072 8156])
+                            ("query_area" function
+                               (:arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8176 8189]))                                  
+                                :type ("area" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8159 8223])
+                            ("query_path" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8250 8263]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8226 8264])
+                            ("what_items" function
+                               (:constant-flag t
+                                :arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8318 8331]))                                  
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("any_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8267 8368])
+                            ("find_item" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8389 8401])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8402 8420]))                                  
+                                :type ("any_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8371 8421])
+                            ("build_net" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("containing" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8454 8475])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8478 8495])
+                                    ("kind" variable (:type ("net" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8498 8507])
+                                    ("msb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8510 8533])
+                                    ("lsb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8536 8560]))                                  
+                                :type ("net_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8434 8561])
+                            ("query_container" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8591 8601]))                                  
+                                :type ("module_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8564 8637])
+                            ("query_name" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8664 8674]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8640 8705])
+                            ("query_path" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8732 8742]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8708 8743])
+                            ("query_kind" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8762 8772]))                                  
+                                :type ("net" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8746 8803])
+                            ("query_msb" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8830 8840]))                                  
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8806 8870])
+                            ("query_lsb" function
+                               (:arguments 
+                                  ( ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8897 8907]))                                  
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8873 8937])
+                            ("add_capacitance" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("l" variable (:type ("line_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9057 9067])
+                                    ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9068 9080])
+                                    ("c" variable (:type ("capacitance" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9081 9096]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9035 9097])
+                            ("build_port" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("containing" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9218 9239])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9242 9259])
+                                    ("kind" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9262 9272])
+                                    ("msb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9275 9298])
+                                    ("lsb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9301 9325]))                                  
+                                :type ("port_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9196 9326])
+                            ("build_port" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("containing" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9390 9410])
+                                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9413 9430])
+                                    ("kind" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9433 9443])
+                                    ("msb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9446 9469])
+                                    ("lsb_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9472 9496]))                                  
+                                :type ("port_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9368 9497])
+                            ("query_container" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9539 9550]))                                  
+                                :type ("any_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9515 9587])
+                            ("query_name" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9614 9625]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9590 9657])
+                            ("query_path" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9684 9695]))                                  
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9660 9696])
+                            ("query_kind" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9716 9727]))                                  
+                                :type ("port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9699 9759])
+                            ("query_msb" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9786 9797]))                                  
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9762 9828])
+                            ("query_lsb" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9855 9866]))                                  
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9831 9897])
+                            ("build_connect" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("from" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9920 9933])
+                                    ("to" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9934 9945]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9900 9946])
+                            ("query_connect" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("p" variable (:type ("port_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10037 10048]))                                  
+                                :type ("net_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10014 10152])
+                            ("query_container" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10272 10282]))                                  
+                                :type ("port_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10247 10318])
+                            ("query_index" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10338 10348]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10321 10380])
+                            ("add_capacitance" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10405 10414])
+                                    ("value" variable (:type ("capacitance" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10415 10434]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10383 10476])
+                            ("query_capacitance" function
+                               (:arguments 
+                                  ( ("p" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10510 10520]))                                  
+                                :type ("capacitance" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10479 10558])
+                            ("build_connect" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("from" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10581 10593])
+                                    ("to" variable (:type ("line_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10594 10606]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [10561 10607])
+                            ("query_connect" function
+                               (:pointer 1
+                                :arguments 
+                                  ( ("p" variable (:type ("pin_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10634 10644]))                                  
+                                :type ("line_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10610 10677])
+                            ("find_any" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10712 10730]))                                  
+                                :type ("any_id" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10695 10731]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2339 10735]))                  
+                :type "namespace")
+                nil [259 10738]))          
+      :file "design.h"
+      :pointmax 10768
+      :fsize 10767
+      :lastmodtime '(22513 45541 774087 958000)
+      :unmatched-syntax '((punctuation 2719 . 2720) (symbol 2709 . 2718) (symbol 2701 . 2708) (punctuation 2684 . 2685) (symbol 2675 . 2683) (symbol 2668 . 2674) (punctuation 2651 . 2652) (symbol 2642 . 2650) (symbol 2635 . 2641) (punctuation 2617 . 2618) (symbol 2607 . 2616) (symbol 2599 . 2606) (punctuation 2580 . 2581) (symbol 2569 . 2579) (symbol 2560 . 2568) (punctuation 2540 . 2541) (symbol 2528 . 2539) (symbol 2518 . 2527) (punctuation 2474 . 2475) (DELETE 2468 . 2474) (punctuation 2466 . 2467) (semantic-list 2448 . 2465) (punctuation 2447 . 2448) (OPERATOR 2439 . 2447) (punctuation 2437 . 2438) (symbol 2431 . 2437) (punctuation 2428 . 2429) (DELETE 2422 . 2428) (punctuation 2420 . 2421) (semantic-list 2402 . 2419) (symbol 2396 . 2402) (symbol 2281 . 2285) (ENUM 2264 . 2268) (symbol 2254 . 2260) (punctuation 2252 . 2253) (symbol 2247 . 2252) (punctuation 2245 . 2246) (symbol 2240 . 2245) (ENUM 2222 . 2226) (symbol 2212 . 2218) (ENUM 2193 . 2197) (semantic-list 2099 . 2126) (semantic-list 2096 . 2098) (BOOL 2092 . 2096) (OPERATOR 2083 . 2091) (OPERATOR 1964 . 1972) (OPERATOR 1900 . 1908) (OPERATOR 1836 . 1844) (OPERATOR 1775 . 1783) (OPERATOR 1708 . 1716) (OPERATOR 1638 . 1646) (number 739 . 740) (punctuation 737 . 738) (symbol 732 . 736) (ENUM 702 . 706) (number 697 . 698) (punctuation 695 . 696) (symbol 690 . 694) (ENUM 659 . 663) (number 654 . 655) (punctuation 652 . 653) (symbol 647 . 651) (ENUM 616 . 620) (number 611 . 612) (punctuation 609 . 610) (symbol 604 . 608) (ENUM 574 . 578) (number 569 . 570) (punctuation 567 . 568) (symbol 562 . 566) (ENUM 530 . 534) (number 525 . 526) (punctuation 523 . 524) (symbol 518 . 522) (ENUM 485 . 489))
+      :lexical-table 
+        '(("DESIGN_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("UNIT_H" variable (:constant-flag t) nil [2799 2805])
+            ("Innergy" type
+               (:members 
+                  ( ("unit_box" type
+                       (:members 
+                          ( ("value" variable (:type "float") (reparse-symbol classsubparts) [3508 3520])
+                            ("unit" type
+                               (:template 
+                                  ( ("int" type (:typevar "resist") nil nil)
+                                    ("int" type (:typevar "current") nil nil)
+                                    ("int" type (:typevar "energy") nil nil)
+                                    ("int" type (:typevar "length") nil nil)
+                                    ("int" type (:typevar "duration") nil nil))                                  
+                                :type "class"
+                                :prototype t)
+                                (reparse-symbol classsubparts) [3524 3621])
+                            ("public" label nil (reparse-symbol classsubparts) [3623 3630])
+                            ("unit_box" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type "float") (reparse-symbol arg-sub-list) [3653 3664]))                                  
+                                :type ("constexpr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3633 3683]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3490 3686])
+                    ("unit" type
+                       (:template 
+                          ( ("int" type (:typevar "resist") nil nil)
+                            ("int" type (:typevar "current") nil nil)
+                            ("int" type (:typevar "energy") nil nil)
+                            ("int" type (:typevar "length") nil nil)
+                            ("int" type (:typevar "duration") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("value" variable (:type "float") (reparse-symbol classsubparts) [3776 3788])
+                            ("scalar" function
+                               (:arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3822 3832]))                                  
+                                :type "float")
+                                (reparse-symbol classsubparts) [3808 3854])
+                            ("public" label nil (reparse-symbol classsubparts) [3856 3863])
+                            ("unit" function
+                               (:constructor-flag t
+                                :type ("constexpr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3866 3896])
+                            ("unit" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3914 3928]))                                  
+                                :type ("constexpr" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3898 3953])
+                            ("+=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3975 3985]))                                  
+                                :type ("unit" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3956 4023])
+                            ("-=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4044 4054]))                                  
+                                :type ("unit" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4025 4092])
+                            ("==" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4113 4123]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4095 4154])
+                            ("!=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4174 4184]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4156 4215])
+                            ("<" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4235 4245]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4217 4276])
+                            (">" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4296 4306]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4278 4337])
+                            ("<=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4357 4367]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4339 4398])
+                            (">=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("arg" variable (:type ("unit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4418 4428]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4400 4459]))                          )
+                        (reparse-symbol namespacesubparts) [3688 4462])
+                    ("resistance" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("1") ("0") ("0") ("0") ("0"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4464 4500])
+                    ("current" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("0") ("1") ("0") ("0") ("0"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4501 4534])
+                    ("energy" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("0") ("0") ("1") ("0") ("0"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4535 4567])
+                    ("length" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("0") ("0") ("0") ("1") ("0"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4568 4600])
+                    ("area" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("0") ("0") ("0") ("2") ("0"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4601 4631])
+                    ("duration" type
+                       (:typedef ("unit" type
+                             (:template-specifier (("0") ("0") ("0") ("0") ("1"))
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [4632 4666])
+                    ("frequency" variable (:type "int") (reparse-symbol namespacesubparts) [4692 4702])
+                    ("power" variable (:type "int") (reparse-symbol namespacesubparts) [4728 4734])
+                    ("potential" variable (:type "int") (reparse-symbol namespacesubparts) [4761 4771])
+                    ("potential2" variable (:type "int") (reparse-symbol namespacesubparts) [4798 4809])
+                    ("capacitance" variable (:type "int") (reparse-symbol namespacesubparts) [4835 4847])
+                    ("ohm" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4874 4888]))                          
+                        :type ("resistance" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4859 4890])
+                    ("ampere" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4916 4930]))                          
+                        :type ("current" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4901 4932])
+                    ("joule" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4956 4970]))                          
+                        :type ("energy" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4943 4972])
+                    ("meter" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4996 5010]))                          
+                        :type ("length" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4983 5012])
+                    ("meter2" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5036 5050]))                          
+                        :type ("area" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5023 5052])
+                    ("second" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5079 5093]))                          
+                        :type ("duration" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5063 5095])
+                    ("hertz" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5122 5136]))                          
+                        :type ("frequency" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5106 5138])
+                    ("watt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5161 5175]))                          
+                        :type ("power" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5149 5177])
+                    ("volt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5203 5217]))                          
+                        :type ("potential" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5188 5219])
+                    ("farad" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("unit_box" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5248 5262]))                          
+                        :type ("capacitance" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5230 5264])
+                    ("+" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [5420 5476])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [5482 5539]))                          
+                        :type ("unit" type
+                             (:template-specifier 
+                                ( ("resistance" type nil nil nil)
+                                  ("current" type nil nil nil)
+                                  ("energy" type nil nil nil)
+                                  ("length" type nil nil nil)
+                                  ("duration" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5354 5586])
+                    ("-" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [5742 5798])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [5804 5861]))                          
+                        :type ("unit" type
+                             (:template-specifier 
+                                ( ("resistance" type nil nil nil)
+                                  ("current" type nil nil nil)
+                                  ("energy" type nil nil nil)
+                                  ("length" type nil nil nil)
+                                  ("duration" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5676 5908])
+                    ("" function
+                       (:operator-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [6064 6120])
+                            ("b" variable (:type "float") (reparse-symbol arg-sub-list) [6126 6135]))                          
+                        :type ("unit" type
+                             (:template-specifier 
+                                ( ("resistance" type nil nil nil)
+                                  ("current" type nil nil nil)
+                                  ("energy" type nil nil nil)
+                                  ("length" type nil nil nil)
+                                  ("duration" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5998 6174])
+                    ("" function
+                       (:operator-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("a" variable (:type "float") (reparse-symbol arg-sub-list) [6330 6338])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [6344 6401]))                          
+                        :type ("unit" type
+                             (:template-specifier 
+                                ( ("resistance" type nil nil nil)
+                                  ("current" type nil nil nil)
+                                  ("energy" type nil nil nil)
+                                  ("length" type nil nil nil)
+                                  ("duration" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [6264 6440])
+                    ("" function
+                       (:operator-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance1" type nil nil nil)
+                                      ("current1" type nil nil nil)
+                                      ("energy1" type nil nil nil)
+                                      ("length1" type nil nil nil)
+                                      ("duration1" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [6730 6791])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance2" type nil nil nil)
+                                      ("current2" type nil nil nil)
+                                      ("energy2" type nil nil nil)
+                                      ("length2" type nil nil nil)
+                                      ("duration2" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [6797 6859]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [6718 6906])
+                    ("/" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [7062 7118])
+                            ("b" variable (:type "float") (reparse-symbol arg-sub-list) [7124 7133]))                          
+                        :type ("unit" type
+                             (:template-specifier 
+                                ( ("resistance" type nil nil nil)
+                                  ("current" type nil nil nil)
+                                  ("energy" type nil nil nil)
+                                  ("length" type nil nil nil)
+                                  ("duration" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [6996 7172])
+                    ("/" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type "float") (reparse-symbol arg-sub-list) [7333 7341])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance" type nil nil nil)
+                                      ("current" type nil nil nil)
+                                      ("energy" type nil nil nil)
+                                      ("length" type nil nil nil)
+                                      ("duration" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [7347 7404]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7321 7443])
+                    ("/" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("a" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance1" type nil nil nil)
+                                      ("current1" type nil nil nil)
+                                      ("energy1" type nil nil nil)
+                                      ("length1" type nil nil nil)
+                                      ("duration1" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [7733 7794])
+                            ("b" variable (:type ("unit" type
+                                 (:template-specifier 
+                                    ( ("resistance2" type nil nil nil)
+                                      ("current2" type nil nil nil)
+                                      ("energy2" type nil nil nil)
+                                      ("length2" type nil nil nil)
+                                      ("duration2" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [7800 7862]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [7721 7909]))                  
+                :type "namespace")
+                nil [2807 7920]))          
+      :file "unit.h"
+      :pointmax 7950
+      :fsize 7949
+      :lastmodtime '(22513 44750 949908 658000)
+      :unmatched-syntax '((punctuation 7719 . 7720) (symbol 7709 . 7718) (punctuation 7708 . 7709) (symbol 7699 . 7708) (punctuation 7697 . 7698) (symbol 7690 . 7697) (punctuation 7689 . 7690) (symbol 7682 . 7689) (punctuation 7680 . 7681) (symbol 7673 . 7680) (punctuation 7672 . 7673) (symbol 7665 . 7672) (punctuation 7661 . 7662) (symbol 7653 . 7661) (punctuation 7652 . 7653) (symbol 7644 . 7652) (punctuation 7642 . 7643) (symbol 7631 . 7642) (punctuation 7630 . 7631) (symbol 7619 . 7630) (punctuation 7617 . 7618) (symbol 7613 . 7617) (symbol 7603 . 7612) (punctuation 7601 . 7602) (symbol 7591 . 7600) (INT 7587 . 7590) (punctuation 7585 . 7586) (symbol 7578 . 7585) (INT 7574 . 7577) (punctuation 7572 . 7573) (symbol 7565 . 7572) (INT 7561 . 7564) (punctuation 7559 . 7560) (symbol 7551 . 7559) (INT 7547 . 7550) (punctuation 7545 . 7546) (symbol 7534 . 7545) (INT 7530 . 7533) (punctuation 7525 . 7526) (symbol 7516 . 7525) (INT 7512 . 7515) (punctuation 7510 . 7511) (symbol 7503 . 7510) (INT 7499 . 7502) (punctuation 7497 . 7498) (symbol 7490 . 7497) (INT 7486 . 7489) (punctuation 7484 . 7485) (symbol 7476 . 7484) (INT 7472 . 7475) (punctuation 7470 . 7471) (symbol 7459 . 7470) (INT 7455 . 7458) (punctuation 7453 . 7454) (TEMPLATE 7445 . 7453) (punctuation 7319 . 7320) (symbol 7310 . 7318) (punctuation 7309 . 7310) (punctuation 7307 . 7308) (symbol 7301 . 7307) (punctuation 7300 . 7301) (punctuation 7298 . 7299) (symbol 7292 . 7298) (punctuation 7291 . 7292) (punctuation 7289 . 7290) (symbol 7282 . 7289) (punctuation 7281 . 7282) (punctuation 7279 . 7280) (symbol 7269 . 7279) (punctuation 7268 . 7269) (punctuation 7266 . 7267) (symbol 7262 . 7266) (symbol 7252 . 7261) (punctuation 7250 . 7251) (symbol 7241 . 7249) (INT 7237 . 7240) (punctuation 7235 . 7236) (symbol 7229 . 7235) (INT 7225 . 7228) (punctuation 7223 . 7224) (symbol 7217 . 7223) (INT 7213 . 7216) (punctuation 7211 . 7212) (symbol 7204 . 7211) (INT 7200 . 7203) (punctuation 7198 . 7199) (symbol 7188 . 7198) (INT 7184 . 7187) (punctuation 7182 . 7183) (TEMPLATE 7174 . 7182) (symbol 6986 . 6995) (punctuation 6984 . 6985) (symbol 6975 . 6983) (INT 6971 . 6974) (punctuation 6969 . 6970) (symbol 6963 . 6969) (INT 6959 . 6962) (punctuation 6957 . 6958) (symbol 6951 . 6957) (INT 6947 . 6950) (punctuation 6945 . 6946) (symbol 6938 . 6945) (INT 6934 . 6937) (punctuation 6932 . 6933) (symbol 6922 . 6932) (INT 6918 . 6921) (punctuation 6916 . 6917) (TEMPLATE 6908 . 6916) (punctuation 6716 . 6717) (symbol 6706 . 6715) (punctuation 6705 . 6706) (symbol 6696 . 6705) (punctuation 6694 . 6695) (symbol 6687 . 6694) (punctuation 6686 . 6687) (symbol 6679 . 6686) (punctuation 6677 . 6678) (symbol 6670 . 6677) (punctuation 6669 . 6670) (symbol 6662 . 6669) (punctuation 6658 . 6659) (symbol 6650 . 6658) (punctuation 6649 . 6650) (symbol 6641 . 6649) (punctuation 6639 . 6640) (symbol 6628 . 6639) (punctuation 6627 . 6628) (symbol 6616 . 6627) (punctuation 6614 . 6615) (symbol 6610 . 6614) (symbol 6600 . 6609) (punctuation 6598 . 6599) (symbol 6588 . 6597) (INT 6584 . 6587) (punctuation 6582 . 6583) (symbol 6575 . 6582) (INT 6571 . 6574) (punctuation 6569 . 6570) (symbol 6562 . 6569) (INT 6558 . 6561) (punctuation 6556 . 6557) (symbol 6548 . 6556) (INT 6544 . 6547) (punctuation 6542 . 6543) (symbol 6531 . 6542) (INT 6527 . 6530) (punctuation 6522 . 6523) (symbol 6513 . 6522) (INT 6509 . 6512) (punctuation 6507 . 6508) (symbol 6500 . 6507) (INT 6496 . 6499) (punctuation 6494 . 6495) (symbol 6487 . 6494) (INT 6483 . 6486) (punctuation 6481 . 6482) (symbol 6473 . 6481) (INT 6469 . 6472) (punctuation 6467 . 6468) (symbol 6456 . 6467) (INT 6452 . 6455) (punctuation 6450 . 6451) (TEMPLATE 6442 . 6450) (symbol 6254 . 6263) (punctuation 6252 . 6253) (symbol 6243 . 6251) (INT 6239 . 6242) (punctuation 6237 . 6238) (symbol 6231 . 6237) (INT 6227 . 6230) (punctuation 6225 . 6226) (symbol 6219 . 6225) (INT 6215 . 6218) (punctuation 6213 . 6214) (symbol 6206 . 6213) (INT 6202 . 6205) (punctuation 6200 . 6201) (symbol 6190 . 6200) (INT 6186 . 6189) (punctuation 6184 . 6185) (TEMPLATE 6176 . 6184) (symbol 5988 . 5997) (punctuation 5986 . 5987) (symbol 5977 . 5985) (INT 5973 . 5976) (punctuation 5971 . 5972) (symbol 5965 . 5971) (INT 5961 . 5964) (punctuation 5959 . 5960) (symbol 5953 . 5959) (INT 5949 . 5952) (punctuation 5947 . 5948) (symbol 5940 . 5947) (INT 5936 . 5939) (punctuation 5934 . 5935) (symbol 5924 . 5934) (INT 5920 . 5923) (punctuation 5918 . 5919) (TEMPLATE 5910 . 5918) (symbol 5666 . 5675) (punctuation 5664 . 5665) (symbol 5655 . 5663) (INT 5651 . 5654) (punctuation 5649 . 5650) (symbol 5643 . 5649) (INT 5639 . 5642) (punctuation 5637 . 5638) (symbol 5631 . 5637) (INT 5627 . 5630) (punctuation 5625 . 5626) (symbol 5618 . 5625) (INT 5614 . 5617) (punctuation 5612 . 5613) (symbol 5602 . 5612) (INT 5598 . 5601) (punctuation 5596 . 5597) (TEMPLATE 5588 . 5596) (symbol 5344 . 5353) (punctuation 5342 . 5343) (symbol 5333 . 5341) (INT 5329 . 5332) (punctuation 5327 . 5328) (symbol 5321 . 5327) (INT 5317 . 5320) (punctuation 5315 . 5316) (symbol 5309 . 5315) (INT 5305 . 5308) (punctuation 5303 . 5304) (symbol 5296 . 5303) (INT 5292 . 5295) (punctuation 5290 . 5291) (symbol 5280 . 5290) (INT 5276 . 5279) (punctuation 5274 . 5275) (TEMPLATE 5266 . 5274) (semantic-list 5256 . 5262) (symbol 5220 . 5229) (semantic-list 5211 . 5217) (symbol 5178 . 5187) (semantic-list 5169 . 5175) (symbol 5139 . 5148) (semantic-list 5130 . 5136) (symbol 5096 . 5105) (semantic-list 5087 . 5093) (symbol 5053 . 5062) (semantic-list 5044 . 5050) (symbol 5013 . 5022) (semantic-list 5004 . 5010) (symbol 4973 . 4982) (semantic-list 4964 . 4970) (symbol 4933 . 4942) (semantic-list 4924 . 4930) (symbol 4891 . 4900) (semantic-list 4882 . 4888) (symbol 4849 . 4858) (punctuation 4833 . 4834) (number 4832 . 4833) (punctuation 4831 . 4832) (number 4830 . 4831) (punctuation 4829 . 4830) (number 4828 . 4829) (punctuation 4827 . 4828) (punctuation 4826 . 4827) (number 4825 . 4826) (punctuation 4824 . 4825) (number 4823 . 4824) (punctuation 4822 . 4823) (symbol 4818 . 4822) (TYPEDEF 4810 . 4817) (punctuation 4796 . 4797) (number 4795 . 4796) (punctuation 4794 . 4795) (punctuation 4793 . 4794) (number 4792 . 4793) (punctuation 4791 . 4792) (number 4790 . 4791) (punctuation 4789 . 4790) (number 4788 . 4789) (punctuation 4787 . 4788) (punctuation 4786 . 4787) (number 4785 . 4786) (punctuation 4784 . 4785) (symbol 4780 . 4784) (TYPEDEF 4772 . 4779) (punctuation 4759 . 4760) (number 4758 . 4759) (punctuation 4757 . 4758) (punctuation 4756 . 4757) (number 4755 . 4756) (punctuation 4754 . 4755) (number 4753 . 4754) (punctuation 4752 . 4753) (number 4751 . 4752) (punctuation 4750 . 4751) (punctuation 4749 . 4750) (number 4748 . 4749) (punctuation 4747 . 4748) (symbol 4743 . 4747) (TYPEDEF 4735 . 4742) (punctuation 4726 . 4727) (number 4725 . 4726) (punctuation 4724 . 4725) (punctuation 4723 . 4724) (number 4722 . 4723) (punctuation 4721 . 4722) (number 4720 . 4721) (punctuation 4719 . 4720) (number 4718 . 4719) (punctuation 4717 . 4718) (number 4716 . 4717) (punctuation 4715 . 4716) (symbol 4711 . 4715) (TYPEDEF 4703 . 4710) (punctuation 4690 . 4691) (number 4689 . 4690) (punctuation 4688 . 4689) (punctuation 4687 . 4688) (number 4686 . 4687) (punctuation 4685 . 4686) (number 4684 . 4685) (punctuation 4683 . 4684) (number 4682 . 4683) (punctuation 4681 . 4682) (number 4680 . 4681) (punctuation 4679 . 4680) (symbol 4675 . 4679) (TYPEDEF 4667 . 4674) (symbol 3798 . 3807) (FRIEND 3791 . 3797))
+      :lexical-table 
+        '(("UNIT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("SIGNAL_H" variable (:constant-flag t) nil [123 131])
+            ("assert.h" include (:system-flag t) nil [133 152])
+            ("stdexcept" include (:system-flag t) nil [154 174])
+            ("limits" include (:system-flag t) nil [175 192])
+            ("cstdint" include (:system-flag t) nil [193 211])
+            ("Innergy" type
+               (:members 
+                  ( ("signal_value" type
+                       (:members 
+                          ( ("x" variable
+                               (:constant-flag t
+                                :default-value (258 259)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [254 259])
+                            ("z" variable
+                               (:constant-flag t
+                                :default-value (265 266)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [261 266])
+                            ("f" variable
+                               (:constant-flag t
+                                :default-value (272 273)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [268 273])
+                            ("t" variable
+                               (:constant-flag t
+                                :default-value (279 280)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [275 280]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [234 283])
+                    ("signal_bits" variable
+                       (:default-value "2"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [337 357])
+                    ("signal_mask" variable
+                       (:default-value "3"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [368 388])
+                    ("signal_index" type
+                       (:typedef ("std::uint32_t" type (:type "class") nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [390 425])
+                    ("signal_to_char" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("value" variable (:type ("signal_value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [523 543]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [495 570])
+                    ("char_to_signal" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("text" variable (:type "char") (reparse-symbol arg-sub-list) [608 619]))                          
+                        :type ("signal_value" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [572 747])
+                    ("log2size" function
+                       (:arguments 
+                          ( ("digits" variable (:type "int") (reparse-symbol arg-sub-list) [773 785]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [759 977])
+                    ("at_signal" function
+                       (:template 
+                          ( ("Unsigned" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("physical_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1033 1061])
+                            ("word_index" variable
+                               (:reference 1
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1063 1088])
+                            ("signal_shift" variable
+                               (:reference 1
+                                :type ("signal_index" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1090 1118]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [979 1470])
+                    ("get_signal" function
+                       (:template 
+                          ( ("Unsigned" type (:type "class") nil nil))                          
+                        :type ("signal_value" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("container" variable
+                               (:pointer 1
+                                :type ("Unsigned" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1535 1555])
+                            ("physical_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1557 1586]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [1472 1849])
+                    ("put_signal" function
+                       (:template 
+                          ( ("Unsigned" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("container" variable
+                               (:pointer 1
+                                :type ("Unsigned" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1906 1926])
+                            ("physical_index" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1928 1956])
+                            ("value" variable (:type ("signal_value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1958 1978]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [1851 2281])
+                    ("string_of_signals" function
+                       (:template 
+                          ( ("Unsigned" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("container" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Unsigned" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2352 2378])
+                            ("lines" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2380 2400]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [2283 2956])
+                    ("compress_signal_string" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("long_text" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3002 3025]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2958 3252])
+                    ("physical_index" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("logical_index" variable (:type "int") (reparse-symbol arg-sub-list) [3282 3300])
+                            ("msb_index" variable (:type "int") (reparse-symbol arg-sub-list) [3302 3316])
+                            ("lsb_index" variable (:type "int") (reparse-symbol arg-sub-list) [3318 3333]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3254 3487]))                  
+                :type "namespace")
+                nil [213 3490]))          
+      :file "logicsigs.h"
+      :pointmax 3522
+      :fsize 3521
+      :lastmodtime '(22529 59713 75234 222000)
+      :unmatched-syntax '((symbol 749 . 758) (symbol 358 . 367) (symbol 327 . 336))
+      :lexical-table 
+        '(("SIGNAL_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DENSE_ATTRIBUTE_H" variable (:constant-flag t) nil [132 149])
+            ("limits" include (:system-flag t) nil [151 168])
+            ("utility" include (:system-flag t) nil [169 187])
+            ("vector" include (:system-flag t) nil [188 205])
+            ("functional" include (:system-flag t) nil [206 227])
+            ("Innergy" type
+               (:members 
+                  ( ("bit_vector" type
+                       (:members 
+                          ( ("data" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [270 295])
+                            ("std::numeric_limits::digits" variable (:type "int") (reparse-symbol classsubparts) [330 366])
+                            ("mask" variable
+                               (:default-value "bits-1"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [456 477])
+                            ("public" label nil (reparse-symbol classsubparts) [479 486])
+                            ("reserve" function
+                               (:arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [503 516]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [489 576])
+                            ("resize" function
+                               (:arguments 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [592 605]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [579 664])
+                            ("get" function
+                               (:arguments 
+                                  ( ("idx" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [677 689]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [667 786])
+                            ("set" function
+                               (:arguments 
+                                  ( ("idx" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [799 811]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [789 902]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [250 906])
+                    ("dense_attribute" type
+                       (:template 
+                          ( ("Key" type (:type "class") nil nil)
+                            ("Mapped" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [974 981])
+                            ("size_type" type
+                               (:typedef ("std::vector::size_type" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [984 1042])
+                            ("key_type" type
+                               (:typedef ("Key" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1044 1065])
+                            ("mapped_type" type
+                               (:typedef ("Mapped" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1067 1094])
+                            ("private" label nil (reparse-symbol classsubparts) [1096 1104])
+                            ("data" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Mapped" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1107 1132])
+                            ("okay" variable (:type ("bit_vector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1134 1150])
+                            ("public" label nil (reparse-symbol classsubparts) [1152 1159])
+                            ("dense_attribute" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :type ("dense_attribute" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1162 1201])
+                            ("dense_attribute" function
+                               (:constructor-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("size" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1228 1244]))                                  
+                                :type ("dense_attribute" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1204 1294])
+                            ("find" function
+                               (:pointer 1
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("key_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1324 1344]))                                  
+                                :type ("mapped_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1298 1515])
+                            ("[]" function
+                               (:operator-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("key_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1551 1571]))                                  
+                                :type ("mapped_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1518 1644])
+                            ("insert" function
+                               (:pointer 1
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("key_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1675 1695]))                                  
+                                :type ("mapped_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1647 1866])
+                            ("insert" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("key_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1889 1908])
+                                    ("mapped" variable (:type ("mapped_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1909 1929]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1869 1960])
+                            ("foreach" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("" variable (:type ("std::function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1986 2000])
+                                    ("" variable (:type "void") (reparse-symbol arg-sub-list) [2001 2031])
+                                    ("" variable (:type ("work" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2034 2040]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1963 2175]))                          )
+                        (reparse-symbol namespacesubparts) [908 2179]))                  
+                :type "namespace")
+                nil [229 2182]))          
+      :file "dense_attribute.h"
+      :pointmax 2212
+      :fsize 2211
+      :lastmodtime '(22503 17634 169068 74000)
+      :unmatched-syntax '((punctuation 2032 . 2033) (semantic-list 2005 . 2031) (punctuation 1999 . 2000) (symbol 446 . 455) (STATIC 439 . 445) (punctuation 436 . 437) (semantic-list 430 . 436) (THROW 425 . 430) (punctuation 423 . 424) (number 421 . 422) (punctuation 419 . 420) (number 416 . 418) (punctuation 414 . 415) (number 412 . 413) (punctuation 410 . 411) (number 407 . 409) (punctuation 405 . 406) (punctuation 404 . 405) (symbol 399 . 403) (punctuation 397 . 398) (symbol 392 . 396) (symbol 385 . 391) (symbol 375 . 384) (STATIC 368 . 374) (punctuation 326 . 327) (symbol 321 . 325) (symbol 314 . 320) (symbol 304 . 313) (STATIC 297 . 303))
+      :lexical-table 
+        '(("DENSE_ATTRIBUTE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("PERFORMANCE_H" variable (:constant-flag t) nil [31 44])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("Innergy" type
+               (:members 
+                  ( ("performance" type
+                       (:members 
+                          ( ("num_rtl_nodes" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [145 173])
+                            ("num_rtl_scopes" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [175 204])
+                            ("num_power_calcs" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [206 236])
+                            ("num_power_mesgs" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [238 268])
+                            ("num_power_entries" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [270 302])
+                            ("procstat_vm_peak" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [337 368])
+                            ("procstat_vm_size" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [384 415])
+                            ("procstat_vm_data" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [431 462])
+                            ("rusage_usr_time" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [478 508])
+                            ("rusage_sys_time" variable
+                               (:default-value "0"
+                                :type "long long")
+                                (reparse-symbol classsubparts) [527 557])
+                            ("public" label nil (reparse-symbol classsubparts) [576 583])
+                            ("inc_rtl_nodes" function
+                               (:arguments 
+                                  ( ("addnl" variable (:type "int") (reparse-symbol arg-sub-list) [605 616]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [585 644])
+                            ("inc_rtl_scopes" function
+                               (:arguments 
+                                  ( ("addnl" variable (:type "int") (reparse-symbol arg-sub-list) [667 678]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [646 707])
+                            ("inc_power_calcs" function
+                               (:arguments 
+                                  ( ("addnl" variable (:type "int") (reparse-symbol arg-sub-list) [731 742]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [709 772])
+                            ("inc_power_mesgs" function
+                               (:arguments 
+                                  ( ("addnl" variable (:type "int") (reparse-symbol arg-sub-list) [796 807]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [774 837])
+                            ("inc_power_entries" function
+                               (:arguments 
+                                  ( ("addnl" variable (:type "int") (reparse-symbol arg-sub-list) [863 874]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [839 906])
+                            ("compilation_barrier" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [909 936])
+                            ("gather_live_resources" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [939 968])
+                            ("gather_fake_resources" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [970 999])
+                            ("emit_performance_summary" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("logfile" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1032 1055]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1001 1056])
+                            ("private" label nil (reparse-symbol classsubparts) [1058 1066])
+                            ("gather_procstat_resources" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1068 1101])
+                            ("gather_one_procstat_resource" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("line" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1138 1163]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1103 1164])
+                            ("gather_rusage_resources" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1166 1197]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [88 1201])
+                    ("perferator" variable
+                       (:typemodifiers ("extern")
+                        :type ("performance" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1224 1254]))                  
+                :type "namespace")
+                nil [67 1257]))          
+      :file "performance.h"
+      :pointmax 1304
+      :fsize 1303
+      :lastmodtime '(22329 17515 41347 275000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PERFORMANCE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DESIGNIO_H" variable (:constant-flag t) nil [28 38])
+            ("iostream" include (:system-flag t) nil [40 59])
+            ("design.h" include nil nil [61 80])
+            ("Innergy" type
+               (:members 
+                  ( ("write_diffable_design" function
+                       (:prototype-flag t
+                        :typemodifiers ("extern")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [138 155])
+                            ("d" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [156 167]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [103 168])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("extern")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [204 221])
+                            ("u" variable (:type ("usage" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [222 231]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [170 232])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("extern")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [267 284])
+                            ("p" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [285 293]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [233 294])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("extern")
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [329 346])
+                            ("n" variable (:type ("net" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [347 354]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [295 355]))                  
+                :type "namespace")
+                nil [82 358]))          
+      :file "designio.h"
+      :pointmax 388
+      :fsize 387
+      :lastmodtime '(22513 45541 774087 958000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DESIGNIO_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("TEST_BUILD_SIMPLE_H" variable (:constant-flag t) nil [37 56])
+            ("design.h" include nil nil [58 77])
+            ("Innergy" type
+               (:members 
+                  ( ("test_build_simple" function
+                       (:prototype-flag t
+                        :typemodifiers ("extern")
+                        :arguments 
+                          ( ("base" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [131 145]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [100 146]))                  
+                :type "namespace")
+                nil [79 149]))          
+      :file "test_build_simple.h"
+      :pointmax 179
+      :fsize 178
+      :lastmodtime '(22529 59713 75234 222000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_BUILD_SIMPLE_H")
+          )
+))
+  :file "!work!innergy!compass!repo!types!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

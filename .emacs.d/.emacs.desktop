@@ -1,0 +1,43 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Jul  6 12:02:14 2019
+;; Desktop file format version 208
+;; Emacs version 27.0.50
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23840 61494 952368 160000) (desktop . "208") "cesar@cesar-U64-14" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xfthb x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#839496") (background-color . "#002b36") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#839496") (sticky) (environment) (last-focus-update . t) (frameset--id . "C987-C9FD-5CB2-DC7B") (frameset--mini t . t) (height . 48) (width . 115) (modeline . t) (unsplittable) (left . 32) (top . 19) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 72) (min-pixel-width . 90) (min-pixel-height-ignore . 72) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 18) (min-pixel-width-safe . 18)) leaf (pixel-width . 1051) (pixel-height . 846) (total-width . 116) (total-height . 47) (normal-height . 1.0) (normal-width . 1.0) (buffer "*info*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 3058075) (start . 3056110)) (prev-buffers (".bashrc" 1 1) ("*shell*" 1 21))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '(#("faces" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("fontm" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("emacs" 0 5 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/" "~/.bashrc" "~/.emacs.d/elpa/flycheck-20190704.926/flycheck-autoloads.el" "~/.emacs.d/elpa/editorconfig-20190703.336/editorconfig-autoloads.el" "~/.emacs.d/elpa/ess-20190702.1827/ess-autoloads.el" "~/.emacs.d/elpa/org-mime-20190702.1129/org-mime-autoloads.el" "~/.emacs.d/elpa/slime-20190702.2155/slime-autoloads.el" "~/.emacs.d/elpa/magit-20190630.1329/magit-autoloads.el" "~/.emacs.d/elpa/org-journal-20190701.1600/org-journal-autoloads.el" "~/.emacs.d/elpa/org-plus-contrib-20190701/org-loaddefs.el" "~/.emacs.d/elpa/org-plus-contrib-20190701/org-plus-contrib-autoloads.el" "~/.emacs.d/elpa/transient-20190630.1359/transient-autoloads.el" "~/.emacs.d/elpa/org-20190701/org-loaddefs.el" "~/.emacs.d/elpa/org-20190701/org-autoloads.el" "~/.bashrc" "~/.bash_env" "~/.emacs.d/init.el" "~/.emacs.d/elpa/tramp-term-20190628.1207/tramp-term-autoloads.el" "~/.emacs.d/elpa/org-journal-20190626.2048/org-journal-autoloads.el" "~/.emacs.d/elpa/magit-20190625.1946/magit-autoloads.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  nil
+  "*info*"
+  'Info-mode
+  nil
+  3058075
+  '(3049766 nil)
+  t
+  '("/usr/local/share/info/elisp" "Face Attributes" ((history ("/usr/local/share/info/elisp" "Faces" 3047523) ("/usr/local/share/info/elisp" "Top" 64093) ("dir" "Top" 2376) ("/usr/local/share/info/elisp" "Top" 4952) ("/usr/local/share/info/elisp" "Display" 2955319) ("/usr/local/share/info/elisp" "Faces" 3048309) ("/usr/local/share/info/elisp" "Low-Level Font" 3100864) ("/usr/local/share/info/elisp" "Font Type" 164147) ("/usr/local/share/info/elisp" "Top" 11052) ("dir" "Top" 2376) ("/usr/local/share/info/emacs" "Top" 1141) ("dir" "Top" 548))))
+  '((tab-width . 8) (buffer-display-time 23840 61493 707398 422000) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (truncate-lines . t))
+  '((mark-ring (38040 1113 1 1 1 3047523 3049766))))
+
+(desktop-create-buffer 208
+  "/home/cesar/.bashrc"
+  ".bashrc"
+  'sh-mode
+  '(auto-fill-mode form-feed-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-display-time 23839 64141 861819 393000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+

@@ -1,0 +1,840 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("config.h" include (:system-flag t) nil [931 950])
+            ("string.h" include (:system-flag t) nil [1031 1050])
+            ("limits.h" include (:system-flag t) nil [1051 1070])
+            ("stdint.h" include (:system-flag t) nil [1071 1090])
+            ("unistd.h" include (:system-flag t) nil [1163 1182])
+            ("memory_warnings" function
+               (:type "void"
+                :arguments 
+                  ( ("start" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10655 10667])
+                    ("warnfun" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10685 10698]))                          
+                        :type "void")
+                        nil nil))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10626 10700])
+            ("mstats" function
+               (:type ("mstats" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10548 10553]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10519 10554])
+            ("mstats" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("bytes_total" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10176 10195])
+                    ("chunks_used" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10230 10249])
+                    ("bytes_used" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10290 10308])
+                    ("chunks_free" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10356 10375])
+                    ("bytes_free" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10411 10429]))                  )
+                (reparse-symbol extern-c-contents) [10154 10479])
+            ("muntrace" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10105 10110]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10083 10111])
+            ("mtrace" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10076 10081]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10056 10082])
+            ("mprobe" function
+               (:type ("mcheck_status" type (:type "enum") nil nil)
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9987 9997]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9953 9998])
+            ("mcheck" function
+               (:type "int"
+                :arguments 
+                  ( ("abortfunc" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable (:type ("mcheck_status" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [9740 9759]))                          
+                        :type "void")
+                        nil nil))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9702 9761])
+            ("mcheck_status" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("MCHECK_DISABLED" variable
+                       (:constant-flag t
+                        :default-value (9138 9140)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [9120 9140])
+                    ("MCHECK_OK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [9192 9202])
+                    ("MCHECK_FREE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [9231 9243])
+                    ("MCHECK_HEAD" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [9275 9287])
+                    ("MCHECK_TAIL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [9339 9401]))                  )
+                (reparse-symbol extern-c-contents) [9093 9402])
+            ("__memalign_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8947 8959])
+                    ("alignment" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8960 8977]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8914 8978])
+            ("__realloc_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8889 8899])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8900 8912]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8857 8913])
+            ("__malloc_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8843 8855]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8812 8856])
+            ("__free_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8800 8810]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8772 8811])
+            ("__malloc_initialize_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8765 8770]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8724 8771])
+            ("__malloc_initialize" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8679 8684]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8647 8685])
+            ("__malloc_initialized" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [8553 8585])
+            ("__malloc_extra_blocks" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [8443 8479])
+            ("__after_morecore_hook" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8308 8313]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8270 8314])
+            ("__default_morecore" function
+               (:type "void"
+                :arguments 
+                  ( ("size" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8139 8154]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8106 8155])
+            ("__morecore" function
+               (:type "void"
+                :arguments 
+                  ( ("size" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8050 8065]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :function-pointer t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8022 8066])
+            ("malloc_find_object_address" function
+               (:type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7907 7917]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7866 7918])
+            ("UNLOCK_ALIGNED_BLOCKS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7720 7741])
+            ("LOCK_ALIGNED_BLOCKS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7690 7709])
+            ("UNLOCK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7673 7679])
+            ("LOCK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [7658 7662])
+            ("_free_internal_nolock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6938 6945]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6903 6946])
+            ("_realloc_internal_nolock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6886 6893])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6894 6901]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6847 6902])
+            ("_malloc_internal_nolock" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6838 6845]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6800 6846])
+            ("_free_internal" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6791 6798]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6763 6799])
+            ("_realloc_internal" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6746 6753])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6754 6761]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6714 6762])
+            ("_malloc_internal" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6705 6712]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6674 6713])
+            ("_bytes_free" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [6485 6511])
+            ("_chunks_free" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [6457 6484])
+            ("_bytes_used" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [6430 6456])
+            ("_chunks_used" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [6402 6429])
+            ("_aligned_blocks" variable
+               (:type ("alignlist" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [6335 6376])
+            ("alignlist" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("alignlist" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6179 6202])
+                    ("aligned" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6207 6221])
+                    ("exact" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6275 6287]))                  )
+                (reparse-symbol extern-c-contents) [6154 6334])
+            ("_fraghead" variable
+               (:type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :dereference 1)
+                (reparse-symbol extern-c-contents) [6057 6088])
+            ("list" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5960 5978])
+                    ("prev" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5983 6001]))                  )
+                (reparse-symbol extern-c-contents) [5940 6006])
+            ("_heaplimit" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [5867 5892])
+            ("_heapindex" variable
+               (:type ("size_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [5798 5823])
+            ("ADDRESS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5691 5698])
+            ("BLOCK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5629 5634])
+            ("_heapinfo" variable
+               (:type ("malloc_info" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [5542 5572])
+            ("_heapbase" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [5450 5473])
+            ("malloc_info" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("" type
+                     (:members 
+                        ( ("busy" variable (:type ("" type
+                               (:members 
+                                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [4678 4687])
+                                    ("info" variable (:type ("" type
+                                         (:members 
+                                            ( ("frag" variable (:type ("" type
+                                                   (:members 
+                                                      ( ("nfree" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4723 4736])
+                                                        ("first" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4780 4793]))                                                      
+                                                    :type "struct")
+                                                    nil nil)) (reparse-symbol classsubparts) [4705 4849])
+                                              ("size" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5061 5076]))                                            
+                                          :type "union")
+                                          nil nil)) (reparse-symbol classsubparts) [4689 5087]))                                  
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [4541 5101])
+                          ("free" variable (:type ("" type
+                               (:members 
+                                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5217 5229])
+                                    ("next" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5274 5286])
+                                    ("prev" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5323 5335]))                                  
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [5201 5388]))                        
+                      :type "union")
+                      nil nil))
+                (reparse-symbol extern-c-contents) [4473 5405])
+            ("FINAL_FREE_BLOCKS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4400 4417])
+            ("HEAP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4224 4228])
+            ("BLOCKIFY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4061 4069])
+            ("BLOCKSIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4027 4036])
+            ("BLOCKLOG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3986 3994])
+            ("INT_BIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3943 3950])
+            ("free" function
+               (:type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3191 3201]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3173 3202])
+            ("ATTRIBUTE_MALLOC_SIZE" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3076 3106])
+            ("ATTRIBUTE_ALLOC_SIZE" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2927 2954])
+            ("ATTRIBUTE_MALLOC_SIZE" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2753 2781])
+            ("stddef.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [2659 2678])
+            ("errno.h" include (:system-flag t) nil [11628 11646])
+            ("__default_morecore" variable (:type "int") nil [11687 11706])
+            ("__malloc_hook" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11768 11780]))                  
+                :type "void")
+                nil [11744 11781])
+            ("_heapbase" variable
+               (:pointer 1
+                :type "char")
+                nil [11830 11846])
+            ("_heapinfo" variable
+               (:pointer 1
+                :type ("malloc_info" type (:type "class") nil nil))
+                nil [11928 11951])
+            ("heapsize" variable
+               (:typemodifiers ("static")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [11984 12007])
+            ("_heapindex" variable (:type ("size_t" type (:type "class") nil nil)) nil [12048 12066])
+            ("_heaplimit" variable (:type ("size_t" type (:type "class") nil nil)) nil [12110 12128])
+            ("_fraghead" variable
+               (:dereference 1
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12172 12204])
+            ("_chunks_used" variable (:type ("size_t" type (:type "class") nil nil)) nil [12230 12250])
+            ("_bytes_used" variable (:type ("size_t" type (:type "class") nil nil)) nil [12251 12270])
+            ("_chunks_free" variable (:type ("size_t" type (:type "class") nil nil)) nil [12271 12291])
+            ("_bytes_free" variable (:type ("size_t" type (:type "class") nil nil)) nil [12292 12311])
+            ("__malloc_initialized" variable (:type "int") nil [12341 12366])
+            ("__malloc_extra_blocks" variable (:type ("size_t" type (:type "class") nil nil)) nil [12368 12397])
+            ("__malloc_initialize_hook" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12433 12438]))                  
+                :type "void")
+                nil [12399 12439])
+            ("__after_morecore_hook" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12471 12476]))                  
+                :type "void")
+                nil [12440 12477])
+            ("PROTECT_MALLOC_STATE" variable (:constant-flag t) nil [13706 13726])
+            ("align" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13802 13814]))                  
+                :type "void")
+                nil [13781 14446])
+            ("get_contiguous_space" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14639 14654])
+                    ("position" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14655 14670]))                  
+                :type "void")
+                nil [14603 15127])
+            ("register_heapinfo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15345 15350]))                  
+                :type "void")
+                nil [15314 15859])
+            ("malloc_initialize_1" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16983 16988]))                  
+                :type "void")
+                nil [16950 17581])
+            ("__malloc_initialize" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [17815 17820]))                  
+                :type "int")
+                nil [17790 17925])
+            ("morecore_recursing" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [17927 17957])
+            ("morecore_nolock" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18084 18096]))                  
+                :type "void")
+                nil [18053 21538])
+            ("_malloc_internal_nolock" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21610 21622]))                  
+                :type "void")
+                nil [21578 28094])
+            ("_malloc_internal" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28121 28133]))                  
+                :type "void")
+                nil [28096 28239])
+            ("malloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28256 28268]))                  
+                :type "void")
+                nil [28241 28893])
+            ("_malloc" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29056 29063]))                  
+                :type "void")
+                nil [29034 29064])
+            ("_free" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29084 29091]))                  
+                :type "void")
+                nil [29065 29092])
+            ("_realloc" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29116 29123])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29124 29131]))                  
+                :type "void")
+                nil [29093 29132])
+            ("_malloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29150 29162]))                  
+                :type "void")
+                nil [29134 29190])
+            ("_free" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29204 29214]))                  
+                :type "void")
+                nil [29192 29232])
+            ("_realloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29251 29261])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29262 29274]))                  
+                :type "void")
+                nil [29234 29308])
+            ("__free_hook" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("__ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30281 30293]))                  
+                :type "void")
+                nil [30260 30294])
+            ("_aligned_blocks" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("alignlist" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [30346 30387])
+            ("_free_internal_nolock" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30498 30508]))                  
+                :type "void")
+                nil [30470 38375])
+            ("_free_internal" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [38493 38503]))                  
+                :type "void")
+                nil [38472 38562])
+            ("free" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [38610 38620]))                  
+                :type "void")
+                nil [38599 38736])
+            ("cfree" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [38843 38853]))                  
+                :type "void")
+                nil [38831 38871])
+            ("__realloc_hook" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [39924 39934])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39935 39947]))                  
+                :type "void")
+                nil [39899 39948])
+            ("_realloc_internal_nolock" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [40336 40346])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40347 40359]))                  
+                :type "void")
+                nil [40303 43555])
+            ("_realloc_internal" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43583 43593])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43594 43606]))                  
+                :type "void")
+                nil [43557 43718])
+            ("realloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43736 43746])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43747 43759]))                  
+                :type "void")
+                nil [43720 43962])
+            ("calloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44903 44916])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44917 44929]))                  
+                :type "void")
+                nil [44888 45173])
+            ("__sbrk" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("increment" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46269 46289]))                  
+                :type "void")
+                nil [46248 46290])
+            ("__default_morecore" function
+               (:pointer 1
+                :arguments 
+                  ( ("increment" variable (:type ("ptrdiff_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46532 46552]))                  
+                :type "void")
+                nil [46505 46765])
+            ("__memalign_hook" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47483 47495])
+                    ("alignment" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47496 47513]))                  
+                :type "void")
+                nil [47457 47514])
+            ("aligned_alloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("alignment" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47538 47555])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47556 47568]))                  
+                :type "void")
+                nil [47516 49605])
+            ("memalign" function
+               (:pointer 1
+                :arguments 
+                  ( ("alignment" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49715 49732])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49733 49745]))                  
+                :type "void")
+                nil [49698 49791])
+            ("posix_memalign" function
+               (:arguments 
+                  ( ("memptr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [49926 49940])
+                    ("alignment" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49941 49958])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49959 49971]))                  
+                :type "int")
+                nil [49906 50227])
+            ("valloc" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51162 51169]))                  
+                :type "void")
+                nil [51141 51170])
+            ("getpagesize.h" include nil nil [51226 51251])
+            ("getpagesize" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [51303 51308]))                  
+                :type "int")
+                nil [51279 51309])
+            ("pagesize" variable
+               (:typemodifiers ("static")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [51318 51341])
+            ("valloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51358 51370]))                  
+                :type "void")
+                nil [51343 51468]))          
+      :file "gmalloc.c"
+      :pointmax 59243
+      :fsize 59242
+      :lastmodtime '(22176 33707 16580 693000)
+      :unmatched-syntax '((punctuation 11685 . 11686) (semantic-list 11668 . 11684) (semantic-list 11654 . 11667) (punctuation 11653 . 11654) (VOID 11648 . 11652) (semantic-list 3099 . 3104) (semantic-list 3048 . 3075) (symbol 3041 . 3047) (punctuation 3040 . 3041) (VOID 3035 . 3039) (EXTERN 3028 . 3034) (semantic-list 2949 . 2952) (semantic-list 2902 . 2926) (symbol 2894 . 2901) (punctuation 2893 . 2894) (VOID 2888 . 2892) (EXTERN 2881 . 2887) (semantic-list 2776 . 2779) (semantic-list 2739 . 2752) (symbol 2732 . 2738) (punctuation 2731 . 2732) (VOID 2726 . 2730) (EXTERN 2719 . 2725) (punctuation 11685 . 11686) (semantic-list 11668 . 11684) (semantic-list 11654 . 11667) (punctuation 11653 . 11654) (VOID 11648 . 11652) (semantic-list 3099 . 3104) (semantic-list 3048 . 3075) (symbol 3041 . 3047) (punctuation 3040 . 3041) (VOID 3035 . 3039) (EXTERN 3028 . 3034) (semantic-list 2949 . 2952) (semantic-list 2902 . 2926) (symbol 2894 . 2901) (punctuation 2893 . 2894) (VOID 2888 . 2892) (EXTERN 2881 . 2887) (semantic-list 2776 . 2779) (semantic-list 2739 . 2752) (symbol 2732 . 2738) (punctuation 2731 . 2732) (VOID 2726 . 2730) (EXTERN 2719 . 2725) (punctuation 11685 . 11686) (semantic-list 11668 . 11684) (semantic-list 11654 . 11667) (punctuation 11653 . 11654) (VOID 11648 . 11652) (semantic-list 3099 . 3104) (semantic-list 3048 . 3075) (symbol 3041 . 3047) (punctuation 3040 . 3041) (VOID 3035 . 3039) (EXTERN 3028 . 3034) (semantic-list 2949 . 2952) (semantic-list 2902 . 2926) (symbol 2894 . 2901) (punctuation 2893 . 2894) (VOID 2888 . 2892) (EXTERN 2881 . 2887) (semantic-list 2776 . 2779) (semantic-list 2739 . 2752) (symbol 2732 . 2738) (punctuation 2731 . 2732) (VOID 2726 . 2730) (EXTERN 2719 . 2725))
+      :lexical-table 
+        '(("BLOCKSIZE" . ((semantic-list "(1 << BLOCKLOG)" 4037 . 4052)))
+          ("BLOCK" (spp-arg-list ("A") 5634 . 5637) . ((semantic-list "(((char *) (A) - _heapbase) / BLOCKSIZE + 1)" 5638 . 5682)))
+          ("INT_BIT" . ((semantic-list "(CHAR_BIT * sizeof (int))" 3952 . 3977)))
+          ("BLOCKLOG" . ((semantic-list "(INT_BIT > 16 ? 12 : 9)" 3995 . 4018)))
+          ("UNLOCK_ALIGNED_BLOCKS" (spp-arg-list nil 7741 . 7743))
+          ("ADDRESS" (spp-arg-list ("B") 5698 . 5701) . ((semantic-list "((void *) (((B) - 1) * BLOCKSIZE + _heapbase))" 5702 . 5748)))
+          ("HEAP" . ((semantic-list "(INT_BIT > 16 ? 4194304 : 65536)" 4230 . 4262)))
+          ("BLOCKIFY" (spp-arg-list ("SIZE") 4069 . 4075) . ((semantic-list "(((SIZE) + BLOCKSIZE - 1) / BLOCKSIZE)" 4076 . 4114)))
+          ("PROTECT_MALLOC_STATE" (spp-arg-list ("PROT") 13726 . 13732))
+          ("UNLOCK" (spp-arg-list nil 7679 . 7681))
+          ("LOCK_ALIGNED_BLOCKS" (spp-arg-list nil 7709 . 7711))
+          ("LOCK" (spp-arg-list nil 7662 . 7664))
+          ("FINAL_FREE_BLOCKS" . ((number "8" 4418 . 4419)))
+          )
+))
+  :file "!work!emacs!master!test!manual!etags!c-src!emacs!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

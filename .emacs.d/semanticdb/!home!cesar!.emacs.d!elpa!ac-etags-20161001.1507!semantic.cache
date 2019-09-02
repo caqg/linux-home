@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-51a3d8
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-51a3d8"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-1692624"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "ac-etags-autoloads.el"
+      :pointmax 355
+      :fsize 815
+      :lastmodtime '(23387 65086 366490 385000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!ac-etags-20161001.1507!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

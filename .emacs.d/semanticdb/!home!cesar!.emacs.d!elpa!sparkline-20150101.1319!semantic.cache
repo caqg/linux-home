@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-1082158
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-1082158"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-10821a0"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "sparkline-autoloads.el"
+      :pointmax 357
+      :fsize 573
+      :lastmodtime '(23387 64919 387524 637000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!sparkline-20150101.1319!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1077 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("fstream" include (:system-flag t) nil [1 19])
+            ("ctime" include (:system-flag t) nil [20 36])
+            ("vcdio.h" include nil nil [38 56])
+            ("libvcdio.h" include nil nil [57 78])
+            ("Innergy" type
+               (:members 
+                  ( ("abs_diff" function
+                       (:arguments 
+                          ( ("a" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [124 139])
+                            ("b" variable (:type ("signal_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [140 156]))                          
+                        :type ("signal_index" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [101 191])
+                    (">>" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [281 298])
+                            ("vc" variable
+                               (:reference 1
+                                :type ("vcd_code" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [299 313]))                          
+                        :type ("std::istream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [254 534])
+                    ("<<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [563 580])
+                            ("vc" variable (:type ("vcd_code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [581 594]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [536 860])
+                    ("begin" function
+                       (:parent "vcd_reader::changes"
+                        :type ("vcd_reader::changes::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [884 966])
+                    ("end" function
+                       (:parent "vcd_reader::changes"
+                        :type ("vcd_reader::changes::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [968 1048])
+                    ("iterator" function
+                       (:constructor-flag t
+                        :parent "vcd_reader::timestates::iterator"
+                        :arguments 
+                          ( ("t" variable
+                               (:pointer 1
+                                :type ("timestate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1095 1108])
+                            ("r" variable
+                               (:pointer 1
+                                :type ("vcd_reader" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1109 1123])
+                            ("c" variable (:type ("changes::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1124 1145]))                          
+                        :type ("iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1050 1278])
+                    ("store_change" function
+                       (:parent "vcd_reader::timestates::iterator"
+                        :arguments 
+                          ( ("vc" variable
+                               (:reference 1
+                                :type ("vcd_change" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1334 1350]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1281 2220])
+                    ("value_changes" function
+                       (:parent "vcd_reader::timestates::iterator"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2222 2605])
+                    ("++" function
+                       (:operator-flag t
+                        :parent "vcd_reader::timestates::iterator"
+                        :type ("vcd_reader::timestates::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2607 2974])
+                    ("begin" function
+                       (:parent "vcd_reader::timestates"
+                        :type ("vcd_reader::timestates::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2976 3431])
+                    ("end" function
+                       (:parent "vcd_reader::timestates"
+                        :type ("vcd_reader::timestates::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3433 3519])
+                    ("vcd_reader" function
+                       (:constructor-flag t
+                        :parent "vcd_reader"
+                        :type ("vcd_reader" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3538 3588])
+                    ("begin" function
+                       (:parent "vcd_writer::changes"
+                        :type ("vcd_writer::changes::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3612 3714])
+                    ("write_change" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("vcd_change" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3751 3772]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3716 4539])
+                    ("begin" function
+                       (:parent "vcd_writer::timestates"
+                        :type ("vcd_writer::timestates::iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4542 4651])
+                    ("vcd_writer" function
+                       (:constructor-flag t
+                        :parent "vcd_writer"
+                        :type ("vcd_writer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4669 4697])
+                    ("=" function
+                       (:operator-flag t
+                        :parent "vcd_writer::timestates::iterator::proxy"
+                        :arguments 
+                          ( ("next" variable
+                               (:reference 1
+                                :type ("timestate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4793 4810]))                          
+                        :type ("vcd_writer::timestates::iterator::proxy" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4700 7138])
+                    ("rtl_vcd_reader" function
+                       (:constructor-flag t
+                        :parent "rtl_vcd_reader"
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7200 7217])
+                            ("to_update" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7218 7237]))                          
+                        :type ("rtl_vcd_reader" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7167 7265])
+                    ("rtl_vcd_writer" function
+                       (:constructor-flag t
+                        :parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7300 7317])
+                            ("to_emit" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7318 7335]))                          
+                        :type ("rtl_vcd_writer" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7267 7411])
+                    ("write_date" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("disable_date" variable (:type "bool") (reparse-symbol arg-sub-list) [7446 7465]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7413 8058])
+                    ("write_version" function
+                       (:parent "rtl_vcd_writer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8060 8207])
+                    ("write_timescale" function
+                       (:parent "rtl_vcd_writer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8209 8379])
+                    ("union_of_modules" function
+                       (:arguments 
+                          ( ("accumulator" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8405 8438])
+                            ("davvm" variable
+                               (:reference 1
+                                :type ("dense_attribute" type
+                                     (:template-specifier 
+                                        ( ("vcd_code" type nil nil nil)
+                                          ("std::vector" type (:template-specifier 
+                                            ( ("module_id" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8440 8500]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8381 8620])
+                    ("union_of_modules" function
+                       (:arguments 
+                          ( ("accumulator" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8646 8679])
+                            ("d" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8681 8691])
+                            ("davvn" variable
+                               (:reference 1
+                                :type ("dense_attribute" type
+                                     (:template-specifier 
+                                        ( ("vcd_code" type nil nil nil)
+                                          ("std::vector" type (:template-specifier 
+                                            ( ("net_id" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8693 8750]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8622 8946])
+                    ("union_of_modules" function
+                       (:arguments 
+                          ( ("accumulator" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8972 9005])
+                            ("more" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9007 9034]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [8948 9088])
+                    ("unseen_containers" function
+                       (:arguments 
+                          ( ("accumulator" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9130 9163])
+                            ("d" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9165 9176]))                          
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("module_id" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [9090 9610])
+                    ("closure_of_containers" function
+                       (:arguments 
+                          ( ("accumulator" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9641 9674])
+                            ("d" variable
+                               (:reference 1
+                                :type ("design" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9676 9687]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9612 9964])
+                    ("invert" function
+                       (:template 
+                          ( ("key_type" type (:type "class") nil nil)
+                            ("mapped_type" type (:type "class") nil nil))                          
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("mapped_type" type nil nil nil)
+                                  ("key_type" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("multimap" variable
+                               (:reference 1
+                                :type ("dense_attribute" type
+                                     (:template-specifier 
+                                        ( ("key_type" type nil nil nil)
+                                          ("std::vector" type (:template-specifier 
+                                            ( ("mapped_type" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10060 10125]))                          )
+                        (reparse-symbol namespacesubparts) [9966 10327])
+                    ("try_emit_analysis_var" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10374 10391])
+                            ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10393 10405])
+                            ("mv_map" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("module_id" type nil nil nil)
+                                          ("vcd_code" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10407 10448]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10329 10738])
+                    ("try_emit_net" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10775 10792])
+                            ("n" variable (:type ("net_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10793 10803]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10740 11068])
+                    ("try_emit_usage" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11107 11124])
+                            ("u" variable (:type ("usage_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11125 11137]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [11070 11402])
+                    ("emit_module_body" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("m" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11443 11456]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [11404 12512])
+                    ("emit_module" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12548 12565])
+                            ("id" variable (:type ("module_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12566 12580]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12514 12707])
+                    ("emit_types" function
+                       (:parent "rtl_vcd_writer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12709 12928])
+                    ("write_hierarchy" function
+                       (:parent "rtl_vcd_writer"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [12930 14083])
+                    ("begin_write" function
+                       (:parent "rtl_vcd_writer"
+                        :arguments 
+                          ( ("start" variable (:type ("timestamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14119 14136]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14085 14371]))                  
+                :type "namespace")
+                nil [80 14374]))          
+      :file "vcdio.cpp"
+      :pointmax 14396
+      :fsize 14395
+      :lastmodtime '(22549 15145 395634 212000)
+      :unmatched-syntax '((punctuation 251 . 252) (number 250 . 251) (punctuation 248 . 249) (string 244 . 247) (punctuation 242 . 243) (string 238 . 241) (punctuation 236 . 237) (symbol 227 . 235) (symbol 203 . 226) (symbol 193 . 202)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("libvcdio.h" include nil nil [150 171])
+            ("algorithm" include (:system-flag t) nil [172 192])
+            ("cassert" include (:system-flag t) nil [193 211])
+            ("fstream" include (:system-flag t) nil [212 230])
+            ("iostream" include (:system-flag t) nil [231 250])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [252 272])
+            ("usage" function
+               (:arguments 
+                  ( ("pname" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [285 297]))                  
+                :type "void")
+                nil [274 404])
+            ("KComment" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [625 667])
+            ("KDate" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [668 704])
+            ("KEndDefinitions" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [705 756])
+            ("KScope" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [757 795])
+            ("KTimeScale" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [796 842])
+            ("KUpScope" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [843 885])
+            ("KVar" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [886 920])
+            ("KVersion" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [921 963])
+            ("KSimTime" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [964 1008])
+            ("KScalarVC" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1009 1064])
+            ("KVectorVC" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1065 1120])
+            ("KRealVC" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1121 1182])
+            ("KDumpAll" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1183 1225])
+            ("KDumpOff" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1226 1268])
+            ("KDumpOn" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1269 1309])
+            ("KDumpVars" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1310 1354])
+            ("KAtSimEnd" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1355 1399])
+            ("KPfxScopeType" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1401 1448])
+            ("KPfxVarType" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [1449 1494])
+            ("string" variable (:type "int") nil [1515 1522])
+            ("eventCounts" variable (:type ("map" type
+                 (:template-specifier 
+                    ( ("EventKey" type nil nil nil)
+                      ("EventCount" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [1557 1595])
+            ("mark" function
+               (:arguments 
+                  ( ("where" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1607 1620])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1621 1632]))                  
+                :type "void")
+                nil [1597 1675])
+            ("resetTestCounts" function (:type "void") nil [1677 1725])
+            ("testCountsCommentCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1752 1772])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1773 1780])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1781 1792])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1793 1800]))                  
+                :type "int")
+                nil [1732 1855])
+            ("testCountsDateCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1879 1899])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1900 1906])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1907 1918])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1919 1926]))                  
+                :type "void")
+                nil [1857 1978])
+            ("testCountsEndDefinitionsCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2012 2032])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2033 2039])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2040 2051])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2052 2059]))                  
+                :type "void")
+                nil [1980 2121])
+            ("testCountsTimeScaleCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2150 2170])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2171 2177])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2189])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2190 2197]))                  
+                :type "void")
+                nil [2123 2254])
+            ("testCountsUpScopeCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2281 2301])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2302 2308])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2309 2320])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2321 2328]))                  
+                :type "void")
+                nil [2256 2383])
+            ("testCountsVersionCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2410 2430])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2431 2437])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2438 2449])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2450 2457]))                  
+                :type "void")
+                nil [2385 2512])
+            ("testCountsScopeCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2537 2557])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2558 2564])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2574 2585])
+                    ("scopeType" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2603])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2604 2611]))                  
+                :type "void")
+                nil [2514 2710])
+            ("testCountsVarCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2733 2753])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2754 2760])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2761 2772])
+                    ("varType" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2780 2795])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2796 2803])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2804 2811])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2812 2819])
+                    ("" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("size_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [2820 2835]))                  
+                :type "void")
+                nil [2712 2928])
+            ("testCountsSimTimeCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2955 2975])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2976 2982])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2987 2998])
+                    ("" variable (:type ("Innergy::VcdParser::TimeStamp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2999 3029]))                  
+                :type "void")
+                nil [2930 3083])
+            ("testCountsScalarVCCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3111 3131])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3132 3138])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3139 3146])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3147 3154]))                  
+                :type "void")
+                nil [3085 3227])
+            ("testCountsVectorVCCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3255 3275])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3276 3282])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3283 3290])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3291 3298]))                  
+                :type "void")
+                nil [3229 3362])
+            ("testCountsRealVCCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3388 3408])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3409 3415])
+                    ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3416 3423])
+                    ("" variable (:type "double") (reparse-symbol arg-sub-list) [3424 3431]))                  
+                :type "void")
+                nil [3364 3491])
+            ("testCountsDumpAllCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3518 3538])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3539 3545])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3546 3557])
+                    ("first" variable (:type "bool") (reparse-symbol arg-sub-list) [3558 3569]))                  
+                :type "void")
+                nil [3493 3693])
+            ("testCountsDumpOnCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3719 3739])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3740 3746])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3747 3758])
+                    ("first" variable (:type "bool") (reparse-symbol arg-sub-list) [3759 3770]))                  
+                :type "void")
+                nil [3695 3893])
+            ("testCountsDumpOffCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3920 3940])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3941 3947])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3948 3959])
+                    ("first" variable (:type "bool") (reparse-symbol arg-sub-list) [3960 3971]))                  
+                :type "void")
+                nil [3895 4095])
+            ("testCountsDumpVarsCB" function
+               (:arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4123 4143])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4144 4150])
+                    ("kwd" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4151 4162])
+                    ("first" variable (:type "bool") (reparse-symbol arg-sub-list) [4163 4174]))                  
+                :type "void")
+                nil [4097 4299])
+            ("testCountsAtSimEndCB" function
+               (:arguments 
+                  ( ("vcdParser" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4327 4357])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4358 4364])
+                    ("andNoMore" variable (:type "bool") (reparse-symbol arg-sub-list) [4365 4380]))                  
+                :type "void")
+                nil [4301 4550])
+            ("registerTestCallbacks" function
+               (:arguments 
+                  ( ("parser" variable
+                       (:reference 1
+                        :type ("Innergy::VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4582 4609]))                  
+                :type "void")
+                nil [4555 6249])
+            ("printResults" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6269 6287]))                  
+                :type "void")
+                nil [6251 6514])
+            ("process" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6529 6547]))                  
+                :type "void")
+                nil [6516 6853])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6864 6873])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6874 6886]))                  
+                :type "int")
+                nil [6855 7613]))          
+      :file "vcdparser-tester.cpp"
+      :pointmax 7882
+      :fsize 7881
+      :lastmodtime '(22550 33992 902989 231000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [147 165])
+            ("cctype" include (:system-flag t) nil [166 183])
+            ("fstream" include (:system-flag t) nil [184 202])
+            ("iostream" include (:system-flag t) nil [203 222])
+            ("sstream" include (:system-flag t) nil [223 241])
+            ("stack" include (:system-flag t) nil [242 258])
+            ("string" include (:system-flag t) nil [259 276])
+            ("libvcdio.h" include nil nil [278 299])
+            ("Innergy" type
+               (:members 
+                  ( ("VcdParser" function
+                       (:constructor-flag t
+                        :parent "VcdParser"
+                        :arguments 
+                          ( ("inputStream" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [355 381]))                          
+                        :type ("VcdParser" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [334 1905])
+                    ("parse" function
+                       (:parent "VcdParser"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2052 2302])
+                    ("parseNext" function
+                       (:parent "VcdParser"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2370 4277])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [2754 2775])
+                    ("result" variable
+                       (:default-value "true"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2777 2800])
+                    ("result" variable (:type "int") (reparse-symbol namespacesubparts) [4268 4275]))                  
+                :type "namespace")
+                nil [301 4277])
+            ("endParse" function
+               (:parent "VcdParser"
+                :type "void")
+                nil [4426 4636])
+            ("registerCommentCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4696 4724]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [4638 4825])
+            ("registerDateCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4882 4910]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [4827 5005])
+            ("registerEndDefinitionsCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5072 5100]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [5007 5214])
+            ("registerTimeScaleCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5276 5304]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [5216 5409])
+            ("registerUpScopeCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5469 5497]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [5411 5598])
+            ("registerVersionCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DeclarationCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5658 5686]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [5600 5787])
+            ("registerScopeCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newScopeCBInfo" variable (:type ("ScopeCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5839 5866]))                  
+                :type ("VcdParser::ScopeCBInfo" type (:type "class") nil nil))
+                nil [5789 5969])
+            ("registerVarCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("VarCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6017 6037]))                  
+                :type ("VcdParser::VarCBInfo" type (:type "class") nil nil))
+                nil [5971 6126])
+            ("registerSimTimeCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("SimTimeCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6182 6206]))                  
+                :type ("VcdParser::SimTimeCBInfo" type (:type "class") nil nil))
+                nil [6128 6304])
+            ("registerScalarVCCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("ScalarVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6362 6387]))                  
+                :type ("VcdParser::ScalarVCCBInfo" type (:type "class") nil nil))
+                nil [6306 6487])
+            ("registerVectorVCCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("VectorVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6545 6570]))                  
+                :type ("VcdParser::VectorVCCBInfo" type (:type "class") nil nil))
+                nil [6489 6670])
+            ("registerRealVCCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("RealVCCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6724 6747]))                  
+                :type ("VcdParser::RealVCCBInfo" type (:type "class") nil nil))
+                nil [6672 6843])
+            ("registerDumpAllCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DumpAllCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6899 6923]))                  
+                :type ("VcdParser::DumpAllCBInfo" type (:type "class") nil nil))
+                nil [6845 7021])
+            ("registerDumpOnCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DumpOnCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7075 7098]))                  
+                :type ("VcdParser::DumpOnCBInfo" type (:type "class") nil nil))
+                nil [7023 7194])
+            ("registerDumpOffCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DumpOffCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7250 7274]))                  
+                :type ("VcdParser::DumpOffCBInfo" type (:type "class") nil nil))
+                nil [7196 7372])
+            ("registerDumpVarsCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("DumpVarsCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7430 7455]))                  
+                :type ("VcdParser::DumpVarsCBInfo" type (:type "class") nil nil))
+                nil [7374 7555])
+            ("registerAtSimEndCB" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("newCBInfo" variable (:type ("AtSimEndCBInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7613 7638]))                  
+                :type ("VcdParser::AtSimEndCBInfo" type (:type "class") nil nil))
+                nil [7557 7738])
+            ("classifyHead" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7801 7818]))                  
+                :type ("VcdParser::HeadKind" type (:type "class") nil nil))
+                nil [7757 8121])
+            ("pickDeclarationCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8181 8198]))                  
+                :type ("VcdParser::DeclarationCBInfo" type (:type "class") nil nil))
+                nil [8123 8238])
+            ("pickScopeCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8286 8298]))                  
+                :type ("VcdParser::ScopeCBInfo" type (:type "class") nil nil))
+                nil [8240 8330])
+            ("pickVarCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8374 8386]))                  
+                :type ("VcdParser::VarCBInfo" type (:type "class") nil nil))
+                nil [8332 8416])
+            ("pickSimTimeCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8468 8480]))                  
+                :type ("VcdParser::SimTimeCBInfo" type (:type "class") nil nil))
+                nil [8418 8514])
+            ("pickScalarVCCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8568 8580]))                  
+                :type ("VcdParser::ScalarVCCBInfo" type (:type "class") nil nil))
+                nil [8516 8615])
+            ("pickVectorVCCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8669 8681]))                  
+                :type ("VcdParser::VectorVCCBInfo" type (:type "class") nil nil))
+                nil [8617 8716])
+            ("pickRealVCCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8766 8778]))                  
+                :type ("VcdParser::RealVCCBInfo" type (:type "class") nil nil))
+                nil [8718 8811])
+            ("pickSimKwdCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8861 8878]))                  
+                :type ("VcdParser::SimKwdCBInfo" type (:type "class") nil nil))
+                nil [8813 8917])
+            ("pickAtSimEndCB" function
+               (:methodconst-flag t
+                :parent "VcdParser"
+                :type ("VcdParser::AtSimEndCBInfo" type (:type "class") nil nil))
+                nil [8919 9007])
+            ("getTextTillEnd" function
+               (:parent "VcdParser"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [9012 10732])
+            ("processDeclaration" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10832 10849])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10850 10871]))                  
+                :type "void")
+                nil [10797 10994])
+            ("processScope" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11025 11042])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11043 11064]))                  
+                :type "void")
+                nil [10996 11298])
+            ("processVar" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11327 11344])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11345 11366]))                  
+                :type "void")
+                nil [11300 12806])
+            ("processSimTime" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12839 12856]))                  
+                :type "void")
+                nil [12808 13097])
+            ("processScalarVC" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13131 13148]))                  
+                :type "void")
+                nil [13099 13533])
+            ("processVectorVC" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13567 13584])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13585 13606]))                  
+                :type "void")
+                nil [13535 13818])
+            ("processRealVC" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13850 13867])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13868 13889]))                  
+                :type "void")
+                nil [13820 14146])
+            ("processSimKwd" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("head" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14178 14195])
+                    ("contents" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14196 14217]))                  
+                :type "void")
+                nil [14148 15384])
+            ("processAtSimEnd" function
+               (:parent "VcdParser"
+                :arguments 
+                  ( ("andNoMore" variable (:type "bool") (reparse-symbol arg-sub-list) [15418 15433]))                  
+                :type "void")
+                nil [15386 15541])
+            ("toVcdCode" function
+               (:arguments 
+                  ( ("index" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [15627 15653]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15604 16010])
+            ("fromVcdCode" function
+               (:arguments 
+                  ( ("vcdCode" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16060 16080]))                  
+                :type ("std::pair" type
+                     (:template-specifier 
+                        ( ("bool" type nil nil nil)
+                          ("unsigned long long" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [16012 16392]))          
+      :file "vcdparser.cpp"
+      :pointmax 16443
+      :fsize 16442
+      :lastmodtime '(22550 34645 915113 835000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("../lib-" function (:arguments ("vcdparser.o" "vcdio.o")) nil [45 90])
+            ("generate" function nil nil [91 123])
+            ("build" function (:arguments ("../lib-$(MODE)/vcdio.a")) nil [124 155])
+            ("vcdparser-tester.run" function (:arguments ("vcdparser-tester.o" "../lib-$(MODE)/vcdio.a")) nil [156 221])
+            ("echo-changes.run" function (:arguments ("echo-changes.o" "../lib-$(MODE)/vcdio.a" "../lnk-$(MODE)/types.a")) nil [222 306])
+            ("echo-timestates.run" function (:arguments ("echo-timestates.o" "../lib-$(MODE)/vcdio.a" "../lnk-$(MODE)/types.a")) nil [306 396])
+            ("echo-changes-counter.pass" function (:arguments ("echo-changes.run" "../lnk/echo-changes-counter.ref" "../lnk/counter-rtl-act.vcd")) nil [397 619])
+            ("echo-timestates-counter.pass" function (:arguments ("echo-timestates.run" "../lnk/echo-timestates-counter.ref" "../lnk/counter-rtl-act.vcd")) nil [620 857])
+            ("check" function (:arguments ("build" "echo-changes-counter.pass" "echo-timestates-counter.pass")) nil [940 1009])
+            ("test" function (:arguments ("check")) nil [1010 1023])
+            ("install-opt" function (:arguments ("check")) nil [1024 1044]))          
+      :file "Makefile"
+      :pointmax 1065
+      :fsize 1064
+      :lastmodtime '(22502 57042 532536 831000)
+      :unmatched-syntax '((symbol 1059 . 1064) (punctuation 1057 . 1058) (symbol 1045 . 1056) (bol 1045 . 1045) (symbol 10 . 43) (symbol 1 . 9) (bol 1 . 1))))
+  :file "!work!innergy!compass!repo!vcdio!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

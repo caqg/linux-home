@@ -1,0 +1,533 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GLHIER_H" variable (:constant-flag t) nil [217 225])
+            ("map" include (:system-flag t) nil [227 241])
+            ("memory" include (:system-flag t) nil [242 259])
+            ("ostream" include (:system-flag t) nil [260 278])
+            ("string" include (:system-flag t) nil [279 296])
+            ("vector" include (:system-flag t) nil [297 314])
+            ("Innergy" type
+               (:members 
+                  ( ("Node" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [412 419])
+                            ("Node" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [426 447])
+                                    ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [448 469])
+                                    ("parent" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [476 505]))                                  
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [421 506])
+                            ("getName" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [537 587])
+                            ("getTypeName" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [589 653])
+                            ("getParent" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [655 719])
+                            ("isRoot" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [761 800])
+                            ("isLeaf" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [842 881])
+                            ("addChild" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("child" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [988 1016]))                                  
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [955 1017])
+                            ("getChildren" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1083 1147])
+                            ("debugDump" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1255 1269]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1223 1270])
+                            ("xmlDump" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1302 1316]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1272 1317])
+                            ("protected" label nil (reparse-symbol classsubparts) [1319 1329])
+                            ("dumpNodeBase" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1358 1372])
+                                    ("func" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1373 1390]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1331 1391])
+                            ("serializeNodeBase" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1425 1439]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1393 1440])
+                            ("private" label nil (reparse-symbol classsubparts) [1442 1450])
+                            ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1452 1492])
+                            ("nodeTypeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1494 1542])
+                            ("parent" variable (:type ("std::shared_ptr" type
+                                 (:template-specifier 
+                                    ( ("Node" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1544 1586])
+                            ("children" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::shared_ptr" type (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1588 1632]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [399 1635])
+                    ("Scope" type
+                       (:superclasses 
+                          ( ("Node" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1665 1672])
+                            ("Scope" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1680 1701])
+                                    ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1702 1723])
+                                    ("parent" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1731 1760])
+                                    ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [1761 1771]))                                  
+                                :type ("Scope" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1674 1772])
+                            ("getDepth" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "int")
+                                (reparse-symbol classsubparts) [1804 1833])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [1874 1883])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [1922 1931])
+                            ("setUniqueId" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2101 2113]))                                  
+                                :type ("Scope" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2058 2114])
+                            ("getUniqueId" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2116 2156])
+                            ("private" label nil (reparse-symbol classsubparts) [2159 2167])
+                            ("depth" variable (:type "int") (reparse-symbol classsubparts) [2169 2183])
+                            ("uniqueId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2185 2206]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1637 2221])
+                    ("Port" type
+                       (:superclasses 
+                          ( ("Node" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2250 2257])
+                            ("Port" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2264 2285])
+                                    ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2286 2307])
+                                    ("parent" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2314 2343])
+                                    ("portActiveCapacitance" variable
+                                       (:default-value "0.0"
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2344 2378]))                                  
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2259 2380])
+                            ("getActiveCapacitance" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "double")
+                                (reparse-symbol classsubparts) [2497 2533])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [2580 2589])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [2628 2637])
+                            ("private" label nil (reparse-symbol classsubparts) [2639 2647])
+                            ("activeCapacitance" variable (:type "double") (reparse-symbol classsubparts) [2649 2674]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2223 2677])
+                    ("Var" type
+                       (:superclasses 
+                          ( ("Node" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2705 2712])
+                            ("Var" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("nodeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2718 2739])
+                                    ("typeName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2740 2761])
+                                    ("parent" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2767 2796])
+                                    ("width" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2797 2810])
+                                    ("bounds" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("size_t" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2816 2843]))                                  
+                                :type ("Var" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2714 2844])
+                            ("getWidth" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2874 2919])
+                            ("getBounds" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("size_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [2921 2966])
+                            ("isWire" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2969 2999])
+                            ("isScalar" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3028 3064])
+                            ("isVector" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3066 3102])
+                            ("isBitSelect" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3104 3140])
+                            ("isPartSelect" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3142 3178])
+                            ("setIsInputTo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Port" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3408 3420]))                                  
+                                :type ("Var" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3389 3421])
+                            ("setIsOutputFrom" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Port" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3445 3457]))                                  
+                                :type ("Var" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3423 3458])
+                            ("getIsInputTo" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :pointer 1
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3461 3497])
+                            ("getIsOutputFrom" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :pointer 1
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3499 3535])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [3577 3586])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [3625 3634])
+                            ("private" label nil (reparse-symbol classsubparts) [3636 3644])
+                            ("width" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3646 3665])
+                            ("bounds" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("size_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3697 3725])
+                            ("inputTo" variable
+                               (:pointer 1
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3727 3752])
+                            ("outputFrom" variable
+                               (:pointer 1
+                                :type ("Port" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3754 3782]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2679 3785])
+                    ("std::string" variable (:type "int") (reparse-symbol namespacesubparts) [3803 3815])
+                    ("Design" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3869 3876])
+                            ("addRoot" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [4117 4139]))                                  
+                                :type ("Design" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4088 4140])
+                            ("getRoots" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::shared_ptr" type (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [4142 4201])
+                            ("debugDump" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4236 4250]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4204 4251])
+                            ("xmlDump" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4283 4297]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4253 4298])
+                            ("serialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4332 4346]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4300 4347])
+                            ("unitsPerSec" function
+                               (:methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4350 4417])
+                            ("unitsPerTick" function
+                               (:methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("uint16_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4419 4486])
+                            ("timeUnitName" function
+                               (:methodconst-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4488 4555])
+                            ("unitsPerSec" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ups" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4586 4599]))                                  
+                                :type ("Design" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4558 4643])
+                            ("unitsPerTick" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("upt" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4674 4687]))                                  
+                                :type ("Design" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4645 4730])
+                            ("timeUnitName" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tun" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4761 4777]))                                  
+                                :type ("Design" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4732 4821])
+                            ("protected" label nil (reparse-symbol classsubparts) [4823 4833])
+                            ("dumpDesignBase" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4864 4878])
+                                    ("func" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4879 4896]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4835 4897])
+                            ("serializeDesignBase" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4933 4947]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4899 4948])
+                            ("private" label nil (reparse-symbol classsubparts) [4950 4958])
+                            ("roots" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::shared_ptr" type (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4960 5001])
+                            ("units_per_sec" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5094 5120])
+                            ("units_per_tick" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5122 5149])
+                            ("time_unit_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5151 5181]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3854 5184])
+                    ("VerilogDesign" type
+                       (:superclasses 
+                          ( ("Design" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5224 5231])
+                            ("setVcdCode" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5913 5921])
+                                    ("" variable (:type ("std::shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("Node" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [5922 5944]))                                  
+                                :type ("VerilogDesign" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5874 5945])
+                            ("getNodeFromVcdCode" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("VcdCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5992 6000]))                                  
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [5947 6007])
+                            ("getNodeCount" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6009 6047])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [6110 6119])
+                            ("override" variable (:type "int") (reparse-symbol classsubparts) [6158 6167])
+                            ("private" label nil (reparse-symbol classsubparts) [6169 6177])
+                            ("vcdCodeMap" variable (:type ("std::multimap" type
+                                 (:template-specifier 
+                                    ( ("VcdCode" type nil nil nil)
+                                      ("std::shared_ptr" type (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        ) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6179 6236])
+                            ("nodeToVcdCodeMap" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::shared_ptr" type (:template-specifier 
+                                        ( ("Node" type nil nil nil))                                        ) nil nil)
+                                      ("VcdCode" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6238 6301]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5186 6304]))                  
+                :type "namespace")
+                nil [316 6307]))          
+      :file "glhier.h"
+      :pointmax 6350
+      :fsize 6349
+      :lastmodtime '(22329 17514 937350 764000)
+      :unmatched-syntax '((semantic-list 6142 . 6157) (symbol 6135 . 6142) (punctuation 6133 . 6134) (symbol 6126 . 6133) (punctuation 6125 . 6126) (punctuation 6124 . 6125) (symbol 6121 . 6124) (semantic-list 6094 . 6109) (symbol 6085 . 6094) (punctuation 6083 . 6084) (symbol 6076 . 6083) (punctuation 6075 . 6076) (punctuation 6074 . 6075) (symbol 6071 . 6074) (punctuation 5532 . 5533) (DEFAULT 5525 . 5532) (punctuation 5523 . 5524) (semantic-list 5501 . 5518) (punctuation 5500 . 5501) (OPERATOR 5492 . 5500) (punctuation 5516 . 5517) (punctuation 5490 . 5491) (symbol 5477 . 5490) (punctuation 5516 . 5517) (punctuation 5474 . 5475) (DEFAULT 5467 . 5474) (punctuation 5465 . 5466) (semantic-list 5441 . 5458) (symbol 5428 . 5441) (punctuation 5456 . 5457) (punctuation 5424 . 5425) (DELETE 5418 . 5424) (punctuation 5416 . 5417) (semantic-list 5389 . 5411) (punctuation 5388 . 5389) (OPERATOR 5380 . 5388) (punctuation 5378 . 5379) (symbol 5365 . 5378) (punctuation 5362 . 5363) (DELETE 5356 . 5362) (punctuation 5354 . 5355) (semantic-list 5326 . 5348) (symbol 5313 . 5326) (punctuation 5309 . 5310) (DEFAULT 5302 . 5309) (punctuation 5300 . 5301) (semantic-list 5291 . 5293) (symbol 5278 . 5291) (punctuation 5277 . 5278) (VIRTUAL 5269 . 5276) (punctuation 5266 . 5267) (DEFAULT 5259 . 5266) (punctuation 5257 . 5258) (semantic-list 5246 . 5248) (symbol 5233 . 5246) (punctuation 4084 . 4085) (DEFAULT 4077 . 4084) (punctuation 4075 . 4076) (semantic-list 4063 . 4073) (punctuation 4062 . 4063) (OPERATOR 4054 . 4062) (punctuation 4071 . 4072) (punctuation 4052 . 4053) (symbol 4046 . 4052) (punctuation 4071 . 4072) (punctuation 4043 . 4044) (DEFAULT 4036 . 4043) (punctuation 4034 . 4035) (semantic-list 4021 . 4031) (symbol 4015 . 4021) (punctuation 4029 . 4030) (punctuation 4011 . 4012) (DELETE 4005 . 4011) (punctuation 4003 . 4004) (semantic-list 3987 . 4002) (punctuation 3986 . 3987) (OPERATOR 3978 . 3986) (punctuation 3976 . 3977) (symbol 3970 . 3976) (punctuation 3967 . 3968) (DELETE 3961 . 3967) (punctuation 3959 . 3960) (semantic-list 3941 . 3956) (symbol 3935 . 3941) (punctuation 3931 . 3932) (DEFAULT 3924 . 3931) (punctuation 3922 . 3923) (semantic-list 3917 . 3919) (symbol 3911 . 3917) (punctuation 3910 . 3911) (VIRTUAL 3902 . 3909) (punctuation 3899 . 3900) (DEFAULT 3892 . 3899) (punctuation 3890 . 3891) (semantic-list 3884 . 3886) (symbol 3878 . 3884) (punctuation 3801 . 3802) (symbol 3793 . 3800) (USING 3787 . 3792) (semantic-list 3609 . 3624) (symbol 3602 . 3609) (punctuation 3600 . 3601) (symbol 3593 . 3600) (punctuation 3592 . 3593) (punctuation 3591 . 3592) (symbol 3588 . 3591) (semantic-list 3561 . 3576) (symbol 3552 . 3561) (punctuation 3550 . 3551) (symbol 3543 . 3550) (punctuation 3542 . 3543) (punctuation 3541 . 3542) (symbol 3538 . 3541) (punctuation 2870 . 2871) (DEFAULT 2863 . 2870) (punctuation 2861 . 2862) (semantic-list 2858 . 2860) (symbol 2855 . 2858) (punctuation 2854 . 2855) (VIRTUAL 2846 . 2853) (semantic-list 2612 . 2627) (symbol 2605 . 2612) (punctuation 2603 . 2604) (symbol 2596 . 2603) (punctuation 2595 . 2596) (punctuation 2594 . 2595) (symbol 2591 . 2594) (semantic-list 2564 . 2579) (symbol 2555 . 2564) (punctuation 2553 . 2554) (symbol 2546 . 2553) (punctuation 2545 . 2546) (punctuation 2544 . 2545) (symbol 2541 . 2544) (punctuation 2407 . 2408) (DEFAULT 2400 . 2407) (punctuation 2398 . 2399) (semantic-list 2395 . 2397) (symbol 2391 . 2395) (punctuation 2390 . 2391) (VIRTUAL 2382 . 2389) (semantic-list 1906 . 1921) (symbol 1899 . 1906) (punctuation 1897 . 1898) (symbol 1890 . 1897) (punctuation 1889 . 1890) (punctuation 1888 . 1889) (symbol 1885 . 1888) (semantic-list 1858 . 1873) (symbol 1849 . 1858) (punctuation 1847 . 1848) (symbol 1840 . 1847) (punctuation 1839 . 1840) (punctuation 1838 . 1839) (symbol 1835 . 1838) (punctuation 1800 . 1801) (DEFAULT 1793 . 1800) (punctuation 1791 . 1792) (semantic-list 1788 . 1790) (symbol 1783 . 1788) (punctuation 1782 . 1783) (VIRTUAL 1774 . 1781) (punctuation 533 . 534) (DEFAULT 526 . 533) (punctuation 524 . 525) (semantic-list 521 . 523) (symbol 517 . 521) (punctuation 516 . 517) (VIRTUAL 508 . 515))
+      :lexical-table 
+        '(("GLHIER_H")
+          )
+))
+  :file "!work!innergy!compass!repo!gates!inc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

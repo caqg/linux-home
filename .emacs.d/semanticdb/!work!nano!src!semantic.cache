@@ -1,0 +1,28 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-DLOCALEDIR=\\\"$(localedir)\\\"" "-DSYSCONFDIR=\\\"$(sysconfdir)\\\"")) nil [1 75])
+            ("SOMETHING" variable (:default-value ("\"REVISION \\\"$(shell git describe --tags 2>/dev/null)\\\"\"")) nil [97 165])
+            ("SOMETHING" variable (:default-value ("\"NOTHING \\\"from" "tarball\\\"\"")) nil [170 209])
+            ("nano.o" function (:arguments ("revision.h")) nil [216 235])
+            ("winio.o" function (:arguments ("revision.h")) nil [235 255])
+            ("revision.h" function (:arguments ("update_revision")) nil [256 391])
+            (".PHONY" function (:arguments ("update_revision")) nil [392 416])
+            ("bin_PROGRAMS" variable (:default-value ("nano")) nil [417 438])
+            ("nano_SOURCES" variable (:default-value ("browser.c" "chars.c" "color.c" "cut.c" "files.c" "global.c" "help.c" "move.c" "nano.c" "nano.h" "prompt.c" "proto.h" "rcfile.c" "search.c" "text.c" "utils.c" "winio.c")) nil [438 653])
+            ("nano_LDADD" variable (:default-value ("@GLIB_LIBS@" "@LIBINTL@")) nil [654 689])
+            ("install-exec-hook" function nil nil [690 770])
+            ("uninstall-hook" function nil nil [770 825]))          
+      :file "Makefile.am"
+      :pointmax 825
+      :fsize 824
+      :lastmodtime '(22386 55932 131626 254000)
+      :unmatched-syntax '((shell-command 787 . 824) (bol 786 . 786))))
+  :file "!work!nano!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

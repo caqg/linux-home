@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("mandir" variable (:default-value ("@mandir@/fr")) nil [1 22])
+            ("htmldir" variable (:default-value ("@htmldir@/fr")) nil [22 45])
+            ("BUILT_SOURCES" variable nil nil [46 62])
+            ("dist_man_MANS" variable (:default-value ("nano.1" "rnano.1")) nil [63 94])
+            ("html_pages" variable (:default-value ("nano.1.html" "rnano.1.html")) nil [94 132])
+            ("dist_man_MANS" variable (:default-value ("nanorc.5")) nil [147 173])
+            ("html_pages" variable (:default-value ("nanorc.5.html")) nil [173 201])
+            ("nano.1.html" function (:arguments ("nano.1")) nil [208 263])
+            ("nanorc.5.html" function (:arguments ("nanorc.5")) nil [263 322])
+            ("rnano.1.html" function (:arguments ("rnano.1")) nil [322 379])
+            ("BUILT_SOURCES" variable (:default-value ("$(html_pages)")) nil [394 425])
+            ("dist_html_DATA" variable (:default-value ("$(html_pages)")) nil [425 456])
+            ("EXTRA_DIST" variable (:default-value ("$(BUILT_SOURCES)")) nil [463 493]))          
+      :file "Makefile.am"
+      :pointmax 493
+      :fsize 492
+      :lastmodtime '(22382 5416 996237 994000)
+      :unmatched-syntax nil))
+  :file "!work!nano!doc!man!fr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-24c377c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-24c377c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-24c3788"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "magit-gitflow-autoloads.el"
+      :pointmax 365
+      :fsize 733
+      :lastmodtime '(23387 65010 145504 614000)
+      :unmatched-syntax nil))
+  :file "!home!cesar!.emacs.d!elpa!magit-gitflow-20170929.824!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
