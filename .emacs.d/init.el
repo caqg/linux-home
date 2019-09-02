@@ -128,13 +128,14 @@
   (define-key global-map "\C-cr" 'org-remember)
 
   (require 'cq-x-utils)
+  (require 'cq-theme-utils)
   (require 'grep)
   (require 'paren)
   (require 'parenface)
   (require 'tabbar)
   (require 'time)
 
-  (add-to-list 'load-path "/work/emacswiki")
+  (add-to-list 'load-path "/work/EmacsWiki")
   (load-library "hide-comnt")
   (load-library "hideshow-fringe")
   (load-library "hideshowvis")
@@ -150,14 +151,12 @@
                                          (buffer-name (car b)))))))
       (set tabset sorted)))
 
-  ;; Color theme
-  (cond ((and (>= emacs-major-version 25))
-         (load-theme 'solarized t t)
-
-
-         (load-theme 'solarized-light t t)
-         (load-theme 'solarized-dark t t)
-         (require 'cq-solarized-theme-init)))
+  ;; Color them
+  (when (>= emacs-major-version 25)
+    (load-theme 'solarized t t)
+    (load-theme 'solarized-light t t)
+    (load-theme 'solarized-dark t t)
+    (require 'cq-solarized-theme-init))
 
   (require 'recentf)
 
