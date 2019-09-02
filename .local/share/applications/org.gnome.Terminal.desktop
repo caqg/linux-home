@@ -16,7 +16,7 @@ X-Ubuntu-Gettext-Domain=gnome-terminal
 Categories=GNOME;GTK;System;TerminalEmulator;
 StartupNotify=true
 OnlyShowIn=GNOME;Unity;
-Actions=new-window;preferences;rogue;robots;tmux;top-right
+Actions=new-window;preferences;rogue;robots;tmux;top-left;top-right
 
 [Desktop Action new-window]
 Name=New Window
