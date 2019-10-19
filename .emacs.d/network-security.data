@@ -1,5 +1,5 @@
 (
  (:id "sha1:24c7a1e6369fef1e50de1deb1a9e5bbc68f80c8b" :fingerprint "sha1:38:34:b6:47:e9:45:0f:96:93:29:aa:43:fd:b6:54:ba:58:0c:49:58" :host "orgmode.org:443" :conditions nil)
- (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprints ("sha1:96:05:a1:7e:b9:cb:80:a0:45:2a:ff:29:5b:da:f9:38:80:44:c1:84") :host "elpa.gnu.org:443" :conditions (:renegotiation-info-ext))
+ (:id "sha1:6d4eb958390599243ba9f5035cb671fa8dd6a93a" :fingerprints ("sha1:96:05:a1:7e:b9:cb:80:a0:45:2a:ff:29:5b:da:f9:38:80:44:c1:84" "sha1:46:6c:19:e2:32:7b:42:c8:ad:e1:23:41:f7:62:fe:d9:68:63:3e:d3") :host "elpa.gnu.org:443" :conditions (:same-cert))
  (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprint "sha1:8a:24:16:cb:86:21:fc:7c:fa:e3:29:4c:4e:87:63:2e:12:82:23:7e" :host "melpa.org:443" :conditions nil)
 )
