@@ -1,0 +1,135 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 5 (IN-PACKAGE :SWANK)-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA 31 F6 0F 01 19 01)
+   ("SWANK" |COMMON-LISP|::|*PACKAGE*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|7 15 (DEFMACRO DO-SYMBOLS* (# &BODY BODY) ...)-2|
+   #23Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC DD 72 4C 32 9C C5 19 01)
+   (|SWANK|::|DO-SYMBOLS*| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|DO-SYMBOLS*|
+       #115Y(00 00 00 00 02 00 00 00 26 03 AE DA DA 64 2D 04 01 1D 80 46 9F 5C
+             78 AC DD DE 63 2D 04 01 1D 3F AC 94 00 9E 5C 1C 80 45 D1 14 9F 5C
+             5C 78 A4 5C 79 E7 72 AA E8 AD D4 7A 7B 01 EA B3 B3 B3 7B 03 EB EC
+             B6 B3 7B 03 ED EC B8 B5 7B 03 D9 5D 7A EF A6 7A 7B 04 7B 03 61 03
+             19 0A AE 2F 02 19 03 DF E0 B1 E1 B0 E2 6F 09 E4 B3 E5 33 07 1F 9E
+             5C 5B 1B FF B6)
+       (2. |SYSTEM|::|LIST-LENGTH-IN-BOUNDS-P| |SYSTEM|::|MACRO-CALL-ERROR| 1.
+        3. |EXT|::|SOURCE-PROGRAM-ERROR| :|FORM| :|DETAIL|
+        "~S: ~S does not match lambda list element ~:S" |SYSTEM|::|TEXT|
+        |SWANK|::|DO-SYMBOLS*|
+        #1=(|SWANK|::|VAR| |COMMON-LISP|::|&OPTIONAL|
+            (|COMMON-LISP|::|PACKAGE| '|COMMON-LISP|::|*PACKAGE*|)
+            |SWANK|::|RESULT-FORM|)
+        |COMMON-LISP|::|*PACKAGE*| "SEEN-HT" |COMMON-LISP|::|LET|
+        ((|COMMON-LISP|::|MAKE-HASH-TABLE| :|TEST| #'|COMMON-LISP|::|EQ|))
+        |COMMON-LISP|::|DO-SYMBOLS| |COMMON-LISP|::|UNLESS|
+        |COMMON-LISP|::|GETHASH| |COMMON-LISP|::|SETF| (|COMMON-LISP|::|T|)
+        |COMMON-LISP|::|TAGBODY|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SYSTEM|::|<MACRO-FORM>| |SYSTEM|::|<ENV-ARG>|)
+       "Just like do-symbols, but makes sure a symbol is visited only once." 1)
+    (#1# |COMMON-LISP|::|&BODY| |SWANK|::|BODY|))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|17 40 (DEFUN CLASSIFY-SYMBOL (SYMBOL) ...)-3|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|CLASSIFY-SYMBOL| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|CLASSIFY-SYMBOL|
+       #178Y(03 00 01 00 01 00 00 00 26 02 00 2B 01 7F 02 00 00 1B 25 C9 1B 3B
+             58 67 00 00 01 76 00 AD 36 01 18 03 01 19 02 EC 9E 5D 19 04 DA AD
+             AF 6D 01 01 DC 63 DA 2D 06 03 16 01 68 00 00 AC 8F 18 6B 16 01 63
+             68 01 00 8D 57 0C 68 01 00 38 01 8C 66 43 CA 14 84 00 68 01 00 8D
+             58 03 E0 84 00 68 01 00 CC 34 1D 03 E2 84 00 68 01 00 63 38 01 8F
+             3A 03 E3 84 00 68 01 00 38 01 8D 5F 03 E4 84 00 68 01 00 8D 59 03
+             E5 84 00 68 01 00 8D D9 03 E6 84 00 68 01 00 8D 58 19 47 0D 10 AE
+             6D 0E 01 B1 6D 0F 01 57 10 B0 36 00 16 06 48 14 EB 8E 3C FF 76 15
+             19 03)
+       (|COMMON-LISP|::|SYMBOL|
+        #Y(|SWANK|::|CLASSIFY-SYMBOL-1|
+           #16Y(00 00 00 00 01 00 00 00 20 02 9E 0C 00 01 19 02)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        1. |SYSTEM|::|CHECK-TYPE-FAILED| :|CONSTANT| :|BOUNDP| :|FBOUNDP|
+        #Y(|SWANK|::|CLASSIFY-SYMBOL-TYPE-SPECIFIER-P|
+           #26Y(00 00 00 00 01 00 00 00 26 02 AD DA 30 01 1E 08 AD 6F 02 C8 5A
+                59 19 02 19 02)
+           (|COMMON-LISP|::|TYPE| |CLOS|::|DOCUMENTATION|
+            |SWANK/BACKEND|::|TYPE-SPECIFIER-ARGLIST| :|NOT-AVAILABLE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|S|) |COMMON-LISP|::|NIL| 1)
+        :|TYPESPEC| :|CLASS| :|MACRO| :|SPECIAL-OPERATOR| :|PACKAGE|
+        |COMMON-LISP|::|NIL|
+        #Y(|SWANK|::|CLASSIFY-SYMBOL-2|
+           #16Y(00 00 00 00 00 00 00 00 26 01 DA 2C 01 01 19 01)
+           (|COMMON-LISP|::|NIL|
+            #Y(|SWANK|::|CLASSIFY-SYMBOL-2-1|
+               #13Y(00 00 00 00 01 00 00 00 26 02 00 49 00)
+               (|COMMON-LISP|::|NIL|)
+               (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+               (|COMMON-LISP|::|CONDITION|) |COMMON-LISP|::|NIL| 1))
+           (|COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|) ()
+           |COMMON-LISP|::|NIL| 1)
+        #Y(|SWANK|::|CLASSIFY-SYMBOL-3|
+           #17Y(00 00 00 00 00 00 00 00 26 01 69 00 01 31 56 19 01)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+           |COMMON-LISP|::|NIL| 1)
+        (#(|COMMON-LISP|::|ERROR| 12.) 2. . 1.)
+        #.(|CLOS|::|FIND-CLASS| '|CLOS|::|GENERIC-FUNCTION|)
+        :|GENERIC-FUNCTION|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|SYMBOL|)
+       "Returns a list of classifiers that classify SYMBOL according to its\n
+underneath objects (e.g. :BOUNDP if SYMBOL constitutes a special\n
+variable.) The list may contain the following classification\n
+keywords: :BOUNDP, :FBOUNDP, :CONSTANT, :GENERIC-FUNCTION,\n
+:TYPESPEC, :CLASS, :MACRO, :SPECIAL-OPERATOR, and/or :PACKAGE"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|42 61 (DEFUN SYMBOL-CLASSIFICATION-STRING (SYMBOL) ...)-4|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|SYMBOL-CLASSIFICATION-STRING| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|SYMBOL-CLASSIFICATION-STRING|
+       #145Y(03 00 01 00 01 00 00 00 26 02 00 2B 01 7F 02 00 00 9D 2B 01 DA 32
+             61 0B 00 00 AC 6D 01 01 68 02 00 8D 57 03 DC 9E 34 68 02 00 8D 58
+             1E DD 9E 34 47 04 10 AE 6D 05 01 B1 6D 06 01 57 07 B0 36 00 16 06
+             48 14 E2 8F 3C 03 E3 9E 34 68 02 00 89 0A 03 E5 9E 34 68 02 00 63
+             38 01 8F 3A 03 E6 9E 34 68 02 00 38 01 8D 5F 03 E7 9E 34 68 02 00
+             8D 59 03 E8 9E 34 68 02 00 8D D9 03 E9 9E 34 06 01 00 19 05 58 67
+             00 00 01 76 00 AD 36 01 18 03 01 19 02)
+       ("--------"
+        #Y(|SWANK|::|SYMBOL-CLASSIFICATION-STRING-FLIP|
+           #24Y(00 00 00 00 01 00 00 00 26 02 69 00 01 AE DB 38 06 72 7A AF 31
+                33 19 02)
+           (|COMMON-LISP|::|NIL| "bfgctmsp")
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|LETTER|) |COMMON-LISP|::|NIL| 1)
+        #\b #\f |COMMON-LISP|::|NIL|
+        #Y(|SWANK|::|SYMBOL-CLASSIFICATION-STRING-1|
+           #16Y(00 00 00 00 00 00 00 00 26 01 DA 2C 01 01 19 01)
+           (|COMMON-LISP|::|NIL|
+            #Y(|SWANK|::|SYMBOL-CLASSIFICATION-STRING-1-1|
+               #13Y(00 00 00 00 01 00 00 00 26 02 00 49 00)
+               (|COMMON-LISP|::|NIL|)
+               (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+               (|COMMON-LISP|::|CONDITION|) |COMMON-LISP|::|NIL| 1))
+           (|COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|) ()
+           |COMMON-LISP|::|NIL| 1)
+        #Y(|SWANK|::|SYMBOL-CLASSIFICATION-STRING-2|
+           #17Y(00 00 00 00 00 00 00 00 26 01 69 01 01 31 56 19 01)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+           |COMMON-LISP|::|NIL| 1)
+        (#(|COMMON-LISP|::|ERROR| 120.) 2. . 1.)
+        #.(|CLOS|::|FIND-CLASS| '|CLOS|::|GENERIC-FUNCTION|) #\g
+        |SWANK/BACKEND|::|TYPE-SPECIFIER-P| #\t #\c #\m #\s #\p)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|SYMBOL|)
+       "Return a string in the form -f-c---- where each letter stands for\n
+boundp fboundp generic-function class macro special-operator package"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|63 63 (PROVIDE :SWANK-UTIL)-5|
+   #15Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 19 01)
+   (:|SWANK-UTIL| |COMMON-LISP|::|PROVIDE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))

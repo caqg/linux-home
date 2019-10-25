@@ -1,0 +1,56 @@
+#0Y_ #0Y |CHARSET|::|UTF-8|
+(|COMMON-LISP|::|SETQ| |COMMON-LISP|::|*PACKAGE*|
+ (|SYSTEM|::|%FIND-PACKAGE| "SWANK"))
+(|SYSTEM|::|REMOVE-OLD-DEFINITIONS| '|SWANK|::|DO-SYMBOLS*|)
+(|SYSTEM|::|%PUTD| '|SWANK|::|DO-SYMBOLS*|
+ (|SYSTEM|::|MAKE-MACRO|
+  (|COMMON-LISP|::|FUNCTION| |SWANK|::|DO-SYMBOLS*|
+   (|COMMON-LISP|::|LAMBDA| (|SYSTEM|::|<MACRO-FORM>| |SYSTEM|::|<ENV-ARG>|)
+    (|COMMON-LISP|::|DECLARE| (|COMMON-LISP|::|CONS| |SYSTEM|::|<MACRO-FORM>|))
+    (|COMMON-LISP|::|DECLARE| (|COMMON-LISP|::|IGNORE| |SYSTEM|::|<ENV-ARG>|))
+    "Just like do-symbols, but makes sure a symbol is visited only once."
+    (|COMMON-LISP|::|IF|
+     (|COMMON-LISP|::|NOT|
+      (|SYSTEM|::|LIST-LENGTH-IN-BOUNDS-P| |SYSTEM|::|<MACRO-FORM>| 2. 2.
+       |COMMON-LISP|::|T|))
+     (|SYSTEM|::|MACRO-CALL-ERROR| |SYSTEM|::|<MACRO-FORM>|)
+     (|COMMON-LISP|::|LET*|
+      ((#1=#:|G29883| (|COMMON-LISP|::|CADR| . #2=(|SYSTEM|::|<MACRO-FORM>|)))
+       (#3=#:|G29884|
+        (|COMMON-LISP|::|IF|
+         (|COMMON-LISP|::|NOT|
+          (|SYSTEM|::|LIST-LENGTH-IN-BOUNDS-P| #1# 1. 3. |COMMON-LISP|::|NIL|))
+         (|SYSTEM|::|ERROR-OF-TYPE| '|EXT|::|SOURCE-PROGRAM-ERROR| :|FORM|
+          |SYSTEM|::|<MACRO-FORM>| :|DETAIL| #1#
+          (|SYSTEM|::|TEXT| "~S: ~S does not match lambda list element ~:S")
+          '|SWANK|::|DO-SYMBOLS*| #1#
+          '#4=(|SWANK|::|VAR| |COMMON-LISP|::|&OPTIONAL|
+               (|COMMON-LISP|::|PACKAGE| #5='|COMMON-LISP|::|*PACKAGE*|)
+               |SWANK|::|RESULT-FORM|))
+         #1#))
+       (|SWANK|::|VAR| (|COMMON-LISP|::|CAR| #3#))
+       (|COMMON-LISP|::|PACKAGE|
+        (|COMMON-LISP|::|IF| (|COMMON-LISP|::|CDR| . #6=(#3#))
+         (|COMMON-LISP|::|CADR| . #6#) #5#))
+       (|SWANK|::|RESULT-FORM| (|COMMON-LISP|::|CADDR| . #6#))
+       (|SWANK|::|BODY| (|COMMON-LISP|::|CDDR| . #2#)))
+      (|COMMON-LISP|::|BLOCK| |SWANK|::|DO-SYMBOLS*|
+       (|COMMON-LISP|::|LET|
+        ((|SWANK|::|SEEN-HT| (|COMMON-LISP|::|GENSYM| "SEEN-HT")))
+        `(|COMMON-LISP|::|LET|
+          ((,|SWANK|::|SEEN-HT|
+            (|COMMON-LISP|::|MAKE-HASH-TABLE| :|TEST| #'|COMMON-LISP|::|EQ|)))
+          (|COMMON-LISP|::|DO-SYMBOLS|
+           (,|SWANK|::|VAR| ,|COMMON-LISP|::|PACKAGE| ,|SWANK|::|RESULT-FORM|)
+           (|COMMON-LISP|::|UNLESS|
+            (|COMMON-LISP|::|GETHASH| ,|SWANK|::|VAR| ,|SWANK|::|SEEN-HT|)
+            (|COMMON-LISP|::|SETF|
+             (|COMMON-LISP|::|GETHASH| ,|SWANK|::|VAR| ,|SWANK|::|SEEN-HT|)
+             |COMMON-LISP|::|T|)
+            (|COMMON-LISP|::|TAGBODY| ,@|SWANK|::|BODY|))))))))))
+  '(#4# |COMMON-LISP|::|&BODY| |SWANK|::|BODY|)))
+(|SYSTEM|::|C-DEFUN| '|SWANK|::|CLASSIFY-SYMBOL|
+ (|SYSTEM|::|LAMBDA-LIST-TO-SIGNATURE| '(|COMMON-LISP|::|SYMBOL|)))
+(|SYSTEM|::|C-DEFUN| '|SWANK|::|SYMBOL-CLASSIFICATION-STRING|
+ (|SYSTEM|::|LAMBDA-LIST-TO-SIGNATURE| '(|COMMON-LISP|::|SYMBOL|)))
+(|SYSTEM|::|C-PROVIDE| ':|SWANK-UTIL|)

@@ -1,0 +1,387 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 13 (IN-PACKAGE :SWANK)-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA 31 F6 0F 01 19 01)
+   ("SWANK" |COMMON-LISP|::|*PACKAGE*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|15 16 (EVAL-WHEN (:COMPILE-TOPLEVEL :LOAD-TOPLEVEL :EXECUTE) (SWANK-REQUIRE :SWANK-UTIL))-2|
+   #15Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 19 01)
+   (:|SWANK-UTIL| |SWANK|::|SWANK-REQUIRE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|18 59 (DEFSLIMEFUN COMPLETIONS (STRING DEFAULT-PACKAGE-NAME) ...)-3-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C 3E 19 01)
+   (|SWANK|::|COMPLETIONS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|COMPLETIONS|
+       #59Y(00 00 00 00 02 00 00 00 26 03 AE AE 30 00 42 04 AF AF AF AF DB 6F
+            02 6E 05 03 B0 B0 B0 B0 DE 6F 02 6E 05 05 AD AD 73 02 24 AF B2 6E
+            03 06 9D 1F 08 14 AD 6F 07 61 02 19 0A 19 0A)
+       (|SWANK|::|PARSE-COMPLETION-ARGUMENTS| #\-
+        |SWANK|::|MAKE-COMPOUND-PREFIX-MATCHER|
+        |SWANK|::|SYMBOL-COMPLETION-SET| (#\. #\-)
+        |SWANK|::|PACKAGE-COMPLETION-SET| |SWANK|::|FORMAT-COMPLETION-SET|
+        |SWANK|::|LONGEST-COMPOUND-PREFIX|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING| |SWANK|::|DEFAULT-PACKAGE-NAME|)
+       "Return a list of completions for a symbol designator STRING.  \n\n
+The result is the list (COMPLETION-SET COMPLETED-PREFIX), where\n
+COMPLETION-SET is the list of all matching completions, and\n
+COMPLETED-PREFIX is the best (partial) completion of the input\n
+string.\n\n
+Simple compound matching is supported on a per-hyphen basis:\n\n
+  (completions \"m-v-\" \"COMMON-LISP\")\n
+    ==> ((\"multiple-value-bind\" \"multiple-value-call\" \n
+          \"multiple-value-list\" \"multiple-value-prog1\" \n
+          \"multiple-value-setq\" \"multiple-values-limit\")\n
+         \"multiple-value\")\n\n
+(For more advanced compound matching, see FUZZY-COMPLETIONS.)\n\n
+If STRING is package qualified the result list will also be\n
+qualified.  If string is non-qualified the result strings are\n
+also not qualified and are considered relative to\n
+DEFAULT-PACKAGE-NAME.\n\n
+The way symbols are matched depends on the symbol designator's\n
+format. The cases are as follows:\n
+  FOO      - Symbols with matching prefix and accessible in the buffer package.\n
+  PKG:FOO  - Symbols with matching prefix and external in package PKG.\n
+  PKG::FOO - Symbols with matching prefix and accessible in package PKG.\n"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|18 59 (DEFSLIMEFUN COMPLETIONS (STRING DEFAULT-PACKAGE-NAME) ...)-3-2|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA DA 72 A4 31 E6 19 01)
+   (|SWANK|::|COMPLETIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|62 73 (DEFUN SYMBOL-COMPLETION-SET (NAME PACKAGE-NAME PACKAGE ...) ...)-4|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|SYMBOL-COMPLETION-SET| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|SYMBOL-COMPLETION-SET|
+       #38Y(00 00 00 00 05 00 00 00 26 06 B1 6F 00 93 04 10 DB B3 B2 A3 59 1D
+            01 A5 14 B2 6E 04 02 33 00 16 14 33 00 16 19 06)
+       (|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER|
+        #.#'|COMMON-LISP|::|SYMBOL-NAME| |SWANK|::|FIND-MATCHING-SYMBOLS|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|NAME| |COMMON-LISP|::|PACKAGE-NAME| |COMMON-LISP|::|PACKAGE|
+        |SWANK|::|INTERNAL-P| |SWANK|::|MATCHP|)
+       "Return the set of completion-candidates as strings." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|75 79 (DEFUN PACKAGE-COMPLETION-SET (NAME PACKAGE-NAME PACKAGE ...) ...)-5|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|PACKAGE-COMPLETION-SET| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|PACKAGE-COMPLETION-SET|
+       #27Y(00 00 00 00 05 00 00 00 26 06 B1 6F 00 A2 59 1D 04 B2 AF 30 01 14
+            33 00 16 19 06)
+       (|SWANK|::|COMPLETION-OUTPUT-PACKAGE-CONVERTER|
+        |SWANK|::|FIND-MATCHING-PACKAGES|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|NAME| |COMMON-LISP|::|PACKAGE-NAME| |COMMON-LISP|::|PACKAGE|
+        |SWANK|::|INTERNAL-P| |SWANK|::|MATCHP|)
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|81 95 (DEFUN FIND-MATCHING-SYMBOLS (STRING PACKAGE EXTERNAL ...) ...)-6|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|FIND-MATCHING-SYMBOLS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|FIND-MATCHING-SYMBOLS|
+       #83Y(00 00 00 00 04 00 00 00 26 05 00 2B 04 7F 05 00 00 7F 04 00 01 7F
+            03 00 02 7F 02 00 03 9D 2B 02 00 0B 00 00 68 01 00 2F 00 0B 00 01
+            9D 2B 01 AC 2C 01 01 0B 00 00 9D 2B 01 38 09 C7 FB 31 6D 0B 00 00
+            68 03 01 AD 6D 03 01 AD 31 F3 16 03 06 00 00 19 07)
+       (|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER|
+        #Y(|SWANK|::|FIND-MATCHING-SYMBOLS-SYMBOL-MATCHES-P|
+           #43Y(00 00 00 00 01 00 00 00 26 02 07 02 03 1D 08 AD 69 02 02 30 01
+                1F 12 69 02 04 69 02 01 69 01 02 B0 72 A6 76 01 36 02 19 02 19
+                02)
+           (|COMMON-LISP|::|NIL| |SWANK|::|SYMBOL-EXTERNAL-P|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|COMMON-LISP|::|SYMBOL|) |COMMON-LISP|::|NIL| 1)
+        #.#'|COMMON-LISP|::|EQ|
+        #Y(|SWANK|::|FIND-MATCHING-SYMBOLS-1|
+           #47Y(00 00 00 00 01 00 00 00 26 02 AD 69 00 01 38 01 8C 6E 19 69 00
+                01 AE AD 64 31 6F 16 01 AD 07 01 01 34 1D 08 AD 07 02 01 5D 0C
+                02 01 00 19 02)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|COMMON-LISP|::|SYMBOL|) |COMMON-LISP|::|NIL| 1))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING| |COMMON-LISP|::|PACKAGE| |SWANK|::|EXTERNAL|
+        |SWANK|::|TEST|)
+       "Return a list of symbols in PACKAGE matching STRING.\n
+TEST is called with two strings.  If EXTERNAL is true, only external\n
+symbols are returned."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|97 108 (DEFUN FIND-MATCHING-SYMBOLS-IN-LIST (STRING LIST TEST) ...)-7|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|FIND-MATCHING-SYMBOLS-IN-LIST| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|FIND-MATCHING-SYMBOLS-IN-LIST|
+       #67Y(00 00 00 00 03 00 00 00 26 04 00 2B 02 7F 04 00 00 7F 02 00 01 9D
+            2B 01 63 68 02 00 2F 00 0B 01 00 AD 6D 01 01 B2 63 1B 0D 87 01 00
+            14 A0 34 1D 03 AC 84 03 83 01 AD 8D 9F 6F 16 03 AC 38 06 32 6F 19
+            07)
+       (|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER|
+        #Y(|SWANK|::|FIND-MATCHING-SYMBOLS-IN-LIST-SYMBOL-MATCHES-P|
+           #28Y(00 00 00 00 01 00 00 00 26 02 69 01 02 69 01 01 69 00 01 B0 72
+                A6 76 01 36 02 19 02)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|COMMON-LISP|::|SYMBOL|) |COMMON-LISP|::|NIL| 1))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING| |COMMON-LISP|::|LIST| |SWANK|::|TEST|)
+       "Return a list of symbols in LIST matching STRING.\n
+TEST is called with two strings."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|110 119 (DEFUN FIND-MATCHING-PACKAGES (NAME MATCHER) ...)-8|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|FIND-MATCHING-PACKAGES| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|FIND-MATCHING-PACKAGES|
+       #110Y(00 00 00 00 02 00 00 00 26 03 00 2B 02 7F 03 00 00 7F 02 00 01 9D
+             2B 01 68 01 00 2F 00 0B 00 00 AC 6D 01 01 63 71 E0 01 03 1B 1B AE
+             AD 31 B7 1B 0B 87 03 02 14 6F 02 92 01 71 9D F9 14 38 01 80 A9 02
+             16 01 83 03 AF 8D 9F 67 15 16 02 F8 1B 0E 94 00 DD AD DE 73 02 26
+             84 02 16 01 83 00 AC 8D 9F 6E 16 01 AC 80 B1 00 38 05 32 6B 19 05)
+       (|SWANK|::|COMPLETION-OUTPUT-PACKAGE-CONVERTER|
+        #Y(|SWANK|::|FIND-MATCHING-PACKAGES-1|
+           #26Y(00 00 00 00 01 00 00 00 26 02 69 01 02 69 01 01 69 00 01 B0 76
+                01 36 02 19 02)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|X|) |COMMON-LISP|::|NIL| 1)
+        |SWANK|::|PACKAGE-NAMES| |COMMON-LISP|::|STRING| ":")
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|NAME| |SWANK|::|MATCHER|)
+       "Return a list of package names matching NAME with MATCHER.\n
+MATCHER is a two-argument predicate."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|122 157 (DEFUN PARSE-COMPLETION-ARGUMENTS (STRING DEFAULT-PACKAGE-NAME) ...)-9|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|PARSE-COMPLETION-ARGUMENTS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|PARSE-COMPLETION-ARGUMENTS|
+       #53Y(00 00 00 00 02 00 00 00 26 03 AE 2F 00 42 03 92 01 15 B0 6F 03 AF
+            AF 92 02 02 0E 04 14 B0 40 04 19 07 DC 32 A6 1B 06 14 DB 8E 14 76
+            9E 14 6F 03 AF AF 9F 1B 67)
+       (|SWANK|::|TOKENIZE-SYMBOL| "" :|KEYWORD| |SWANK|::|GUESS-PACKAGE|
+        |SWANK|::|*BUFFER-PACKAGE*|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING| |SWANK|::|DEFAULT-PACKAGE-NAME|)
+       "Parse STRING as a symbol designator.\n
+Return these values:\n
+ SYMBOL-NAME\n
+ PACKAGE-NAME, or nil if the designator does not include an explicit package.\n
+ PACKAGE, generally the package to complete in. (However, if PACKAGE-NAME is \n
+          NIL, return the respective package of DEFAULT-PACKAGE-NAME instead; \n
+          if PACKAGE is non-NIL but a package cannot be found under that name,\n
+          return NIL.)\n
+ INTERNAL-P, if the symbol is qualified with `::'."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|161 181 (DEFUN COMPLETION-OUTPUT-CASE-CONVERTER (INPUT &OPTIONAL WITH-ESCAPING-P) ...)-10|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|COMPLETION-OUTPUT-CASE-CONVERTER|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|COMPLETION-OUTPUT-CASE-CONVERTER|
+       #79Y(00 00 00 00 01 00 01 00 26 08 3D 01 6B 00 6F 01 9D 26 02 30 C9 19
+            04 92 02 7A AF 72 62 8F AD 06 DD B0 91 00 29 6E CA 19 04 CB 19 04
+            C9 19 04 92 02 7A AF 72 62 8F AC 06 E1 B0 91 00 29 6E CD 19 04 C9
+            19 04 AC E3 E4 70 0B E6 2D 03 0D 19 04)
+       (|COMMON-LISP|::|*READTABLE*| |COMMON-LISP|::|READTABLE-CASE|
+        #S(|COMMON-LISP|::|HASH-TABLE| :|TEST| |EXT|::|STABLEHASH-EQ|
+           (:|PRESERVE| . 46.) (:|DOWNCASE| . 28.) (:|INVERT| . 22.)
+           (:|UPCASE| . 4.))
+        #.#'|COMMON-LISP|::|LOWER-CASE-P| #.#'|COMMON-LISP|::|IDENTITY|
+        #.#'|COMMON-LISP|::|STRING-DOWNCASE|
+        #Y(|SWANK|::|COMPLETION-OUTPUT-CASE-CONVERTER-1|
+           #44Y(00 00 00 00 01 00 00 00 26 02 AD 2F 00 42 02 93 01 03 92 00 06
+                92 01 06 92 00 0A A0 19 04 AF 38 02 31 4C 19 04 AF 38 02 31 4E
+                19 04)
+           (|SWANK|::|DETERMINE-CASE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|OUTPUT|) |COMMON-LISP|::|NIL| 1)
+        #.#'|COMMON-LISP|::|UPPER-CASE-P| #.#'|COMMON-LISP|::|STRING-UPCASE|
+        (|COMMON-LISP|::|READTABLE-CASE| |COMMON-LISP|::|*READTABLE*|)
+        (:|UPCASE| :|INVERT| :|DOWNCASE| :|PRESERVE|)
+        |SYSTEM|::|CASE-ERROR-STRING|
+        (|COMMON-LISP|::|MEMBER| :|UPCASE| :|INVERT| :|DOWNCASE| :|PRESERVE|)
+        |SYSTEM|::|ETYPECASE-FAILED|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|INPUT| |COMMON-LISP|::|&OPTIONAL| |SWANK|::|WITH-ESCAPING-P|)
+       "Return a function to convert strings for the completion output.\n
+INPUT is used to guess the preferred case."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|183 186 (DEFUN COMPLETION-OUTPUT-PACKAGE-CONVERTER (INPUT) ...)-11|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|COMPLETION-OUTPUT-PACKAGE-CONVERTER|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|COMPLETION-OUTPUT-PACKAGE-CONVERTER|
+       #15Y(00 00 00 00 01 00 00 00 26 02 AD 2F 00 19 02)
+       (|SWANK|::|COMPLETION-OUTPUT-CASE-CONVERTER|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|INPUT|)
+       "Return a function to convert strings for the completion output.\n
+INPUT is used to guess the preferred case."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|188 210 (DEFUN COMPLETION-OUTPUT-SYMBOL-CONVERTER (INPUT) ...)-12|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER|
+       #32Y(00 00 00 00 01 00 00 00 26 02 00 2B 02 AE 2F 00 0B 00 00 AE 64 30
+            00 0B 00 01 AC 2C 01 01 19 03)
+       (|SWANK|::|COMPLETION-OUTPUT-CASE-CONVERTER|
+        #Y(|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER-1|
+           #69Y(00 00 00 00 01 00 00 00 26 02 AD 2F 01 42 02 6B 02 6F 03 AC 24
+                04 14 AC 24 05 17 16 03 E0 AE 90 00 29 14 69 00 01 AE 36 01 19
+                02 9F 16 03 1D 6D 1B 05 9E 16 03 1D 66 E1 E2 69 00 02 B0 76 01
+                E3 33 03 26 19 02)
+           (|COMMON-LISP|::|NIL| |SWANK|::|DETERMINE-CASE|
+            |COMMON-LISP|::|*READTABLE*| |COMMON-LISP|::|READTABLE-CASE|
+            :|UPCASE| :|DOWNCASE|
+            #Y(|SWANK|::|COMPLETION-OUTPUT-SYMBOL-CONVERTER-1-1|
+               #36Y(00 00 00 00 01 00 00 00 26 02 AD DA 38 03 31 C1 1E 10 AD 38
+                    01 31 7B 42 02 9E 1F 04 9D 59 19 04 19 04 19 02)
+               ((#\: #\Space #\Newline #\Tab))
+               (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+               (|SWANK|::|EL|) |COMMON-LISP|::|NIL| 1)
+            |COMMON-LISP|::|STRING| "|" "|")
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|STR|) |COMMON-LISP|::|NIL| 1))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|INPUT|)
+       "Return a function to convert strings for the completion output.\n
+INPUT is used to guess the preferred case. Escape symbols when needed."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|213 217 (DEFUN DETERMINE-CASE (STRING) ...)-13|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|DETERMINE-CASE| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|DETERMINE-CASE|
+       #24Y(00 00 00 00 01 00 00 00 26 02 DA AE 73 00 29 DB AF 73 00 29 40 02
+            19 02)
+       (#.#'|COMMON-LISP|::|LOWER-CASE-P| #.#'|COMMON-LISP|::|UPPER-CASE-P|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING|)
+       "Return two booleans LOWER and UPPER indicating whether STRING\n
+contains lower or upper case characters."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|220 246 (DEFUN MAKE-COMPOUND-PREFIX-MATCHER (DELIMITER &KEY #) ...)-14|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|MAKE-COMPOUND-PREFIX-MATCHER| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|MAKE-COMPOUND-PREFIX-MATCHER|
+       #71Y(00 00 00 00 01 00 00 00 A6 1C 01 00 00 00 00 2B 01 3B 02 01 C6 0B
+            00 00 9D 2B 01 B0 8E 2E 15 A1 21 1C B0 E0 E1 70 08 E3 2D 03 0A 0B
+            00 00 AC 2C 0B 01 19 05 B0 61 01 1B 72 DD 6F 04 2F 05 DC B1 91 00
+            2A 75 A1 1B 64)
+       (:|TEST| #.#'|COMMON-LISP|::|CHAR=| #.#'|COMMON-LISP|::|CHARACTERP|
+        (|COMMON-LISP|::|EVERY| #'|COMMON-LISP|::|CHARACTERP|
+         |SWANK|::|DELIMITER|)
+        |SYSTEM|::|ASSERT-ERROR-STRING| |SYSTEM|::|SIMPLE-ASSERT-FAILED|
+        |SWANK|::|DELIMITER| (|COMMON-LISP|::|CHARACTER| |COMMON-LISP|::|CONS|)
+        |SYSTEM|::|TYPECASE-ERROR-STRING|
+        (|COMMON-LISP|::|OR| |COMMON-LISP|::|CHARACTER| |COMMON-LISP|::|CONS|)
+        |SYSTEM|::|ETYPECASE-FAILED|
+        #Y(|SWANK|::|MAKE-COMPOUND-PREFIX-MATCHER-1|
+           #91Y(00 00 00 00 02 00 00 00 26 03 DB DB 63 1B 80 40 14 B2 38 06 A8
+                FC 81 7A 03 16 01 1C 2F 00 19 06 B1 AE 82 01 01 00 AE B1 72 62
+                91 01 31 6F AC 69 00 01 69 01 01 38 02 31 C1 78 92 00 53 69 01
+                01 AE B3 B2 73 01 01 36 02 16 01 1D 51 85 02 85 01 AD B2 72 62
+                91 01 34 48 02 19 06)
+           (|COMMON-LISP|::|NIL| 0.)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|SWANK|::|PREFIX| |SWANK|::|TARGET|) |COMMON-LISP|::|NIL| 1))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|DELIMITER| |COMMON-LISP|::|&KEY|
+        (|SWANK|::|TEST| #'|COMMON-LISP|::|CHAR=|))
+       "Returns a matching function that takes a `prefix' and a\n
+`target' string and which returns T if `prefix' is a\n
+compound-prefix of `target', and otherwise NIL.\n\n
+Viewing each of `prefix' and `target' as a series of substrings\n
+delimited by DELIMITER, if each substring of `prefix' is a prefix\n
+of the corresponding substring in `target' then we call `prefix'\n
+a compound-prefix of `target'.\n\n
+DELIMITER may be a character, or a list of characters."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|249 262 (DEFUN LONGEST-COMPOUND-PREFIX (COMPLETIONS &OPTIONAL #) ...)-15|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|LONGEST-COMPOUND-PREFIX| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|LONGEST-COMPOUND-PREFIX|
+       #74Y(00 00 00 00 01 00 01 00 26 08 00 2B 01 3B 02 01 C5 0B 00 00 AC 6D
+            01 01 AC B1 73 00 16 6F 02 01 02 1B 06 94 01 84 00 83 02 AE 8C 9F
+            10 87 02 01 DD AE 95 03 91 01 2C 6B AD 6F 04 84 00 AC 31 B1 16 02
+            F8 68 02 00 30 05 19 05)
+       (#\-
+        #Y(|SWANK|::|LONGEST-COMPOUND-PREFIX-TOKENIZER|
+           #18Y(00 00 00 00 01 00 00 00 26 02 AD 69 00 01 30 01 19 02)
+           (|COMMON-LISP|::|NIL| |SWANK|::|TOKENIZE-COMPLETION|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|COMMON-LISP|::|STRING|) |COMMON-LISP|::|NIL| 1)
+        |SWANK|::|TRANSPOSE-LISTS| #.#'|COMMON-LISP|::|STRING=|
+        |SWANK|::|LONGEST-COMMON-PREFIX| |SWANK|::|UNTOKENIZE-COMPLETION|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|COMPLETIONS| |COMMON-LISP|::|&OPTIONAL|
+        (|SWANK|::|DELIMITER| #\-))
+       "Return the longest compound _prefix_ for all COMPLETIONS." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|264 270 (DEFUN TOKENIZE-COMPLETION (STRING DELIMITER) ...)-16|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|TOKENIZE-COMPLETION| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|TOKENIZE-COMPLETION|
+       #53Y(00 00 00 00 02 00 00 00 26 03 01 03 C5 F9 1B 18 B0 B2 38 06 A6 FC
+            8E 7A 03 B1 32 62 FA B1 AE B0 72 60 84 00 AE 81 B1 01 AD B2 72 62
+            91 01 32 60 AC 31 B1 19 06)
+       (0.) (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|STRING| |SWANK|::|DELIMITER|)
+       "Return all substrings of STRING delimited by DELIMITER." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|272 273 (DEFUN UNTOKENIZE-COMPLETION (TOKENS &OPTIONAL #) ...)-17|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|UNTOKENIZE-COMPLETION| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|UNTOKENIZE-COMPLETION|
+       #46Y(00 00 00 00 01 00 01 00 26 08 3B 01 02 C5 F9 63 38 02 72 8F DB AD
+            38 02 31 95 AF AD 31 90 DC AD 38 02 31 95 AC 81 90 00 B0 2D 03 03
+            19 03)
+       (#\- "~{~A~^" "~}" |COMMON-LISP|::|FORMAT|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|TOKENS| |COMMON-LISP|::|&OPTIONAL|
+        (|SWANK|::|DELIMITER| #\-))
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|275 285 (DEFUN TRANSPOSE-LISTS (LISTS) ...)-18|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|SWANK|::|TRANSPOSE-LISTS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|TRANSPOSE-LISTS|
+       #42Y(00 00 00 00 01 00 00 00 26 02 93 01 0B 1B 03 93 01 06 DA AE 91 00
+            29 03 00 19 02 DB AE 73 00 16 DC AF 73 00 16 28 68 5D 19 02)
+       (#.#'|COMMON-LISP|::|NULL| #.#'|COMMON-LISP|::|CAR|
+        #.#'|COMMON-LISP|::|CDR|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|LISTS|)
+       "Turn a list-of-lists on its side.\n
+If the rows are of unequal length, truncate uniformly to the shortest.\n\n
+For example:\n
+(transpose-lists '((ONE TWO THREE) (1 2)))\n
+  => ((ONE 1) (TWO 2))"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|288 294 (DEFSLIMEFUN COMPLETIONS-FOR-CHARACTER (PREFIX) ...)-19-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C 3E 19 01)
+   (|SWANK|::|COMPLETIONS-FOR-CHARACTER| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|SWANK|::|COMPLETIONS-FOR-CHARACTER|
+       #35Y(00 00 00 00 01 00 00 00 26 02 DA DB DC 6E 03 03 AE AD 70 04 AC DF
+            38 03 72 82 AC AD DA 70 06 61 02 19 05)
+       (#\_ :|TEST| #.#'|COMMON-LISP|::|CHAR-EQUAL|
+        |SWANK|::|MAKE-COMPOUND-PREFIX-MATCHER|
+        |SWANK/BACKEND|::|CHARACTER-COMPLETION-SET|
+        #.#'|COMMON-LISP|::|STRING<| |SWANK|::|LONGEST-COMPOUND-PREFIX|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|SWANK|::|PREFIX|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|288 294 (DEFSLIMEFUN COMPLETIONS-FOR-CHARACTER (PREFIX) ...)-19-2|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA DA 72 A4 31 E6 19 01)
+   (|SWANK|::|COMPLETIONS-FOR-CHARACTER|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|296 296 (PROVIDE :SWANK-C-P-C)-20|
+   #15Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 19 01)
+   (:|SWANK-C-P-C| |COMMON-LISP|::|PROVIDE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
