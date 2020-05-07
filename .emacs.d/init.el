@@ -89,9 +89,9 @@
   ;; Known to work at least since v23, again don't know if before.
   ;; (defun gamegrid-add-score-with-update-game-score-1( file target score ))
 
-  (require 'cl-lib-highlight)
-  (cl-lib-highlight-initialize)
-  (cl-lib-highlight-warn-cl-initialize)
+  ;; (require 'cl-lib-highlight)
+  ;; (cl-lib-highlight-initialize)
+  ;; (cl-lib-highlight-warn-cl-initialize)
 
   (require 'windmove)
   (global-set-key (kbd "C-c <right>") 'windmove-right)
@@ -451,7 +451,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 128 :width normal))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 143 :width normal))))
  '(custom-face-tag ((t (:inherit variable-pitch :foreground "#6c71c4" :weight normal :height 1.0))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
  '(custom-group-tag-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.0))))

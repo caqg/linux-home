@@ -63,3 +63,5 @@
 	helper          = cache --timeout=14400
 
 ## end .gitconfig
+[pull]
+	rebase = false

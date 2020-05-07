@@ -1,0 +1,2 @@
+;;; Generated package description from /home/cesar/.emacs.d/elpa/move-dup-20200506.2305/move-dup.el  -*- no-byte-compile: t -*-
+(define-package "move-dup" "20200506.2305" "Eclipse-like moving and duplicating lines or rectangles." 'nil :commit "fa9be365fcd6a2b89388b4d27dec93928d506678" :keywords '("convenience" "text" "edit") :authors '(("Jimmy Yuen Ho Wong" . "wyuenho@gmail.com")) :maintainer '("Jimmy Yuen Ho Wong" . "wyuenho@gmail.com") :url "https://github.com/wyuenho/move-dup")

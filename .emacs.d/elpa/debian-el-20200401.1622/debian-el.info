@@ -1,0 +1,327 @@
+This is debian-el.info, produced by makeinfo version 6.5 from
+debian-el.texi.
+
+INFO-DIR-SECTION Emacs
+START-INFO-DIR-ENTRY
+* Debian-el: (debian-el). Debian-specific tools for Emacs
+END-INFO-DIR-ENTRY
+
+This is Edition 1.1, last updated 24 October 2005, of 'debian-el'.
+
+
+File: debian-el.info,  Node: Top,  Next: apt-sources,  Prev: (dir),  Up: (dir)
+
+The debian-el Package Setup
+***************************
+
+This manual describes the debian-el package and its setup.  A quick
+descriptions of elisp files contained in this package can be found in
+the file '/usr/share/doc/debian-el/README.Debian'.
+
+   All packaged files are installed, setup and ready to use (they don't
+override standard Emacs commands, modes, or settings).
+
+   To customize setup of all customizable packages on a finer-grain
+basis, do:
+     M-x customize-group <RET> debian-el <RET>
+
+* Menu:
+
+* apt-sources::                 Mode for editing apt sources.list files
+* apt-utils::                   Emacs interface to APT
+* debian-bug::                  Report a bug to Debian's bug tracking system
+* deb-view::                    View Debian package archive files with tar-mode
+* gnus-BTS::                    Access the Debian Bug Tracking System from Gnus
+* pressed::                     Mode for debian-installer preseed files
+ -- The Detailed Node Listing --
+
+deb-view - View Debian package archive files with tar-mode
+
+* deb-view configuration::
+* deb-view usage::
+
+
+   This work compiles GPL'ed documentation from the files in
+/usr/share/emacs/site-lisp/debian-el/.  As a derived work from GPL'ed
+works, this text is also licensed under the GPL V2 (See
+/usr/share/common-licenses/GPL-2) and is edited by Peter S. Galbraith
+<psg@debian.org>.
+
+
+File: debian-el.info,  Node: apt-sources,  Next: apt-utils,  Prev: Top,  Up: Top
+
+1 apt-sources - Mode for editing apt sources.list files.
+********************************************************
+
+This mode is for editing '/etc/apt/sources.list' and
+'/etc/apt/sources.list.d/*.list', the APT (Advanced Package Tool)
+configuration files found on Debian systems.
+
+   APT is a package retrieval tool for Debian; for example you could
+install Emacs with the command:
+
+       apt-get install emacs21
+
+   and APT will then retrieve the package and install it for you.  The
+sources.list file tells APT where to look for packages.  Mine looks like
+this:
+
+       deb http://http.us.debian.org/debian unstable main contrib
+       deb http://non-us.debian.org/debian-non-US unstable/non-US main
+
+       deb ftp://ftp.de.debian.org/debian ../project/experimental main
+
+   This mode font-locks the file and add some things including new
+source lines and modifying existing source lines.
+
+   This mode can be customized in diferent parts.  You can
+(interactively) change if you want blank lines around a new source line
+and comment with 'apt-sources-around-lines'.  Also you can change the
+way that this mode names each source line with the variable
+'apt-sources-source-name'; if no name is entered, no comment name will
+be inserted.
+
+   You can modify existing parts of the source line; check the mode
+documentation for more details.  Another thing that this mode can do is
+to replicate an existing line ('C-c C-r') that will be changed to the
+'deb' or 'deb-src' corresponding line.  If it replicates a 'deb' line,
+an identical 'deb-src' source line will be created.
+
+
+File: debian-el.info,  Node: apt-utils,  Next: debian-bug,  Prev: apt-sources,  Up: Top
+
+2 apt-utils - Emacs interface to APT
+************************************
+
+Start things off using e.g.:
+     M-x apt-utils-show-package <RET> emacs21 <RET>
+
+   Other packages (dependencies, conflicts etc) can be navigated using
+'apt-utils-next-package' (<TAB>), 'apt-utils-prev-package' (<M-TAB>),
+'apt-utils-choose-package-link' (<>>) or 'apt-utils-follow-link'
+(<RET>).  Return to the previous package with
+'apt-utils-view-previous-package' (<<>).
+
+   ChangeLog and README files for the current package can easily be
+accessed with, for example, 'apt-utils-view-changelog' (<C>).
+
+   For normal (i.e., not virtual) packages, the information can be
+toggled between 'package' and 'showpkg' displays using
+'apt-utils-toggle-package-info' (<t>); the latter is useful for the
+"Reverse Depends".
+
+   View the key bindings with describe-mode (bound to ?  by default) or
+use the menu.
+
+   You may alter various settings of 'apt-utils' bu customizing the
+group 'apt-utils'.
+
+
+File: debian-el.info,  Node: debian-bug,  Next: deb-view,  Prev: apt-utils,  Up: Top
+
+3 debian-bug - report a bug to Debian's bug tracking system
+***********************************************************
+
+Useful commands provided by this package:
+
+'debian-bug'
+     Submit a Debian bug report against a package or file.
+
+'debian-bug-wnpp'
+     Submit a WNPP bug report to Debian.
+
+'debian-bug-request-for-package'
+     Shortcut for 'debian-bug-wnpp' with RFP action.
+
+'debian-bug-intent-to-package'
+     Shortcut for 'debian-bug-wnpp' with ITP action (for Debian
+     developers).
+
+'debian-bug-web-bugs'
+     Browse the BTS for this package via 'browse-url'."
+
+'debian-bug-web-bug'
+     Browse the BTS for BUG-NUMBER via 'browse-url'
+
+'debian-bug-web-this-bug'
+     Browse the BTS via 'browse-url' for the bug report number under
+     point.
+
+'debian-bug-web-this-bug-under-mouse'
+     Browse the BTS via 'browse-url' for the bug report number under
+     mouse.  (Normally bound to mouse-2 in some modes)
+
+'debian-bug-web-packages'
+     Search Debian web page for this package via 'browse-url'.
+
+'debian-bug-web-package'
+     Search Debian web page in ARCHIVE for this package via
+     'browse-url'.
+
+'debian-bug-get-bug-as-file'
+     Read bug report #BUG-NUMBER as a regular file.
+
+'debian-bug-get-bug-as-email'
+     Read bug report #BUG-NUMBER via Email interface.
+
+The command 'M-x debian-bug' prompts for required information to start
+filling in the mail draft buffer.  It then allows you to edit these
+fields in the mail draft buffer with a useful menu-bar and view help
+text about your various options.  If the Debian package 'wget' is
+installed, you may download the list of bugs for the affected package at
+that time, and download the text of a specific bug number as well.
+
+The debian-bug facility depends on the reportbug package.
+
+
+File: debian-el.info,  Node: deb-view,  Next: gnus-BTS,  Prev: debian-bug,  Up: Top
+
+4 deb-view - View Debian package archive files with tar-mode
+************************************************************
+
+Author: Rick Macdonald (rickm@vsl.com)
+
+   deb-view presents the contents of debian package archive files for
+viewing.  The viewing is done with the major mode "debview", which is
+derived from emacs tar-mode with a few enhancements for viewing
+compressed files, HTML files and formatted man pages.  The normal
+editing and saving features of tar-mode are not supported by deb-view.
+
+   deb-view includes a command called 'deb-find' which requires that you
+have the debian distribution directories on a local or mounted
+filesystem.  Give it a string or regular expression and it presents a
+buffer of matching deb file names.  Click with the middle mouse button
+or press <RETURN> (or <C-c C-c>) and it launches deb-view on the
+selected file.  deb-find can be configured to use locate or find, or any
+other external command.  The find method passes your search
+specification to egrep, whereas the locate method uses your string
+directly.
+
+   deb-view extracts the control.tar.gz and data.tar.gz files from
+debian package and presents two buffers in a derivitive of tar-mode.
+See tar-mode for info.
+
+Optionally required programs:
+'nroff'
+     for formatting man pages.
+'w3-mode'
+     for viewing HTML pages.
+
+   *Note:* Since version 37.3, dpkg-deb is required.
+
+* Menu:
+
+* deb-view configuration::
+* deb-view usage::
+
+
+File: debian-el.info,  Node: deb-view configuration,  Next: deb-view usage,  Prev: deb-view,  Up: deb-view
+
+4.1 Configuration
+=================
+
+deb-view is mostly unobtrusive, but does bind <C-d> in dired to
+'deb-view-dired-view'.  The "debview" mode is derived from tar-mode.el
+using derived.el.  Compared to tar-mode, debview-mode binds <q>, <N>,
+<W>, and re-binds <v>.  Also, the normal editing and saving features of
+tar-mode are not supported by debview mode and those keys are disabled.
+
+   'deb-find' has two variables to set.  'deb-find-method' can be
+"locate" or "find".  Any other value will be assumed to be an external
+script or program that you supply.  If you set 'deb-find-method' to
+"find" then you must also set 'deb-find-directory' to the directory
+containing the debian distribution.  The find command starts at this
+point.  I originally used the locate option, but contrary to the man
+page it doesn't seem to understand even simple regular expressions.  I
+prefer the find option.  It uses egrep and therefore understands complex
+regular expressions.  You might want to bind 'deb-find' to a special
+key.  I use <C-d> like this:
+
+  (define-key ctl-x-map "\C-d" 'deb-find)
+
+   Note that this key is normally the brief 'list-directory' command, a
+command that I never used anyway.
+
+
+File: debian-el.info,  Node: deb-view usage,  Prev: deb-view configuration,  Up: deb-view
+
+4.2 Usage
+=========
+
+In dired, press <f> or <e> on the dired line of the .deb file to view.
+You can also use <C-d>, which is actually slightly faster since the deb
+file isn't loaded into a buffer needlessly.
+
+   Or, execute: 'M-x deb-view RETURN', and enter the .deb file name at
+the prompt.
+
+   Or, execute: 'M-x deb-find RETURN', and enter any substring of a deb
+file name to search for.  A buffer of matches is created.  Launch
+'deb-view' by selecting a deb file with the middle mouse button, or
+<RETURN> or <C-c>.  Exit this buffer with <q>.
+
+   You are shown two tar files in debview-mode (see tar-mode for help).
+In the case of old .deb format files, the control info is shown but not
+the other files of control.tar, such as install scripts.  Note that
+regular tar-mode commands <e>, <f> and <RETURN> show raw files without
+any special uncompressing or formatting.  Additional features that
+deb-view adds to tar-mode:
+
+'q'
+     kill both view buffers (INFO and DATA) and return to the dired
+     buffer if that's where you executed deb-mode.
+'v'
+     executes deb-view-tar-view instead of tar-view, with the additional
+     smarts to uncompress .gz and .Z files for viewing.
+'N'
+     Like in dired, formats man pages for viewing, with the additional
+     smarts to uncompress .gz and .Z man files for viewing.
+'W'
+     use w3-mode to view an HTML file.
+
+   To view files not supported by deb-view, such as graphics, use the
+copy command (<c>) to copy the file to a temp directory.  You can then
+do what you want to the file.
+
+
+File: debian-el.info,  Node: gnus-BTS,  Next: pressed,  Prev: deb-view,  Up: Top
+
+5 gnus-BTS - access the Debian Bug Tracking System from Gnus
+************************************************************
+
+Use this if you read a lot of debian lists in GNUS and see references to
+the Bug Tracking system in them.  It expects to see Bug references in
+the form of (for example): "#48273", "closes: 238742" or similar and
+will make them clickable.
+
+   To enable this, add the following to your '~/.emacs' file:
+
+     (require 'gnus-BTS)
+
+
+File: debian-el.info,  Node: pressed,  Prev: gnus-BTS,  Up: Top
+
+6 preseed - major mode for debian-installer preseed files
+*********************************************************
+
+Author: W. Borgert <debacle@debian.org>
+
+   A simple major-mode for editing debian-installer preseed files.
+Since such files don't always have the same extension, this mode is not
+autoloaded.  Enter it by using teh command line:
+
+     M-x preseed-mode
+
+
+Tag Table:
+Node: Top269
+Node: apt-sources1716
+Node: apt-utils3373
+Node: debian-bug4431
+Node: deb-view6277
+Node: deb-view configuration7801
+Node: deb-view usage9102
+Node: gnus-BTS10727
+Node: pressed11262
+
+End Tag Table
