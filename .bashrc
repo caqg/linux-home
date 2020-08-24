@@ -48,8 +48,7 @@ export PATH
     . $HOME/.bash_under_emacs
 
 
-eval $( ~/cmd/path |
-    /usr/bin/awk '
+eval $( ~/cmd/path | /usr/bin/awk '
 BEGIN { n = 0; }
 {
 	if ($0 in map) {
@@ -64,10 +63,10 @@ BEGIN { n = 0; }
 END {
 	for (i = 0; i < n; ++i) {
 		if (i == 0) {
-			newpath=array[0]
+			newpath="\""array[0]"\""
 #			print i, newpath
 		} else {
-			newpath=newpath":"array[i]
+			newpath=newpath":\""array[i]"\""
 #			print i, newpath
 		}
 	}
