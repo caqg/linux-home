@@ -16,7 +16,7 @@ export PERL5LIB
 export TCLLIBPATH=$HOME/lib/tcltk
 
 export CVSROOT=:local:$HOME/Dropbox/Repos/cq-CVS
-#export LC_TIME="en_GB.UTF-8"
+export LC_TIME="en_GB.UTF-8"
 
 export CSCOPE_EDITOR=$HOME/cmd/e
 export EDITOR=$HOME/cmd/e
