@@ -79,7 +79,7 @@
 
   (require 'magit)
   (global-set-key "\C-xg" 'magit-status)
-  (global-set-key "\C-x\M-g" 'magit-dispatch-popup)
+  (global-set-key "\C-x\M-g" 'magit-dispatch)
   (global-magit-file-mode 1)
 
   (require 'p4)
@@ -107,7 +107,7 @@
   ;; (require 'xcscope)
   ;; (cscope-setup)
 
-  (require 'gtags)
+  ;; (require 'gtags)
 
   (require 'org-install)
   (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
@@ -152,7 +152,7 @@
       (set tabset sorted)))
 
   ;; Color them
-  (when (>= emacs-major-version 25)
+  (when (and (window-system) (>= emacs-major-version 25))
     (load-theme 'solarized t t)
     (load-theme 'solarized-light t t)
     (load-theme 'solarized-dark t t)
@@ -177,16 +177,23 @@
 
   (setq-default ediff-auto-refine 'on)
 
+
   (when (memq window-system (list 'x 'w32))
     (set-default-xtitle))
-  (when window-system
+  (when (display-color-p)
     (cq/adjust-paren-face-fg nil))
+  (unless (display-graphic-p)
+    (normal-erase-is-backspace-mode -1))
 
   (add-hook 'tty-setup-hook (lambda ()
                               (tabbar-mode -1)
-                              (menu-bar-mode -1)))
-
-  (unless window-system (normal-erase-is-backspace-mode -1)))
+                              (menu-bar-mode 1)
+                              (when (getenv "WSL_DISTRO_NAME")
+                                (setq frame-background-mode 'dark)
+                                (mapc #'frame-set-background-mode (frame-list))
+                                (cq/adjust-paren-face-fg nil)
+                                (xterm-mouse-mode 1)
+                                (mouse-wheel-mode 1)))))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 
@@ -201,6 +208,8 @@
  '(ada-skel-initial-string "")
  '(adaptive-fill-mode t)
  '(align-indent-before-aligning t)
+ '(ansi-color-names-vector
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
  '(auto-mode-case-fold nil)
  '(background-color "#202020")
  '(background-mode dark)
@@ -224,12 +233,17 @@
  '(calendar-week-start-day 1)
  '(case-fold-search t)
  '(column-number-mode t)
+ '(compilation-message-face 'default)
  '(compilation-scroll-output t)
- '(compile-command "time -p make -r -C compass MODE=dbg install-run")
+ '(compile-command "time -p make -j")
  '(completion-auto-help 'lazy)
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
  '(cscope-option-use-inverted-index t)
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(current-language-environment "UTF-8")
  '(cursor-color "#cccccc")
  '(custom-safe-themes
@@ -267,12 +281,6 @@
        (modify-frame-parameters
         (selected-frame)
         '((fullscreen . maximized))))))
- '(ecb-activate-hook
-   '(ecb-eshell-auto-activate-hook
-     (lambda nil
-       (scroll-bar-mode -1)
-       (horizontal-scroll-bar-mode -1)
-       (ecb-redraw-layout))))
  '(ecb-activation-selects-ecb-frame-if-already-active t)
  '(ecb-auto-expand-tag-tree 'all)
  '(ecb-compile-window-height 0.2)
@@ -285,12 +293,14 @@
  '(ecb-options-version "2.50")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer 'never)
- '(ecb-source-path '(("/home/cesar" "Home") ("/" "/")))
+ '(ecb-source-path
+   '(("/home/cesar/linux-home" "Remote dots")
+     ("/home/cesar/nmax_compiler" "Flex Logix SW")))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence '("leftright-analyse" "leftright1" "left1"))
  '(ecb-version-check nil)
  '(ecb-windows-width 0.2)
- '(ede-project-directories '("/work/stable-linux"))
+ '(ede-project-directories '("/home/cesar/nmax_compiler"))
  '(ediff-custom-diff-options "-U10")
  '(ediff-highlight-all-diffs nil)
  '(ediff-keep-variants nil)
@@ -301,6 +311,7 @@
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(enable-recursive-minibuffers t)
  '(explicit-shell-file-name "bash")
+ '(fci-rule-color "#073642")
  '(fill-column 80)
  '(filladapt-turn-on-mode-hooks
    '(text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook))
@@ -321,8 +332,8 @@
  '(ggtags-global-treat-text t)
  '(global-ede-mode t)
  '(global-font-lock-mode t nil (font-lock))
- '(global-hl-line-mode t)
- '(global-hl-line-sticky-flag t)
+ '(global-hl-line-mode nil)
+ '(global-hl-line-sticky-flag nil)
  '(global-semantic-decoration-mode t)
  '(global-semantic-highlight-func-mode t)
  '(global-semantic-idle-completions-mode t nil (semantic/idle))
@@ -335,6 +346,24 @@
  '(grep-find-template
    "find . <X> -type f <F> -exec grep <C> -n -e <R> /dev/null {} +")
  '(grep-template "grep <X> <C> -n -e <R> <F>")
+ '(highlight-changes-colors '("#d33682" "#6c71c4"))
+ '(highlight-symbol-colors
+   '("#98695021d64f" "#484f5a50ffff" "#9ae80000c352" "#00000000ffff" "#98695021d64f" "#9ae80000c352" "#484f5a50ffff"))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   '(("#073642" . 0)
+     ("#5b7300" . 20)
+     ("#007d76" . 30)
+     ("#0061a8" . 50)
+     ("#866300" . 60)
+     ("#992700" . 70)
+     ("#a00559" . 85)
+     ("#073642" . 100)))
+ '(hl-bg-colors
+   '("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300"))
+ '(hl-fg-colors
+   '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
+ '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(home-end-enable t)
  '(horizontal-scroll-bar-mode nil)
  '(indent-tabs-mode nil)
@@ -352,8 +381,11 @@
  '(load-prefer-newer t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list '("%Y-%m-%d %H:%M" "%Y-%m-%d     "))
+ '(lsp-ui-doc-border "#93a1a1")
  '(magit-diff-refine-hunk t)
+ '(magit-log-margin '(t "%Y-%m-%d %H:%M " magit-log-margin-width t 18))
  '(magit-repository-directories '(("/work" . 2)))
+ '(magit-save-repository-buffers 'dontask)
  '(magit-view-git-manual-method 'man)
  '(mail-archive-file-name "~/mail/babyl/OUT")
  '(mail-use-rfc822 t)
@@ -363,6 +395,8 @@
  '(multishell-activate-command-key nil)
  '(multishell-command-key "!")
  '(network-security-level 'high)
+ '(nrepl-message-colors
+   '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
  '(nsm-save-host-names t)
  '(nxml-slash-auto-complete-flag t)
  '(org-agenda-restore-windows-after-quit t)
@@ -380,7 +414,9 @@
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/")))
  '(package-selected-packages
-   '(verilog-mode sml-mode csv-mode ecb tramp-term form-feed bison-mode cl-lib-highlight dired-toggle-sudo p4 fill-column-indicator tabbar slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode ada-mode ctags all async dash dired-hacks-utils ess git-commit slime with-editor magit magit-popup minimap memory-usage quarter-plane cmake-font-lock fm org-magit let-alist multishell org-plus-contrib llvm-mode magit-tramp ac-R ac-python anaconda-mode beacon glsl-mode python3-info solarized-theme fasm-mode ada-ref-man aggressive-indent anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex backtrace-mode bigint company-ess company-math cperl-mode csv-nav dired-narrow ess-R-object-popup ess-smart-underscore gtags ht hydra ipython javadoc-help jira move-dup nasm-mode org org-cliplink org-download org-jira org-journal org-mime org-pandoc perl-completion perl-myvar pod-mode prolog python-mode ruby-test-mode slime-annot tdd vkill wget wiki))
+   '(ecb tramp-term form-feed bison-mode cl-lib-highlight dired-toggle-sudo p4 fill-column-indicator tabbar slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode ada-mode ctags all async dash dired-hacks-utils ess git-commit slime with-editor magit magit-popup minimap memory-usage quarter-plane cmake-font-lock fm org-magit let-alist multishell org-plus-contrib llvm-mode magit-tramp ac-R ac-python anaconda-mode beacon glsl-mode python3-info solarized-theme fasm-mode ada-ref-man aggressive-indent anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex backtrace-mode bigint company-ess company-math cperl-mode csv-nav dired-narrow ess-R-object-popup ess-smart-underscore gtags ht hydra ipython javadoc-help jira move-dup nasm-mode org org-cliplink org-download org-jira org-journal org-mime org-pandoc perl-completion perl-myvar pod-mode prolog python-mode ruby-test-mode slime-annot tdd vkill wget wiki))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
  '(prog-mode-hook '((lambda nil (form-feed-mode 1))))
  '(python-shell-interpreter "python3.7")
  '(recentf-mode t)
@@ -416,6 +452,7 @@
  '(size-indication-mode t)
  '(slime-kill-without-query-p t)
  '(slime-net-coding-system 'utf-8-unix)
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(solarized-distinct-fringe-background t)
  '(solarized-high-contrast-mode-line nil)
  '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
@@ -424,6 +461,8 @@
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
  '(tab-always-indent 'complete)
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(text-mode-hook
    '(turn-on-auto-fill
      (lambda nil
@@ -436,15 +475,43 @@
  '(use-file-dialog t)
  '(user-full-name "César Quiroz")
  '(user-mail-address "cesar.quiroz@gmail.com")
+ '(vc-annotate-background nil)
+ '(vc-annotate-background-mode nil)
+ '(vc-annotate-color-map
+   '((20 . "#dc322f")
+     (40 . "#ffffa21b0000")
+     (60 . "#ffffd2170000")
+     (80 . "#b58900")
+     (100 . "#fffffffe0000")
+     (120 . "#fffffffe0000")
+     (140 . "#fffffffe0000")
+     (160 . "#fffffffe0000")
+     (180 . "#859900")
+     (200 . "#dc61ffb77bfe")
+     (220 . "#c516ffa79f16")
+     (240 . "#a726ffaac017")
+     (260 . "#7bfcffc6e035")
+     (280 . "#2aa198")
+     (300 . "#0000fffffffe")
+     (320 . "#0000fffffffe")
+     (340 . "#0000fffffffe")
+     (360 . "#268bd2")))
+ '(vc-annotate-very-old-color nil)
  '(vc-follow-symlinks t)
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement 'sometimes)
+ '(weechat-color-list
+   '(unspecified "#002b36" "#073642" "#a7020a" "#dc322f" "#5b7300" "#859900" "#866300" "#b58900" "#0061a8" "#268bd2" "#a00559" "#d33682" "#007d76" "#2aa198" "#839496" "#657b83"))
  '(whitespace-style
    '(face trailing tabs spaces lines-tail newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(windmove-wrap-around t)
  '(x-gtk-show-hidden-files t)
  '(xref-marker-ring-length 32)
+ '(xterm-color-names
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
+ '(xterm-color-names-bright
+   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"])
  '(yank-pop-change-selection t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -452,11 +519,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 143 :width normal))))
- '(custom-face-tag ((t (:inherit variable-pitch :foreground "#6c71c4" :weight normal :height 1.0))))
- '(custom-group-tag ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
- '(custom-group-tag-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.0))))
- '(custom-variable-tag ((t (:inherit variable-pitch :foreground "#2aa198" :height 1.0))))
- '(org-level-1 ((t (:inherit variable-pitch :foreground "#cb4b16" :height 1.0))))
- '(org-level-2 ((t (:inherit variable-pitch :foreground "#859900" :height 1.0))))
  '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
- '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0)))))
+ '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0))))
+ '(region ((t (:inherit hightlight :extend t :background "color-235")))))
