@@ -1,7 +1,8 @@
 #!/bin/bash
 
-parallel=-j
+# parallel=-j
+options=${1+"$@"}
 
-make $parallel && sudo make $parallel install
+make $options && sudo make $options install
 
 ##end make-and-install
