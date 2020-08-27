@@ -47,7 +47,9 @@ set tags               +=../tags
 
 if has("terminfo")
     if &term == "xterm-256color"
-        set t_u7        =
+        if getenv('WSL_DISTRO_NAME') != v:null
+            set t_u7        =
+        endif
         set t_Co        =256
     elseif &term == "xterm*"
         set t_Co        = 16
