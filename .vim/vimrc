@@ -32,9 +32,9 @@ set directory          +=/var/tmp
 set directory          +=/tmp
 
 set path                =,,
-set path               +=/usr/include/c++/8/**
-set path               +=/usr/include/x86_64-linux-gnu/c++/8/**
-set path               +=/usr/lib/gcc/x86_64-linux-gnu/8/include*/**
+set path               +=/usr/include/c++/9/**
+set path               +=/usr/include/x86_64-linux-gnu/c++/9/**
+set path               +=/usr/lib/gcc/x86_64-linux-gnu/9/include*/**
 set path               +=/usr/include/x86_64-linux-gnu
 set path               +=/usr/local/include
 set path               +=/usr/include
@@ -45,33 +45,47 @@ set tags               +=tags
 set tags               +=./tags
 set tags               +=../tags
 
-if &term =~ 'xterm*'
-    if has("terminfo")
-        set t_Co        =16
+if has("terminfo")
+    if &term == "xterm-256color"
+        set t_Co        =256
+    elseif &term == "xterm*"
+        set t_Co        = 16
     endif
 endif
 
-if &term == "linux" || &term =~ '[ex]term*'
-    colorscheme default
-elseif &term == "screen"
-    colorscheme default
+set mouse=a
+
+if &term == "screen"
+    if getenv('WSL_DISTRO_NAME') != v:null
+        set t_Co=256
+    endif
+    if has('gui')
+        colorscheme default
+    endif
     set background=dark
 else
-    colorscheme solarized
-    call togglebg#map("<F12>")
+    if has('gui')
+        colorscheme solarized
+        call togglebg#map("<F12>")
+    endif
     set background=dark
 endif
 
 if &diff
-    colorscheme solarized
-    call togglebg#map("<F12>")
+    if has('gui')
+        colorscheme solarized
+        call togglebg#map("<F12>")
+    endif
     set background=dark
 endif
 
 "set rtp+=/usr/share/vim/addons
 
-"Before VIM8:  set noeb vb t_vb=
-set belloff=all
+if version < 800
+    set noeb vb t_vb=
+else
+    set belloff=all
+endif
 
 syntax on
 filetype indent on
