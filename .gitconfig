@@ -1,20 +1,21 @@
 [user]
 	name            = César A. Quiroz
-	email           = cesar_quiroz@ieee.org
+	email           = cesar@flex-logix.com
 
 [core]
-	editor          = $HOME/cmd/e -c -F '((width . 80)(height . 36))'
+	; editor          = $HOME/cmd/e -c -F '((width . 80)(height . 36))'
+	editor		= vim
 	pager           =
 
 [diff]
-	tool            = ediff
+	tool            = vimdiff
 	compactionHeuristic = true
 
 [difftool "ediff"]
 	cmd             = $HOME/cmd/ediff $LOCAL $REMOTE
 
 [merge]
-	tool            = emerge
+	tool            = vimdiff3
 	conflictstyle   = diff3
 
 [mergetool "emerge"]
@@ -31,7 +32,7 @@
 	ds              = diff --staged
 	g               = gui
 	k               = !gitk
-	l               = log --color=auto --date=short --pretty=tformat:'%h %ad %s' --no-merges
+	l               = log --color=auto --date=format:%y-%m-%d --pretty=tformat:'%h %ad %<(8,trunc)%al %<(54,trunc)%s' --no-merges
 	prefix          = rev-parse --show-prefix
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
@@ -40,6 +41,9 @@
 
 [push]
 	default         = simple
+
+[pull]
+	rebase = false
 
 [color]
 	branch          = true
@@ -62,6 +66,5 @@
 [credential]
 	helper          = cache --timeout=14400
 
+
 ## end .gitconfig
-[pull]
-	rebase = false
