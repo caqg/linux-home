@@ -75,11 +75,14 @@ else
 endif
 
 if &diff
+    syntax off
     if has('gui')
         colorscheme solarized
         call togglebg#map("<F12>")
     endif
     set background=dark
+else
+    syntax on
 endif
 
 "set rtp+=/usr/share/vim/addons
@@ -90,7 +93,6 @@ else
     set belloff=all
 endif
 
-syntax on
 filetype indent on
 filetype plugin on
 
