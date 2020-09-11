@@ -32,7 +32,7 @@
 	ds              = diff --staged
 	g               = gui
 	k               = !gitk
-	l               = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %<(54,trunc)%s' --no-merges
+	l               = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %<(50,trunc)%s' --no-merges
 	prefix          = rev-parse --show-prefix
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
