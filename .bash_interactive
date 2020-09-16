@@ -2,6 +2,14 @@
 
 ### Functions
 
+if [ "$DISPLAY" ]; then
+	export MYVIM=gvim
+	export V_ARGS="-"
+else
+	export MYVIM=vim
+	export V_ARGS="--not-a-term -"
+fi
+
 +             () { pushd "$@"; }
 -             () { popd "$@"; }
 =             () { dirs -v "$@"; }
@@ -33,8 +41,8 @@ vdir          () { LC_ALL=C /bin/vdir ${LSFLAGS} "$@"; }
 
 o             () { { [ $# -eq 0 ] && echo "." ; echo "$@"; } |
 			   /usr/bin/xargs -n1 /usr/bin/xdg-open; }
-v             () { gvim -MR "$@"; }
-v-            () { gvim -MR --not-a-term -; }
+v             () { $MYVIM -MR "$@"; }
+v-            () { $MYVIM -MR $V_ARGS; }
 
 ### Prompts
 
