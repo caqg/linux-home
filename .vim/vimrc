@@ -48,7 +48,7 @@ set tags               +=../tags
 if has("terminfo")
     if &term == "xterm-256color"
         if getenv('WSL_DISTRO_NAME') != v:null
-            set t_u7        =
+            set t_u7    =
         endif
         set t_Co        =256
     elseif &term == "xterm*"
@@ -65,20 +65,19 @@ if &term == "screen"
     if has('gui')
         colorscheme default
     endif
-    set background=dark
+    set background=light
 else
     colorscheme solarized
     call togglebg#map("<F12>")
-    set background=dark
+    set background=light
 endif
 
 if &diff
     syntax off
     if has('gui')
-        set lines=999
-        set columns=999
+        set lines=999 columns=999
     endif
-    set background=dark
+    set background=light
 else
     syntax on
 endif
@@ -165,7 +164,12 @@ autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
 set diffopt             =filler
 set diffopt            +=iwhite
-set diffopt            +=vertical
+
+if &lines < 150
+    set diffopt            +=horizontal
+else
+    set diffopt            +=vertical
+endif
 
 set scrollopt           =hor
 set scrollopt          +=ver
