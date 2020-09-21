@@ -177,21 +177,30 @@
 
   (setq-default ediff-auto-refine 'on)
 
+  (defvar *cq/frame-background-mode* nil
+    "Desired initial value for frame-background-mode (or just NIL).")
+  (setq *cq/frame-background-mode*
+        (let ((mybgshine (getenv "MYBGSHINE")))
+          (setq *cq-frame-background-mode*
+                (if (or (null mybgshine)
+                        (not (member mybgshine (list "dark" "light"))))
+                    nil
+                  (intern mybgshine)))))
 
   (when (memq window-system (list 'x 'w32))
     (set-default-xtitle))
   (when (display-color-p)
     (cq/adjust-paren-face-fg nil))
   (unless (display-graphic-p)
-    (cq/adjust-paren-face-fg nil)
     (normal-erase-is-backspace-mode -1))
 
   (add-hook 'tty-setup-hook (lambda ()
                               (tabbar-mode -1)
                               (menu-bar-mode 1)
-                              (setq frame-background-mode 'dark)
-                              (mapc #'frame-set-background-mode (frame-list))
                               (when (getenv "WSL_DISTRO_NAME")
+                                (setq frame-background-mode
+                                      *cq/frame-background-mode*)
+                                (mapc #'frame-set-background-mode (frame-list))
                                 (cq/adjust-paren-face-fg nil)
                                 (xterm-mouse-mode 1)
                                 (mouse-wheel-mode 1)))))
@@ -415,7 +424,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/")))
  '(package-selected-packages
-   '(ecb tramp-term form-feed bison-mode cl-lib-highlight dired-toggle-sudo p4 fill-column-indicator tabbar slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode ada-mode ctags all async dash dired-hacks-utils ess git-commit slime with-editor magit magit-popup minimap memory-usage quarter-plane cmake-font-lock fm org-magit let-alist multishell org-plus-contrib llvm-mode magit-tramp ac-R ac-python anaconda-mode beacon glsl-mode python3-info solarized-theme fasm-mode ada-ref-man aggressive-indent anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex backtrace-mode bigint company-ess company-math cperl-mode csv-nav dired-narrow ess-R-object-popup ess-smart-underscore gtags ht hydra ipython javadoc-help jira move-dup nasm-mode org org-cliplink org-download org-jira org-journal org-mime org-pandoc perl-completion perl-myvar pod-mode prolog python-mode ruby-test-mode slime-annot tdd vkill wget wiki))
+   '(solarized-theme slime yaexception tramp-term slime-docker gxref eldoc-cmake eldoc-eval ninja-mode cider flymake flymake-python-pyflakes cuda-mode spark visible-mark cl-format concurrent docker-api docker-tramp editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring ascii sed-mode ctags all memory-usage quarter-plane fm org-magit let-alist multishell llvm-mode magit-tramp ac-R ac-python python3-info fasm-mode anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils backtrace-mode bigint company-ess cperl-mode csv-nav ess-R-object-popup gtags ipython javadoc-help jira org-pandoc perl-completion perl-myvar pod-mode prolog slime-annot tdd vkill wget wiki))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(prog-mode-hook '((lambda nil (form-feed-mode 1))))

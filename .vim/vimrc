@@ -65,11 +65,11 @@ if &term == "screen"
     if has('gui')
         colorscheme default
     endif
-    set background=light
+    set background=dark
 else
     colorscheme solarized
     call togglebg#map("<F12>")
-    set background=light
+    set background=dark
 endif
 
 if &diff
@@ -77,7 +77,7 @@ if &diff
     if has('gui')
         set lines=999 columns=999
     endif
-    set background=light
+    set background=dark
 else
     syntax on
 endif
@@ -133,10 +133,10 @@ autocmd FileType c,cpp,java     set tabstop             =8
 function! FlipFolding()
     if &foldenable
         set nofoldenable
-        set foldcolumn          =0
+        set foldcolumn  =0
     else
         set foldenable
-        set foldcolumn          =5
+        set foldcolumn  =5
     endif
 endfunction
 command! FlipFolding :call FlipFolding()
@@ -162,18 +162,18 @@ autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
-set diffopt      =filler
-set diffopt     +=iwhite
+set diffopt             =filler
+set diffopt            +=iwhite
 
 if &columns < 150
-    set diffopt +=horizontal
+    set diffopt            +=horizontal
 else
-    set diffopt +=vertical
+    set diffopt            +=vertical
 endif
 
-set scrollopt   =hor
-set scrollopt  +=ver
-set scrollopt  +=jump
+set scrollopt           =hor
+set scrollopt          +=ver
+set scrollopt          +=jump
 
 " Adjust Verilog's indentation
 function! VerilogSettings ()

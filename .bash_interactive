@@ -56,6 +56,9 @@ export PS2='> '
 export PS3='? '
 export PS4='+ '
 
+# To flip between dark and light bg where possible
+export MYBGSHINE=dark
+
 case "${TERM}" in
 xterm*|rxvt*)
 	updatePS1WithGitBranch () {
