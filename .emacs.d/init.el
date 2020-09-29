@@ -21,7 +21,7 @@
   (add-to-list 'load-path "~/.emacs.d/lisp")
   (load-library "misc")
   (load-library "cq-workarounds")
-  ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)x
+  ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)
   ;; stock or misc, not from workarounds:
   (global-set-key [(meta z)] 'zap-up-to-char)
   (global-set-key [(meta Z)] 'zap-to-char)
@@ -508,6 +508,7 @@
      (360 . "#268bd2")))
  '(vc-annotate-very-old-color nil)
  '(vc-follow-symlinks t)
+ '(verilog-highlight-grouping-keywords t)
  '(visible-bell t)
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement 'sometimes)
