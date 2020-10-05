@@ -181,29 +181,30 @@
     "Desired initial value for frame-background-mode (or just NIL).")
   (setq *cq/frame-background-mode*
         (let ((mybgshine (getenv "MYBGSHINE")))
-          (setq *cq-frame-background-mode*
-                (if (or (null mybgshine)
-                        (not (member mybgshine (list "dark" "light"))))
-                    nil
-                  (intern mybgshine)))))
+          (if (or (null mybgshine)
+                  (not (member mybgshine (list "dark" "light"))))
+              nil
+            (intern mybgshine))))
+  (add-hook 'tty-setup-hook (lambda ()
+                              (tabbar-mode -1)
+                              (menu-bar-mode 1)
+                              (when (or (getenv "WSL_DISTRO_NAME")
+                                        (string-equal (getenv "TERM")
+                                                      "xterm-256color"))
+                                (setq frame-background-mode
+                                      *cq/frame-background-mode*)
+                                (mapc #'frame-set-background-mode (frame-list))
+                                (cq/adjust-paren-face-fg nil)
+                                (xterm-mouse-mode 1)
+                                (mouse-wheel-mode 1))))
 
   (when (memq window-system (list 'x 'w32))
     (set-default-xtitle))
   (when (display-color-p)
     (cq/adjust-paren-face-fg nil))
   (unless (display-graphic-p)
-    (normal-erase-is-backspace-mode -1))
+    (normal-erase-is-backspace-mode -1)))
 
-  (add-hook 'tty-setup-hook (lambda ()
-                              (tabbar-mode -1)
-                              (menu-bar-mode 1)
-                              (when (getenv "WSL_DISTRO_NAME")
-                                (setq frame-background-mode
-                                      *cq/frame-background-mode*)
-                                (mapc #'frame-set-background-mode (frame-list))
-                                (cq/adjust-paren-face-fg nil)
-                                (xterm-mouse-mode 1)
-                                (mouse-wheel-mode 1)))))
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
 

@@ -67,8 +67,10 @@ if &term == "screen"
     endif
     set background=dark
 else
-    colorscheme solarized
-    call togglebg#map("<F12>")
+    if has('gui')
+        colorscheme solarized
+        call togglebg#map("<F12>")
+    endif
     set background=dark
 endif
 
@@ -76,6 +78,8 @@ if &diff
     syntax off
     if has('gui')
         set lines=999 columns=999
+        colorscheme solarized
+        call togglebg#map("<F12>")
     endif
     set background=dark
 else
