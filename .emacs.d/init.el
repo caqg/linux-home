@@ -545,6 +545,7 @@
  '(vc-follow-symlinks t)
  '(verilog-highlight-grouping-keywords t)
  '(visible-bell t)
+ '(warning-suppress-types '((bytecomp)))
  '(wdired-allow-to-change-permissions t)
  '(wdired-use-dired-vertical-movement 'sometimes)
  '(weechat-color-list
