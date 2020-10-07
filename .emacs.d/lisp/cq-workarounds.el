@@ -1,13 +1,13 @@
 ;;;; -*- Emacs-Lisp -*-
 
-;;; Minor utilities missed from XEmacs or some other emacs.
+;;; Minor utilities, missed from XEmacs or some other emacs.
 
-(defun cq-zap-up-to-char (arg char)
+(defun cq/zap-up-to-char (arg char)
   "Kill up to, but not including, ARG'th occurrence of CHAR.
 Case is ignored if `case-fold-search' is non-nil in the current buffer.
 Goes backward if ARG is negative; error if CHAR not found."
   (interactive "p\ncZap to char: ")
-  (kill-region (point) 
+  (kill-region (point)
                (progn
                  (search-forward (char-to-string char) nil nil arg)
                  (goto-char (if (> arg 0) (1- (point)) (1+ (point))))

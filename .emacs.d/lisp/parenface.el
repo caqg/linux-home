@@ -10,9 +10,9 @@
 (defvar paren-face 'paren-face)
 
 (defvar paren-face-light "#93a1a1"      ;base1
-  "Face for parentheses against a light background (see background-mode).")
+  "Face for parentheses when frame-background-mode is 'light")
 (defvar paren-face-dark  "#586e75"      ;base01
-  "Face for parentheses against a dark background (see background-mode).")
+  "Face for parentheses when frame-background-mode is 'dark")
 
 (defface paren-face
     '((((class color))

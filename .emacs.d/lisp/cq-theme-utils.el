@@ -7,7 +7,6 @@
 (require 'cl-lib)
 (require 'parenface)
 
-
 (defun cq/adjust-paren-face-fg (which)
   "Set the paren-face :foreground according to the frame-background-mode (light,
 dark), or to argument WHICH ('dark or 'light; else nothing
@@ -36,11 +35,7 @@ happens) if frame-background-mode is nil."
    (cl-copy-list custom-enabled-themes))
   (unless custom-enabled-themes
     (enable-theme 'user)))
-
-
 
-
-
 (provide 'cq-theme-utils)
 
 ;;;; end cq-theme-utils.el

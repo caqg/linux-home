@@ -41,9 +41,10 @@ set path               +=/usr/include
 set path               +=/usr/include/libxml2
 
 set tags                =
+set tags               +=./TAGS;~/Projects
 set tags               +=TAGS
-set tags               +=./TAGS
-set tags               +=../TAGS
+set tags               +=./tags;~/Projects
+set tags               +=tags
 
 if has("terminfo")
     if &term == "xterm-256color"
@@ -67,10 +68,8 @@ if &term == "screen"
     endif
     set background=dark
 else
-    if has('gui')
-        colorscheme solarized
-        call togglebg#map("<F12>")
-    endif
+    colorscheme solarized
+    call togglebg#map("<F12>")
     set background=dark
 endif
 

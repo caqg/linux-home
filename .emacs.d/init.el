@@ -1,20 +1,47 @@
 ;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
 
+;;;       #####   ######  #       ######  #    #  #####     ##
+;;;       #    #  #       #       #       ##   #  #    #   #  #
+;;;       #    #  #####   #       #####   # #  #  #    #  #    #
+;;;       #    #  #       #       #       #  # #  #    #  ######
+;;;       #    #  #       #       #       #   ##  #    #  #    #
+;;;       #####   ######  ######  ######  #    #  #####   #    #
+;;;
+;;;
+;;;                       ######   ####    #####
+;;;                       #       #          #
+;;;                       #####    ####      #
+;;;                       #            #     #
+;;;                       #       #    #     #
+;;;                       ######   ####      #
+;;;
+;;;   ##           #
+;;;  #  #  #      #           ######  #    #    ##     ####    ####
+;;;      ##      #            #       ##  ##   #  #   #    #  #
+;;;             #             #####   # ## #  #    #  #        ####
+;;;            #       ###    #       #    #  ######  #            #
+;;;           #        ###    #       #    #  #    #  #    #  #    #
+;;;          #         ###    ######  #    #  #    #   ####    ####
+;;;
+
+
 ;;; 2015-09-16 05:21:08UT (cesar@cesar-U64-14):
 ;;; 0.8 MB between gcs is too little nowadays
 ;;; hint at reddit from /u/bahblah
 ;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
 
-;;(message "Initial GCs = %s" gcs-done)
-(setq gc-cons-threshold (* 1024 1024 32))
+(message "cq: Initializing from ~/.emacs.d/init.el")
+(message "cq: Initial GCs = %s" gcs-done)
 
+(setq gc-cons-threshold (* 1024 1024 32))
 (let ((file-name-handler-alist nil)
       (gc-cons-threshold (* 1024 1024 1024 2)))
 
   (load-file "~/.emacs.d/init-legacy.el")
-  ;;(message "Done loading legacy init, GCs = %s" gcs-done)
+  (message "cq: Done loading legacy init, GCs = %s" gcs-done)
 
   (package-initialize)
+  (message "cq: After (package-initialize), GCs = %s" gcs-done)
 
   (load-library "cl-lib")
 
@@ -40,14 +67,14 @@
   (load-library "cq-minor-mode-utils")
   (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
 
-  ;;(load-library "cq-cedet-ede-ecb-utils")
-  ;;(global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
+  (load-library "cq-cedet-ede-ecb-utils")
+  (global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
 
-  (add-hook 'dired-load-hook
-            (lambda ()
-              ;; Bind dired-x-find-file.
-              (setq dired-x-hands-off-my-keys t)
-              (load "dired-x")))
+  (with-eval-after-load 'dired ;; was (add-hook 'dired-load-hook
+    (lambda ()
+      ;; Bind dired-x-find-file.
+      (setq dired-x-hands-off-my-keys t)
+      (load "dired-x")))
 
   (require 'ffap)
   (ffap-bindings)
@@ -82,23 +109,25 @@
   (global-set-key "\C-x\M-g" 'magit-dispatch)
   (global-magit-file-mode 1)
 
-  (require 'p4)
+  ;; Surely we haven't seen the last of perforce
+  ;; (require 'p4)
 
   (require 'tramp)
 
   ;; Known to work at least since v23, again don't know if before.
   ;; (defun gamegrid-add-score-with-update-game-score-1( file target score ))
 
-  ;; (require 'cl-lib-highlight)
-  ;; (cl-lib-highlight-initialize)
-  ;; (cl-lib-highlight-warn-cl-initialize)
+  ;; Optional cl-lib highlighting.
+  (unless (> emacs-major-version 24)    ;obsolete before v24.4
+    (require 'cl-lib-highlight)
+    (cl-lib-highlight-initialize)
+    (cl-lib-highlight-warn-cl-initialize))
 
   (require 'windmove)
   (global-set-key (kbd "C-c <right>") 'windmove-right)
   (global-set-key (kbd "C-c <left>")  'windmove-left)
   (global-set-key (kbd "C-c <up>")    'windmove-up)
   (global-set-key (kbd "C-c <down>")  'windmove-down)
-
 
   (require 'dired-x)
   (require 'dired-toggle-sudo)
@@ -162,15 +191,18 @@
 
   (require 'bison-mode)
   (require 'gdb-mi)
+
   (require 'semantic)
   (require 'semantic/decorate/mode)
   (require 'semantic/idle)
   (require 'semantic/mru-bookmark)
   (require 'semantic/sb)
   (require 'semantic/symref)
+
   (require 'ede)
-  ;;(require 'ecb)                        ;last require, so at end of Tools menu
   (global-semantic-mru-bookmark-mode 1)
+
+  ;;(require 'ecb)                        ;last require, so at end of Tools menu
 
   (if window-system
       (ad-activate 'tabbar-add-tab 'compile-it))
@@ -205,9 +237,9 @@
   (unless (display-graphic-p)
     (normal-erase-is-backspace-mode -1)))
 
+(message "cq: In init.el, before custom-set-variables, GCs = %s" gcs-done)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
-
 
 
 (custom-set-variables
@@ -299,16 +331,18 @@
  '(ecb-compile-window-width 'edit-window)
  '(ecb-enlarged-compilation-window-max-height 'best)
  '(ecb-ignore-pop-up-frames 'always)
- '(ecb-layout-name "leftright-analyse")
+ '(ecb-layout-name "left-symboldef")
  '(ecb-new-ecb-frame t)
  '(ecb-options-version "2.50")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer 'never)
  '(ecb-source-path
-   '(("/home/cesar/linux-home" "Remote dots")
-     ("/home/cesar/nmax_compiler" "Flex Logix SW")))
+   '(("/home/cesar/work/linux-home" "Remote dots")
+     ("/home/cesar/Projects/nmax_compiler" "Flex Logix SW compiler")
+     ("/home/cesar/Projects/weight-generation-tool" "Flex Logix SW wgt")))
  '(ecb-tip-of-the-day nil)
- '(ecb-toggle-layout-sequence '("leftright-analyse" "leftright1" "left1"))
+ '(ecb-toggle-layout-sequence
+   '("left-symboldef" "leftright-analyse" "leftright1" "left1"))
  '(ecb-version-check nil)
  '(ecb-windows-width 0.2)
  '(ede-project-directories '("/home/cesar/nmax_compiler"))

@@ -4,7 +4,7 @@
 ;;; All Rights Reserved Worldwide
 ;;; mailto:cesar.quiroz@gmail.com
 
-(defun cq/minmod-flip (mode-symbol)
+(defun cq/minor-mode-flip (mode-symbol)
   "If the MODE_SYMBOL argument is true, turn off the associated minor mode.
 Otherwise, turn the minor mode on."
   (interactive "S")
@@ -17,8 +17,8 @@ Otherwise, turn the minor mode on."
 (defun cq/flip-scroll-bar-modes ()
   "Invert the status of scroll-bar-mode and horizontal-scroll-bar-mode"
   (interactive)
-  (cq/minmod-flip 'scroll-bar-mode)
-  (cq/minmod-flip 'horizontal-scroll-bar-mode))
+  (cq/minor-mode-flip 'scroll-bar-mode)
+  (cq/minor-mode-flip 'horizontal-scroll-bar-mode))
 
 
 
