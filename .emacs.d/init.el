@@ -202,7 +202,7 @@
   (require 'ede)
   (global-semantic-mru-bookmark-mode 1)
 
-  ;;(require 'ecb)                        ;last require, so at end of Tools menu
+  (require 'ecb)                        ;last require, so at end of Tools menu
 
   (if window-system
       (ad-activate 'tabbar-add-tab 'compile-it))
