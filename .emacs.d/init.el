@@ -200,8 +200,6 @@
   (require 'semantic/symref)
 
   (require 'ede)
-  (global-semantic-mru-bookmark-mode 1)
-
   (require 'ecb)                        ;last require, so at end of Tools menu
 
   (if window-system
@@ -380,6 +378,7 @@
  '(global-hl-line-mode nil)
  '(global-hl-line-sticky-flag nil)
  '(global-semantic-decoration-mode t)
+ '(global-semantic-highlight-edits-mode t)
  '(global-semantic-highlight-func-mode t)
  '(global-semantic-idle-breadcrumbs-mode t nil (semantic/idle))
  '(global-semantic-idle-completions-mode t nil (semantic/idle))
@@ -387,6 +386,7 @@
  '(global-semantic-idle-scheduler-mode t)
  '(global-semantic-idle-summary-mode t)
  '(global-semantic-mru-bookmark-mode t)
+ '(global-semanticdb-minor-mode t)
  '(gnutls-min-prime-bits 2048)
  '(gnutls-verify-error t)
  '(grep-command "grep -inHR -e ")
