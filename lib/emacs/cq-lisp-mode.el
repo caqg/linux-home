@@ -5,7 +5,7 @@
 
 (defvar *global-functionals-or-typed*
     '(apply assoc-if assoc-if-not concatenate count-if count-if-not
-      delete-if delete-if-not every find-if find-if-not funcall 
+      delete-if delete-if-not every find-if find-if-not funcall
       (map . 2)
       mapc mapcan mapcar mapcon maphash mapl maplist
       member-if member-if-not merge notany notevery
@@ -55,7 +55,7 @@ the function `unset-questionable-indentation'"
   (lsetq
    blink-matching-paren    t
    indent-tabs-mode        nil
-   shell-prompt-pattern    "^[^ 	]*>>* *" ;tailored to KCL
+   shell-prompt-pattern    "^[^         ]*>>* *" ;tailored to KCL
    fill-column             78)
   ;; getting more functions
   (autoload 'condify-sexp (concat emacslib "deuglify")
@@ -116,7 +116,7 @@ the function `unset-questionable-indentation'"
          nil                            ;args-in-pairs
          t                              ;keyword-count, T means all
          t                              ;special-keyword-count
-         nil                            ;special count 
+         nil                            ;special count
          nil                            ;ignore-after-count
          ;; keywords of the loop macro that need special indentation
          "for" "with" "repeat" "named"
@@ -365,7 +365,7 @@ Character cannot be '?'.")
                 (if (memq (car entry) seen)
                     nil                 ;just ignore
                   (push (car entry) seen)
-                  (princ (format "%c produces %s" 
+                  (princ (format "%c produces %s"
                                  (car entry) (concat (cadr entry)
                                                      "_"
                                                      (caddr entry)))))))))
@@ -411,7 +411,7 @@ Run after you have done (rebuild-doc) in the KCL window."
 
 (defun cq-close-defun (where)
   "Try to close the top level s-expression ending at the position WHERE,
-which is the value of point by default.  By 'closing' the s-exp we mean this: 
+which is the value of point by default.  By 'closing' the s-exp we mean this:
 + If inside a comment, break to the next line and reindent, and...
 + If inside a string, close the string, and...
 + If inside a nest of open parentheses, add enough closing parentheses to
