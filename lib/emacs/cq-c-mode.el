@@ -42,7 +42,7 @@ parameters. Call only from C-mode buffers; NIL means no-op.")
 
   ;; want fill mode
   (auto-fill-mode 1)
-  (set-fill-column 78)
+  ;; (set-fill-column 78)
 
   ;; some help from text modes
   ;; (local-set-key    "\M-s"      'center-line)
