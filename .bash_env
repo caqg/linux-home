@@ -1,7 +1,7 @@
 # -*- Shell-Script -*- vim: ft=sh :
 
 # Set MANPAGER to its default, to avoid interference with PAGER.
-export MANPAGER="less -isrRQ"
+export MANPAGER='less -iRQ'
 unset MANPATH
 
 # Default infopath
@@ -23,7 +23,7 @@ export EDITOR=$HOME/cmd/e
 export FCEDIT=/bin/ed
 export HISTSIZE=1000
 export HISTTIMEFORMAT='%y-%m-%d_%H:%M:%S '
-export LESS=isrRQ
+export LESS=iRQ
 export PAGER=less
 export SUDO_EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e
