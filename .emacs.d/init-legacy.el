@@ -61,7 +61,7 @@
               (font-lock-mode 1)
               (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
                 ;; bison mode is derived from c-mode, so it works
-                (gtags-mode 1)
+                (gtags-mode -1)
                 (ggtags-mode -1))))
 
 (add-hook 'c-mode-common-hook
