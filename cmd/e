@@ -7,7 +7,11 @@
 # rewritten once more
 
 OPATH=$PATH
-PATH=/usr/bin:/bin
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# Running without X servers, possibly under WSL
+alternate="vim -f"
+[ "$DISPLAY" ] || exec $alternate "$@"
 
 emacs=/usr/local/bin/emacs
 emacsclient=/usr/local/bin/emacsclient
