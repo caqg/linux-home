@@ -15,7 +15,7 @@ PATH=/bin:/usr/bin
 
 elfile=$PWD/ede-cpproot.el
 projname=$(basename $(pwd))
-directories=${1+"$@"}
+directories=${1:+"$@"}
 directories=${directories:-"."}
 
 (
@@ -27,6 +27,12 @@ directories=${directories:-"."}
 	echo " '("
 
 	find -L $directories -type f \( \
+	     -name '*.v'	-o \
+	     -name '*.vh' 	-o \
+	     -name '*.vi' 	-o \
+	     -name '*.sv' 	-o \
+	     -name '*.svh' 	-o \
+	     -name '*.svi' 	-o \
 	     -name '*.h' -o \
 	     -name '*.hh' -o \
 	     -name '*.hpp' -o \
@@ -47,7 +53,7 @@ directories=${directories:-"."}
 		echo ' :system-include-path'
 		echo ' '"'"'('
 
-		find -L "${EDE_SYSTEM_INCLUDE_PATHS}" -type f \( \
+		find -L ${EDE_SYSTEM_INCLUDE_PATHS} -type f \( \
 		     -name '*.h' -o \
 		     -name '*.hh' -o \
 		     -name '*.hpp' -o \
