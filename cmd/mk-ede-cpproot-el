@@ -33,9 +33,9 @@ directories=${directories:-"."}
 	     -name '*.sv' 	-o \
 	     -name '*.svh' 	-o \
 	     -name '*.svi' 	-o \
-	     -name '*.h' -o \
-	     -name '*.hh' -o \
-	     -name '*.hpp' -o \
+	     -name '*.h' 	-o \
+	     -name '*.hh' 	-o \
+	     -name '*.hpp' 	-o \
 	     -name '*.hxx'  \) | \
 	grep -v /bld/ | \
 	grep -v /lnk/ | \
@@ -54,9 +54,9 @@ directories=${directories:-"."}
 		echo ' '"'"'('
 
 		find -L ${EDE_SYSTEM_INCLUDE_PATHS} -type f \( \
-		     -name '*.h' -o \
-		     -name '*.hh' -o \
-		     -name '*.hpp' -o \
+		     -name '*.h'	-o \
+		     -name '*.hh' 	-o \
+		     -name '*.hpp' 	-o \
 		     -name '*.hxx'  \) |
 		while read "h"; do d=`dirname $h`; echo $d; dirname "$d" ; done |
 		sort |
