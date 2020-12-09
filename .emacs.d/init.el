@@ -107,7 +107,6 @@
   (require 'magit)
   (global-set-key "\C-xg" 'magit-status)
   (global-set-key "\C-x\M-g" 'magit-dispatch)
-  (global-magit-file-mode 1)
 
   ;; Surely we haven't seen the last of perforce
   ;; (require 'p4)
@@ -295,6 +294,7 @@
  '(delete-selection-mode t)
  '(describe-char-unidata-list
    '(name old-name general-category decomposition mirrored iso-10646-comment))
+ '(desktop-save-mode t)
  '(develock-auto-enable nil)
  '(diary-file "~/.diary")
  '(diff-switches "-du")
@@ -470,6 +470,7 @@
  '(require-final-newline nil)
  '(rmail-file-name "~/mail/babyl/RMAIL")
  '(safe-local-variable-values '((ggtags-process-environment)))
+ '(savehist-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
  '(scroll-preserve-screen-position t)
@@ -508,6 +509,7 @@
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
  '(tab-always-indent 'complete)
+ '(tags-revert-without-query t)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
  '(text-mode-hook
@@ -570,4 +572,7 @@
  '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 143 :width normal))))
  '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
  '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0))))
- '(region ((t (:inherit hightlight :extend t :background "color-235")))))
+ '(region ((t (:inherit hightlight :extend t :background "color-235"))))
+ '(tty-menu-disabled-face ((t (:inverse-video t))))
+ '(tty-menu-enabled-face ((t (:inverse-video t :weight bold))))
+ '(tty-menu-selected-face ((t (:inverse-video t :underline t)))))
