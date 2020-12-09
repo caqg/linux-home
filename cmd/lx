@@ -64,6 +64,7 @@ esac
 {	printf '# -*- mode: Compilation; default-directory: \"%s\" -*-\n' $(pwd);
 	echo $runner "$@"; echo;
 	time -p $runner "$@" 2>&1; rc=$?;
+	[ -t ] && tset
 	printf "\f\n";
 	printf "RC:\t%d\n" $rc;
 	printf "Log:\t%s\n" $(/bin/ls "$logfile");
