@@ -328,6 +328,7 @@
  '(ecb-version-check nil)
  '(ecb-windows-width 0.2)
  '(ede-project-directories nil)
+ '(edebug-print-length nil)
  '(ediff-custom-diff-options "-U10")
  '(ediff-highlight-all-diffs nil)
  '(ediff-keep-variants nil)
