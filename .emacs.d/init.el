@@ -25,18 +25,17 @@
 ;;;
 
 
+(message "cq: Initializing from ~/.emacs.d/init.el")
+(message "cq: Initial GCs = %s" gcs-done)
+
 ;;; 2015-09-16 05:21:08UT (cesar@cesar-U64-14):
 ;;; 0.8 MB between gcs is too little nowadays
 ;;; hint at reddit from /u/bahblah
 ;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
 
-(message "cq: Initializing from ~/.emacs.d/init.el")
-(message "cq: Initial GCs = %s" gcs-done)
-
 (setq gc-cons-threshold (* 1024 1024 32))
 (let ((file-name-handler-alist nil)
       (gc-cons-threshold (* 1024 1024 1024 2)))
-
   (load-file "~/.emacs.d/init-legacy.el")
   (message "cq: Done loading legacy init, GCs = %s" gcs-done)
 
@@ -57,12 +56,12 @@
   (global-set-key "\C-x$" 'cq/set-selective-display)
 
   (load-library "cq-file-hooks")
-  (add-hook 'before-save-hook (lambda ()
-                                ;; clean up source code, but nothing else
-                                (when (and
-                                       (derived-mode-p 'prog-mode)
-                                       (not (derived-mode-p 'makefile-mode))
-                                  (cq/trim-whitespace)))))
+  (add-hook 'before-save-hook
+            (lambda () ;; clean up source code; do nothing else
+              (and
+               (derived-mode-p 'prog-mode)
+               (not (derived-mode-p 'makefile-mode))
+               (cq/trim-whitespace))))
 
   (load-library "cq-minor-mode-utils")
   (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
@@ -82,23 +81,12 @@
   (filesets-init)
 
   (require 'slime-autoloads)
-  (slime-setup '(slime-asdf
-                 slime-banner
-                 slime-editing-commands
-                 slime-fancy
-                 slime-fancy-inspector
-                 ;;slime-highlight-edits
-                 slime-mdot-fu
-                 slime-mrepl
-                 slime-references
-                 slime-tramp
-                 ;;slime-typeout-frame
-                 ))
+  (slime-setup)
   (global-set-key "\C-cs" 'slime-selector)
   (add-hook 'slime-repl-mode-hook 'set-balanced-insertions)
 
-  (which-function-mode 1)
-  (pending-delete-mode t)
+  (which-function-mode   1)
+  (pending-delete-mode   t)
   (electric-indent-mode -1)
 
   (require 'multishell)
@@ -210,22 +198,19 @@
     "Desired initial value for frame-background-mode (or just NIL).")
   (setq *cq/frame-background-mode*
         (let ((mybgshine (getenv "MYBGSHINE")))
-          (if (or (null mybgshine)
-                  (not (member mybgshine (list "dark" "light"))))
-              nil
+          (when (and mybgshine (member mybgshine '("dark" "light")))
             (intern mybgshine))))
-  (add-hook 'tty-setup-hook (lambda ()
-                              (tabbar-mode -1)
-                              (menu-bar-mode 1)
-                              (when (or (getenv "WSL_DISTRO_NAME")
-                                        (string-equal (getenv "TERM")
-                                                      "xterm-256color"))
-                                (setq frame-background-mode
-                                      *cq/frame-background-mode*)
-                                (mapc #'frame-set-background-mode (frame-list))
-                                (cq/adjust-paren-face-fg nil)
-                                (xterm-mouse-mode 1)
-                                (mouse-wheel-mode 1))))
+  (add-hook 'tty-setup-hook
+            (lambda ()
+              (tabbar-mode  -1)
+              (menu-bar-mode 1)
+              (when (or (getenv "WSL_DISTRO_NAME")
+                        (string-equal (getenv "TERM") "xterm-256color"))
+                (setq frame-background-mode *cq/frame-background-mode*)
+                (mapc #'frame-set-background-mode (frame-list))
+                (cq/adjust-paren-face-fg nil)
+                (xterm-mouse-mode 1)
+                (mouse-wheel-mode 1))))
 
   (when (memq window-system (list 'x 'w32))
     (set-default-xtitle))
@@ -255,7 +240,6 @@
  '(background-mode dark)
  '(backup-by-copying-when-linked t)
  '(beacon-mode nil)
- '(blink-cursor-mode nil)
  '(c++-font-lock-extra-types
    '("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference" "[[:upper:]]\\\\sw*[[:lower:]]\\\\sw"))
  '(c-tab-always-indent nil)
@@ -470,6 +454,7 @@
  '(require-final-newline nil)
  '(rmail-file-name "~/mail/babyl/RMAIL")
  '(safe-local-variable-values '((ggtags-process-environment)))
+ '(save-place-mode t)
  '(savehist-mode nil)
  '(scroll-bar-mode nil)
  '(scroll-conservatively 99)
@@ -479,9 +464,9 @@
    '("/usr/include/c++/9" "/usr/include/x86_64-linux-gnu/c++/9" "/usr/include/c++/9/backward" "/usr/lib/gcc/x86_64-linux-gnu/9/include" "/usr/local/include" "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed" "/usr/include/x86_64-linux-gnu" "/usr/include" "/usr/include/libxml2"))
  '(semantic-decoration-styles
    '(("semantic-decoration-on-includes" . t)
-     ("semantic-decoration-on-protected-members")
-     ("semantic-decoration-on-private-members")
-     ("semantic-tag-boundary")))
+     ("semantic-decoration-on-protected-members" . t)
+     ("semantic-decoration-on-private-members" . t)
+     ("semantic-tag-boundary" . t)))
  '(semantic-default-submodes
    '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode))
  '(semantic-mode t)
@@ -517,7 +502,6 @@
      (lambda nil
        (form-feed-mode 1))
      cq-text-mode text-mode-hook-identify))
- '(tool-bar-mode nil nil (tool-bar))
  '(truncate-lines t)
  '(uniquify-buffer-name-style 'post-forward-angle-brackets nil (uniquify))
  '(uniquify-trailing-separator-p t)
@@ -573,6 +557,6 @@
  '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
  '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0))))
  '(region ((t (:inherit hightlight :extend t :background "color-235"))))
- '(tty-menu-disabled-face ((t (:inverse-video t))))
+ '(tty-menu-disabled-face ((t (:background "color-242" :inverse-video t))))
  '(tty-menu-enabled-face ((t (:inverse-video t :weight bold))))
  '(tty-menu-selected-face ((t (:inverse-video t :underline t)))))
