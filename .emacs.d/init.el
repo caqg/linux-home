@@ -501,6 +501,7 @@
      (lambda nil
        (form-feed-mode 1))
      cq-text-mode text-mode-hook-identify))
+ '(tool-bar-mode nil)
  '(truncate-lines t)
  '(uniquify-buffer-name-style 'post-forward-angle-brackets nil (uniquify))
  '(uniquify-trailing-separator-p t)
