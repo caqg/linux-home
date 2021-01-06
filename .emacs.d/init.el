@@ -150,10 +150,9 @@
   (require 'tabbar)
   (require 'time)
 
-  (add-to-list 'load-path "/work/EmacsWiki")
-  (load-library "hide-comnt")
-  (load-library "hideshow-fringe")
-  (load-library "hideshowvis")
+  (require 'string-utils)
+
+  (require 'hide-comnt)
   (global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
 
   ;; tabbar (already initialized)
