@@ -63,7 +63,7 @@ if &term == "screen"
     if getenv('WSL_DISTRO_NAME') != v:null
         set t_Co=256
     endif
-    if has('gui')
+    if has('gui_running')
         colorscheme default
     endif
     set background=dark
@@ -75,7 +75,7 @@ endif
 
 if &diff
     syntax off
-    if has('gui')
+    if has('gui_running')
         set lines=999 columns=999
         colorscheme solarized
         call togglebg#map("<F12>")
@@ -129,17 +129,17 @@ autocmd FileType c,cpp,java     set foldmethod          =syntax
 autocmd FileType c,cpp,java     set foldcolumn          =0
 autocmd FileType c,cpp,java     set nofoldenable
 autocmd FileType c,cpp,java     set formatoptions      +=cj
-autocmd FileType c,cpp,java     set shiftwidth          =8
+autocmd FileType c,cpp,java     set shiftwidth          =4
 autocmd FileType c,cpp,java     set nosmarttab
 autocmd FileType c,cpp,java     set tabstop             =8
 
 function! FlipFolding()
     if &foldenable
         set nofoldenable
-        set foldcolumn  =0
+        set foldcolumn          =0
     else
         set foldenable
-        set foldcolumn  =5
+        set foldcolumn          =5
     endif
 endfunction
 command! FlipFolding :call FlipFolding()
@@ -152,18 +152,18 @@ autocmd FileType vim            set foldcolumn     =0
 autocmd FileType vim            set foldmethod     =indent
 autocmd FileType vim            set nofoldenable
 
-" delete trailing whitespace
-autocmd FileType awk,tcl        autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType c,cpp,java     autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType conf           autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType gdb,make       autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType lisp           autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType scheme         autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
+"" delete trailing whitespace
+"autocmd FileType awk,tcl        autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType c,cpp,java     autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType conf           autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType gdb,make       autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType lisp           autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType scheme         autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
+"autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
 set diffopt             =filler
 set diffopt            +=iwhite
