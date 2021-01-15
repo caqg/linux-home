@@ -300,3 +300,4 @@ extendsyntax makefile tabgives "	"
 #bind M-R redo main
 #bind ^U undo main
 #bind ^E redo main
+#set multibuffer
