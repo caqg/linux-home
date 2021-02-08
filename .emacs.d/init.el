@@ -33,7 +33,6 @@
 ;;; hint at reddit from /u/bahblah
 ;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
 
-(setq gc-cons-threshold (* 1024 1024 32))
 (let ((file-name-handler-alist nil)
       (gc-cons-threshold (* 1024 1024 1024 2)))
   (require 'cl-lib)
@@ -216,7 +215,7 @@
     (cq/adjust-paren-face-fg nil))
   (unless (display-graphic-p)
     (normal-erase-is-backspace-mode -1)))
-
+(eval :force-gc-by-calling-eval)
 (message "cq: In init.el, before custom-set-variables, GCs = %s" gcs-done)
 
 ;;;end ~/.emacs.d/init.el -- don't edit beyond
@@ -345,6 +344,8 @@
  '(foreground-color "#cccccc")
  '(frame-background-mode nil)
  '(garbage-collection-messages t)
+ '(gc-cons-percentage 0.1)
+ '(gc-cons-threshold 800000)
  '(gdb-enable-debug nil)
  '(gdb-many-windows t)
  '(gdb-max-frames 64)

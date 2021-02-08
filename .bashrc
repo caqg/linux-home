@@ -23,24 +23,31 @@ if [[ "$-" = *i* ]]; then
 	shopt -s progcomp
 fi
 
-# Add personal prefixes to the PATH, but only if they are not already there.
-[ -d $HOME/bin ] &&
-case "$PATH" in
-$HOME/bin:* | *:$HOME/bin | *:$HOME/bin:*)
-    ;;
-*)
-    PATH=$HOME/bin:$PATH;;
-esac
+prepend_to_PATH_if_absent () {
+	case $# in 
+	1)	dir="$1"
+		;;
+	*)	echo >&2 "prepend_to_PATH_if_absent takes one arg., a directory"
+		exit 1
+		;; 
+	esac
+	if [ -d "$dir" ]; then
+		case "$PATH" in
+		"$dir":* | *:"$dir" | *:"$dir":*)
+			;;
+		*)
+			export PATH="$dir:$PATH" ;;
+		esac
+	else
+		echo >&2 "$dir" is not a directory
+		exit 1
+	fi
+}
 
-[ -d $HOME/cmd ] &&
-case "$PATH" in
-$HOME/cmd:* | *:$HOME/cmd | *:$HOME/cmd:*)
-    ;;
-*)
-    PATH=$HOME/cmd:$PATH;;
-esac
-
-export PATH
+# add personal prefixes to the PATH, but only if they are not already there.
+prepend_to_PATH_if_absent $HOME/Projects/nmax_verilog_tools/bin
+prepend_to_PATH_if_absent $HOME/bin
+prepend_to_PATH_if_absent $HOME/cmd
 
 . $HOME/.bash_env
 
