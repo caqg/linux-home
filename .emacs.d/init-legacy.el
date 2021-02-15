@@ -327,6 +327,12 @@
               (auto-fill-mode 1)
               (font-lock-mode 1)))
 
+(add-hook 'xref--xref-buffer-mode-hook
+          (lambda ()
+            (let ((proj (project-current)))
+              (when proj
+                (cd (project-root proj))))))
+
 ;;; For FORTRAN mode
 ;; (add-hook 'fortran-mode-hook             'cq-fortran-mode)
 
