@@ -44,9 +44,8 @@ set bookstyle
 ## Do case-sensitive searches by default.
 # set casesensitive
 
-## Constantly display the cursor position in the status bar.  Note that
-## this overrides "quickblank".
-set constantshow
+## Constantly display the cursor position in the status bar or minibar.
+# set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
 # set cutfromcursor
@@ -124,8 +123,7 @@ set positionlog
 ## sentences.
 # set punct "!.?"
 
-## Do quick status-bar blanking.  Status-bar messages will disappear after
-## 1 keystroke instead of 26.  Note that "constantshow" overrides this.
+## Make status-bar messages disappear after 1 keystroke instead of after 20.
 # set quickblank
 
 ## The regular expression that matches quoting characters in email
@@ -203,13 +201,15 @@ set trimblanks
 ## of a single character, and without affecting the cutbuffer).
 # set zap
 
-## Paint the interface elements of nano.  These are examples;
-## by default there are no colors, except for errorcolor.
+
+## Paint the interface elements of nano.  These are examples; there are
+## no colors by default, except for errorcolor and highlightcolor.
 # set titlecolor bold,lightwhite,blue
 # set promptcolor lightwhite,lightblack
 # set statuscolor bold,lightwhite,green
 # set errorcolor bold,lightwhite,red
 # set selectedcolor lightwhite,magenta
+# set highlightcolor black,lime
 # set stripecolor ,yellow
 # set scrollercolor cyan
 # set numbercolor cyan
@@ -222,6 +222,7 @@ set trimblanks
 # set statuscolor bold,lightwhite,magenta
 # set errorcolor bold,lightwhite,red
 # set selectedcolor lightwhite,cyan
+# set highlightcolor black,orange
 # set stripecolor ,yellow
 # set scrollercolor magenta
 # set numbercolor magenta

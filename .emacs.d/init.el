@@ -460,8 +460,6 @@
    '("/usr/include/c++/9" "/usr/include/x86_64-linux-gnu/c++/9" "/usr/include/c++/9/backward" "/usr/lib/gcc/x86_64-linux-gnu/9/include" "/usr/local/include" "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed" "/usr/include/x86_64-linux-gnu" "/usr/include" "/usr/include/libxml2"))
  '(semantic-decoration-styles
    '(("semantic-decoration-on-includes" . t)
-     ("semantic-decoration-on-protected-members" . t)
-     ("semantic-decoration-on-private-members" . t)
      ("semantic-tag-boundary" . t)))
  '(semantic-default-submodes
    '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode))
