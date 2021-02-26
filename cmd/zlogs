@@ -15,65 +15,59 @@ ZLOGSGLOB=${ZLOGSGLOB:-*.log}
 PATH=/bin:/usr/bin
 
 usage () {
-	echo usage: $progname '[options] [zipname [dirname]]'
-	echo ""
-	echo "	Collect the \$ZLOGSGLOB (default \*.log) files in the current"
-	echo "	directory into a zip. The log files are added/updated in the"
-	echo "	zip."
-	echo ""
-	echo ""
-	echo "	DESCRIPTION"
-	echo ""
-	echo ""
-	echo "	With no arguments, and no \$ZLOGSDIR: "
-	echo ""
-	echo "	The zipname is the basename of \$PWD, the dirname is \$PWD."
-	echo "	Therefore, the default zip file is "
-	echo ""
-	echo "		\${PWD}/\$(basename \${PWD}).zip"
-	echo ""
-	echo ""
-	echo "	With no arguments, but \$ZLOGSDIR in the environment:"
-	echo ""
-	echo "	The default dirname is the value of \$ZLOGSDIR, therefore"
-	echo ""
-	echo "		\${ZLOGSDIR}/\$(basename \${PWD}).zip"
-	echo ""
-	echo ""
-	echo "	With a zipname argument, but no dirname:"
-	echo ""
-	echo "	If the zipname does not contain slashes, it is taken"
-	echo "	as-is and combined with the directory determined by the"
-	echo "	presence or absence of \$ZLOGSDIR."
-	echo ""
-	echo "	If the zipname starts with a slash, it is taken as-is,"
-	echo "	and no directory is determined. Any intermediate directories"
-	echo "	are created if needed."
-	echo ""
-	echo "	If the zipname contains slashes, it is interpreted relative"
-	echo "	to the directory determined depending on \$ZLOGSDIR. Any"
-	echo "	needed intermediate directories are created if needed."
-	echo ""
-	echo ""
-	echo "	With both zipname and dirname present:"
-	echo ""
-	echo "	The two arguments get concatenated, the concatenation is used"
-	echo "	as-is."
-	echo ""
-	echo ""
-	echo "	OPTIONS"
-	echo ""
-	echo "	-d"
-	echo "	--delete	Delete logs after zipping them"
-	echo ""
-	echo "	-n"
-	echo "	--dry-run	Show, but not do, what would happen"
-	echo ""
-	echo "	-l"
-	echo "	--list		list the logs zipped already"
-	echo ""
-	echo "	-h"
-	echo "	--help		Print this message to stdout."
+	/bin/cat 1>&2 << END_USAGE
+USAGE: 
+	$progname [options] [zipname [dirname]]
+
+DESCRIPTION
+	Collect the \$ZLOGSGLOB (default \*.log) files in the current
+	directory into a zip. The log files are added/updated in the
+	zip.
+
+	With no arguments, and no \$ZLOGSDIR: 
+
+		The zipname is the basename of \$PWD, the dirname is \$PWD.
+		Therefore, the default zip file is 
+
+			\${PWD}/\$(basename \${PWD}).zip
+
+	With no arguments, but \$ZLOGSDIR in the environment:
+
+		The default dirname is the value of \$ZLOGSDIR, therefore:
+			\${ZLOGSDIR}/\$(basename \${PWD}).zip
+
+	With a zipname argument, but no dirname:
+
+		If the zipname does not contain slashes, it is taken
+		as-is and combined with the directory determined by the
+		presence or absence of \$ZLOGSDIR.
+
+		If the zipname starts with a slash, it is taken as-is,
+		and no directory is determined. Any intermediate directories
+		are created if needed.
+
+		If the zipname contains slashes, it is interpreted relative
+		to the directory determined depending on \$ZLOGSDIR. Any
+		needed intermediate directories are created if needed.
+
+	With both zipname and dirname present:
+
+		The two arguments get concatenated, the concatenation is 
+		used as-is.
+
+OPTIONS
+	-d
+	--delete	Delete logs after zipping them
+
+	-n
+	--dry-run	Show, but not do, what would happen
+
+	-l
+	--list		list the logs zipped already
+
+	-h
+	--help		Succeed after printing this message to stdout.
+END_USAGE
 }
 
 mk_zipfile_name () {
@@ -91,6 +85,10 @@ mk_zipfile_name () {
 	esac
 	echo $zipfile
 }
+
+case $# in
+0)	usage; exit 1;;
+esac
 
 deleter=":"
 interpreter="bash"
@@ -127,10 +125,10 @@ case "$zipfile" in
 *)	zipfile="$zipfile".zip ;;
 esac
 
-# Refer to the zip manual page for the meaning of 0 and 12 as exit codes.
 cat <<EOF | $interpreter
 $zippy ${zipfile} ${ZLOGSGLOB}
 case \$? in
+# Refer to the zip manual page for the meaning of 0 and 12 as exit codes.
 0 | 12) $deleter ${ZLOGSGLOB}; echo; $lister ${ZLOGSGLOB} ;;
 esac
 EOF

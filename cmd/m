@@ -20,6 +20,34 @@ type >/dev/null -p nproc && {
 	maxjobs="-j$(expr 2 \* $(nproc))"
 }
 
+usage() {
+	/bin/cat 1>&2 <<END_USAGE
+USAGE: 
+	lx <command invocation> 
+	m <make arguments>
+
+DESCRIPTION:
+	lx runs the given simple command (not a pipeline);
+	m runs make with the given arguments. The output 
+	and error output of those runs are kept as a single
+	.log file in the current working directory. The log
+	file's name includes a timestamp in universal time
+	(Z time zone), which permits accumulating logs.
+
+	The log files can be used by Vim's quickfix feature
+	(vim -q <logfile>), or as a compilation-mode buffer
+	when read into Emacs. 
+	
+SEE ALSO:
+	zlogs, to manage the log files as zip archives.
+END_USAGE
+}
+
+case $# in 
+0)	usage;
+	exit 1;;
+esac
+
 case "$progname" in
 lx)	runner=""
 	runnerpfx="lx-"
@@ -63,10 +91,11 @@ esac
 
 {	printf '# -*- mode: Compilation; default-directory: \"%s\" -*-\n' $(pwd);
 	echo $runner "$@"; echo;
-	time -p $runner "$@" 2>&1; rc=$?;
+	/usr/bin/time -p $runner "$@" 2>&1; rc=$?;
+	[ -t ] && tset
 	printf "\f\n";
 	printf "RC:\t%d\n" $rc;
 	printf "Log:\t%s\n" $(/bin/ls "$logfile");
 } | tee "$logfile"
 
-#end m
+#end lx or m
