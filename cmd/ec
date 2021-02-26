@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Just a synonym for emacsclient, but directly executable
+
+EMACSCLIENT=${EMACSCLIENT:-/usr/local/bin/emacsclient}
+$EMACSCLIENT ${1+"$@"} ${1:-.};
