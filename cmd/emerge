@@ -1,18 +1,27 @@
-#!/bin/sh
+#!/bin/bash
+
+usage() {
+	echo "usage: "`basename $0`" BASE-in THEIRS-in YOURS-in MERGED-out";
+	echo "  MERGED = YOURS + (THEIRS - BASE)"
+}
 
 for arg; do
 	case "$arg" in
-	-*)	echo 1>&2 Option $arg discarded.
+	-*)	echo 1>&2 Option $arg ignored.
 		shift;;
 	esac
 done
 
 case $# in
-4) A=$1 B=$2 C=$3 M=$4;;
-*) echo "usage: "`basename $0`" BASE-in THEIRS-in YOURS-in MERGED-out";
-   echo "  MERGED = YOURS + (THEIRS - BASE)"
-   exit 2 ;;
+4) A=$1 B=$2 C=$3 M=$4 ;;
+*) usage; exit 2       ;;
 esac
 
-e -c -F '((fullscreen . maximized))' -e \
+if [ "WSL_DISTRO_NAME" ]; then
+	e=~/cmd/ec;
+else
+	e=~/cmd/e;
+fi
+
+$e -c -F '((fullscreen . maximized))' -e \
  '(ediff-merge-files-with-ancestor "'"$C"'" "'"$B"'" "'"$A"'" () "'"$M"'")'

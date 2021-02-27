@@ -1,15 +1,25 @@
-#!/bin/sh
+#!/bin/bash
+
+usage() {
+	echo "usage: "`basename $0`" BASE THEIRS YOURS";
+}
 
 for arg; do
 	case "$arg" in
-	-*)	echo 1>&2 Option $arg discarded.
+	-*)	echo 1>&2 Option $arg ignored.
 		shift;;
 	esac
 done
 
 case $# in
 3) A=$1 B=$2 C=$3;;
-*) echo "usage: "`basename $0`" BASE THEIRS YOURS"; exit 2 ;;
+*) usage; exit 2 ;;
 esac
 
-e -c -F '((fullscreen . maximized))' -e '(ediff3 "'"$B"'" "'"$C"'" "'"$A"'")'
+if [ "WSL_DISTRO_NAME" ]; then
+	e=~/cmd/ec;
+else
+	e=~/cmd/e;
+fi
+
+$e -c -F '((fullscreen . maximized))' -e '(ediff3 "'"$B"'" "'"$C"'" "'"$A"'")'

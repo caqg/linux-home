@@ -38,6 +38,9 @@ prepend_to_PATH_if_absent () {
 		*)
 			export PATH="$dir:$PATH" ;;
 		esac
+	else
+		echo >&2 "$dir" is not a directory
+		exit 1
 	fi
 }
 

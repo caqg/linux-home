@@ -9,17 +9,25 @@
 
 [diff]
 	tool            = vimdiff
+	guitool		= vscode
 	compactionHeuristic = true
 
 [difftool "ediff"]
 	cmd             = $HOME/cmd/ediff $LOCAL $REMOTE
 
+[difftool "vscode"]
+	cmd		= code --wait --diff --new-window $LOCAL $REMOTE
+
 [merge]
-	tool            = vimdiff3
-	conflictstyle   = diff3
+	tool            = vimdiff
+	guitool		= vscode
+	conflictstyle   = merge
 
 [mergetool "emerge"]
 	cmd             = $HOME/cmd/emerge $BASE $REMOTE $LOCAL $MERGED
+
+[mergetool "vscode"]
+	cmd		= code --wait --new-window $MERGED
 
 [alias]
 	aa              = add -A .
