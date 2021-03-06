@@ -44,6 +44,7 @@ prepend_to_PATH_if_absent () {
 # add personal prefixes to the PATH, but only if they are not already there.
 prepend_to_PATH_if_absent $HOME/bin
 prepend_to_PATH_if_absent $HOME/cmd
+prepend_to_PATH_if_absent $HOME/.cargo/bin
 
 . $HOME/.bash_env
 
