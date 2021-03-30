@@ -129,10 +129,11 @@ autocmd FileType c,cpp,java     set foldmethod          =syntax
 autocmd FileType c,cpp,java     set foldcolumn          =0
 autocmd FileType c,cpp,java     set nofoldenable
 autocmd FileType c,cpp,java     set formatoptions      +=cj
-autocmd FileType c,cpp,java     set shiftwidth          =4
+autocmd FileType c,cpp,java     set shiftwidth          =8
 autocmd FileType c,cpp,java     set nosmarttab
 autocmd FileType c,cpp,java     set tabstop             =8
 " For FlexLogix conventions
+autocmd FileType c,cpp,java     set shiftwidth          =4
 autocmd FileType c,cpp,java     set wrap
 autocmd FileType c,cpp,java     set linebreak
 autocmd FileType c,cpp,java     set breakindent
