@@ -172,6 +172,12 @@ autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
 
+
+" More diff-specifics
+
+" enable wrapping for FlexLogix conventions
+autocmd VimEnter * if &diff | execute 'windo set wrap' | endif
+
 set diffopt        =filler
 set diffopt       +=iwhite
 
