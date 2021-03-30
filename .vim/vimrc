@@ -167,6 +167,7 @@ autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType lisp           autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType scheme         autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType systemverilog  autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
@@ -193,6 +194,12 @@ function! VerilogSettings ()
     endif
 endfunction
 autocmd BufReadPost *.v call VerilogSettings()
+
+" Verilog soft wrap for FlexLogix
+autocmd FileType verilog,systemverilog set wrap
+autocmd FileType verilog,systemverilog set linebreak
+autocmd FileType verilog,systemverilog set breakindent
+autocmd FileType verilog,systemverilog set breakindentopt =min:20,shift:2
 
 " Treat *.md as markdown, not modula2
 autocmd BufNewFile,BufRead *.md setfiletype markdown
