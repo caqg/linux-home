@@ -166,8 +166,8 @@ autocmd FileType gdb,make       autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType gitconfig      autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType lisp           autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType scheme         autocmd BufWritePre <buffer> %s/\s\+$//e
-autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType systemverilog  autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType verilog        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType vim            autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType xml,xsd        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType yacc,lex       autocmd BufWritePre <buffer> %s/\s\+$//e
