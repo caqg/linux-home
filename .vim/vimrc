@@ -158,7 +158,7 @@ autocmd FileType vim            set foldcolumn     =0
 autocmd FileType vim            set foldmethod     =indent
 autocmd FileType vim            set nofoldenable
 
-" trip trailing whitespace
+" trim trailing whitespace
 autocmd FileType awk,tcl        autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType c,cpp,java     autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd FileType conf           autocmd BufWritePre <buffer> %s/\s\+$//e
