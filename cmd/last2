@@ -1,0 +1,30 @@
+#!/bin/bash
+
+PATH=/usr/local/bin:/bin:/usr/bin
+
+usage () {
+	cat <<END
+SYNOPSYS
+$(basename $0) [glob]
+
+DESCRIPTION
+Compares (by diff -qs) the two most recent files names that match the optional
+GLOB.  A null GLOB means the two most recent files in this directory, normally
+not a meaningful operation.
+
+The first line of output is the command that did the comparison; it can be
+manually repeated without -qs, for instance, or tacked on to "vim" to get
+"vimdiff" invoked.
+
+EXIT CODE
+Whatever diff(1) returns.
+END
+}
+
+case $1 in
+-*)	usage; exit 0;;
+esac
+
+echo diff -qs $(ls -tr "$@" | tail -2) | bash -x
+
+#end latest
