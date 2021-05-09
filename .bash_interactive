@@ -6,6 +6,7 @@ if [ "$DISPLAY" ]; then
 	export MYVIM=gvim
 	export V_ARGS="-"
 else
+	[ "$TERM" = "xterm-256color" ] && export TERM=xterm-emacs
 	export MYVIM=vim
 	export V_ARGS="--not-a-term -"
 fi
@@ -30,7 +31,7 @@ hf            () { if [ $# -gt 0 ];
 		   then history | grep -e "$*" -;
 		   else history;
 		   fi; }
-j             () { jobs -l "$@"; }
+j             () { jobs "$@"; }
 k             () { kill -9 "$@"; }
 
 l             () { LC_ALL=C /bin/ls  ${LSFLAGS} \
