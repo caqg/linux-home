@@ -31,7 +31,7 @@ hf            () { if [ $# -gt 0 ];
 		   then history | grep -e "$*" -;
 		   else history;
 		   fi; }
-j             () { jobs "$@"; }
+j             () { jobs -l "$@"; }
 k             () { kill -9 "$@"; }
 
 l             () { LC_ALL=C /bin/ls  ${LSFLAGS} \

@@ -232,6 +232,7 @@
  '(align-indent-before-aligning t)
  '(ansi-color-names-vector
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
+ '(auto-hscroll-mode 'current-line)
  '(auto-mode-case-fold nil)
  '(background-color "#202020")
  '(background-mode dark)
