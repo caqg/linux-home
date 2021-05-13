@@ -1,6 +1,11 @@
 #!/bin/bash
 
-{ make -j && sudo make -j install; } || 
-	{ make && sudo make install; }
+if [ $(nproc) == 1 ]
+then parallel=-j1
+else parallel=-j$(( $(nproc) - 1 ))
+fi
+
+{ echo make $parallel ...; make $parallel && sudo make $parallel install; } || 
+	{ echo make ... ; make && sudo make install; }
 
 ##end make-and-install
