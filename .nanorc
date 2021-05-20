@@ -19,7 +19,7 @@ set atblanks
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-# set autoindent
+set autoindent
 
 ## Back up files to the current filename plus a tilde.
 set backup
@@ -45,10 +45,10 @@ set bookstyle
 # set casesensitive
 
 ## Constantly display the cursor position in the status bar or minibar.
-# set constantshow
+set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
-# set cutfromcursor
+set cutfromcursor
 
 ## Do not use the line below the title bar, leaving it entirely blank.
 # set emptyline
@@ -84,7 +84,7 @@ set locking
 # set matchbrackets "(<[{)>]}"
 
 ## Suppress title bar and show file name and editor state at the bottom.
-# set minibar
+set minibar
 
 ## Enable mouse support, if available for your system.  When enabled,
 ## mouse clicks can be used to place the cursor, set the mark (with a
@@ -97,7 +97,7 @@ set mouse
 set multibuffer
 
 ## Don't convert files from DOS/Mac format.
-# set noconvert
+set noconvert
 
 ## Don't display the helpful shortcut lists at the bottom of the screen.
 set nohelp
@@ -157,7 +157,7 @@ set positionlog
 set smarthome
 
 ## Spread overlong lines over multiple screen lines.
-# set softwrap
+set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
@@ -178,7 +178,7 @@ set tabsize 8
 # set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
-set trimblanks
+# set trimblanks
 
 ## The two single-column characters used to display the first characters
 ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
@@ -203,13 +203,13 @@ set trimblanks
 
 
 ## Paint the interface elements of nano.  These are examples; there are
-## no colors by default, except for errorcolor and highlightcolor.
+## no colors by default, except for errorcolor and spotlightcolor.
 # set titlecolor bold,lightwhite,blue
 # set promptcolor lightwhite,lightblack
 # set statuscolor bold,lightwhite,green
 # set errorcolor bold,lightwhite,red
+# set spotlightcolor black,lime
 # set selectedcolor lightwhite,magenta
-# set highlightcolor black,lime
 # set stripecolor ,yellow
 # set scrollercolor cyan
 # set numbercolor cyan
@@ -221,8 +221,8 @@ set trimblanks
 # set promptcolor black,yellow
 # set statuscolor bold,lightwhite,magenta
 # set errorcolor bold,lightwhite,red
+# set spotlightcolor black,orange
 # set selectedcolor lightwhite,cyan
-# set highlightcolor black,orange
 # set stripecolor ,yellow
 # set scrollercolor magenta
 # set numbercolor magenta
@@ -243,7 +243,7 @@ include "/usr/local/share/nano/*.nanorc"
 
 ## In /usr/local/share/nano/extra/ you can find some syntaxes that are
 ## specific for certain distros or for some less common languages.
-
+include "/usr/local/share/nano/extra/*.nanorc"
 
 ## If <Tab> should always produce four spaces when editing a Python file,
 ## independent of the settings of 'tabsize' and 'tabstospaces':
