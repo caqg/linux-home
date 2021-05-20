@@ -84,7 +84,7 @@ set locking
 # set matchbrackets "(<[{)>]}"
 
 ## Suppress title bar and show file name and editor state at the bottom.
-set minibar
+# set minibar
 
 ## Enable mouse support, if available for your system.  When enabled,
 ## mouse clicks can be used to place the cursor, set the mark (with a
