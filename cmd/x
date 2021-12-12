@@ -59,7 +59,7 @@ fi
 case "$xterm" in
 gnome-terminal)
 	#"$xterm" --geometry "$xcols"x"$xrows" -t "$title" -x $cmd ${1+"$@"} &
-	"$xterm" 1>/dev/null 2>/dev/null --geometry "$xcols"x"$xrows" -- \
+	"$xterm" 1>/dev/null 2>/dev/null --geometry="$xcols"x"$xrows" -- \
 		 with-x-title "$title" $cmd ${1+"$@"}
 	;;
 sakura)
