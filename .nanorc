@@ -19,7 +19,7 @@ set atblanks
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-set autoindent
+# set autoindent
 
 ## Back up files to the current filename plus a tilde.
 set backup
@@ -48,7 +48,7 @@ set bookstyle
 set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
-set cutfromcursor
+# set cutfromcursor
 
 ## Do not use the line below the title bar, leaving it entirely blank.
 # set emptyline
@@ -78,19 +78,20 @@ set locking
 ## Fall back to slow libmagic to try and determine an applicable syntax.
 # set magic
 
-## The opening and closing brackets that can be found by bracket
-## searches.  They cannot contain blank characters.  The former set must
-## come before the latter set, and both must be in the same order.
+## The opening and closing brackets that are found by a matching-bracket
+## search.  This may not contain blank characters.  The opening brackets
+## must come before the closing ones, and they must be in the same order.
 # set matchbrackets "(<[{)>]}"
 
-## Suppress title bar and show file name and editor state at the bottom.
+## Suppress the title bar and show the filename plus a cursor-position
+## percentage in the space of the status bar.
 # set minibar
 
 ## Enable mouse support, if available for your system.  When enabled,
 ## mouse clicks can be used to place the cursor, set the mark (with a
-## double click), and execute shortcuts.  The mouse will work in the X
-## Window System, and on the console when gpm is running.
-set mouse
+## double click), and execute shortcuts.  The mouse will work in the
+## X Window System, and on the console when gpm is running.
+# set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
@@ -117,10 +118,9 @@ set positionlog
 ## Preserve the XON and XOFF keys (^Q and ^S).
 # set preserve
 
-## The characters treated as closing punctuation when justifying
-## paragraphs.  They cannot contain blank characters.  Only closing
-## punctuation, optionally followed by closing brackets, can end
-## sentences.
+## The characters treated as closing punctuation when justifying paragraphs.
+## This may not contain blank characters.  Only these closing punctuations,
+## optionally followed by closing brackets, can end sentences.
 # set punct "!.?"
 
 ## Make status-bar messages disappear after 1 keystroke instead of after 20.
@@ -144,20 +144,20 @@ set positionlog
 # set saveonexit
 ## (The old form of this option, 'set tempfile', is deprecated.)
 
-## Put the cursor on the highlighted item in the file browser, and show
-## the cursor in the help viewer; useful for people who use a braille
-## display and people with poor vision.
+## Put the cursor on the highlighted item in the file browser, and
+## show the cursor in the help viewer; useful for people who use a
+## braille display and people with poor vision.
 # set showcursor
 
-## Make the Home key smarter.  When Home is pressed anywhere but at the
+## Make the Home key smarter: when Home is pressed anywhere but at the
 ## very beginning of non-whitespace characters on a line, the cursor
 ## will jump to that beginning (either forwards or backwards).  If the
-## cursor is already at that position, it will jump to the true
-## beginning of the line.
-set smarthome
+## cursor is already at that position, it will jump to the true start
+## of the line (the left edge).
+# set smarthome
 
 ## Spread overlong lines over multiple screen lines.
-set softwrap
+# set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
@@ -165,16 +165,12 @@ set softwrap
 
 ## Use the end of the title bar for some state flags: I = auto-indenting,
 ## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
-set stateflags
-
-## Allow nano to be suspended (with ^Z by default).
-set suspendable
-## (The old form of this option, 'set suspend', is deprecated.)
+# set stateflags
 
 ## Use this tab size instead of the default; it must be greater than 0.
 set tabsize 8
 
-## Convert typed tabs to spaces.
+## Convert each typed tab to the fitting number of spaces.
 # set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
@@ -199,16 +195,19 @@ set trimblanks
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead
 ## of a single character, and without affecting the cutbuffer).
-set zap
+# set zap
+
+## Hide the bars and use the whole terminal for editable text.
+# set zero
 
 
 ## Paint the interface elements of nano.  These are examples; there are
 ## no colors by default, except for errorcolor and spotlightcolor.
-# set titlecolor bold,lightwhite,blue
-# set promptcolor lightwhite,lightblack
-# set statuscolor bold,lightwhite,green
-# set errorcolor bold,lightwhite,red
-# set spotlightcolor black,lime
+# set titlecolor bold,white,blue
+# set promptcolor lightwhite,grey
+# set statuscolor bold,white,green
+# set errorcolor bold,white,red
+# set spotlightcolor black,lightyellow
 # set selectedcolor lightwhite,magenta
 # set stripecolor ,yellow
 # set scrollercolor cyan
@@ -217,10 +216,10 @@ set zap
 # set functioncolor green
 
 ## In root's .nanorc you might want to use:
-# set titlecolor bold,lightwhite,magenta
+# set titlecolor bold,white,magenta
 # set promptcolor black,yellow
-# set statuscolor bold,lightwhite,magenta
-# set errorcolor bold,lightwhite,red
+# set statuscolor bold,white,magenta
+# set errorcolor bold,white,red
 # set spotlightcolor black,orange
 # set selectedcolor lightwhite,cyan
 # set stripecolor ,yellow
@@ -243,7 +242,7 @@ include "/usr/local/share/nano/*.nanorc"
 
 ## In /usr/local/share/nano/extra/ you can find some syntaxes that are
 ## specific for certain distros or for some less common languages.
-include "/usr/local/share/nano/extra/*.nanorc"
+
 
 ## If <Tab> should always produce four spaces when editing a Python file,
 ## independent of the settings of 'tabsize' and 'tabstospaces':
@@ -256,6 +255,9 @@ extendsyntax makefile tabgives "	"
 ## === Key bindings ===
 ## For all details, see 'man nanorc', section REBINDING KEYS.
 
+## If you want to suspend nano with one keystroke (instead of with ^T^Z):
+bind ^Z suspend main
+
 ## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor.
 ## On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is
 ## the ASCII character for backspace, so it is bound by default to the
@@ -264,6 +266,23 @@ extendsyntax makefile tabgives "	"
 ## normally use <Backspace> for backspacing and not ^H, you can make
 ## <Ctrl+Backspace> delete the word to the left of the cursor with:
 # bind ^H chopwordleft main
+
+## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
+# bind M-K comment main
+
+## If you want ^L to just refresh the screen and not center the cursor:
+# bind ^L refresh main
+
+## When you sometimes type M-J instead of M-K, or M-T instead of M-R:
+# unbind M-J main
+# unbind M-T main
+## (Those functions are still accessible through ^T^J and ^T^V.)
+
+## For quickly uppercasing or lowercasing the word under the cursor.
+## (These effectively do a Ctrl+Right followed by a Shift+Ctrl+Left,
+## and then pipe the selected text through a sed command.)
+# bind Sh-M-U "Oc[1;6D|sed 's/.*/\U&/'" main
+# bind Sh-M-L "Oc[1;6D|sed 's/.*/\L&/'" main
 
 ## If you would like nano to have keybindings that are more "usual",
 ## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
@@ -279,11 +298,11 @@ extendsyntax makefile tabgives "	"
 #bind ^B wherewas all
 #bind ^D findprevious all
 #bind ^R replace main
-#bind M-X flipnewbuffer all
-#bind ^X cut all
+#bind ^X cut main
 #bind ^C copy main
 #bind ^V paste all
 #bind ^P location main
+#bind ^E execute main
 #bind ^A mark main
 #unbind ^K main
 #unbind ^U all
@@ -293,9 +312,10 @@ extendsyntax makefile tabgives "	"
 #unbind M-T main
 #bind ^T gotoline main
 #bind ^T gotodir browser
-#bind ^Y speller main
+#bind ^T cutrestoffile execute
+#bind ^L linter execute
 #bind M-U undo main
 #bind M-R redo main
-#bind ^U undo main
-#bind ^E redo main
+#bind ^Z undo main
+#bind ^Y redo main
 #set multibuffer
