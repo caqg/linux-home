@@ -12,6 +12,6 @@ export PAGER=/bin/cat
 export MANPAGER=
 
 export TERM=ansi
-colorize-ls
+uncolorize-ls
 
 ##end .bash_under_emacs

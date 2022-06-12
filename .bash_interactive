@@ -6,7 +6,6 @@ if [ "$DISPLAY" ]; then
 	export MYVIM=gvim
 	export V_ARGS="-"
 else
-	[ "$TERM" = "xterm-256color" ] && export TERM=xterm-emacs
 	export MYVIM=vim
 	export V_ARGS="--not-a-term -"
 fi
@@ -18,7 +17,7 @@ fi
 2top          () { cd $(git rev-parse --show-toplevel); }
 colorize-ls   () { export LSFLAGS=--color=auto;
 		   eval $(dircolors -b ~/.dircolors); }
-uncolorize-ls () { unset LSFLAGS; unset LS_COLORS; }
+uncolorize-ls () { export LSFLAGS=--color=never; unset LS_COLORS; }
 
 dir           () { LC_ALL=C /bin/dir ${LSFLAGS} -F "$@"; }
 
