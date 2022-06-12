@@ -17,18 +17,19 @@ progname=$(basename $0)
 
 maxjobs=
 type >/dev/null -p nproc && {
-	maxjobs="-j$(expr 2 \* $(nproc))"
+	maxjobs="-j$(expr $(nproc))"
+	# maxjobs="-j$(expr 2 \* $(nproc))"
 }
 
 usage() {
 	/bin/cat 1>&2 <<END_USAGE
-USAGE: 
-	lx <command invocation> 
+USAGE:
+	lx <command invocation>
 	m <make arguments>
 
 DESCRIPTION:
 	lx runs the given simple command (not a pipeline);
-	m runs make with the given arguments. The output 
+	m runs make with the given arguments. The output
 	and error output of those runs are kept as a single
 	.log file in the current working directory. The log
 	file's name includes a timestamp in universal time
@@ -36,14 +37,14 @@ DESCRIPTION:
 
 	The log files can be used by Vim's quickfix feature
 	(vim -q <logfile>), or as a compilation-mode buffer
-	when read into Emacs. 
-	
+	when read into Emacs.
+
 SEE ALSO:
 	zlogs, to manage the log files as zip archives.
 END_USAGE
 }
 
-case $# in 
+case $# in
 0)	usage;
 	exit 1;;
 esac
