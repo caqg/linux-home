@@ -3,12 +3,13 @@
 date; echo;
 
 set -x
-sudo apt-file                   update
-#sudo apt-file -a i386           update
-sudo apt-get                    update
-sudo apt-get -y --with-new-pkgs upgrade
-sudo apt-get -y                 autoremove
-sudo apt-get -y                 autoclean
+warns='PYTHONWARNINGS=ignore'
+sudo $warns apt-file                   update
+#sudo $warns apt-file -a i386           update
+sudo $warns apt-get                    update
+sudo $warns apt-get -y --with-new-pkgs upgrade
+sudo $warns apt-get -y                 autoremove
+sudo $warns apt-get -y                 autoclean
 
 set +x
 echo; date;
