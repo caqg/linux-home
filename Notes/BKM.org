@@ -43,6 +43,12 @@ Ready!
 | -z     | Compress during transfer     |
 |--------+------------------------------|
 
+Examples:
+
+cd ~/cmd; rsync -aui make-and-install make-and-install-git /work/linux-home/cmd
+
+cd ~/.vim; ls .*~ | xargs  -I{} basename {} \~ | xargs -I{} rsync -aui {} /work/linux-home/.vim
+cd ~; ls .*~ | xargs  -I{} basename {} \~ | xargs -I{} rsync -aui {} /work/linux-home
 
 * Recompile packages
 
