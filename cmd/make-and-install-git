@@ -1,21 +1,16 @@
 #!/bin/bash
 
-if [ $(nproc) == 1 ]
-then parallel=-j1
-else parallel=-j$(( $(nproc) - 1 ))
-fi
-
-echo make $parallel ...
+parallel=${MAKEJ:-"-j2"}
 
 make $parallel all	&&
 make $parallel doc	&&
 make $parallel info	&&
 make $parallel pdf	&&
 
-sudo make $parallel install	 &&
-sudo make $parallel install-html &&
-sudo make $parallel install-info &&
-sudo make $parallel install-man	 &&
+sudo make $parallel install		&&
+sudo make $parallel install-html	&&
+sudo make $parallel install-info	&&
+sudo make $parallel install-man		&&
 sudo make $parallel install-pdf
 
 ##end make-and-install-git

@@ -1,11 +1,15 @@
 #!/bin/bash
 
-if [ $(nproc) == 1 ]
-then parallel=-j1
-else parallel=-j$(( $(nproc) - 1 ))
-fi
+project=$(basename $(pwd))
+alternate=make-and-install-$project
+found=$(type -t $alternate)
 
-{ echo make $parallel ...; make $parallel && sudo make $parallel install; } || 
-	{ echo make ... ; make && sudo make install; }
+case $found in
+alias|function|file)
+	echo $alternate
+	exec $alternate "$@";;
+*)
+	make -j $(nproc) && sudo make install;;
+esac
 
 ##end make-and-install
