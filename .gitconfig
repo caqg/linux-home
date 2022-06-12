@@ -43,6 +43,7 @@
 	l               = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %<(50,trunc)%s' --no-merges
 	ll              = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %s' --no-merges
 	prefix          = rev-parse --show-prefix
+	root		= rev-parse --show-toplevel
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
 	top             = rev-parse --show-toplevel
