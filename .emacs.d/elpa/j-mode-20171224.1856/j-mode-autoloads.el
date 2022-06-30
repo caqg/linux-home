@@ -1,4 +1,4 @@
-;;; j-mode-autoloads.el --- automatically extracted autoloads
+;;; j-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -11,18 +11,16 @@
 
 (autoload 'j-console "j-console" "\
 Ensures a running j-console-cmd session and switches focus to
-the containing buffer
+the containing buffer" t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "j-console" '("inferior-j-mode" "j-console-")))
+(register-definition-prefixes "j-console" '("inferior-j-mode" "j-console-"))
 
 ;;;***
 
 ;;;### (autoloads nil "j-font-lock" "j-font-lock.el" (0 0 0 0))
 ;;; Generated autoloads from j-font-lock.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "j-font-lock" '("j-")))
+(register-definition-prefixes "j-font-lock" '("j-"))
 
 ;;;***
 
@@ -39,7 +37,7 @@ Determine the symbol nearest to POINT and look it up in the dictionary
 
 \(fn POINT)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "j-help" '("group-by" "if-let" "j-help-")))
+(register-definition-prefixes "j-help" '("group-by" "if-let" "j-help-"))
 
 ;;;***
 
@@ -47,13 +45,11 @@ Determine the symbol nearest to POINT and look it up in the dictionary
 ;;; Generated autoloads from j-mode.el
 
 (autoload 'j-mode "j-mode" "\
-Major mode for editing J
-
-\(fn)" t nil)
+Major mode for editing J" t nil)
 
 (add-to-list 'auto-mode-alist '("\\.ij[rstp]$" . j-mode))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "j-mode" '("j-mode-")))
+(register-definition-prefixes "j-mode" '("j-mode-"))
 
 ;;;***
 

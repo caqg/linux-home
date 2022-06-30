@@ -1,0 +1,2 @@
+;;; Generated package description from mmt.el  -*- no-byte-compile: t -*-
+(define-package "mmt" "20210321.1829" "Missing macro tools for Emacs Lisp" '((emacs "24.5") (cl-lib "0.3")) :commit "05cdbb643469676b91a44badecf84deccb50f262" :authors '(("Mark Karpov" . "markkarpov92@gmail.com")) :maintainer '("Mark Karpov" . "markkarpov92@gmail.com") :keywords '("macro" "emacs-lisp") :url "https://github.com/mrkkrp/mmt")

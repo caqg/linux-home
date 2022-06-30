@@ -1,4 +1,4 @@
-;;; name-this-color-autoloads.el --- automatically extracted autoloads
+;;; name-this-color-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  0 0))
 ;;; Generated autoloads from name-this-color.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "name-this-color" '("ntc-")))
+(register-definition-prefixes "name-this-color" '("ntc-"))
 
 ;;;***
 

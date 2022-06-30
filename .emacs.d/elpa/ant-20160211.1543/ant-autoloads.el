@@ -1,4 +1,4 @@
-;;; ant-autoloads.el --- automatically extracted autoloads
+;;; ant-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,10 +9,7 @@
 ;;;### (autoloads nil "ant" "ant.el" (0 0 0 0))
 ;;; Generated autoloads from ant.el
 
-(autoload 'ant-kill-cache "ant" "\
-
-
-\(fn)" t nil)
+(autoload 'ant-kill-cache "ant" nil t nil)
 
 (autoload 'ant "ant" "\
 Run ant `task` in project root directory.
@@ -20,26 +17,15 @@ Run ant `task` in project root directory.
 \(fn &optional TASK)" t nil)
 
 (autoload 'ant-last "ant" "\
-Run the last ant task in project
+Run the last ant task in project" t nil)
 
-\(fn)" t nil)
+(autoload 'ant-compile "ant" nil t nil)
 
-(autoload 'ant-compile "ant" "\
+(autoload 'ant-clean "ant" nil t nil)
 
+(autoload 'ant-test "ant" nil t nil)
 
-\(fn)" t nil)
-
-(autoload 'ant-clean "ant" "\
-
-
-\(fn)" t nil)
-
-(autoload 'ant-test "ant" "\
-
-
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ant" '("*ant-tasks-c" "ant-")))
+(register-definition-prefixes "ant" '("*ant-tasks-c" "ant-"))
 
 ;;;***
 

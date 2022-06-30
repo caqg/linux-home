@@ -1,4 +1,4 @@
-;;; common-lisp-snippets-autoloads.el --- automatically extracted autoloads
+;;; common-lisp-snippets-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -11,13 +11,11 @@
 ;;; Generated autoloads from common-lisp-snippets.el
 
 (autoload 'common-lisp-snippets-initialize "common-lisp-snippets" "\
-Initialize Common Lisp snippets, so Yasnippet can see them.
-
-\(fn)" nil nil)
+Initialize Common Lisp snippets, so Yasnippet can see them." nil nil)
 
 (eval-after-load 'yasnippet '(common-lisp-snippets-initialize))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "common-lisp-snippets" '("common-lisp-snippets-root")))
+(register-definition-prefixes "common-lisp-snippets" '("common-lisp-snippets-root"))
 
 ;;;***
 

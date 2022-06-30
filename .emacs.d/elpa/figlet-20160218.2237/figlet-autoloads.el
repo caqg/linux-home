@@ -1,4 +1,4 @@
-;;; figlet-autoloads.el --- automatically extracted autoloads
+;;; figlet-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -37,7 +37,7 @@ View an example of each font in a new buffer.
 
 \(fn &optional TEXT)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "figlet" '("figlet-")))
+(register-definition-prefixes "figlet" '("figlet-"))
 
 ;;;***
 

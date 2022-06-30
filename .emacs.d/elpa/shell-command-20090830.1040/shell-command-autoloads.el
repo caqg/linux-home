@@ -1,4 +1,4 @@
-;;; shell-command-autoloads.el --- automatically extracted autoloads
+;;; shell-command-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -16,7 +16,7 @@ The commands are `shell-command', `shell-command-on-region', `grep',
 
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "shell-command" '("compile-prompt" "grep-" "shell-command")))
+(register-definition-prefixes "shell-command" '("compile-prompt" "grep-" "shell-command"))
 
 ;;;***
 

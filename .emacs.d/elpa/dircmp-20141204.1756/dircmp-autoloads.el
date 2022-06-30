@@ -1,4 +1,4 @@
-;;; dircmp-autoloads.el --- automatically extracted autoloads
+;;; dircmp-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "dircmp" "dircmp.el" (0 0 0 0))
 ;;; Generated autoloads from dircmp.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dircmp" '("comp" "diff-output-buffer" "dircmp-" "equivalent" "file-on-current-" "format-" "normalize-dir-string" "path" "rsync-" "set-compare-content" "toggle-" "update-comparison-view" "view-comparison-width")))
+(register-definition-prefixes "dircmp" '("comp" "diff-output-buffer" "dircmp-" "equivalent" "file-on-current-" "format-" "normalize-dir-string" "path" "rsync-" "set-compare-content" "toggle-" "update-comparison-view" "view-comparison-width"))
 
 ;;;***
 

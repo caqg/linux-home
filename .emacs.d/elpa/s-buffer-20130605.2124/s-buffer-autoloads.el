@@ -1,4 +1,4 @@
-;;; s-buffer-autoloads.el --- automatically extracted autoloads
+;;; s-buffer-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "s-buffer" "s-buffer.el" (0 0 0 0))
 ;;; Generated autoloads from s-buffer.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "s-buffer" '("s-buffer-")))
+(register-definition-prefixes "s-buffer" '("s-buffer-"))
 
 ;;;***
 

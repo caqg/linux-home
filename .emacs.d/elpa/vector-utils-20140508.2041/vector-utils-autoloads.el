@@ -1,4 +1,4 @@
-;;; vector-utils-autoloads.el --- automatically extracted autoloads
+;;; vector-utils-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -59,7 +59,7 @@ A modified copy of VEC is returned.
 
 \(fn VEC ELEMENT NEW-ELEMENT)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vector-utils" '("vector-utils--flatten-1")))
+(register-definition-prefixes "vector-utils" '("vector-utils--flatten-1"))
 
 ;;;***
 

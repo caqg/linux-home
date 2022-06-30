@@ -1,4 +1,4 @@
-;;; string-utils-autoloads.el --- automatically extracted autoloads
+;;; string-utils-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -256,7 +256,7 @@ It defaults to the UCS character \"Horizontal Ellipsis\", or
 
 \(fn STR-VAL MAXLEN &optional ELLIPSIS)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "string-utils" '("string-utils-")))
+(register-definition-prefixes "string-utils" '("string-utils-"))
 
 ;;;***
 

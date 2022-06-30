@@ -1,4 +1,4 @@
-;;; systemtap-mode-autoloads.el --- automatically extracted autoloads
+;;; systemtap-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -20,7 +20,7 @@ Key bindings:
 
 \(fn)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "systemtap-mode" '("systemtap-")))
+(register-definition-prefixes "systemtap-mode" '("systemtap-"))
 
 ;;;***
 

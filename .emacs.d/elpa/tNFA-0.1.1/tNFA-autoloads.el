@@ -1,10 +1,12 @@
-;;; tNFA-autoloads.el --- automatically extracted autoloads
+;;; tNFA-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory #$) (car load-path))))
+
 
-;;;### (autoloads (tNFA-regexp-match tNFA-from-regexp) "tNFA" "tNFA.el"
-;;;;;;  (21319 39987 31981 609000))
+;;;### (autoloads nil "tNFA" "tNFA.el" (0 0 0 0))
 ;;; Generated autoloads from tNFA.el
 
 (autoload 'tNFA-from-regexp "tNFA" "\
@@ -29,7 +31,7 @@ loses its special meaning. Also, matches are always anchored, so
 `$' and `^' lose their special meanings (use `.*' at the
 beginning and end of the regexp to get an unanchored match).
 
-\(fn REGEXP &key (test (quote eq)))" nil nil)
+\(fn REGEXP &key (TEST \\='eq))" nil nil)
 
 (autoload 'tNFA-regexp-match "tNFA" "\
 Return non-nil if STRING matches REGEXP, nil otherwise.
@@ -54,15 +56,12 @@ loses its special meaning. Also, matches are always anchored, so
 `$' and `^' lose their special meanings (use `.*' at the
 beginning and end of the regexp to get an unanchored match).
 
-\(fn REGEXP STRING &key (test (quote eq)))" nil nil)
+\(fn REGEXP STRING &key (TEST \\='eq))" nil nil)
+
+(register-definition-prefixes "tNFA" '("tNFA-"))
 
 ;;;***
 
-;;;### (autoloads nil nil ("tNFA-pkg.el") (21319 39987 187014 765000))
-
-;;;***
-
-(provide 'tNFA-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t

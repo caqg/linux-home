@@ -1,2 +1,2 @@
-;;; -*- no-byte-compile: t -*-
-(define-package "dynamic-ruler" "20160602.808" "Displays a dynamic ruler at point." 'nil :commit "c9c0de6fe5721f06b50e01d9b4684b519c71b367" :keywords '("ruler" "tools" "convenience") :authors '(("Francesc Rocher" . "francesc.rocher@gmail.com")) :maintainer '("Francesc Rocher" . "francesc.rocher@gmail.com") :url "http://rocher.github.io/dynamic-ruler")
+;;; Generated package description from dynamic-ruler.el  -*- no-byte-compile: t -*-
+(define-package "dynamic-ruler" "20160602.808" "Displays a dynamic ruler at point." 'nil :commit "c9c0de6fe5721f06b50e01d9b4684b519c71b367" :authors '(("Francesc Rocher" . "francesc.rocher@gmail.com")) :maintainer '("Francesc Rocher" . "francesc.rocher@gmail.com") :keywords '("ruler" "tools" "convenience") :url "http://rocher.github.io/dynamic-ruler")

@@ -1,4 +1,4 @@
-;;; viewer-autoloads.el --- automatically extracted autoloads
+;;; viewer-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "viewer" "viewer.el" (0 0 0 0))
 ;;; Generated autoloads from viewer.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "viewer" '("aggressive-view-mode" "define-overriding-view-mode-map" "view")))
+(register-definition-prefixes "viewer" '("aggressive-view-mode" "define-overriding-view-mode-map" "view"))
 
 ;;;***
 

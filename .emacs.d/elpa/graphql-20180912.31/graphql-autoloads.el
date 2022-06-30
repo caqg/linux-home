@@ -1,4 +1,4 @@
-;;; graphql-autoloads.el --- automatically extracted autoloads
+;;; graphql-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "graphql" "graphql.el" (0 0 0 0))
 ;;; Generated autoloads from graphql.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "graphql" '("graphql-")))
+(register-definition-prefixes "graphql" '("graphql-"))
 
 ;;;***
 

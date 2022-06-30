@@ -1,4 +1,4 @@
-;;; auto-complete-pcmp-autoloads.el --- automatically extracted autoloads
+;;; auto-complete-pcmp-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from auto-complete-pcmp.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-complete-pcmp" '("ac-pcmp")))
+(register-definition-prefixes "auto-complete-pcmp" '("ac-pcmp"))
 
 ;;;***
 

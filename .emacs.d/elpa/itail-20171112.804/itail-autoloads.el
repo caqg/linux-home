@@ -1,4 +1,4 @@
-;;; itail-autoloads.el --- automatically extracted autoloads
+;;; itail-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -14,7 +14,7 @@ Tail file FILE in itail mode.  Supports remote tailing through tramp
 
 \(fn FILE &optional LINES)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "itail" '("itail-")))
+(register-definition-prefixes "itail" '("itail-"))
 
 ;;;***
 

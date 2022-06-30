@@ -1,4 +1,4 @@
-;;; ac-math-autoloads.el --- automatically extracted autoloads
+;;; ac-math-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@
 
 (defvar ac-source-math-unicode '((candidates . ac-math-candidates-unicode) (symbol . "u") (prefix . ac-math-prefix) (action . ac-math-action-unicode)))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ac-math" '("ac-math-")))
+(register-definition-prefixes "ac-math" '("ac-math-"))
 
 ;;;***
 

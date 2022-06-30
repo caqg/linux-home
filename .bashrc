@@ -26,7 +26,7 @@ fi
 prepend_to_PATH_if_absent () {
 	case $# in 
 	1)	dir="$1" 
-		;;
+    ;;
 	*)	echo >&2 "prepend_to_PATH_if_absent takes one arg., a directory"
 		exit 1
 		;; 
@@ -34,7 +34,7 @@ prepend_to_PATH_if_absent () {
 	if [ -d "$dir" ]; then
 		case "$PATH" in
 		"$dir":* | *:"$dir" | *:"$dir":*)
-			;;
+    ;;
 		*)
 			export PATH="$dir:$PATH" ;;
 		esac
@@ -45,6 +45,8 @@ prepend_to_PATH_if_absent () {
 prepend_to_PATH_if_absent $HOME/.cargo/bin
 prepend_to_PATH_if_absent $HOME/bin
 prepend_to_PATH_if_absent $HOME/cmd
+
+export PATH=~/Downloads/jdk-17.0.2+8/bin:$PATH
 
 . $HOME/.bash_env
 

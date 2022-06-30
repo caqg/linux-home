@@ -1,4 +1,4 @@
-;;; heap-autoloads.el --- automatically extracted autoloads
+;;; heap-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -26,7 +26,7 @@ defaulting to 2.
 
 (defalias 'heap-create 'make-heap)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "heap" '("heap-")))
+(register-definition-prefixes "heap" '("heap-"))
 
 ;;;***
 

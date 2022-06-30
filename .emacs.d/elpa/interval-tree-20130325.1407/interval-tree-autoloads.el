@@ -1,4 +1,4 @@
-;;; interval-tree-autoloads.el --- automatically extracted autoloads
+;;; interval-tree-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "interval-tree" "interval-tree.el" (0 0 0 0))
 ;;; Generated autoloads from interval-tree.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "interval-tree" '("interval-")))
+(register-definition-prefixes "interval-tree" '("interval-"))
 
 ;;;***
 

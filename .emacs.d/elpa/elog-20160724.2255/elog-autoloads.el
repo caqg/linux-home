@@ -1,4 +1,4 @@
-;;; elog-autoloads.el --- automatically extracted autoloads
+;;; elog-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "elog" "elog.el" (0 0 0 0))
 ;;; Generated autoloads from elog.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "elog" '("elog-" "initialize-instance")))
+(register-definition-prefixes "elog" '("elog-" "initialize-instance"))
 
 ;;;***
 

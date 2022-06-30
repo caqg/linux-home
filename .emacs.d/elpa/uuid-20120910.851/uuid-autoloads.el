@@ -1,4 +1,4 @@
-;;; uuid-autoloads.el --- automatically extracted autoloads
+;;; uuid-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "uuid" "uuid.el" (0 0 0 0))
 ;;; Generated autoloads from uuid.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "uuid" '("uuid-")))
+(register-definition-prefixes "uuid" '("uuid-"))
 
 ;;;***
 

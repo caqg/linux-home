@@ -1,4 +1,4 @@
-;;; magit-find-file-autoloads.el --- automatically extracted autoloads
+;;; magit-find-file-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -11,11 +11,9 @@
 ;;; Generated autoloads from magit-find-file.el
 
 (autoload 'magit-find-file-completing-read "magit-find-file" "\
-Use a completing read to open a file from git ls-files.
+Use a completing read to open a file from git ls-files." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "magit-find-file" '("magit-find-file-")))
+(register-definition-prefixes "magit-find-file" '("magit-find-file-"))
 
 ;;;***
 

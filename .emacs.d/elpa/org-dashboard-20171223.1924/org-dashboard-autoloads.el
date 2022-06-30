@@ -1,4 +1,4 @@
-;;; org-dashboard-autoloads.el --- automatically extracted autoloads
+;;; org-dashboard-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,10 +9,7 @@
 ;;;### (autoloads nil "org-dashboard" "org-dashboard.el" (0 0 0 0))
 ;;; Generated autoloads from org-dashboard.el
 
-(autoload 'org-dashboard-display "org-dashboard" "\
-
-
-\(fn)" t nil)
+(autoload 'org-dashboard-display "org-dashboard" nil t nil)
 
 (autoload 'org-dblock-write:block-dashboard "org-dashboard" "\
 Generate a progress report inside an org dynamic block.
@@ -29,7 +26,7 @@ See Info node `(org) Breaking down tasks'.
 
 \(fn PARAMS)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-dashboard" '("org-dashboard-")))
+(register-definition-prefixes "org-dashboard" '("org-dashboard-"))
 
 ;;;***
 

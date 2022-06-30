@@ -1,4 +1,4 @@
-;;; shell-toggle-autoloads.el --- automatically extracted autoloads
+;;; shell-toggle-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -11,9 +11,7 @@
 
 (autoload 'shell-toggle-cd "shell-toggle" "\
 Call `shell-toggle' with a prefix argument.
-See command `shell-toggle'.
-
-\(fn)" t nil)
+See command `shell-toggle'." t nil)
 
 (autoload 'shell-toggle "shell-toggle" "\
 Toggle between the shell buffer and whatever buffer you are editing.
@@ -29,7 +27,7 @@ Options: `shell-toggle-goto-eob'
 
 \(fn MAKE-CD)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "shell-toggle" '("shell-toggle-")))
+(register-definition-prefixes "shell-toggle" '("shell-toggle-"))
 
 ;;;***
 

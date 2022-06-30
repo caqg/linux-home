@@ -1,4 +1,4 @@
-;;; http-post-simple-autoloads.el --- automatically extracted autoloads
+;;; http-post-simple-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from http-post-simple.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "http-post-simple" '("http-post-" "url-http-response-status")))
+(register-definition-prefixes "http-post-simple" '("http-post-" "url-http-response-status"))
 
 ;;;***
 

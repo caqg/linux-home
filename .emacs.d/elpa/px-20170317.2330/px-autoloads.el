@@ -1,4 +1,4 @@
-;;; px-autoloads.el --- automatically extracted autoloads
+;;; px-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,9 +10,7 @@
 ;;; Generated autoloads from px.el
 
 (autoload 'px-preview "px" "\
-Preview LaTeX fragments in the current buffer.
-
-\(fn)" t nil)
+Preview LaTeX fragments in the current buffer." t nil)
 
 (autoload 'px-preview-region "px" "\
 Preview LaTeX fragments in region.
@@ -20,16 +18,12 @@ Preview LaTeX fragments in region.
 \(fn BEG END)" t nil)
 
 (autoload 'px-remove "px" "\
-Remove LaTeX preview images in current buffer.
-
-\(fn)" t nil)
+Remove LaTeX preview images in current buffer." t nil)
 
 (autoload 'px-toggle "px" "\
-Toggle display of LaTeX preview in the current buffer.
+Toggle display of LaTeX preview in the current buffer." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "px" '("px-")))
+(register-definition-prefixes "px" '("px-"))
 
 ;;;***
 

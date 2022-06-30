@@ -1,4 +1,4 @@
-;;; auto-complete-c-headers-autoloads.el --- automatically extracted autoloads
+;;; auto-complete-c-headers-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from auto-complete-c-headers.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-complete-c-headers" '("achead:")))
+(register-definition-prefixes "auto-complete-c-headers" '("achead:"))
 
 ;;;***
 

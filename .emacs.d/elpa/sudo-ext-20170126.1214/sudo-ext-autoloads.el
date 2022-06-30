@@ -1,4 +1,4 @@
-;;; sudo-ext-autoloads.el --- automatically extracted autoloads
+;;; sudo-ext-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "sudo-ext" "sudo-ext.el" (0 0 0 0))
 ;;; Generated autoloads from sudo-ext.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sudo-ext" '("sudo")))
+(register-definition-prefixes "sudo-ext" '("sudo"))
 
 ;;;***
 

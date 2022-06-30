@@ -1,4 +1,4 @@
-;;; ruby-end-autoloads.el --- automatically extracted autoloads
+;;; ruby-end-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -12,10 +12,16 @@
 (autoload 'ruby-end-mode "ruby-end" "\
 Automatic insertion of end blocks for Ruby.
 
-If called interactively, enable Ruby-End mode if ARG is positive, and
-disable it if ARG is zero or negative.  If called from Lisp,
-also enable the mode if ARG is omitted or nil, and toggle it
-if ARG is `toggle'; disable the mode otherwise.
+If called interactively, toggle `Ruby-End mode'.  If the prefix
+argument is positive, enable the mode, and if it is zero or
+negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
 
 \(fn &optional ARG)" t nil)
 
@@ -23,7 +29,7 @@ if ARG is `toggle'; disable the mode otherwise.
 
 (add-hook 'enh-ruby-mode-hook 'ruby-end-mode)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ruby-end" '("ruby-end-")))
+(register-definition-prefixes "ruby-end" '("ruby-end-"))
 
 ;;;***
 

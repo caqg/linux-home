@@ -1,4 +1,4 @@
-;;; auto-complete-auctex-autoloads.el --- automatically extracted autoloads
+;;; auto-complete-auctex-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from auto-complete-auctex.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-complete-auctex" '("ac-auctex-")))
+(register-definition-prefixes "auto-complete-auctex" '("ac-auctex-"))
 
 ;;;***
 

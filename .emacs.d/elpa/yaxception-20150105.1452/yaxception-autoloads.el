@@ -1,4 +1,4 @@
-;;; yaxception-autoloads.el --- automatically extracted autoloads
+;;; yaxception-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "yaxception" "yaxception.el" (0 0 0 0))
 ;;; Generated autoloads from yaxception.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "yaxception" '("yaxception")))
+(register-definition-prefixes "yaxception" '("yaxception"))
 
 ;;;***
 

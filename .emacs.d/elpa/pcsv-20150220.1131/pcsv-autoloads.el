@@ -1,4 +1,4 @@
-;;; pcsv-autoloads.el --- automatically extracted autoloads
+;;; pcsv-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -56,7 +56,7 @@ Example:
 
 \(fn FILE &optional CODING-SYSTEM BLOCK-SIZE)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pcsv" '("pcsv-")))
+(register-definition-prefixes "pcsv" '("pcsv-"))
 
 ;;;***
 

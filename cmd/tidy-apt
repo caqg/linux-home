@@ -4,12 +4,12 @@ date; echo;
 
 set -x
 warns='PYTHONWARNINGS=ignore'
-sudo $warns apt-file                   update
 #sudo $warns apt-file -a i386           update
 sudo $warns apt-get                    update
 sudo $warns apt-get -y --with-new-pkgs upgrade
 sudo $warns apt-get -y                 autoremove
 sudo $warns apt-get -y                 autoclean
+sudo $warns apt-file                   update
 
 set +x
 echo; date;

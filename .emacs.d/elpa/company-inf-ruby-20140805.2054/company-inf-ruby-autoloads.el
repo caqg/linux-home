@@ -1,4 +1,4 @@
-;;; company-inf-ruby-autoloads.el --- automatically extracted autoloads
+;;; company-inf-ruby-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from company-inf-ruby.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-inf-ruby" '("company-inf-ruby")))
+(register-definition-prefixes "company-inf-ruby" '("company-inf-ruby"))
 
 ;;;***
 

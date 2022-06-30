@@ -1,4 +1,4 @@
-;;; magit-gitflow-autoloads.el --- automatically extracted autoloads
+;;; magit-gitflow-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,11 +10,9 @@
 ;;; Generated autoloads from magit-gitflow.el
 
 (autoload 'turn-on-magit-gitflow "magit-gitflow" "\
-Unconditionally turn on `magit-gitflow-mode'.
+Unconditionally turn on `magit-gitflow-mode'." nil nil)
 
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "magit-gitflow" '("define-magit-gitflow-" "magit-")))
+(register-definition-prefixes "magit-gitflow" '("define-magit-gitflow-" "magit-"))
 
 ;;;***
 

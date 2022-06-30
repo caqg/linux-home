@@ -1,4 +1,4 @@
-;;; ac-octave-autoloads.el --- automatically extracted autoloads
+;;; ac-octave-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -15,11 +15,9 @@ Source definition macro. It defines a complete command also." nil nil)
 (ac-define-source octave '((candidates . ac-octave-candidate) (document . ac-octave-documentation) (candidate-face . ac-octave-candidate-face) (selection-face . ac-octave-selection-face) (init . ac-octave-init) (requires . 0) (cache) (symbol . "f")))
 
 (autoload 'ac-octave-setup "ac-octave" "\
-Add the Octave completion source to the front of `ac-sources'.
+Add the Octave completion source to the front of `ac-sources'." nil nil)
 
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ac-octave" '("ac-octave-")))
+(register-definition-prefixes "ac-octave" '("ac-octave-"))
 
 ;;;***
 

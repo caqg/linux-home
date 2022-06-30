@@ -1,4 +1,4 @@
-;;; sparkline-autoloads.el --- automatically extracted autoloads
+;;; sparkline-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "sparkline" "sparkline.el" (0 0 0 0))
 ;;; Generated autoloads from sparkline.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sparkline" '("sparkline-")))
+(register-definition-prefixes "sparkline" '("sparkline-"))
 
 ;;;***
 

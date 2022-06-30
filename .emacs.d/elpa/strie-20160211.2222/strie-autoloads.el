@@ -1,4 +1,4 @@
-;;; strie-autoloads.el --- automatically extracted autoloads
+;;; strie-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "strie" "strie.el" (0 0 0 0))
 ;;; Generated autoloads from strie.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "strie" '("strie-")))
+(register-definition-prefixes "strie" '("strie-"))
 
 ;;;***
 

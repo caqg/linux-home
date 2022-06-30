@@ -1,4 +1,4 @@
-;;; oberon-autoloads.el --- automatically extracted autoloads
+;;; oberon-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -14,11 +14,9 @@ Major mode for editing Oberon/Oberon-2 program texts.
 
 Key bindings:
 
-\\{oberon-mode-map}
+\\{oberon-mode-map}" t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "oberon" '("oberon-" "obn-")))
+(register-definition-prefixes "oberon" '("oberon-" "obn-"))
 
 ;;;***
 

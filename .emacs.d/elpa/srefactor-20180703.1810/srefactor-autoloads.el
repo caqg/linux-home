@@ -1,4 +1,4 @@
-;;; srefactor-autoloads.el --- automatically extracted autoloads
+;;; srefactor-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -13,11 +13,9 @@
 Offer contextual menu with actions based on current tag in scope.
 
 Each menu item added returns a token for what type of refactoring
-to perform.
+to perform." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "srefactor" '("srefactor-")))
+(register-definition-prefixes "srefactor" '("srefactor-"))
 
 ;;;***
 
@@ -25,14 +23,14 @@ to perform.
 ;;;;;;  0))
 ;;; Generated autoloads from srefactor-lisp.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "srefactor-lisp" '("comment-" "cur-buf" "first-token" "format-type" "ignore-num" "lexemes" "next-token" "orig-format-type" "recursive-p" "second-token" "srefactor-" "tok")))
+(register-definition-prefixes "srefactor-lisp" '("comment-" "cur-buf" "first-token" "format-type" "ignore-num" "lexemes" "next-token" "orig-format-type" "recursive-p" "second-token" "srefactor-" "tok"))
 
 ;;;***
 
 ;;;### (autoloads nil "srefactor-ui" "srefactor-ui.el" (0 0 0 0))
 ;;; Generated autoloads from srefactor-ui.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "srefactor-ui" '("srefactor-ui-")))
+(register-definition-prefixes "srefactor-ui" '("srefactor-ui-"))
 
 ;;;***
 

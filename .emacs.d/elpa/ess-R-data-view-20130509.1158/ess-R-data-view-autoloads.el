@@ -1,4 +1,4 @@
-;;; ess-R-data-view-autoloads.el --- automatically extracted autoloads
+;;; ess-R-data-view-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,17 +10,11 @@
 ;;;;;;  0 0))
 ;;; Generated autoloads from ess-R-data-view.el
 
-(autoload 'ess-R-dv-pprint "ess-R-data-view" "\
+(autoload 'ess-R-dv-pprint "ess-R-data-view" nil t nil)
 
+(autoload 'ess-R-dv-ctable "ess-R-data-view" nil t nil)
 
-\(fn)" t nil)
-
-(autoload 'ess-R-dv-ctable "ess-R-data-view" "\
-
-
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ess-R-data-view" '("e2wm:dp-R-gen-header-lst" "ess-R-dv-")))
+(register-definition-prefixes "ess-R-data-view" '("e2wm:dp-R-gen-header-lst" "ess-R-dv-"))
 
 ;;;***
 

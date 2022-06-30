@@ -1,4 +1,4 @@
-;;; autodisass-llvm-bitcode-autoloads.el --- automatically extracted autoloads
+;;; autodisass-llvm-bitcode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from autodisass-llvm-bitcode.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "autodisass-llvm-bitcode" '("ad-llvm-bitcode-" "autodisass-llvm-bitcode-version")))
+(register-definition-prefixes "autodisass-llvm-bitcode" '("ad-llvm-bitcode-" "autodisass-llvm-bitcode-version"))
 
 ;;;***
 

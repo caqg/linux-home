@@ -1,4 +1,4 @@
-;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
+;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
 
 ;;;       #####   ######  #       ######  #    #  #####     ##
 ;;;       #    #  #       #       #       ##   #  #    #   #  #
@@ -79,7 +79,7 @@
   (filesets-init)
 
   (require 'slime-autoloads)
-  (slime-setup)
+  ;;(slime-setup)
   (global-set-key "\C-cs" 'slime-selector)
   (add-hook 'slime-repl-mode-hook 'set-balanced-insertions)
 
@@ -151,8 +151,8 @@
 
   (require 'string-utils)
 
-  (require 'hide-comnt)
-  (global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
+  ;;(require 'hide-comnt)
+  ;;(global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
 
   ;; tabbar (already initialized)
   (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
@@ -165,9 +165,7 @@
       (set tabset sorted)))
 
   ;; Color them
-  (when (and (>= emacs-major-version 25)
-             (or (window-system)
-                 (string= (getenv "TERM") "FAIL xterm-emacs")))
+  (when (and (window-system) (>= emacs-major-version 25))
     (load-theme 'solarized t t)
     (load-theme 'solarized-light t t)
     (load-theme 'solarized-dark t t)
@@ -186,7 +184,7 @@
   (require 'semantic/symref)
 
   (require 'ede)
-  (require 'ecb)                        ;last require, so at end of Tools menu
+  ;;(require 'ecb)                        ;last require, so at end of Tools menu
 
   (if window-system
       (ad-activate 'tabbar-add-tab 'compile-it))
@@ -199,13 +197,12 @@
         (let ((mybgshine (getenv "MYBGSHINE")))
           (when (and mybgshine (member mybgshine '("dark" "light")))
             (intern mybgshine))))
+  (menu-bar-mode 1)
   (add-hook 'tty-setup-hook
             (lambda ()
               (tabbar-mode  -1)
-              (menu-bar-mode 1)
               (when (or (getenv "WSL_DISTRO_NAME")
-                        (string-equal (getenv "TERM") "xterm-256color")
-                        (string-equal (getenv "TERM") "xterm-emacs"))
+                        (string-equal (getenv "TERM") "xterm-256color"))
                 (setq frame-background-mode *cq/frame-background-mode*)
                 (mapc #'frame-set-background-mode (frame-list))
                 (cq/adjust-paren-face-fg nil)
@@ -235,7 +232,6 @@
  '(align-indent-before-aligning t)
  '(ansi-color-names-vector
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
- '(auto-hscroll-mode 'current-line)
  '(auto-mode-case-fold nil)
  '(background-color "#202020")
  '(background-mode dark)
@@ -273,7 +269,7 @@
  '(cursor-color "#cccccc")
  '(custom-safe-themes
    '("2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "cb8d13429234ff2a8700da4db9bdf6b952c1b54b906a1aad2d0d98317c5b0224" "889a93331bc657c0f05a04b8665b78b3c94a12ca76771342cee27d6605abcd0e" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))
- '(default-frame-alist '((width . 120) (height . 48)))
+ '(default-frame-alist '((width . 120) (height . 45)))
  '(default-input-method "latin-postfix")
  '(delete-old-versions t)
  '(delete-selection-mode t)
@@ -319,7 +315,10 @@
  '(ecb-options-version "2.50")
  '(ecb-scroll-other-window-scrolls-compile-window nil)
  '(ecb-show-sources-in-directories-buffer 'never)
- '(ecb-source-path '(("/work/linux-home" "Remote dots")))
+ '(ecb-source-path
+   '(("/home/cesar/work/linux-home" "Remote dots")
+     ("/home/cesar/Projects/nmax_compiler" "Flex Logix SW compiler")
+     ("/home/cesar/Projects/weight-generation-tool" "Flex Logix SW wgt")))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence
    '("left-symboldef" "leftright-analyse" "leftright1" "left1"))
@@ -411,7 +410,7 @@
  '(line-number-display-limit-width 512)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
- '(load-prefer-newer t)
+ '(load-prefer-newer t t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list '("%Y-%m-%d %H:%M" "%Y-%m-%d     "))
  '(lsp-ui-doc-border "#93a1a1")
@@ -426,7 +425,7 @@
  '(mouse-wheel-mode t nil (mwheel))
  '(mouse-yank-at-point nil)
  '(multishell-activate-command-key nil)
- '(multishell-command-key "!")
+ '(multishell-command-key "\30!")
  '(network-security-level 'high)
  '(nrepl-message-colors
    '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
@@ -447,7 +446,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/")))
  '(package-selected-packages
-   '(ac-R ac-c-headers ac-emoji ac-etags ac-math ac-octave ac-python ac-slime ada-mode ada-ref-man aes aggressive-fill-paragraph aggressive-indent all all-ext anaconda-mode ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils ascii auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags auto-complete-pcmp autodisass-llvm-bitcode backtrace-mode beacon bigint bison-mode button-lock cedit charmap chess cider cl-format cl-lib-highlight clang-format cmake-font-lock cmake-mode cobol-mode codesearch common-lisp-snippets company-c-headers company-ess company-inf-ruby company-math company-quickhelp concurrent context-coloring cperl-mode csharp-mode csv-mode csv-nav ctable ctags ctags-update cuda-mode dash-functional debian-el dict-tree diff-hl diffview dircmp dired-hacks-utils dired-narrow dired-rsync dired-toggle-sudo docker docker-api docker-compose-mode docker-tramp dockerfile-mode dpkg-dev-el dropbox dts-mode dynamic-ruler ecb edebug-x ediprolog edit-at-point edit-list editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific eldoc-cmake eldoc-eval eldoc-overlay elog epl ess-R-data-view ess-R-object-popup ess-smart-underscore f fasm-mode figlet fill-column-indicator flycheck flymake flymake-python-pyflakes fm form-feed ggtags gh ghub git gitattributes-mode gitconfig-mode gitignore-mode glsl-mode graphql gscholar-bibtex gtags gxref header2 heap hide-comnt hide-lines ht http-post-simple hydra indent-guide inf-ruby inline-docs interval-tree ipython itail j-mode javadoc-help javadoc-lookup jira json-mode json-reformat json-snatcher julia-mode kv latex-extra latex-preview-pane let-alist lexbind-mode lib-requires lisp-extra-font-lock list-utils llvm-mode log4e logito lv magit-filenotify magit-find-file magit-gh-pulls magit-gitflow magit-popup magit-tramp markdown-mode markdown-toc marshal math-symbol-lists memory-usage minimap mmt move-dup multi-term multishell name-this-color nasm-mode nav-flash ninja-mode noflet oauth oberon opencl-mode org-ac org-bullets org-cliplink org-context org-dashboard org-download org-jira org-journal org-make-toc org-mime org-pandoc org-plus-contrib orgtbl-show-header ov p4 pandoc-mode paredit paredit-everywhere paredit-menu path-headerline-mode pcache pcre2el pcsv peep-dired perl-completion perl-myvar pkg-info pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode python3-info pythonic quarter-plane queue quick-peek rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term sed-mode shell-command shell-here shell-toggle sicp slime slime-company slime-docker sml-mode solarized-theme spark sparkline spinner srefactor ssh ssh-config-mode stream strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemd systemtap-mode tNFA tabbar tablist tdd thing-cmds tramp-term tree-sitter tree-sitter-indent tree-sitter-langs treepy trie undo-tree uniquify-files uuid vdiff vector-utils viewer vimrc-mode visible-mark vkill vlf wget wiki wiki-nav wisi xcscope xml-rpc yaml-mode yasnippet yaxception))
+   '(clhs ac-R ac-c-headers ac-emoji ac-etags ac-math ac-octave ac-python ac-slime ada-mode ada-ref-man aes aggressive-fill-paragraph aggressive-indent all all-ext anaconda-mode ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils ascii auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags auto-complete-pcmp autodisass-llvm-bitcode backtrace-mode beacon bigint bison-mode button-lock cedit charmap chess cider cl-format cl-lib-highlight clang-format cmake-font-lock cmake-mode cobol-mode codesearch common-lisp-snippets company-c-headers company-ess company-inf-ruby company-math company-quickhelp concurrent context-coloring cperl-mode csharp-mode csv-mode csv-nav ctable ctags ctags-update cuda-mode dash-functional debian-el dict-tree diff-hl diffview dircmp dired-hacks-utils dired-narrow dired-rsync dired-toggle-sudo docker docker-api docker-compose-mode docker-tramp dockerfile-mode dpkg-dev-el dropbox dts-mode dynamic-ruler ecb edebug-x ediprolog edit-at-point edit-list editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific eldoc-cmake eldoc-eval eldoc-overlay elog epl ess-R-data-view ess-R-object-popup ess-smart-underscore f fasm-mode figlet fill-column-indicator flycheck flymake flymake-python-pyflakes fm form-feed ggtags gh ghub git gitattributes-mode gitconfig-mode gitignore-mode glsl-mode graphql gscholar-bibtex gtags gxref header2 heap hide-comnt hide-lines ht http-post-simple hydra indent-guide inf-ruby inline-docs interval-tree ipython itail j-mode javadoc-help javadoc-lookup jira json-mode json-reformat json-snatcher julia-mode kv latex-extra latex-preview-pane let-alist lexbind-mode lib-requires lisp-extra-font-lock list-utils llvm-mode log4e logito lv magit-filenotify magit-find-file magit-gh-pulls magit-gitflow magit-popup magit-tramp markdown-mode markdown-toc marshal math-symbol-lists memory-usage minimap mmt move-dup multi-term multishell name-this-color nasm-mode nav-flash ninja-mode noflet oauth oberon opencl-mode org-ac org-bullets org-cliplink org-context org-dashboard org-download org-jira org-journal org-make-toc org-mime org-pandoc org-plus-contrib orgtbl-show-header ov p4 pandoc-mode paredit paredit-everywhere paredit-menu path-headerline-mode pcache pcre2el pcsv peep-dired perl-completion perl-myvar pkg-info pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python-mode python3-info pythonic quarter-plane queue quick-peek rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term sed-mode shell-command shell-here shell-toggle sicp slime slime-company slime-docker sml-mode solarized-theme spark sparkline spinner srefactor ssh ssh-config-mode stream strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemd systemtap-mode tNFA tabbar tablist tdd thing-cmds tramp-term tree-sitter tree-sitter-indent treepy trie undo-tree uniquify-files uuid vdiff vector-utils viewer vimrc-mode visible-mark vkill vlf wget wiki wiki-nav wisi xcscope xml-rpc yaml-mode yasnippet yaxception))
  '(prog-mode-hook '((lambda nil (form-feed-mode 1))))
  '(python-shell-interpreter "python")
  '(recentf-mode t)
@@ -485,7 +484,7 @@
  '(slime-net-coding-system 'utf-8-unix)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(solarized-distinct-fringe-background t)
- '(solarized-high-contrast-mode-line t)
+ '(solarized-high-contrast-mode-line nil)
  '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
  '(speedbar-show-unknown-files t)
  '(spice-output-local "Gnucap")
@@ -541,7 +540,7 @@
    '(face trailing tabs spaces lines-tail newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(windmove-wrap-around t)
  '(x-gtk-show-hidden-files t)
- '(xref-marker-ring-length 32)
+ '(xref-marker-ring-length 32 t)
  '(xterm-color-names
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
  '(xterm-color-names-bright

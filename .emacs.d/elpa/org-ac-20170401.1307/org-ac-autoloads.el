@@ -1,4 +1,4 @@
-;;; org-ac-autoloads.el --- automatically extracted autoloads
+;;; org-ac-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,16 +10,12 @@
 ;;; Generated autoloads from org-ac.el
 
 (autoload 'org-ac/setup-current-buffer "org-ac" "\
-Do setup for using org-ac in current buffer.
-
-\(fn)" t nil)
+Do setup for using org-ac in current buffer." t nil)
 
 (autoload 'org-ac/config-default "org-ac" "\
-Do setting recommemded configuration.
+Do setting recommemded configuration." nil nil)
 
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-ac" '("ac-source-org-ac-" "org-ac")))
+(register-definition-prefixes "org-ac" '("ac-source-org-ac-" "org-ac"))
 
 ;;;***
 

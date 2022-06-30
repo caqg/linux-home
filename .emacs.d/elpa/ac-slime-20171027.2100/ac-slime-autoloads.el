@@ -1,4 +1,4 @@
-;;; ac-slime-autoloads.el --- automatically extracted autoloads
+;;; ac-slime-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -26,7 +26,7 @@ Add an optionally FUZZY slime completion source to `ac-sources'.
 
 \(fn &optional FUZZY)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ac-slime" '("ac-s")))
+(register-definition-prefixes "ac-slime" '("ac-s"))
 
 ;;;***
 

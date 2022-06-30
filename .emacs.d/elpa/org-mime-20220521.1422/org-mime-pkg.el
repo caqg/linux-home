@@ -1,0 +1,2 @@
+;;; Generated package description from org-mime.el  -*- no-byte-compile: t -*-
+(define-package "org-mime" "20220521.1422" "org html export for text/html MIME emails" '((emacs "25.1")) :commit "cf96f585c68ad14751a3f73d937cbfcb890171b9" :authors '(("Eric Schulte")) :maintainer '("Chen Bin" . "chenbin.sh@gmail.com") :keywords '("mime" "mail" "email" "html") :url "http://github.com/org-mime/org-mime")

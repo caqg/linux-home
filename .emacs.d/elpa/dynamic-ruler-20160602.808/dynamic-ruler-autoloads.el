@@ -1,4 +1,4 @@
-;;; dynamic-ruler-autoloads.el --- automatically extracted autoloads
+;;; dynamic-ruler-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -16,9 +16,7 @@ buffer.  Left and right, or `f' and `b', will change the origin
 of the numbered scale.  Keys `a', `e' and `c' will change also
 the origin of the numbered scale to the beginning, end and
 center, respectively.  Numbers 0 to 9 will change the step
-interval.  Press `q' to quit.
-
-\(fn)" t nil)
+interval.  Press `q' to quit." t nil)
 
 (autoload 'dynamic-ruler-vertical "dynamic-ruler" "\
 Temporarily display a vertical ruler in the `current-column'.
@@ -27,9 +25,7 @@ buffer.  Up and down, or `n' and `p', will change the origin of
 the numbered scale.  Keys `a', `e' and `c' will change also the
 origin of the numbered scale to the beginning, end and center,
 respectively.  Numbers 0 to 9 will change the numbered scale and
-the step interval.  Press `q' to quit.
-
-\(fn)" t nil)
+the step interval.  Press `q' to quit." t nil)
 
 (autoload 'dynamic-ruler-temporary-invisible-change "dynamic-ruler" "\
 Execute FORMS with a temporary `buffer-undo-list', undoing on return.
@@ -40,7 +36,7 @@ Always return nil
 
 \(fn &rest FORMS)" nil t)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dynamic-ruler" '("dynamic-ruler-")))
+(register-definition-prefixes "dynamic-ruler" '("dynamic-ruler-"))
 
 ;;;***
 

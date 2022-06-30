@@ -24,6 +24,7 @@ export FCEDIT=/bin/ed
 export HISTSIZE=1000
 export HISTTIMEFORMAT='%y-%m-%d_%H:%M:%S '
 export LESS=iRQ
+export MOZ_ENABLE_WAYLAND=1
 export PAGER=less
 export SUDO_EDITOR=$HOME/cmd/e
 export VISUAL=$HOME/cmd/e

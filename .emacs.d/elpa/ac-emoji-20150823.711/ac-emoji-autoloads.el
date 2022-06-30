@@ -1,4 +1,4 @@
-;;; ac-emoji-autoloads.el --- automatically extracted autoloads
+;;; ac-emoji-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,19 +9,16 @@
 ;;;### (autoloads nil "ac-emoji" "ac-emoji.el" (0 0 0 0))
 ;;; Generated autoloads from ac-emoji.el
 
-(autoload 'ac-emoji-setup "ac-emoji" "\
+(autoload 'ac-emoji-setup "ac-emoji" nil t nil)
 
-
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ac-emoji" '("ac-emoji--candidates")))
+(register-definition-prefixes "ac-emoji" '("ac-emoji--candidates"))
 
 ;;;***
 
 ;;;### (autoloads nil "ac-emoji-data" "ac-emoji-data.el" (0 0 0 0))
 ;;; Generated autoloads from ac-emoji-data.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ac-emoji-data" '("ac-emoji--data")))
+(register-definition-prefixes "ac-emoji-data" '("ac-emoji--data"))
 
 ;;;***
 

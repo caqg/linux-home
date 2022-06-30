@@ -1,4 +1,4 @@
-;;; paredit-menu-autoloads.el --- automatically extracted autoloads
+;;; paredit-menu-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "paredit-menu" "paredit-menu.el" (0 0 0 0))
 ;;; Generated autoloads from paredit-menu.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "paredit-menu" '("paredit-menu-")))
+(register-definition-prefixes "paredit-menu" '("paredit-menu-"))
 
 ;;;***
 

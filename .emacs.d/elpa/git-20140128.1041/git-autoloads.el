@@ -1,4 +1,4 @@
-;;; git-autoloads.el --- automatically extracted autoloads
+;;; git-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "git" "git.el" (0 0 0 0))
 ;;; Generated autoloads from git.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "git" '("git-")))
+(register-definition-prefixes "git" '("git-"))
 
 ;;;***
 

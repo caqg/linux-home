@@ -1,4 +1,4 @@
-;;; preproc-font-lock-autoloads.el --- automatically extracted autoloads
+;;; preproc-font-lock-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -18,12 +18,20 @@ List of major modes where Preproc Font Lock Global mode should be enabled.")
 (autoload 'preproc-font-lock-mode "preproc-font-lock" "\
 Minor mode that highlights preprocessor directives.
 
-If called interactively, enable Preproc-Font-Lock mode if ARG is positive, and
-disable it if ARG is zero or negative.  If called from Lisp,
-also enable the mode if ARG is omitted or nil, and toggle it
-if ARG is `toggle'; disable the mode otherwise.
+If called interactively, toggle `Preproc-Font-Lock mode'.  If the
+prefix argument is positive, enable the mode, and if it is zero
+or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
 
 \(fn &optional ARG)" t nil)
+
+(put 'preproc-font-lock-global-mode 'globalized-minor-mode t)
 
 (defvar preproc-font-lock-global-mode nil "\
 Non-nil if Preproc-Font-Lock-Global mode is enabled.
@@ -38,16 +46,18 @@ or call the function `preproc-font-lock-global-mode'.")
 (autoload 'preproc-font-lock-global-mode "preproc-font-lock" "\
 Toggle Preproc-Font-Lock mode in all buffers.
 With prefix ARG, enable Preproc-Font-Lock-Global mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+otherwise, disable it.  If called from Lisp, enable the mode if ARG is omitted or
+nil.
 
-Preproc-Font-Lock mode is enabled in all buffers where
-`(lambda nil (when (apply 'derived-mode-p preproc-font-lock-modes) (preproc-font-lock-mode 1)))' would do it.
+Preproc-Font-Lock mode is enabled in all buffers where `(lambda nil (when
+\(apply 'derived-mode-p preproc-font-lock-modes) (preproc-font-lock-mode 1)))' would
+do it.
+
 See `preproc-font-lock-mode' for more information on Preproc-Font-Lock mode.
 
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "preproc-font-lock" '("preproc-font-lock-")))
+(register-definition-prefixes "preproc-font-lock" '("preproc-font-lock-"))
 
 ;;;***
 

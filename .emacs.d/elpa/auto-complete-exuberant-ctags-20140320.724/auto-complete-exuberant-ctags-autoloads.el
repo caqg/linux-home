@@ -1,4 +1,4 @@
-;;; auto-complete-exuberant-ctags-autoloads.el --- automatically extracted autoloads
+;;; auto-complete-exuberant-ctags-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from auto-complete-exuberant-ctags.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-complete-exuberant-ctags" '("ac-exuberant-ctags-")))
+(register-definition-prefixes "auto-complete-exuberant-ctags" '("ac-exuberant-ctags-"))
 
 ;;;***
 

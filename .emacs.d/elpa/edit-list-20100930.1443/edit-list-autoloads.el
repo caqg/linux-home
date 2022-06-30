@@ -1,4 +1,4 @@
-;;; edit-list-autoloads.el --- automatically extracted autoloads
+;;; edit-list-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "edit-list" "edit-list.el" (0 0 0 0))
 ;;; Generated autoloads from edit-list.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "edit-list" '("edit-list")))
+(register-definition-prefixes "edit-list" '("edit-list"))
 
 ;;;***
 

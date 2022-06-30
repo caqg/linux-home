@@ -1,4 +1,4 @@
-;;; python-info-autoloads.el --- automatically extracted autoloads
+;;; python-info-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
