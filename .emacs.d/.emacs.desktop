@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Aug 13 00:01:19 2022
+;; Desktop file format version 208
+;; Emacs version 29.0.50
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (25335 19519 125489 379000) (desktop . "208") "cesar@cesar-U64-14" nil nil ((((minibuffer . t) (tty-type . "xterm-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (cursor-color . "white") (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (vertical-scroll-bars) (horizontal-scroll-bars) (tool-bar-lines . 0) (undecorated) (override-redirect) (GUI:font . "-DAMA-Ubuntu Mono-regular-normal-normal-*-19-*-*-*-m-0-iso10646-1") (font-parameter) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (foreground-color . "unspecified-fg") (background-color . "unspecified-bg") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (tab-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (alpha-background) (no-focus-on-map) (no-accept-focus) (GUI:fullscreen) (visibility . t) (use-frame-synchronization) (skip-taskbar) (z-group) (sticky) (shaded) (environment) (last-focus-update . t) (dnd-root-window-position) (modeline . t) (unsplittable) (frameset--id . "AD34-C3B3-A724-5FC5") (frameset--mini t . t) (display) (tabs (current-tab (name . "*Backtrace*") (explicit-name))) (icon-name) (explicit-name) (GUI:height . 45) (GUI:width . 120) (GUI:left . 38) (GUI:top . 19) (font . "tty") (height . 46) (width . 187)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 187) (pixel-height . 45) (total-width . 187) (total-height . 45) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 0 0 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 10802) (start . 9028)) (prev-buffers ("*scratch*" 1 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '(#("desktop" 0 7 (isearch-case-fold-search t isearch-regexp-function nil)) #(" org" 0 4 (isearch-case-fold-search t isearch-regexp-function nil)) #("org" 0 3 (isearch-case-fold-search t isearch-regexp-function nil)) #("elpam" 0 5 (isearch-case-fold-search t isearch-regexp-function nil)) #("elpa" 0 4 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/init.el" "~/Notes/" "~/etc" "/usr/local/share/emacs/29.0.50/lisp/mail/mail-parse.el.gz" "/usr/local/share/emacs/29.0.50/lisp/url/url-http.el.gz" "~/.emacs.d/elpa/json-mode-20211011.630/json-mode.el" "/work/linux-home/Notes/BKM.org" "/work/linux-home/.gitconfig" "~/.bash_under_emacs" "~/.bash_interactive" "~/cmd/make-and-install" "~/cmd/lx" "~/.emacs.d/init.el" "~/lib/emacs/cq-x-utils.el" "~/.bashrc" "/work/linux-home/.emacs.d/init.el" "/work/linux-home/.emacs.d/init-legacy.el" "~/.emacs.d/init-legacy.el" "~/.emacs.d/elpa/docker-compose-mode-20200830.1336/docker-compose-mode-autoloads.el" "~/.emacs.d/elpa/json-snatcher-20200916.1717/json-snatcher-autoloads.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/cesar/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(ede-minor-mode font-lock-mode edebug-x-mode eldoc-mode hs-minor-mode fci-mode form-feed-mode)
+  10802
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 25335 19451 482116 883000) (buffer-file-coding-system . utf-8-unix) (fill-column . 80) (truncate-lines . t))
+  '((mark-ring (17182 8043 7400))))
+
+(desktop-create-buffer 208
+  nil
+  "Notes"
+  'dired-mode
+  '(ede-minor-mode font-lock-mode)
+  573
+  '(573 nil)
+  t
+  '("/home/cesar/Notes/")
+  '((buffer-display-time 25335 14277 324615 919000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/include/features.h"
+  "features.h"
+  'c-mode
+  '(hs-minor-mode subword-mode fci-mode form-feed-mode font-lock-mode ede-minor-mode eldoc-mode semantic-decoration-mode semantic-highlight-edits-mode semantic-highlight-func-mode semantic-idle-breadcrumbs-mode semantic-idle-completions-mode semantic-idle-local-symbol-highlight-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-mru-bookmark-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((indent-tabs-mode . t) (buffer-display-time 25335 18858 371942 305000) (buffer-file-coding-system . undecided-unix) (case-replace) (case-fold-search) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h"
+  "c++config.h"
+  'c++-mode
+  '(hs-minor-mode subword-mode fci-mode form-feed-mode font-lock-mode ede-minor-mode eldoc-mode semantic-decoration-mode semantic-highlight-edits-mode semantic-highlight-func-mode semantic-idle-breadcrumbs-mode semantic-idle-completions-mode semantic-idle-local-symbol-highlight-mode semantic-idle-scheduler-mode semantic-idle-summary-mode semantic-mru-bookmark-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((indent-tabs-mode . t) (buffer-display-time 25335 19067 210537 592000) (buffer-file-coding-system . undecided-unix) (case-replace) (case-fold-search) (truncate-lines . t))
+  '((mark-ring nil)))
+

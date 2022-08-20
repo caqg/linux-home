@@ -1,0 +1,2 @@
+;;; Generated package description from tramp-term.el  -*- no-byte-compile: t -*-
+(define-package "tramp-term" "20220725.1441" "Automatic setup of directory tracking in ssh sessions" 'nil :commit "ed75189122737d301f716a30a8013205aa3736f1" :authors '(("Randy Morris" . "randy.morris@archlinux.us")) :maintainer '("Randy Morris" . "randy.morris@archlinux.us") :keywords '("comm" "terminals") :url "https://github.com/randymorris/tramp-term.el")

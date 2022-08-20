@@ -1,0 +1,2 @@
+;; Generated package description from trie.el  -*- no-byte-compile: t -*-
+(define-package "trie" "0.5" "Trie data structure" '((tNFA "0.1.1") (heap "0.3")) :keywords '("extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp") :authors '(("Toby Cubitt" . "toby-predictive@dr-qubit.org")) :maintainer '("Toby Cubitt" . "toby-predictive@dr-qubit.org") :url "http://www.dr-qubit.org/emacs.php")

@@ -275,7 +275,7 @@
  '(delete-selection-mode t)
  '(describe-char-unidata-list
    '(name old-name general-category decomposition mirrored iso-10646-comment))
- '(desktop-save-mode t)
+ '(desktop-save-mode nil)
  '(develock-auto-enable nil)
  '(diary-file "~/.diary")
  '(diff-switches "-du")

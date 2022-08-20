@@ -1,0 +1,50 @@
+ada-ref-man NEWS -- history of user-visible changes.
+
+Copyright (C) 2018 Free Software Foundation, Inc.
+See the end of the file for license conditions.
+
+
+* 2020.1
+
+** Update to Ada 202x draft 25
+   http://www.ada-auth.org/standards/ada2x.html; some features
+   are supported in GNAT Community 2020 compiler.
+
+** Generate an info index, containing entries from the ARM Index.
+
+* 2012.5
+3 Mar 2019
+
+** Fix 'dir' file; it refered to arm2005, which is no longer in this
+   package.
+
+* 2012.4
+16 Sep 2018
+
+** Mark italics with <>. Italics is used in names to convey semantic
+   information; the syntax name is the non-italized part (see LRM
+   1.1.5 14). In previous ada-ref-man releases, it was not possible to
+   distinguish the italicized part.
+
+----------------------------------------------------------------------
+This file is part of GNU Emacs.
+
+GNU Emacs is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+GNU Emacs is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
+
+
+Local variables:
+coding: utf-8
+mode: outline
+paragraph-separate: "[ 	]*$"
+end:

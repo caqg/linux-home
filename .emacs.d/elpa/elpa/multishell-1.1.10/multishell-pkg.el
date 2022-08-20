@@ -1,0 +1,2 @@
+;; Generated package description from multishell.el  -*- no-byte-compile: t -*-
+(define-package "multishell" "1.1.10" "Organize use of multiple shell buffers, local and remote" '((cl-lib "0.5")) :commit "aa1433b8df6d950e8592c7e878922b4ec5374569" :authors '(("Ken Manheimer" . "ken.manheimer@gmail.com")) :maintainer '("Ken Manheimer" . "ken.manheimer@gmail.com") :keywords '("processes") :url "https://github.com/kenmanheimer/EmacsMultishell")

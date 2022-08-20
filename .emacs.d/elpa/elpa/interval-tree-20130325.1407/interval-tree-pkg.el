@@ -1,0 +1,2 @@
+;;; Generated package description from interval-tree.el  -*- no-byte-compile: t -*-
+(define-package "interval-tree" "20130325.1407" "Interval tree data structure for 1D range queries" '((dash "1.1.0")) :commit "301302f480617091cf3ab6989caac385d52543dc" :authors '(("Matus Goljer" . "matus.goljer@gmail.com")) :maintainer '("Matus Goljer" . "matus.goljer@gmail.com") :keywords '("extensions" "data structure") :url "https://github.com/Fuco1/interval-tree")

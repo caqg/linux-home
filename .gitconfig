@@ -1,6 +1,6 @@
 [user]
 	name            = César A. Quiroz
-	email           =
+	email           = cesar_quiroz@ieee.org
 
 [core]
 	; editor          = $HOME/cmd/e -c -F '((width . 80)(height . 36))'
@@ -9,7 +9,7 @@
 
 [diff]
 	tool            = vimdiff
-	guitool		= vscode
+	guitool		= gvimdiff
 	compactionHeuristic = true
 
 [difftool "ediff"]
@@ -19,8 +19,8 @@
 	cmd		= code --wait --diff --new-window $LOCAL $REMOTE
 
 [merge]
-	tool            = vimdiff
-	guitool		= vscode
+	tool = gvimdiff
+	guitool		= gvimdiff
 	conflictstyle   = merge
 
 [mergetool "emerge"]
@@ -43,7 +43,7 @@
 	l               = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %<(50,trunc)%s' --no-merges
 	ll              = log --color=auto --date=format:%m-%d --pretty=tformat:'%h %ad %<(11,trunc)%al %s' --no-merges
 	prefix          = rev-parse --show-prefix
-	root		= rev-parse --show-toplevel
+	root            = rev-parse --show-toplevel
 	s               = status -bs -uall .
 	ss              = status -bs -uno .
 	top             = rev-parse --show-toplevel
@@ -70,11 +70,14 @@
 [gui]
 	warndetachedcommit = true
 	recentrepo = /work/linux-home
-	fontui = -family Ubuntu -size 12 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"Ubuntu Mono\" -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family Ubuntu -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Ubuntu Mono\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
 
 [credential]
 	helper          = cache --timeout=14400
 
 
 ## end .gitconfig
+[safe]
+	directory = /etc
+	directory = /etc

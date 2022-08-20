@@ -1,0 +1,91 @@
+;; Object semanticdb-project-database-file-15669d2eefba
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-15669d2eefba"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-15669de3546e"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("mail-prsvr" include nil nil [1580 1601])
+            ("ietf-drums" include nil nil [1602 1623])
+            ("rfc2231" include nil nil [1624 1642])
+            ("rfc2047" include nil nil [1643 1661])
+            ("rfc2045" include nil nil [1662 1680])
+            ("defalias" code nil nil [1682 1749])
+            ("defalias" code nil nil [1750 1824])
+            ("defalias" code nil nil [1825 1877])
+            ("defalias" code nil nil [1878 1944])
+            ("defalias" code nil nil [1946 2013])
+            ("defalias" code nil nil [2014 2085])
+            ("defalias" code nil nil [2086 2133])
+            ("defalias" code nil nil [2134 2189])
+            ("defalias" code nil nil [2190 2249])
+            ("defalias" code nil nil [2250 2313])
+            ("defalias" code nil nil [2314 2381])
+            ("defalias" code nil nil [2382 2439])
+            ("defalias" code nil nil [2440 2500])
+            ("defalias" code nil nil [2501 2555])
+            ("defalias" code nil nil [2556 2617])
+            ("defalias" code nil nil [2619 2673])
+            ("defalias" code nil nil [2674 2732])
+            ("defalias" code nil nil [2733 2797])
+            ("defalias" code nil nil [2798 2854])
+            ("defalias" code nil nil [2856 2922])
+            ("defalias" code nil nil [2923 2997])
+            ("defalias" code nil nil [2998 3064])
+            ("defalias" code nil nil [3065 3131])
+            ("defalias" code nil nil [3132 3198])
+            ("defalias" code nil nil [3199 3276])
+            ("defalias" code nil nil [3277 3354])
+            ("mail-header-parse-addresses-lax" function (:arguments ("string")) nil [3356 3771])
+            ("mail-header-parse-address-lax" function (:arguments ("string")) nil [3773 4948])
+            ("mail-parse" package nil nil [4950 4971]))          
+      :file "mail-parse.el.gz"
+      :pointmax 5001
+      :fsize 1794
+      :lastmodtime '(25318 10116 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table-15669da4f830"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("cl-lib" include nil nil [1138 1155])
+            ("ietf-drums-no-ws-ctl-token" variable (:default-value "--") nil [1158 1292])
+            ("ietf-drums-text-token" variable (:default-value "-	-") nil [1293 1397])
+            ("ietf-drums-specials-token" variable (:default-value "()<>[]:;@\\,.\"") nil [1398 1474])
+            ("ietf-drums-quote-token" variable (:default-value "\\") nil [1475 1532])
+            ("ietf-drums-wsp-token" variable (:default-value " 	") nil [1533 1585])
+            ("ietf-drums-fws-regexp" variable (:default-value (concat "[" ietf-drums-wsp-token "]*
+[" ietf-drums-wsp-token "]+")) nil [1586 1711])
+            ("ietf-drums-atext-token" variable (:default-value "-^a-zA-Z0-9!#$%&'*+/=?_`{|}~") nil [1712 1793])
+            ("ietf-drums-dot-atext-token" variable (:default-value "-^a-zA-Z0-9!#$%&'*+/=?_`{|}~.") nil [1794 1900])
+            ("ietf-drums-qtext-token" variable (:default-value (concat ietf-drums-no-ws-ctl-token "!#-[]-")) nil [1901 2095])
+            ("ietf-drums-tspecials" variable (:default-value "][()<>@,;:\\\"/?=") nil [2096 2160])
+            ("ietf-drums-syntax-table" variable (:default-value (let ((table (copy-syntax-table emacs-lisp-mode-syntax-table))) (modify-syntax-entry 92 "/" table) (modify-syntax-entry 60 "(" table) (modify-syntax-entry 62 ")" table) (modify-syntax-entry 64 "w" table) (modify-syntax-entry 47 "w" table) (modify-syntax-entry 42 "_" table) (modify-syntax-entry 59 "_" table) (modify-syntax-entry 39 "_" table) table)) nil [2162 2586])
+            ("ietf-drums-comment-syntax-table" variable (:default-value (let ((table (copy-syntax-table ietf-drums-syntax-table))) (modify-syntax-entry 34 "w" table) table)) nil [2588 2803])
+            ("ietf-drums--skip-comment" function nil nil [2805 3121])
+            ("ietf-drums-token-to-list" function (:arguments ("token")) nil [3123 3649])
+            ("ietf-drums-init" function (:arguments ("string")) nil [3651 3801])
+            ("ietf-drums-remove-comments" function (:arguments ("string")) nil [3803 4220])
+            ("ietf-drums-remove-whitespace" function (:arguments ("string")) nil [4222 4679])
+            ("ietf-drums-get-comment" function (:arguments ("string")) nil [4681 5072])
+            ("ietf-drums-strip" function (:arguments ("string")) nil [5074 5224])
+            ("ietf-drums-remove-garbage" function (:arguments ("string")) nil [5226 5474])
+            ("ietf-drums-strip-cte" function (:arguments ("string")) nil [5476 5739])
+            ("declare-function" code nil nil [5741 5823])
+            ("ietf-drums-parse-address" function (:arguments ("string" "decode")) nil [5825 8193])
+            ("ietf-drums-parse-addresses" function (:arguments ("string" "rawp")) nil [8195 9273])
+            ("ietf-drums-unfold-fws" function nil nil [9275 9499])
+            ("declare-function" code nil nil [9501 9623])
+            ("ietf-drums-parse-date" function (:arguments ("string")) nil [9625 9789])
+            ("ietf-drums-narrow-to-header" function nil nil [9791 10045])
+            ("ietf-drums-quote-string" function (:arguments ("string")) nil [10047 10266])
+            ("ietf-drums-make-address" function (:arguments ("name" "address")) nil [10268 10401])
+            ("ietf-drums" package nil nil [10403 10424]))          
+      :file "ietf-drums.el.gz"
+      :pointmax 10454
+      :fsize 3365
+      :lastmodtime '(25318 10116 0 0)
+      :unmatched-syntax '((close-paren 1155 . 1156) (symbol 1120 . 1137) (open-paren 1119 . 1120))))
+  :file "!usr!local!share!emacs!29.0.50!lisp!mail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

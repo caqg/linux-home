@@ -1,0 +1,2 @@
+;;; Generated package description from ac-math.el  -*- no-byte-compile: t -*-
+(define-package "ac-math" "20141116.2127" "Auto-complete sources for input of mathematical symbols and latex tags" '((auto-complete "1.4") (math-symbol-lists "1.0")) :commit "c012a8f620a48cb18db7d78995035d65eae28f11" :authors '(("Vitalie Spinu")) :maintainer '("Vitalie Spinu") :keywords '("latex" "auto-complete" "unicode" "symbols") :url "https://github.com/vitoshka/ac-math")
