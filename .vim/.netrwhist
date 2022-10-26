@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/work/git'
+let g:netrw_dirhist_2='/work/vim/READMEdir'
+let g:netrw_dirhist_1='/home/cesar/.emacs.d'

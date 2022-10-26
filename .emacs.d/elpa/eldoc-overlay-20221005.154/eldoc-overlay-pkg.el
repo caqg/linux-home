@@ -1,0 +1,2 @@
+;;; Generated package description from eldoc-overlay.el  -*- no-byte-compile: t -*-
+(define-package "eldoc-overlay" "20221005.154" "Display eldoc with contextual documentation overlay" '((emacs "24.4") (inline-docs "1.0.1") (quick-peek "1.0")) :commit "d20dcecdde43737d8c9ae56551e2f0c05173870f" :authors '(("stardiviner" . "numbchild@gmail.com")) :maintainer '("stardiviner" . "numbchild@gmail.com") :keywords '("docs" "eldoc" "overlay") :url "https://repo.or.cz/eldoc-overlay.git")

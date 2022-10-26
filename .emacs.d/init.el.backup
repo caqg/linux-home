@@ -1,0 +1,462 @@
+;;;; -*- Emacs-Lisp -*- GNU Emacs Start-Up options
+
+;;; 2015-09-16 05:21:08UT (cesar@cesar-U64-14):
+;;; 0.8 MB between gcs is too little nowadays
+;;; hint at reddit from /u/bahblah
+;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
+
+;;(message "Initial GCs = %s" gcs-done)
+(setq gc-cons-threshold (* 1024 1024 32))
+
+(let ((file-name-handler-alist nil)
+      (gc-cons-threshold (* 1024 1024 1024 2)))
+
+  (load-file "~/.emacs.d/init-legacy.el")
+  ;;(message "Done loading legacy init, GCs = %s" gcs-done)
+
+  (package-initialize)
+
+  (load-library "cl-lib")
+
+  (add-to-list 'load-path "~/.emacs.d/lisp")
+  (load-library "misc")
+  (load-library "cq-workarounds")
+  ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)x
+  ;; stock or misc, not from workarounds:
+  (global-set-key [(meta z)] 'zap-up-to-char)
+  (global-set-key [(meta Z)] 'zap-to-char)
+
+  (load-library "cq-edit-utils")
+  (global-set-key "\C-x$" 'cq/set-selective-display)
+
+  (load-library "cq-file-hooks")
+  (add-hook 'before-save-hook (lambda ()
+                                ;; clean up source code, but nothing else
+                                (when (and
+                                       (derived-mode-p 'prog-mode)
+                                       (not (derived-mode-p 'makefile-mode))
+                                  (cq/trim-whitespace)))))
+
+  (load-library "cq-minor-mode-utils")
+  (global-set-key "\^Zs" 'cq/flip-scroll-bar-modes)
+
+  ;;(load-library "cq-cedet-ede-ecb-utils")
+  ;;(global-set-key "\^ZL" 'cq/load-ede-project-and-tags)
+
+  (add-hook 'dired-load-hook
+            (lambda ()
+              ;; Bind dired-x-find-file.
+              (setq dired-x-hands-off-my-keys t)
+              (load "dired-x")))
+
+  (require 'ffap)
+  (ffap-bindings)
+
+  (filesets-init)
+
+  (require 'slime-autoloads)
+  (slime-setup '(slime-asdf
+                 slime-banner
+                 slime-editing-commands
+                 slime-fancy
+                 slime-fancy-inspector
+                 ;;slime-highlight-edits
+                 slime-mdot-fu
+                 slime-mrepl
+                 slime-references
+                 slime-tramp
+                 ;;slime-typeout-frame
+                 ))
+  (global-set-key "\C-cs" 'slime-selector)
+  (add-hook 'slime-repl-mode-hook 'set-balanced-insertions)
+
+  (which-function-mode 1)
+  (pending-delete-mode t)
+  (electric-indent-mode -1)
+
+  (require 'multishell)
+  (global-set-key "\C-x!" 'multishell-pop-to-shell)
+
+  (require 'magit)
+  (global-set-key "\C-xg" 'magit-status)
+  (global-set-key "\C-x\M-g" 'magit-dispatch-popup)
+  (global-magit-file-mode 1)
+
+  (require 'p4)
+
+  (require 'tramp)
+
+  ;; Known to work at least since v23, again don't know if before.
+  ;; (defun gamegrid-add-score-with-update-game-score-1( file target score ))
+
+  ;; (require 'cl-lib-highlight)
+  ;; (cl-lib-highlight-initialize)
+  ;; (cl-lib-highlight-warn-cl-initialize)
+
+  (require 'windmove)
+  (global-set-key (kbd "C-c <right>") 'windmove-right)
+  (global-set-key (kbd "C-c <left>")  'windmove-left)
+  (global-set-key (kbd "C-c <up>")    'windmove-up)
+  (global-set-key (kbd "C-c <down>")  'windmove-down)
+
+
+  (require 'dired-x)
+  (require 'dired-toggle-sudo)
+  (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
+
+  ;; (require 'xcscope)
+  ;; (cscope-setup)
+
+  (require 'gtags)
+
+  (require 'org-install)
+  (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
+  (global-set-key "\C-ca" 'org-agenda)
+  (global-set-key "\C-cb" 'org-iswitchb)
+  (global-set-key "\C-cc" 'org-capture)
+  (global-set-key "\C-cl" 'org-store-link)
+  (setq org-todo-keywords
+        '((sequence "TODO" "DOING" "PENDING" "|" "DONE" "DROPPED")))
+  (setq org-log-done t)                 ; or '(done) instead of t
+  (setq org-agenda-include-diary t)
+  (add-hook 'org-mode-hook (lambda () (require 'vc)))
+  (add-hook 'org-mode-hook 'turn-on-font-lock)
+
+  (require 'remember)
+  (setq org-directory "~/Notes")
+  (setq org-default-notes-file (concat org-directory "/my-notes.org"))
+  (define-key global-map "\C-cr" 'org-remember)
+
+  (require 'cq-x-utils)
+  (require 'cq-theme-utils)
+  (require 'grep)
+  (require 'paren)
+  (require 'parenface)
+  (require 'tabbar)
+  (require 'time)
+
+  (add-to-list 'load-path "/work/EmacsWiki")
+  (load-library "hide-comnt")
+  (load-library "hideshow-fringe")
+  (load-library "hideshowvis")
+  (global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
+
+  ;; tabbar (already initialized)
+  (defadvice tabbar-add-tab (after cq/tabbar-add-tab-sorted
+                                   (tabset object &optional append))
+    "Present the tab bar tab sets in ascending order by buffer name."
+    (let* ((tabs (tabbar-tabs tabset))
+           (sorted (sort tabs (lambda (a b)
+                                (string< (buffer-name (car a))
+                                         (buffer-name (car b)))))))
+      (set tabset sorted)))
+
+  ;; Color them
+  (when (>= emacs-major-version 25)
+    (load-theme 'solarized t t)
+    (load-theme 'solarized-light t t)
+    (load-theme 'solarized-dark t t)
+    (require 'cq-solarized-theme-init))
+
+  (require 'recentf)
+
+  (require 'bison-mode)
+  (require 'gdb-mi)
+  (require 'semantic)
+  (require 'semantic/decorate/mode)
+  (require 'semantic/idle)
+  (require 'semantic/mru-bookmark)
+  (require 'semantic/sb)
+  (require 'semantic/symref)
+  (require 'ede)
+  ;;(require 'ecb)                        ;last require, so at end of Tools menu
+  (global-semantic-mru-bookmark-mode 1)
+
+  (if window-system
+      (ad-activate 'tabbar-add-tab 'compile-it))
+
+  (setq-default ediff-auto-refine 'on)
+
+  (when (memq window-system (list 'x 'w32))
+    (set-default-xtitle))
+  (when window-system
+    (cq/adjust-paren-face-fg nil))
+
+  (add-hook 'tty-setup-hook (lambda ()
+                              (tabbar-mode -1)
+                              (menu-bar-mode -1)))
+
+  (unless window-system (normal-erase-is-backspace-mode -1)))
+
+;;;end ~/.emacs.d/init.el -- don't edit beyond
+
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(Man-switches "-a")
+ '(ada-skel-initial-string "")
+ '(adaptive-fill-mode t)
+ '(align-indent-before-aligning t)
+ '(auto-mode-case-fold nil)
+ '(background-color "#202020")
+ '(background-mode dark)
+ '(backup-by-copying-when-linked t)
+ '(beacon-mode nil)
+ '(blink-cursor-mode nil)
+ '(c++-font-lock-extra-types
+   '("\\sw+_t" "FILE" "lconv" "tm" "va_list" "jmp_buf" "istream" "istreambuf" "ostream" "ostreambuf" "ifstream" "ofstream" "fstream" "strstream" "strstreambuf" "istrstream" "ostrstream" "ios" "string" "rope" "list" "slist" "deque" "vector" "bit_vector" "set" "multiset" "map" "multimap" "hash" "hash_set" "hash_multiset" "hash_map" "hash_multimap" "stack" "queue" "priority_queue" "type_info" "iterator" "const_iterator" "reverse_iterator" "const_reverse_iterator" "reference" "const_reference" "[[:upper:]]\\\\sw*[[:lower:]]\\\\sw"))
+ '(c-tab-always-indent nil)
+ '(calendar-date-style 'iso)
+ '(calendar-intermonth-text
+   '(propertize
+     (format "%2d"
+             (car
+              (calendar-iso-from-absolute
+               (calendar-absolute-from-gregorian
+                (list month day year)))))
+     'font-lock-face 'font-lock-function-name-face))
+ '(calendar-mark-diary-entries-flag t)
+ '(calendar-mark-holidays-flag t)
+ '(calendar-week-start-day 1)
+ '(case-fold-search t)
+ '(column-number-mode t)
+ '(compilation-scroll-output t)
+ '(compile-command "time -p make -r -C compass MODE=dbg install-run")
+ '(completion-auto-help 'lazy)
+ '(cscope-close-window-after-select t)
+ '(cscope-option-do-not-update-database t)
+ '(cscope-option-use-inverted-index t)
+ '(current-language-environment "UTF-8")
+ '(cursor-color "#cccccc")
+ '(custom-safe-themes
+   '("cb8d13429234ff2a8700da4db9bdf6b952c1b54b906a1aad2d0d98317c5b0224" "889a93331bc657c0f05a04b8665b78b3c94a12ca76771342cee27d6605abcd0e" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c69211d8567a0c5fa14b81c4cd08c4a458db7904c10d95f75d6ecd1b8baf19bd" "a53714de04cd4fdb92ed711ae479f6a1d7d5f093880bfd161467c3f589725453" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))
+ '(default-frame-alist '((width . 120) (height . 48)))
+ '(default-input-method "latin-postfix")
+ '(delete-old-versions t)
+ '(delete-selection-mode t)
+ '(describe-char-unidata-list
+   '(name old-name general-category decomposition mirrored iso-10646-comment))
+ '(develock-auto-enable nil)
+ '(diary-file "~/.diary")
+ '(diff-switches "-du")
+ '(dired-auto-revert-buffer t)
+ '(dired-dwim-target t)
+ '(dired-isearch-filenames 'dwim)
+ '(dired-kept-versions 3)
+ '(dired-listing-switches "-Alh --time-style=long-iso --group-directories-first")
+ '(dired-recursive-copies 'always)
+ '(dired-use-ls-dired t)
+ '(dired-x-hands-off-my-keys nil)
+ '(display-buffer-alist
+   '(("^\\*shell"
+      (display-buffer-reuse-window display-buffer-same-window)
+      (nil))))
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-default-load-average 0)
+ '(display-time-format "%a %m‒%d %H:%M ")
+ '(display-time-interval 30)
+ '(display-time-mode t)
+ '(dnd-open-file-other-window t)
+ '(ecb-activate-before-layout-draw-hook
+   '((lambda nil
+       (modify-frame-parameters
+        (selected-frame)
+        '((fullscreen . maximized))))))
+ '(ecb-activate-hook
+   '(ecb-eshell-auto-activate-hook
+     (lambda nil
+       (scroll-bar-mode -1)
+       (horizontal-scroll-bar-mode -1)
+       (ecb-redraw-layout))))
+ '(ecb-activation-selects-ecb-frame-if-already-active t)
+ '(ecb-auto-expand-tag-tree 'all)
+ '(ecb-compile-window-height 0.2)
+ '(ecb-compile-window-temporally-enlarge 'after-selection)
+ '(ecb-compile-window-width 'edit-window)
+ '(ecb-enlarged-compilation-window-max-height 'best)
+ '(ecb-ignore-pop-up-frames 'always)
+ '(ecb-layout-name "leftright-analyse")
+ '(ecb-new-ecb-frame t)
+ '(ecb-options-version "2.50")
+ '(ecb-scroll-other-window-scrolls-compile-window nil)
+ '(ecb-show-sources-in-directories-buffer 'never)
+ '(ecb-source-path '(("/home/cesar" "Home") ("/" "/")))
+ '(ecb-tip-of-the-day nil)
+ '(ecb-toggle-layout-sequence '("leftright-analyse" "leftright1" "left1"))
+ '(ecb-version-check nil)
+ '(ecb-windows-width 0.2)
+ '(ede-project-directories '("/work/stable-linux"))
+ '(ediff-custom-diff-options "-U10")
+ '(ediff-highlight-all-diffs nil)
+ '(ediff-keep-variants nil)
+ '(ediff-prefer-iconified-control-frame t)
+ '(ediff-show-clashes-only t)
+ '(ediff-split-window-function 'split-window-horizontally)
+ '(ediff-use-toolbar-p nil)
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(enable-recursive-minibuffers t)
+ '(explicit-shell-file-name "bash")
+ '(fill-column 80)
+ '(filladapt-turn-on-mode-hooks
+   '(text-mode-hook awk-mode-hook lisp-mode-hook emacs-lisp-mode-hook perl-mode-hook))
+ '(find-ls-option
+   '("-exec ls -Dlb --time-style=long-iso --group-directories-first {} +" . "-Dlb --time-style=long-iso --group-directories-first"))
+ '(focus-follows-mouse t)
+ '(font-lock-maximum-size nil)
+ '(foreground-color "#cccccc")
+ '(frame-background-mode nil)
+ '(gdb-enable-debug nil)
+ '(gdb-many-windows t)
+ '(gdb-max-frames 64)
+ '(gdb-show-main t)
+ '(gdb-speedbar-auto-raise t)
+ '(gdb-stack-buffer-addresses t)
+ '(gdb-use-separate-io-buffer t)
+ '(ggtags-enable-navigation-keys nil)
+ '(ggtags-global-treat-text t)
+ '(global-ede-mode t)
+ '(global-font-lock-mode t nil (font-lock))
+ '(global-hl-line-mode t)
+ '(global-hl-line-sticky-flag t)
+ '(global-semantic-decoration-mode t)
+ '(global-semantic-highlight-func-mode t)
+ '(global-semantic-idle-completions-mode t nil (semantic/idle))
+ '(global-semantic-idle-scheduler-mode t)
+ '(global-semantic-idle-summary-mode t)
+ '(global-semantic-mru-bookmark-mode t)
+ '(gnutls-min-prime-bits 2048)
+ '(gnutls-verify-error t)
+ '(grep-command "grep -inHR -e ")
+ '(grep-find-template
+   "find . <X> -type f <F> -exec grep <C> -n -e <R> /dev/null {} +")
+ '(grep-template "grep <X> <C> -n -e <R> <F>")
+ '(home-end-enable t)
+ '(horizontal-scroll-bar-mode nil)
+ '(indent-tabs-mode nil)
+ '(indicate-buffer-boundaries 'left)
+ '(indicate-empty-lines t)
+ '(inferior-lisp-program "sbcl" t)
+ '(inhibit-startup-echo-area-message "cesar")
+ '(inhibit-startup-screen t)
+ '(initial-scratch-message nil)
+ '(isearch-allow-scroll t)
+ '(line-move-visual nil)
+ '(line-number-display-limit-width 512)
+ '(list-directory-brief-switches "-ACF --group-directories-first ")
+ '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
+ '(load-prefer-newer t)
+ '(ls-lisp-dirs-first t)
+ '(ls-lisp-format-time-list '("%Y-%m-%d %H:%M" "%Y-%m-%d     "))
+ '(magit-diff-refine-hunk t)
+ '(magit-repository-directories '(("/work" . 2)))
+ '(magit-view-git-manual-method 'man)
+ '(mail-archive-file-name "~/mail/babyl/OUT")
+ '(mail-use-rfc822 t)
+ '(mouse-autoselect-window -0.2)
+ '(mouse-wheel-mode t nil (mwheel))
+ '(mouse-yank-at-point nil)
+ '(multishell-activate-command-key nil)
+ '(multishell-command-key "!")
+ '(network-security-level 'high)
+ '(nsm-save-host-names t)
+ '(nxml-slash-auto-complete-flag t)
+ '(org-agenda-restore-windows-after-quit t)
+ '(org-catch-invisible-edits 'show)
+ '(org-completion-use-ido t)
+ '(org-export-backends
+   '(ascii html icalendar latex man md org texinfo freemind groff))
+ '(org-outline-path-complete-in-steps nil)
+ '(org-pretty-entities t)
+ '(org-startup-indented t)
+ '(org-use-sub-superscripts '{})
+ '(p4-check-empty-diffs t)
+ '(package-archives
+   '(("org" . "https://orgmode.org/elpa/")
+     ("melpa" . "https://melpa.org/packages/")
+     ("gnu" . "https://elpa.gnu.org/packages/")))
+ '(package-selected-packages
+   '(verilog-mode sml-mode csv-mode ecb tramp-term form-feed bison-mode cl-lib-highlight dired-toggle-sudo p4 fill-column-indicator tabbar slime-docker gxref eldoc-cmake eldoc-eval eldoc-overlay ninja-mode dpkg-dev-el flycheck arduino-mode cider flymake flymake-python-pyflakes cuda-mode opencl-mode spark systemd visible-mark cl-format concurrent dash-functional dired-rsync docker docker-api docker-compose-mode docker-tramp dockerfile-mode dropbox editorconfig editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific diffview chess cobol-mode context-coloring diff-hl vdiff ascii sed-mode ada-mode ctags all async dash dired-hacks-utils ess git-commit slime with-editor magit magit-popup minimap memory-usage quarter-plane cmake-font-lock fm org-magit let-alist multishell org-plus-contrib llvm-mode magit-tramp ac-R ac-python anaconda-mode beacon glsl-mode python3-info solarized-theme fasm-mode ada-ref-man aggressive-indent anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils auctex backtrace-mode bigint company-ess company-math cperl-mode csv-nav dired-narrow ess-R-object-popup ess-smart-underscore gtags ht hydra ipython javadoc-help jira move-dup nasm-mode org org-cliplink org-download org-jira org-journal org-mime org-pandoc perl-completion perl-myvar pod-mode prolog python-mode ruby-test-mode slime-annot tdd vkill wget wiki))
+ '(prog-mode-hook '((lambda nil (form-feed-mode 1))))
+ '(python-shell-interpreter "python3.7")
+ '(recentf-mode t)
+ '(require-final-newline nil)
+ '(rmail-file-name "~/mail/babyl/RMAIL")
+ '(safe-local-variable-values '((ggtags-process-environment)))
+ '(scroll-bar-mode nil)
+ '(scroll-conservatively 99)
+ '(scroll-preserve-screen-position t)
+ '(search-slow-window-lines 3)
+ '(semantic-c-dependency-system-include-path
+   '("/usr/include/c++/6" "/usr/include/x86_64-linux-gnu/c++/6" "/usr/include/c++/6/backward" "/usr/lib/gcc/x86_64-linux-gnu/6/include" "/usr/local/include" "/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" "/usr/include/x86_64-linux-gnu" "/usr/include" "/usr/include/libxml2"))
+ '(semantic-decoration-styles
+   '(("semantic-decoration-on-includes" . t)
+     ("semantic-decoration-on-protected-members")
+     ("semantic-decoration-on-private-members")
+     ("semantic-tag-boundary")))
+ '(semantic-default-submodes
+   '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-idle-completions-mode global-semantic-idle-scheduler-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode))
+ '(semantic-mode t)
+ '(semantic-symref-auto-expand-results t)
+ '(semantic-symref-results-summary-function 'semantic-format-tag-canonical-name)
+ '(set-mark-command-repeat-pop t)
+ '(sh-basic-offset 8)
+ '(sh-indent-for-case-alt '+)
+ '(sh-indent-for-case-label 0)
+ '(sh-indentation 0)
+ '(shell-popd-regexp "popd\\|-")
+ '(shell-pushd-regexp "pushd\\|+")
+ '(show-paren-mode t)
+ '(show-paren-style 'parenthesis)
+ '(show-trailing-whitespace nil)
+ '(size-indication-mode t)
+ '(slime-kill-without-query-p t)
+ '(slime-net-coding-system 'utf-8-unix)
+ '(solarized-distinct-fringe-background t)
+ '(solarized-high-contrast-mode-line nil)
+ '(speedbar-fetch-etags-command "/usr/bin/ctags -eR")
+ '(speedbar-show-unknown-files t)
+ '(spice-output-local "Gnucap")
+ '(spice-simulator "Gnucap")
+ '(spice-waveform-viewer "Gwave")
+ '(tab-always-indent 'complete)
+ '(text-mode-hook
+   '(turn-on-auto-fill
+     (lambda nil
+       (form-feed-mode 1))
+     cq-text-mode text-mode-hook-identify))
+ '(tool-bar-mode nil nil (tool-bar))
+ '(truncate-lines t)
+ '(uniquify-buffer-name-style 'post-forward-angle-brackets nil (uniquify))
+ '(uniquify-trailing-separator-p t)
+ '(use-file-dialog t)
+ '(user-full-name "César Quiroz")
+ '(user-mail-address "cesar.quiroz@gmail.com")
+ '(vc-follow-symlinks t)
+ '(visible-bell t)
+ '(wdired-allow-to-change-permissions t)
+ '(wdired-use-dired-vertical-movement 'sometimes)
+ '(whitespace-style
+   '(face trailing tabs spaces lines-tail newline empty indentation space-after-tab space-before-tab space-mark tab-mark newline-mark))
+ '(windmove-wrap-around t)
+ '(x-gtk-show-hidden-files t)
+ '(xref-marker-ring-length 32)
+ '(yank-pop-change-selection t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 143 :width normal))))
+ '(custom-face-tag ((t (:inherit variable-pitch :foreground "#6c71c4" :weight normal :height 1.0))))
+ '(custom-group-tag ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
+ '(custom-group-tag-1 ((t (:inherit variable-pitch :foreground "#dc322f" :height 1.0))))
+ '(custom-variable-tag ((t (:inherit variable-pitch :foreground "#2aa198" :height 1.0))))
+ '(org-level-1 ((t (:inherit variable-pitch :foreground "#cb4b16" :height 1.0))))
+ '(org-level-2 ((t (:inherit variable-pitch :foreground "#859900" :height 1.0))))
+ '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0))))
+ '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0)))))

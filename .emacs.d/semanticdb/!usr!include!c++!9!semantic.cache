@@ -1,0 +1,154 @@
+;; Object semanticdb-project-database-file-155a958a596a
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-155a958a596a"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-155a958a59ac"
+      :major-mode c++-mode
+      :tags 
+        '( ("_GLIBCXX_STDLIB_H" variable (:constant-flag t) nil [1281 1298])
+            ("cstdlib" include (:system-flag t) nil [1302 1321])
+            ("std::abort" using (:type ("std::abort" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1323 1340])
+            ("std::atexit" using (:type ("std::atexit" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1341 1359])
+            ("std::exit" using (:type ("std::exit" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1360 1376])
+            ("std::at_quick_exit" using (:type ("std::at_quick_exit" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1442 1467])
+            ("std::quick_exit" using (:type ("std::quick_exit" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1511 1533])
+            ("std::div_t" using (:type ("std::div_t" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1570 1587])
+            ("std::ldiv_t" using (:type ("std::ldiv_t" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1588 1606])
+            ("std::abs" using (:type ("std::abs" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1608 1623])
+            ("std::atof" using (:type ("std::atof" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1624 1640])
+            ("std::atoi" using (:type ("std::atoi" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1641 1657])
+            ("std::atol" using (:type ("std::atol" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1658 1674])
+            ("std::bsearch" using (:type ("std::bsearch" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1675 1694])
+            ("std::calloc" using (:type ("std::calloc" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1695 1713])
+            ("std::div" using (:type ("std::div" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1714 1729])
+            ("std::free" using (:type ("std::free" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1730 1746])
+            ("std::getenv" using (:type ("std::getenv" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1747 1765])
+            ("std::labs" using (:type ("std::labs" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1766 1782])
+            ("std::ldiv" using (:type ("std::ldiv" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1783 1799])
+            ("std::malloc" using (:type ("std::malloc" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1800 1818])
+            ("std::mblen" using (:type ("std::mblen" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1850 1867])
+            ("std::mbstowcs" using (:type ("std::mbstowcs" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1868 1888])
+            ("std::mbtowc" using (:type ("std::mbtowc" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1889 1907])
+            ("std::qsort" using (:type ("std::qsort" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1942 1959])
+            ("std::rand" using (:type ("std::rand" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1960 1976])
+            ("std::realloc" using (:type ("std::realloc" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1977 1996])
+            ("std::srand" using (:type ("std::srand" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1997 2014])
+            ("std::strtod" using (:type ("std::strtod" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2015 2033])
+            ("std::strtol" using (:type ("std::strtol" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2034 2052])
+            ("std::strtoul" using (:type ("std::strtoul" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2053 2072])
+            ("std::system" using (:type ("std::system" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2073 2091])
+            ("std::wcstombs" using (:type ("std::wcstombs" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2120 2140])
+            ("std::wctomb" using (:type ("std::wctomb" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [2141 2159]))          
+      :file "stdlib.h"
+      :pointmax 2249
+      :fsize 2248
+      :lastmodtime '(25085 13051 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_GLIBCXX_STDLIB_H" . ((number "1" 1299 . 1300)))
+          )
+)
+    (semanticdb-table "semanticdb-table-155a958c12a2"
+      :file "cstdlib"
+      :fsize 6325
+      :lastmodtime '(25085 13051 0 0)))
+  :file "!usr!include!c++!9!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

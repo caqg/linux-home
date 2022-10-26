@@ -1,10 +1,6 @@
-;; -*- emacs-lisp -*- <15/10/10 01:45:33 /home/cesar/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <22/10/24 19:33:03 ~/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
-;; You can delete it, forcing Tramp to reapply the checks.
+;; Run `M-x tramp-cleanup-all-connections' instead.
 
-((["adb" nil "" nil nil]
-  ("getprop" "A500 4.0.3")
-  ("remote-path"
-   ("/sbin" "/vendor/bin" "/system/sbin" "/system/bin" "/system/xbin"))
-  ("ls" "ls")
-  ("test" t)))
+(((tramp-file-name "cache" nil nil nil nil nil nil)
+  ("tramp-version" "2.6.0-pre")))
