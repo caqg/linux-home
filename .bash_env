@@ -48,4 +48,7 @@ export ROGUEOPTS="fruit=eyeberry\
 # *Still* needed in 2019.04.
 export NO_AT_BRIDGE=1
 
+# Workaround for Python warning about obsolete async calls
+export PYTHONWARNINGS=ignore
+
 ##end .bash_env
