@@ -1,0 +1,52 @@
+;; Object semanticdb-project-database-file-156e5e9fbc06
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-156e5e9fbc06"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-156e5e9fbc34"
+      :major-mode c++-mode
+      :tags 
+        '( ("e1" type
+               (:members 
+                  ( ("E1_1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [12 17])
+                    ("E1_2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [19 24])
+                    ("E1_3" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [26 31]))                  
+                :type "enum")
+                nil [1 34])
+            ("e2" type (:type "class") nil [41 74])
+            ("e3" type
+               (:superclasses 
+                  ( ("uint32_5" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :type "class")
+                nil [81 125])
+            ("T" type
+               (:prototype t
+                :type "class")
+                nil [127 135])
+            ("foo" function
+               (:constructor-flag t
+                :parent "foo"
+                :arguments 
+                  ( ("t0" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150 155]))                  
+                :type "int")
+                nil [137 178]))          
+      :file "foo.cc"
+      :pointmax 188
+      :fsize 187
+      :lastmodtime '(21985 20198 974432 757000)
+      :unmatched-syntax '((semantic-list 179 . 187) (semantic-list 176 . 178) (CATCH 170 . 175) (symbol 118 . 122) (punctuation 115 . 116) (symbol 111 . 115) (punctuation 108 . 109) (symbol 104 . 108) (ENUM 76 . 80) (symbol 67 . 71) (punctuation 64 . 65) (symbol 60 . 64) (punctuation 57 . 58) (symbol 53 . 57) (ENUM 36 . 40))))
+  :file "!home!cesar!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

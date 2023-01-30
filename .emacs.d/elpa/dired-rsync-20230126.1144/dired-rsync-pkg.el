@@ -1,0 +1,2 @@
+;;; Generated package description from dired-rsync.el  -*- no-byte-compile: t -*-
+(define-package "dired-rsync" "20230126.1144" "Allow rsync from dired buffers" '((s "1.12.0") (dash "2.0.0") (emacs "25.1")) :commit "5496bc00f7a32a9d3e54e395f29d44e9df771567" :authors '(("Alex Bennée" . "alex@bennee.com")) :maintainer '("Alex Bennée" . "alex@bennee.com") :url "https://github.com/stsquad/dired-rsync")

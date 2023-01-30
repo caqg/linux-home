@@ -1,5 +1,9 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/cesar/.bash_interactive" . 84)
+(("/home/cesar/"
+  (dired-filename . "/home/cesar/wget-log"))
+ ("/home/cesar/tmp/"
+  (dired-filename . "/home/cesar/tmp/foo.cc"))
+ ("/home/cesar/.bash_interactive" . 84)
  ("/home/cesar/.bash_env" . 1162)
  ("/work/git/Documentation/CodingGuidelines" . 25271)
  ("/home/cesar/Notes/"
@@ -32,7 +36,6 @@
  ("/home/cesar/.emacs.d/elpa/ggtags-20220511.610/ggtags-autoloads.el" . 1634)
  ("/home/cesar/.emacs.d/elpa/rainbow-mode-1.0.6/rainbow-mode-autoloads.el" . 1195)
  ("/home/cesar/.emacs.d/elpa/parseclj-20220422.936/parseclj-autoloads.el" . 1236)
- ("/home/cesar/.emacs.d/elpa/julia-mode-20220418.809/julia-mode-autoloads.el" . 1060)
  ("/home/cesar/.emacs.d/elpa/tree-sitter-indent-20220411.1439/tree-sitter-indent-autoloads.el" . 1270)
  ("/home/cesar/.emacs.d/elpa/diffview-20220322.2334/diffview-autoloads.el" . 750)
  ("/home/cesar/.emacs.d/elpa/dropbox-20220314.1638/dropbox-autoloads.el" . 434)
@@ -108,7 +111,6 @@
  ("/home/cesar/.emacs.d/elpa/ruby-tools-20151209.1615/ruby-tools-autoloads.el" . 999)
  ("/home/cesar/.emacs.d/elpa/ruby-interpolation-20131112.1652/ruby-interpolation-autoloads.el" . 1015)
  ("/home/cesar/.emacs.d/elpa/ruby-hash-syntax-20210106.224/ruby-hash-syntax-autoloads.el" . 625)
- ("/home/cesar/.emacs.d/elpa/ruby-end-20141215.1223/ruby-end-autoloads.el" . 1001)
  ("/home/cesar/.emacs.d/elpa/ruby-electric-20200328.1528/ruby-electric-autoloads.el" . 1456)
  ("/home/cesar/.emacs.d/elpa/python-info-20151228.1852/python-info-autoloads.el" . 324)
  ("/home/cesar/.emacs.d/elpa/px-20170317.2330/px-autoloads.el" . 717)
@@ -162,7 +164,6 @@
  ("/home/cesar/.emacs.d/elpa/cedit-20200816.526/cedit-autoloads.el" . 3051)
  ("/home/cesar/.emacs.d/elpa/button-lock-20200309.1323/button-lock-autoloads.el" . 10509)
  ("/home/cesar/.emacs.d/elpa/autodisass-llvm-bitcode-20150411.125/autodisass-llvm-bitcode-autoloads.el" . 607)
- ("/home/cesar/.emacs.d/elpa/yaxception-20150105.1452/yaxception-autoloads.el" . 404)
  ("/home/cesar/.emacs.d/elpa/auto-complete-exuberant-ctags-20140320.724/auto-complete-exuberant-ctags-autoloads.el" . 516)
  ("/home/cesar/.emacs.d/elpa/auto-complete-c-headers-20150912.323/auto-complete-c-headers-autoloads.el" . 474)
  ("/home/cesar/.emacs.d/elpa/auto-complete-auctex-20140223.1758/auto-complete-auctex-autoloads.el" . 462)
