@@ -33,6 +33,7 @@
 ;;; hint at reddit from /u/bahblah
 ;;; https://www.reddit.com/r/emacs/comments/3kqt6e/2_easy_little_known_steps_to_speed_up_emacs_start/
 
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (let ((file-name-handler-alist nil)
       (gc-cons-threshold (* 1024 1024 1024 2)))
   (require 'cl-lib)
@@ -40,7 +41,6 @@
   (load-file "~/.emacs.d/init-legacy.el")
   (message "cq: Done loading legacy init, GCs = %s" gcs-done)
 
-  (add-to-list 'load-path "~/.emacs.d/lisp")
   (load-library "misc")
   (load-library "cq-workarounds")
   ;; (global-set-key [(meta z)] 'cq-zap-up-to-char)
@@ -123,6 +123,7 @@
 
   ;; (require 'gtags)
 
+  ;; (require 'org)
   (require 'org-install)
   (add-to-list 'auto-mode-alist (cons "\\.org$" 'org-mode))
   (global-set-key "\C-ca" 'org-agenda)
@@ -148,8 +149,6 @@
   (require 'parenface)
   (require 'tabbar)
   (require 'time)
-
-  (require 'string-utils)
 
   ;;(require 'hide-comnt)
   ;;(global-set-key (kbd "C-c @ ;") 'hide/show-comments-toggle)
@@ -258,6 +257,82 @@
  '(compilation-scroll-output t)
  '(compile-command "time -p make -j")
  '(completion-auto-help 'lazy)
+ '(connection-local-criteria-alist
+   '(((:application tramp)
+      tramp-connection-local-default-system-profile tramp-connection-local-default-shell-profile)))
+ '(connection-local-profile-alist
+   '((tramp-connection-local-darwin-ps-profile
+      (tramp-process-attributes-ps-args "-acxww" "-o" "pid,uid,user,gid,comm=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" "-o" "state=abcde" "-o" "ppid,pgid,sess,tty,tpgid,minflt,majflt,time,pri,nice,vsz,rss,etime,pcpu,pmem,args")
+      (tramp-process-attributes-ps-format
+       (pid . number)
+       (euid . number)
+       (user . string)
+       (egid . number)
+       (comm . 52)
+       (state . 5)
+       (ppid . number)
+       (pgrp . number)
+       (sess . number)
+       (ttname . string)
+       (tpgid . number)
+       (minflt . number)
+       (majflt . number)
+       (time . tramp-ps-time)
+       (pri . number)
+       (nice . number)
+       (vsize . number)
+       (rss . number)
+       (etime . tramp-ps-time)
+       (pcpu . number)
+       (pmem . number)
+       (args)))
+     (tramp-connection-local-busybox-ps-profile
+      (tramp-process-attributes-ps-args "-o" "pid,user,group,comm=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" "-o" "stat=abcde" "-o" "ppid,pgid,tty,time,nice,etime,args")
+      (tramp-process-attributes-ps-format
+       (pid . number)
+       (user . string)
+       (group . string)
+       (comm . 52)
+       (state . 5)
+       (ppid . number)
+       (pgrp . number)
+       (ttname . string)
+       (time . tramp-ps-time)
+       (nice . number)
+       (etime . tramp-ps-time)
+       (args)))
+     (tramp-connection-local-bsd-ps-profile
+      (tramp-process-attributes-ps-args "-acxww" "-o" "pid,euid,user,egid,egroup,comm=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" "-o" "state,ppid,pgid,sid,tty,tpgid,minflt,majflt,time,pri,nice,vsz,rss,etimes,pcpu,pmem,args")
+      (tramp-process-attributes-ps-format
+       (pid . number)
+       (euid . number)
+       (user . string)
+       (egid . number)
+       (group . string)
+       (comm . 52)
+       (state . string)
+       (ppid . number)
+       (pgrp . number)
+       (sess . number)
+       (ttname . string)
+       (tpgid . number)
+       (minflt . number)
+       (majflt . number)
+       (time . tramp-ps-time)
+       (pri . number)
+       (nice . number)
+       (vsize . number)
+       (rss . number)
+       (etime . number)
+       (pcpu . number)
+       (pmem . number)
+       (args)))
+     (tramp-connection-local-default-shell-profile
+      (shell-file-name . "/bin/sh")
+      (shell-command-switch . "-c"))
+     (tramp-connection-local-default-system-profile
+      (path-separator . ":")
+      (null-device . "/dev/null"))))
  '(cscope-close-window-after-select t)
  '(cscope-option-do-not-update-database t)
  '(cscope-option-use-inverted-index t)
@@ -410,7 +485,7 @@
  '(line-number-display-limit-width 512)
  '(list-directory-brief-switches "-ACF --group-directories-first ")
  '(list-directory-verbose-switches "-lgaF --time-style=long-iso  --group-directories-first")
- '(load-prefer-newer t t)
+ '(load-prefer-newer t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-format-time-list '("%Y-%m-%d %H:%M" "%Y-%m-%d     "))
  '(lsp-ui-doc-border "#93a1a1")
@@ -446,7 +521,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/")))
  '(package-selected-packages
-   '(clojure-mode magit git-commit transient 0x0 0blayout tramp-docker docker docstr docopt clhs ac-R ac-c-headers ac-emoji ac-etags ac-math ac-octave ac-python ac-slime ada-mode ada-ref-man aes aggressive-fill-paragraph all all-ext anaconda-mode ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils ascii auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags auto-complete-pcmp autodisass-llvm-bitcode backtrace-mode beacon bigint bison-mode button-lock cedit charmap chess cider cl-format cl-lib-highlight clang-format cmake-font-lock cmake-mode cobol-mode codesearch common-lisp-snippets company-c-headers company-ess company-inf-ruby company-math company-quickhelp concurrent context-coloring cperl-mode csharp-mode csv-mode csv-nav ctable ctags ctags-update cuda-mode dash-functional debian-el dict-tree diffview dircmp dired-hacks-utils dired-narrow dired-rsync dired-toggle-sudo docker-api docker-compose-mode dockerfile-mode dpkg-dev-el dropbox dts-mode dynamic-ruler ecb edebug-x ediprolog edit-at-point edit-list editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific eldoc-cmake eldoc-eval elog epl ess-R-data-view ess-R-object-popup ess-smart-underscore f fasm-mode figlet fill-column-indicator flycheck flymake flymake-python-pyflakes fm form-feed ggtags gh ghub git gitattributes-mode gitconfig-mode gitignore-mode glsl-mode graphql gscholar-bibtex gtags gxref header2 heap hide-comnt hide-lines ht http-post-simple hydra indent-guide inf-ruby inline-docs interval-tree ipython itail j-mode javadoc-help javadoc-lookup jira json-mode json-reformat json-snatcher julia-mode kv latex-extra latex-preview-pane let-alist lexbind-mode lib-requires lisp-extra-font-lock list-utils llvm-mode log4e logito lv markdown-mode markdown-toc marshal math-symbol-lists memory-usage minimap move-dup multi-term multishell name-this-color nasm-mode nav-flash ninja-mode noflet oauth oberon opencl-mode org-ac org-bullets org-cliplink org-context org-dashboard org-download org-jira org-journal org-make-toc org-mime org-pandoc org-plus-contrib orgtbl-show-header ov p4 pandoc-mode paredit paredit-everywhere paredit-menu path-headerline-mode pcache pcre2el pcsv peep-dired perl-completion perl-myvar pkg-info pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python3-info pythonic quarter-plane queue quick-peek rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term sed-mode shell-command shell-here shell-toggle sicp slime slime-company sml-mode solarized-theme spark sparkline spinner srefactor ssh ssh-config-mode stream strie string-edit string-utils sudo-ext syntax-subword syslog-mode systemd systemtap-mode tNFA tabbar tablist tdd thing-cmds tramp-term tree-sitter tree-sitter-indent treepy trie undo-tree uniquify-files uuid vdiff vector-utils viewer vimrc-mode visible-mark vkill vlf wget wiki wiki-nav wisi xcscope xml-rpc yaml-mode yasnippet yaxception))
+   '(clojure-mode magit git-commit 0blayout tramp-docker docker docstr docopt clhs ac-R ac-c-headers ac-emoji ac-etags ac-math ac-octave ac-python ac-slime ada-mode ada-ref-man aes aggressive-fill-paragraph all all-ext anaconda-mode ant anything-exuberant-ctags anything-git-files anything-git-grep anything-replace-string apt-utils ascii auto-complete-auctex auto-complete-c-headers auto-complete-exuberant-ctags auto-complete-pcmp autodisass-llvm-bitcode backtrace-mode beacon bigint bison-mode button-lock cedit charmap chess cider cl-format cl-lib-highlight clang-format cmake-font-lock cmake-mode cobol-mode codesearch common-lisp-snippets company-c-headers company-ess company-inf-ruby company-math company-quickhelp concurrent context-coloring cperl-mode csharp-mode csv-mode csv-nav ctable ctags ctags-update cuda-mode dash-functional debian-el dict-tree diffview dircmp dired-hacks-utils dired-narrow dired-rsync dired-toggle-sudo docker-api docker-compose-mode dockerfile-mode dpkg-dev-el dropbox dts-mode dynamic-ruler ecb edebug-x ediprolog edit-at-point edit-list editorconfig-charset-extras editorconfig-custom-majormode editorconfig-domain-specific eldoc-cmake eldoc-eval elog epl ess-R-data-view ess-R-object-popup ess-smart-underscore f fasm-mode figlet fill-column-indicator flycheck flymake flymake-python-pyflakes fm form-feed ggtags gh ghub git gitattributes-mode gitconfig-mode gitignore-mode glsl-mode graphql gscholar-bibtex gtags gxref header2 heap hide-comnt hide-lines ht http-post-simple hydra indent-guide inf-ruby inline-docs interval-tree ipython itail j-mode javadoc-help javadoc-lookup jira json-mode json-reformat json-snatcher julia-mode kv latex-extra latex-preview-pane let-alist lexbind-mode lib-requires lisp-extra-font-lock list-utils llvm-mode log4e logito lv markdown-mode marshal math-symbol-lists memory-usage minimap move-dup multi-term multishell name-this-color nasm-mode nav-flash ninja-mode noflet oauth oberon opencl-mode org-ac org-bullets org-cliplink org-context org-dashboard org-download org-jira org-journal org-make-toc org-mime org-pandoc org-plus-contrib orgtbl-show-header ov p4 pandoc-mode paredit paredit-everywhere paredit-menu path-headerline-mode pcache pcre2el pcsv peep-dired perl-completion perl-myvar pkg-info pod-mode pos-tip pp+ preproc-font-lock prolog px python-info python3-info pythonic quarter-plane queue quick-peek rainbow-mode relative-line-numbers ruby-electric ruby-end ruby-hash-syntax ruby-interpolation ruby-test-mode ruby-tools s-buffer sane-term sed-mode shell-command shell-here shell-toggle sicp slime slime-company sml-mode solarized-theme spark sparkline spinner srefactor ssh ssh-config-mode stream strie string-edit sudo-ext syntax-subword syslog-mode systemd systemtap-mode tNFA tabbar tablist tdd thing-cmds tramp-term tree-sitter tree-sitter-indent treepy trie undo-tree uniquify-files uuid vdiff vector-utils viewer vimrc-mode visible-mark vkill vlf wget wiki wiki-nav wisi xcscope xml-rpc yaml-mode yasnippet yaxception))
  '(prog-mode-hook '((lambda nil (form-feed-mode 1))))
  '(python-shell-interpreter "python")
  '(recentf-mode t)

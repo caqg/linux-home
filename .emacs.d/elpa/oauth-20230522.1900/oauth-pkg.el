@@ -1,0 +1,2 @@
+;;; Generated package description from oauth.el  -*- no-byte-compile: t -*-
+(define-package "oauth" "20230522.1900" "OAuth 1.0 client library" '((emacs "25.1") (hmac "1.0")) :commit "78f4f8539c72eda6cb2187c1efbb9e857e013be5" :authors '(("Peter Sanford" . "peter@petersdanceparty.com") ("Neil Roberts" . "bpeeluk@yahoo.co.uk")) :maintainers '(("Folkert van der Beek" . "folkertvanderbeek@gmail.com")) :maintainer '("Folkert van der Beek" . "folkertvanderbeek@gmail.com") :keywords '("comm") :url "https://github.com/fvdbeek/emacs-oauth")

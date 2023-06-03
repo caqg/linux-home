@@ -1,0 +1,2 @@
+;;; Generated package description from ruby-end.el  -*- no-byte-compile: t -*-
+(define-package "ruby-end" "20230205.115" "Automatic insertion of end blocks for Ruby" 'nil :commit "1c87e214de6a75936b89ab50ee5fe522b87b009e" :authors '(("Johan Andersson" . "johan.rejeep@gmail.com")) :maintainer '("Dmitry Gutov" . "dgutov@yandex.ru") :keywords '("speed" "convenience" "ruby") :url "http://github.com/rejeep/ruby-end")
