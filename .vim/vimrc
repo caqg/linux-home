@@ -58,6 +58,7 @@ if has("terminfo")
 endif
 
 set mouse=a
+set background=dark
 
 if &term == "screen"
     if getenv('WSL_DISTRO_NAME') != v:null
@@ -66,20 +67,19 @@ if &term == "screen"
     if has('gui_running')
         colorscheme default
     endif
-    set background=dark
 else
-    set background=dark
     colorscheme solarized8
     " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
+    " colorscheme solarized
     " call togglebg#map("<F12>")
 endif
 
 if &diff
-    set background=dark
     if has('gui_running')
         set lines=999 columns=999
         colorscheme solarized8
         " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
+        " colorscheme solarized
         " call togglebg#map("<F12>")
     endif
     syntax off
@@ -88,7 +88,6 @@ else
 endif
 
 " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
-
 "set rtp+=/usr/share/vim/addons
 
 if version < 800
