@@ -68,22 +68,26 @@ if &term == "screen"
     endif
     set background=dark
 else
-    colorscheme solarized
-    call togglebg#map("<F12>")
     set background=dark
+    colorscheme solarized8
+    " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
+    " call togglebg#map("<F12>")
 endif
 
 if &diff
-    syntax off
+    set background=dark
     if has('gui_running')
         set lines=999 columns=999
-        colorscheme solarized
-        call togglebg#map("<F12>")
+        colorscheme solarized8
+        " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
+        " call togglebg#map("<F12>")
     endif
-    set background=dark
+    syntax off
 else
     syntax on
 endif
+
+" highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
 
 "set rtp+=/usr/share/vim/addons
 
