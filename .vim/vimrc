@@ -32,9 +32,9 @@ set directory          +=/var/tmp
 set directory          +=/tmp
 
 set path                =,,
-set path               +=/usr/include/c++/11/**
-set path               +=/usr/include/x86_64-linux-gnu/c++/11/**
-set path               +=/usr/lib/gcc/x86_64-linux-gnu/11/include*/**
+set path               +=/usr/include/c++/13/**
+set path               +=/usr/include/x86_64-linux-gnu/c++/13/**
+set path               +=/usr/lib/gcc/x86_64-linux-gnu/13/include*/**
 set path               +=/usr/include/x86_64-linux-gnu
 set path               +=/usr/local/include
 set path               +=/usr/include
@@ -46,48 +46,34 @@ set tags               +=TAGS
 set tags               +=./tags;~/Projects
 set tags               +=tags
 
-if has("terminfo")
-    if &term == "xterm-256color"
-        if getenv('WSL_DISTRO_NAME') != v:null
-            set t_u7    =
-        endif
-        set t_Co        =256
-    elseif &term == "xterm*"
-        set t_Co        = 16
-    endif
-endif
-
 set mouse=a
 set background=dark
 
-if &term == "screen"
-    if getenv('WSL_DISTRO_NAME') != v:null
-        set t_Co=256
+if has("terminfo")
+    if &term == "xterm-256color"
+        " if getenv('WSL_DISTRO_NAME') != v:null
+        "    set t_u7    =
+        " endif
+        set t_Co        =16
     endif
-    if has('gui_running')
-        colorscheme default
-    endif
-else
+endif
+
+if has('gui_running')
     colorscheme solarized8
-    " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
-    " colorscheme solarized
-    " call togglebg#map("<F12>")
+else
+    colorscheme default
 endif
 
 if &diff
     if has('gui_running')
         set lines=999 columns=999
         colorscheme solarized8
-        " highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
-        " colorscheme solarized
-        " call togglebg#map("<F12>")
     endif
     syntax off
 else
     syntax on
 endif
 
-" highlight Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg
 "set rtp+=/usr/share/vim/addons
 
 if version < 800
