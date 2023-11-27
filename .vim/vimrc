@@ -54,11 +54,13 @@ if has("terminfo")
         " if getenv('WSL_DISTRO_NAME') != v:null
         "    set t_u7    =
         " endif
-        set t_Co        =16
+        set t_Co        =16 "Needed by solarized8
     endif
 endif
 
 if has('gui_running')
+    colorscheme solarized8
+elseif &term == "xterm-256color"
     colorscheme solarized8
 else
     colorscheme default
