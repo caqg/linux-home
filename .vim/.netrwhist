@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/cesar/.vim/pack/themes/opt/solarized8/.git'
+let g:netrw_dirhist_0='/home/cesar/.vim/pack/themes/opt/solarized8/.git/info'
+let g:netrw_dirhist_9='/home/cesar/.vim/pack/themes/opt/solarized8/.git'
+let g:netrw_dirhist_8='/home/cesar/.vim/pack/themes/opt/solarized8'
+let g:netrw_dirhist_7='/usr/local/share/vim/vim90/autoload'
+let g:netrw_dirhist_6='/usr/local/share/vim/vim90'
+let g:netrw_dirhist_5='/usr/local/share/vim/vim90/plugin'
+let g:netrw_dirhist_4='/usr/local/share/vim/vim90'
 let g:netrw_dirhist_3='/work/git'
 let g:netrw_dirhist_2='/work/vim/READMEdir'
-let g:netrw_dirhist_1='/home/cesar/.emacs.d'
