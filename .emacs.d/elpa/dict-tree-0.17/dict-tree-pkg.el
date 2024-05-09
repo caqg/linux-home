@@ -1,0 +1,2 @@
+;; Generated package description from dict-tree.el  -*- no-byte-compile: t -*-
+(define-package "dict-tree" "0.17" "Dictionary data structure" '((trie "0.6") (tNFA "0.1.1") (heap "0.3") (emacs "24.1")) :commit "a83ea986982b2d09d150456028a9f1e73658333a" :authors '(("Toby Cubitt" . "toby-predictive@dr-qubit.org")) :maintainer '("Toby Cubitt" . "toby-predictive@dr-qubit.org") :keywords '("extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp") :url "http://www.dr-qubit.org/emacs.php")

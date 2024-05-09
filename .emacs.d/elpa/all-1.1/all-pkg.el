@@ -1,0 +1,2 @@
+;; Generated package description from all.el  -*- no-byte-compile: t -*-
+(define-package "all" "1.1" "Edit all lines matching a given regexp" '((emacs "24.3")) :commit "55aa1ac8853d81040aec0b3a2bd43200923146fd" :url "https://elpa.gnu.org/packages/all.html" :authors '(("Per Abrahamsen" . "per.abrahamsen@gmail.com")) :maintainer '("Per Abrahamsen" . "per.abrahamsen@gmail.com") :keywords '("matching"))

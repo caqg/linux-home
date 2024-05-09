@@ -1,0 +1,2 @@
+;; Generated package description from gnat-compiler.el  -*- no-byte-compile: t -*-
+(define-package "gnat-compiler" "1.0.3" "Support for running GNAT tools" '((emacs "25.3") (wisi "4.3.0")) :commit "9db5c393ee0f9694e83305ef8b0b1e37f0560111" :url "https://elpa.gnu.org/packages/gnat-compiler.html" :authors '(("Stephen Leake" . "stephen_leake@member.fsf.org")) :maintainer '("Stephen Leake" . "stephen_leake@member.fsf.org"))
