@@ -14,6 +14,7 @@ set numberwidth         =5
 set ruler
 set shell               =/bin/bash
 set shiftwidth          =8
+set showmatch
 set smartcase
 set smarttab
 set tabstop             =8
@@ -117,7 +118,7 @@ autocmd FileType c,cpp,java     set noexpandtab
 autocmd FileType c,cpp,java     set foldmethod          =syntax
 autocmd FileType c,cpp,java     set foldcolumn          =0
 autocmd FileType c,cpp,java     set nofoldenable
-autocmd FileType c,cpp,java     set formatoptions      +=croqj
+autocmd FileType c,cpp,java     set formatoptions      +=caroqj
 autocmd FileType c,cpp,java     set shiftwidth          =8
 autocmd FileType c,cpp,java     set nosmarttab
 autocmd FileType c,cpp,java     set tabstop             =8

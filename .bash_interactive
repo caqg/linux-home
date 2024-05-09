@@ -4,7 +4,7 @@
 
 if [ "$DISPLAY" ]; then
 	export MYVIM=gvim
-	export V_ARGS="-"
+	export V_ARGS="-geom 120x48 -"
 else
 	export MYVIM=vim
 	export V_ARGS="--not-a-term -"
