@@ -201,7 +201,7 @@ if !has("gui_running")
     source $VIMRUNTIME/menu.vim
 endif
 
-packadd termdebug
+"packadd termdebug
 let g:termdebug_wide = 1
 hi debugPC term=reverse ctermbg=4 guibg=darkblue
 
