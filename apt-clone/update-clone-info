@@ -1,15 +1,5 @@
 #!/bin/bash
 
-case "$#" in
-0)
-    ;;
-*)
-    echo usage: `basename $0`
-    exit 1
-    ;;
-esac
-
-
 moniker=`/bin/date -u +'%Y%m%d%H%M%SZ'`
 if [ -f /etc/lsb-release ]; then
     . /etc/lsb-release
@@ -23,6 +13,6 @@ elif [ -x /bin/hostname ]; then
     host=`/bin/hostname`
 fi
 
-echo apt-clone clone "${host}-${moniker}" | ${SHELL} -x
+echo apt-clone clone "${host}-${moniker}" "$@" | ${SHELL} -x
 
 #end update-clone-info
