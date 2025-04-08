@@ -33,10 +33,10 @@ This is the function to override if you want a different default."
 xtitle-default-frame-title and xtitle-default-icon-title; override them to
 change this default."
   (interactive)
-  (setq frame-title-format (xtitle-default-frame-title) 
-	frame-icon-title-format (xtitle-default-icon-title))
+  (setq frame-title-format (xtitle-default-frame-title)
+        frame-icon-title-format (xtitle-default-icon-title))
   t)
-       
+
 (defun set-xtitle (title arg)
   "Override the frame and icon titles with a string.
 With a prefix, if 0 set both titles to the given string.
@@ -48,30 +48,30 @@ the easiest to request interactively.  See the function set-default-xtitle."
   (if (not (numberp arg))
       (setq arg 0))
   (let ((frame-title )
-	(icon-title))
+        (icon-title))
     (cond ((> arg 0)
-	   (setq frame-title (concat title (xtitle-default-frame-title))
-		 icon-title (concat title (xtitle-default-icon-title))))
-	  ((= arg 0)
-	   (setq frame-title title
-		 icon-title title))
-	  ((< arg 0)
-	   (setq frame-title (concat (xtitle-default-frame-title) title)
-		 icon-title (concat (xtitle-default-icon-title) title))))
+           (setq frame-title (concat title (xtitle-default-frame-title))
+                 icon-title (concat title (xtitle-default-icon-title))))
+          ((= arg 0)
+           (setq frame-title title
+                 icon-title title))
+          ((< arg 0)
+           (setq frame-title (concat (xtitle-default-frame-title) title)
+                 icon-title (concat (xtitle-default-icon-title) title))))
     (setq frame-title-format frame-title
-	  frame-icon-title-format icon-title))
+          frame-icon-title-format icon-title))
   t)
 
 
 ;;; left and top are chosen depending on the window manager; the default
 ;;; values work for Intel's fvwm2.  The values should make xwininfo claim that
 ;;; the window is at +0+0
-(defvar *cq-max-frame-left* 	5 "*Location, pixels from the left edge")
+(defvar *cq-max-frame-left*     5 "*Location, pixels from the left edge")
 (defvar *cq-max-frame-top*     21 "*Location, pixels from the top edge")
 
 ;;; width and height depend on the "theme"
 (defvar *cq-max-frame-width*  152 "*Size, columns wide")
-(defvar *cq-max-frame-height*  49 "*Size, rows tall")
+(defvar *cq-max-frame-height*  45 "*Size, rows tall")
 
 (defun cq-maximize-x-frame ()
   "If XEmacs is running on an X display, make the current frame as large
